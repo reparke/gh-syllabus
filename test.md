@@ -8,7 +8,7 @@ menuPosition: 4
 You can download all required reading in the [Study materials]({{ site.docsUrl }}) at the faculty website.
 {% endif %}
 
-There's something that needs to be told. Maybe.
+Testing...................
 
 <ol>
 {% assign syllabus = (site.syllabus | sort: "week") %}
