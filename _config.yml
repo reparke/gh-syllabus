@@ -1,10 +1,10 @@
 # configuration
 # fill in the course details
  
-courseName: Course name
+courseName: ITP 348 - Intro to Physical Computing
 
 # small title that is at the top of every page
-subtitle: GHS101 course syllabus — spring semester 2022
+subtitle: Course Content
 
 # baseurl is the same as the name of the repository
 baseurl: /gh-syllabus
@@ -13,7 +13,7 @@ baseurl: /gh-syllabus
 docsUrl: "" 
 
 # url where the student's grading info is kept
-gradingUrl: "" 
+gradingUrl: "https://blackboard.usc.edu" 
 
 
 # change only if you know what you are doing
