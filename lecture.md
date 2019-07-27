@@ -2,12 +2,12 @@
 marp: true
 theme: gaia
 
-title: Course requirements and grading
+title: Lectures
 layout: page
-menuItem: Course requirements
+menuItem: Lectures
 menuPosition: 5
 ---
----
+
 <style>
 h1, h2, h3, h4, h5, h6 {
   color: #990000;
