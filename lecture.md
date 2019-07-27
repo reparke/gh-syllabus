@@ -1,7 +1,4 @@
 ---
-marp: true
-theme: gaia
-
 title: Lectures
 layout: page
 menuItem: Lectures
