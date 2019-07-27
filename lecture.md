@@ -3,6 +3,9 @@ title: Lectures
 layout: page
 menuItem: Lectures
 menuPosition: 5
+marp: true
+theme: gaia
+
 ---
 
 <style>
