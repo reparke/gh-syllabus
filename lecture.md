@@ -12,7 +12,6 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
 
 There's something that needs to be told. Maybe.
 
-{% syllabus %}
 <ol>
 {% assign syllabus = (site.syllabus | sort: "week") %}
 {% for week in syllabus %}
@@ -24,5 +23,7 @@ There's something that needs to be told. Maybe.
   	({{ week.day }})</li>
 {% endfor %}
 </ol>
+
+{% syllabus %}
 
 
