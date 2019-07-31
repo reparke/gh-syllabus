@@ -24,6 +24,6 @@ There's something that needs to be told. Maybe.
 {% endfor %}
 </ol>
 
-{% syllabus %}
+{% {{syllabus}} %}
 
 
