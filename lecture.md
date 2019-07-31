@@ -7,7 +7,7 @@ menuPosition: 5
 ---
 
 {% if site.docsUrl != "" %}
-You can download all required reading in the [Study materials]({{ site.docsUrl }}) at the faculty website.
+DDDDD can download all required reading in the [Study materials]({{ site.docsUrl }}) at the faculty website.
 {% endif %}
 
 There's something that needs to be told. Maybe.
