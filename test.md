@@ -12,7 +12,7 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
 There's something that needs to be told. Maybe.
 
 {% assign syllabus = (site.testlect | sort: "week") %}
-{{ variable | jsonify }}
+{{ syllabus | jsonify }}
 
 <ul>
 {% for week in syllabus %}
