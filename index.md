@@ -5,7 +5,7 @@ menuItem: "Basic info"
 menuPosition: 1
 ---
 <h1>{{ site.courseName }}</h1>
-	<ul>
+
     {% for node in site.pages %}
       {% if node.url contains base_url %}
         {% assign node_url_parts = node.url | split: '/' %}
@@ -16,7 +16,8 @@ menuPosition: 1
         {% endif %}
       {% endif %}
     {% endfor %}
-    </ul>
+
+
 <img src="{{ site.baseurl }}/style/header.jpg" width="100%">
 
 - This is a **template of a course syllabus microsite** based on Jekyll/Github Pages. (Licensed under MIT: use at will!)

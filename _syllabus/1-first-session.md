@@ -5,7 +5,6 @@ title: First session
 tags: [hello]
 ---
 
-	<ul>
     {% for node in site.pages %}
       {% if node.url contains base_url %}
         {% assign node_url_parts = node.url | split: '/' %}
@@ -16,7 +15,6 @@ tags: [hello]
         {% endif %}
       {% endif %}
     {% endfor %}
-    </ul>
 
 ### Surname, Name: _Book title_
 
