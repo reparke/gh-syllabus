@@ -19,7 +19,7 @@ In: Publication, Date. [Available online.](http://publication.com/article_url)
 ### Surname, Name: _Article title_  
 
 In: Publication, Date. [Available online.](http://publication.com/article_url)  
-
+    <h1>{{ site.courseName }}</h1>
 	<ul>
     {% for node in site.pages %}
       {% if node.url contains base_url %}
@@ -33,4 +33,3 @@ In: Publication, Date. [Available online.](http://publication.com/article_url)
     {% endfor %}
     </ul>
 
-    <h1>{{ site.courseName }}</h1>
