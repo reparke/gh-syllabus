@@ -1,5 +1,7 @@
 [University of Southern California](https://www.usc.edu)
+
 [Viterbi School of Engineering](https://viterbischool.usc.edu/)
+
 [Information Technology Program](https://itp.usc.edu/)
 
 # ITP 348 – Introduction to Physical Computing

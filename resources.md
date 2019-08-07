@@ -5,14 +5,6 @@ menuItem: Resources
 menuPosition: 4
 ---
 
-#### University of Southern California
-
-#### Viterbi School of Engineering
-
-#### Information Technology Program
-
-# ITP 348 – Introduction to Physical Computing
-
 ## References
 
 ### Particle Documenation
