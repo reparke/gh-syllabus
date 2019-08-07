@@ -3,6 +3,7 @@ title: Resources
 layout: page
 menuItem: Resources
 menuPosition: 4
+---
 
 #### University of Southern California
 

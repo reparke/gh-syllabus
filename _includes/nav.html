@@ -1,4 +1,5 @@
-<p class="subtitle">{{ site.subtitle }}</p>
+<p class="subtitle">
+	<a href="{{ site.baseurl }}"> {{ site.title }} </a> </p>
 <nav>
 	<ul>
 		{% assign pages = (site.pages | sort: "menuPosition") %}
