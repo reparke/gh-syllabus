@@ -2,10 +2,9 @@
 marp: true
 theme: itp
 paginate: true
-
 week: 2
-category: lecture
 title: The Argon Microcontroller
+category: lecture
 ---
 
 <!-- headingDivider: 2 -->

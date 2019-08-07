@@ -6,12 +6,11 @@ paginate: true
 week: 2
 category: lecture
 title: Electricity
-
 ---
 
 <!-- headingDivider: 2 -->
 
-# Electricity
+# 
 
 ## What happens?
 

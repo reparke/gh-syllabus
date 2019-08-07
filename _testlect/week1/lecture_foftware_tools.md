@@ -4,9 +4,16 @@ theme: itp
 paginate: true
 
 week: 1
-category: lectures
+category: lecture
 title: Software Tools
+
+
+
 ---
+
+```
+title: Software Tools
+```
 
 <!-- headingDivider: 2 -->
 

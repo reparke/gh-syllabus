@@ -31,7 +31,7 @@ defaults:
       layout: unit
   - scope:
       path: ""
-      type: lectures
+      type: testlect
     values:
       layout: unit
   - scope:
