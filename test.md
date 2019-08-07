@@ -13,7 +13,7 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
 {% assign syllabus = (site.testlect | sort: "week") %}
 <ul>
 {% for wk in syllabus %}
-    {% if wk.week == "1" %}
+    {% if wk.week == 1 %}
   <li>
   	<a href="{{ site.baseurl }}{{ wk.url }}">{{ wk.title }}</a> 
   	{% for tag in wk.tags %}
