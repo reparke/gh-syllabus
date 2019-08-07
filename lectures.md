@@ -1,8 +1,8 @@
 ---
-title: testLect
+title: Lectures
 layout: page
-menuItem: testLect
-menuPosition: 4
+menuItem: Lectures
+menuPosition: 3
 ---
 
 {% if site.docsUrl != "" %}
