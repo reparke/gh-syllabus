@@ -19,7 +19,7 @@ gradingUrl: "https://blackboard.usc.edu"
 collections:
   syllabus:
     output: true
-  testlect:
+  lectures:
     output: true
 defaults:
   - scope:
