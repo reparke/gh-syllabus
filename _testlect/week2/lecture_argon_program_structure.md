@@ -2,12 +2,15 @@
 marp: true
 theme: itp
 
-
+week: 2
+day: September 8
+title: Structure of a Microcontroller Program
+tags: [hints, letsDoIt]
 ---
 
 <!-- headingDivider: 2 -->
 
-# Structure of a Microcontroller Program
+# 
 
 ## Important Note
 

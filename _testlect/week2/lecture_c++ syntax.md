@@ -2,12 +2,15 @@
 marp: true
 theme: itp
 paginate: true
-
+week: 2
+day: September 8
+title: C++ Syntax Overview
+tags: [hints, letsDoIt]
 ---
 
 <!-- headingDivider: 2 -->
 
-# C++ Syntax Overview
+# 
 
 ## C++ and Other Languages
 

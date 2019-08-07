@@ -2,6 +2,10 @@
 marp: true
 theme: itp
 paginate: true
+week: 2
+day: September 8
+title: The Argon Microcontroller
+tags: [hints, letsDoIt]
 
 ---
 

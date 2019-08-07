@@ -2,6 +2,11 @@
 marp: true
 theme: itp
 paginate: true
+
+week: 2
+day: September 8
+title: LEDs
+tags: [hints, letsDoIt]
 ---
 
 <!-- headingDivider: 2 -->

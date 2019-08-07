@@ -2,11 +2,16 @@
 marp: true
 theme: itp
 paginate: true
+
+week: 2
+day: September 8
+title: Electricity
+tags: [hints, letsDoIt]
 ---
 
 <!-- headingDivider: 2 -->
 
-# Electricity
+# 
 
 ## What happens?
 

@@ -3,10 +3,11 @@ marp: true
 theme: itp
 paginate: true
 
+
+week: 1
+day: September 8
 title: Kit Overview
-layout: page
-menuItem: Kit Overview
-menuPosition: 8
+tags: [hints, letsDoIt]
 ---
 ```
 title: Kit Overview

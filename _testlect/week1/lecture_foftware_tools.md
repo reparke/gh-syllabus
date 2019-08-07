@@ -1,13 +1,14 @@
 ---
+marp: true
+theme: itp
+paginate: true
 
-week: 2
+week: 1
 day: September 8
 title: Software Tools
 tags: [hints, letsDoIt]
 
-marp: true
-theme: itp
-paginate: true
+
 ---
 
 ```

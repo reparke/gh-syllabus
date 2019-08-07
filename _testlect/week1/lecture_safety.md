@@ -1,8 +1,10 @@
 ---
 
-title: Safety
-layout: page
 
+week: 1
+day: September 8
+title: Safety
+tags: [hints, letsDoIt]
 
 marp: true
 theme: itp
