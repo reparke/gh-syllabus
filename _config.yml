@@ -7,7 +7,7 @@ courseName: ITP 348 - Intro to Physical Computing
 subtitle: Course Content
 
 # baseurl is the same as the name of the repository
-baseurl: /gh-syllabus
+baseurl: /ITP348-Physical-Computing
 
 # url where the required reading is available to download
 docsUrl: "" 
