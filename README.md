@@ -6,6 +6,9 @@
 
 # ITP 348 – Introduction to Physical Computing
 
+Welcome to the course page for ITP 348 - Introduction to Physical Computing!
+
+You'll find course material and useful links on the side. 
 [**Syllabus**](itp348_syllabus_fall2019.md)
 
 [Useful resources](resources.md)
