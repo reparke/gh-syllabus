@@ -1,10 +1,16 @@
 ---
+week: 8
+day: September 8
+title: IOT Overview
+tags: [hints, letsDoIt]
+
+
 marp: true
 theme: itp
 ---
  
 
-<!-- headingDivider: 2 -->
+
 
 # Introduction to IoT
 
