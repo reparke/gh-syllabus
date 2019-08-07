@@ -4,55 +4,16 @@
 
 # ITP 348 – Introduction to Physical Computing
 
-Welcome to the course page for ITP 348 - Introduction to Physical Computing!
-
-#### Course Links
-
-You'll find course material and useful links on the side. 
-
-- [Syllabus](itp348_syllabus_fall2019.md) - Course plan, policies, and date
-- [Lecture](_lectures) - HTML slides shows of lectures
-- Assignments - Assignment writeups
-- [Useful resources](resources.md) - Helpful pages and documentation for the course
-- Blackboard - For submitting assignments
+The live course website can be found at **https://reparke.github.io/ITP348-Physical-Computing/**
 
 
 
-#### Additional Tools
 
-These are not necessarily needed for this course, but provide more information about how this site is built
 
-- [GitHub repository](https://github.com/reparke/ITP348-Physical-Computing) - This is where all the raw files lives
-- Building your own course - I wanted this course material to be accessible and open-source. I tried to make some notes about the process for anyone interested
-how_this_site_is_built.md
-# gh-syllabus
-
-A template for a [Github Pages](https://pages.github.com) hosted syllabus.
-
-- See the [live site](https://jan-martinek.github.io/gh-syllabus/) generated from this repo.
-- See the code in the [`master` branch](https://github.com/jan-martinek/gh-syllabus/tree/gh-pages).
-- Fork/clone this repository and make your own course syllabus on Github Pages.
-
-## Syllabi based on this template
-
-- [Kritická teorie a inovace: kde jsme a co s tím?](https://jan-martinek.github.io/ktai2017/) ([repo](https://github.com/jan-martinek/ktai2017))
-- [Introduction To Digital Humanities For The Ancient World](https://isaw-ga-3024.github.io/isaw-dh-syllabus/) ([repo](https://github.com/isaw-ga-3024/isaw-dh-syllabus))
-
-## Five step setup
-
-1. [Fork](https://guides.github.com/activities/forking/) this repository.
-2. [Enable GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages) to publish your site from `master` branch. 
-3. **It should work by now.** Check link to the live website right the in the settings.
-4. Edit `config.yml` and `*.md` files in `_syllabus` and this folder to add any content you want.
-5. Replace contents of this `README` file with description of your syllabus.
-
-## Tips
-
-- The syntax is mostly in easily readable [Markdown](http://markdown-guide.readthedocs.io/en/latest/basics.html). 
-- Config file is YAML, but may easily see it as `name: value` list (it works most of the time like this). 
-- You may use [Github's own editor](https://help.github.com/articles/editing-files-in-your-repository/) to edit or add any of the files in repository.
-- Template is based on [Jekyll](https://jekyllrb.com) static site generator (that is used by Github Pages). So if you want to dig deeper, you can change almost anything (visuals, content structure, etc.).
+For more information about how this course is built, check out the [process](how_this_site_is_built.md)
 
 
 
-Licensed under MIT License.
+#### Credits
+
+I sought to use only images that were my own, that were in the public domain, or that had Creative Commons license. If an image is present that isn't licensed properly, please let me know and I will take it down.

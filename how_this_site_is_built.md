@@ -4,55 +4,40 @@
 
 # ITP 348 – Introduction to Physical Computing
 
-Welcome to the course page for ITP 348 - Introduction to Physical Computing!
+==**More information to be added later**==
 
-#### Course Links
+In designing this course in electronics / internet of things (IoT), and
+I wanted the content to be accessible for all users and I wanted to share it publicly. I hope you might find this useful for how to set up a similar system.
 
-You'll find course material and useful links on the side. 
+Special thanks to [Ryan Straight](https://ryanstraight.com/) for all his suggestions!
 
-- [Syllabus](itp348_syllabus_fall2019.md) - Course plan, policies, and date
-- [Lecture](_lectures) - HTML slides shows of lectures
-- Assignments - Assignment writeups
-- [Useful resources](resources.md) - Helpful pages and documentation for the course
-- Blackboard - For submitting assignments
+## My desired features are
 
+- accessible output (lecture notes and slides)
+- limit extra work (single file for publishable lecture notes,  in-class slide presentations, and web-viewable)
+- easy to edit (when editing lecture notes, I want to focus on the content not the formatting or markup)
+- a reliable tool that has community support and will exist in the future
+- easy to convert notes to slides (ideally an add-on for the editor I’m using,  but at least it should be a quick conversion that can be run)
+- drag and drop support for images (a bonus)
+- compatible with GitHub readable markdown (since I want to make the content  open-source. Ideally I would like it to automatically create GitHub HTML)
+- able to make illustrations / flowcharts / line drawings
 
+#### My Lecture Creation Process
 
-#### Additional Tools
+- Create / edit markdown files in Typora (images can be drag-and-dropped; simple graphics can be created in Inkscape)
+- Open completed lecture files in VSCode. Use Marpit plugin to generate HTML (or PDF) slideshows
+- Use GitHub to push changed files to course repository. Website will be auto-generated
 
-These are not necessarily needed for this course, but provide more information about how this site is built
+#### My Assignment Creation Process
 
-- [GitHub repository](https://github.com/reparke/ITP348-Physical-Computing) - This is where all the raw files lives
-- Building your own course - I wanted this course material to be accessible and open-source. I tried to make some notes about the process for anyone interested
-how_this_site_is_built.md
-# gh-syllabus
+- Create / edit assignment writeups in Word.
+- Export DOCX files from Word as markdown files using Writeage plugin
+- GitHub to push changed files to course repository. Website will be auto-generated
 
-A template for a [Github Pages](https://pages.github.com) hosted syllabus.
+#### Getting Started
 
-- See the [live site](https://jan-martinek.github.io/gh-syllabus/) generated from this repo.
-- See the code in the [`master` branch](https://github.com/jan-martinek/gh-syllabus/tree/gh-pages).
-- Fork/clone this repository and make your own course syllabus on Github Pages.
+##### GitHub Site
 
-## Syllabi based on this template
+- [Starting GitHub Pages Site](https://github.com/jan-martinek/gh-syllabus) This was an invaluable resource. I adapted ("forked") this site and added my own content
+- [GitHub Jekyll Template Help](https://jekyllrb.com/tutorials/navigation/#scenario-8-retrieving-items-based-on-front-matter-properties) In order to customize the system, I needed to adapt the GitHub Pages theme, which is called Jekyll
 
-- [Kritická teorie a inovace: kde jsme a co s tím?](https://jan-martinek.github.io/ktai2017/) ([repo](https://github.com/jan-martinek/ktai2017))
-- [Introduction To Digital Humanities For The Ancient World](https://isaw-ga-3024.github.io/isaw-dh-syllabus/) ([repo](https://github.com/isaw-ga-3024/isaw-dh-syllabus))
-
-## Five step setup
-
-1. [Fork](https://guides.github.com/activities/forking/) this repository.
-2. [Enable GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages) to publish your site from `master` branch. 
-3. **It should work by now.** Check link to the live website right the in the settings.
-4. Edit `config.yml` and `*.md` files in `_syllabus` and this folder to add any content you want.
-5. Replace contents of this `README` file with description of your syllabus.
-
-## Tips
-
-- The syntax is mostly in easily readable [Markdown](http://markdown-guide.readthedocs.io/en/latest/basics.html). 
-- Config file is YAML, but may easily see it as `name: value` list (it works most of the time like this). 
-- You may use [Github's own editor](https://help.github.com/articles/editing-files-in-your-repository/) to edit or add any of the files in repository.
-- Template is based on [Jekyll](https://jekyllrb.com) static site generator (that is used by Github Pages). So if you want to dig deeper, you can change almost anything (visuals, content structure, etc.).
-
-
-
-Licensed under MIT License.
