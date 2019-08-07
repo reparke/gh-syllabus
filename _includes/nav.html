@@ -1,5 +1,4 @@
 <p class="subtitle">{{ site.subtitle }}</p>
-<p>upload</p>
 <nav>
 	<ul>
 		{% assign pages = (site.pages | sort: "menuPosition") %}
@@ -8,19 +7,6 @@
 		<li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.menuItem}}</a></li>
 		{% else %}
 		<li><a href="{{ site.baseurl }}{{node.url}}">{{node.menuItem}}</a></li>
-		{% endif %}
-		{% endfor %}
-	</ul>
-
-	<ul>
-		{% for node in site.pages %}
-		{% if node.url contains base_url %}
-		{% assign node_url_parts = node.url | split: '/' %}
-		{% assign node_url_parts_size = node_url_parts | size %}
-		{% assign filename = node_url_parts | last %}
-		{% if url_parts_size == node_url_parts_size and filename != 'index.html' %}
-		<li><a href='{{node.url}}'>{{node.title}}</a></li>
-		{% endif %}
 		{% endif %}
 		{% endfor %}
 	</ul>

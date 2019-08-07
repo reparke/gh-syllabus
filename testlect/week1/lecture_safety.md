@@ -2,15 +2,16 @@
 
 title: Safety
 layout: page
-menuItem: Safety
-menuPosition: 4
 
 
 marp: true
 theme: itp
 paginate: true
 ---
-
+```
+title: Safety
+layout: page
+```
 
 <!-- headingDivider: 2 -->
 

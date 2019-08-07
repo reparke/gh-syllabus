@@ -1,13 +1,15 @@
 ---
 title: Software Tools
-layout: page
-menuItem: Software Tools
-menuPosition: 4
+
 
 marp: true
 theme: itp
 paginate: true
 ---
+
+```
+title: Software Tools
+```
 
 <!-- headingDivider: 2 -->
 

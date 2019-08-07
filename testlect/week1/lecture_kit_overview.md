@@ -8,7 +8,12 @@ layout: page
 menuItem: Kit Overview
 menuPosition: 8
 ---
-
+```
+title: Kit Overview
+layout: page
+menuItem: Kit Overview
+menuPosition: 8
+```
 
 <!-- headingDivider: 2 -->
 
