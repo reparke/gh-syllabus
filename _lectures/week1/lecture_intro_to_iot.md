@@ -6,7 +6,7 @@ week: 1
 category: lectures
 title: Intro to IoT
 ---
- 
+
 
 <!-- headingDivider: 2 -->
 
@@ -107,12 +107,12 @@ title: Intro to IoT
 
 ## Credits
 
-[Form](http://google.com)
-[Lumi](https://www.kickstarter.com/projects/playlumi/lumi-the-smarter-way-to-learn-and-play-music)
-[UFO](https://www.kickstarter.com/projects/1783400091/ufo-beauty-tech-revolutionizes-face-masks-in-90-se)
-[Jolt](https://www.kickstarter.com/projects/bdharva/jolt-sensor-better-concussion-detection-for-youth)
-[Grillo](https://grillo.io/)
-[ReWalk](https://rewalk.com/rewalk-personal-3/)
-[Pixabay](https://pixabay.com/vectors/network-iot-internet-of-things-782707/)
-[Mitch Alman](https://www.flickr.com/photos/67734410@N00/16258754459) via [cc](https://creativecommons.org/licenses/by-nc-sa/2.0/)
+- [Form](http://google.com)
+- [Lumi](https://www.kickstarter.com/projects/playlumi/lumi-the-smarter-way-to-learn-and-play-music)
+- [UFO](https://www.kickstarter.com/projects/1783400091/ufo-beauty-tech-revolutionizes-face-masks-in-90-se)
+- [Jolt](https://www.kickstarter.com/projects/bdharva/jolt-sensor-better-concussion-detection-for-youth)
+- [Grillo](https://grillo.io/)
+- [ReWalk](https://rewalk.com/rewalk-personal-3/)
+- [Pixabay](https://pixabay.com/vectors/network-iot-internet-of-things-782707/)
+- [Mitch Alman](https://www.flickr.com/photos/67734410@N00/16258754459) via [cc](https://creativecommons.org/licenses/by-nc-sa/2.0/)
 

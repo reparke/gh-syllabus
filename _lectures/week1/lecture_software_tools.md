@@ -10,18 +10,16 @@ title: Software Tools
 
 <!-- headingDivider: 2 -->
 
-# Course Tools
+# Course Software Tools
 
-## Course Tools
+## Tools
 
 - Each of our projects will be created with a combination of software (code) and hardware (connecting physical components)
 - There are two main programs we will use to created our projects
 
-## 
-
 ## Workbench
 
-![width: 600px](assets/1565051874830.png)
+![width:700px](assets/1565051874830_v2.png)
 
 ## Workbench
 
@@ -39,11 +37,11 @@ title: Software Tools
 
 ## Fritzing Breadboard Layout
 
-![width:500px](assets/TE5_range_finder_(Argon)_bb-1565052544681.png)
+![width:400px](assets/TE5_range_finder_Argon_bb-1565052544681.png)
 
 ## Actual Built Project
 
-![width:600px](assets/Photo Jun 04, 5 16 17 PM.jpg)
+![width:600px](assets/built_range_finder.jpg)
 
 ## Quick Note
 

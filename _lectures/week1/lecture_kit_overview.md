@@ -52,10 +52,10 @@ title: Kit Overview
 
 ## Credits
 
-[Sparkfun](https://www.sparkfun.com/products/13867)
-[Sparkfun](https://www.sparkfun.com/products/14265)
-[Particle](https://store.particle.io/products/argon)
-[Envelope Superstore](https://www.envelopesuperstore.com/3-coin-envelopes-24lb-brown-kraft/sku-5720202)
+- [Sparkfun](https://www.sparkfun.com/products/13867)
+- [Sparkfun](https://www.sparkfun.com/products/14265)
+- [Particle](https://store.particle.io/products/argon)
+- [Envelope Superstore](https://www.envelopesuperstore.com/3-coin-envelopes-24lb-brown-kraft/sku-5720202)
 
 
 
