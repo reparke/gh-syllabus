@@ -19,7 +19,9 @@ gradingUrl: "https://blackboard.usc.edu"
 collections:
   syllabus:
     output: true
-  testlect:
+  lectures:
+    output: true
+  assignments:
     output: true
 defaults:
   - scope:
@@ -32,4 +34,9 @@ defaults:
       type: lectures
     values:
       layout: unit
-# theme: jekyll-theme-dinky
+  - scope:
+      path: ""
+      type: assignments
+    values:
+      layout: unit
+      # theme: jekyll-theme-dinky
