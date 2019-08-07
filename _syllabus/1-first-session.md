@@ -4,7 +4,7 @@ day: September 1
 title: First session
 tags: [hello]
 ---
-
+<ul>
     {% for node in site.pages %}
       {% if node.url contains base_url %}
         {% assign node_url_parts = node.url | split: '/' %}
@@ -15,7 +15,7 @@ tags: [hello]
         {% endif %}
       {% endif %}
     {% endfor %}
-
+</ul>
 ### Surname, Name: _Book title_
 
 City: Publisher, 2017\. ISBN 123-45-678-9012-3.  
