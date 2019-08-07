@@ -132,15 +132,15 @@ nav ul, nav li {
 nav li a {
 	color: #FFC72C;
 	text-decoration: none;
-	border-bottom: 3px solid rgba(255, 199, 44, .1);
+	border-bottom: 3px solid rgba(255, 199, 44, .3);
 }
 
 nav li a:visited {
-	border-bottom-color: rgba(255, 199, 44, .3);
+	border-bottom-color: rgba(255, 199, 44, .6);
 }
 
 nav li a:hover {
-	border-bottom-color: rgba(255, 199, 44, .7);
+	border-bottom-color: rgba(255, 199, 44, .9);
 }
 
 nav .active a {
