@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 week: 1
-category: lecture
+category: lectures
 title: Intro to IoT
 ---
  

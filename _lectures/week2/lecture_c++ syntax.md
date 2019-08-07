@@ -4,9 +4,8 @@ theme: itp
 paginate: true
 
 week: 2
-category: lecture
+category: lectures
 title: C++ Syntax
-
 ---
 
 <!-- headingDivider: 2 -->

@@ -4,13 +4,13 @@ theme: itp
 paginate: true
 
 week: 2
-category: lecture
-title: The Argon Microcontroller
+category: lectures
+title: Argon Microcontroller
 ---
 
 <!-- headingDivider: 2 -->
 
-# The Argon Microcontroller
+# Argon Microcontroller
 
 ## Microcontroller
 

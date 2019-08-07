@@ -4,9 +4,8 @@ theme: itp
 paginate: true
 
 week: 1
-category: lecture
+category: lectures
 title: Safety
-
 ---
 
 
