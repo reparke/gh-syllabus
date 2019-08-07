@@ -1,3 +1,10 @@
+---
+week: 0
+number: 0
+category: assignment
+title: Installation and Setup
+---
+
 Assignment 0 – Installation and Setup
 =====================================
 
