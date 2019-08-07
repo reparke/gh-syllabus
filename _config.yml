@@ -19,6 +19,8 @@ gradingUrl: "https://blackboard.usc.edu"
 collections:
   syllabus:
     output: true
+  testlect:
+    output: true
 defaults:
   - scope:
       path: ""

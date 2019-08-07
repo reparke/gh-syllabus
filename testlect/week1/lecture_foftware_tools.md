@@ -1,6 +1,9 @@
 ---
-title: Software Tools
 
+week: 2
+day: September 8
+title: Software Tools
+tags: [hints, letsDoIt]
 
 marp: true
 theme: itp
