@@ -1,4 +1,9 @@
 ---
+title: Software Tools
+layout: page
+menuItem: Test
+menuPosition: 4
+
 marp: true
 theme: itp
 paginate: true
