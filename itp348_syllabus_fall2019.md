@@ -1,3 +1,8 @@
+---
+title: Syllabus
+layout: page
+menuItem: Syllabus
+menuPosition: 1
 
 
 #### University of Southern California
