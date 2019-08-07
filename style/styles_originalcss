@@ -1,5 +1,5 @@
 html, body {
-	background: #990000;
+	background: #eee;
 }
 @media screen and (max-width: 69.999rem) {
 	html, body { margin: 0; padding: 0 }
@@ -126,10 +126,6 @@ a[href$='.pdf'] {
 nav ul, nav li {
 	list-style-type: none;
 	padding: 0;
-}
-
-nav li a {
-	color: #FFC72C;
 }
 
 nav .active a {
