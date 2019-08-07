@@ -11,8 +11,10 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
 
 There's something that needs to be told. Maybe.
 
-<ul>
 {% assign syllabus = (site.testlect | sort: "week") %}
+{{ variable | jsonify }}
+
+<ul>
 {% for week in syllabus %}
   <li>
   	<a href="{{ site.baseurl }}{{ week.url }}">{{ week.title }}</a> 
@@ -22,6 +24,8 @@ There's something that needs to be told. Maybe.
   	({{ week.day }})</li>
 {% endfor %}
 </ul>
+
+
 
 ---
 
