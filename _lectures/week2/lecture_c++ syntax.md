@@ -2,15 +2,16 @@
 marp: true
 theme: itp
 paginate: true
+
 week: 2
 category: lecture
-title: C++ Syntax Overview
+title: C++ Syntax
 
 ---
 
 <!-- headingDivider: 2 -->
 
-# 
+# C++ Syntax Overview
 
 ## C++ and Other Languages
 

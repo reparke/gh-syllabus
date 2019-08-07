@@ -1,19 +1,14 @@
 ---
-
+marp: true
+theme: itp
+paginate: true
 
 week: 1
 category: lecture
 title: Safety
 
-
-marp: true
-theme: itp
-paginate: true
 ---
-```
-title: Safety
-layout: page
-```
+
 
 <!-- headingDivider: 2 -->
 

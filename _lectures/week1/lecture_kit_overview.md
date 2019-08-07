@@ -3,17 +3,11 @@ marp: true
 theme: itp
 paginate: true
 
-
 week: 1
-title: Kit Overview
 category: lecture
----
-```
 title: Kit Overview
-layout: page
-menuItem: Kit Overview
-menuPosition: 8
-```
+---
+
 
 <!-- headingDivider: 2 -->
 

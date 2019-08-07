@@ -29,7 +29,7 @@ defaults:
       layout: unit
   - scope:
       path: ""
-      type: testlect
+      type: lectures
     values:
       layout: unit
 # theme: jekyll-theme-dinky

@@ -1,15 +1,16 @@
 ---
 marp: true
 theme: itp
+paginate: true
 
 week: 2
-title: Structure of a Microcontroller Program
 category: lecture
+title: Argon Program Structure
 ---
 
 <!-- headingDivider: 2 -->
 
-# 
+# Structure of a Microcontroller Program
 
 ## Important Note
 
