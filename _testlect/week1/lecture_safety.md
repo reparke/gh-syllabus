@@ -2,9 +2,9 @@
 
 
 week: 1
-day: September 8
+category: lecture
 title: Safety
-tags: [hints, letsDoIt]
+
 
 marp: true
 theme: itp

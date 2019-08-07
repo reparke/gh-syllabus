@@ -4,9 +4,8 @@ theme: itp
 paginate: true
 
 week: 2
-day: September 8
+category: lecture
 title: Electricity
-tags: [hints, letsDoIt]
 ---
 
 <!-- headingDivider: 2 -->

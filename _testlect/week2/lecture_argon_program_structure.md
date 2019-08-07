@@ -3,9 +3,8 @@ marp: true
 theme: itp
 
 week: 2
-day: September 8
 title: Structure of a Microcontroller Program
-tags: [hints, letsDoIt]
+category: lecture
 ---
 
 <!-- headingDivider: 2 -->

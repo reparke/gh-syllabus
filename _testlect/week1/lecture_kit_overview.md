@@ -5,9 +5,8 @@ paginate: true
 
 
 week: 1
-day: September 8
 title: Kit Overview
-tags: [hints, letsDoIt]
+category: lecture
 ---
 ```
 title: Kit Overview

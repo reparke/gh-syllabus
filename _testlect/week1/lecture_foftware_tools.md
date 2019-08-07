@@ -4,9 +4,9 @@ theme: itp
 paginate: true
 
 week: 1
-day: September 8
+category: lecture
 title: Software Tools
-tags: [hints, letsDoIt]
+
 
 
 ---
