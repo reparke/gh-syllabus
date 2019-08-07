@@ -10,21 +10,6 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
 {% endif %}
 
 
-{% assign syllabus = (site.testlect | sort: "week") %}
-{{ site.testlect | jsonify }}
-{{ site.testlect | inspect }}
-<ul>
-{% for wk in syllabus %}
-    {% if wk.week == "1" %}
-  <li>
-  	<a href="{{ site.baseurl }}{{ wk.url }}">{{ wk.title }}</a> 
-  	{% for tag in wk.tags %}
-  		<b>#{{ tag }}</b>
-  	{% endfor %}
-  	({{ wk.day }})</li>
-    {% endif %}
-{% endfor %}
-</ul>
 
 
 
