@@ -9,7 +9,7 @@ menuPosition: 4
 You can download all required reading in the [Study materials]({{ site.docsUrl }}) at the faculty website.
 {% endif %}
 
-{% assign mydocs = site.testlect | group_by: 'week' %}
+{% assign mydocs = site.lectures | group_by: 'week' %}
 {% for cat in mydocs %}
 <h2>Week - {{ cat.name }}</h2>
 <ul>
@@ -22,7 +22,7 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
 
 ---
 
-{% assign syllabus = (site.testlect | sort: "week") %}
+{% assign syllabus = (site.lectures | sort: "week") %}
 <ul>
 {% for wk in syllabus %}
     {% if wk.week == 1 %}
@@ -41,7 +41,7 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
 ---
 
 <ol>
-{% assign syllabus = (site.testlect | sort: "week") %}
+{% assign syllabus = (site.lectures | sort: "week") %}
 {% for week in syllabus %}
   <li>
   	<a href="{{ site.baseurl }}{{ week.url }}">{{ week.title }}</a> 
