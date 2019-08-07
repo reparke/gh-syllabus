@@ -15,7 +15,6 @@ docsUrl: ""
 # url where the student's grading info is kept
 gradingUrl: "https://blackboard.usc.edu" 
 
-
 # change only if you know what you are doing
 collections:
   syllabus:
@@ -27,4 +26,4 @@ defaults:
     values:
       layout: unit
 
-theme: jekyll-theme-dinky
+# theme: jekyll-theme-dinky
