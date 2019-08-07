@@ -5,7 +5,18 @@ menuItem: "Basic info"
 menuPosition: 1
 ---
 <h1>{{ site.courseName }}</h1>
-
+	<ul>
+    {% for node in site.pages %}
+      {% if node.url contains base_url %}
+        {% assign node_url_parts = node.url | split: '/' %}
+        {% assign node_url_parts_size = node_url_parts | size %}
+        {% assign filename = node_url_parts | last %}
+        {% if url_parts_size == node_url_parts_size and filename != 'index.html' %}
+          <li><a href='{{node.url}}'>{{node.title}}</a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </ul>
 <img src="{{ site.baseurl }}/style/header.jpg" width="100%">
 
 - This is a **template of a course syllabus microsite** based on Jekyll/Github Pages. (Licensed under MIT: use at will!)
@@ -52,15 +63,3 @@ When and where.
 
 Course capacity, prerequisites, eligibilities etc.
     
-	<ul>
-    {% for node in site.pages %}
-      {% if node.url contains base_url %}
-        {% assign node_url_parts = node.url | split: '/' %}
-        {% assign node_url_parts_size = node_url_parts | size %}
-        {% assign filename = node_url_parts | last %}
-        {% if url_parts_size == node_url_parts_size and filename != 'index.html' %}
-          <li><a href='{{node.url}}'>{{node.title}}</a></li>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-    </ul>
