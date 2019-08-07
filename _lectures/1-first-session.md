@@ -32,3 +32,5 @@ In: Publication, Date. [Available online.](http://publication.com/article_url)
       {% endif %}
     {% endfor %}
     </ul>
+
+    <h1>{{ site.courseName }}</h1>
