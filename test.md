@@ -11,7 +11,7 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
 
 {% assign mydocs = site.testlect | group_by: 'week' %}
 {% for cat in mydocs %}
-<h2>{{ cat.name | capitalize }}</h2>
+<h2>Week - {{ cat.name }}</h2>
 <ul>
     {% assign items = cat.items | sort: 'order' %}
     {% for item in items %}
