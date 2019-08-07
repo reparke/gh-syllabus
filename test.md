@@ -9,19 +9,20 @@ menuPosition: 4
 You can download all required reading in the [Study materials]({{ site.docsUrl }}) at the faculty website.
 {% endif %}
 
-There's something that needs to be told. Maybe.
 
 {% assign syllabus = (site.testlect | sort: "week") %}
 {{ site.testlect | jsonify }}
 {{ site.testlect | inspect }}
 <ul>
-{% for week in syllabus %}
+{% for wk in syllabus %}
+    {% if wk.week == "1" %}
   <li>
-  	<a href="{{ site.baseurl }}{{ week.url }}">{{ week.title }}</a> 
-  	{% for tag in week.tags %}
+  	<a href="{{ site.baseurl }}{{ wk.url }}">{{ wk.title }}</a> 
+  	{% for tag in wk.tags %}
   		<b>#{{ tag }}</b>
   	{% endfor %}
-  	({{ week.day }})</li>
+  	({{ wk.day }})</li>
+    {% endif %}
 {% endfor %}
 </ul>
 
