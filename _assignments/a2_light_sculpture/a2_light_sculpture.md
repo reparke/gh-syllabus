@@ -3,7 +3,7 @@ week_assigned: 2
 number: 2
 category: assignment
 title: Light Sculpture
-due: Sep 10
+date_due: Sep 10
 ---
 
 Assignment 2 – Light Sculpture
