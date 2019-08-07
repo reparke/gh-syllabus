@@ -1,3 +1,16 @@
+#### University of Southern California
+
+#### Viterbi School of Engineering
+
+#### Information Technology Program
+
+# ITP 348 – Introduction to Physical Computing
+
+[**Syllabus**](itp348_syllabus_fall2019.md)
+
+[Useful resources](resources.md)
+
+
 # gh-syllabus
 
 A template for a [Github Pages](https://pages.github.com) hosted syllabus.
