@@ -27,5 +27,9 @@ defaults:
       type: syllabus
     values:
       layout: unit
-
+  - scope:
+      path: ""
+      type: testlect
+    values:
+      layout: unit
 # theme: jekyll-theme-dinky
