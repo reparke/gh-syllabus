@@ -2,6 +2,11 @@
 marp: true
 theme: itp
 paginate: true
+
+title: Kit Overview
+layout: page
+menuItem: Kit Overview
+menuPosition: 8
 ---
 
 
