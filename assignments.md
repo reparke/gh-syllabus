@@ -23,18 +23,15 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
 
 ---
 
-{% assign syllabus = (site.assignments | sort: "week") %}
-<ul>
-{% for wk in syllabus %}
-    {% if wk.week == 1 %}
+<ol>
+{% assign syllabus = (site.assignments | sort: "number") %}
+{% for week in syllabus %}
   <li>
-  	<a href="{{ site.baseurl }}{{ wk.url }}">{{ wk.title }}</a> 
-  	{% for tag in wk.tags %}
-  		<b>#{{ tag }}</b>
-  	{% endfor %}
-  	({{ wk.day }})</li>
-    {% endif %}
+  	<a href="{{ site.baseurl }}{{ week.url }}">{{ week.title }}</a> 
+  	({{ week.day }})</li>
 {% endfor %}
-</ul>
+</ol>
+
+
 
 

@@ -1,7 +1,7 @@
 ---
-title: Lecture
+title: Lectures
 layout: page
-menuItem: Lecture
+menuItem: Lectures
 menuPosition: 2
 
 ---
