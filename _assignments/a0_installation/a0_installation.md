@@ -1,8 +1,9 @@
 ---
-week: 0
+week_assigned: 1
 number: 0
 category: assignment
 title: Installation and Setup
+date_due: Sep 3
 ---
 
 Assignment 0 – Installation and Setup

@@ -1,3 +1,11 @@
+---
+week_assigned: 1
+number: 1
+category: assignment
+title: Basic Blink
+date_due: Sep 3
+---
+
 Assignment 1 – Basic Blink
 ==========================
 
