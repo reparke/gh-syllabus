@@ -67,15 +67,16 @@ table tr:nth-child(odd) td, table tr:nth-child(odd) th {
 
 a {
 	text-decoration: none;
-	border-bottom: 3px solid rgba(0, 0, 238, .1);
+	color:  rgba(153, 27, 30, 1);
+	border-bottom: 3px solid rgba(153, 27, 30, .1);
 }
 
 a:visited {
-	border-bottom-color: rgba(85, 26, 139, .1);
+	border-bottom-color: rgba(153, 27, 30, .3);
 }
 
 a:hover {
-	border-bottom-color: rgba(0, 0, 238, .3);
+	border-bottom-color: rgba(153, 27, 30, .7);
 }
 
 a[href$='.pdf'] {
@@ -130,6 +131,16 @@ nav ul, nav li {
 
 nav li a {
 	color: #FFC72C;
+	text-decoration: none;
+	border-bottom: 3px solid rgba(255, 199, 44, .1);
+}
+
+nav li a:visited {
+	border-bottom-color: rgba(255, 199, 44, .3);
+}
+
+nav li a:hover {
+	border-bottom-color: rgba(255, 199, 44, .7);
 }
 
 nav .active a {
