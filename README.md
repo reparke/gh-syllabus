@@ -12,10 +12,10 @@ The live course website can be found at **https://reparke.github.io/ITP348-Physi
 
 
 
-For more information about how this course is built, check out the [process](how_this_site_is_built.md)
+For more information about how this course is built, check out the [process](how_this_site_is_built.md).
 
 
 
 #### Credits
 
-I sought to use only images that were my own, that were in the public domain, or that had Creative Commons license. If an image is present that isn't licensed properly, please let me know and I will take it down.
+I sought to use only images that were my own, that were in the public domain, or that had Creative Commons licenses. If an image appears that isn't licensed properly, please let me know and I will take it down.
