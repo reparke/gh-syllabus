@@ -4,22 +4,17 @@ theme: itp
 
 week: 3
 category: lectures
-title: Analog vs. Digital
+title: Digital Input
 
 ---
 
 <!-- headingDivider: 2 -->
 
-# Analog vs. Digital
+# Digital Input
 
-## Questions
 
-- What is an example of something that is analog?
-- What is an example of stomething that is digital?
 
-## Analog vs. Digital
-
-==pic of clock and digital clock==
+# Review
 
 ## Analog
 
@@ -75,14 +70,30 @@ digitalWrite(PIN_NUMBER, VALUE);
 - This is writing a **digital** value
   - Digital values are like boolean values: 0/1, on/off, true/false
 
-Potentiometer
+## What about digital input?
+
+## Digital Input
+
+- Pins D2-D8 can be used for digital input *(other pins can also be used)*
+- Argon will "read" the voltage on a pin and return HIGH (3.3V) or LOW (0V)
+- **Never exceed 3.3V on input**
+  - Be careful of other components that operate at 5V
+
+What types of things might we use as digital inputs?
+
+## Reading Digital Input with `digitalRead` 
+
+Syntax
+
+```c++
+int value = digitalRead(PIN_NUMBER);
+//value is either HIGH or LOW (HIGH and LOW are defined as constants)
+```
+
+
 
 ![width:200px](assets/potentiometer-482082_960_720.jpg)
 
-![width:300px](assets/1565313673103.png)
+
 
 ![width:200px](assets/1565313560201.png)
-
-## Credit
-
-- https://www.flickr.com/photos/snazzyguy/4149940565/

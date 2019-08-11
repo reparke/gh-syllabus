@@ -5,10 +5,10 @@
    - [ ] purchase:
      - [ ] small envelopes
      - [ ] coin batteries
-     - [ ] paper circuits classroom kit
-     - [ ] construction paper
-     - [ ] conductive tape
-     - [ ] colored straws
+     - [x] paper circuits classroom kit
+     - [x] construction paper
+     - [x] conductive tape
+     - [x] colored straws
 
 1. #### Introduction
    
@@ -20,6 +20,7 @@
     - Student intro slides 
     - Ice breaker
     - Introduction to IoT
+    - Possibly show this [mind map](https://www.mindmeister.com/1308604904?t=O0Vcty0Uys) from Boris Tomas
   - Lab
     - none
 - Day 2
