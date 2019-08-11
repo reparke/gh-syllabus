@@ -23,7 +23,7 @@ close-up https://docs.particle.io/assets/images/argon/argon-dimensions.png
 
 
 
-## Arduino
+### Arduino
 
 - Main documentation: https://www.arduino.cc/reference/en/
 
