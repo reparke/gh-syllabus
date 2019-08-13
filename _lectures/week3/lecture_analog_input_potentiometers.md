@@ -42,7 +42,7 @@ pinMode(PIN_NUMBER, MODE);
 ## Potentiometer
 
 ![height=48px](assets/potentiometer-482082_960_720.jpg)
-##
+## f
 <img src="assets/potentiometer-482082_960_720.jpg" style="width:50px" />
 
 
@@ -52,4 +52,4 @@ pinMode(PIN_NUMBER, MODE);
 
 ## Credit
 
-- https://www.flickr.com/photos/snazzyguy/4149940565/
+- [https://www.flickr.com/photos/snazzyguy/4149940565/](https://www.flickr.com/photos/snazzyguy/4149940565/)
