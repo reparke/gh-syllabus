@@ -59,9 +59,9 @@ for (initialization; condition; update)
 
 `for (`**int i = 0**`; i < 10; i++) {`
 
-`   if (i % 2 == 0) {`
+`____if (i % 2 == 0) {`
 
-`      Serial.println(i);
+`________Serial.println(i);
 `
 
 
@@ -87,7 +87,9 @@ for (initialization; condition; update)
 ## Example
 
 `for (int i = 0; i < 10; i++) {`
+
 ____**if (i % 2 == 0) {**
+
 __________**Serial.println(i);**
 
 
@@ -97,7 +99,9 @@ __________**Serial.println(i);**
 ## Example
 
 `for (int i = 0; i < 10; `**i++**`) {`
+
 `____if (i % 2 == 0) {`
+
 `________Serial.println(i);
 `
 
@@ -109,7 +113,9 @@ __________**Serial.println(i);**
 ## Example
 
 `for (int i = 0`; **i < 10**`; i++) {`
+
 `____if (i % 2 == 0) {`
+
 `________Serial.println(i);
 `
 
