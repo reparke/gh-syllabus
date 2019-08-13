@@ -58,7 +58,9 @@ for (initialization; condition; update)
 ## Example
 
 `for (`**int i = 0**`; i < 10; i++) {`
+
 `____if (i % 2 == 0) {`
+
 `________Serial.println(i);
 `
 
