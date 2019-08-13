@@ -9,11 +9,12 @@ menuPosition: 4
 
 ### Particle Documenation
 
-- Language reference (https://docs.particle.io/reference/device-os/firmware/argon/#language-syntax)
+- [Language reference](https://docs.particle.io/reference/device-os/firmware/argon/#language-syntax)
 - Pin close-up https://docs.particle.io/assets/images/argon/argon-dimensions.png
 close-up https://docs.particle.io/assets/images/argon/argon-dimensions.png
 
-
+- [Language reference](https://docs.particle.io/reference/device-os/firmware/argon/#language-syntax)
+  [Language reference](https://docs.particle.io/reference/device-os/firmware/argon/#language-syntax)
 
 ### Particle Quicklinks
 
