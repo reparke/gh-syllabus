@@ -89,12 +89,74 @@
 
    - Reading
      - https://learn.sparkfun.com/tutorials/analog-vs-digital/all
+     - https://learn.sparkfun.com/tutorials/pulse-width-modulation/all
+     - https://www.youtube.com/watch?v=GQLED3gmONg
    - Day 1
      - Lecture
        - Analog vs. Digital, digitalRead, pinMode ==should this be moved from week 2?==
        - Serial monitor: display info for debugging; only available when USB connected (not via cloud)
      - Guided activity
        - digitalRead() on D2; use serial monitor to display floating value; then directly connect to **3.3v**, then GND
+     - Lecture
+       - Pulse width modulation, PWM pins, analogWrite
+     - Lab
+       - Make light fully bright for 2 sec, half as bright for 2 sec, 1/3 as bright for 2 sec, 
+       - Challenge: Increase light level of LED automatically
+     - Lecture
+       - C++ for loops
+     - Lab
+       - Have students use for loop to sweep the brightness of an LED
+   - Day 2
+     - Lecture
+       - Digital multimeter
+       - How to read resistors
+       
+     - Guided activity
+       - Measure voltage at pin when potentiometer is turned (remove from circuit
+       - Measure resistance
+       
+     - Lecture
+       - Potentiometer: explain the math / conversion between voltage and input values
+       - ==voltage dividers?==
+       
+     - Lab
+       
+       - Use potentiometer to control light level
+       
+     - Lecture
+     
+       - RGB LEDs: common anode vs cathode, R+G+B != W
+     
+     - Lab
+     
+       - Display random color with analogWrite
+     
+     - Guided activity
+     
+       - Create function that take inputs to set the color
+     
+         ```c++
+          void setColor(int r, int g, int b)
+         ```
+     
+       - discuss how to enter hexcode 0xFF (==not sure what I meant by this==)
+     
+       - Try library for animation http://yaab-arduino.blogspot.com/p/ala-example-simplergbled.html
+   - Assignment
+     
+     - A3 - Cylon light 
+4. #### RGB LEDs *(one class cancelled for Tapia)*
+
+   - Reading
+     
+     - 
+   - Day 1
+     - Activity
+       - Video chat with Cyane's class
+       - Discuss Pecha Kucha
+     - Guided activity
+       - connect button with pullup
+       - Ask what is the voltage at pin when button pressed and not pressed
      - Lecture
        - Push buttons: component, schematic, datasheet?
      - Guided activity
@@ -106,53 +168,6 @@
        - Turn LED on while button pressed
        - Turn LED off after button pressed
        - Connect 3 LEDs and control on/off with button presses (3 states)
-   - Day 2
-     - Guided activity
-       - connect button with pullup
-       - Ask what is the voltage at pin when button pressed and not pressed
-     - Lecture
-       - Digital multimeter
-       - How to read resistors
-     - Guided activity
-       - Measure voltage at pin when button pressed
-       - Measure resistance
-     - Lecture
-       - Pulse width modulation, PWM pins, analogWrite, DAC
-       - ==voltage dividers?==
-     - Lab
-       - Increase light level of LED automatically
-     - Lecture
-       - C++ for loops (==find an animation online==)
-       - Potentiometer: explain the math / conversion between voltage and input values
-     - Lab
-       - Use potentiometer to control light level
-   - Assignment
-     - A3 - Cylon light 
-4. #### RGB LEDs *(one class cancelled for Tapia)*
-
-   - Reading
-     
-     - 
-   - Day 1
-     - Activity
-       - Video chat with Cyane's class
-       - Discuss Pecha Kucha
-     - Lecture
-       
-       - RGB LEDs: common anode vs cathode, R+G+B != W
-     - Lab
-       
-       - Display random color with analogWrite
-     - Guided activity
-       - Create function that take inputs to set the color
-         
-         ```c++
-          void setColor(int r, int g, int b)
-         ```
-         
-       - discuss how to enter hexcode 0xFF (==not sure what I meant by this==)
-       
-       - Try library for animation http://yaab-arduino.blogspot.com/p/ala-example-simplergbled.html
    - Day 2 - Class cancelled
      - Assignment
        - A4 - Electronic dice 

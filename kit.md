@@ -68,4 +68,3 @@ Prices reflect Particle's Wholesale / Education discount and sales tax in Los An
 | Particle   Argon Kit | 1        | https://store.particle.io/products/argon-kit                 | $30.66        | $30.66   |
 | Serial   LCD         | 1        | https://www.amazon.com/gp/product/B019K5X53O/ref=ox_sc_act_title_1?smid=ADHH624DX2Q66&psc=1 | $9.81         | $9.81    |
 | Bluetooth   Antenna  | 1        | https://wholesale.particle.io/collections/accessories        | $6.46         | $6.46    |
-
