@@ -41,7 +41,7 @@ pinMode(PIN_NUMBER, MODE);
 
 ## Potentiometer
 
-![width:200px](assets/potentiometer-482082_960_720.jpg)
+![height=48px](assets/potentiometer-482082_960_720.jpg)
 
 ![width:300px](assets/1565313673103.png)
 
