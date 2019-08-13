@@ -98,7 +98,8 @@
      - Guided activity
        - digitalRead() on D2; use serial monitor to display floating value; then directly connect to **3.3v**, then GND
      - Lecture
-       - Pulse width modulation, PWM pins, analogWrite
+       - Pulse width modulation, PWM pins, analogWrite 
+       - ==draw an "equivalent voltage" line on the duty cycle image e.g. 1.67v is 50%==
      - Lab
        - Make light fully bright for 2 sec, half as bright for 2 sec, 1/3 as bright for 2 sec, 
        - Challenge: Increase light level of LED automatically
@@ -108,25 +109,25 @@
        - Have students use for loop to sweep the brightness of an LED
    - Day 2
      - Lecture
+       - Potentiometer: explain the math / conversion between voltage and input values
+       - ==voltage dividers?==
+       
+     - Lab
+     
+       - Use potentiometer to control light level
+     
+     - Lecture
+     
        - Digital multimeter
        - How to read resistors
-       
+     
      - Guided activity
        - Measure voltage at pin when potentiometer is turned (remove from circuit
        - Measure resistance
        
      - Lecture
-       - Potentiometer: explain the math / conversion between voltage and input values
-       - ==voltage dividers?==
-       
-     - Lab
-       
-       - Use potentiometer to control light level
-       
-     - Lecture
-     
        - RGB LEDs: common anode vs cathode, R+G+B != W
-     
+       
      - Lab
      
        - Display random color with analogWrite

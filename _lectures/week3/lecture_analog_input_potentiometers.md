@@ -4,15 +4,13 @@ theme: itp
 
 week: 3
 category: lectures
-title: Analog vs. Digital
+title: Analog Input and Potentiometers
 
 ---
 
 <!-- headingDivider: 2 -->
 
-# Analog vs. Digital
-
-## Analog vs. Digital
+# Analog Input
 
 ==pic of clock and digital clock==
 
@@ -20,6 +18,11 @@ title: Analog vs. Digital
 
 - Analog: **infinite** variations / states
 - Digital: **discrete** (or **finite**) states
+- How do we represent infinite variations in a system that has limited / finite values?
+
+## Recall
+
+![PWM Graph width:400px](lecture_analog_input_potentiometers.assets/pwm.gif)
 
 
 ## Setting input / output with `pinMode` 
