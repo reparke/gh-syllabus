@@ -1,3 +1,11 @@
+---
+week_assigned: 3
+number: 3
+category: assignment
+title: Scanning Light
+date_due: Sep 17
+---
+
 Assignment 3 – Scanning Light
 =============================
 
