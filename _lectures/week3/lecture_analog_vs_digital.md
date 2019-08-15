@@ -15,11 +15,10 @@ title: Analog vs. Digital
 ## Questions
 
 - What is an example of something that is analog?
-- What is an example of stomething that is digital?
+- What is an example of something that is digital?
 
 ## Analog vs. Digital
-
-==pic of clock and digital clock==
+<img src="lecture_analog_vs_digital.assets/analog-clock-1295631_960_720-1565746786122.png" alt="analog clock" width=300 /><img src="lecture_analog_vs_digital.assets/clock-997589_960_720.jpg" alt="digital clock" width=300 />
 
 ## Analog
 
@@ -74,3 +73,8 @@ digitalWrite(PIN_NUMBER, VALUE);
 - You can send an ON (HIGH) or OFF (LOW) signal at output on a pin
 - This is writing a **digital** value
   - Digital values are like boolean values: 0/1, on/off, true/false
+
+## Credits
+
+- [Pixabay](https://pixabay.com/photos/clock-alarm-clock-brick-clock-face-997589/)
+- [Pixabay](https://pixabay.com/vectors/analog-clock-clock-time-1295631/)

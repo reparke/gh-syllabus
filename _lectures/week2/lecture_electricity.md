@@ -4,7 +4,7 @@ theme: itp
 paginate: true
 
 week: 2
-category: lectures
+category: lectures  
 title: Electricity
 ---
 

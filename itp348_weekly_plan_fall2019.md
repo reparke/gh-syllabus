@@ -85,7 +85,7 @@
    - Assignment
      - A2 - Light Sculpture
    
-3. #### Buttons, ADC, Potentiometers, Serial Monitor
+3. #### ADC, Potentiometers, Serial Monitor
 
    - Reading
      - https://learn.sparkfun.com/tutorials/analog-vs-digital/all
@@ -109,12 +109,22 @@
        - Have students use for loop to sweep the brightness of an LED
    - Day 2
      - Lecture
-       - Potentiometer: explain the math / conversion between voltage and input values
-       - ==voltage dividers?==
+       
+       - Potentiometer, voltage dividers
        
      - Lab
      
+       - Have students connect pot to 3.3v, gnd, and A0; display the values
+       
+     - Lecture
+     
+       - Analog to digital conversion; explain the math / conversion between voltage and input values
+     
+     - Lab
+     
        - Use potentiometer to control light level
+     
+     - ==next week==
      
      - Lecture
      
@@ -126,6 +136,7 @@
        - Measure resistance
        
      - Lecture
+       
        - RGB LEDs: common anode vs cathode, R+G+B != W
        
      - Lab
@@ -146,7 +157,7 @@
    - Assignment
      
      - A3 - Cylon light 
-4. #### RGB LEDs *(one class cancelled for Tapia)*
+4. #### Buttons, RGB LEDs *(one class cancelled for Tapia)*
 
    - Reading
      

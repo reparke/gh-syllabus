@@ -12,17 +12,19 @@ title: Pulse Width Modulation
 
 # Pulse Width Modulation
 
-Goal
+## Pulse Width Modulation
 
-Produce analog outputs (e.g. make an LED half as bright, rather than off or on)
+##### Goal
 
-Problem
+- Produce analog outputs (e.g. make an LED half as bright, rather than off or on)
 
-Argon does **not** have analog outputs (and neither do many microcontrollers)
+##### Problem
 
-Solution
+- Argon does **not** have analog outputs (and neither do many microcontrollers)
 
-We will fake it!
+##### Solution
+
+- We will fake it!
 
 ## Pulse Width Modulation (PWM)
 
