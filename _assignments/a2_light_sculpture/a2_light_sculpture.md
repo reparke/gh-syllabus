@@ -26,13 +26,13 @@ the LEDs away from the breadboard. If you want to use these, ask the instructor.
 
 Some example are below.
 
-![](media/0f1c502a12ff996e61075135e099a087.jpg)
+<img src="media/0f1c502a12ff996e61075135e099a087.jpg" alt="" style="width:400px" />
 
-![](media/1c65f2861c87d4a7bd37c6f277b98f31.jpg)
+<img src="media/1c65f2861c87d4a7bd37c6f277b98f31.jpg" alt="" style="width:400px" />
 
-![](media/cbd6a25f15f5e3874043e809a7a5c6af.jpg)
+<img src="media/cbd6a25f15f5e3874043e809a7a5c6af.jpg" alt="" style="width:400px" />
 
-![](media/06aae149712f15870bbe652b5bee6b9f.png)
+<img src="media/06aae149712f15870bbe652b5bee6b9f.png" alt="" style="width:400px" />
 
 **Components**
 

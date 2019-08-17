@@ -35,7 +35,7 @@ less bright.
 
 Here is an example with 7 lights.
 
-![](media/24cca9ef54a3cdbd348cf9e02bf651c9.png)
+<img src="media/24cca9ef54a3cdbd348cf9e02bf651c9.png" alt="" style="width:400px" />
 
 **Components**
 
