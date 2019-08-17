@@ -25,6 +25,7 @@ title: Push Buttons
 
 - Buttons have four pins and designed to go across the center of the breadboard
 <img src="lecture_buttons.assets/1565910237122.png" alt="switch on breadboard" width=400 />
+*<img src="foo" title="*"/>
 
 ## Push Button Connections (Normally Open)
 
