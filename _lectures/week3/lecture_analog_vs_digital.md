@@ -39,6 +39,7 @@ title: Analog vs. Digital
 
 - Digital values often have more than just two states--but they still have a fixed number of possible values (e.g. integer values 0-255)
 
+# Review
 
 ## Setting input / output with `pinMode` 
 

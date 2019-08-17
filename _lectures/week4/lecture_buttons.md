@@ -12,67 +12,82 @@ title: Push Buttons
 
 # Push Buttons
 
-## Three LEDs in One!
+<img src="lecture_buttons.assets/518189efce395f1f45000000.jpg" alt="various types of switches" width=600 />
 
-- RGB LEDs combine three separate LEDs in one package
-  - Red LED
-  - Green LED
-  - Blue LED
-- These **primary colors** can be controlled separately to create a multitude of color possibilities
+## Push Buttons
+<img src="lecture_buttons.assets/1565909884458.png" alt="switch circuit symbol" width=200 />
 
-## Pins
-<img src="lecture_rgb_leds.assets/1565897044440.png" alt="RGB LED" width=300 />
-- RGB LEDs have four pins
-- Three pins to each of R, G, B *(shorter pins)*
-- One pin serves as either common anode or common cathode *(longer pin)*
+- Momentary switches that make (or break) electrical contact when pressed
+- "Normally open" buttons complete a circuit when pressed *(this is what is in the kit)*
+- "Normally closed" buttons break a circuit when pressed *(we won't use these in class)*
 
-## Recall: Current Flow in LED
+## Push Button Orietation
 
-- LEDs allow current to flow **in only one direction**
-- Positive voltage applied to the **anode**
-- **Cathode** connected to Ground
-<img src="lecture_rgb_leds.assets/1565059300403.png" alt="LED schematic" width=300 />
+- Buttons have four pins and designed to go across the center of the breadboard
+<img src="lecture_buttons.assets/1565910237122.png" alt="switch on breadboard" width=400 />
 
-## Current Flow in RGB LEDs 
+## Push Button Connections (Normally Open)
 
-- RGB LEDs operate in generall same way
-- Current flows from anode to cathode
-- Positive voltage on anode causes LED to turn on
-- But there is a small catch to beware of...
-  - There are two types of RGB LEDs
+<img src="lecture_buttons.assets/pushbutton.png" alt="switch on breadboard" width=400 />
 
+- In the picture, each set of pins "vertically across" from each other are **always** connected
+- Each set of pins "horizontally next to" each other are **not connected** until the button is presed 
 
+## Goal
 
-## Common Cathode Work Like Regular LEDs
+- We want to use the button to send a binary (on/off) signal
+- Since this is a digital input, we can use HIGH (3.3v) and gnd
 
-- R, G, B pins are **anode** (*positive*)
-- Connect **cathode** (longer pin) to **Ground** (*negative*)
-- Output **HIGH** (3.3v) on anode turns on, LOW turns off
+## First Version
 
-## Common Cathode Wiring
+<img src="lecture_buttons.assets/1565911529662.png" alt="switch on breadboard" width=600 />
 
-<img src="lecture_rgb_leds.assets/1565896348358.png" alt="common cathode wiring" width=600 />
+## First Version - Problem
 
-## Common Anode are the Opposite from Regular LEDs
+<img src="lecture_buttons.assets/1565911529662.png" alt="switch on breadboard" width=300 />
 
-- R, G, B pins are **cathode** (*negative*)
-- Connect **anode** (longer pin) to 3.3v (*positive*)
-- Output LOW on anode to turn on LED; output HIGH (3.3v) to turn off
+- When button is pressed, it is connected to gnd (LOW)
+- When button is open, is it LOW or HIGH?
 
-## Common Anode Wiring
-<img src="lecture_rgb_leds.assets/1565896027460.png" alt="common anode wiring" width=600 />
+## Floating Input
 
-## Color Mixing
-<img src="lecture_rgb_leds.assets/1565902722602.png" alt="color mixing" width=400/>
+- When an digital input is neither exactly LOW (0v) or HIGH (3.3v), we say it is **floating**
+- This means it is somewhere between 0-3.3v
+- Should 2.4v be LOW or HIGH?
+- Let's fix this
 
-##### R + G + B = ?
+## Second Version
 
-## Color Mixing with RGB LEDs
+<img src="lecture_buttons.assets/1565911319542.png" alt="switch on breadboard" width=600 />
 
-- R + G + B **≠** W
-- Due to variations in manufacturing and resistor tolerances
+## Second Version Problem
+
+<img src="lecture_buttons.assets/1565911319542.png" alt="switch on breadboard" width=400 />
+
+- When button is open, we have HIGH (fixed)
+- When button is pressed, we connect power (3.3v) to gnd (**BAD!**)
+
+## Final Version
+
+<img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" width=600 />
+
+## Final Version - With Pull-Up Resistors
+
+<img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" width=400 />
+
+- We use a large resistor (10KOhms) to "pull-up" the input to 3.3v when the button is open (HIGH)
+- When the button is pressed, the input goes to gnd (LOW), and we no longer have short-circuit from power to ground
+- When button is pressed, we connect power (3.3v) to gnd (**BAD!**)
+
+## IMPORTANT
+
+<img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" width=400 />
+
+- **ALWAYS USE A PULL-UP RESISTOR WITH BUTTONS**
+- Otherwise you can damage the Argon permanently
+## Try it out
 
 ## Credit
 
-- <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=755036">Source</a>
-
+- [Sparkfun](https://learn.sparkfun.com/tutorials/switch-basics/momentary-switches)
+- [SVG]()

@@ -93,11 +93,11 @@
      - https://www.youtube.com/watch?v=GQLED3gmONg
    - Day 1
      - Lecture
-       - Analog vs. Digital, digitalRead, pinMode ==should this be moved from week 2?==
        - Serial monitor: display info for debugging; only available when USB connected (not via cloud)
      - Guided activity
        - digitalRead() on D2; use serial monitor to display floating value; then directly connect to **3.3v**, then GND
      - Lecture
+       - Analog vs. digital
        - Pulse width modulation, PWM pins, analogWrite 
        - ==draw an "equivalent voltage" line on the duty cycle image e.g. 1.67v is 50%==
      - Lab
@@ -124,36 +124,6 @@
      
        - Use potentiometer to control light level
      
-     - ==next week==
-     
-     - Lecture
-     
-       - Digital multimeter
-       - How to read resistors
-     
-     - Guided activity
-       - Measure voltage at pin when potentiometer is turned (remove from circuit
-       - Measure resistance
-       
-     - Lecture
-       
-       - RGB LEDs: common anode vs cathode, R+G+B != W
-       
-     - Lab
-     
-       - Display random color with analogWrite
-     
-     - Guided activity
-     
-       - Create function that take inputs to set the color
-     
-         ```c++
-          void setColor(int r, int g, int b)
-         ```
-     
-       - discuss how to enter hexcode 0xFF (==not sure what I meant by this==)
-     
-       - Try library for animation http://yaab-arduino.blogspot.com/p/ala-example-simplergbled.html
    - Assignment
      
      - A3 - Cylon light 
@@ -161,7 +131,8 @@
 
    - Reading
      
-     - 
+     - https://learn.sparkfun.com/tutorials/pull-up-resistors
+     
    - Day 1
      - Activity
        - Video chat with Cyane's class
@@ -170,19 +141,51 @@
        - connect button with pullup
        - Ask what is the voltage at pin when button pressed and not pressed
      - Lecture
-       - Push buttons: component, schematic, datasheet?
+       - Digitalinput
+       - Push buttons: component, schematic, pull-up resistors
      - Guided activity
        - Connect button with resistor
        - Latching button and debouncing
-     - Lecture
-       - Pullup and pulldown resistors
      - Lab (students work on)
        - Turn LED on while button pressed
        - Turn LED off after button pressed
        - Connect 3 LEDs and control on/off with button presses (3 states)
+     
    - Day 2 - Class cancelled
      - Assignment
        - A4 - Electronic dice 
+     
+   - ==not sure where this goes yet==
+   
+   
+   - Lecture
+   
+     - How to read resistors
+   
+   - Guided activity
+   
+     - Measure voltage at pin when potentiometer is turned (remove from circuit
+     - Measure resistance
+   
+   - Lecture
+   
+     - RGB LEDs: common anode vs cathode, R+G+B != W
+   
+   - Lab
+   
+     - Display random color with analogWrite
+   
+   - Guided activity
+   
+     - Create function that take inputs to set the color
+   
+       ```c++
+        void setColor(int r, int g, int b)
+       ```
+   
+     - discuss how to enter hexcode 0xFF (==not sure what I meant by this==)
+   
+     - Try library for animation http://yaab-arduino.blogspot.com/p/ala-example-simplergbled.html
 
 
 
