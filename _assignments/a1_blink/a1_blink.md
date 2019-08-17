@@ -55,7 +55,7 @@ Goals
 
 -   Type **Particle: Configure Project for Device.**
 
-![](media/f46090a33a8cda9b07b6586a5328fb12.png)
+<img src="media/f46090a33a8cda9b07b6586a5328fb12.png" alt="command palette" width=400 />
 
 >   Configure Device
 
@@ -66,19 +66,19 @@ Goals
     (and so presumably it does not have bugs or errors). In the picture below,
     the latest stable version has been noted.
 
-![](media/9e6b2684205c5b77cad0a7087031fec3.png)
+<img src="media/9e6b2684205c5b77cad0a7087031fec3.png" alt="target OS" width=400 />
 
 >   Configure Device
 
 -   Select the type of device to you want to build for. For our course, we will
     always use **argon**
 
-![](media/e800ce2f3ca3d6bda3d9378540418825.png)
+<img src="media/e800ce2f3ca3d6bda3d9378540418825.png" alt="target device" width=400 />
 
 -   Enter the name of the device you want to flash to. This will be the name
     gave your device when you initially connected it to your Particle account.
 
-![](media/b45548e97ee3520b8fcb9fdf7e3a2e64.png)
+<img src="media/b45548e97ee3520b8fcb9fdf7e3a2e64.png" alt="target name" width=400 />
 
 >   Configure Device
 
@@ -87,7 +87,7 @@ Goals
 -   In the INO file that opened when you created a project, paste the following
     code:
 
-![](media/abff6159b011e556f68ec286cbd333cb.png)
+<img src="media/abff6159b011e556f68ec286cbd333cb.png" alt="IDE" width=400 />
 
 >   First Project
 
@@ -97,7 +97,7 @@ Goals
     been successfully installed, you should see the light on the device near the
     USB port blinking blue.
 
-![](media/79a0f7798307a27bc34f8403471fe198.jpg)
+<img src="media/79a0f7798307a27bc34f8403471fe198.jpg" alt="Argon blinking" width=400 />
 
 >   https://www.cnx-software.com/wp-content/uploads/2018/12/Xenon-D7-LED.jpg
 
