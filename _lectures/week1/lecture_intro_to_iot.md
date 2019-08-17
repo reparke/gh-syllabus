@@ -51,23 +51,23 @@ title: Intro to IoT
 ## Examples: Education
   - Lumi - teach piano
   - Cubetto - learn programming without a screen
-![width:500px](assets\lumi.jpg) ![width:500px](assets/cubertto.jpg)
+<img src="assets\lumi.jpg" alt="width:500px" style="width:400px" /> <img src="assets/cubertto.jpg" alt="width:500px" style="width:400px" />
 
 ## Examples: Health
   - UFO - beauty mask
   - Jolt - concussion sensor for athletes
-![width:500px](assets\ufo_facemask.jpg) ![width:500px](assets/jolt.jpg)
+<img src="assets\ufo_facemask.jpg" alt="width:500px" style="width:400px" /> <img src="assets/jolt.jpg" alt="width:500px" style="width:400px" />
 
 ## Examples: Social Good
   - Grillo - early earthquake warnings in rural Mexico and Chile
   - ReWalk - exoskeleton to help people with spinal cord injuries
-![width:200px](assets/re_walk.jpg)![width:300px](assets\earthquake_monitor.png)
+<img src="assets/re_walk.jpg" alt="width:200px" style="width:400px" /><img src="assets\earthquake_monitor.png" alt="width:300px" style="width:400px" />
 
 ## What is IoT?
 
 ## Internet of Things
 
-![width:700px](assets/iot_cloud.jpg)
+<img src="assets/iot_cloud.jpg" alt="width:700px" style="width:400px" />
 
 ## Internet of Things
 
@@ -83,9 +83,9 @@ title: Intro to IoT
 |                                           |                                                      |
 | ----------------------------------------- | ---------------------------------------------------- |
 | 1. Basic prototype                        | 2. PCB prototype                                     |
-| ![height:150px](assets/1564253817153.jpg) | ![height:150px](assets/16258754459_998d85ecb9_z.jpg) |
+| <img src="assets/1564253817153.jpg" alt="height:150px" style="height:160px" /> | <img src="assets/16258754459_998d85ecb9_z.jpg" alt="height:150px" style="height:160px" /> |
 | 3. Manufacturing                          |                                                      |
-| ![height:160px](assets/pcb_mfg.jpg)       |                                                      |
+| <img src="assets/pcb_mfg.jpg" alt="height:160px" style="height:160px" />       |                                                      |
 
    
 
