@@ -19,11 +19,11 @@ title: Reading Resistor Bands
 - Four band resistors are the most common, and the ones we will encounter in this class
 
 ## Resistor Chart
-<img src="lecture_reading_resistors.assets/sparkfun_resistor_guide.png" alt="Resistor band chart" width=600 />
+<img src="lecture_reading_resistors.assets/sparkfun_resistor_guide.png" alt="Resistor band chart" style="width:600px" />
 
 ## Understanding Resistor Chart
 
-<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor band chart" width=300 />
+<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor band chart" style="width:300px" />
 
 - Align such that the group of three bands are on the left
 - The first two bands are the digits
@@ -35,13 +35,13 @@ title: Reading Resistor Bands
 
 |                                                              |                                                              |                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------- |
-| <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" width=300 /> | <img src="lecture_reading_resistors.assets/1565825024722.png" alt="Resistor example 1" width=300 /> | 1. Orange<br />2. Orange<br />3. Brown<br />4. Gold |
+| <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" style="width:300px" /> | <img src="lecture_reading_resistors.assets/1565825024722.png" alt="Resistor example 1" style="width:300px" /> | 1. Orange<br />2. Orange<br />3. Brown<br />4. Gold |
 
 ## Reading Bands Ex. 1
 
 |                                                              |                                                              |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" width=300 /> | <img src="lecture_reading_resistors.assets/1565825024722.png" alt="Resistor example 1" width=300 /> | 1. Orange = 3<br />2. Orange = 3<br />3. Brown = 10 (10^1)<br />4. Gold +-5% |
+| <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" style="width:300px" /> | <img src="lecture_reading_resistors.assets/1565825024722.png" alt="Resistor example 1" style="width:300px" /> | 1. Orange = 3<br />2. Orange = 3<br />3. Brown = 10 (10^1)<br />4. Gold +-5% |
 
 ## Reading Bands Ex. 1
 
@@ -52,13 +52,13 @@ title: Reading Resistor Bands
 
 |                                                              |                                                              |                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------- |
-| <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" width=300 /> | <img src="lecture_reading_resistors.assets/1565826990515.png" alt="Resistor example 1" width=300 /> | 1. Gray<br />2. White<br />3. Yellow<br />4. Gold |
+| <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" style="width:300px" /> | <img src="lecture_reading_resistors.assets/1565826990515.png" alt="Resistor example 1" style="width:300px" /> | 1. Gray<br />2. White<br />3. Yellow<br />4. Gold |
 
 ## Reading Bands Ex. 2
 
 |                                                              |                                                              |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" width=300 /> | <img src="lecture_reading_resistors.assets/1565826990515.png" alt="Resistor example 1" width=300 /> | 1. Gray = 8<br />2. White = 9<br />3. Yellow = 4<br />4. Gold +-5% |
+| <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" style="width:300px" /> | <img src="lecture_reading_resistors.assets/1565826990515.png" alt="Resistor example 1" style="width:300px" /> | 1. Gray = 8<br />2. White = 9<br />3. Yellow = 4<br />4. Gold +-5% |
 
 ## Reading Bands Ex. 2
 
@@ -70,14 +70,14 @@ title: Reading Resistor Bands
 <!--
 ## Try These
 
-1.<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor example 1" width=400 /> 2.<img src="lecture_reading_resistors.assets/1565824589676.png" alt="Resistor example 2" width=400 />
-3.<img src="lecture_reading_resistors.assets/1565824850342.png" alt="Resistor example 3" width=400 /> 4.<img src="lecture_reading_resistors.assets/1565825090288.png" alt="Resistor example 4" width=400 />
+1.<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor example 1" style="width:400px" /> 2.<img src="lecture_reading_resistors.assets/1565824589676.png" alt="Resistor example 2" style="width:400px" />
+3.<img src="lecture_reading_resistors.assets/1565824850342.png" alt="Resistor example 3" style="width:400px" /> 4.<img src="lecture_reading_resistors.assets/1565825090288.png" alt="Resistor example 4" style="width:400px" />
 -->
 ## Try These
 
 |      |                                                              |
 | ---- | ------------------------------------------------------------ |
-| 1.<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor example 1" width=200 /> 2.<img src="lecture_reading_resistors.assets/1565824589676.png" alt="Resistor example 2" width=200 />3.<img src="lecture_reading_resistors.assets/1565824850342.png" alt="Resistor example 3" width=200 /> 4.<img src="lecture_reading_resistors.assets/1565825090288.png" alt="Resistor example 4" width=200 />    | <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" width=590 /> |
+| 1.<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor example 1" style="width:200px" /> 2.<img src="lecture_reading_resistors.assets/1565824589676.png" alt="Resistor example 2" style="width:200px" />3.<img src="lecture_reading_resistors.assets/1565824850342.png" alt="Resistor example 3" style="width:200px" /> 4.<img src="lecture_reading_resistors.assets/1565825090288.png" alt="Resistor example 4" style="width:200px" />    | <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" style="width:590px" /> |
 
 <!-- 1. 
 4 7 3 = 47 x 10^2 = 47 x 100 = 4700 = 4.7 x 10^3 = 4.7K

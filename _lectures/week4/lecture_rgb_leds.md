@@ -21,7 +21,7 @@ title: RGB LEDs
 - These **primary colors** can be controlled separately to create a multitude of color possibilities
 
 ## Pins
-<img src="lecture_rgb_leds.assets/1565897044440.png" alt="RGB LED" width=300 />
+<img src="lecture_rgb_leds.assets/1565897044440.png" alt="RGB LED" style="width:300px" />
 - RGB LEDs have four pins
 - Three pins to each of R, G, B *(shorter pins)*
 - One pin serves as either common anode or common cathode *(longer pin)*
@@ -31,7 +31,7 @@ title: RGB LEDs
 - LEDs allow current to flow **in only one direction**
 - Positive voltage applied to the **anode**
 - **Cathode** connected to Ground
-<img src="lecture_rgb_leds.assets/1565059300403.png" alt="LED schematic" width=300 />
+<img src="lecture_rgb_leds.assets/1565059300403.png" alt="LED schematic" style="width:300px" />
 
 ## Current Flow in RGB LEDs 
 
@@ -51,7 +51,7 @@ title: RGB LEDs
 
 ## Common Cathode Wiring
 
-<img src="lecture_rgb_leds.assets/1565896348358.png" alt="common cathode wiring" width=600 />
+<img src="lecture_rgb_leds.assets/1565896348358.png" alt="common cathode wiring" style="width:600px" />
 
 ## Common Anode are the Opposite from Regular LEDs
 
@@ -60,10 +60,10 @@ title: RGB LEDs
 - Output LOW on anode to turn on LED; output HIGH (3.3v) to turn off
 
 ## Common Anode Wiring
-<img src="lecture_rgb_leds.assets/1565896027460.png" alt="common anode wiring" width=600 />
+<img src="lecture_rgb_leds.assets/1565896027460.png" alt="common anode wiring" style="width:600px" />
 
 ## Color Mixing
-<img src="lecture_rgb_leds.assets/1565902722602.png" alt="color mixing" width=400/>
+<img src="lecture_rgb_leds.assets/1565902722602.png" alt="color mixing" style="width:400px"/>
 
 ##### R + G + B = ?
 

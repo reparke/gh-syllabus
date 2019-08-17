@@ -14,7 +14,7 @@ title: Analog Input with Potentiometers
 
 
 ## Analog vs. Digital
-<img src="lecture_analog_input_potentiometers.assets/analog-clock-1295631_960_720-1565746786122.png" alt="analog clock" width=300 /><img src="lecture_analog_input_potentiometers.assets/clock-997589_960_720.jpg" alt="digital clock" width=300 />
+<img src="lecture_analog_input_potentiometers.assets/analog-clock-1295631_960_720-1565746786122.png" alt="analog clock" width=300 /><img src="lecture_analog_input_potentiometers.assets/clock-997589_960_720.jpg" alt="digital clock" style="width:300px" />
 
 ## Analog vs. Digital
 
@@ -43,7 +43,7 @@ title: Analog Input with Potentiometers
 
 ## How a Potentiometer Works
 
-<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" width=200px />
+<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:200px" />
 
 - **Vout** is the wiper (middle pin)
 - Inside the potentiometer is a resistor
@@ -52,7 +52,7 @@ title: Analog Input with Potentiometers
 
 ## Example
 
-<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" width=200px />
+<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:200px" />
 
 - Let's say potentiometer is 10K Ohms
 - If the wiper is all the way to the top, what is the resistance between Vout and Gnd?
@@ -62,7 +62,7 @@ title: Analog Input with Potentiometers
 
 ## Voltage Dividers
 
-<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" width=200px />
+<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:200px" />
 
 - Argon input pins can measure **voltage**, not **resistance**
 - By connecting **Vin** (3.3v), **Gnd**, and **Vout** (wiper), we can now vary the **voltage** difference Vin-Wiper and Wiper-Gnd

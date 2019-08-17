@@ -19,7 +19,7 @@ title: Serial Monitor
 
 ## Serial
 
-![height:500px](lecture_serial_monitor.assets/argon-top.png)
+<img src="lecture_serial_monitor.assets/argon-top.png" alt="height:500px" style="width:400px" />
 
 ## Serial (UART)
 
@@ -125,7 +125,7 @@ void loop() {
 - Open Serial Monitor in Workbench
   - View > Command Palette > 'Serial Monitor'
 
-![width:300px](lecture_serial_monitor.assets/1565664078373.png)
+<img src="lecture_serial_monitor.assets/1565664078373.png" alt="width:300px" style="width:300px" />
 
 ## How we will use Serial Monitor
 

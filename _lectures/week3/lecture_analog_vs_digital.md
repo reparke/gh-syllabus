@@ -18,7 +18,7 @@ title: Analog vs. Digital
 - What is an example of something that is digital?
 
 ## Analog vs. Digital
-<img src="lecture_analog_vs_digital.assets/analog-clock-1295631_960_720-1565746786122.png" alt="analog clock" width=300 /><img src="lecture_analog_vs_digital.assets/clock-997589_960_720.jpg" alt="digital clock" width=300 />
+<img src="lecture_analog_vs_digital.assets/analog-clock-1295631_960_720-1565746786122.png" alt="analog clock" style="width:300px" /><img src="lecture_analog_vs_digital.assets/clock-997589_960_720.jpg" alt="digital clock" style="width:300px" />
 
 ## Analog
 
