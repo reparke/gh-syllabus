@@ -46,7 +46,7 @@ title: Intro to IoT
 - Mi.Mu / Imogen Heap (https://youtu.be/3QtklTXbKUQ?t=660)
 - Form - AR swim googles
 
-![width:500px](assets/form_googles.png?classes=float-left`)
+<img src="assets/form_googles.png" alt="width:500px" style="width:400px" />
 
 ## Examples: Education
   - Lumi - teach piano
