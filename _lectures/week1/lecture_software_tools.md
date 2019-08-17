@@ -19,7 +19,7 @@ title: Software Tools
 
 ## Workbench
 
-![width:700px](assets/1565051874830_v2.png)
+<img src="assets/1565051874830_v2.png" alt="Workbench IDE" style="width:700px" />
 
 ## Workbench
 
@@ -37,14 +37,14 @@ title: Software Tools
 
 ## Fritzing Breadboard Layout
 
-![width:400px](assets/TE5_range_finder_Argon_bb-1565052544681.png)
+<img src="assets/TE5_range_finder_Argon_bb-1565052544681.png" alt="Fritzing" style="width:400px" />
 
 ## Actual Built Project
 
-![width:600px](assets/built_range_finder.jpg)
+<img src="assets/built_range_finder.jpg" alt="Argon rangefinder" style="width:600px" />
 
 ## Quick Note
 
 There is a more formal way of describing circuits we won't use very often
 
-![width:400px](assets/1565052726261.png)
+<img src="assets/1565052726261.png" alt="width:400px" style="width:400px" />

@@ -77,7 +77,8 @@ title: Reading Resistor Bands
 
 |      |                                                              |
 | ---- | ------------------------------------------------------------ |
-| 1.<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor example 1" style="width:200px" /> 2.<img src="lecture_reading_resistors.assets/1565824589676.png" alt="Resistor example 2" style="width:200px" />3.<img src="lecture_reading_resistors.assets/1565824850342.png" alt="Resistor example 3" style="width:200px" /> 4.<img src="lecture_reading_resistors.assets/1565825090288.png" alt="Resistor example 4" style="width:200px" />    | <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" style="width:590px" /> |
+| 1.<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor example 1" style="width:200px" /> 2.<img src="lecture_reading_resistors.assets/1565824589676.png" alt="Resistor example 2" style="width:200px" />
+3.<img src="lecture_reading_resistors.assets/1565824850342.png" alt="Resistor example 3" style="width:200px" /> 4.<img src="lecture_reading_resistors.assets/1565825090288.png" alt="Resistor example 4" style="width:200px" />    | <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" style="width:590px" /> |
 
 <!-- 1. 
 4 7 3 = 47 x 10^2 = 47 x 100 = 4700 = 4.7 x 10^3 = 4.7K

@@ -14,7 +14,7 @@ title: Electricity
 
 ## What happens?
 
-![width:400px](assets/1564541287879.png)
+<img src="assets/1564541287879.png" alt="width:400px" style="width:400px" />
 
 ## Why? 
 
@@ -28,7 +28,7 @@ title: Electricity
 
 ## Which is Stronger?
 
-![height:500px](assets/1564543352673.png)	![height:500px](assets/1564543461389.png)
+<img src="assets/1564543352673.png" alt="height:500px" style="width:400px" />	<img src="assets/1564543461389.png" alt="height:500px" style="width:400px" />
 
 ## Common Analogy
 
@@ -60,7 +60,7 @@ title: Electricity
 
 Two equal water jugs connected to each of these. Which has greater flow?
 
-![height:500px](assets/1564544624407.png) ![height:500px](assets/47730722082_bfcae57ea0.jpg)
+<img src="assets/1564544624407.png" alt="height:500px" style="width:400px" /> <img src="assets/47730722082_bfcae57ea0.jpg" alt="height:500px" style="width:400px" />
 
 ## Resisting the Flow
 
@@ -81,7 +81,7 @@ Two equal water jugs connected to each of these. Which has greater flow?
 
 - A circuit is a complete loop from a positive voltage source to a negative (lesser) source, through a conductive material
 
-  ![width:300px](assets/1564541287879.png)
+  <img src="assets/1564541287879.png" alt="width:300px" style="width:400px" />
 
 ## Voltage as Difference
 
@@ -110,9 +110,9 @@ Two equal water jugs connected to each of these. Which has greater flow?
 
 
 
-![height:200px](assets/1565140772469.png)
+<img src="assets/1565140772469.png" alt="" style="height:200px" />
 
-![height:200px](assets/1565140731484.png)
+<img src="assets/1565140731484.png" alt="" style="height:200px" />
 
 ## Ohm's Law
 
@@ -129,7 +129,7 @@ I = R / V
 
 ## Example
 
-![height:400px](assets/1565141579356.png)
+<img src="assets/1565141579356.png" alt="height:400px" style="width:400px" />
 
 1. The voltage source is 9v. If we have a resistor that is 300 Ohms, what is the current?
 2. The voltage source is 9v and you want to provide a current of 9mA. What size resistor should we use?
@@ -144,7 +144,7 @@ I = R / V
 
 <!-- Open Fritzing to show connected pins -->
 
-![height:300px](assets/1564547904128.png)
+<img src="assets/1564547904128.png" alt="" style="height:300px" />
 
 ## Credits
 

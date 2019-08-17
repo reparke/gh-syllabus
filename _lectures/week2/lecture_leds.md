@@ -12,7 +12,7 @@ title: LEDs
 
 # LEDs - Light Emitting Diodes
 
-![width:512px](assets/512px-Verschiedene_LEDs.jpg)
+<img src="assets/512px-Verschiedene_LEDs.jpg" alt="width:512px" style="width:400px" />
 
 ## LEDs
 
@@ -30,18 +30,18 @@ title: LEDs
 - When the voltage at the anode (longer leg) is about 2.2v *more than* the voltage at the cathode (shorter leg), the LED emits light
   - This positive voltage difference is called **forward biasing**
 
-![width:300px](assets/led.png)
+<img src="assets/led.png" alt="width:300px" style="width:400px" />
 
 ## LEDs are Directional (aka Have Polarity)
 
 - LEDs allow current to flow **in only one direction**
 - If positive voltage is applied to the anode, light will emit
 - If positive voltage is applied to the cathode, light **will not** emit (aka the polarity is reversed)
-![width:300px](assets/1565059300403.png)
+<img src="assets/1565059300403.png" alt="led Schematic" style="width:200px" />
 
 ## Recall: What Happened?
 
-![width:400px](assets/1564541287879.png)
+<img src="assets/1564541287879.png" alt="width:400px" style="width:400px" />
 
 ## LED Precautions
 
