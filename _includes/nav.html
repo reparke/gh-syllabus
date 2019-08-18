@@ -13,7 +13,7 @@
 		<li><a href="{{ site.gradingUrl}}">Blackboard</a></li>
 	</ul>
 	<ul>
-		{% assign pages = (site.files | sort: "menuPosition") %}
+		{% assign pages = (site.static_files | sort: "menuPosition") %}
 		{% for node in pages %}
 		{% if page.url == node.url %}
 		<li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.menuItem}}</a></li>
