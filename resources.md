@@ -7,7 +7,7 @@ menuPosition: 4
 
 ## References
 
-### Particle Documenation
+### Particle Documentation
 
 - [Argon datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
 - [Argon pin close-up](https://docs.particle.io/assets/images/argon/argon-dimensions.png)
@@ -21,6 +21,7 @@ menuPosition: 4
 - [Console](https://console.particle.io/devices)
 - [Community / forum](https://community.particle.io/)
 - [Web IDE](https://build.particle.io/build)
+- [Particle mesh Fritzing library](https://reparke.github.io/Fritzing-Parts/)
 
 
 
