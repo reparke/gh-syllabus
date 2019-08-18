@@ -15,11 +15,9 @@
 	<ul>
 		{% assign pages = (site.static_files | sort: "menuPosition") %}
 		{% for node in pages %}
-		{% if page.url == node.url %}
-		<li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.menuItem}}</a></li>
-		{% else %}
-		<li><a href="{{ site.baseurl }}{{node.url}}">{{node.menuItem}}</a></li>
-		{% endif %}
+
+		<li class="active"><a href="{{ node.path}}" class="active">{{node.path}}</a></li>
+
 		{% endfor %}
 		<li><a href="{{ site.gradingUrl}}">Blackboard</a></li>
 	</ul>
