@@ -12,4 +12,15 @@
 		{% endfor %}
 		<li><a href="{{ site.gradingUrl}}">Blackboard</a></li>
 	</ul>
+	<ul>
+		{% assign pages = (site.files | sort: "menuPosition") %}
+		{% for node in pages %}
+		{% if page.url == node.url %}
+		<li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.menuItem}}</a></li>
+		{% else %}
+		<li><a href="{{ site.baseurl }}{{node.url}}">{{node.menuItem}}</a></li>
+		{% endif %}
+		{% endfor %}
+		<li><a href="{{ site.gradingUrl}}">Blackboard</a></li>
+	</ul>
 </nav>
