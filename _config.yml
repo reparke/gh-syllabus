@@ -1,10 +1,7 @@
-# theme: jekyll-theme-dinky
-theme: jekyll-theme-cayman
+theme: jekyll-theme-dinky
 # configuration
 # fill in the course details
  
-show_downloads: ["false"]
-
 courseName: ITP 348 - Intro to Physical Computing
 
 # small title that is at the top of every page

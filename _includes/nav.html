@@ -1,13 +1,14 @@
-<!-- <p class="subtitle">
-	<a href="{{ site.baseurl }}"> {{ site.courseName }} </a> </p> -->
+<p class="subtitle">
+	<a href="{{ site.baseurl }}"> {{ site.courseName }} </a> </p>
 <nav>
-	{% assign pages = (site.pages | sort: "menuPosition") %}
-	{% for node in pages %}
-	{% if page.url == node.url %}
-
-	<a href="{{ site.baseurl }}{{node.url}}" class="btn active">{{node.menuItem}}</a>
-	{% else %}
-	<a href="{{ site.baseurl }}{{node.url}}" class="btn">{{node.menuItem}}</a>
-	{% endif %}
-	{% endfor %}
+	<ul>
+		{% assign pages = (site.pages | sort: "menuPosition") %}
+		{% for node in pages %}
+		{% if page.url == node.url %}
+		<li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.menuItem}}</a></li>
+		{% else %}
+		<li><a href="{{ site.baseurl }}{{node.url}}">{{node.menuItem}}</a></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
 </nav>
