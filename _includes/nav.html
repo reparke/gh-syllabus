@@ -5,9 +5,9 @@
 	{% for node in pages %}
 	{% if page.url == node.url %}
 
-	<a href="{{ site.baseurl }}{{node.url}}" class="button active">{{node.menuItem}}</a></li>
+	<a href="{{ site.baseurl }}{{node.url}}" class="btn active">{{node.menuItem}}</a>
 	{% else %}
-	<a href="{{ site.baseurl }}{{node.url}}" class="button">{{node.menuItem}}</a></li>
+	<a href="{{ site.baseurl }}{{node.url}}" class="btn">{{node.menuItem}}</a>
 	{% endif %}
 	{% endfor %}
 </nav>
