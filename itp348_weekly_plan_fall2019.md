@@ -129,7 +129,7 @@
      - A3 - Cylon light 
 4. #### Buttons, RGB LEDs *(one class cancelled for Tapia)*
 
-   - Reading
+   - ​	Reading
      
      - https://learn.sparkfun.com/tutorials/pull-up-resistors
      

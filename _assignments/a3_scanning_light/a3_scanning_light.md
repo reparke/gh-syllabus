@@ -111,3 +111,7 @@ Grading
 | Potentiometer controls brightness | 10     |
 |                                   |        |
 | Total                             | 20     |
+
+
+*Inspiration for project from* [Dr. Peter
+Dalmaris](https://www.udemy.com/course/arduino-step-by-step-2017-getting-started-projects/)
