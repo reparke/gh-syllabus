@@ -33,7 +33,7 @@ title: Argon Microcontroller
 - A datasheet explains how a component functions, how to use it, what conditions it will operate, etc.
 - Don't worry about understanding everything in a datasheet, but learn to pull out key information
 
-https://docs.particle.io/datasheets/wi-fi/argon-datasheet/
+- [Argon Datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
 
 ## Work in pairs and answer the following
 
@@ -49,9 +49,10 @@ https://docs.particle.io/datasheets/wi-fi/argon-datasheet/
 
 ## Datasheet 
 
-https://docs.particle.io/assets/images/argon/argon-top.png
 
-https://docs.particle.io/datasheets/wi-fi/argon-datasheet/
+-[Argon Pinouts](https://docs.particle.io/assets/images/argon/argon-top.png
+
+-[Argon Datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
 
 <!-- operating voltage: 3.3v -->
 

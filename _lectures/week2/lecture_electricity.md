@@ -110,9 +110,9 @@ Two equal water jugs connected to each of these. Which has greater flow?
 
 
 
-<img src="assets/1565140772469.png" alt="" style="height:200px" />
+<img src="assets/1565140772469.png" alt="" style="width:300px" />
 
-<img src="assets/1565140731484.png" alt="" style="height:200px" />
+<img src="assets/1565140731484.png" alt="" style="width:200px" />
 
 ## Ohm's Law
 
