@@ -12,13 +12,4 @@
 		{% endfor %}
 		<li><a href="{{ site.gradingUrl}}">Blackboard</a></li>
 	</ul>
-	<ul>
-		{% assign pages = (site.static_files | sort: "menuPosition") %}
-		{% for node in pages %}
-
-		<li class="active"><a href="{{ node.path}}" class="active">{{node.path}}</a></li>
-
-		{% endfor %}
-		<li><a href="{{ site.gradingUrl}}">Blackboard</a></li>
-	</ul>
 </nav>
