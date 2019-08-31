@@ -10,3 +10,36 @@ h1, h2, h3, h4, h5, h6 {
 td {
   background: rgba(0, 0, 0, 0);
 }
+
+header{
+	/*background-color: #990000;*/
+}
+
+
+footer {
+	background-color: #990000;
+}
+
+section {
+  padding-top:50px;
+  padding-bottom:50px;
+  padding-right:75px;
+  padding-left:75px;
+}
+
+header,
+footer {
+  height: 40px;
+  font-size: 10px;
+  text-align: center;
+  color: #FFCC00;
+  padding: 0px;
+	
+ }
+/* styling for page numbers */
+section::after {
+  padding-top: 30px;
+    padding-bottom: 0px;
+  font-size: 10px;
+  color: #FFCC00;
+}

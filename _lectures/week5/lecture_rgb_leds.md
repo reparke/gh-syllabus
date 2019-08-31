@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 4
+week: 5
 category: lectures
 title: RGB LEDs
 
@@ -71,6 +71,12 @@ title: RGB LEDs
 
 - R + G + B **≠** W
 - Due to variations in manufacturing and resistor tolerances
+
+## Lab (in three stages)
+
+1. Wire an RGB LED and have it display random colors
+2. Then create functions to change colors
+3. Import `rgb-controls` library to animate colors
 
 ## Credit
 

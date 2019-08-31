@@ -28,6 +28,7 @@ menuPosition: 4
 ### Arduino
 
 - [Documentation](https://www.arduino.cc/reference/en/)
+- [Multi-tasking](https://learn.adafruit.com/multi-tasking-the-arduino-part-1?view=all) (from Adafruit)
 
 
 
@@ -42,6 +43,12 @@ menuPosition: 4
 
 - [Getting Started](https://docs.losant.com/getting-started/what-is-losant/)
 - [Main app configuration](https://app.losant.com/)
+
+
+
+### Miscellaneous
+
+- [Extensive IoT resources](https://github.com/michaelshiloh/resourcesForClasses) (from Michael Shiloh). This is one of the most comprehensive, helpful lists of tips and links. 
 
 
 

@@ -1,10 +1,10 @@
 0. #### Pre-semester
 
-   - [ ] Send students installation instructions
+   - [x] Send students installation instructions
    - [ ] Create Google slides presentations; ask students to create one intro slide
-   - [ ] purchase:
-     - [ ] small envelopes
-     - [ ] coin batteries
+   - [x] purchase:
+     - [x] small envelopes
+     - [x] coin batteries
      - [x] paper circuits classroom kit
      - [x] construction paper
      - [x] conductive tape
@@ -29,6 +29,7 @@
   
     - Pass out argons
        - students are responsible for returning devices if they drop before drop deadline
+       - Have students sign
     - Kit Overview
     - Software tools
        - Workbench (open and discuss)
@@ -127,6 +128,7 @@
    - Assignment
      
      - A3 - Cylon light 
+   
 4. #### Buttons, RGB LEDs *(one class cancelled for Tapia)*
 
    - ​	Reading
@@ -136,12 +138,11 @@
    - Day 1
      - Activity
        - Video chat with Cyane's class
-       - Discuss Pecha Kucha
      - Guided activity
        - connect button with pullup
        - Ask what is the voltage at pin when button pressed and not pressed
      - Lecture
-       - Digitalinput
+       - Digital Input
        - Push buttons: component, schematic, pull-up resistors
      - Guided activity
        - Connect button with resistor
@@ -151,10 +152,48 @@
        - Turn LED off after button pressed
        - Connect 3 LEDs and control on/off with button presses (3 states)
      
-   - Day 2 - Class cancelled
+   - Day 2 - Class cancelled (==Future semesters this could be RGB LEDs, debouncing, or catch-up==)
      - Assignment
        - A4 - Electronic dice 
      
+   
+5. #### Week 5
+   
+   - Reading
+     - 
+   - Day 1
+     - Lecture
+       - RGB LED lecture
+     - Lab
+       - Display random color
+     - Lecture
+       - Functions in C++ *(this should be review from week 2)*
+     - Lab
+       - Rewrite sketch using `displayColor(r, g, b)` and `displayRandomColor()`
+     - Lecture
+       - Libraries
+     - Lab
+       - Have students find and install `rgb-controls`
+       - Ask them to create some colors effects on their own
+       - Then walk through example together
+       - If time, introduce a button to control states (idea of a state machine)
+   - Day 2
+     - Lecture
+       - 
+     - Lab
+       - 
+     - Lecture
+       - 
+     - Lab
+       - 
+   - Assignment
+     - AX - 
+   
+   
+   
+   
+   
+   
    - ==not sure where this goes yet==
    
    

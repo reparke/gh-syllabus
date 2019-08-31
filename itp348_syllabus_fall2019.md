@@ -264,23 +264,23 @@ submission that they intend to use a grace day.
 
 **Course Schedule: A Weekly Breakdown**
 
-|         | **Topics/Daily Activities**                                  | **Readings**  | **Assignment Deliverable Due**                               |
+|         | **Topics/Daily Activities**                                  | **Readings**  | **Assignment Deliverable (due at end of the week)            |
 | ------- | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
 | Week 1  | Intro to Physical Computing / C++ Review                     | Posted online |                                                              |
-| Week 2  | Electricity, components, microcontrollers, Ohm’s Law, LEDs   | Posted online | A0, A1                                                       |
-| Week 3  | Interacting: analog to digital, buttons, serial              | Posted online | A2                                                           |
-| Week 4  | Multicolored LEDs, software library, functions, variable resistors | Posted online | A3                                                           |
-| Week 5  | Voltage dividers, photoresistors, temperature sensors        | Posted online | A4                                                           |
-| Week 6  | I2C communication, LCD, serial vs. parallel, cloud functions, cloud variables | Posted online | A5                                                           |
-| Week 7  | Piezobuzzers, ultrasonic sensor                              | Posted online | A6                                                           |
-| Week 8  | Passive infrared sesnors *(Fall break)*                      | Posted online | A7                                                           |
+| Week 2  | Electricity, components, microcontrollers, Ohm’s Law, LEDs   | Posted online | A0 - Installation; A1 - Blink                                |
+| Week 3  | Interacting: analog to digital, buttons, serial              | Posted online | A2 - Light sculpture                                         |
+| Week 4  | Multicolored LEDs, software library, functions, variable resistors | Posted online | A3 - Scanning Light                                          |
+| Week 5  | Voltage dividers, photoresistors, temperature sensors        | Posted online | A4 - Dice                                                    |
+| Week 6  | I2C communication, LCD, serial vs. parallel, cloud functions, cloud variables | Posted online | A5 - Environment monitor                                     |
+| Week 7  | Piezobuzzers, ultrasonic sensor                              | Posted online | A6 -- Environment monitor with LCD                           |
+| Week 8  | Passive infrared sesnors *(Fall break)*                      | Posted online | A7 - Proximity alarm                                         |
 | Week 9  | Motion: DC motors, servos                                    | Posted online | A8                                                           |
-| Week 10 | Bluetooth, remote controlled car                             | Posted online | A9                                                           |
-| Week 11 | Cloud platform, web and mobile apps                          | Posted online | A10                                                          |
-| Week 12 | Other sensors, accelerometers, processing                    | Posted online | Project proposal                                             |
-| Week 13 | Accessibility                                                | Posted online | *(project proposal feedback given)*                          |
+| Week 10 | Bluetooth, remote controlled car                             | Posted online | A9 - Motors                                                  |
+| Week 11 | Cloud platform, web and mobile apps                          | Posted online | Project proposal                                             |
+| Week 12 | Other sensors, accelerometers, processing                    | Posted online | *(project proposal feedback given)*                          |
+| Week 13 | Accessibility                                                | Posted online | Proposal revision                                            |
 | Week 14 | Hardware startups *(Thanksgiving)*                           | Posted online | Project schematic                                            |
-| Week 15 | Advanced topics, Pecha Kucha                                 | Posted online | Project Pecha Kucha                                          |
+| Week 15 | Advanced topics                                              | Posted online | *(work on project)*                                          |
 | Final   | Final project presentation                                   |               | Project code, device, app, in-class demo                     |
 |         |                                                              |               | Date: For the date and time of the final for this class, consult the USC *Schedule of Classes* at [www.usc.edu/soc](http://www.usc.edu/soc)*.* |
 

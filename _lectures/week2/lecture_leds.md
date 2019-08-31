@@ -6,6 +6,8 @@ paginate: true
 week: 2
 category: lectures
 title: LEDs
+
+footer: 'ITP 348 - Rob Parke - USC'
 ---
 
 <!-- headingDivider: 2 -->
@@ -26,11 +28,12 @@ title: LEDs
 
 ## How LEDs Work
 
+<img src="assets/led.png" alt="LED" style="width:400px; float:right" />
+
 - Light emitting diode is made of two layers of semiconducting material
 - When the voltage at the anode (longer leg) is about 2.2v *more than* the voltage at the cathode (shorter leg), the LED emits light
   - This positive voltage difference is called **forward biasing**
 
-<img src="assets/led.png" alt="width:300px" style="width:400px" />
 
 ## LEDs are Directional (aka Have Polarity)
 

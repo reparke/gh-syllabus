@@ -1,18 +1,22 @@
 ---
 marp: true
 theme: itp
+class: 
 paginate: true
 
 week: 1
 category: lectures
 title: Safety
+
+footer: 'ITP 348 - Rob Parke - USC'
+header: ' '
 ---
+
 
 
 <!-- headingDivider: 2 -->
 
 # Safety
-
 
 
 ## Safety
