@@ -6,6 +6,8 @@ paginate: true
 week: 2
 category: lectures
 title: Argon Microcontroller
+
+footer: 'ITP 348 - Rob Parke - USC'
 ---
 
 <!-- headingDivider: 2 -->
@@ -14,24 +16,24 @@ title: Argon Microcontroller
 
 ## Microcontroller
 
-- Microcontrollers (MCU) are **embedded** computers
-- They are often designed for a specific purpose 
+* Microcontrollers (MCU) are **embedded** computers
+* They are often designed for a specific purpose 
   - Ex: a microwave, an RC car, TV remote'
-- Like your laptop, microcontrollers can take input, process it, store a value, and produce output
-- Unlike your laptop (or even your phone), a microcontroller has very limited processing power and storage 
-- Ex: The newer smartphones have 100,000 times more storage than the Argon
+* Like your laptop, microcontrollers can take input, process it, store a value, and produce output
+* Unlike your laptop (or even your phone), a microcontroller has very limited processing power and storage 
+* Ex: The newer smartphones have 100,000 times more storage than the Argon
 
 ## Particle Argon
 
-- In this class, we will develop projects for a microcontroller called an **Argon** made by **Particle**
-- The Argon is able to wirelessly connect to the internet and to Bluetooth 
-- Particle also has a cloud communication system we will explore later in the semester
+* In this class, we will develop projects for a microcontroller called an **Argon** made by **Particle**
+* The Argon is able to wirelessly connect to the internet and to Bluetooth 
+* Particle also has a cloud communication system we will explore later in the semester
 
 ## Datasheet
 
-- One important skill of building smart devices is learning to understand a datasheet
-- A datasheet explains how a component functions, how to use it, what conditions it will operate, etc.
-- Don't worry about understanding everything in a datasheet, but learn to pull out key information
+* One important skill of building smart devices is learning to understand a datasheet
+* A datasheet explains how a component functions, how to use it, what conditions it will operate, etc.
+* Don't worry about understanding everything in a datasheet, but learn to pull out key information
 
 - [Argon Datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
 
@@ -50,9 +52,9 @@ title: Argon Microcontroller
 ## Datasheet 
 
 
--[Argon Pinouts](https://docs.particle.io/assets/images/argon/argon-top.png
+- [Argon Pinouts](https://docs.particle.io/assets/images/argon/argon-top.png)
 
--[Argon Datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
+- [Argon Datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
 
 <!-- operating voltage: 3.3v -->
 

@@ -6,6 +6,8 @@ paginate: true
 week: 2
 category: lectures
 title: C++ Syntax
+
+footer: 'ITP 348 - Rob Parke - USC'
 ---
 
 <!-- headingDivider: 2 -->
@@ -14,10 +16,10 @@ title: C++ Syntax
 
 ## C++ and Other Languages
 
-- C++ are **conceptually** similar to other languages
+* C++ are **conceptually** similar to other languages
   - Loops, functions, variables, etc. are in both
-- The biggest difference is the specific **syntax** is new
-- There are a few other things to note that we will discuss as we go
+* The biggest difference is the specific **syntax** is new
+* There are a few other things to note that we will discuss as we go
   
 
 ## Example program
@@ -40,8 +42,8 @@ void loop() {
 ```
 ## Comments
 
-- `//` are single line comments
-- `/* ... */`are multiple line comments
+* `//` are single line comments
+* `/* ... */`are multiple line comments
 
 ```c++
 /* Awesome 
@@ -51,14 +53,14 @@ Argon Program
 ```
 ## Ending Lines
 
-- Every executable line of code ends with a semi-colon `;`
+* Every executable line of code ends with a semi-colon `;`
 
 ```
 int age = 4;
 String animal = "cat";
 ```
 
-- Code blocks (e.g. loops, functions, ifs) **do not** end with semi-colons
+* Code blocks (e.g. loops, functions, ifs) **do not** end with semi-colons
 
 ```c++
 void loop() {
@@ -69,8 +71,8 @@ void loop() {
 ```
 ## Code Blocks
 
-- Blocks of code are started and ended with `{ }`
-- Whitespace is doesn't matter
+* Blocks of code are started and ended with `{ }`
+* Whitespace is doesn't matter
 
 ```c++
 void loop() {
@@ -94,8 +96,8 @@ type variableName = value
 int numPresses = 0;
 ```
 
-- You must always specify the type of a variable when you declare it
-- Ex: `int`, `double`, `String`, `bool`
+* You must always specify the type of a variable when you declare it
+* Ex: `int`, `double`, `String`, `bool`
 
 ## Constants
 
@@ -105,11 +107,11 @@ const type variableName = value;
 const int MAX_PRESSES = 4;
 ```
 
-- `const` means the variable is a constant and **cannot** change after you initialize it
+* `const` means the variable is a constant and **cannot** change after you initialize it
 
 ## Aside: C++ Typing
 
-- Python and JavaScript are called **weakly typed** languages: 
+* Python and JavaScript are called **weakly typed** languages: 
   - A variable can be hold a string, and then later hold an int
 
 ```python
@@ -117,7 +119,7 @@ age = "Jurassic"
 age = "34"
 ```
 
-- C++ is called **strongly typed** language: 
+* C++ is called **strongly typed** language: 
   - A variable must be declared as a type and **cannot**  change
 
 ```c++
@@ -131,14 +133,14 @@ age = "34"		//Error!;
 returnType functionName (parameterType parameterName, ...) { ...}
 ```
 
-- Functions can may or may not return a value
-- Always specify the return type before the function name
+* Functions can may or may not return a value
+* Always specify the return type before the function name
 
 ```c++
 double thisFunctionReturnsADouble() { ... }
 ```
 
-- `void` means the function **does not** return a value 
+* `void` means the function **does not** return a value 
 
 ```c++
 void setup() { ... }
@@ -150,7 +152,7 @@ void setup() { ... }
 returnType functionName (parameterType parameterName, ...) { ...}
 ```
 
-- Functions can may or may not take an input parameters
+* Functions can may or may not take an input parameters
 
 ```c++
 double squareRoot(int num) {...}
