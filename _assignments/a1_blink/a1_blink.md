@@ -3,11 +3,14 @@ week_assigned: 1
 number: 1
 category: assignment
 title: Basic Blink
-date_due: Sep 3
+date_due: Sep 2 @ 11:59 pm
 ---
 
 Assignment 1 – Basic Blink
 ==========================
+
+*[Submit on Blackboard](https://blackboard.usc.edu)*
+
 
 Goals
 -----
@@ -103,6 +106,9 @@ Goals
 
 Deliverables
 ------------
+
+*[Submit on Blackboard](https://blackboard.usc.edu)*
+
 
 1.  A compressed file containing your project. Follow the guidelines for full
     credit.

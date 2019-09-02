@@ -3,11 +3,13 @@ week_assigned: 4
 number: 4
 category: assignment
 title: Die
-date_due: Sep 24
+date_due: Sep 23 @ 11:59 pm
 ---
 
 Assignment 4 – Dice
 ===================
+
+*[Submit on Blackboard](https://blackboard.usc.edu)*
 
 Goals
 -----
@@ -72,6 +74,9 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
 
 Deliverables
 ------------
+
+*[Submit on Blackboard](https://blackboard.usc.edu)*
+
 
 1.  A compressed file containing your project. Follow the guidelines for full
     credit.

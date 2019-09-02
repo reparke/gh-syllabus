@@ -3,11 +3,14 @@ week_assigned: 3
 number: 3
 category: assignment
 title: Scanning Light
-date_due: Sep 17
+date_due: Sep 16 @ 11:59 pm
 ---
 
 Assignment 3 – Scanning Light
 =============================
+
+*[Submit on Blackboard](https://blackboard.usc.edu)*
+
 
 Goals
 -----
@@ -83,6 +86,9 @@ Here is an example with 7 lights.
 
 Deliverables
 ------------
+
+*[Submit on Blackboard](https://blackboard.usc.edu)*
+
 
 1.  A compressed file containing your project. Follow the guidelines for full
     credit.
