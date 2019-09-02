@@ -3,4 +3,7 @@ layout: default
 ---
 {% include nav.html %}
 <h1>{{ page.title }}</h1>
+{% if page.date_due %} 
+    Due date: {{ page.title }}
+{% endif %}
 {{content}}
