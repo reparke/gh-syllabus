@@ -3,7 +3,11 @@ layout: default
 ---
 {% include nav.html %}
 
-<p><b>Week {{ page.week }}  {{ page.title }}</b></p>
+<p><b>Week {{ page.week }} {{ page.title }}
+    {% if page.date_due %}
+    - Due date: {{ page.title }}
+    {% endif %}
+  </b></p>
 
 <!--
 <h1>
