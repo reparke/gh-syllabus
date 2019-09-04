@@ -2,7 +2,7 @@
 title: Resources
 layout: page
 menuItem: Resources
-menuPosition: 4
+menuPosition: 5
 ---
 
 ## References

@@ -1,7 +1,9 @@
 #### General Feedback
 
 * Assignment 0 is given out week 1, day 1; due week 2, day 2; that is the pattern
-* 
+* change A1 blink so that it gives out code to make D7 blink, or change the name of the assignment to something like **initial project**
+* Develop a way to post readings on website
+* Try to integrate lectures, readings, assignments all on one webpage under "weeks"
 
 0. #### Pre-semester
 
@@ -47,7 +49,6 @@
      - Then ask student to complete a creative expression with multiple LEDs
   - Assignment
     - A0 - Software and tool installation
-    - A1 - Blink
   - ==Feedback==
     - update A1 to include code to make D7 blink (not available default)
     - Day 2 "making project" was fun; ping pong balls and glue guns were a hit
@@ -97,7 +98,7 @@
      - Lecture
        - Look at LED datasheet; calculate ideal resistance for LED
    - Assignment
-     - A2 - Light Sculpture
+     - A1 - Blink
    
 3. #### ADC, Potentiometers, Serial Monitor
 
@@ -140,7 +141,7 @@
      
    - Assignment
      
-     - A3 - Cylon light 
+     - A2 - Light Scupture 
    
 4. #### Buttons, RGB LEDs *(one class cancelled for Tapia)*
 
@@ -167,7 +168,7 @@
      
    - Day 2 - Class cancelled (==Future semesters this could be RGB LEDs, debouncing, or catch-up==)
      - Assignment
-       - A4 - Electronic dice 
+       - A3 - Cylon light 
      
    
 5. #### Week 5
@@ -203,7 +204,7 @@
      - Lab
        - 
    - Assignment
-     - AX - 
+     - A4 - Electronic dice 
    
    
    

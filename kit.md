@@ -2,7 +2,7 @@
 title: Course Kit
 layout: page
 menuItem: Course Kit
-menuPosition: 5
+menuPosition: 6
 ---
 
 <!-- NB: When updating the part URLs from a spreadsheet, markdown won't interpret the URLs as links. To fix this, copy the table source code into a text editor and do regex find / replace.

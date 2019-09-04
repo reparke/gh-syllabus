@@ -24,6 +24,8 @@ collections:
     output: true
   lectures:
     output: true
+  readings:
+    output: true
 defaults:
   - scope:
       path: ""
@@ -40,4 +42,8 @@ defaults:
       type: assignments
     values:
       layout: unit
-
+  - scope:
+      path: ""
+      type: readings
+    values:
+      layout: unit
