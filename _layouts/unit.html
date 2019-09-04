@@ -5,7 +5,7 @@ layout: default
 
 <p><b>Week {{ page.week }} {{ page.title }}</b></p>
 {% if page.date_due %}
-<p><b>Due date: {{ page.date_due }}</b></p>
+<p><b>Due d ate: {{ page.date_due }}</b></p>
 {% endif %}
 
 <!--
@@ -48,5 +48,8 @@ layout: default
 <div class="unitPagination">
   {% if prevurl %}<a href="{{ site.baseurl }}{{prevurl}}" class="prev">⇦ previous week</a>{% endif %}
   {% if nexturl %}<a href="{{ site.baseurl }}{{nexturl}}" class="next">next week ⇨</a>{% endif %}
-  <a href="{{ site.baseurl }}/reading.html" class="index">unit index</a>
+  <!--TODO: use if to load assignments.html or lectures.html based on page.category
+     <a href="{{ site.baseurl }}/reading.html" class="index">unit index</a>
+  -->
+
 </div>

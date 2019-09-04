@@ -142,7 +142,7 @@ I = R / V
 ## Breadboard
 
 * We will use **breadboards** to connect our circuits
-* The **power rails **  (on the long ends of the board) are all connected together
+* The **power rails**  (on the long ends of the board) are all connected together
 * On the interior, each group of 5 pins are connected
 
 <!-- Open Fritzing to show connected pins -->

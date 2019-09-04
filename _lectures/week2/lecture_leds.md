@@ -53,7 +53,7 @@ footer: 'ITP 348 - Rob Parke - USC'
 ## LED Precautions
 
 * LEDs have limitation in how much current they can handle
-* More current = brighter light*...up to a point, and then the LED breaks*
+* More current = brighter light *...up to a point, and then the LED breaks*
 * This is why we use a **resistor** to limit the flow of current
 * We call this a **current limiting resistor**
 * The resistor can be *before* or *after* the LED in the circuit

@@ -264,10 +264,10 @@ submission that they intend to use a grace day.
 
 **Course Schedule: A Weekly Breakdown**
 
-|         | **Topics/Daily Activities**                                  | **Readings**  | **Assignment Deliverable (due at end of the week)            |
+|         | **Topics/Daily Activities**                                  | **Readings**  | **Assignment (given out on Tuesday; due one week Monday @ 11:59 pm)** |
 | ------- | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
-| Week 1  | Intro to Physical Computing / C++ Review                     | Posted online |                                                              |
-| Week 2  | Electricity, components, microcontrollers, Ohm’s Law, LEDs   | Posted online | A0 - Installation; A1 - Blink                                |
+| Week 1  | Intro to Physical Computing / C++ Review                     | Posted online | A0 - Installation                                            |
+| Week 2  | Electricity, components, microcontrollers, Ohm’s Law, LEDs   | Posted online | A1 - Blink                                                   |
 | Week 3  | Interacting: analog to digital, buttons, serial              | Posted online | A2 - Light sculpture                                         |
 | Week 4  | Multicolored LEDs, software library, functions, variable resistors | Posted online | A3 - Scanning Light                                          |
 | Week 5  | Voltage dividers, photoresistors, temperature sensors        | Posted online | A4 - Dice                                                    |

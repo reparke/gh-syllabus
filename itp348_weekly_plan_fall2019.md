@@ -1,3 +1,8 @@
+#### General Feedback
+
+* Assignment 0 is given out week 1, day 1; due week 2, day 2; that is the pattern
+* 
+
 0. #### Pre-semester
 
    - [x] Send students installation instructions
@@ -11,7 +16,7 @@
      - [x] colored straws
 
 1. #### Introduction
-   
+
    - Reading
      - Enabling the Internet of Things https://web.eecs.umich.edu/~prabal/teaching/resources/eecs582/want15iot.pdf
 - Day 1 
@@ -36,7 +41,6 @@
        - Fritzing (open and show example project)
     - Safety
     - ==*Explain with slides what particle does, cloud, flash, etc. -- skip and do later==
-  
    - Lab
      
      - Paper circuits
@@ -44,6 +48,9 @@
   - Assignment
     - A0 - Software and tool installation
     - A1 - Blink
+  - ==Feedback==
+    - update A1 to include code to make D7 blink (not available default)
+    - Day 2 "making project" was fun; ping pong balls and glue guns were a hit
   
 
 2. #### Electricity, Microcontrollers, LEDs
@@ -52,28 +59,34 @@
      - http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/
      - https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all
    - Day 1
+     - Lecture (fall 2019)
+       - ==I walked through claiming a device== 
+     - Lecture
+       * C++ Syntax
+       * Argon Microcontroller
+     - Lab
+       * Have students work in pairs to answer datasheet questions
      - Lecture
        - Electricity and Ohm's Law
      - Lab
        - Walk students through connecting LED + Resistor to VUSB on Argon
          - Ask students how they would connect more than 1 LEDs
          - Ask students how they would make LEDs blink
-       - Open Workbench
-         - IDE like PyCharm
-         - Create project
-         - explain folder structure
-         - Walk through command palette
-         - Login, Target project
-     - Lecture
-       - Argon program structure
-     - Lab
-       - Let students try to complete blinking of three LEDs
+       - ==Feedback==
+         - Fall 2019: 80% of students had seen C++ already (skipped over c++ slides quickly)
+         - Practically all students were familiar with electricity principles, units (kilo, milli) so the electricity presentation very simple
    - Day 2
+     - Lecture: Open Workbench
+       * IDE like PyCharm
+       * Create project
+       * explain folder structure
+       * Walk through command palette
+       * Login, Target project
      - Lecture
-       - C++ Syntax
-       - Argon Microcontroller
+       * Argon program structure
      - Lab
-       - Have students work in pairs to answer datasheet questions
+       * Let students try to complete blinking of three LEDs
+     - 
        - Build three LEDs; 
          - show in Fritzing (students observe)
          - show formal coding with variables (students code together)
@@ -179,7 +192,10 @@
        - If time, introduce a button to control states (idea of a state machine)
    - Day 2
      - Lecture
-       - 
+       - Using multimeter (==need to create==: how read DC voltage, resistance, current; have some random resistors and ask them to figure out, hook up potentiometer to measure resistance and current)
+       - Reading resistors (completed))
+       - TMP 36 (==need to create==)
+       - Maybe start voltage dividers and photocell (==need to create==)
      - Lab
        - 
      - Lecture
