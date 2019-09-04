@@ -25,6 +25,13 @@ menuPosition: 5
 
 
 
+### Fritzing
+
+* [Fritzing Software](http://fritzing.org/home/)
+* [Particle Library Parts](https://github.com/reparke/Fritzing-Parts)
+
+
+
 ### Arduino
 
 - [Documentation](https://www.arduino.cc/reference/en/)

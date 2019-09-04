@@ -4,6 +4,7 @@
 * change A1 blink so that it gives out code to make D7 blink, or change the name of the assignment to something like **initial project**
 * Develop a way to post readings on website
 * Try to integrate lectures, readings, assignments all on one webpage under "weeks"
+* Add to Assignment 0 how to install fritzing parts for Argon (from Rob github)
 
 0. #### Pre-semester
 
@@ -85,12 +86,12 @@
        * Login, Target project
      - Lecture
        * Argon program structure
+       * ==fall 2019 only== show students how to download and install fritzing parts
      - Lab
        * Let students try to complete blinking of three LEDs
-     - 
-       - Build three LEDs; 
-         - show in Fritzing (students observe)
-         - show formal coding with variables (students code together)
+       * Build three LEDs; 
+       * show in Fritzing (students observe)
+       * show formal coding with variables (students code together)
      - Lecture
        - LEDs
      - Lab
