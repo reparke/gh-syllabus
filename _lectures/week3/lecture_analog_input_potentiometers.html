@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US"><head><title>For Loops in C++</title><meta property="og:title" content="For Loops in C++"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body,html{background:#000;height:100%;margin:0;overflow:hidden}[data-bespoke-marp-fragment=inactive]{visibility:hidden}.bespoke-marp-osc{display:none;opacity:0}.bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}.bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1}.bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}.bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}.bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}.bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}.bespoke-marp-parent>.bespoke-marp-osc>button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}.bespoke-marp-parent>.bespoke-marp-osc>button:disabled{cursor:not-allowed;opacity:.15!important}.bespoke-marp-parent>.bespoke-marp-osc>button:hover{opacity:1}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:active{opacity:.6}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled){transition:none}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen].exit{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}.bespoke-marp-parent.bespoke-marp-inactive{cursor:none}.bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}svg.bespoke-marp-slide{height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{pointer-events:auto;z-index:0}.bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}.bespoke-progress-parent+.bespoke-marp-parent{top:5px}.bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}}@media print{.bespoke-marp-osc,.bespoke-progress-parent{display:none!important;transition:none!important}.bespoke-marp-parent{top:0}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700");article#presentation > svg > foreignObject > section {
+<!DOCTYPE html><html lang="en-US"><head><title>Analog Input with Potentiometers</title><meta property="og:title" content="Analog Input with Potentiometers"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body,html{background:#000;height:100%;margin:0;overflow:hidden}[data-bespoke-marp-fragment=inactive]{visibility:hidden}.bespoke-marp-osc{display:none;opacity:0}.bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}.bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1}.bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}.bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}.bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}.bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}.bespoke-marp-parent>.bespoke-marp-osc>button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}.bespoke-marp-parent>.bespoke-marp-osc>button:disabled{cursor:not-allowed;opacity:.15!important}.bespoke-marp-parent>.bespoke-marp-osc>button:hover{opacity:1}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:active{opacity:.6}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled){transition:none}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen].exit{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}.bespoke-marp-parent.bespoke-marp-inactive{cursor:none}.bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}svg.bespoke-marp-slide{height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{pointer-events:auto;z-index:0}.bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}.bespoke-progress-parent+.bespoke-marp-parent{top:5px}.bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}}@media print{.bespoke-marp-osc,.bespoke-progress-parent{display:none!important;transition:none!important}.bespoke-marp-parent{top:0}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700");article#presentation > svg > foreignObject > section {
   width: 1280px;
   height: 720px;
 
@@ -144,89 +144,123 @@ article#presentation > svg > foreignObject > section[data-marpit-advanced-backgr
   width: 100%;
   height: 100%;
 }</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button></div><article id="presentation"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
-<h1>For Loops in C++</h1>
+<h1>Analog Input</h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
-<h2>For Loops</h2>
-<p>Basic Syntax</p>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">for</span> (initialization; condition; update){
-	statement(s);
-}
-</span></span></foreignObject></svg></code></pre>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Analog vs. Digital</h2>
+<p><img src="lecture_analog_input_potentiometers.assets/analog-clock-1295631_960_720-1565746786122.png" alt="analog clock" width=500 /><img src="lecture_analog_input_potentiometers.assets/clock-997589_960_720.jpg" alt="digital clock" style="width:500px" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Analog vs. Digital</h2>
 <ul>
-<li data-marpit-fragment="1">Useful for code that repeats a set number of times</li>
-<li data-marpit-fragment="2">Uses a counter to control the loop</li>
+<li data-marpit-fragment="1">Analog: <strong>infinite</strong> variations / states</li>
+<li data-marpit-fragment="2">Digital: <strong>discrete</strong> (or <strong>finite</strong>) states</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-marpit-fragments="1" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
-<h2>Basic Syntax</h2>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">for</span> (initialization; condition; update)
-</span></span></foreignObject></svg></code></pre>
-<h5>Initialization</h5>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-fragments="1" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Potentiometer (Pot)</h2>
+<img src="lecture_analog_input_potentiometers.assets/515deb26ce395f3959000000.png" style="width:500px" alt="potentiometers" />
 <ul>
-<li data-marpit-fragment="1">Create and initialize variables only at the beginning of loop (ofter a counter)</li>
+<li data-marpit-fragment="1">Variable resistor with 3 pins
+<ul>
+<li>power, ground, <strong>wiper</strong></li>
 </ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
-<h2>Basic Syntax</h2>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">for</span> (initialization; condition; update)
-</span></span></foreignObject></svg></code></pre>
-<h5>Condition</h5>
-<ul>
-<li data-marpit-fragment="1">Boolean expression that is checked at the end of each loop iteration.</li>
-<li data-marpit-fragment="2">Continue looping as long as this is true</li>
+</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-marpit-fragments="1" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
-<h2>Basic Syntax</h2>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">for</span> (initialization; condition; update)
-</span></span></foreignObject></svg></code></pre>
-<h5>Update</h5>
+<h2>Potentiometer (Pot)</h2>
+<img src="assets/1565313560201.png" style="width:300px" alt="potentiometer schematic symbo" />  
 <ul>
-<li data-marpit-fragment="1">Increment (or decrement) your loop variables at the end of each loop iteration.</li>
+<li data-marpit-fragment="1"><strong>Wiper</strong> pin connects to circuit
+<ul>
+<li>As wiper moves, resistance varies from 0 Ohms to max (e.g. our kit has 10K Ohms pots)</li>
+</ul>
+</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
-<h2>Example</h2>
-<p>for (<span style="color:#990000"><strong>int i = 0</strong></span>; i &lt; 10; i++) {</p>
-<p><span style="color:#0000">____</span>if (i % 2 == 0) {</p>
-<p><span style="color:#0000">________</span>Serial.println(i);</p>
-<p><strong>Initialize variables</strong></p>
+<h2>Where do we find pots?</h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
-<h2>Example</h2>
-<p>for (int i = 0; <span style="color:#990000"><strong>i &lt; 10</strong></span>; i++) {</p>
-<p><span style="color:#0000">____</span>if (i % 2 == 0) {</p>
-<p><span style="color:#0000">________</span>Serial.println(i);</p>
-<p><strong>Iteration #1: Check condition (even the first time)</strong></p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-fragments="1" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Where do we find pots?</h2>
+<img src="assets/potentiometer-482082_960_720.jpg" style="width:550px" />
 <ul>
-<li data-marpit-fragment="1">If true, run loop</li>
-<li data-marpit-fragment="2">If false, exit loop</li>
+<li data-marpit-fragment="1">Also car stereo knobs, dimming light switches, etc.</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
-<h2>Example</h2>
-<p>for (int i = 0; i &lt; 10; i++) {</p>
-<p><span style="color:#0000">____</span><span style="color:#990000"><strong>if (i % 2 == 0) {</strong></span></p>
-<p><span style="color:#0000">__________</span><span style="color:#990000"><strong>Serial.println(i);</strong></span></p>
-<p><strong>Iteration #1: Run loop body (all the code in the loop)</strong></p>
+<h2>How a Potentiometer Works</h2>
+<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:600px" />
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
-<h2>Example</h2>
-<p>for (int i = 0; i &lt; 10; <span style="color:#990000"><strong>i++</strong></span>) {</p>
-<p><span style="color:#0000">____</span>if (i % 2 == 0) {</p>
-<p><span style="color:#0000">________</span>Serial.println(i);</p>
-<p><strong>Iteration #1: Update the variable</strong></p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="4" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>How a Potentiometer Works</h2>
+<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:200px" />
+<ul>
+<li data-marpit-fragment="1"><strong>Vout</strong> is the wiper (middle pin; connects to Argon analog input)</li>
+<li data-marpit-fragment="2">Inside the potentiometer is a resistor</li>
+<li data-marpit-fragment="3">As the knob moves, the wiper divides the resistor, and the ratio of resistance between <em>Vin-and-Wiper</em> and <em>Wiper-and-Gnd</em> varies</li>
+<li data-marpit-fragment="4">This is called a <strong>variable voltages divider</strong> <em>(more on this later)</em></li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
 <h2>Example</h2>
-<p>for (int i = 0; <span style="color:#990000"><strong>i &lt; 10</strong></span>; i++) {</p>
-<p><span style="color:#0000">____</span>if (i % 2 == 0) {</p>
-<p><span style="color:#0000">________</span>Serial.println(i);</p>
-<p><strong>Iteration #2: Check condition again</strong></p>
+<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:400px" />
 <ul>
-<li data-marpit-fragment="1">If true, run loop</li>
-<li data-marpit-fragment="2">If false, exit loop</li>
+<li data-marpit-fragment="1">With a 10K Ohm pot, if the wiper is exactly halfway, what is the resistance between Vout and Gnd?</li>
+<li data-marpit-fragment="2">If the wiper is all the way to the top, what is the resistance between Vout and Gnd?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Voltage Dividers</h2>
+<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:400px" />
+<ul>
+<li data-marpit-fragment="1">Argon input pins can measure <strong>voltage</strong>, not <strong>resistance</strong></li>
+<li data-marpit-fragment="2">By connecting <strong>Vin</strong> (3.3v), <strong>Gnd</strong>, and <strong>Vout</strong> (wiper), we can now vary the <strong>voltage</strong> difference <em>Vin-and-Wiper</em> and <em>Wiper-and-Gnd</em></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Voltage Dividers</h2>
+<img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:400px" />
+<ul>
+<li data-marpit-fragment="1">If the wiper is exactly halfway, what is the voltage between Vout and Gnd?</li>
+<li data-marpit-fragment="2">If the wiper is all the way to the top, what is the voltage between Vout and Gnd?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Setting up Analog Input</h2>
+<p>Syntax</p>
+<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> PIN_POT = A0;		<span class="hljs-comment">//input pin</span>
+<span class="hljs-keyword">int</span> potValue = <span class="hljs-number">0</span>;			<span class="hljs-comment">//value from read</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+    pinMode(PIN_POT, INPUT);
+}
+
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li data-marpit-fragment="1">Pins A0-A5 are analog input</li>
+<li data-marpit-fragment="2"><em>Technically, analog pins are <strong>input by default</strong> but I like to do this for clarity and consistency</em></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="1" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Reading Analog Input</h2>
+<p>Syntax</p>
+<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+    potValue = analogRead(PIN_POT);
+}
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li data-marpit-fragment="1">Using our example of Vin=3.3v and a 10k potentiometer, what do you expect for the range of values of <strong>potValue</strong>?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Credit</h2>
+<ul>
+<li><a href="https://pixabay.com/photos/potentiometer-guitar-electric-guitar-482082/">Pixabay</a></li>
+<li><a href="https://pixabay.com/vectors/variable-resistance-resistors-36565/">Pixabay</a></li>
+<li><a href="https://learn.sparkfun.com/tutorials/resistors#types-of-resistors">Sparkfun</a></li>
+<li><a href="https://learn.sparkfun.com/tutorials/voltage-dividers">Sparkfun</a></li>
 </ul>
 </section>
 </foreignObject></svg></article><script>!function(){"use strict";const t=()=>"Apple Computer, Inc."===navigator.vendor?[e]:[];function e(t){Array.from(document.getElementsByTagName("svg"),e=>{if(e.hasAttribute("data-marpit-svg")){const{clientHeight:r,clientWidth:a}=e;e.style.transform||(e.style.transform="translateZ(0)");const i=t||e.currentScale||1,n=e.viewBox.baseVal.width/i,s=e.viewBox.baseVal.height/i,o=Math.min(r/s,a/n);Array.from(e.querySelectorAll(":scope > foreignObject"),t=>{const e=t.x.baseVal.value,i=t.y.baseVal.value;Array.from(t.querySelectorAll(":scope > section"),t=>{t.style.transformOrigin||(t.style.transformOrigin="0 0");const l=(a-o*n)/2-e,c=(r-o*s)/2-i;t.style.transform=`translate3d(${l}px,${c}px,0) scale(${o}) translate(${e}px,${i}px)`})})}})}const r="data-marp-fitting",a="data-marp-fitting-code",i="data-marp-fitting-math",n=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};!function(e=!0){const s=()=>{for(const e of t())e();Array.from(document.querySelectorAll(`svg[${r}="svg"]`),t=>{const e=t.firstChild,r=e.firstChild,{scrollWidth:s,scrollHeight:o}=r;let l,c=1;if(t.hasAttribute(a)&&(l=t.parentElement.parentElement),t.hasAttribute(i)&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft)-parseFloat(t.paddingRight));e&&(c=e)}const m=Math.max(s,c),p=Math.max(o,1),g=`0 0 ${m} ${p}`;n(e,"width",`${m}`),n(e,"height",`${p}`),n(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),n(t,"viewBox",g)&&t.classList.toggle("__reflow__")}),e&&window.requestAnimationFrame(s)};s()}()}();

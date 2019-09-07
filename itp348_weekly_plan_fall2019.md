@@ -95,11 +95,13 @@
      - Lecture
        - LEDs
      - Lab
-       - Compare 10k ohm vs 330 ohm resistor
+       - just ask the question: Compare 10k ohm vs 330 ohm resistor
      - Lecture
        - Look at LED datasheet; calculate ideal resistance for LED
    - Assignment
      - A1 - Blink
+   - Feedback
+     - Day 2 generally went well; students wired thtree LEDs for about 20 minutes; should refine Ohms Law and explain math examples a little more
    
 3. #### ADC, Potentiometers, Serial Monitor
 

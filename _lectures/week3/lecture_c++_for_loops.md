@@ -54,15 +54,16 @@ for (initialization; condition; update)
 
 ##### Update
 
-* Increment (or decrement) your <span style="color:red">loop</span> variables at the end of each loop iteration.
+* Increment (or decrement) your loop variables at the end of each loop iteration.
+
 
 ## Example
-`for (`**int i = 0**`; i < 10; i++) {`
+for (<span style="color:#990000">**int i = 0**</span>; i < 10; i++) {
 
-`____if (i % 2 == 0) {`
+<span style="color:#0000">____</span>if (i % 2 == 0) {
 
-`________Serial.println(i);
-`
+<span style="color:#0000">________</span>Serial.println(i);
+
 
 
 
@@ -70,58 +71,58 @@ for (initialization; condition; update)
 
 ## Example
 
-`for (int i = 0`; **i < 10**`; i++) {`
+for (int i = 0; <span style="color:#990000">**i < 10**</span>; i++) {
 
-`____if (i % 2 == 0) {`
+<span style="color:#0000">____</span>if (i % 2 == 0) {
 
-`________Serial.println(i);
-`
-
-
-
-**Check condition (even the first time)**
-
-* **If true, run loop**
-* **If false, exit loop**
-
-## Example
-
-`for (int i = 0; i < 10; i++) {`
-
-____**if (i % 2 == 0) {**
-
-__________**Serial.println(i);**
+<span style="color:#0000">________</span>Serial.println(i);
 
 
 
-**Run loop body (all the code in the loop)**
+
+**Iteration #1: Check condition (even the first time)**
+
+* If true, run loop
+* If false, exit loop
 
 ## Example
 
-`for (int i = 0; i < 10; `**i++**`) {`
+for (int i = 0; i < 10; i++) {
 
-`____if (i % 2 == 0) {`
+<span style="color:#0000">____</span><span style="color:#990000">**if (i % 2 == 0) {**</span>
 
-`________Serial.println(i);
-`
-
+<span style="color:#0000">__________</span><span style="color:#990000">**Serial.println(i);**</span>
 
 
 
-**Update the variable**
+**Iteration #1: Run loop body (all the code in the loop)**
 
 ## Example
 
-`for (int i = 0`; **i < 10**`; i++) {`
+for (int i = 0; i < 10; <span style="color:#990000">**i++**</span>) {
 
-`____if (i % 2 == 0) {`
+<span style="color:#0000">____</span>if (i % 2 == 0) {
 
-`________Serial.println(i);
-`
-
+<span style="color:#0000">________</span>Serial.println(i);
 
 
-**Check condition again**
 
-* **If true, run loop**
-* **If false, exit loop**
+
+
+**Iteration #1: Update the variable**
+
+## Example
+
+for (int i = 0; <span style="color:#990000">**i < 10**</span>; i++) {
+
+<span style="color:#0000">____</span>if (i % 2 == 0) {
+
+<span style="color:#0000">________</span>Serial.println(i);
+
+
+
+
+**Iteration #2: Check condition again**
+
+* If true, run loop
+* If false, exit loop
