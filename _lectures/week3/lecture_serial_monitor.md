@@ -14,38 +14,39 @@ title: Serial Monitor
 
 ## Goal
 
-- Be able to use receive status messages and program state information from Argon
-- Use Serial Monitor to debug programs
+* Be able to use receive status messages and program state information from Argon
+* Use Serial Monitor to debug programs
+    - This will be similar to `print` statements in other languages
 
 ## Serial
 
-<img src="lecture_serial_monitor.assets/argon-top.png" alt="height:500px" style="width:400px" />
+<img src="lecture_serial_monitor.assets/argon-top-sideways.png" alt="height:500px" style="width:900px" />
 
 ## Serial (UART)
 
-- When the Argon is connected via USB to your computer, it is sending and receiving data
-- UART (Universal Asynchronous Receiver/Transmitter) is a chip on the Argon that allows for serial communication
-- The **RX** and **TX** are the same as (connected to) the USB pins
+* When the Argon is connected via USB to your computer, it is sending and receiving data
+* UART (Universal Asynchronous Receiver/Transmitter) is a chip on the Argon that allows for serial communication
+* The **RX** and **TX** are the same as (connected to) the USB pins
 
 ## Starting Serial Monitor
 
 ```c++
 void setup() {
-	Serial.begin(9600);
+    Serial.begin(9600);
 }
 ```
 
-- Initialize the `Serial` object within`setup()`
-- **9600** is the speed that the communication happens
+* Initialize the `Serial` object within`setup()`
+* **9600** is the speed that the communication happens
   - 9600 bits per second (or "baud" rate)
-- We will always use **9600** 
+* We will always use **9600** 
   - Some devices like GPS will need to communicate at a faster rate
 
 ## Using Serial Monitor
 
 ```c++
 void loop() {
-	Serial.println("Hello World!");
+    Serial.println("Hello World!");
     Serial.println("Everything is awesome!");
 ```
 
@@ -59,7 +60,7 @@ void loop() {
 
 ```c++
 void loop() {
-	Serial.print("Hello World!");
+    Serial.print("Hello World!");
     Serial.println("Everything is awesome!");
 ```
 
@@ -71,7 +72,7 @@ void loop() {
 
 ```c++
 void loop() {
-	int x = 4;
+    int x = 4;
     Serial.println(x);
     Serial.println("The value is " + x);
 ```
@@ -93,7 +94,7 @@ void loop() {
 ```c++
 //Solution 1
 void loop() {
-	int x = 4;
+    int x = 4;
     Serial.print("The value is ");
     Serial.print(x);
     Serial.println(" and it is an integer");
@@ -103,14 +104,14 @@ void loop() {
 
 `The value is 4 and it is an integer`
 
-- This combines `print()` and `println()`
+* This combines `print()` and `println()`
 
 ## Using Serial Monitor with Variables
 
 ```c++
 //Solution 2
 void loop() {
-	int x = 4;
+    int x = 4;
     Serial.println("The value is " + String(x) + "and it is an integer");
 ```
 
@@ -118,7 +119,8 @@ void loop() {
 
 `The value is 4 and it is an integer`
 
-- This the `String` object constructor to convert an int to a String
+* This the `String` object constructor to convert an int to a String
+    - There is a `String` object in C++ just like other languages
 
 ## Opening Serial Monitor in Workbench
 
@@ -129,12 +131,13 @@ void loop() {
 
 ## How we will use Serial Monitor
 
-- Serial Monitor allows us to debug our programs (just like print statements in other languages)
-- We can see the state of variables, what functions are being called, etc.
+* Serial Monitor allows us to debug our programs (just like print statements in other languages)
+* We can see the state of variables, what functions are being called, etc.
 
 ## Special Notes about Serial Monitor
 
-- Serial Monitor is **only** available while the Argon is connected to your computer via USB
-- Technically the Argon support **sending** data to the Argon via Serial Monitor (e.g. sending integer values)
-  - This isn't supported in Workbench so we won't use it.
-  - For more information, see https://docs.particle.io/reference/device-os/firmware/argon/#read-
+* Serial Monitor is **only** available while the Argon is connected to your computer via USB
+
+* Technically the Argon also supports **sending** data to the Argon via Serial Monitor (e.g. sending integer values)
+  - This isn't supported in Workbench so we won't use it
+  <!-- - For more information, see https://docs.particle.io/reference/device-os/firmware/argon/#read- -->

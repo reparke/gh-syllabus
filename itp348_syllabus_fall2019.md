@@ -273,7 +273,7 @@ submission that they intend to use a grace day.
 | Week 5  | Voltage dividers, photoresistors, temperature sensors        | Posted online | A4 - Dice                                                    |
 | Week 6  | I2C communication, LCD, serial vs. parallel, cloud functions, cloud variables | Posted online | A5 - Environment monitor                                     |
 | Week 7  | Piezobuzzers, ultrasonic sensor                              | Posted online | A6 -- Environment monitor with LCD                           |
-| Week 8  | Passive infrared sesnors *(Fall break)*                      | Posted online | A7 - Proximity alarm                                         |
+| Week 8  | Passive infrared sensors *(Fall break)*                      | Posted online | A7 - Proximity alarm                                         |
 | Week 9  | Motion: DC motors, servos                                    | Posted online | A8                                                           |
 | Week 10 | Bluetooth, remote controlled car                             | Posted online | A9 - Motors                                                  |
 | Week 11 | Cloud platform, web and mobile apps                          | Posted online | Project proposal                                             |

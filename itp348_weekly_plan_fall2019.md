@@ -111,11 +111,11 @@
      - Lecture
        - Serial monitor: display info for debugging; only available when USB connected (not via cloud)
      - Guided activity
-       - digitalRead() on D2; use serial monitor to display floating value; then directly connect to **3.3v**, then GND
+       - Let them work for a few minutes first
+       - Ask them to digitalRead() on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
      - Lecture
        - Analog vs. digital
        - Pulse width modulation, PWM pins, analogWrite 
-       - ==draw an "equivalent voltage" line on the duty cycle image e.g. 1.67v is 50%==
      - Lab
        - Make light fully bright for 2 sec, half as bright for 2 sec, 1/3 as bright for 2 sec, 
        - Challenge: Increase light level of LED automatically
@@ -152,7 +152,7 @@
      
    - Day 1
      - Activity
-       - Video chat with Cyane's class
+       - Video chat with Cyane's class (1 hour)
      - Guided activity
        - connect button with pullup
        - Ask what is the voltage at pin when button pressed and not pressed

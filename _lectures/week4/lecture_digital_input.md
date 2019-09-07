@@ -22,11 +22,11 @@ title: Digital Input
 
 ## Digital
 
-- Instead of being infinite, digital signals are **discrete** (or **finite**)
+* Instead of being infinite, digital signals are **discrete** (or **finite**)
 
-- Think binary: the switch is either **on** or **off** (not "a little bit on")
+* Think binary: the switch is either **on** or **off** (not "a little bit on")
 
-- Digital values often have more than just two states--but they still have a fixed number of possible values (e.g. integer values 0-255)
+* Digital values often have more than just two states--but they still have a fixed number of possible values (e.g. integer values 0-255)
 
 ## What are examples of digital output?
 
@@ -40,21 +40,21 @@ void loop() {
     digitalWrite(SOME_PIN, HIGH); //or LOW
 ```
 
-- Most pins on the Argon can be configured to SEND output (e.g. to turn on a light) or to RECEIVE input (e.g. a button press)
+* Most pins on the Argon can be configured to SEND output (e.g. to turn on a light) or to RECEIVE input (e.g. a button press)
 
-- **HIGH** / true is **5V** (pin VUSB) or **3.3V** (pin 3.3v)
-- **LOW** / false is **0V** (ground)
+* **HIGH** / true is **5V** (pin VUSB) or **3.3V** (pin 3.3v)
+* **LOW** / false is **0V** (ground)
 
 ## What about digital input?
 
-- What are examples of digital inputs?
+* What are examples of digital inputs?
 
 
 ## Digital Input
 
-- Pins D2-D8 can be used for digital input *(other pins can also be used)*
-- Argon will "read" the voltage on a pin and return HIGH (3.3V) or LOW (0V)
-- **Never exceed 3.3V on input**
+* Pins D2-D8 can be used for digital input *(other pins can also be used)*
+* Argon will "read" the voltage on a pin and return HIGH (3.3V) or LOW (0V)
+* **Never exceed 3.3V on input**
   - Be careful of other components that operate at 5V
 
 ## Reading Digital Input with `digitalRead` 

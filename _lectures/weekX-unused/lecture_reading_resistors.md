@@ -14,9 +14,9 @@ title: Reading Resistor Bands
 
 ## Resistor Labels
 
-- The color codes indicate the resistance in Ohms (and sometimes how precise they are)
-- There are 4 band (colors), 5 band, and 6 band resisors
-- Four band resistors are the most common, and the ones we will encounter in this class
+* The color codes indicate the resistance in Ohms (and sometimes how precise they are)
+* There are 4 band (colors), 5 band, and 6 band resisors
+* Four band resistors are the most common, and the ones we will encounter in this class
 
 ## Resistor Chart
 <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide.png" alt="Resistor band chart" style="width:600px" />
@@ -25,11 +25,11 @@ title: Reading Resistor Bands
 
 <img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor band chart" style="width:300px" />
 
-- Align such that the group of three bands are on the left
-- The first two bands are the digits
-- The third band is the multiplier (a power of ten)
-- The last band is the tolerance (acceptable range of Ohms)
-- Nominal value (Ohms) use SI units: **Ohm**, **K Ohms** *(1,000 Ohms)*, or **M Ohms** *(1,000,000 Ohms)*
+* Align such that the group of three bands are on the left
+* The first two bands are the digits
+* The third band is the multiplier (a power of ten)
+* The last band is the tolerance (acceptable range of Ohms)
+* Nominal value (Ohms) use SI units: **Ohm**, **K Ohms** *(1,000 Ohms)*, or **M Ohms** *(1,000,000 Ohms)*
 
 ## Reading Bands Ex. 1
 
@@ -45,8 +45,8 @@ title: Reading Resistor Bands
 
 ## Reading Bands Ex. 1
 
-- Orange	Orange	Brown ==> 3	3	10  (or 10^1)
-- 33 * 10 = **330 Ohms**
+* Orange	Orange	Brown ==> 3	3	10  (or 10^1)
+* 33 * 10 = **330 Ohms**
 
 ## Reading Bands Ex. 2
 
@@ -62,10 +62,10 @@ title: Reading Resistor Bands
 
 ## Reading Bands Ex. 2
 
-- Gray 	White	Yellow	==> 8	9	10000 (or 10^4)
-- 89 * 10000 = **890000 Ohms**
-- But! Since this is over 1000 Ohms, we should use K Ohms (1000 Ohms)
-- 890000 = 890 * 1000 = **890 K Ohms**
+* Gray 	White	Yellow	==> 8	9	10000 (or 10^4)
+* 89 * 10000 = **890000 Ohms**
+* But! Since this is over 1000 Ohms, we should use K Ohms (1000 Ohms)
+* 890000 = 890 * 1000 = **890 K Ohms**
 
 <!--
 ## Try These

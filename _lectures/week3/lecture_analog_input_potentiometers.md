@@ -18,14 +18,14 @@ title: Analog Input with Potentiometers
 
 ## Analog vs. Digital
 
-- Analog: **infinite** variations / states
-- Digital: **discrete** (or **finite**) states
+* Analog: **infinite** variations / states
+* Digital: **discrete** (or **finite**) states
 
 ## Potentiometer (Pot)
 
-- Variable resistor with 3 pins
+* Variable resistor with 3 pins
   - power, ground, **wiper**
-- **Wiper** pin connect to circuit
+* **Wiper** pin connect to circuit
   - As wiper moves, resistance varies from 0 Ohms to max (e.g. 10K Ohms)
 <img src="assets/1565313560201.png" style="width:200px" alt="potentiometer schematic symbo" />
 <img src="lecture_analog_input_potentiometers.assets/515deb26ce395f3959000000.png" style="width:300px" alt="potentiometers" />
@@ -37,7 +37,7 @@ title: Analog Input with Potentiometers
 
 <img src="assets/potentiometer-482082_960_720.jpg" style="width:350px" />
 
-- Also car stereo knobs, dimming light switches, etc.
+* Also car stereo knobs, dimming light switches, etc.
 
 
 
@@ -45,18 +45,18 @@ title: Analog Input with Potentiometers
 
 <img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:200px" />
 
-- **Vout** is the wiper (middle pin)
-- Inside the potentiometer is a resistor
-- As the knob moves, the wiper divides the resistor, and the ratio of resistance between Vin-Wiper and Wiper-Gnd varies
-- This is called a **variable voltages divider** *(more on this later)* 
+* **Vout** is the wiper (middle pin)
+* Inside the potentiometer is a resistor
+* As the knob moves, the wiper divides the resistor, and the ratio of resistance between Vin-Wiper and Wiper-Gnd varies
+* This is called a **variable voltages divider** *(more on this later)* 
 
 ## Example
 
 <img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:200px" />
 
-- Let's say potentiometer is 10K Ohms
-- If the wiper is all the way to the top, what is the resistance between Vout and Gnd?
-- If the wiper is exactly halfway, what is the resistance between Vout and Gnd?
+* Let's say potentiometer is 10K Ohms
+* If the wiper is all the way to the top, what is the resistance between Vout and Gnd?
+* If the wiper is exactly halfway, what is the resistance between Vout and Gnd?
 
 <!-- top: 10K ohms; middle: 5K Ohms -->
 
@@ -64,10 +64,10 @@ title: Analog Input with Potentiometers
 
 <img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:200px" />
 
-- Argon input pins can measure **voltage**, not **resistance**
-- By connecting **Vin** (3.3v), **Gnd**, and **Vout** (wiper), we can now vary the **voltage** difference Vin-Wiper and Wiper-Gnd
-- If the wiper is all the way to the top, what is the voltage between Vout and Gnd?
-- If the wiper is exactly halfway, what is the voltage between Vout and Gnd?
+* Argon input pins can measure **voltage**, not **resistance**
+* By connecting **Vin** (3.3v), **Gnd**, and **Vout** (wiper), we can now vary the **voltage** difference Vin-Wiper and Wiper-Gnd
+* If the wiper is all the way to the top, what is the voltage between Vout and Gnd?
+* If the wiper is exactly halfway, what is the voltage between Vout and Gnd?
 
 <!-- top: 3.3v because vout is connected to 3.3v, which is being dropped over 10K resisor; middle: 1.67v because the wiper is "seeing" halfway through the drop of 3.3v across the entire resistor; bottom: 0v because Vout and Gnd are directly connected -->
 
@@ -87,8 +87,8 @@ void setup() {
 
 ```
 
-- Pins A0-A5 are analog input
-- *Technically, analog pins are **input by default** but I like to do this for clarity and consistency*
+* Pins A0-A5 are analog input
+* *Technically, analog pins are **input by default** but I like to do this for clarity and consistency*
 
 ## Reading Analog Input
 
@@ -100,7 +100,7 @@ void loop() {
 }
 ```
 
-- Using our example of Vin=3.3v and a 10k potentiometer, what do you expect for the range of values of **potValue**?
+* Using our example of Vin=3.3v and a 10k potentiometer, what do you expect for the range of values of **potValue**?
 
 
 

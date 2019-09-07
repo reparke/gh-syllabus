@@ -13,9 +13,6 @@ title: For Loops in C++
 
 ## For Loops
 
-- Useful for code that repeats a set number of times
-- Uses a counter to control the loop
-
 Basic Syntax
 
 ```c++
@@ -23,6 +20,10 @@ for (initialization; condition; update){
 	statement(s);
 }
 ```
+
+* Useful for code that repeats a set number of times
+* Uses a counter to control the loop
+
 
 ## Basic Syntax
 
@@ -32,7 +33,7 @@ for (initialization; condition; update)
 
 ##### Initialization
 
-Create and initialize variables only at the beginning of loop (ofter a counter)
+* Create and initialize variables only at the beginning of loop (ofter a counter)
 
 ## Basic Syntax
 
@@ -42,8 +43,8 @@ for (initialization; condition; update)
 
 ##### Condition
 
-- Boolean expression that is checked at the end of each loop iteration.
-- Continue looping as long as this is true
+* Boolean expression that is checked at the end of each loop iteration.
+* Continue looping as long as this is true
 
 ## Basic Syntax
 
@@ -53,10 +54,9 @@ for (initialization; condition; update)
 
 ##### Update
 
-- Increment (or decrement) your loop variables at the end of each loop iteration.
+* Increment (or decrement) your <span style="color:red">loop</span> variables at the end of each loop iteration.
 
 ## Example
-
 `for (`**int i = 0**`; i < 10; i++) {`
 
 `____if (i % 2 == 0) {`
@@ -81,8 +81,8 @@ for (initialization; condition; update)
 
 **Check condition (even the first time)**
 
-- **If true, run loop**
-- **If false, exit loop**
+* **If true, run loop**
+* **If false, exit loop**
 
 ## Example
 
@@ -123,5 +123,5 @@ __________**Serial.println(i);**
 
 **Check condition again**
 
-- **If true, run loop**
-- **If false, exit loop**
+* **If true, run loop**
+* **If false, exit loop**

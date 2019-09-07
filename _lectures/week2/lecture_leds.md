@@ -69,6 +69,9 @@ footer: 'ITP 348 - Rob Parke - USC'
 - Peak Forward Current
 - Forward Voltage
 
+<!-- forward voltage is the voltage drop across the LED
+forward current is current the LED can handle>
+
 ## Choosing a Current-Limiting Resistor
 
 * Rule of Thumb: 330 Ohms or 220 Ohms are common options
