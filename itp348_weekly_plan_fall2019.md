@@ -177,7 +177,7 @@
 5. #### Week 5
    
    - Reading
-     - 
+     - https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
    - Day 1
      - Lecture
        - RGB LED lecture
@@ -196,16 +196,16 @@
        - If time, introduce a button to control states (idea of a state machine)
    - Day 2
      - Lecture
-       - Using multimeter (==need to create==: how read DC voltage, resistance, current; have some random resistors and ask them to figure out, hook up potentiometer to measure resistance and current)
-       - Reading resistors (completed))
-       - TMP 36 (==need to create==)
-       - Maybe start voltage dividers and photocell (==need to create==)
+       - Using multimeter
      - Lab
-       - 
+       - Have students measure resistance of pot when its out of a circuit
+       - Show fritzing drawing, and have them measure voltage
      - Lecture
-       - 
-     - Lab
-       - 
+       - Reading resistors (lab exercise is built into slides)
+       - TMP36
+     - Lab (in slides)
+       * Connect a TMP36 and output the current temperature to the serial monitor
+       * Consider what type of input is this signal? How will this value be read by Argon
    - Assignment
      - A4 - Electronic dice 
    
@@ -217,34 +217,7 @@
    - ==not sure where this goes yet==
    
    
-   - Lecture
-   
-     - How to read resistors
-   
-   - Guided activity
-   
-     - Measure voltage at pin when potentiometer is turned (remove from circuit
-     - Measure resistance
-   
-   - Lecture
-   
-     - RGB LEDs: common anode vs cathode, R+G+B != W
-   
-   - Lab
-   
-     - Display random color with analogWrite
-   
-   - Guided activity
-   
-     - Create function that take inputs to set the color
-   
-       ```c++
-        void setColor(int r, int g, int b)
-       ```
-   
-     - discuss how to enter hexcode 0xFF (==not sure what I meant by this==)
-   
-     - Try library for animation http://yaab-arduino.blogspot.com/p/ala-example-simplergbled.html
+   - Maybe start voltage dividers and photocell (==need to create==)
 
 
 

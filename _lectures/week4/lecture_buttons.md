@@ -12,7 +12,7 @@ title: Push Buttons
 
 # Push Buttons
 
-<img src="lecture_buttons.assets/518189efce395f1f45000000.jpg" alt="various types of switches" style="width:600px" />
+<img src="lecture_buttons.assets/518189efce395f1f45000000.jpg" alt="various types of switches" style="width:700px" />
 
 ## Push Buttons
 <img src="lecture_buttons.assets/1565909884458.png" alt="switch circuit symbol" style="width:200px"/>
@@ -23,8 +23,9 @@ title: Push Buttons
 
 ## Push Button Orientation
 
-* Buttons have four pins and designed to go across the center of the breadboard
- <img src="lecture_buttons.assets/1565910237122.png" alt="switch on breadboard" style="width:400px" />
+ <img src="lecture_buttons.assets/1565910237122.png" alt="switch on breadboard" style="width:350px" />
+
+* Buttons have four pins and are designed to go across the center of the breadboard
 
 ## Push Button Connections (Normally Open)
 
@@ -32,21 +33,22 @@ title: Push Buttons
 
 * In the picture, each set of pins "vertically across" from each other are **always** connected
 * Each set of pins "horizontally next to" each other are **not connected** until the button is presed 
+* When button is pressed, all four pins are connected
 
 ## Goal
 
 * We want to use the button to send a binary (on/off) signal
-* Since this is a digital input, we can use HIGH (3.3v) and gnd
+* Since this is a digital input, we can use **HIGH** (3.3v) and **LOW** (gnd)
 
 ## First Version
 
-<img src="lecture_buttons.assets/1565911529662.png" alt="switch on breadboard" style="width:600px"/>
+<img src="lecture_buttons.assets/1565911529662.png" alt="switch on breadboard" style="width:800px"/>
 
 ## First Version - Problem
 
 <img src="lecture_buttons.assets/1565911529662.png" alt="switch on breadboard" style="width:300px" />
 
-* When button is pressed, it is connected to gnd (LOW)
+* When button is pressed, input pin is connected to gnd (LOW)
 * When button is open, is it LOW or HIGH?
 
 ## Floating Input
@@ -58,7 +60,7 @@ title: Push Buttons
 
 ## Second Version
 
-<img src="lecture_buttons.assets/1565911319542.png" alt="switch on breadboard" style="width:600px" />
+<img src="lecture_buttons.assets/1565911319542.png" alt="switch on breadboard" style="width:800px" />
 
 ## Second Version Problem
 
@@ -69,15 +71,14 @@ title: Push Buttons
 
 ## Final Version
 
-<img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:600px" />
+<img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:800px" />
 
-## Final Version - With Pull-Up Resistors
+## Final Version - With Pull-Up Resistor
 
 <img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:400px" />
 
-* We use a large resistor (10KOhms) to "pull-up" the input to 3.3v when the button is open (HIGH)
+* We use a large resistor (10k) to "pull-up" the input to 3.3v when the button is open (HIGH)
 * When the button is pressed, the input goes to gnd (LOW), and we no longer have short-circuit from power to ground
-* When button is pressed, we connect power (3.3v) to gnd (**BAD!**)
 
 ## IMPORTANT
 
@@ -85,7 +86,12 @@ title: Push Buttons
 
 * **ALWAYS USE A PULL-UP RESISTOR WITH BUTTONS**
 * Otherwise you can damage the Argon permanently
-## Try it out
+## Lab
+  <img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:600px" />
+
+1. Turn LED on while button pressed
+2. Turn LED off after button pressed
+3. Connect 3 LEDs and control on/off with button presses (3 states)
 
 ## Credit
 

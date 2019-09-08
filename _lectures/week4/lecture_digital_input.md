@@ -26,7 +26,8 @@ title: Digital Input
 
 * Think binary: the switch is either **on** or **off** (not "a little bit on")
 
-* Digital values often have more than just two states--but they still have a fixed number of possible values (e.g. integer values 0-255)
+* Digital values often have more than just two states
+  - Still have a fixed number of possible values (e.g. integer values 0-255)
 
 ## What are examples of digital output?
 

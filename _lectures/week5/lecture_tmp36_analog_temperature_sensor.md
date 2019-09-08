@@ -11,8 +11,7 @@ title: TMP36 Analog Temperature Sensor
 <!-- headingDivider: 2 -->
 
 # TMP36 Analog Temperature Sensor
-
-![Temperature Sensor - TMP36](lecture_tmp36_analog_temperature_sensor.assets/10988-01-1567639528368.jpg)
+<img src="lecture_tmp36_analog_temperature_sensor.assets/10988-01-1567639528368.jpg" alt="Temperature Sensor - TMP36" style="width:550px" />
 
 ## TMP 36
 
@@ -25,7 +24,8 @@ title: TMP36 Analog Temperature Sensor
 
 ## TMP 36
 
-![1567471132352](lecture_tmp36_analog_temperature_sensor.assets/1567471132352.png)
+<img src="lecture_tmp36_analog_temperature_sensor.assets/1567471132352.png" alt="Temperature Sensor - TMP36" style="width:800px" />
+
 
 
 
@@ -47,8 +47,8 @@ accuracy: +- 1 C
 * 10 mV / deg Celsius with a 500 mV offset
 * Try this: if **Vout** is 1.2V, what is the temperature in Celsius? in Fahrenheit?
 * *Remember:*
-  * T(fahr) = T(cel) * (9/5) + 32
-  * T(cel) = (T(fahr) - 32 ) * (5/9)
+  * `T(fahr) = T(cel) * (9/5) + 32`
+  * `T(cel) = (T(fahr) - 32 ) * (5/9)`
 
 <!-- consider offset: 
 1.2v - 500mv = 1.2V - 0.5V = 0.7V
@@ -61,12 +61,21 @@ Now to fahrenheit
 
 ## Wiring
 
-![1567470883820](lecture_tmp36_analog_temperature_sensor.assets/1567470883820.png)
+<img src="lecture_tmp36_analog_temperature_sensor.assets/1567470883820.png" alt="TMP36 wiring" style="width:800px" />
+
+- Note that is **BOTTOM VIEW**
 
 ## Lab
 
 * Connect a TMP36 and output the current temperature to the serial monitor
 * Consider what type of input is this signal? How will this value be read by Argon?
+
+<!-- This also tests a few C++ features
+Variable types: analog read value is INT, but voltage and temperature need to be DOUBLE
+Division: C++ division (in Cel->Fahr) needs to be between doubles
+
+Note: this picture is the BOTTOM VIEW, not top down
+-->
 
 
 ## Credit

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US"><head><title>C++ Functions and Libraries</title><meta property="og:title" content="C++ Functions and Libraries"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body,html{background:#000;height:100%;margin:0;overflow:hidden}[data-bespoke-marp-fragment=inactive]{visibility:hidden}.bespoke-marp-osc{display:none;opacity:0}.bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}.bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1}.bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}.bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}.bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}.bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}.bespoke-marp-parent>.bespoke-marp-osc>button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}.bespoke-marp-parent>.bespoke-marp-osc>button:disabled{cursor:not-allowed;opacity:.15!important}.bespoke-marp-parent>.bespoke-marp-osc>button:hover{opacity:1}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:active{opacity:.6}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled){transition:none}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen].exit{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}.bespoke-marp-parent.bespoke-marp-inactive{cursor:none}.bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}svg.bespoke-marp-slide{height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{pointer-events:auto;z-index:0}.bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}.bespoke-progress-parent+.bespoke-marp-parent{top:5px}.bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}}@media print{.bespoke-marp-osc,.bespoke-progress-parent{display:none!important;transition:none!important}.bespoke-marp-parent{top:0}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700");article#presentation > svg > foreignObject > section {
+<!DOCTYPE html><html lang="en-US"><head><title>Multimeters</title><meta property="og:title" content="Multimeters"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body,html{background:#000;height:100%;margin:0;overflow:hidden}[data-bespoke-marp-fragment=inactive]{visibility:hidden}.bespoke-marp-osc{display:none;opacity:0}.bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}.bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1}.bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}.bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}.bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}.bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}.bespoke-marp-parent>.bespoke-marp-osc>button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}.bespoke-marp-parent>.bespoke-marp-osc>button:disabled{cursor:not-allowed;opacity:.15!important}.bespoke-marp-parent>.bespoke-marp-osc>button:hover{opacity:1}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:active{opacity:.6}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled){transition:none}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen].exit{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}.bespoke-marp-parent.bespoke-marp-inactive{cursor:none}.bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}svg.bespoke-marp-slide{height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{pointer-events:auto;z-index:0}.bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}.bespoke-progress-parent+.bespoke-marp-parent{top:5px}.bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}}@media print{.bespoke-marp-osc,.bespoke-progress-parent{display:none!important;transition:none!important}.bespoke-marp-parent{top:0}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700");article#presentation > svg > foreignObject > section {
   width: 1280px;
   height: 720px;
 
@@ -143,116 +143,163 @@ article#presentation > svg[data-marpit-svg] > foreignObject[data-marpit-advanced
 article#presentation > svg > foreignObject > section[data-marpit-advanced-background-split] {
   width: 100%;
   height: 100%;
-}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button></div><article id="presentation"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="1" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h1>C++ Functions and Libraries</h1>
+}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button></div><article id="presentation"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h1>Multimeters</h1>
+<img src="lecture_multimeters.assets/01_Multimeter_Tutorial-01.jpg" alt="multimeter" style="width:500px" />
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="2" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Function Review</h2>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-marpit-fragments="2" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="3" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Functions: Return Values</h2>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function">returnType <span class="hljs-title">functionName</span> <span class="hljs-params">(parameterType parameterName, ...)</span> </span>{ ...}
-</span></span></foreignObject></svg></code></pre>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-marpit-fragments="3" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Digital multimeters (DMM)</h2>
 <ul>
-<li data-marpit-fragment="1">Functions can may or may not return a value</li>
-<li data-marpit-fragment="2">Always specify the return type before the function name</li>
+<li data-marpit-fragment="1">Allow you to measure the electrical properties of your circuit</li>
+<li data-marpit-fragment="2">Measure voltage, resistance, continunity, and current</li>
+<li data-marpit-fragment="3">Some multimeters can measure capacitance and temperature</li>
 </ul>
+<img src="lecture_multimeters.assets/12966-02.jpg" alt ="Digital Multimeter - Basic" style="width:200px;" />
+<img src="lecture_multimeters.assets/12078-01-1567822642652.jpg" alt ="Multimeter Probes - Needle Tipped" style="width:200px;" />
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-fragments="1" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="4" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Functions: Return Values</h2>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">thisFunctionReturnsADouble</span><span class="hljs-params">()</span> </span>{ ... }
-</span></span></foreignObject></svg></code></pre>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-marpit-fragments="4" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>General Multimeter Setup</h2>
+<ol>
+<li data-marpit-fragment="1">Plug in probes (black goes to common, red goes the appropriate ports)
 <ul>
-<li data-marpit-fragment="1"><code>void</code> means the function <strong>does not</strong> return a value</li>
+<li data-marpit-fragment="2">For our class, we will be measure milliamps, ohms, and V so use right port</li>
 </ul>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{ ... }
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-marpit-fragments="1" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="5" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Functions: Input Parameters</h2>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function">returnType <span class="hljs-title">functionName</span> <span class="hljs-params">(parameterType parameterName, ...)</span> </span>{ ...}
-</span></span></foreignObject></svg></code></pre>
-<ul>
-<li data-marpit-fragment="1">Functions can may or may not take an input parameters</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="6" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Functions: Input Parameters</h2>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">squareRoot</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>{...}
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sumNumbers</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num1, <span class="hljs-keyword">int</span> num2)</span> </span>{...}
-
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{...}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-fragments="3" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="7" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Libraries</h2>
-<ul>
-<li data-marpit-fragment="1">
-<p>Libraries are pre-written C++ files that you can add to your project</p>
 </li>
-<li data-marpit-fragment="2">
-<p>They provide additional features you can use (e.g. animating LEDs)</p>
+<li data-marpit-fragment="3">Turn knob to appropriate zone</li>
+<li data-marpit-fragment="4">Follow specific steps for type of measurement</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Setting Multimeter to Measure Resistance</h2>
+<img src="lecture_multimeters.assets/measuring_resistance.png" alt="measuring resistance" style="width:600px" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Notes about Measuring Resistance</h2>
+<ul>
+<li data-marpit-fragment="1">Resistance should be measured <strong>outside</strong> the circuit</li>
+<li data-marpit-fragment="2">Always remove the resistor before measuring</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-marpit-fragments="4" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>How to Measure Resistance</h2>
+<ol>
+<li data-marpit-fragment="1">Remove the resistor from circuit</li>
+<li data-marpit-fragment="2">Touch one probe to each end of the resistor</li>
+<li data-marpit-fragment="3">Adjust the knob until a valid reading appears
+<ul>
+<li data-marpit-fragment="4">If meters reads <strong>OL</strong>, <strong>1</strong>, or <strong>0</strong>, then adjust the knob</li>
+</ul>
 </li>
-<li data-marpit-fragment="3">
-<p>They are also use to simplify communicating with complex sensors (e.g. small screens)</p>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-fragments="1" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Exercise</h2>
+<ul>
+<li data-marpit-fragment="1">Use multimeter to measure the resistance of your potentiometer</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Setting Multimeter to Measure DC Voltage</h2>
+<img src="lecture_multimeters.assets/measuring_voltage_dc.png" alt="measuring dc voltage resistance" style="width:600px" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Notes about Measuring DC Voltage</h2>
+<ul>
+<li data-marpit-fragment="1">Voltage is measured with the circuit is operating with electricity</li>
+<li data-marpit-fragment="2">Connect the multimeter in <strong>parallel</strong> with the component you want to measure</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="4" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>How to Measure DC Voltage</h2>
+<ol>
+<li data-marpit-fragment="1">Touch the black probe to ground</li>
+<li data-marpit-fragment="2">Touch the red probe to the place in the circuit you want to measure</li>
+<li data-marpit-fragment="3">Adjust the knob until a valid reading appears
+<ul>
+<li data-marpit-fragment="4">If meters reads <strong>OL</strong> or <strong>1</strong>, adjust the knob</li>
+</ul>
+</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Exercise</h2>
+<img src="lecture_multimeters.assets/1567895847847.png" alt="Fritzing sketch" style="width:500px" />
+<ul>
+<li data-marpit-fragment="1">Connect potentiometer to 3.3v and ground.</li>
+<li data-marpit-fragment="2">Measure voltage at pin 2 as your turn the knob</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Setting Multimeter to Measure Continuity</h2>
+<img src="lecture_multimeters.assets/measuring_continuity.png" alt="measuring continuity" style="width:600px" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="4" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Notes about Measuring Continuity</h2>
+<ul>
+<li data-marpit-fragment="1">Continuity checks if two points are connected (e.g. if they are connected by a wire)</li>
+<li data-marpit-fragment="2">When each probe is touching two places that are connected, the multimeter will beep</li>
+<li data-marpit-fragment="3">Continuity can only be checked when the circuit is <strong>off</strong> (no electricity)</li>
+<li data-marpit-fragment="4">Useful to find out if a wire has broken or there is a short circuit somewhere</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="4" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>How to Measure Continuity</h2>
+<ol>
+<li data-marpit-fragment="1">Touch the black probe to one point in the circuit</li>
+<li data-marpit-fragment="2">Touch the red probe to another point in circuit</li>
+<li data-marpit-fragment="3">If the multimeter beeps, the two points are connected
+<ul>
+<li data-marpit-fragment="4">If there is no beep, the points are not connected</li>
+</ul>
+</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="1" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Other Uses</h2>
+<ul>
+<li data-marpit-fragment="1">In our class, we will not typically measure current or AC voltage, but these are included for reference</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Setting Multimeter to Measure DC Current</h2>
+<img src="lecture_multimeters.assets/measuring_amps_dc.png" alt="measuring current" style="width:600px" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="5" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Notes about Measuring DC Current</h2>
+<ul>
+<li data-marpit-fragment="1">Current is measured with the circuit is operating with electricity</li>
+<li data-marpit-fragment="2">Connect the multimeter in <strong>series</strong> with the component you want to measure</li>
+<li data-marpit-fragment="3">This means <strong>breaking</strong> the circuit and inserting the multimeter in line (<strong>series</strong>) with the  circuit</li>
+<li data-marpit-fragment="4">There are two ports for measuring current depending on amperage
+<ul>
+<li data-marpit-fragment="5">Our devices have 10 A and 200 mA</li>
+</ul>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="4" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="8" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Step 1: Finding Libraries (Generally)</h2>
-<ul>
-<li data-marpit-fragment="1">Search the internet</li>
-<li data-marpit-fragment="2">Search the <a href="https://community.particle.io/">Particle community</a></li>
-<li data-marpit-fragment="3">Search Arduino forums</li>
-</ul>
-<p><code>particle library &lt;thing you're looking for&gt;</code></p>
-<ul>
-<li data-marpit-fragment="4"><em>Note: Most Arduino libraries are compatible with Argon, but not all, so looking on Particle forums is preferable</em></li>
-</ul>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="3" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>How to Measure DC Current</h2>
+<ol>
+<li data-marpit-fragment="1">&quot;Break&quot; the circuit at the point you want to measure current</li>
+<li data-marpit-fragment="2">Touch the black probe to one point of the broken connection</li>
+<li data-marpit-fragment="3">Touch the red probe to the other point in circuit</li>
+</ol>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="5" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="9" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Step 1: Finding Libraries Workbench</h2>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Setting Multimeter to Measure AC Voltage</h2>
+<img src="lecture_multimeters.assets/measuring_voltage_ac.png" alt="measuring ac voltage resistance" style="width:600px" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="2" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Notes about Measuring AC Voltage</h2>
 <ul>
-<li data-marpit-fragment="1">In order to install a library, you need to add it via Workbench</li>
-<li data-marpit-fragment="2">Open project</li>
-<li data-marpit-fragment="3">Go to <strong>View &gt; Command Palette</strong></li>
-<li data-marpit-fragment="4">Type <strong>Find Libraries</strong></li>
-<li data-marpit-fragment="5">In the new window, type<br />
-<strong>rgb</strong> <em>(or whatever you are searching for)</em></li>
+<li data-marpit-fragment="1">AC voltage is <strong>dangerous</strong> and <strong>potentially fatal if mishandled</strong></li>
+<li data-marpit-fragment="2">While it is possible possible to measure AC voltage with the handheld multimeter, it is safer to use a device called a <strong>non-contact tester</strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="10" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Step 1: Finding Libraries in Workbench</h2>
-<img src="lecture_c++_functions_and_libraries.assets/1567035546839.png" alt="installing libraries" style="width:1000px" />
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="11" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Step 1: Finding Libraries in Workbench</h2>
-<img src="lecture_c++_functions_and_libraries.assets/1567035546839-crop.png" alt="installing libraries" style="width:1000px" />
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-fragments="4" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="12" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Step 2: Installing Libraries in Workbench</h2>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-theme="itp" data-heading-divider="2" style="--theme:itp;--heading-divider:2;">
+<h2>Credit</h2>
 <ul>
-<li data-marpit-fragment="1">Open project</li>
-<li data-marpit-fragment="2">Go to <strong>View &gt; Command Palette</strong></li>
-<li data-marpit-fragment="3">Type <strong>Install Libraries</strong></li>
-<li data-marpit-fragment="4">In the new window, type the exact name of the library<br />
-<strong>rgb-controls</strong> <em>(or whatever you are searching for)</em></li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="13" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Step 3: Including Library</h2>
-<img src="lecture_c++_functions_and_libraries.assets/library_tree.png" alt="library tree" style="width:600px;" />
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="2" data-paginate="true" data-theme="itp" data-heading-divider="2" data-marpit-pagination="14" data-marpit-pagination-total="14" style="--paginate:true;--theme:itp;--heading-divider:2;">
-<h2>Step 3: Including Library</h2>
-<ul>
-<li data-marpit-fragment="1">At the top of your sketch, add the library to your code</li>
-</ul>
-<pre><code class="language-c++"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"rgb-controls.h"</span></span>
-</span></span></foreignObject></svg></code></pre>
-<ul>
-<li data-marpit-fragment="2">Use the example sketches included with the library as a guide to get started</li>
+<li><a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/">Sparkfun</a></li>
 </ul>
 </section>
 </foreignObject></svg></article><script>!function(){"use strict";const t=()=>"Apple Computer, Inc."===navigator.vendor?[e]:[];function e(t){Array.from(document.getElementsByTagName("svg"),e=>{if(e.hasAttribute("data-marpit-svg")){const{clientHeight:r,clientWidth:a}=e;e.style.transform||(e.style.transform="translateZ(0)");const i=t||e.currentScale||1,n=e.viewBox.baseVal.width/i,s=e.viewBox.baseVal.height/i,o=Math.min(r/s,a/n);Array.from(e.querySelectorAll(":scope > foreignObject"),t=>{const e=t.x.baseVal.value,i=t.y.baseVal.value;Array.from(t.querySelectorAll(":scope > section"),t=>{t.style.transformOrigin||(t.style.transformOrigin="0 0");const l=(a-o*n)/2-e,c=(r-o*s)/2-i;t.style.transform=`translate3d(${l}px,${c}px,0) scale(${o}) translate(${e}px,${i}px)`})})}})}const r="data-marp-fitting",a="data-marp-fitting-code",i="data-marp-fitting-math",n=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};!function(e=!0){const s=()=>{for(const e of t())e();Array.from(document.querySelectorAll(`svg[${r}="svg"]`),t=>{const e=t.firstChild,r=e.firstChild,{scrollWidth:s,scrollHeight:o}=r;let l,c=1;if(t.hasAttribute(a)&&(l=t.parentElement.parentElement),t.hasAttribute(i)&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft)-parseFloat(t.paddingRight));e&&(c=e)}const m=Math.max(s,c),p=Math.max(o,1),g=`0 0 ${m} ${p}`;n(e,"width",`${m}`),n(e,"height",`${p}`),n(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),n(t,"viewBox",g)&&t.classList.toggle("__reflow__")}),e&&window.requestAnimationFrame(s)};s()}()}();

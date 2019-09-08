@@ -14,53 +14,54 @@ title: RGB LEDs
 
 ## Three LEDs in One!
 
-- RGB LEDs combine three separate LEDs in one package
+* RGB LEDs combine three separate LEDs in one package
   - Red LED
   - Green LED
   - Blue LED
-- These **primary colors** can be controlled separately to create a multitude of color possibilities
+* These **primary colors** can be controlled separately to create a multitude of color possibilities
 
 ## Pins
 <img src="lecture_rgb_leds.assets/1565897044440.png" alt="RGB LED" style="width:300px" />
-- RGB LEDs have four pins
-- Three pins to each of R, G, B *(shorter pins)*
-- One pin serves as either common anode or common cathode *(longer pin)*
+
+* RGB LEDs have four pins
+* Three pins to each of R, G, B *(shorter pins)*
+* One pin serves as either common anode or common cathode *(longer pin)*
 
 ## Recall: Current Flow in LED
 
-- LEDs allow current to flow **in only one direction**
-- Positive voltage applied to the **anode**
-- **Cathode** connected to Ground
+* LEDs allow current to flow **in only one direction**
+* Positive voltage applied to the **anode**
+* **Cathode** connected to Ground
 <img src="lecture_rgb_leds.assets/1565059300403.png" alt="LED schematic" style="width:300px" />
 
 ## Current Flow in RGB LEDs 
 
-- RGB LEDs operate in generall same way
-- Current flows from anode to cathode
-- Positive voltage on anode causes LED to turn on
-- But there is a small catch to beware of...
+* RGB LEDs operate in generall same way
+* Current flows from anode to cathode
+* Positive voltage on anode causes LED to turn on
+* But there is a small catch to beware of...
   - There are two types of RGB LEDs
 
 
 
 ## Common Cathode Work Like Regular LEDs
 
-- R, G, B pins are **anode** (*positive*)
-- Connect **cathode** (longer pin) to **Ground** (*negative*)
-- Output **HIGH** (3.3v) on anode turns on, LOW turns off
+* R, G, B pins are **anode** (*positive*)
+* Connect **cathode** (longer pin) to **Ground** (*negative*)
+* Output **HIGH** (3.3v) on anode turns on, LOW turns off
 
 ## Common Cathode Wiring
 
-<img src="lecture_rgb_leds.assets/1565896348358.png" alt="common cathode wiring" style="width:600px" />
+<img src="lecture_rgb_leds.assets/1565896348358.png" alt="common cathode wiring" style="width:800px" />
 
-## Common Anode are the Opposite from Regular LEDs
+## Common Anode are the Opposite
 
-- R, G, B pins are **cathode** (*negative*)
-- Connect **anode** (longer pin) to 3.3v (*positive*)
-- Output LOW on anode to turn on LED; output HIGH (3.3v) to turn off
+* R, G, B pins are **cathode** (*negative*)
+* Connect **anode** (longer pin) to 3.3v (*positive*)
+* Output LOW on anode to turn on LED; output HIGH (3.3v) to turn off
 
 ## Common Anode Wiring
-<img src="lecture_rgb_leds.assets/1565896027460.png" alt="common anode wiring" style="width:600px" />
+<img src="lecture_rgb_leds.assets/1565896027460.png" alt="common anode wiring" style="width:800px" />
 
 ## Color Mixing
 <img src="lecture_rgb_leds.assets/1565902722602.png" alt="color mixing" style="width:400px"/>
@@ -69,14 +70,14 @@ title: RGB LEDs
 
 ## Color Mixing with RGB LEDs
 
-- R + G + B **≠** W
-- Due to variations in manufacturing and resistor tolerances
+* R + G + B **≠** W
+* Due to variations in manufacturing and resistor tolerances
 
 ## Lab (in three stages)
 
-1. Wire an RGB LED and have it display random colors
-2. Then create functions to change colors
-3. Import `rgb-controls` library to animate colors
+1) Wire an RGB LED and have it display random colors
+2) Then create functions to change colors
+3) Import `rgb-controls` library to animate colors
 
 ## Credit
 

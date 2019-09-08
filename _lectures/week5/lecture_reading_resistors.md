@@ -15,11 +15,11 @@ title: Reading Resistor Bands
 ## Resistor Labels
 
 * The color codes indicate the resistance in Ohms (and sometimes how precise they are)
-* There are 4 band (colors), 5 band, and 6 band resisors
+* There are 4 bands (colors), 5 band, and 6 band resisors
 * Four band resistors are the most common, and the ones we will encounter in this class
 
 ## Resistor Chart
-<img src="lecture_reading_resistors.assets/sparkfun_resistor_guide.png" alt="Resistor band chart" style="width:600px" />
+<img src="lecture_reading_resistors.assets/sparkfun_resistor_guide.png" alt="Resistor band chart" style="width:750px" />
 
 ## Understanding Resistor Chart
 
@@ -67,21 +67,14 @@ title: Reading Resistor Bands
 * But! Since this is over 1000 Ohms, we should use K Ohms (1000 Ohms)
 * 890000 = 890 * 1000 = **890 K Ohms**
 
-<!--
-## Try These
 
-1.<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor example 1" style="width:400px" /> 2.<img src="lecture_reading_resistors.assets/1565824589676.png" alt="Resistor example 2" style="width:400px" />
-3.<img src="lecture_reading_resistors.assets/1565824850342.png" alt="Resistor example 3" style="width:400px" /> 4.<img src="lecture_reading_resistors.assets/1565825090288.png" alt="Resistor example 4" style="width:400px" />
--->
-## Try These
-
-|      |                                                              |
-| ---- | ------------------------------------------------------------ |
-| 1.<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor example 1" style="width:200px" /> 2.<img src="lecture_reading_resistors.assets/1565824589676.png" alt="Resistor example 2" style="width:200px" />
-3.<img src="lecture_reading_resistors.assets/1565824850342.png" alt="Resistor example 3" style="width:200px" /> 4.<img src="lecture_reading_resistors.assets/1565825090288.png" alt="Resistor example 4" style="width:200px" />    | <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" style="width:590px" /> |
+## 
+|                                                              |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1.<img src="lecture_reading_resistors.assets/1565824411750.png" alt="Resistor example 1" style="width:200px" /> 2.<img src="lecture_reading_resistors.assets/1565824589676.png" alt="Resistor example 2" style="width:200px" /><br/>3.<img src="lecture_reading_resistors.assets/1565824850342.png" alt="Resistor example 3" style="width:200px" /> 4.<img src="lecture_reading_resistors.assets/1565825090288.png" alt="Resistor example 4" style="width:200px" /> | <img src="lecture_reading_resistors.assets/sparkfun_resistor_guide_digit_multiplier.png" alt="Resistor band chart" style="width:590px" /> |
 
 <!-- 1. 
-4 7 3 = 47 x 10^2 = 47 x 100 = 4700 = 4.7 x 10^3 = 4.7K
+4 7 3 = 47 x 10^2 = 47 x 1 00 = 4700 = 4.7 x 10^3 = 4.7K
 1 0 3 = 10 x 10^3 = 10 x 1000 = 10000 = 10 x 10^3 = 10K
 flip: 6 8 4 = 68x10^4 = 680000 = 680x1000 = 680K
 3 3 1 = 33x10 = 330 tol +-0.5% -->
