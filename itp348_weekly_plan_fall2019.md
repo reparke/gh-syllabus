@@ -208,7 +208,32 @@
        * Consider what type of input is this signal? How will this value be read by Argon
    - Assignment
      - A4 - Electronic dice 
-   
+6. #### Week 6
+
+   - Reading (==Send this to students before class to watch==)
+     - https://www.khanacademy.org/science/ap-physics-1/ap-circuits-topic/kirchhoffs-loop-rule-ap/v/ee-kirchhoffs-voltage-law
+   - Day 1
+     - Experiential Learning
+       - Photoresistor part 1
+       - Discuss
+       - Photoresistor part 2
+       - Discuss
+       - Photoresistor part 3
+       - Discuss and show code
+     - Lecture
+       - (if time) show derivation of mathematically deriving exact resistor to calibrate. Explain this is an important part of engineering
+   - Day 2
+     - Lecture
+       - DHT11 or LCD screen
+     - Lab
+       - 
+     - Lecture
+       - 
+     - Lab
+       - 
+   - Assignment
+     - A5 - use TM36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
+
    
    
    

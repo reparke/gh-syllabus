@@ -71,4 +71,4 @@ menuPosition: 5
 - [Distributed Systems and the Internet of Things](http://bytes.usc.edu/ee250/) - Mark Redekopp (University of Southern California)
 
 - [Network Everything](https://github.com/michaelshiloh/NetworkEverything) - Michael Shiloh (NYU Abu Dhabi)
-- [Physical Computing](https://github.com/michaelshiloh/NetworkEverything) - Tom Igoe (NYU)
+- [Physical Computing](https://itp.nyu.edu/physcomp/) - Tom Igoe (NYU)
