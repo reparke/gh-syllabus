@@ -14,7 +14,7 @@ You'll find course material and useful links on the side.
 
 - [Syllabus](itp348_syllabus_fall2019.md) - Course plan, policies, and date
 - [Lectures](lectures.html) - HTML slides shows of lectures
-- [Assignments](lectures.html) - Assignment writeups
+- [Assignments](assignments.html) - Assignment writeups
 - [Readings](readings.md) - Weekly readings
 - [Resources](resources.md) - Helpful pages and documentation for the course
 - [Blackboard](https://blackboard.usc.edu) - For submitting assignments

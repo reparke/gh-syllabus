@@ -5,6 +5,13 @@
 * Develop a way to post readings on website
 * Try to integrate lectures, readings, assignments all on one webpage under "weeks"
 * Add to Assignment 0 how to install fritzing parts for Argon (from Rob github)
+* students like being show a small bit of using a sensor, and then extending it on their own
+* students like hands-on
+* order
+  * more LED colors
+  * more M-F extension wires
+* student kit could include more variety of colors / shapes of LED
+* Include finite state machines; then assignment of simon says (could use buzzer)
 
 0. #### Pre-semester
 
@@ -111,7 +118,7 @@
      - https://www.youtube.com/watch?v=GQLED3gmONg
    - Day 1
      - Lecture
-       - Serial monitor: display info for debugging; only available when USB connected (not via cloud)
+       - Serial monitor
      - Guided activity
        - Let them work for a few minutes first
        - Ask them to digitalRead() on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
@@ -121,26 +128,30 @@
      - Lab
        - Make light fully bright for 2 sec, half as bright for 2 sec, 1/3 as bright for 2 sec, 
        - Challenge: Increase light level of LED automatically
-     - Lecture
-       - C++ for loops
      - Lab
        - Have students use for loop to sweep the brightness of an LED
+     - ==Feedback==
+       - Need to add additional material; could have gone fast through PWM and done more than just fade a LED
+       - Serial monitor exercise uses **digitalRead**, which isn't covered until following week. Either more serial to next week, or vice versa
    - Day 2
      - Lecture
-       
+       * C++ for loops
+     - Lecture
        - Potentiometer, voltage dividers
-       
      - Lab
      
        - Have students connect pot to 3.3v, gnd, and A0; display the values
-       
      - Lecture
      
        - Analog to digital conversion; explain the math / conversion between voltage and input values
-     
      - Lab
      
        - Use potentiometer to control light level
+     - Extra
+       - If extra time, pull material from using multimeters
+     - Feedback
+       - a little slow; spent 20 min asking for course feedback which was helpful
+       - could have gone through multimeters
      
    - Assignment
      
@@ -224,7 +235,9 @@
        - (if time) show derivation of mathematically deriving exact resistor to calibrate. Explain this is an important part of engineering
    - Day 2
      - Lecture
-       - DHT11 or LCD screen
+       - Libraries
+       - *LCD screen* (Serial LCD from Amazon doesn't work)
+       - Use OLED instead
      - Lab
        - 
      - Lecture
@@ -232,16 +245,41 @@
      - Lab
        - 
    - Assignment
-     - A5 - use TM36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
+  - A5 - use TM36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
+  - rgb led...randomly choose button
+
+7. #### Week 7
+
+   - Reading
+     - 
+   - Day 1
+     - Lecture
+       - 
+     - Lab
+       - 
+     - Lecture
+       - 
+     - Lab
+       - 
+   - Day 2
+     - Lecture
+       - 
+     - Lab
+       - 
+     - Lecture
+       - 
+     - Lab
+       - 
+   - Assignment
+     - A6 - Environment monitor with photoresistor, tmp36, and LCD 
+   
 
    
-   
-   
-   
-   
+
+
    - ==not sure where this goes yet==
-   
-   
+
+
    - Maybe start voltage dividers and photocell (==need to create==)
 
 
