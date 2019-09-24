@@ -12,6 +12,7 @@
   * more M-F extension wires
 * student kit could include more variety of colors / shapes of LED
 * Include finite state machines; then assignment of simon says (could use buzzer)
+* Include Fritzing installation of parts in A0 installation (beware Mac issues; for windows show how to import FZBZ file since students won't be able to double click )
 
 0. #### Pre-semester
 
@@ -155,17 +156,14 @@
      
    - Assignment
      
-     - A2 - Light Scupture 
+     - A2 - Light Scupture (have students bring to class; ==bring camera==)
    
 4. #### Buttons, RGB LEDs *(one class cancelled for Tapia)*
 
-   - ​	Reading
-     
+   - Reading
      - https://learn.sparkfun.com/tutorials/pull-up-resistors
-     
    - Day 1
-     - Activity
-       - Video chat with Cyane's class (1 hour)
+     - ==Have students present light sculpture==
      - Guided activity
        - connect button with pullup
        - Ask what is the voltage at pin when button pressed and not pressed
@@ -173,23 +171,39 @@
        - Digital Input
        - Push buttons: component, schematic, pull-up resistors
      - Guided activity
-       - Connect button with resistor
-       - Latching button and debouncing
+       * Fritzing explain
+       * Create button with resistors in Fritzing
+     - Guided activity
+       - Connect button with resistor on Argon
      - Lab (students work on)
        - Turn LED on while button pressed
        - Turn LED off after button pressed
        - Connect 3 LEDs and control on/off with button presses (3 states)
-     
+   - Guided activity
+     - Latching button and debouncing (if time)
    - Day 2 - Class cancelled (==Future semesters this could be RGB LEDs, debouncing, or catch-up==)
      - Assignment
        - A3 - Cylon light 
      
+   - Feedback day 1
+     - 
    
 5. #### Week 5
    
    - Reading
      - https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
    - Day 1
+     - Activity
+       * Video chat with Cyane's class (1 hour) ==(cancelled)==
+       * Cyane collaboration
+         * first meeting: Tues 9/24 @ 4-5 pm PST
+           * 5 students of each to discuss life in the area, outside interests, what are they hoping to get out of studies
+           * ask for volunteers
+         * Next meeting 11/5 or 11/7   4:00 - 6:00 PST (3:00 - 5:00 MST)
+           * we model during class (maybe cyane and I each present to each other)
+           * then provide them a form and technology team
+     - Discussion
+       - how come when we turned the potentiometer on the cylon light, the blinking frequency didn't change right away?
      - Lecture
        - RGB LED lecture
      - Lab
@@ -197,7 +211,17 @@
      - Lecture
        - Functions in C++ *(this should be review from week 2)*
      - Lab
+       - Button press trigger random color
        - Rewrite sketch using `displayColor(r, g, b)` and `displayRandomColor()`
+       - cycle button presses to display C (BG) M (RB) Y (RG)
+     - Lecture
+       - Switch (==need to make slides==)
+         - connect middle pin to argon
+         - connect outer pins to power and ground
+         - when moving the switch, it connects either left two, or right two pins
+     - Guided activity
+       - Connect switch to enable: middle pin to enable pin, outer pin to power and ground
+       - enable and reset are active low
      - Lecture
        - Libraries
      - Lab
@@ -245,15 +269,17 @@
      - Lab
        - 
    - Assignment
-  - A5 - use TM36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
-  - rgb led...randomly choose button
+  - A5 - Reaction Timer
+      - Alternate ideas:
+          - use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
 7. #### Week 7
 
    - Reading
-     - 
+     - https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions
    - Day 1
      - Lecture
+       - DHT 11
        - 
      - Lab
        - 
@@ -271,9 +297,9 @@
      - Lab
        - 
    - Assignment
-     - A6 - Environment monitor with photoresistor, tmp36, and LCD 
-   
+     - A6 - Environment monitor with photoresistor, tmp36, and OLED
 
+   
    
 
 

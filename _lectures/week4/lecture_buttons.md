@@ -89,8 +89,8 @@ title: Push Buttons
 ## Lab
   <img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:600px" />
 
-1. Turn LED on while button pressed
-2. Turn LED off after button pressed
+1. Turn LED on **only** while button pressed
+2. Toggle LED on and off **after each time** button is pressed
 3. Connect 3 LEDs and control on/off with button presses (3 states)
 
 ## Credit

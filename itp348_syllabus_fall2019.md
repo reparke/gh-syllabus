@@ -270,14 +270,14 @@ submission that they intend to use a grace day.
 | Week 2  | Electricity, components, microcontrollers, Ohm’s Law, LEDs   | Posted online | A1 - Blink                                                   |
 | Week 3  | Interacting: analog to digital, buttons, serial              | Posted online | A2 - Light sculpture                                         |
 | Week 4  | Multicolored LEDs, software library, functions, variable resistors | Posted online | A3 - Scanning Light                                          |
-| Week 5  | Voltage dividers, photoresistors, temperature sensors        | Posted online | A4 - Dice                                                    |
-| Week 6  | I2C communication, LCD, serial vs. parallel, cloud functions, cloud variables | Posted online | A5 - Environment monitor                                     |
-| Week 7  | Piezobuzzers, ultrasonic sensor                              | Posted online | A6 -- Environment monitor with LCD                           |
-| Week 8  | Passive infrared sensors *(Fall break)*                      | Posted online | A7 - Proximity alarm                                         |
+| Week 5  | Voltage dividers, photoresistors, RGB LEDs                   | Posted online | A4 - Dice                                                    |
+| Week 6  | SPI communication, OLED, temperature sensors                 | Posted online | A5 - Reaction Timer                                          |
+| Week 7  | Digital temperature sensors, serial vs. parallel, cloud functions, cloud variables | Posted online | A6 -- Environment monitor with OLED                          |
+| Week 8  | Piezobuzzers, ultrasonic sensor *(Fall break)*               | Posted online | A7 - Proximity alarm                                         |
 | Week 9  | Motion: DC motors, servos                                    | Posted online | A8                                                           |
 | Week 10 | Bluetooth, remote controlled car                             | Posted online | A9 - Motors                                                  |
 | Week 11 | Cloud platform, web and mobile apps                          | Posted online | Project proposal                                             |
-| Week 12 | Other sensors, accelerometers, processing                    | Posted online | *(project proposal feedback given)*                          |
+| Week 12 | Other sensors, accelerometers, processing, passive infrared sensors | Posted online | *(project proposal feedback given)*                          |
 | Week 13 | Accessibility                                                | Posted online | Proposal revision                                            |
 | Week 14 | Hardware startups *(Thanksgiving)*                           | Posted online | Project schematic                                            |
 | Week 15 | Advanced topics                                              | Posted online | *(work on project)*                                          |

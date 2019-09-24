@@ -9,6 +9,9 @@ title: SPI OLED
 
 <!-- headingDivider: 2 -->
 
+<!-- reference for library api
+https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-arduino-library -->
+
 # SPI OLED
 
 ## Improving Output

@@ -21,14 +21,15 @@ menuPosition: 5
 - [Console](https://console.particle.io/devices)
 - [Community / forum](https://community.particle.io/)
 - [Web IDE](https://build.particle.io/build)
-- [Particle mesh Fritzing library](https://reparke.github.io/Fritzing-Parts/)
 
 
 
 ### Fritzing
 
 * [Fritzing Software](http://fritzing.org/home/)
-* [Particle Library Parts](https://github.com/reparke/Fritzing-Parts)
+* Particle Library Parts
+  * [Direct download](https://github.com/reparke/Fritzing-Parts/archive/master.zip)
+  * [GitHub repository](https://reparke.github.io/Fritzing-Parts/)
 
 
 

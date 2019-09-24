@@ -10,6 +10,13 @@ title: I2C LCDs
 
 <!-- headingDivider: 2 -->
 
+==Notes to self==
+
+* SDA and SCL lines need pullup resistors (4.7k or 10k) to **3V3** (not VUSB)
+* Connect power on LCD to VUSB (otherwise it will be very light and hard to read)
+* recommend using M-F wires (each student will need 4 short wires)
+* reference: https://docs.particle.io/support/particle-devices-faq/i2c-faq/#it-requires-pull-up-resistors
+
 # I2C LCDs
 
 ## Improving Output
