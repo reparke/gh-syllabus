@@ -44,24 +44,44 @@ title: RGB LEDs
 
 
 
-## Common Cathode Work Like Regular LEDs
+## Common Cathode Wiring
 
 * R, G, B pins are **anode** (*positive*)
 * Connect **cathode** (longer pin) to **Ground** (*negative*)
-* Output **HIGH** (3.3v) on anode turns on, LOW turns off
+* Output **HIGH** (3.3v) on anode turns on, **LOW** turns off
+
+
 
 ## Common Cathode Wiring
 
 <img src="lecture_rgb_leds.assets/1565896348358.png" alt="common cathode wiring" style="width:800px" />
 
-## Common Anode are the Opposite
+## Common Cathode RGB LEDs
+
+* ...are **physically** the opposite of regular LEDs
+  * Regular LED: **anode** is longer pin
+  * Common cathode RGB LED: **cathode** is longer pin
+* ...are wired the same as regular LEDs
+  * Connect anode to Argon
+  * Output **HIGH** to turn on
+
+## Common Anode Wiring
 
 * R, G, B pins are **cathode** (*negative*)
 * Connect **anode** (longer pin) to 3.3v (*positive*)
-* Output LOW on anode to turn on LED; output HIGH (3.3v) to turn off
+* Output **LOW** on anode to turn on LED; output **HIGH** (3.3v) to turn off
 
 ## Common Anode Wiring
 <img src="lecture_rgb_leds.assets/1565896027460.png" alt="common anode wiring" style="width:800px" />
+
+## Common Anode RGB LEDs
+
+* ...are **physically** the same as regular LEDs
+  * LED: **anode** is longer pin
+  * Common anode RGB LED: **anode** is longer pin
+* ...are wired the opposite as regular LEDs
+  * Connect anode to power
+  * Output **LOW** to turn on
 
 ## Color Mixing
 <img src="lecture_rgb_leds.assets/1565902722602.png" alt="color mixing" style="width:400px"/>

@@ -203,7 +203,8 @@
            * we model during class (maybe cyane and I each present to each other)
            * then provide them a form and technology team
      - Discussion
-       - how come when we turned the potentiometer on the cylon light, the blinking frequency didn't change right away?
+       - how come when we turned the potentiometer on the cylon light, the blinking frequency didn't change right away? Get them to thinking delay / blocking
+       - mention quiz topics
      - Lecture
        - RGB LED lecture
      - Lab
@@ -215,20 +216,15 @@
        - Rewrite sketch using `displayColor(r, g, b)` and `displayRandomColor()`
        - cycle button presses to display C (BG) M (RB) Y (RG)
      - Lecture
-       - Switch (==need to make slides==)
-         - connect middle pin to argon
-         - connect outer pins to power and ground
-         - when moving the switch, it connects either left two, or right two pins
-     - Guided activity
-       - Connect switch to enable: middle pin to enable pin, outer pin to power and ground
-       - enable and reset are active low
-     - Lecture
        - Libraries
      - Lab
        - Have students find and install `rgb-controls`
        - Ask them to create some colors effects on their own
        - Then walk through example together
        - If time, introduce a button to control states (idea of a state machine)
+     - Feedback
+       - All the content took most of the class, but it feel slow and dragged
+       - Try adding more content, or combining with LEDs?
    - Day 2
      - Lecture
        - Using multimeter
@@ -241,6 +237,14 @@
      - Lab (in slides)
        * Connect a TMP36 and output the current temperature to the serial monitor
        * Consider what type of input is this signal? How will this value be read by Argon
+     - Lecture
+       * Switch (==need to make slides==)
+         * connect middle pin to argon
+         * connect outer pins to power and ground
+         * when moving the switch, it connects either left two, or right two pins
+     - Guided activity
+       * Connect switch to enable: middle pin to enable pin, outer pin to power and ground
+       * enable and reset are active low
    - Assignment
      - A4 - Electronic dice 
 6. #### Week 6
