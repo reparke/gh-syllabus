@@ -264,57 +264,96 @@
    - Day 2
      - Lecture
        - Libraries
-       - *LCD screen* (Serial LCD from Amazon doesn't work)
-       - Use OLED instead
+       - Discuss OLED
      - Lab
-       - 
-     - Lecture
-       - 
+       - Have students connect OLED to display "Hello World"
+     - Guided Activity
+       - Walk students through wiring
      - Lab
-       - 
+       - Have students create an Etch-A-Sketch with OLED
    - Assignment
-  - A5 - Reaction Timer
-      - Alternate ideas:
-          - use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
-
+      - A5 - Reaction Timer
+         - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
+   
 7. #### Week 7
 
    - Reading
      - https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions
    - Day 1
      - Lecture
+       - Particle Cloud API
+       - Magnetic switch (no slides)
+       <!-- connect one pin with pullup resistor to power and argon; other pin to gnd; 
+         HIGH means open circuit; 
+         LOW means closed circuit-->
+     - Lab
+       - wire switch (show fritzing)
+       - publish switch event in console
+       - publish variable
+       - create function to turn off/on LED
+       - subscribe to variable -- work in pairs 
+         - create unique event ITP348/Door/<<UNIQUE_NAME>>
+   - Day 2
+     - Lecture
+       - Continue with Particle cloud
+     - Lecture
+       - IFTTT
+     - Guided activity
+       - set up IFTTT [https://ifttt.com/create](https://ifttt.com/create)
+       - how do create an alarm?
+         - set up location trigger to enter or exit that sets a variable
+         - then change publish event
+     - Lecture
        - DHT 11
-       - 
      - Lab
        - 
+   - Assignment
+     - A6 - Shared particle cloud temperature monitor
+8. #### Week 8
+
+   - Reading
+     - https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions
+   - Day 1
+     - Lecture
+       - Particle Cloud API
+     - Lab
+       - Magnetic switch <!-- connect one pin with pullup resistor to power and argon; other pin to gnd; 
+         HIGH means open circuit; 
+         LOW means closed circuit-->
      - Lecture
        - 
      - Lab
        - 
    - Day 2
      - Lecture
-       - 
+       - Continue with Particle cloud
      - Lab
        - 
      - Lecture
-       - 
+       - DHT 11
      - Lab
        - 
    - Assignment
-     - A6 - Environment monitor with photoresistor, tmp36, and OLED
+     - A7 - ?
+9. #### Week 9 - Motors and Servos
 
-   
-   
-
-
-   - ==not sure where this goes yet==
-
-
-   - Maybe start voltage dividers and photocell (==need to create==)
-
-
-
+   - Reading
+     - 
+   - Day 1
+     - Lecture
+       - Motors and servos (Ray)
+     - Lab
+       - 
+   - Day 2
+     - Lecture
+       - Motors and servos (Ray)
+     - Lab
+       - 
+   - Assignment
+     - A8 - ?
 ---
+
+
 
 
 

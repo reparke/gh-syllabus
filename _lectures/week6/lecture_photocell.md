@@ -10,6 +10,8 @@ title: Photoresistor
 
 <!-- headingDivider: 2 -->
 
+Name _________________________________________  Partner _________________________________________ 
+
 # Photoresistor
 
 <img src="lecture_photocell.assets/09088-02-L.jpg" alt="Photoresistor" style="width:550px" />

@@ -186,6 +186,8 @@ void setup() {
   Particle.function("ledStatus", ledStatus); //register func
 ```
 
+Function must return an `int` (typically -1 for fail)
+
 ## Calling Cloud Functions - [Particle Console](https://console.particle.io)
 
 <img src="lecture_particle_cloud.assets/1569448280222.png" alt="1569447605240" style="width:700px;" />
@@ -270,7 +272,7 @@ void tempEventHandler(const char *event, const char *data) {
 
 ```C++
 Particle.subscribe(<<EVENT_NAME>>,
-                   <<C++_EVENT_HANDLER_FUNCTION>>,
+                   <<EVENT_HANDLER_C++_FUNCTION>>,
                    <<FLAGS>>);
 
 ```

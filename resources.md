@@ -28,8 +28,11 @@ menuPosition: 5
 
 * [Fritzing Software](http://fritzing.org/home/)
 * Particle Library Parts
-  * [Direct download](https://github.com/reparke/Fritzing-Parts/archive/master.zip)
+  * [Direct download](https://github.com/reparke/Fritzing-Parts/raw/master/Particle_Mesh_Parts.fzbz)
   * [GitHub repository](https://reparke.github.io/Fritzing-Parts/)
+* AdaFruit Library Parts (useful for OLEDs)
+  * [Direct download](https://github.com/adafruit/Fritzing-Library/raw/master/AdaFruit.fzbz)
+  * [GitHub repository](https://github.com/adafruit/Fritzing-Library)
 
 
 

@@ -93,7 +93,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 ## Serial Peripheral Interface (SPI)
 
 * Means of sending and receiving data between devices
-* **Synchronous:** data is sent on regular intervals controled by a clock
+* **Synchronous:** data is sent on regular intervals controlled by a clock
 * **Serial:** one bit at time is sent / received
 
 ## What is Synchronous Communication?
@@ -102,7 +102,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 ## What is Synchronous Communication?
 
-* Data pin / line and clock pin / line
+* Data pin and clock pin
 
 * Clock is an oscillating square wave
 * On rising (low to high) or falling (high to low) edge, the receiver samples ("read") data line 
@@ -129,36 +129,11 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 ## Challenge
 
-* Use notes and guides to connect OLED. Using two potentiometers (to draw) and one button (to reset), create an [Etch A Sketch](https://www.youtube.com/watch?v=vVA9wdiIlN4)
+* Use notes and guides to connect OLED. Get "Hello world!" to appear.
+* Then, use two potentiometers (to draw) and one button (to reset), create an [Etch A Sketch](https://www.youtube.com/watch?v=vVA9wdiIlN4)
 * [Library code](https://github.com/sparkfun/Micro_OLED_Breakout/tree/V_1.0)
 * [Hookup guide](https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide)
 * [Datasheet](https://cdn.sparkfun.com/assets/learn_tutorials/3/0/8/SSD1306.pdf)
-
-<!--setup: move cursor to middle of screen
-int xPos = OLEDscreen.getLCDWidth()/2;
-int yPos = OLEDscreen.getLCDWidth()/2;
-loop
-void loop()
-{
-  int xValue = analogRead(A0);
-  int yValue = analogRead(A1);
-  xPos = xPos + (map(xValue, 0, 1023, 2, -2));
-  yPos = yPos + (map(yValue, 0, 1023, -2, 2));
-... keep from going off screen
-if(xPos > 159){
-    (xPos = 159);
-  }
-  if(xPos < 0){
-    (xPos = 0);
-  }
-  if(yPos > 127){
-    (yPos = 127);
-  }
-  if(yPos < 0){
-    (yPos = 0);
-  }
-OLEDscreen.pixel(xPos,Ypos)
--->
 
 ## Credit
 
