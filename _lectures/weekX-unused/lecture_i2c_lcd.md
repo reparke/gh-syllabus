@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 6
+week: 
 category: lectures
 title: I2C LCDs
 
