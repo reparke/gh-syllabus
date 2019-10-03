@@ -14,8 +14,8 @@ You'll find course material and useful links on the side.
 
 - [Syllabus](itp348_syllabus_fall2019.md) - Course plan, policies, and date
 - [Lectures](lectures.html) - HTML slides shows of lectures
-- [Exercises](XX) - In-class code projects as well as my own notes
 - [Assignments](assignments.html) - Assignment writeups
+- [Exercises](https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises) - GitHub repository with my own sample exercises as well as in-class code projects (denoted by **_ic** at end of the project names). All projects are created with [Particle Workbench](https://www.particle.io/workbench/)
 - [Readings](readings.md) - Weekly readings
 - [Resources](resources.md) - Helpful pages and documentation for the course
 - [Blackboard](https://blackboard.usc.edu) - For submitting assignments
