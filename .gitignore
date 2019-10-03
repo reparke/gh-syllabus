@@ -5,3 +5,178 @@ _site/*
 # However, students prefer the single text page that is generated
 # by GitHub pages for the .md files
 *.html
+
+# =============================
+# Particle Workbench specific .gitignore
+# https://community.particle.io/t/recommended-gitignore-for-particle-workbench-projects/46507/2
+
+# binaries and related objects produced by the local compiler.
+target/*
+
+# =============================
+# Particle generic .gitignore
+# https://github.com/particle-iot/device-os/blob/develop/.gitignore
+
+# Object files
+*.o
+
+# Libraries
+*.lib
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug folder
+Debug/*
+
+# Releases folder
+Release/*
+build/releases/*
+
+# build folder
+*.map
+*.lst
+*.d
+*.o
+
+# Unit test build folder
+user/tests/unit/obj/*
+
+# Platform-specific settings
+.settings/*
+.cproject
+.project
+.DS_Store
+
+# Raisonance RIDE Project
+RIDE/*
+
+# backup folder
+backup/*
+
+# Arduino libraries
+libraries/Arduino/
+
+# TropicSSL libraries
+libraries/Tropicssl/
+ci/test-reports/
+nbproject/
+build/target/
+build/cores/
+hal/soft-ap/.idea/
+cmake-build-debug
+.vscode
+module_user_memory.ld
+
+# Doxygen documentation
+docs/doxygen/html/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+
+# =============================
+# Generic C++.gitignore
+# https://github.com/github/gitignore/blob/master/C%2B%2B.gitignore
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+
+# =============================
+# Generic C++.gitignore
+# https://github.com/github/gitignore/blob/master/C%2B%2B.gitignore
+
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
