@@ -272,7 +272,7 @@ submission that they intend to use a grace day.
 | Week 4  | Multicolored LEDs, software library, functions, variable resistors | Posted online | A3 - Scanning Light                                          |
 | Week 5  | Voltage dividers, photoresistors, RGB LEDs                   | Posted online | A4 - Dice                                                    |
 | Week 6  | SPI communication, OLED, temperature sensors                 | Posted online | A5 - Reaction Timer                                          |
-| Week 7  | Digital temperature sensors, serial vs. parallel, cloud functions, cloud variables | Posted online | A6 -- Environment monitor with OLED                          |
+| Week 7  | Digital temperature sensors, serial vs. parallel, cloud functions, cloud variables | Posted online | A6 -- Shared Environment Monitor                             |
 | Week 8  | Piezobuzzers, ultrasonic sensor *(Fall break)*               | Posted online | A7 - Proximity alarm                                         |
 | Week 9  | Motion: DC motors, servos                                    | Posted online | A8                                                           |
 | Week 10 | Bluetooth, remote controlled car                             | Posted online | A9 - Motors                                                  |

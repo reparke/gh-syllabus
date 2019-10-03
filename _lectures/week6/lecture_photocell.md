@@ -35,7 +35,7 @@ Pre-reading:
 2. Consider the range of values the argon will read when using the photoresistor using this method
 
    1. What is the maximum value the argon will read?  __ <!-- 4095 -->
-   2. What is the maximum value the argon will read?  __ <!-- 0 -->
+   2. What is the minimum ymvalue the argon will read?  __ <!-- 0 -->
 
    
 
@@ -72,7 +72,7 @@ A potetiometer is also a variable resistor (like a photoresistor). With a potent
 9. Connect a 10k potentiometer and photoresistor to your argon (see diagram; note: disconnect ground from potentiometer). Display the value from reading the photoresistor on the serial monitor. What is the range of values? __ <!-- 0 - 4095; note they will only use two terminals from pot -->
 10. These input values correspond to what actual voltage levels? __ <!-- 0 - 3.3v -->
 11. If our goal is to make allow the argon to be most sensitve to changes at ambient, visible light levels, how should we set our potentiometer? That is, if we want to maximize our ability to detect changes above or below ambient light, how should we set our potentiometer? __ <!-- the pot should be set to the same resistance as the photoresistor at ambient light -->
-12. Based on your results in part 1, what value of resistance on the potentiometer do you think will give the middle value reading the input? __ <!-- should be same as resistance at ambient light -->
+12. Based on your results in part 1, what value of ==resistance on the potentiometer do you think will give the middle value reading the== input? __ <!-- should be same as resistance at ambient light -->
 13. When the input reading of the photoresistor is at the middle of the ADC range, what would you expect the voltage to be? __
 14. Set your potentiometer so the argon is reading the middle input value. Now turn off your circuit and measure the resistance in the potentiometer. How does this compare to your answers from part 1? __ 
 15. Carefully replace the potentiometer in your circuit. Measure the voltage from the photoresistor to ground. __

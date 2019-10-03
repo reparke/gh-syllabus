@@ -259,6 +259,11 @@
        - Discuss
        - Photoresistor part 3
        - Discuss and show code
+     - Feedback
+       - some students enjoyed the exploration; others seemed a little lost
+       - change some things on the handout that were worded poorly
+       - create some short, simple photoresistor wiring notes
+       - One good thing was this followed learning about using the multimeter since the activity required it
      - Lecture
        - (if time) show derivation of mathematically deriving exact resistor to calibrate. Explain this is an important part of engineering
    - Day 2
@@ -381,3 +386,9 @@
        - 
    - Assignment
      - AX - 
+
+
+
+[Two-Layer Chassis Assembly](https://youtu.be/L7-98Ejmb4M)
+
+[Pictures of installation](https://learn.sparkfun.com/tutorials/assembly-guide-for-sparkfun-jetbot-ai-kit/1-circular-robotics-chassis-kit-two-layer-assembly) (only relevant through half of the first page)
