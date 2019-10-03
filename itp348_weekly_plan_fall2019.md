@@ -283,7 +283,8 @@
 7. #### Week 7
 
    - Reading
-     - https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions
+     - [Particle Cloud Functions](https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions)
+     - Have students create an [IFTTT account](https://ifttt.com/) 
    - Day 1
      - Lecture
        - Particle Cloud API
@@ -305,33 +306,32 @@
        - IFTTT
      - Guided activity
        - set up IFTTT [https://ifttt.com/create](https://ifttt.com/create)
+       - Install iOS / Android app
        - how do create an alarm?
+         - If Particle - Publish <event name> open
+         - Then send notification
+         - Could enhance by using your location
          - set up location trigger to enter or exit that sets a variable
          - then change publish event
-     - Lecture
-       - DHT 11
-     - Lab
-       - 
+       - **Ask students to work in pairs and come up with a cool idea**
    - Assignment
      - A6 - Shared particle cloud temperature monitor
 8. #### Week 8
 
    - Reading
-     - https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions
+     - 
    - Day 1
      - Lecture
-       - Particle Cloud API
+       - DHT11 or ultrasonic sensor
      - Lab
-       - Magnetic switch <!-- connect one pin with pullup resistor to power and argon; other pin to gnd; 
-         HIGH means open circuit; 
-         LOW means closed circuit-->
+       - 
      - Lecture
        - 
      - Lab
        - 
-   - Day 2
+   - Day 2 ==(class cancelled for fall break)==
      - Lecture
-       - Continue with Particle cloud
+       - 
      - Lab
        - 
      - Lecture
@@ -352,6 +352,22 @@
    - Day 2
      - Lecture
        - Motors and servos (Ray)
+     - Lab
+       - 
+   - Assignment
+     - A8 - ?
+10. #### Week 10
+
+   - Reading
+     - 
+   - Day 1
+     - Lecture
+       - 
+     - Lab
+       - 
+   - Day 2
+     - Lecture
+       - 
      - Lab
        - 
    - Assignment

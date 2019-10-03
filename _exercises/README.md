@@ -14,3 +14,7 @@ You can find the source code (*.ino) for each project by going to
 #### Libraries
 
 If the project contains libraries, it is recommended to download the entire project, not just the source. There will be important items in `project.properties` file  and the ```/lib``` folder
+
+#### Disclaimer
+
+Some of these projects may be incomplete or in-process so they may not work.

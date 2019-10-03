@@ -30,6 +30,11 @@
       ITP348/Door/<<UNIQUE_NAME>>
   - create event handler
   - register subscriber
+
+  IFTTT
+  =====
+  - set If <EVENT_NAME> open, then send notification
+  - create new function to override alarm based on location (describe)
 */
 
 // 1. PUBLISH
@@ -41,6 +46,9 @@ bool doorOpen = false;
 const int PIN_LED = D3;
 // 3b. FUNCTION
 bool lightOn = false;
+
+// 5. IFTTT
+bool isAlarmArmed = true;
 
 void setup() {
   // 1. PUBLISH
@@ -60,17 +68,26 @@ void setup() {
 
   // 4. SUBSCRIBE
   Particle.subscribe("ITP348/Door", doorEventHandler, ALL_DEVICES);
+
+  //5. IFTTT
+  Particle.function("setAlarmStatus", setAlarmStatus);
+  Particle.variable("isAlarmArmed", isAlarmArmed);
 }
 
 void loop() {
   // 1. PUBLISH
   switchVal = digitalRead(PIN_SWITCH);
   // Serial.println("Switch val = " + String(switchVal));
+
   if (switchVal == HIGH) {  // just read that switch is open
     if (doorOpen ==
         false) {  // we do this so one event is fired, not endless events
       doorOpen = true;
-      Particle.publish("ITP348/Door", "open");
+
+      // 5. IFTTT only - add alarm trigger IF logic
+      if (isAlarmArmed == true) {
+        Particle.publish("ITP348/Door", "open");
+      }
       Serial.println("\tDoor: closed -> open; doorOpen = " + String(doorOpen));
     }
   } else {  // just read that switch is closed
@@ -120,5 +137,18 @@ void doorEventHandler(const char *event, const char *data) {
       changeLEDState("on");
       Particle.publish("ITP348/Door-Partner", "open door -> LED on");
     }
+  }
+}
+
+// 5. IFTTT
+int setAlarmStatus(String update) {
+  if (update.equalsIgnoreCase("arm")) {
+    isAlarmArmed = true;
+    return 0;
+  } else if (update.equalsIgnoreCase("disarm")) {
+    isAlarmArmed = false;
+    return 0;
+  } else {
+    return -1;
   }
 }

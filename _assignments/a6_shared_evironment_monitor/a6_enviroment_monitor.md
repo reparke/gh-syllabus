@@ -1,16 +1,7 @@
----
-week_assigned: 6
-number: 6
-category: assignment
-title: Shared Environment Monitor
-date_due: Oct 14 @ 11:59 pm
-
----
-
 Assignment 6 – Shared Environment Monitor
-=====================================
+=========================================
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+[Submit on Blackboard](https://blackboard.usc.edu/)
 
 Goals
 -----
@@ -33,11 +24,9 @@ with the average and max of all the temperatures.
 
 Here is an example:
 
-![](media/11a8000d5890b3f024b562fefbd23401.jpg)
+<img src="media/circuit.jpg" style="width:500px" />
 
-![](media/5a3fd007b74228731679092f748a4511.jpg)
-
-![](media/3025bde2ad93f5eefe10e2e1729b17e1.jpg)
+<img src="media/stats.jpg" style="height:200px" /><img src="media/cropped_temp.jpg" style="height:200px;" />
 
 **Components**
 
@@ -49,7 +38,7 @@ Here is an example:
 
 -   1 x TMP36
 
--   1 x push button (plus any necessary resistors)
+-   1 x  push button (plus any necessary resistors)
 
 -   Jumper wire (standard male-male)
 
@@ -110,7 +99,7 @@ Here is an example:
 
 -   Connect a button and the OLED
 
-![](media/5a3fd007b74228731679092f748a4511.jpg)
+<img src="media/stats.jpg" style="height:200px;" />
 
 In **loop()**, use the button to switch between two “states” of your device.
 
@@ -121,15 +110,15 @@ In **loop()**, use the button to switch between two “states” of your device.
         temperatures. These values should be automatically updated as new
         temperatures arrive
 
--   **Temperature Feed State**
+<img src="media/cropped_temp.jpg" style="height:200px;" />
 
-    ![](media/3025bde2ad93f5eefe10e2e1729b17e1.jpg)
+**Temperature Feed State**
 
-    The OLED should display the most recent temperatures (you will only be able
+-   The OLED should display the most recent temperatures (you will only be able
     to fix up to 6). This should be automatically updated as new temperatures
     arrive.
 
-![](media/3025bde2ad93f5eefe10e2e1729b17e1.jpg)
+<img src="media/temp_ec.jpg" style="height:200px;" />
 
 **Extra Credit**
 
