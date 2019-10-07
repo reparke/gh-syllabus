@@ -1,39 +1,29 @@
-/******************************************************************************
-  Micro-OLED-Shield-Example.ino
-  SparkFun Micro OLED Library Hello World Example
-  Jim Lindblom @ SparkFun Electronics
-  Original Creation Date: June 22, 2015
+/*  Wiring
 
-  This sketch prints a friendly, recognizable logo on the OLED Shield, then
-  goes on to demo the Micro OLED library's functionality drawing pixels,
-  lines, shapes, and text.
+  OLED
+  ----
+      MicroOLED ------------- Argon
+        GND ------------------- GND
+        3.3 ------------------- 3.3V (VCC)
+      D1/MOSI ----------------- MO (don't change)
+      D0/SCK ------------------ SCK (don't change)
+        D2  ------------------- unused
+        D/C ------------------- D5 (can be any digital pin)
+		RST ------------------- D6 (can be any digital pin)
+		CS  ------------------- D4 (can be any digital pin)
+  Button
+  ------
+Pin D2 (pullup)
 
-  Hardware Connections:
-        This sketch was written specifically for the Photon Micro OLED Shield,
-        which does all the wiring for you. If you have a Micro OLED breakout,
-        use the following hardware setup:
-
-    MicroOLED ------------- Photon
-      GND ------------------- GND
-      VDD ------------------- 3.3V (VCC)
-    D1/MOSI ----------------- A5 (don't change)
-    D0/SCK ------------------ A3 (don't change)
-      D2
-      D/C ------------------- D6 (can be any digital pin)
-      RST ------------------- D7 (can be any digital pin)
-      CS  ------------------- A2 (can be any digital pin)
-
-  Development environment specifics:
-        IDE: Particle Build
-        Hardware Platform: Particle Photon
-                       SparkFun Photon Micro OLED Shield
-
-  This code is beerware; if you see me (or any other SparkFun
-  employee) at the local, and you've found our code helpful,
-  please buy us a round!
-
-  Distributed as-is; no warranty is given.
-*******************************************************************************/
+  gnd
+  3v3
+  d1
+  sck
+  d2
+  d/c
+  rst
+  cs
+*/
 
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 
