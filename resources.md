@@ -5,9 +5,7 @@ menuItem: Resources
 menuPosition: 5
 ---
 
-# Resources
-
-[References](#references) - [Projects and Sensors](#project-and-sensor-ideas) - [Other Courses](#other-courses-materials)
+*[References](#references) - [Projects and Sensors](#project-and-sensor-ideas) - [Other Courses](#other-courses-materials)*
 
 
 
@@ -33,12 +31,8 @@ menuPosition: 5
 ### Fritzing
 
 * [Fritzing Software](http://fritzing.org/home/)
-* Particle Library Parts
-  * [Direct download](https://github.com/reparke/Fritzing-Parts/raw/master/Particle_Mesh_Parts.fzbz)
-  * [GitHub repository](https://reparke.github.io/Fritzing-Parts/)
-* AdaFruit Library Parts (useful for OLEDs)
-  * [Direct download](https://github.com/adafruit/Fritzing-Library/raw/master/AdaFruit.fzbz)
-  * [GitHub repository](https://github.com/adafruit/Fritzing-Library)
+* Particle Library Parts: [Direct download](https://github.com/reparke/Fritzing-Parts/raw/master/Particle_Mesh_Parts.fzbz) and [GitHub repository](https://reparke.github.io/Fritzing-Parts/)
+* AdaFruit Library Parts (useful for OLEDs): [Direct download](https://github.com/adafruit/Fritzing-Library/raw/master/AdaFruit.fzbz) and [GitHub repository](https://github.com/adafruit/Fritzing-Library)
 
 
 
@@ -72,9 +66,11 @@ menuPosition: 5
 
 
 
-## Project and Sensor Ideas ([top](#resources))
+## Project and Sensor Ideas
 
-Note that I haven't used many of these sensors myself
+*[top](#resources)*
+
+Note that I can not vouch for most of these projects or sensors personally.
 
 ### Inspiration
 
@@ -150,7 +146,9 @@ Note that I haven't used many of these sensors myself
 
 
 
-### Other Courses Materials
+## Other Courses Materials
+
+*[top](#resources)*
 
 - [Computación Física](https://jguerra91.wixsite.com/compfisica20191) - Jorge Guerra Guerra (San Marcos University in Lim, Peru) (in Spanish)
 - [IoT](https://classes.engineering.wustl.edu/cse222s/schedule/) - Bill Siever (Washington University in St. Louis)
