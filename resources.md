@@ -68,7 +68,7 @@ menuPosition: 5
 
 ## Project and Sensor Ideas
 
-*[top](#resources)*
+*[top](#top)*
 
 Note that I can not vouch for most of these projects or sensors personally.
 
@@ -148,7 +148,7 @@ Note that I can not vouch for most of these projects or sensors personally.
 
 ## Other Courses Materials
 
-*[top](#resources)*
+*[top](#top)*
 
 - [Computación Física](https://jguerra91.wixsite.com/compfisica20191) - Jorge Guerra Guerra (San Marcos University in Lim, Peru) (in Spanish)
 - [IoT](https://classes.engineering.wustl.edu/cse222s/schedule/) - Bill Siever (Washington University in St. Louis)
