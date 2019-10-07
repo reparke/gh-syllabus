@@ -5,6 +5,12 @@ menuItem: Resources
 menuPosition: 5
 ---
 
+# Resources
+
+[References](#references) - [Projects and Sensors](#project-and-sensor-ideas) - [Other Courses](#other-courses-materials)
+
+
+
 ## References
 
 ### Particle Documentation
@@ -59,7 +65,84 @@ menuPosition: 5
 
 ### Miscellaneous
 
-- [Extensive IoT resources](https://github.com/michaelshiloh/resourcesForClasses) (from Michael Shiloh). This is one of the most comprehensive, helpful lists of tips and links. 
+- [Extensive IoT resources](https://github.com/michaelshiloh/resourcesForClasses) (from Michael Shiloh). This is one of the most comprehensive, helpful lists of tips and links.
+
+   
+---
+
+
+
+## Project and Sensor Ideas ([top](#resources))
+
+Note that I haven't used many of these sensors myself
+
+### Inspiration
+
+* [Particle Projects on Hackster.io](https://particle.hackster.io/)
+* [Hackster.io](https://hackster.io/) (general)
+* [HackADay](https://hackaday.com/)
+* [Arduino Project Hub](https://create.arduino.cc/projecthub/)
+* [Sparkfun Project Blog](https://www.sparkfun.com/news/tags/projects)
+
+### Biometric Sensors
+
+* [Simple heart rate sensor]( https://www.sparkfun.com/products/11574)
+* [Multi-sensor heart rate monitor]( https://www.sparkfun.com/products/12650)
+* [Pulse oximeter and heart rate sensor](https://www.sparkfun.com/products/15219)
+* [Muscle sensor (control inputs)](https://www.sparkfun.com/products/13723)
+* [Blood gas (blood alcohol)](https://www.sparkfun.com/products/8880)
+
+###  Earthquake Monitor
+
+* [Sample project](https://microcontrollerslab.com/earthquake-detector-arduino/)
+
+### Air Quality and Environment Sensors
+
+* [Great resource on Seeed air sensors](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/CCS811) 
+* [Sample Argon project](https://community.particle.io/t/argon-powered-air-quality-monitor/48932)
+* [HPM particle sensor](https://www.sparkfun.com/products/14959) ($40)
+  * This sensor is challenging to physically connect and to code for 
+* [Grove dust sensor](https://www.seeedstudio.com/Grove-Dust-Sensor-PPD42NS.html) ($12)
+  * [Sample code / project](https://airquality406.wordpress.com/code/)
+  * Seems Particle compatible
+* [Air quality sensor breakout - VOC and eCO2](https://www.adafruit.com/product/3566)
+* [Adafruit SGP30 air quality sensor breakout - VOC and eCO2](https://www.adafruit.com/product/3709) ($15)
+  * Seems this is more reliable than 811
+* [Grove air quality sensor](https://www.seeedstudio.com/Grove-Air-quality-sensor-v1-3-p-2439.html)
+* [Carbon monoxide](https://www.sparkfun.com/products/9403)
+
+### Pet Treat Dispenser 
+
+* [Project](https://www.hackster.io/edr1924/arduino-uno-based-easy-to-build-pet-feeder-86c1ef): Sophisticated pet food dispenser
+* [Project](https://www.hackster.io/circuito-io-team/iot-pet-feeder-10a4f3): Simple pet food dispenser
+
+### Sound Detection
+
+* [Sound detector](https://www.sparkfun.com/products/14262)
+
+### Guitar Effects Pedal
+
+* [Project](https://www.metamorphsoftware.com/photon-guitar-pedal#): Particle-based guitar compression / distortion pedal
+* [Project](https://community.particle.io/t/heres-how-to-build-a-fretless-guitar-powered-by-a-particle-argon/48553): Argon-powered fretless guitar
+* [Project](https://www.electrosmash.com/pedalshield-uno): DIY Arduino guitar effects pedal
+
+### Wearables / E-Textiles
+
+* [Flora](https://www.adafruit.com/product/659) - sewable microcontroller with an ecosystem of sensors
+* [Lilypad](https://www.sparkfun.com/products/14631) - another sewable microcontroller
+* [Conductive velcro](https://www.adafruit.com/product/1324)
+* [Conductive thread](https://www.adafruit.com/product/640)
+* [Project](https://particle.hackster.io/4189/magoo-e4ff24): Obstacle-detection and GPS-navigation headset for visually-impaired users
+* [Project](https://www.hackster.io/news/diy-google-glass-for-under-10-1abea579ccf5): A cool but rather involved pair of DIY smart glasses
+
+
+
+### NFC and RFID on Argon
+
+* Argon can only emulate NFC tags--currently supports turning on, turning off, and being notified if tag has been read
+* Argon can't communicate / read NFC tags or support payments
+* There is a $50 [RFID sensor](https://www.sparkfun.com/products/13198) that enables the Argon to read RFID tags
+  * Note that you need to match RFID frequency and tags
 
 
 
