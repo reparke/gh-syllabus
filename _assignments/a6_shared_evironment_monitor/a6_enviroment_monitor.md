@@ -1,3 +1,12 @@
+---
+week_assigned: 6
+number: 6
+category: assignment
+title: Shared Environment Monitor
+date_due: Oct 14 @ 11:59 pm
+
+---
+
 Assignment 6 – Shared Environment Monitor
 =========================================
 
