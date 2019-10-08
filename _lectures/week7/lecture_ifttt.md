@@ -10,7 +10,8 @@ title: IFTTT
 <!-- headingDivider: 2 -->
 
 # IFTTT
-If **This**, Then **That**
+
+### If **This**, Then **That**
 
 ## IFTTT: If This, Then That
 
@@ -34,8 +35,10 @@ If **This**, Then **That**
   * The event that causes IFTTT to do something
 * Action: **THAT**
   * The resulting task that IFTTT performs
-* Recipe / Applet: The combined **THIS** + **THAT**
-* Ingredients: Data that is passed from Trigger. This will be information from Particle events that we publish
+* Recipe / Applet: 
+  * The combined **THIS** + **THAT**
+* Ingredients: 
+  * Data that is passed from Trigger. This will be information from Particle events that we publish
 
 ## Using Particle as Trigger (THIS)
 
