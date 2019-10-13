@@ -8,7 +8,7 @@
 * students like being show a small bit of using a sensor, and then extending it on their own
 * students like hands-on
 * order
-  * more LED colors
+  * more LED colorsz
   * more M-F extension wires
 * student kit could include more variety of colors / shapes of LED
 * Include finite state machines; then assignment of simon says (could use buzzer)

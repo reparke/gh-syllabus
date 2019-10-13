@@ -4,27 +4,37 @@ theme: itp
 
 week: 8
 category: lectures
-title: State Machines
+title: Multi Tasking
 ---
 
 <!-- headingDivider: 2 -->
 
-# Finite State Machines
-## Blink
+# Multi-Tasking: Delay
+## Code: Blink LED
 
 ```c++
-include basic blink
+void setup() {
+  pinMode(D7, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(D7, HIGH);   
+  delay(1000);                       
+  digitalWrite(D7, LOW);     
+  delay(1000);                       
+}
 ```
 
 ## Delay Problems
 
-* `delay()` is **blocking**--this means the Argon is essentially paused and can't do anything else
+* `delay()` is **blocking**
+  * This means the Argon is essentially paused and can't do anything else
 * We need to be able to synchronize events and **multi-task** just like our computers and phones
 
 ## Step 1: Let's Use the Clock
 
 * `millis()` is a function that returns the "relative current time" 
-  * `int` that is number of milliseconds that have elapsed since the Argon turned on
+  * Number of **milliseconds** that have elapsed since the Argon last turned on / reset
 * We can call `millis()` at different points in time to compare the passage of time
 * When a specific time has elapsed, we can take an action
 
@@ -32,11 +42,11 @@ include basic blink
 
 ## Note about `millis()` and `long`
 
-* The "on time" is return as an `long`
+* The "on time" is returned as an `long`
 
-* `long` is like an `int` but has a larged capacity
+* `long` is like an `int` but has a larger capacity
 
-* Normally this stores 32 bit numbers (positive and negative)
+* Normally `long` stores 32 bit numbers (positive and negative)
 
 * range of `long`: -2,147,483,648 to 2,147,483,647
 
@@ -46,11 +56,11 @@ include basic blink
 
   * However, the "on time" will never be negative
 
-  * We can designed a variable as `unsigned` which means the lowest value is **0** 
+  * We can specify a variable as `unsigned` which means the lowest value is **0** 
 
   * range of `unsigned long`: 0 to 4,294,967,295
 
-  * We will use this version so you'll see
+  * Syntax
 
     ```c++
     unsigned long currentTime = millis();
@@ -66,15 +76,19 @@ include basic blink
 ## Our New Plan
 
 * if *ledState* = **LOW** AND interval is over
-  * then *ledState* = **HIGH**; update time; turn on LED
+  * then *ledState* = **HIGH**
+  * update time
+  * turn on LED
 * if *ledState* = **HIGH** AND interval is over
-  * *ledStai te* = **LOW**; update time; turn off LED
+  * *ledState* = **LOW**
+  * update time
+  * turn off LED
 
 ## Visual Representation
 
-<img src="lecture_state_machines.assets/1570497035509.png" alt="1570497035509" style="width:800px;" />
+<img src="lecture_multi_tasking.assets/1570497035509.png" alt="1570497035509" style="width:800px;" />
 
-## Code: Blink without Delay
+## Code: Blink LED without Delay
 ```c++
 unsigned long prevMillis = 0;	//last time we checked time
 int ledState = LOW;					//initial state
