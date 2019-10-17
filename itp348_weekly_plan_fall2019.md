@@ -322,13 +322,19 @@
      - 
    - Day 1
      - Lecture
-       - DHT11 or ultrasonic sensor
+       - Multitasking
      - Lab
-       - 
+       - blink without delay
      - Lecture
-       - 
+       - audio
      - Lab
-       - 
+       - make simple tone
+     - Feedback
+       - Each one of these could have been a full class. We had to go through the material very quickly and didn't get much time with audio
+       - A6 improvements
+         - warn students that it was hard and time consuming
+         - Rob should publish some random temperatures so students can test
+         - Give students more time to with material. Ideally, assignment should come a week later
    - Day 2 ==(class cancelled for fall break)==
      - Lecture
        - 
@@ -339,7 +345,7 @@
      - Lab
        - 
    - Assignment
-     - A7 - ?
+     - A7 - postponed with holiday
 9. #### Week 9 - Motors and Servos
 
    - Reading
@@ -359,12 +365,18 @@
 10. #### Week 10
 
    - Reading
-     - 
+- Questions
+  - When will students build car?
+  - When will we have race?
    - Day 1
      - Lecture
-       - 
+       - explain Bluetooth and key concepts
+       - Show Bluefruit app
      - Lab
        - 
+       - Walk through starting sample code, showing students how to blink on-board LED with BT
+       - have students work independently to play tone with another button
+       - have students work to use color picker in app to control RGB LED
    - Day 2
      - Lecture
        - 
