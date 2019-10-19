@@ -23,7 +23,7 @@ BleUuid batteryLevelService(0x180F);
 */
 // The temperature-measurement is UUID 0x2A1C
 BleCharacteristic temperatureMeasurementCharacteristic(
-    "temp", BleCharacteristicProperty::NOTIFY, BleUuid(0x2A1C),
+    "temp", BleCharacteristicProperty::NOTIFY, BleUuid( ),
     healthThermometerService);
 
 // The battery_level characteristic is UUID 0x2A19

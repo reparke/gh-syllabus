@@ -378,9 +378,41 @@
        - Show Bluefruit app and nRF Toolbox
      - Lab - ble_uart_control_start
        - Distribute github link to download (post on slides)
-       - Walk through starting sample code, showing students how to blink on-board LED with BT
-       - have students work independently to play tone with another button
-       - have students work to use color picker in app to control RGB LED
+       - Describe project goals
+       - Explain **argon_ble_setup.h** at a high level
+         - Have students change **DEVICE_NAME**
+       - Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
+       - Code together blinking D7 when **press 1**
+       - Have students code on their own D7 on with **press up** and D7 off when **release up**
+       - (If time) have students code play tone when **press right **
+       - Have students try using color picker to change RGB colors
+     - Lab - ble_health_temp_start
+       - Distribute github link to download (post on slides)
+       - Describe project goals
+       - Explain **argon_ble_setup.h** at a high level
+         - Have students change **DEVICE_NAME**
+       - Draw picture of how temperature data is organized
+         - 6 bytes total
+         - byte 1: 8 bits of flags
+         - bytes 2-5: 4 byte floating point number
+         - byte 6: temperature type
+       - Define constants and globals
+         - UPDATE_INTERVAL_MS
+         - prevUpdate = 0;  // time of last update in millis()
+         - float prevTempF = -1.0;        // previous temperature in Fahr
+         - uint8_t batteryLevel = -1;     // battery level percentage [0-100]
+       - Write **loop()** together
+       - Write **getTemp()** together
+         - Call       **update_ble_temperature**
+       - Write **getBatteryLevel()** together
+         - call update_ble_battery_level
+     - Example - ble_uart_rgb_accel_example
+       - Distribute github link to download (post on slides)
+       - Describe project goals
+       - explain **onDataReceived()**
+       - explain **updateRGBvalues()**
+       - explain **changeRgbLight()**
+       - Demo device with code
    - Day 2
      - Lecture
        - 
