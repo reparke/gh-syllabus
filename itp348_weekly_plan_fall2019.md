@@ -314,8 +314,10 @@
          - set up location trigger to enter or exit that sets a variable
          - then change publish event
        - **Ask students to work in pairs and come up with a cool idea**
+   - Feedback
+     - Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
    - Assignment
-     - A6 - Shared particle cloud temperature monitor
+     - A6 - Shared particle cloud temperature monitor (==I think this assignment is supposed to be one week later--should cover PREVIOUS week's material ==)
 8. #### Week 8
 
    - Reading
@@ -365,15 +367,17 @@
 10. #### Week 10
 
    - Reading
+        - [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
+        - [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
 - Questions
-  - When will students build car?
-  - When will we have race?
+  - ==**When will students build car?**==
+  - ==**When will we have race?**==
    - Day 1
      - Lecture
-       - explain Bluetooth and key concepts
-       - Show Bluefruit app
-     - Lab
-       - 
+       - Bluetooth
+       - Show Bluefruit app and nRF Toolbox
+     - Lab - ble_uart_control_start
+       - Distribute github link to download (post on slides)
        - Walk through starting sample code, showing students how to blink on-board LED with BT
        - have students work independently to play tone with another button
        - have students work to use color picker in app to control RGB LED

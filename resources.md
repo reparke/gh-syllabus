@@ -55,7 +55,13 @@ menuPosition: 5
 - [Getting Started](https://docs.losant.com/getting-started/what-is-losant/)
 - [Main app configuration](https://app.losant.com/)
 
+### Bluetooth
 
+* [Particle BLE Documentation](https://docs.particle.io/tutorials/device-os/bluetooth-le/#introduction) (very detailed explanation and example projects)
+* [Adafruit BLE Overview](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gap)
+* [Adafruit Bluefruit Guide](https://learn.adafruit.com/bluefruit-le-connect/controller) (instructions on using Adafruit Bluefruit App)
+* [List of Official Bluetooth Services](https://www.bluetooth.com/specifications/gatt/services/)
+* [List of Official Bluetooth Characteristics](https://www.bluetooth.com/specifications/gatt/characteristics/)
 
 ### Miscellaneous
 
