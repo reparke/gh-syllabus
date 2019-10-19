@@ -162,6 +162,7 @@ Sometimes the argon doesn't properly disconnect from app. When app is then opene
 
 ## Lab #1: Controlling Argon via UART
 
+* [Download starting project](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_uart_control_start)
 * Build device as below
 * Using Adafruit Bluefruit app, connect to over UART (listed as "controller") in app
 * Argon sketch will receive commands from app
@@ -176,6 +177,7 @@ Sometimes the argon doesn't properly disconnect from app. When app is then opene
 
 ## Lab #2: Read Health Thermometer Service
 
+* [Download starting project](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_health_temp_start)
 * Build device as below
 * Using nRF Toolbox app, connect to over HTM ("health thermometer")
 * Argon sketch will send temperature data to app
@@ -187,6 +189,7 @@ Sometimes the argon doesn't properly disconnect from app. When app is then opene
 
 ## Lab #3: Control RGB LED with Phone Accelerometers
 
+* [Download finished project](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_uart_rgb_accel_example)
 * Build device as below
 * Using Bluefruit, connect to over UART (listed as "controller") in app
 * Enable "accelerometer" in app
