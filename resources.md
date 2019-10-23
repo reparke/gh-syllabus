@@ -62,6 +62,7 @@ menuPosition: 5
 * [Adafruit Bluefruit Guide](https://learn.adafruit.com/bluefruit-le-connect/controller) (instructions on using Adafruit Bluefruit App)
 * [List of Official Bluetooth Services](https://www.bluetooth.com/specifications/gatt/services/)
 * [List of Official Bluetooth Characteristics](https://www.bluetooth.com/specifications/gatt/characteristics/)
+* [Connecting Nintendo Wii Nunchuck](https://www.partsnotincluded.com/arduino/using-wii-nunchuk/)
 
 ### Miscellaneous
 

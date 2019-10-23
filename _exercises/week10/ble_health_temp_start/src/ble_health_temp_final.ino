@@ -9,7 +9,6 @@
 
 */
 
-
 void setup() {
   /* === START BLE SETUP === */
   argon_ble_setup();
@@ -21,7 +20,4 @@ void setup() {
   Serial.begin(9600);
 }
 
-void loop() {
-  
-}
-
+void loop() {}
