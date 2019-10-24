@@ -351,15 +351,19 @@
 9. #### Week 9 - Motors and Servos
 
    - Reading
-     - 
+     - ==need to order fan blades for students==
    - Day 1
      - Lecture
-       - Motors and servos (Ray)
+       - DC Motor (Ray)
      - Lab
-       - 
+       - Students copy sketch to make fan blade rotate direction
+       - Do experimental exercise to determine min / max PWM values
+     - Feedback
+       - Students seemed to enjoy making the motor + fan work, but this only took 1 hour
+       - Improvised lecture by demonstrating analog joystick to control fan blade and rotation
    - Day 2
      - Lecture
-       - Motors and servos (Ray)
+       - Servo motors (Ray)
      - Lab
        - 
    - Assignment
