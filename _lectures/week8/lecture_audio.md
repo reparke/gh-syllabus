@@ -113,7 +113,9 @@ noTone(<<PIN>>);
 
 * To stop a continuous tone or stop tone before duration is over
 
+## Playing Melodies
 
+* Musical notes can represented as constants ([code link](pitches.h))
 
 
 ## References
