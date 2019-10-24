@@ -2,30 +2,55 @@
 marp: true
 theme: itp
 
-week: 8
+week: 7
 category: lectures
-title: Audio
+title: IFTTT
 ---
 
 <!-- headingDivider: 2 -->
 
-# Audio and Piezo Speakers
+# IFTTT
 
-Generates a square wave of the specified frequency and duration (and  50% duty cycle) on a timer channel pin which supports PWM. Use of the  tone() function will interfere with PWM output on the selected pin.  tone() is generally used to make sounds or music on speakers or piezo  buzzers.
+### If **This**, Then **That**
 
-On Gen 3 Feather devices (Argon, Boron, Xenon), pins A0, A1, A2, A3,  D2, D3, D4, D5, D6, and D8 can be used for tone(). Pins are assigned a  PWM group. Each group must share the same frequency. Thus you can only  output 3 different frequencies at the same time.
+## IFTTT: If This, Then That
 
-* Group 3: Pins D2, D3, A4, and A5.
-* Group 2: Pins A0, A1, A2, and A3.
-* Group 1: Pins D4, D5, D6, and D8.
+* Free platform for interconnecting various internet service
+* Create very simple recipes (called applets) using conditional logic such as
+  * "If I am within 5 miles from home, then start the A/C"
+  * "If I take a photo, then automatically save it to my Dropbox"
+  * "If I publish a temperature with Argon, then add the time and temperature to a Google spreadsheet"
 
-`tone()` takes three arguments, `pin`: the pin on which to generate the tone, `frequency`: the frequency of the tone in hertz and `duration`: the duration of the tone in milliseconds (a zero value = continuous tone).
+## Usefulness of IFTTT
 
-The frequency range is from 20Hz to 20kHz. Frequencies outside this range will not be played.
+* IFTTT is a free consumer service, but also has a business service
+* Consider it as an extension of prototyping
+  * Great to explore creative solutions
+  * Replace with more secure, robust tool in production
+* Later in the semester we will look at a more enterprise platform
 
-`tone()` does not return anything.
+## Key Terms
 
+* Trigger: **THIS**
+  * The event that causes IFTTT to do something
+* Action: **THAT**
+  * The resulting task that IFTTT performs
+* Recipe / Applet: 
+  * The combined **THIS** + **THAT**
+* Ingredients: 
+  * Data that is passed from Trigger. This will be information from Particle events that we publish
 
+## Using Particle as Trigger (THIS)
+
+* Event is published (uses **publish**)
+* Variable state changes (uses **variable**)
+* Monitor function result (uses **function**)
+* Check device status
+
+## Using Particle as Action (THAT)
+
+* Publish an event (need to **subscribe**)
+* Call a function (uses **function**)
 
 ## Documentation
 
