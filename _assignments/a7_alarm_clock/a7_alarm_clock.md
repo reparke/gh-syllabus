@@ -3,7 +3,7 @@ week_assigned: 7
 number: 7
 category: assignment
 title: Alarm  Clock
-date_due: Oct 28 @ 11:59 pm
+date_due: Oct 29 @ 11:59 pm
 
 ---
 Assignment 7 – Alarm Clock
@@ -34,8 +34,6 @@ IFTTT.
 -   Breadboard
 
 -   1 x speaker
-
--   1 x TMP36
 
 -   1 x LED
 
