@@ -1,3 +1,11 @@
+---
+week_assigned: 7
+number: 7
+category: assignment
+title: Alarm  Clock
+date_due: Oct 28 @ 11:59 pm
+
+---
 Assignment 7 – Alarm Clock
 ==========================
 
