@@ -61,6 +61,7 @@ void argon_ble_setup() {
 
   BleAdvertisingData data;              // build peripheral's advertising data
   data.appendServiceUUID(serviceUuid);  // advertise serial / UART service
-  data.appendLocalName(DEVICE_NAME);  // include custom name visible in mobile app
-  BLE.advertise(&data);          // advertise to mobile app (central device)
+  data.appendLocalName(
+      DEVICE_NAME);      // include custom name visible in mobile app
+  BLE.advertise(&data);  // advertise to mobile app (central device)
 }
