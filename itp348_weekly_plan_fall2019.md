@@ -364,77 +364,109 @@
    - Day 2
      - Lecture
        - Servo motors (Ray)
+       - Very short presentation
      - Lab
-       - 
+       - Finished discussing buzzer and playing musical notes
+     - Feedback
+       - Consider combining both lectures on motors into one day
    - Assignment
-     - A8 - ?
+     - A7 - Alarm Clock
 10. #### Week 10
 
+   - ==**Before class**== - Have students install Bluetooth phone apps
+           - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
+           - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
    - Reading
         - [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
         - [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
 - Questions
-  - ==**When will students build car?**==
-  - ==**When will we have race?**==
-   - Day 1
-     - Lecture
-       - Bluetooth
-       - Show Bluefruit app and nRF Toolbox
-     - Lab - ble_uart_control_start
-       - Distribute github link to download (post on slides)
-       - Describe project goals
-       - Explain **argon_ble_setup.h** at a high level
-         - Have students change **DEVICE_NAME**
-       - Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
-       - Code together blinking D7 when **press 1**
-       - Have students code on their own D7 on with **press up** and D7 off when **release up**
-       - (If time) have students code play tone when **press right **
-       - Have students try using color picker to change RGB colors
-     - Lab - ble_health_temp_start
-       - Distribute github link to download (post on slides)
-       - Describe project goals
-       - Explain **argon_ble_setup.h** at a high level
-         - Have students change **DEVICE_NAME**
-       - Draw picture of how temperature data is organized
-         - 6 bytes total
-         - byte 1: 8 bits of flags
-         - bytes 2-5: 4 byte floating point number
-         - byte 6: temperature type
-       - Define constants and globals
-         - UPDATE_INTERVAL_MS
-         - prevUpdate = 0;  // time of last update in millis()
-         - float prevTempF = -1.0;        // previous temperature in Fahr
-         - uint8_t batteryLevel = -1;     // battery level percentage [0-100]
-       - Write **loop()** together
-       - Write **getTemp()** together
-         - Call       **update_ble_temperature**
-       - Write **getBatteryLevel()** together
-         - call update_ble_battery_level
-     - Example - ble_uart_rgb_accel_example
-       - Distribute github link to download (post on slides)
-       - Describe project goals
-       - explain **onDataReceived()**
-       - explain **updateRGBvalues()**
-       - explain **changeRgbLight()**
-       - Demo device with code
+  - Day 1 ==**Give students velcro and have them assemble chassis before Thurs**==
+    - Lecture
+      - Bluetooth
+      - Show Bluefruit app and nRF Toolbox
+    - Lab - ble_uart_control_start
+      - Distribute github link to download (post on slides)
+      - Describe project goals
+      - Explain **argon_ble_setup.h** at a high level
+        - Have students change **DEVICE_NAME**
+      - Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
+      - Code together blinking D7 when **press 1**
+      - Have students code on their own D7 on with **press up** and D7 off when **release up**
+      - (If time) have students code play tone when **press right **
+      - Have students try using color picker to change RGB colors
+    - Lab - ble_health_temp_start
+      - Distribute github link to download (post on slides)
+      - Describe project goals
+      - Explain **argon_ble_setup.h** at a high level
+        - Have students change **DEVICE_NAME**
+      - Draw picture of how temperature data is organized
+        - 6 bytes total
+        - byte 1: 8 bits of flags
+        - bytes 2-5: 4 byte floating point number
+        - byte 6: temperature type
+      - Define constants and globals
+        - UPDATE_INTERVAL_MS
+        - prevUpdate = 0;  // time of last update in millis()
+        - float prevTempF = -1.0;        // previous temperature in Fahr
+        - uint8_t batteryLevel = -1;     // battery level percentage [0-100]
+      - Write **loop()** together
+      - Write **getTemp()** together
+        - Call       **update_ble_temperature**
+      - Write **getBatteryLevel()** together
+        - call update_ble_battery_level
+    - Example - ble_uart_rgb_accel_example
+      - Distribute github link to download (post on slides)
+      - Describe project goals
+      - explain **onDataReceived()**
+      - explain **updateRGBvalues()**
+      - explain **changeRgbLight()**
+      - Demo device with code
    - Day 2
      - Lecture
-       - 
+       - LIPO battery
      - Lab
-       - 
+       - Have students assemble chassis before class
+       - Wire motor controller
+       - Have students download starting code
+       - Walk through BLE code
+       - build `leftMotor()` and `rightMotor()`
+       - build four direction and stop functions
+       - **Test functions in `loop()` without BT**
+       - create `onDataReceived()`
+       - **Test BT**
+       - Connect switch to enable
    - Assignment
      - A8 - ?
----
+11. #### Week 11
 
+- Reading
+  - 
+- Day 1
+  - Lecture
+    - 
+  - Lab
+    - 
+  - Lecture
+    - 
+  - Lab
+    - 
+- Day 2
+  - Lecture
+    - 
+  - Lab
+    - 
+  - Lecture
+    - 
+  - Lab
+    - 
+- Assignment
+  - AX - 
 
-
-
-
-0. #### Week 3
+12. #### Week 12
 
    - Reading
      - 
-   - Day 1
+   - Day 1 -- ==**Google Guest Lecture on Accessibility**==
      - Lecture
        - 
      - Lab
@@ -454,8 +486,71 @@
        - 
    - Assignment
      - AX - 
+13. #### Week 13
 
+- Reading
+  - 
+- Day 1
+  - Lecture
+    - 
+  - Lab
+    - 
+  - Lecture
+    - 
+  - Lab
+    - 
+- Day 2
+  - Lecture
+    - 
+  - Lab
+    - 
+  - Lecture
+    - 
+  - Lab
+    - 
+- Assignment
+  - AX - 
 
+14. #### Week 14
+
+   - Reading
+     - 
+   - Day 1
+     - Lecture
+       - 
+     - Lab
+       - 
+     - Lecture
+       - 
+     - Lab
+       - 
+   - Day 2 **==Class Cancelled due to Thanksgiving==**
+     - Lecture
+       - 
+     - Lab
+       - 
+     - Lecture
+       - 
+     - Lab
+       - 
+   - Assignment
+     - AX - 
+15. #### Week 15
+
+- Reading
+  - 
+- Day 1
+  - Lecture
+    - Work on project 
+- Day 2
+  - Lecture
+    - Work on project 
+- Assignment
+  - AX - 
+
+16. #### Week 16 - Final Project Presentation
+
+   
 
 [Two-Layer Chassis Assembly](https://youtu.be/L7-98Ejmb4M)
 

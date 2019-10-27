@@ -7,7 +7,7 @@ category: lectures
 title: Bluetooth
 ---
 
-<!-- headingDivider: 2 -->s
+<!-- headingDivider: 2 -->
 
 # Bluetooth
 
