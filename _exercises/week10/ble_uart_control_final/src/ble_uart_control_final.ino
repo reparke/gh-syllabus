@@ -1,9 +1,9 @@
 #include "argon_ble_setup.h"
 /*
   Use Adafruit Bluefruit app
-  (https://learn.adafruit.com/bluefruit-le-connect/controller) 
-  Connect to Argon -> controller 
-  
+  (https://learn.adafruit.com/bluefruit-le-connect/controller)
+  Connect to Argon -> controller
+
   - use color picker to change LED
   - use controller to play a tone and flash on-board LED
 
@@ -31,13 +31,6 @@ void setup() {
 }
 
 void loop() {}
-
-// void changeRgbLight(uint8_t r, uint8_t g, uint8_t b) {
-void changeRgbLight(int r, int g, int b) {
-  analogWrite(A2, r);
-  analogWrite(A1, g);
-  analogWrite(A0, b);
-}
 
 // onDataReceived() is event handler for incoming data via RX characteristic
 // When the RXCharacteristic receives data, the event handler is called
@@ -92,8 +85,18 @@ void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
              data[3] == '0') {  // button UP released -> LED off
       tone(D6, 1000, 500);
     } else if (data[0] == '!' && data[1] == 'C') {
+      Serial.print("R as uint ");
+      Serial.println(data[2]);
+
       changeRgbLight(data[2], data[3], data[4]);
     }
-    
   }
+}
+// void changeRgbLight(uint8_t r, uint8_t g, uint8_t b) {
+void changeRgbLight(int r, int g, int b) {
+  analogWrite(A2, r);
+  analogWrite(A1, g);
+  analogWrite(A0, b);
+  Serial.print("R as int ");
+  Serial.println(r);
 }
