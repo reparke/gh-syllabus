@@ -9,13 +9,21 @@
 
   CONFIGURATION
   Motor Controller
-    AIN1  - D6
-    AIN2  - D7
     PWMA  - D8
-    PWMB  - D3
-    BIN2  - D4
+    AIN2  - D7
+    AIN1  - D6
     BIN1  - D5
+    BIN2  - D4
+    PWMB  - D3
 
+
+
+    ?? Questions
+    VCC
+    Standby
+    VM
+    enable
+    
 */
 
 // SYSTEM_MODE(MANUAL);  //uncomment to disable wifi and use BT only

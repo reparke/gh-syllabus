@@ -421,6 +421,8 @@
       - explain **updateRGBvalues()**
       - explain **changeRgbLight()**
       - Demo device with code
+   - Feedback - Day 1
+      - With lecture slides and assembly, we barely finished lab 1
    - Day 2
      - Lecture
        - LIPO battery

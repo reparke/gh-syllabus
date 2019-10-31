@@ -21,6 +21,8 @@ footer {
 }
 
 section {
+  background: rgba(255, 255, 255, 255);
+    color: #000000;
   padding-top:50px;
   padding-bottom:50px;
   padding-right:75px;
