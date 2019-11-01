@@ -3,7 +3,7 @@
 
 #include "Particle.h"
 
-const String DEVICE_NAME = "dev1";  // CHANGE THIS
+const String DEVICE_NAME = "rob";  // CHANGE THIS
 
 /*
 1) ADD BLUETOOTH SERVICES ===============================
