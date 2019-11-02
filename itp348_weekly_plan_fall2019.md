@@ -424,6 +424,9 @@
    - Feedback - Day 1
       - With lecture slides and assembly, we barely finished lab 1
    - Day 2
+      - Feedback Day 2
+         - health thermometer service was a bust. We couldn't connect to the Argon. I would eliminate this next semester
+         - Car building went well. We just covered **carForward** and need to finish Bluetooth part next week. In the future we might be able to cover all of car in one day by eliminating health thermometer
      - Lecture
        - LIPO battery
      - Lab
@@ -445,11 +448,11 @@
   - 
 - Day 1
   - Lecture
-    - 
+    - car bluetooth
   - Lab
-    - 
+    - build BT
   - Lecture
-    - 
+    - Losant
   - Lab
     - 
 - Day 2
