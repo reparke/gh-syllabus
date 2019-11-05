@@ -70,6 +70,8 @@ title: Cloud Platform and Interface
 
 ## Lab
 
+* [Download finished project](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/losant_temperature_start)
+
 ##  
 
 Steps
