@@ -73,6 +73,10 @@ void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
     // the command scheme is from the Adafruit Bluefruit app
     // ex: [‘!’] [‘B’] [‘4’] [‘1’] [CRC]
     // https://learn.adafruit.com/bluefruit-le-connect/controller
+    if (data[0] == '!' && data[1] == 'B' && data[2] == '5' &&
+        data[3] == '1') {  // up presssed {
+      carForward(255);
+    }
   }
 }
 
@@ -130,8 +134,22 @@ void carForward(int motorSpeed) {
   rightMotor(motorSpeed);
   leftMotor(motorSpeed);
 }
+void carBackward(int motorSpeed) {
+  rightMotor(-1 * motorSpeed);
+  leftMotor(-1 * motorSpeed);
+}
 
 void carStop() {
   rightMotor(0);
   leftMotor(0);
+}
+
+void carLeft(int motorSpeed) {
+  rightMotor(motorSpeed);
+  leftMotor(0);
+}
+
+void carRight(int motorSpeed) {
+  rightMotor(0);
+  leftMotor(motorSpeed);
 }

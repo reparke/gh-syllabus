@@ -10,9 +10,13 @@
 * order
   * more LED colorsz
   * more M-F extension wires
+  * 3M "plastic" velcro
 * student kit could include more variety of colors / shapes of LED
 * Include finite state machines; then assignment of simon says (could use buzzer)
 * Include Fritzing installation of parts in A0 installation (beware Mac issues; for windows show how to import FZBZ file since students won't be able to double click )
+* Week 11: move Losant up sooner
+* Add "pre-proposal" to earlier in the semester
+* Add class period (half?) for students to give feedback on proposal idea
 
 0. #### Pre-semester
 
@@ -450,22 +454,31 @@
   - Lecture
     - car bluetooth
   - Lab
-    - build BT
+    - build BT controls from Adafruit app
+  - Lecture
+    - Losant
+  - Lab (together)
+    - Create application
+    - Create devices
+    - Create integrations
+    - Create workflows
+  - Feedback
+    - give brief overview of nodeRed (block programming) and javascript
+    - start by sending one piece of data before using split to send multiple
+- Day 2
+  - Activity
+    - Race competition
   - Lecture
     - Losant
   - Lab
-    - 
-- Day 2
-  - Lecture
-    - 
-  - Lab
-    - 
-  - Lecture
-    - 
-  - Lab
-    - 
+    - Review workflow (make sure everyone is getting data in device by going to overview)
+    - Create dashboard
+    - Create web application
+- Feedback
+  - make sure to set up voting ahead of time for best customization for voting
+  - [Create bracket online](https://challonge.com/tournament/bracket_generator)
 - Assignment
-  - AX - 
+  - Proposal
 
 12. #### Week 12
 

@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 10
+week: 11
 category: lectures
 title: Cloud Platform and Interface
 ---
@@ -70,22 +70,23 @@ title: Cloud Platform and Interface
 
 ## Lab
 
-* [Download finished project](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/losant_temperature_start)
+* [Download starting project](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/losant_temperature_start) 
 
-##  
+* Create account at [Losant](https://accounts.losant.com/signin) (we will go through the steps together)
 
-Steps
+* Create application 
+  <!-- up to 20 in free version-->
 
-* Create account at [Losant](https://accounts.losant.com/signin)
-* Create application (up to 20 in free version)
 * Create device for each Argon
-  * Go to Particle console > select device > copy device id (==not be necessary for a single device==)
-  * Go to Losant and create standalone device
-    * For tag: particle_device_id = <<ID>> ==(not be necessary for single device)==
+<!-- 
+  Go to Particle console > select device > copy device id (if multiple devices) -->
+  
+  * Go to Losant and create standalone device 
+    <!-- For tag: particle_device_id = <<ID>> (if multiple devices) -->
   * Attributes
     * define **temperature_fahr** as **number**
-    * define **location** as **string**
-
+    * define **lightLevel** as **string**
+  
 * Create integration
 
   * Go to [particle web console](https://build.particle.io/build/new) > settings > personal access token
@@ -102,8 +103,112 @@ Steps
 * Create workflow
 
   * Add trigger: **Particle**
+    
     * set integration to Particle integration you made
-  * Need to extract data from payload --> connect debug node and demonstrate
-  * Create function to split data
+      <!--Need to extract data from payload  so connect debug node and demonstrate-->
+    
+  * Create **function** to split data
+  
+    <!--var elements = payload.data.data.split(":");
+    payload.data.tempF = elements[0];
+    payload.data.light = elements[1]; -->
+  
   * Add output: **device state**
-    * individual fields: {{data.lightLevel}} and {{data.tempFahr}}
+    
+    * individual fields: {{data.lightLevel}} and {{data.tempF}}
+  
+* Create dashboard
+
+  * Add gauge for temperature
+    <!--Live stream; 
+    Gauge: Thermometer range 60-100; 
+    Precision: Floating point 1 digit-->
+
+  * Add conditions to temperature
+
+    <!-- set color to green; set condition {{value}} > 76 is red; set condition {{value}} > 74 is yellow -->
+
+  * Add historical chart of temperature
+
+  * Add light level indicator
+
+* Create experience (web app)
+
+  * Go to overview --> Accept defaults (save URL, password, and login)
+  * Create page
+    * Edit > add page
+    * Page type: dashboard
+  * Create endpoint
+    * Edit > add endpoint
+    * Method: get
+    * Route: /environment (*this is the URL for the dashboard*)
+    * Access control: any authenticated users
+    * Unauthorized reply: no static reply
+    * Reply type: Experience page
+      * Status code: 200
+      * Select: Dashboard
+    * Now log into website and visit 
+      **https://<<YOUR_URL>>/environment**
+  * Control device from dashboard
+    
+    * Create particle function in firmware
+      <!--int ledChange(String cmd)  -->
+    
+    * Create Workflow
+    
+      * Virtual button
+      * Particle function
+        * function name **ledChange**
+        * device id: <<COPY FROM PARTICLE CONSOLE>>
+        * Function argument: String template -> argument template = "**blink**"
+    
+    * Create input control in Dashboard
+    
+      * Add input control
+    
+      * Virtual button
+    
+      * on Click: trigger workflow -> select correct workflow and virtual button
+    
+        <!-- dropdown and text input is possible, but more complicated -->
+    
+    * Events
+    
+      * Workflow: Connect **create event** to end of virtual button chain
+        * Subject: LED off
+        * Level: error
+        * Message: Light is off
+        * ID template
+      * Create new chain: **Event**
+        * Level: Error
+        * Subject: LED off
+      * Connect SMS 
+        * Note that max of 5 messages per minute
+      * Trigger workf
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
