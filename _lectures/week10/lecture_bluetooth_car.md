@@ -66,7 +66,7 @@ title: Bluetooth Car
 
 * [Download starting project](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_car_start)
 * Build chassis
-  * [Assembly Instructions](guide_build_chassis.md)
+  * [Assembly Instructions](guide_build_chassis)
   
   * Video: [Two-Layer Chassis Assembly](https://youtu.be/L7-98Ejmb4M)
   
@@ -92,7 +92,8 @@ title: Bluetooth Car
 * The battery can be attached to either the top or bottom of the chassis, but to avoid damaging it, it is recommended to attach the battery to the top of the chassis
 * The breadboard can then be attached to the battery
 
-<img src="lecture_bluetooth_car.assets/IMG_8467.JPG" alt="IMG_8468" style="width:400px" /><img src="lecture_bluetooth_car.assets/IMG_8468.JPG" alt="IMG_8468" style="width:400px" />
+<img src="lecture_bluetooth_car.assets/IMG_8467.JPG" alt="IMG_8468" style="width:400px" />
+<img src="lecture_bluetooth_car.assets/IMG_8468.JPG" alt="IMG_8468" style="width:400px" />
 
 ## References
 
