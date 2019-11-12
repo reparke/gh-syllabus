@@ -1,12 +1,4 @@
----
-marp: true
-theme: itp
 
-week: 
-category: lectures
-title: I2C LCDs
-
----
 
 <!-- headingDivider: 2 -->
 
