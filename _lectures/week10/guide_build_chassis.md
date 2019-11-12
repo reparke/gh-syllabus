@@ -4,7 +4,7 @@ theme: itp
 
 week: 10
 category: lectures
-title: Guide: Car Chassis Assembly
+title: Guide to Car Chassis Assembly
 ---
 
 **ITP 348: Car Chassis Setup**
