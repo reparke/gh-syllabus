@@ -42,7 +42,7 @@ smartphone. In class we will then race all the vehicles.
 -   No Fritzing diagram is needed. Wiring diagram and plans are provided in the
     lecture notes.
 
--   Build the car.
+-   Build the car (see lecture notes)
 
 -   Create the sketch to drive the car and enable communication with Bluefruit
     app. We will create the basics of driving functions and Bluetooth
