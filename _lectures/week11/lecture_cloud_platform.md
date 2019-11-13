@@ -184,7 +184,7 @@ title: Cloud Platform and Interface
         * Subject: LED off
       * Connect SMS 
         * Note that max of 5 messages per minute
-      * Trigger workf
+      * Trigger workflow
     
       
 

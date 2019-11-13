@@ -4,12 +4,12 @@ theme: itp
 
 week: 12
 category: lectures
-title: DHT 11 - Temperature and Humidity Sensor
+title: DHT 22 - Temperature and Humidity Sensor
 ---
 
 <!-- headingDivider: 2 -->
 
-# DHT 11 - Temperature and Humidity Sensor
+# DHT 22 - Temperature and Humidity Sensor
 
  <img src="lecture_dht11.assets/10167-01.jpg" alt="https://cdn.sparkfun.com//assets/parts/4/4/7/2/10167-01.jpg" style="width:800px;" /> 
 
@@ -17,8 +17,8 @@ title: DHT 11 - Temperature and Humidity Sensor
 
 ## Digital Temperature and Humidity Sensor
 
-* DHT 11 (also DHT 22, RHT 03) measure temperature and relative humidity
-* Unlike TM36, this has a digital interface and no calculation or conversion is needed
+* DHT 22 (also DHT 11, RHT 03) measure temperature and relative humidity
+* Unlike TMP36, this has a digital interface and no calculation or conversion is needed
 
 ## Wiring Guide
 
@@ -33,25 +33,25 @@ title: DHT 11 - Temperature and Humidity Sensor
 
 ## Software Library
 
-* The DHT 11 uses a protocol called **1Wire** to send data
+* The DHT22 uses a protocol called **1Wire** to send data
 * In order to communicate with the device, we will need to use a special library 
 * The Argon-compatible library we will use is
-  ```Adafruit_DHT_Particle```
+  ```PietteTech_DHT```
 
 
 
 ## Library Setup
 
 ```c++
-#include "Adafruit_DHT_Particle.h"
+#include "PietteTech_DHT.h"
 ```
 
 
 
 ```c++
 #define DHTPIN D3		//DHT connected pin
-#define DHTTYPE DHT11	//specific DHT model we have
-DHT dht(DHTPIN, DHTTYPE);	//DHT software object
+#define DHTTYPE DHT22	//specific DHT model we have
+PietteTech_DHT DHT(DHTPIN, DHTTYPE); //DHT software object
 ```
 
 ## ```setup()```
@@ -61,40 +61,36 @@ DHT dht(DHTPIN, DHTTYPE);	//DHT software object
 dht.begin();
 ```
 
+## Wait for Data and Error Checking
+
+```c++
+int result = dht.acquireAndWait(1000);  // wait up to 1 sec
+if (result == DHTLIB_OK) {
+	//read values here
+}
+```
+
 ## Reading Values
 
 ```c++
 // Read humidity
 float h = dht.getHumidity();
 // Read temperature as Celsius
-float t = dht.getTempCelcius();
+float t = dht.getCelcius();
 // Read temperature as Farenheit
-float f = dht.getTempFarenheit();
+float f = dht.getFarenheit();
 ```
-
-## Error Checking
-
-```c++
-// Check if any reads failed and exit early (to try again).
-	if (isnan(h) || isnan(t) || isnan(f)) {
-		Serial.println("Failed to read from DHT sensor!");
-		return;
-	}
-```
-
-* ```isnan(X)``` checks if function is a number
 
 ## Other Methods
 
 ```c++
-float hi = dht.getHeatIndex();
 float dp = dht.getDewPoint();
 float k = dht.getTempKelvin();
 ```
 
 ## Notes
 
-* Always include a delay of about 2 seconds in between measurements
+* Always include a delay of about 2.5 seconds in between measurements
 
 ## Credit
 
