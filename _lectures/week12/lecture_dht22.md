@@ -11,7 +11,7 @@ title: DHT 22 - Temperature and Humidity Sensor
 
 # DHT 22 - Temperature and Humidity Sensor
 
- <img src="lecture_dht11.assets/10167-01.jpg" alt="https://cdn.sparkfun.com//assets/parts/4/4/7/2/10167-01.jpg" style="width:800px;" /> 
+ <img src="lecture_dht22.assets/10167-01.jpg" alt="https://cdn.sparkfun.com//assets/parts/4/4/7/2/10167-01.jpg" style="width:800px;" /> 
 
 
 
@@ -22,7 +22,7 @@ title: DHT 22 - Temperature and Humidity Sensor
 
 ## Wiring Guide
 
- <img src="lecture_dht11.assets/10167-02_pinout.jpg" alt="Annotated RHT03" style="width:400px;" /> 
+ <img src="lecture_dht22.assets/10167-02_pinout.jpg" alt="Annotated RHT03" style="width:400px;" /> 
 
 1. 3.3V
 2. Digital input

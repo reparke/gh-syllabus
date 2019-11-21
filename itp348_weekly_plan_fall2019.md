@@ -17,6 +17,7 @@
 * Week 11: move Losant up sooner
 * Add "pre-proposal" to earlier in the semester
 * Add class period (half?) for students to give feedback on proposal idea
+* teach binary / decimal / hex conversion (briefly); useful for I2C addresses
 
 0. #### Pre-semester
 
@@ -486,33 +487,26 @@
      - 
    - Day 1 -- ==**Google Guest Lecture on Accessibility**==
      - Lecture
-       - 
+       - Google guest lecture
      - Lab
-       - 
+       - After guest lecture, we all met in a circle and discuss project proposals and gave feedback
      - Lecture
        - 
      - Lab
        - 
    - Day 2
      - Lecture
-       - 
+       - Discuss DHT 22
+       - Discuss controlling devices from Losant
      - Lab
-       - 
-     - Lecture
-       - 
-     - Lab
-       - 
-   - Assignment
-     - AX - 
+       - Revise firmware and Losant environment to support input controls (blink light on / off)
+     - Assignment
+       - Work on project 
 13. #### Week 13
 
 - Reading
   - 
-- Day 1
-  - Lecture
-    - 
-  - Lab
-    - 
+- Day 1 -- ==Class Cancelled==
   - Lecture
     - 
   - Lab
