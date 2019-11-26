@@ -11,7 +11,7 @@ title: Accelerometer
 
 # Accelerometers
 
-<img src="lecture_accelerometer.assets/13926-02.jpg" alt="1574364327550" style="width:800px;" />
+<img src="lecture_accelerometer.assets/13926-02.jpg" alt="1574364327550" style="width:600px;" />
 
 
 
@@ -49,7 +49,7 @@ title: Accelerometer
 
 ## Gyroscopes
 
-<img src="lecture_accelerometer.assets/1574737698474.png" alt="1574737698474" style="width:300px;" />
+<img src="lecture_accelerometer.assets/1574737698474.png" alt="1574737698474" style="width:600px;" />
 
 * Measure rotation in X, Y, Z (pitch, roll, yaw)
 * Useful for flight guidance and autonomous vehicles
