@@ -513,29 +513,32 @@
     - 
 - Day 2
   - Lecture
-    - 
+    - I2C LCD
+    - Ultrasonic distance sensor
   - Lab
-    - 
-  - Lecture
-    - 
-  - Lab
-    - 
+    - exercises in slides
+  - Feedback
+    - Fail.
+    - The LCD devices only worked for half the students (either faulty devices or bad libraries). Definitely DO NOT use LCDs again
+    - Ultrasonic sensor worked mostly
 - Assignment
-  - AX - 
+  - project
 
 14. #### Week 14
 
    - Reading
      - 
    - Day 1
-     - Lecture
-       - 
      - Lab
-       - 
+       - Revisit ultrasonic sensor lab to show working code (didn't work for some students)
+     - Activity
+       - Check milestone
      - Lecture
-       - 
+       - accelerometer
      - Lab
-       - 
+       - Use **tap** feature
+       - Use **portrait / landscape** detection
+       - Use accelerometer to control RGB LED
    - Day 2 **==Class Cancelled due to Thanksgiving==**
      - Lecture
        - 
