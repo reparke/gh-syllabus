@@ -12,7 +12,7 @@ Welcome to the course page for ITP 348 - Introduction to Physical Computing!
 
 You'll find course material and useful links on the side. 
 
-- [Syllabus](itp348_syllabus_fall2019.md) - Course plan, policies, and date
+- [Syllabus](itp348_syllabus.md) - Course plan, policies, and date
 - [Lectures](lectures.html) - HTML slides shows of lectures
 - [Assignments](assignments.html) - Assignment writeups
 - [Exercises](https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises) - GitHub repository with my own sample exercises as well as in-class code projects (denoted by **_ic** at end of the project names). All projects are created with [Particle Workbench](https://www.particle.io/workbench/)
