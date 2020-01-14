@@ -11,7 +11,9 @@ menuPosition: 1
 
 [Information Technology Program](https://itp.usc.edu)
 
-# ITP 348 – Introduction to Physical Computing
+# ITP 348 – Introduction to Physical Computing 
+
+# Spring 2020
 
 ### Course Info
 
@@ -275,6 +277,7 @@ submission that they intend to use a grace day.
 | Week 7  | Digital temperature sensors, serial vs. parallel, cloud functions, cloud variables | Posted online | A6 -- Shared Environment Monitor                             |
 | Week 8  | Piezobuzzers, ultrasonic sensor *(Fall break)*               | Posted online | A7 - Proximity alarm                                         |
 | Week 9  | Motion: DC motors, servos                                    | Posted online | A8                                                           |
+|         | *Spring break*                                               |               |                                                              |
 | Week 10 | Bluetooth, remote controlled car                             | Posted online | A9 - Motors                                                  |
 | Week 11 | Cloud platform, web and mobile apps                          | Posted online | Project proposal                                             |
 | Week 12 | Other sensors, accelerometers, processing, passive infrared sensors | Posted online | *(project proposal feedback given)*                          |

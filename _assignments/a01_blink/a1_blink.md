@@ -60,7 +60,6 @@ Goals
 
 <img src="media/f46090a33a8cda9b07b6586a5328fb12.png" alt="command palette" style="width:400px" />
 
->   Configure Device
 
 -   Select the device OS version you want to like to build for. It is
     recommended to use the latest stable version (this means the highest
@@ -70,8 +69,6 @@ Goals
     the latest stable version has been noted.
 
 <img src="media/9e6b2684205c5b77cad0a7087031fec3.png" alt="target OS" style="width:400px" />
-
->   Configure Device
 
 -   Select the type of device to you want to build for. For our course, we will
     always use **argon**
@@ -83,26 +80,42 @@ Goals
 
 <img src="media/b45548e97ee3520b8fcb9fdf7e3a2e64.png" alt="target name" style="width:400px" />
 
->   Configure Device
 
-### Flash Firmware to Device
 
--   In the INO file that opened when you created a project, paste the following
-    code:
+### Creating Your Firmware
 
 <img src="media/abff6159b011e556f68ec286cbd333cb.png" alt="IDE" style="width:400px" />
 
->   First Project
+
+
+- In the INO file that opened when you created a project, paste the following
+  code:
+
+  ```c++
+  void setup() {
+      pinMode(D7, OUTPUT);
+  }
+  
+  void loop() {
+      digitalWrite(D7, HIGH);
+      delay(1000);
+  	digitalWrite(D7, LOW);
+      delay(1000);
+  }
+  ```
+
+  
+
+### Flash Firmware to Device
 
 -   In the Command Palette, type **Particle: Cloud Flash**
-
 -   It may take a few minutes to successfully complete. When the firmware has
     been successfully installed, you should see the light on the device near the
     USB port blinking blue.
 
-<img src="media/79a0f7798307a27bc34f8403471fe198.jpg" alt="Argon blinking" style="width:400px" />
+<img src="media/IMG_8666.jpg" alt="Argon blinking" style="width:400px" />
 
->   https://www.cnx-software.com/wp-content/uploads/2018/12/Xenon-D7-LED.jpg
+
 
 Deliverables
 ------------

@@ -11,6 +11,12 @@ menuPosition: 5
 
 ## References
 
+### Books
+
+- [Practical Electronics for Inventors](https://www.accessengineeringlibrary.com/content/book/9781259587542) available to USC students through USC library subscription
+
+
+
 ### Particle Documentation
 
 - [Argon datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)

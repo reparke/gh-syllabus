@@ -1,46 +1,29 @@
-#### General Feedback
+#### Things to implement
 
-* Assignment 0 is given out week 1, day 1; due week 2, day 2; that is the pattern
-* change A1 blink so that it gives out code to make D7 blink, or change the name of the assignment to something like **initial project**
+* 
+
+#### General Feedback (Fall 2019)
+
+* Assignment 0 is given out week 1, day 1; due week 2, day 1; that is the pattern
 * Develop a way to post readings on website
 * Try to integrate lectures, readings, assignments all on one webpage under "weeks"
-* Add to Assignment 0 how to install fritzing parts for Argon (from Rob github)
 * students like being show a small bit of using a sensor, and then extending it on their own
 * students like hands-on
-* order
-  * more LED colorsz
-  * more M-F extension wires
-  * 3M "plastic" velcro
-* student kit could include more variety of colors / shapes of LED
-* Include finite state machines; then assignment of simon says (could use buzzer)
-* Include Fritzing installation of parts in A0 installation (beware Mac issues; for windows show how to import FZBZ file since students won't be able to double click )
-* Week 11: move Losant up sooner
-* Add "pre-proposal" to earlier in the semester
-* Add class period (half?) for students to give feedback on proposal idea
-* teach binary / decimal / hex conversion (briefly); useful for I2C addresses
-* notes on motors: [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
+
+  
 
 0. #### Pre-semester
 
-   - [x] Send students installation instructions
-   - [ ] Create Google slides presentations; ask students to create one intro slide
-   - [x] purchase:
-     - [x] small envelopes
-     - [x] coin batteries
-     - [x] paper circuits classroom kit
-     - [x] construction paper
-     - [x] conductive tape
-     - [x] colored straws
-
-1. #### Introduction
-
-   - Reading
-     - Enabling the Internet of Things https://web.eecs.umich.edu/~prabal/teaching/resources/eecs582/want15iot.pdf
+    - [ ] Send students installation instructions
+    - [x] purchase items (see Evernote pre-semester tasks)
+    
+    - Reading
+      - Enabling the Internet of Things https://web.eecs.umich.edu/~prabal/teaching/resources/eecs582/want15iot.pdf
+    
 - Day 1 
   - Lecture
-    - Course introduction / syllabus
-    - Student intro slides 
-    - Ice breaker
+    - Course introduction / syllabus (PDF file)
+    - Ice breaker *(see slides in local ITP 348 Docs folder)*
     - Introduction to IoT
     - Possibly show this [mind map](https://www.mindmeister.com/1308604904?t=O0Vcty0Uys) from Boris Tomas
   - Lab
@@ -51,7 +34,6 @@
   
     - Pass out argons
        - students are responsible for returning devices if they drop before drop deadline
-       - Have students sign
     - Kit Overview
     - Software tools
        - Workbench (open and discuss)
@@ -65,7 +47,6 @@
   - Assignment
     - A0 - Software and tool installation
   - ==Feedback==
-    - update A1 to include code to make D7 blink (not available default)
     - Day 2 "making project" was fun; ping pong balls and glue guns were a hit
   
 
@@ -81,7 +62,7 @@
        * C++ Syntax
        * Argon Microcontroller
      - Lab
-       * Have students work in pairs to answer datasheet questions
+       * Have students work in pairs to answer datasheet questions from Argon Microcontroller slide
      - Lecture
        - Electricity and Ohm's Law
      - Lab
@@ -115,7 +96,7 @@
    - Assignment
      - A1 - Blink
    - Feedback
-     - Day 2 generally went well; students wired thtree LEDs for about 20 minutes; should refine Ohms Law and explain math examples a little more
+     - Day 2 generally went well; students wired three LEDs for about 20 minutes; should refine Ohms Law and explain math examples a little more
    
 3. #### ADC, Potentiometers, Serial Monitor
 
@@ -124,6 +105,7 @@
      - https://learn.sparkfun.com/tutorials/pulse-width-modulation/all
      - https://www.youtube.com/watch?v=GQLED3gmONg
    - Day 1
+     - mention quiz topics for next week short in-class quiz
      - Lecture
        - Serial monitor
      - Guided activity
@@ -159,10 +141,9 @@
      - Feedback
        - a little slow; spent 20 min asking for course feedback which was helpful
        - could have gone through multimeters
-     
    - Assignment
      
-     - A2 - Light Scupture (have students bring to class; ==bring camera==)
+     - A2 - Light Sculpture (have students bring to class; ==bring camera==)
    
 4. #### Buttons, RGB LEDs *(one class cancelled for Tapia)*
 
@@ -199,18 +180,9 @@
    - Reading
      - https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
    - Day 1
-     - Activity
-       * Video chat with Cyane's class (1 hour) ==(cancelled)==
-       * Cyane collaboration
-         * first meeting: Tues 9/24 @ 4-5 pm PST
-           * 5 students of each to discuss life in the area, outside interests, what are they hoping to get out of studies
-           * ask for volunteers
-         * Next meeting 11/5 or 11/7   4:00 - 6:00 PST (3:00 - 5:00 MST)
-           * we model during class (maybe cyane and I each present to each other)
-           * then provide them a form and technology team
+     - **Have Quiz**
      - Discussion
        - how come when we turned the potentiometer on the cylon light, the blinking frequency didn't change right away? Get them to thinking delay / blocking
-       - mention quiz topics
      - Lecture
        - RGB LED lecture
      - Lab
@@ -323,7 +295,7 @@
    - Feedback
      - Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
    - Assignment
-     - A6 - Shared particle cloud temperature monitor (==I think this assignment is supposed to be one week later--should cover PREVIOUS week's material ==)
+     - ==A6 - Shared particle cloud temperature monitor (==I think this assignment is supposed to be one week later--should cover PREVIOUS week's material ==)==
 8. #### Week 8
 
    - Reading
@@ -356,8 +328,9 @@
      - A7 - postponed with holiday
 9. #### Week 9 - Motors and Servos
 
+   - ==need to order fan blades for students==
    - Reading
-     - ==need to order fan blades for students==
+     - notes on motors: [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
    - Day 1
      - Lecture
        - DC Motor (Ray)

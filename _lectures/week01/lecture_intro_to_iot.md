@@ -20,26 +20,26 @@ title: Intro to IoT
 ## What are smart devices?
 
 ## Physical computing
-- "Physical Computing is an approach to learning how humans communicate through computers that starts by considering how humans express themselves physically" --Tom Igoe
-- Interacting with "smart" devices in the environment
-- Involves programming, electronics, 3d printing, wearables, networking, interaction design
+* "Physical Computing is an approach to learning how humans communicate through computers that starts by considering how humans express themselves physically" --Tom Igoe
+* Interacting with "smart" devices in the environment
+* Involves programming, electronics, 3d printing, wearables, networking, interaction design
 
 ## Why learn this? 
 
-- Jobs
+* Jobs
   - 2020: 26 billion Internet nodes (excl. phones, tablets, and computers)
     - 30 fold increase from 2009
   - 2020: 4.5 million Internet of Things (IoT) developers
     - 57% annual growth rate
-- Cross-discipline
+* Cross-discipline
   - CS, EE, data analytics, product design, entrepreneurship, making
 
 ## Why learn this?
 
-- Hardware entrepreneurship
+* Hardware entrepreneurship
   - Cost of manufacturing is within reach of small amount of funding
   - Tools and open-source platforms mean you can build a prototype without an engineering degree
-- Empowering and fun
+* Empowering and fun
   - "We are on the verge of machines that can think, and we are carrying magic wands in our pocket but most people see them as read-only" -- Jeff Branson, educator and engineer
 
 ## Examples: Gadgets
@@ -71,9 +71,9 @@ title: Intro to IoT
 
 ## Internet of Things
 
-- Internet
+* Internet
   - connect to the internet to send and receive data
-- Things
+* Things
   - "smart" devices that are programmed interact with environment 
 
 
@@ -91,28 +91,44 @@ title: Intro to IoT
 
 ## Communication 
 
-- WiFi and Cellular
-- Bluetooth Low Energy (BLE)
+* WiFi and Cellular
+* Bluetooth Low Energy (BLE)
   - Ex: Communication between smart watch and phone; wireless headphones
   - Range: ~1200+ ft
-- Near-Field Communication (NFC) 
+* Near-Field Communication (NFC) 
   - Ex: Contact-less payment like Apple Pay
   - Range: 4 inches
 
 ## Our focus in this class
 
-- building electronic prototype
-- creating the software code
-- communicating with / controlling device via internet  
+* building electronic prototype
+* creating the software code
+* communicating with / controlling device via internet  
+
+## Past Student Work - Tournament
+
+| <img src="lecture_intro_to_iot.assets/IMG_0940.jpg" alt="Student Car" style="width:250px" /> | <img src="lecture_intro_to_iot.assets/IMG_0931.jpg" alt="Student Car" style="width:200px" /> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Winner tournament race (Ben Boggs)                           | Winner best customization (Kristen Rhodes)                   |
+
+[Video](https://www.youtube.com/watch?v=YC2htefRHk4&feature=emb_title)
+
+## Past Student Projects
+
+
+| <img src="lecture_intro_to_iot.assets/ITP-348%20Final%20Projects%20004%20121719-1578970928018.jpg" alt="IMG_0981" style="width:500px;" /> | <img src="lecture_intro_to_iot.assets/ITP-348%20Final%20Projects%20019%20121719.jpg" alt="ITP-348 Final Projects 014 121719" style="width:500px" /> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+|                                                              |                                                              |
+
+## Past Student Projects
+
+
+| <img src="lecture_intro_to_iot.assets/IMG_0981.jpg" alt="IMG_0981" style="width:450px;" /> | <img src="lecture_intro_to_iot.assets/ITP-348%20Final%20Projects%20014%20121719.jpg" alt="ITP-348 Final Projects 014 121719" style="width:650px" /> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+|                                                              |                                                              |
+
+
 
 ## Credits
 
-- [Form](http://google.com)
-- [Lumi](https://www.kickstarter.com/projects/playlumi/lumi-the-smarter-way-to-learn-and-play-music)
-- [UFO](https://www.kickstarter.com/projects/1783400091/ufo-beauty-tech-revolutionizes-face-masks-in-90-se)
-- [Jolt](https://www.kickstarter.com/projects/bdharva/jolt-sensor-better-concussion-detection-for-youth)
-- [Grillo](https://grillo.io/)
-- [ReWalk](https://rewalk.com/rewalk-personal-3/)
-- [Pixabay](https://pixabay.com/vectors/network-iot-internet-of-things-782707/)
-- [Mitch Alman](https://www.flickr.com/photos/67734410@N00/16258754459) via [cc](https://creativecommons.org/licenses/by-nc-sa/2.0/)
-
+- [Tim Gotimer / ITP](https://itp.usc.edu)

@@ -55,7 +55,26 @@ Install Fritzing
 
     <http://fritzing.org/download/>
 
--   Download and install Particle Workbench
+- Download and install Particle Workbench
+
+  Install Fritzing Library for Argon
+  ----------------
+
+  >   There are special components required to create Fritzing designs with the Argon.
+
+  - Download the Argon library for Fritzing:
+
+    [https://github.com/reparke/Fritzing-Parts/archive/master.zip](https://github.com/reparke/Fritzing-Parts/archive/master.zip)
+
+  - Unzip the file (take note of the folder location)
+  
+  - Open Fritzing
+  
+  - On **Parts** panel on the right side of the screen, click the small dropdown menu and choose **Import…**
+  
+  - Navigate to the folder with the file you downloaded and open `Particle_Mesh_Parts.fzpz`
+  
+  - If you want to save the mesh library for future use, click the small dropdown menu on the **Parts** panel again and chose *Save Bin*
 
 Add Argon device to your Particle account
 -----------------------------------------
