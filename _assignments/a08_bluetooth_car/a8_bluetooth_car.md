@@ -3,7 +3,7 @@ week_assigned: 10
 number: 8
 category: assignment
 title: Bluetooth Car
-date_due: Nov 7 @ in class
+date_due: TBD @ in class
 
 ---
 Assignment 8 – Bluetooth Car

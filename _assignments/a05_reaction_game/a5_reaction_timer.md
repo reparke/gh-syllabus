@@ -3,7 +3,7 @@ week_assigned: 5
 number: 5
 category: assignment
 title: Reaction Timer Game
-date_due: Oct 7 @ 11:59 pm
+date_due: TBD @ 11:59 pm
 
 ---
 

@@ -3,7 +3,7 @@ week_assigned: 1
 number: 1
 category: assignment
 title: Basic Blink
-date_due: Sep 2 @ 11:59 pm
+date_due: Jan 20 @ 11:59 pm
 ---
 
 Assignment 1 – Basic Blink

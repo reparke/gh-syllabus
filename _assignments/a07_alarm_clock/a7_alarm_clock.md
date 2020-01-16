@@ -3,7 +3,7 @@ week_assigned: 7
 number: 7
 category: assignment
 title: Alarm  Clock
-date_due: Oct 29 @ 11:59 pm
+date_due: TBD @ 11:59 pm
 
 ---
 Assignment 7 – Alarm Clock

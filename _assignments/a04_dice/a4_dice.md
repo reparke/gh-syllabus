@@ -3,7 +3,7 @@ week_assigned: 4
 number: 4
 category: assignment
 title: Die
-date_due: Sep 30 @ 11:59 pm
+date_due: TBD @ 11:59 pm
 ---
 
 Assignment 4 – Dice

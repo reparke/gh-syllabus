@@ -1,7 +1,7 @@
 ---
 title: Syllabus
 layout: page
-menuItem: Syllabus
+menuItem: -
 menuPosition: 1
 ---
 

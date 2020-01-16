@@ -3,7 +3,7 @@ week_assigned: 10
 number: 9
 category: assignment
 title: Project
-date_due: Proposal 11/11/19 at 11:59 pm; Milesone 11/26/19 in-class; Finished device 12/12/19 during final exam time
+date_due: Proposal TBD at 11:59 pm; Milesone TBD in-class; Finished device 5/7/20 during final exam time
 
 ---
 
