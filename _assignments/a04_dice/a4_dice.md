@@ -1,9 +1,9 @@
 ---
-week_assigned: 4
+week_assigned: 5
 number: 4
 category: assignment
-title: Die
-date_due: TBD @ 11:59 pm
+title: Dice
+date_due: Feb 17 @ 11:59 pm
 ---
 
 Assignment 4 – Dice

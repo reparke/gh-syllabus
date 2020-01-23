@@ -1,13 +1,13 @@
 ---
-week_assigned: 6
-number: 6
+week_assigned: 8
+number: 7
 category: assignment
 title: Shared Environment Monitor
-date_due: TBD @ 11:59 pm
+date_due: Mar 9 @ 11:59 pm
 
 ---
 
-Assignment 6 – Shared Environment Monitor
+Assignment 7 – Shared Environment Monitor
 =========================================
 
 [Submit on Blackboard](https://blackboard.usc.edu/)

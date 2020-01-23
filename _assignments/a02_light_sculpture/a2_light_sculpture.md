@@ -1,9 +1,9 @@
 ---
-week_assigned: 2
+week_assigned: 3
 number: 2
 category: assignment
 title: Light Sculpture
-date_due: TBD @ 11:59 pm
+date_due: Feb 2 @ 11:59 pm
 ---
 
 Assignment 2 – Light Sculpture

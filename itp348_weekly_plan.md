@@ -39,13 +39,14 @@
        - Workbench (open and discuss)
        - Fritzing (open and show example project)
     - Safety
-    - ==*Explain with slides what particle does, cloud, flash, etc. -- skip and do later==
+    - *Explain what particle does, cloud, flash (no slides)*
    - Lab
      
      - Paper circuits
      - Then ask student to complete a creative expression with multiple LEDs
   - Assignment
-    - A0 - Software and tool installation
+    - Due start of current week: none
+    - Given out start of current week: A0 - Software and tool installation
   - ==Feedback==
     - Day 2 "making project" was fun; ping pong balls and glue guns were a hit
   
@@ -55,9 +56,12 @@
    - Reading
      - http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/
      - https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all
+     
    - Day 1
-     - Lecture (fall 2019)
-       - ==I walked through claiming a device== 
+     
+     - Support
+       - TA and I spent some time class helping install
+       - Demonstrate how to reset device and go to safe mode
      - Lecture
        * C++ Syntax
        * Argon Microcontroller
@@ -70,8 +74,10 @@
          - Ask students how they would connect more than 1 LEDs
          - Ask students how they would make LEDs blink
        - ==Feedback==
-         - Fall 2019: 80% of students had seen C++ already (skipped over c++ slides quickly)
-         - Practically all students were familiar with electricity principles, units (kilo, milli) so the electricity presentation very simple
+         - 1/3 students had seen C++ already (skipped over c++ slides quickly)
+         - Most students were familiar with electricity principles, units (kilo, milli) so the electricity presentation very simple
+         - Didn't get to finish Electricity lecture or get to lab; should have gone faster
+     
    - Day 2
      - Lecture: Open Workbench
        * IDE like PyCharm
@@ -81,7 +87,7 @@
        * Login, Target project
      - Lecture
        * Argon program structure
-       * ==fall 2019 only== show students how to download and install fritzing parts
+       * Show students how to download and install fritzing parts
      - Lab
        * Let students try to complete blinking of three LEDs
        * Build three LEDs; 
@@ -93,9 +99,14 @@
        - just ask the question: Compare 10k ohm vs 330 ohm resistor
      - Lecture
        - Look at LED datasheet; calculate ideal resistance for LED
+     
    - Assignment
-     - A1 - Blink
+     
+     - Due start of current week: A0 - Software and tool installation
+     - Given out start of current week: A1 - Blink
+   
    - Feedback
+     
      - Day 2 generally went well; students wired three LEDs for about 20 minutes; should refine Ohms Law and explain math examples a little more
    
 3. #### ADC, Potentiometers, Serial Monitor
@@ -143,7 +154,8 @@
        - could have gone through multimeters
    - Assignment
      
-     - A2 - Light Sculpture (have students bring to class; ==bring camera==)
+     - Due start of current week: A1 - Blink
+     - Given out start of current week: A2 - Light Sculpture (have students bring to class; ==bring camera==)
    
 4. #### Buttons, RGB LEDs *(one class cancelled for Tapia)*
 
@@ -169,9 +181,9 @@
    - Guided activity
      - Latching button and debouncing (if time)
    - Day 2 - Class cancelled (==Future semesters this could be RGB LEDs, debouncing, or catch-up==)
-     - Assignment
-       - A3 - Cylon light 
-     
+   - Assignment
+     - Due start of current week: A2 - Light Sculpture 
+     - Given out start of current week: A3 - Cylon light 
    - Feedback day 1
      - 
    
@@ -224,7 +236,8 @@
        * Connect switch to enable: middle pin to enable pin, outer pin to power and ground
        * enable and reset are active low
    - Assignment
-     - A4 - Electronic dice 
+     - Due start of current week: A3 - Cylon light 
+     - Given out start of current week: A4 - Electronic dice 
 6. #### Week 6
 
    - Reading (==Send this to students before class to watch==)
@@ -255,8 +268,9 @@
      - Lab
        - Have students create an Etch-A-Sketch with OLED
    - Assignment
-      - A5 - Reaction Timer
-         - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
+      - Due start of current week: A4 - Electronic dice 
+      - Given out start of current week: A5 - Reaction Timer
+      - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
    
 7. #### Week 7
 
@@ -295,7 +309,8 @@
    - Feedback
      - Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
    - Assignment
-     - ==A6 - Shared particle cloud temperature monitor (==I think this assignment is supposed to be one week later--should cover PREVIOUS week's material ==)==
+     - Due start of current week: A5 - Reaction Timer
+     - Given out start of current week: ==CREATE NEW ASSIGNMENT==
 8. #### Week 8
 
    - Reading
@@ -325,7 +340,8 @@
      - Lab
        - 
    - Assignment
-     - A7 - postponed with holiday
+     - Due start of current week: ==CREATE NEW ASSIGNMENT== (if one is created)
+     - Given out start of current week: A7 - Shared particle cloud temperature monitor
 9. #### Week 9 - Motors and Servos
 
    - ==need to order fan blades for students==
@@ -349,7 +365,8 @@
      - Feedback
        - Consider combining both lectures on motors into one day
    - Assignment
-     - A7 - Alarm Clock
+     - Due start of current week: A7 - Shared environment monitor
+     - Given out start of current week: A8 - Alarm clock
 10. #### Week 10
 
    - ==**Before class**== - Have students install Bluetooth phone apps
@@ -420,7 +437,8 @@
        - **Test BT**
        - Connect switch to enable
    - Assignment
-     - A8 - ?
+     - Due start of current week: A8 - Alarm clock
+     - Given out start of current week: A9 - Bluetooth car 
 11. #### Week 11
 
 - Reading
@@ -453,7 +471,8 @@
   - make sure to set up voting ahead of time for best customization for voting
   - [Create bracket online](https://challonge.com/tournament/bracket_generator)
 - Assignment
-  - Proposal
+  - Due start of current week: A9 - Bluetooth car
+  - Given out start of current week: Proposal
 
 12. #### Week 12
 
@@ -475,7 +494,8 @@
      - Lab
        - Revise firmware and Losant environment to support input controls (blink light on / off)
      - Assignment
-       - Work on project 
+       - Due start of current week: A10 - Bluetooth car 
+       - Given out start of current week: 
 13. #### Week 13
 
 - Reading

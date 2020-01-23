@@ -1,12 +1,12 @@
 ---
-week_assigned: 7
-number: 7
+week_assigned: 9
+number: 8
 category: assignment
 title: Alarm  Clock
-date_due: TBD @ 11:59 pm
+date_due: Mar 23 @ 11:59 pm
 
 ---
-Assignment 7 – Alarm Clock
+Assignment 8 – Alarm Clock
 ==========================
 
 [Submit on Blackboard](https://blackboard.usc.edu/)

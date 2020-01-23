@@ -1,9 +1,9 @@
 ---
-week_assigned: 3
+week_assigned: 4
 number: 3
 category: assignment
 title: Scanning Light
-date_due: TBD @ 11:59 pm
+date_due: Feb 10 @ 11:59 pm
 ---
 
 Assignment 3 – Scanning Light

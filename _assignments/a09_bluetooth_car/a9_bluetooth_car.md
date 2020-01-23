@@ -1,12 +1,12 @@
 ---
 week_assigned: 10
-number: 8
+number: 9
 category: assignment
 title: Bluetooth Car
-date_due: TBD @ in class
+date_due: Mar 30 @ in class
 
 ---
-Assignment 8 – Bluetooth Car
+Assignment 9 – Bluetooth Car
 ============================
 
 [Submit on Blackboard](https://blackboard.usc.edu/)
