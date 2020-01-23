@@ -3,10 +3,7 @@ week_assigned: 10
 number: 9
 category: assignment
 title: Project
-date_due: 
-	Proposal Apr 6 @ 11:59 pm; 
-	Milestone Apr 21 in-class; 
-	Finished device and presentation May 7 during final exam time
+date_due: Proposal Apr 6 @ 11:59 pm; Milestone Apr 21 in-class; Finished device and presentation May 7 during final exam time
 
 ---
 
