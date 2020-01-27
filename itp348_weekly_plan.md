@@ -1,6 +1,6 @@
 #### Things to implement
 
-* 
+* assignment 1: change wifi setup instructions to just describe "claiming a device" a second time
 
 #### General Feedback (Fall 2019)
 
