@@ -14,7 +14,7 @@ title: Analog Input with Potentiometers
 
 
 ## Analog vs. Digital
-<img src="lecture_analog_input_potentiometers.assets/analog-clock.png" alt="analog clock" width=500 /><img src="lecture_analog_input_potentiometers.assets/clock-997589_960_720.jpg" alt="digital clock" style="width:500px" />
+<img src="lecture_analog_input_potentiometers.assets/analog-clock.png" alt="analog clock" style="width:500px" /> <img src="lecture_analog_input_potentiometers.assets/clock-997589_960_720.jpg" alt="digital clock" style="width:500px" />
 
 ## Analog vs. Digital
 
