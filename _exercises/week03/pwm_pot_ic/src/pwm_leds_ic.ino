@@ -12,6 +12,7 @@ int pwmValue = 0;
 
 // setup() runs once, when the device is first turned on.
 void setup() {
+  delay(100);
   // Put initialization like pinMode and begin functions here.
 
   pinMode(PIN_POT, INPUT);
@@ -22,8 +23,8 @@ void setup() {
 // loop() runs over and over again, as quickly as it can execute.
 void loop() {
   // The core of your code will likely live here.
-
-  potValue = analogRead(PIN_POT);
+  delay(500);
+  potValue = analogRead(PIN_POT);  // 0-4095
   Serial.println("Pot value: " + String(potValue));
 
 

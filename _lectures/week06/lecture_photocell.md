@@ -35,7 +35,7 @@ Pre-reading:
 2. Consider the range of values the argon will read when using the photoresistor using this method
 
    1. What is the maximum value the argon will read?  __ <!-- 4095 -->
-   2. What is the minimum ymvalue the argon will read?  __ <!-- 0 -->
+   2. What is the minimum value the argon will read?  __ <!-- 0 -->
 
    
 

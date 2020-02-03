@@ -67,19 +67,19 @@ Here is an example with 7 lights.
         bright and fully on
 
 -   When turned counter-clockwise, the lights should be very dim and blinking
-    slowly
+    slowly **Note: the lights should by dim, but not turn off**
 
-**Challenge**
+**Bonus**
 
+-   Create an enclosure for your project that shows the LEDs and potentiometer and hides the breadboard.
 -   Use a for loop to iterate through the LEDs (hint: this will require the use
-    of an array, which is like a C++ list)
+    of an array, which is like a C++ list).
 
 **Required naming convention** (replace \# with the current assignment number)
 
 -   **Project Name**
-
-    -   itp348_a\#_lastname_firstname
-
+-   itp348_a\#_lastname_firstname
+    
 -   **Zip File** (include entire project folder)
 
     -   itp348_a\#_lastname_firstname.zip

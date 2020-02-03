@@ -1,10 +1,10 @@
-# pwm_ic
+# pwm_leds_ic
 
-A Particle project named pwm_ic
+A Particle project named pwm_leds_ic
 
 ## Welcome to your project!
 
-Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for pwm_ic.
+Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for pwm_leds_ic.
 
 #### ```/src``` folder:  
 This is the source folder that contains the firmware files for your project. It should *not* be renamed. 

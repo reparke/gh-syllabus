@@ -117,11 +117,11 @@
      - https://www.youtube.com/watch?v=GQLED3gmONg
    - Day 1
      - mention quiz topics for next week short in-class quiz
+     - Review calculation for choosing resistor for LED (if not done last week)
      - Lecture
        - Serial monitor
      - Guided activity
-       - Let them work for a few minutes first
-       - Ask them to digitalRead() on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
+       - Do simple example where there is a global variable that gets incremented and display its value with Serial monitor
      - Lecture
        - Analog vs. digital
        - Pulse width modulation, PWM pins, analogWrite 
@@ -132,10 +132,9 @@
        - Have students use for loop to sweep the brightness of an LED
      - ==Feedback==
        - Need to add additional material; could have gone fast through PWM and done more than just fade a LED
-       - Serial monitor exercise uses **digitalRead**, which isn't covered until following week. Either more serial to next week, or vice versa
    - Day 2
      - Lecture
-       * C++ for loops
+       * C++ `for` loops
      - Lecture
        - Potentiometer, voltage dividers
      - Lab
@@ -164,6 +163,7 @@
    - Day 1
      - ==Have students present light sculpture==
      - Guided activity
+       - Ask them to digitalRead() on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
        - connect button with pullup
        - Ask what is the voltage at pin when button pressed and not pressed
      - Lecture
