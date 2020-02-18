@@ -4,13 +4,13 @@ theme: itp
 
 week: 4
 category: lectures
-title: Push Buttons
+title: Buttons part 2
 
 ---
 
 <!-- headingDivider: 2 -->
 
-# Push Buttons
+# Push Buttons Part 2
 
 <img src="lecture_buttons.assets/518189efce395f1f45000000.jpg" alt="various types of switches" style="width:700px" />
 
@@ -86,9 +86,6 @@ title: Push Buttons
 
 * **ALWAYS USE A PULL-UP RESISTOR WITH BUTTONS**
 * Otherwise you can damage the Argon permanently
-
-<!-- Pull down resistors to ground are fine too. Pull ups are more common for historical reasons (required more current for TTL logic). May also reduce interferance from noise since cutoff between HIGH (3.3v) and LOW (0v) is not 1.67v but much lower so better to have "default" state further from the cutoff -->
-
 ## Lab
   <img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:600px" />
 
@@ -100,4 +97,3 @@ title: Push Buttons
 
 - [Sparkfun](https://learn.sparkfun.com/tutorials/switch-basics/momentary-switches)
 - [SVG]()
-- Images created with [Fritzing](https://fritzing.org/home/)

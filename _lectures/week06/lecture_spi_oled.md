@@ -139,4 +139,5 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 - [Sparkfun](https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide)
 - [Sparkfun](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all)
+- Images created with [Fritzing](https://fritzing.org/home/)
 

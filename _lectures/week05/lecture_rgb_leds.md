@@ -103,4 +103,5 @@ title: RGB LEDs
 
 - <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=755036">Source</a>
 - [Sparkfun](https://learn.sparkfun.com/tutorials/pulse-width-modulation)
+- Images created with [Fritzing](https://fritzing.org/home/)
 

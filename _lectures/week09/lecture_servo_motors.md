@@ -5,6 +5,7 @@ theme: itp
 week: 9
 category: lectures
 title: Servo Motors
+
 ---
 
 <!-- headingDivider: 2 -->
@@ -31,8 +32,7 @@ title: Servo Motors
 * Hobby servos typically control angles
   * Some servos are continuous and are essentially precisely controlled DC motors with a feedback mechanism
 
-* 
-  Service range of typical servos are between 0 and 180 degrees
+* Service range of typical servos are between 0 and 180 degrees
 
 ## Wiring Diagram
 
@@ -75,24 +75,19 @@ void loop(){
 ## Servo Limitations
 
 * Small hobby servos usually have a small plastic tab that keeps the armature from rotating past a certain point
-* 
-  Rotating beyond this point usually breaks the small plastic tab
+* Rotating beyond this point usually breaks the small plastic tab
 
-* 
-  This creates a continuous servo
+* This creates a continuous servo
 
 ## Controlling a Servo
 
 * We can use a potentiometer to control a servo’s positioning
-* 
-  Potentiometers have values 0 – 1023
+* Potentiometers have values 0 – 1023
 
-* 
-  Have to scale that value to be 0 – 180 
+* Have to scale that value to be 0 – 180 
 
 
-* 
-  Use the map() function
+* Use the map() function
 
 ## `map()` Function
 
@@ -115,3 +110,8 @@ int potVal = analogRead(POTPIN);
 int angleVal = map(potVal, 0, 1023, 0, 180);
 
 ```
+
+## Credits
+
+* Images created with [Fritzing](https://fritzing.org/home/)
+

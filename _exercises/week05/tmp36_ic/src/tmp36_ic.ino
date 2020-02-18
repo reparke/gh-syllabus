@@ -33,7 +33,7 @@ void loop() {
   double tmp36Voltage = val * 3.3 / 4095;
   Serial.println("TMP36 voltage: " + String(tmp36Voltage));
 
-  tempC = (tmp36Voltage - 0.5) * 100;
+  tempC = (tmp36Voltage - 0.5) * 100;   //divide 0.01 mv
   Serial.println("TMP36 tempC: " + String(tempC));
 
   double tempF =

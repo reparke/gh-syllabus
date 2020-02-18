@@ -17,7 +17,7 @@ title: Multimeters
 ## Digital multimeters (DMM)
 
 * Allow you to measure the electrical properties of your circuit
-* Measure voltage, resistance, continunity, and current
+* Measure voltage, resistance, continuity, and current
 * Some multimeters can measure capacitance and temperature
 
 
@@ -136,4 +136,5 @@ title: Multimeters
 ## Credit
 
 - [Sparkfun](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/)
+- Images created with [Fritzing](https://fritzing.org/home/)
 

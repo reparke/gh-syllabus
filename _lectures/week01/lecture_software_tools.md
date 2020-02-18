@@ -48,3 +48,7 @@ title: Software Tools
 There is a more formal way of describing circuits we won't use very often
 
 <img src="assets/1565052726261.png" alt="width:400px" style="width:400px" />
+
+## Credits
+
+* Images created with [Fritzing](https://fritzing.org/home/)

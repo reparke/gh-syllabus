@@ -30,23 +30,27 @@ Pre-reading:
 
 ### Part 1: Calibrating in Hardware
 
-1. A photoresistor is device whose resistance varies with the amount of light present. Will we use analogRead or digitalRead? __
+1. A photoresistor is device whose resistance varies with the amount of light present. Which input function will we use? `analogRead` or `digitalRead`? __
 
-2. Consider the range of values the argon will read when using the photoresistor using this method
+2. Using the above input method, consider the range of values the argon will read when using the photoresistor.
 
    1. What is the maximum value the argon will read?  __ <!-- 4095 -->
    2. What is the minimum value the argon will read?  __ <!-- 0 -->
 
    
 
-3. Use multimeter to measure resistance of photoresistor outside of a circuit
+3. With the photoresistor not connected to the argon, use multimeter to measure resistance of photoresistor under the following conditions.
 
-   1. Resistance in ambient room light: __ <!-- 2k -->
+   1. Resistance in ambient (normal) room light: __ <!-- 2k -->
    2. Resistance in bright light (cell phone light): __ <!-- 500 -->
    3. Resistance in darkness: __ <!-- 9k -->
 
+
+
+
+
 <img src="lecture_photocell.assets/1568075929357.png" alt="wiring" style="width:300px" />
-4. Connect photoresistor to 3.3v and gnd. Use multimeter to measure voltage
+4. Connect photoresistor to 3.3v and GND as shown above. Use multimeter to measure voltage across the photoresistor under the following conditions.
 
    1. Voltage in ambient room light: __ <!-- 3.3v -->
    2. Voltage in bright light (cell phone light): __ <!-- 3.3v -->
@@ -59,9 +63,9 @@ Pre-reading:
    
 
 7. Think back to using potentiometer. <img src ="lecture_photocell.assets/1568076047756.png" style="width:100px" alt="potentiometer" />
-A potetiometer is also a variable resistor (like a photoresistor). With a potentiometer, we were able to measure voltage changes as we varied the resistance. What is different about using a photoresistor? __ <!-- The pot has three terminal which creates a voltage divider; there are two different "resistors" and we are measure the ratio of the two -->
+A potentiometer is also a variable resistor (like a photoresistor). With a potentiometer, we were able to measure voltage changes as we varied the resistance. What is different about using a photoresistor? __ <!-- The pot has three terminal which creates a voltage divider; there are two different "resistors" and we are measure the ratio of the two -->
 
-8. Is there a way we could create a similar system in order to measure voltage changes with the photoresistor? __ <!-- use a fixed second resistor -->
+8. Is there a way we could use a similar approach to measure voltage changes with the photoresistor? __ <!-- use a fixed second resistor -->
 
 
 
@@ -71,7 +75,7 @@ A potetiometer is also a variable resistor (like a photoresistor). With a potent
 
 9. Connect a 10k potentiometer and photoresistor to your argon (see diagram; note: disconnect ground from potentiometer). Display the value from reading the photoresistor on the serial monitor. What is the range of values? __ <!-- 0 - 4095; note they will only use two terminals from pot -->
 10. These input values correspond to what actual voltage levels? __ <!-- 0 - 3.3v -->
-11. If our goal is to make allow the argon to be most sensitve to changes at ambient, visible light levels, how should we set our potentiometer? That is, if we want to maximize our ability to detect changes above or below ambient light, how should we set our potentiometer? __ <!-- the pot should be set to the same resistance as the photoresistor at ambient light -->
+11. We want the argon to be most sensitive to changes around ambient, visible light levels. How should we adjust our potentiometer? That is, if we want to maximize our ability to detect changes above or below ambient light, how should we set our potentiometer? __ <!-- the pot should be set to the same resistance as the photoresistor at ambient light -->
 12. Based on your results in part 1, what value of ==resistance on the potentiometer do you think will give the middle value reading the== input? __ <!-- should be same as resistance at ambient light -->
 13. When the input reading of the photoresistor is at the middle of the ADC range, what would you expect the voltage to be? __
 14. Set your potentiometer so the argon is reading the middle input value. Now turn off your circuit and measure the resistance in the potentiometer. How does this compare to your answers from part 1? __ 
@@ -87,3 +91,4 @@ A potetiometer is also a variable resistor (like a photoresistor). With a potent
 
 - [Sparkfun](https://www.sparkfun.com/products/9088)
 - [Sparkfun](https://www.sparkfun.com/products/9806)
+- Images created with [Fritzing](https://fritzing.org/home/)

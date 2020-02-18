@@ -1,3 +1,9 @@
+/******************************************************/
+//       THIS IS A GENERATED FILE - DO NOT EDIT       //
+/******************************************************/
+
+#include "application.h"
+#line 1 "c:/Users/Rob/Documents/_GitHub/ITP_348_Content_Public/_exercises/week06/spi_oled/src/spi_oled.ino"
 /*  Wiring
 
   OLED
@@ -29,12 +35,15 @@ Pin D2 (pullup)
 //////////////////////////
 // MicroOLED Definition //
 //////////////////////////
+void setup();
+void loop();
+#line 32 "c:/Users/Rob/Documents/_GitHub/ITP_348_Content_Public/_exercises/week06/spi_oled/src/spi_oled.ino"
 #define PIN_OLED_RST D6  // Connect RST to pin 6
 #define PIN_OLED_DC D5   // Connect DC to pin 5 (required for SPI)
 #define PIN_OLED_CS D4   // Connect CS to pin A2 (required for SPI)
 MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
 
-// SYSTEM_MODE(MANUAL);
+SYSTEM_MODE(MANUAL);
 
 void setup() {
   Serial.begin(9600);  // begin serial communication with the computer

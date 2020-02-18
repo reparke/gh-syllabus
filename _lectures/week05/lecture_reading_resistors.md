@@ -82,3 +82,4 @@ flip: 6 8 4 = 68x10^4 = 680000 = 680x1000 = 680K
 ## Credit
 
 - Chart adapted from [Sparkfun](https://learn.sparkfun.com/tutorials/resistors#types-of-resistors)
+- Images created with [Fritzing](https://fritzing.org/home/)

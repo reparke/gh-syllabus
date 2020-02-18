@@ -120,5 +120,6 @@ noTone(<<PIN>>);
 
 ## References
 
+* Images created with [Fritzing](https://fritzing.org/home/)
 * [Pixabay](https://pixabay.com/illustrations/banner-header-sound-wave-music-1571999/)
 * [Sparkfun](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-experiment-guide---v40/circuit-2a-buzzer)
