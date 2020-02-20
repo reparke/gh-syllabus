@@ -41,9 +41,7 @@
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 #include "math.h"
 
-const int PIN_DC = D5;
-const int PIN_RST = D6;
-const int PIN_CS = D4;
+
 
 //////////////////////////////////
 // MicroOLED Object Declaration //
@@ -53,7 +51,17 @@ const int PIN_CS = D4;
 //MicroOLED oled;
 //MicroOLED oled(MODE_I2C, D7, 0);    // Example I2C declaration RST=D7, DC=LOW (0)
 
+
+
+const int PIN_DC = D5;
+const int PIN_RST = D6;
+const int PIN_CS = D4;
 MicroOLED oled(MODE_SPI, PIN_RST, PIN_DC, PIN_CS);      //create the OLED object
+
+
+
+
+
 
 //SYSTEM_MODE(MANUAL);
 

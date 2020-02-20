@@ -29,5 +29,3 @@ title: Quiz
 * Analog output / PWM
 * Digital input / Buttons
 * RGB LEDs
-* Reading resistors (will be given a chart)
-* Using multimeter

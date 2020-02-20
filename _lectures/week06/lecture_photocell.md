@@ -34,27 +34,26 @@ Pre-reading:
 
 2. Using the above input method, consider the range of values the argon will read when using the photoresistor.
 
-   1. What is the maximum value the argon will read?  __ <!-- 4095 -->
-   2. What is the minimum value the argon will read?  __ <!-- 0 -->
+   * What is the maximum value the argon will read?  __ <!-- 4095 -->
+   * What is the minimum value the argon will read?  __ <!-- 0 -->
 
    
 
-3. With the photoresistor not connected to the argon, use multimeter to measure resistance of photoresistor under the following conditions.
+3. With the photoresistor <u>not</u> connected to the argon, use multimeter to measure resistance of photoresistor under the following conditions.
 
-   1. Resistance in ambient (normal) room light: __ <!-- 2k -->
-   2. Resistance in bright light (cell phone light): __ <!-- 500 -->
-   3. Resistance in darkness: __ <!-- 9k -->
-
-
+   * Resistance in ambient (normal) room light: __ <!-- 2k -->
+   * Resistance in bright light (cell phone light): __ <!-- 500 -->
+   * Resistance in darkness: __ <!-- 9k -->
 
 
 
-<img src="lecture_photocell.assets/1568075929357.png" alt="wiring" style="width:300px" />
-4. Connect photoresistor to 3.3v and GND as shown above. Use multimeter to measure voltage across the photoresistor under the following conditions.
 
-   1. Voltage in ambient room light: __ <!-- 3.3v -->
-   2. Voltage in bright light (cell phone light): __ <!-- 3.3v -->
-   3. Voltage in darkness: __ <!-- 3.3v -->
+4. Connect photoresistor to **3.3v** and **GND** as shown below. Use a multimeter to measure voltage across the photoresistor under the following conditions.
+    <img src="lecture_photocell.assets/1568075929357.png" alt="wiring" style="width:300px" />
+
+  * Voltage in ambient room light: __ <!-- 3.3v -->
+  * Voltage in bright light (cell phone light): __ <!-- 3.3v -->
+  * Voltage in darkness: __ <!-- 3.3v -->
 
 5. What do you notice? __ <!-- The voltage is always the same-->
 
@@ -70,15 +69,15 @@ A potentiometer is also a variable resistor (like a photoresistor). With a poten
 
 
 ### Part 2: Calibrating in Hardware
+9. Connect a 10k potentiometer and photoresistor to your argon using diagram below. Note: disconnect ground from potentiometer. 
 <img src="lecture_photocell.assets/1568075735308.png" alt="wiring" style="width:300px" />
 
-
-9. Connect a 10k potentiometer and photoresistor to your argon (see diagram; note: disconnect ground from potentiometer). Display the value from reading the photoresistor on the serial monitor. What is the range of values? __ <!-- 0 - 4095; note they will only use two terminals from pot -->
+In Workbench, read the input value from the photoresistor and display it on the serial monitor. What is the range of values? __ <!-- 0 - 4095; note they will only use two terminals from pot -->
 10. These input values correspond to what actual voltage levels? __ <!-- 0 - 3.3v -->
 11. We want the argon to be most sensitive to changes around ambient, visible light levels. How should we adjust our potentiometer? That is, if we want to maximize our ability to detect changes above or below ambient light, how should we set our potentiometer? __ <!-- the pot should be set to the same resistance as the photoresistor at ambient light -->
-12. Based on your results in part 1, what value of ==resistance on the potentiometer do you think will give the middle value reading the== input? __ <!-- should be same as resistance at ambient light -->
+12. Based on your results in part 1, how should we adjust the potentiometer so that when we are <u>under ambient light</u>, the input value we read from the photoresistor is in the middle of the argon ADC range (2048) __ <!-- should be same as resistance at ambient light -->
 13. When the input reading of the photoresistor is at the middle of the ADC range, what would you expect the voltage to be? __
-14. Set your potentiometer so the argon is reading the middle input value. Now turn off your circuit and measure the resistance in the potentiometer. How does this compare to your answers from part 1? __ 
+14. Set your potentiometer so the argon is reading the middle value of the ADC range. Now turn off your circuit and measure the resistance in the potentiometer. How does this compare to your answers from part 1? __ 
 15. Carefully replace the potentiometer in your circuit. Measure the voltage from the photoresistor to ground. __
 
 

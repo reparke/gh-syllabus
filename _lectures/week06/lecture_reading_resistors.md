@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 4
+week: 10
 category: lectures
 title: Reading Resistor Bands
 

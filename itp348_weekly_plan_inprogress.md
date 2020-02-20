@@ -234,7 +234,6 @@
        - Have students measure resistance of pot when its out of a circuit
        - Show fritzing drawing, and have them measure voltage
      - Lecture
-       - Reading resistors (lab exercise is built into slides)
        - TMP36
      - Lab (in slides)
        * Connect a TMP36 and output the current temperature to the serial monitor
@@ -246,7 +245,21 @@
 
    - Reading (==Send this to students before class to watch==)
      - https://www.khanacademy.org/science/ap-physics-1/ap-circuits-topic/kirchhoffs-loop-rule-ap/v/ee-kirchhoffs-voltage-law
+
    - Day 1
+     - Lecture
+       - Libraries
+       - Discuss OLED
+     - Lab
+       - Have students connect OLED to display "Hello World"
+     - Guided Activity
+       - Walk students through wiring
+     - Lab
+       - Have students create an Etch-A-Sketch with OLED
+
+   - Day 2
+     - Lecture
+       - Reading resistors (lab exercise is built into slides)
      - Experiential Learning
        - Photoresistor part 1
        - Discuss
@@ -261,21 +274,10 @@
        - One good thing was this followed learning about using the multimeter since the activity required it
      - Lecture
        - (if time) show derivation of mathematically deriving exact resistor to calibrate. Explain this is an important part of engineering
-   - Day 2
-     - Lecture
-       - Libraries
-       - Discuss OLED
-     - Lab
-       - Have students connect OLED to display "Hello World"
-     - Guided Activity
-       - Walk students through wiring
-     - Lab
-       - Have students create an Etch-A-Sketch with OLED
    - Assignment
       - Due start of current week: A4 - Electronic dice 
       - Given out start of current week: A5 - Reaction Timer
       - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
-   
 7. #### Week 7
 
    - Reading
