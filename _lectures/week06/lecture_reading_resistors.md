@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 10
+week: 6
 category: lectures
 title: Reading Resistor Bands
 
@@ -15,7 +15,7 @@ title: Reading Resistor Bands
 ## Resistor Labels
 
 * The color codes indicate the resistance in Ohms (and sometimes how precise they are)
-* There are 4 bands (colors), 5 band, and 6 band resisors
+* There are 4 bands (colors), 5 band, and 6 band resistors
 * Four band resistors are the most common, and the ones we will encounter in this class
 
 ## Resistor Chart
