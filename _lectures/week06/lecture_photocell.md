@@ -34,26 +34,27 @@ Pre-reading:
 
 2. Using the above input method, consider the range of values the argon will read when using the photoresistor.
 
-   * What is the maximum value the argon will read?  __ <!-- 4095 -->
-   * What is the minimum value the argon will read?  __ <!-- 0 -->
+   1. What is the maximum value the argon will read?  __ <!-- 4095 -->
+   2. What is the minimum value the argon will read?  __ <!-- 0 -->
 
    
 
 3. With the photoresistor <u>not</u> connected to the argon, use multimeter to measure resistance of photoresistor under the following conditions.
 
-   * Resistance in ambient (normal) room light: __ <!-- 2k -->
-   * Resistance in bright light (cell phone light): __ <!-- 500 -->
-   * Resistance in darkness: __ <!-- 9k -->
+   1. Resistance in ambient (normal) room light: __ <!-- 2k -->
+   2. Resistance in bright light (cell phone light): __ <!-- 500 -->
+   3. Resistance in darkness: __ <!-- 9k -->
 
 
 
 
 4. Connect photoresistor to **3.3v** and **GND** as shown below. Use a multimeter to measure voltage across the photoresistor under the following conditions.
     <img src="lecture_photocell.assets/1568075929357.png" alt="wiring" style="width:300px" />
-
-  * Voltage in ambient room light: __ <!-- 3.3v -->
-  * Voltage in bright light (cell phone light): __ <!-- 3.3v -->
-  * Voltage in darkness: __ <!-- 3.3v -->
+    
+    
+      1. Voltage in ambient room light: __ <!-- 3.3v -->
+      2. Voltage in bright light (cell phone light): __ <!-- 3.3v -->
+      3. Voltage in darkness: __ <!-- 3.3v -->
 
 5. What do you notice? __ <!-- The voltage is always the same-->
 
