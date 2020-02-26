@@ -121,7 +121,7 @@ Particle.publish("tempFahr", String(85.9), PRIVATE);
 
 ## Cloud Variables Process
 
-1. Declare global variable (must be `int`, `double`, or `String`)
+1. Declare global variable (must be `int`, `double`, `String`, `bool`)
 2. Call `Particle.variable` within `setup()` to register the variable
 
 ## Cloud Variable Syntax
@@ -133,10 +133,10 @@ Particle.variable(<<REGISTERED_NAME>>, <<ACTUAL_VARIABLE>>);
 Example
 
 ```c++
-double k;			//declare global variable
+double f;			//declare global variable
 String lightValue;	//declare global variable
 void setup() {
-  Particle.variable("lightLevel", photoSensor);	//register variable
+  Particle.variable("lightValue", photoSensor);	//register variable
   Particle.variable("tempFahr", f);				//register variable
 ```
 
@@ -163,7 +163,7 @@ void setup() {
 ## Cloud Functions
 
 * Register / expose a C++ function in your Argon code so it can be called online
-* Up to 20 variables may be registered
+* Up to 15 functions may be registered
 
 ## Cloud Function Process
 
@@ -210,7 +210,7 @@ Function must return an `int` (typically -1 for fail)
 
 ## Events Part 2: Subscribing to Events 
 
-* Argon can by  notified when a particular event published
+* Argon can by notified when a particular event published
   * This is called **subscribing** to an event
 * When the notification arrives, the Argon can then call a function
   * This function is called an **event handler**
