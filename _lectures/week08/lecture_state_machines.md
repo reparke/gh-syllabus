@@ -6,8 +6,11 @@ week: 8
 category: lectures
 title: State Machines
 ---
+<!-- headingDivider: 2 -->
 
 # State Machines
+
+
 
 ## What's the point?
 
@@ -79,90 +82,52 @@ dispense +cupcake taken| idle
 | Dispense cupcake    | Cupcake taken      | Idle                |
 | Dispense cupcake    | Cupcake remains    | Dispense cupcake    |
 
-* tips
-  * give students a wiring diagram (or fritzing)
-  * give students a sample program that turns all lights on (or is a pattern) so they can test wiring before coding (`examples/light_test.ino`)
-* suggestions
-  * need to cover enum, switch, delta timing, fsm
-  * give students wiring diagrams
-  * give students starting code that has light test and base code for starting project
-  * lecture: switch
-  * lab: start with delta timing to blink lights in one direction
-  * lecture: FSM and enum
-  * lab: draw out different states for one direction + pedestrians
-  * lab: students code state transition 
-  * lab: students try to add second direction of traffic; make states diagram and code
-* need to:
-  * change solution code to use prevMillis
-  * create wiring diagram
-  * create basic slides on enum, switch, fsm, delta (this one might already be made)
-* Role of `loop()`
+## In class Lab - Stoplight and Pedestrian Signal
+
+<img src="lecture_finite_state_machines.assets/stoplight.jpg" alt="stoplight" style="height:300px;" /> <img src="lecture_finite_state_machines.assets/ped_signal.jpg" alt="ped_signal" style="width:200px;" />
+
+## In class Lab - Stoplight and Pedestrian Signal
+
+* We are going to build a stoplight / pedestrian crossing for a two way intersection
+* Download starting code
+  * Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+  * Paste the following link into the top right
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week08/stop_light_start
+
+## Wiring Diagram
+
+<img src="lecture_finite_state_machines.assets/IMG_8948.jpg" alt="IMG_8948" style="height:500px;" />
+
+## Wiring Diagram
+
+| LED                   | Argon Pins |
+| ---------------------------- | ---- |
+| NorthSouth Red LED      | D2     |
+| NorthSouth Yellow LED  | D3      |
+| NorthSouth Green LED  | D4      |
+| WestEast Red LED    |   A0   |
+| WestEast Yellow LED  |     A1 |
+| WestEast Green LED   | D5     |
+| Walk White LED     |  D6    |
+| Don't Walk Red LED   |  D7    |
+
+## Lab Stages
+
+1. North South stop light
+2. Add Pedestrian Walk / Don't Walk light
+3. Make Don't Walk light blink
+4. Add West East stop light
+
+## Approach
+
+* We will need to create a way to represent the states using **enum**
+* We will need to track state transitions with **variables** for state
+* We will need to control timing with **millis()**
+
+* What does `loop()` do
   * calculate new state
   * output traffic signal LEDs based on state
   * independently flash walk signal *(later)*
-* Stage 1: NS traffic light ==(do together with class)==
-  * Lights transition from NSGreen, NSYellow, NSRed
-  * States: NSG, NSY, NSR
-  * Duration: 
-    * NSG, NSR = GO_TIME (5000)
-    * NSY = TRANSITION_TIME (1000)
-
-| State            | NS Stoplight |
-| ---------------- | ------------ |
-| Traffic Flows    | Green        |
-| Traffic Stopping | Yellow       |
-| Traffic Stopped  | Red          |
-
-* Stage 2: add pedestrians
-  * Lights transition from NSGreen, NSYellow, Ped Walk, Ped Don't Walk
-  * States: NSG, NSY, **PED, PEDDW**
-    * NSR is replaced by two new states for pedestrians
-  * Duration: 
-    * NSG, NSR, **PED** = GO_TIME (5000)
-    * NSY, **PEDDW** = TRANSITION_TIME (1000)
-
-| State                | NS Stoplight | Pedestrian Light |
-| -------------------- | ------------ | ---------------- |
-| NS Traffic Flows     | Green        | Don’t walk       |
-| NS Traffic Stopping  | Yellow       | Don’t walk       |
-| Pedestrians Go       | Red          | Walk             |
-| Pedestrians Stopping | Red          | Don’t walk       |
-
-* Stage 3: add don't walk blinking
-  * add another state timer for blink rate
-  * Question: When should we blink?
-    * DW light should blink in every state except PED
-    * if we are after blink rate, then blink light
-
-| State                | NS Stoplight | Pedestrian Light      |
-| -------------------- | ------------ | --------------------- |
-| NS Traffic Flows     | Green        | Don’t walk (flashing) |
-| NS Traffic Stopping  | Yellow       | Don’t walk (flashing) |
-| Pedestrians Go       | Red          | Walk                  |
-| Pedestrians Stopping | Red          | Don’t walk (flashing) |
-
-* Stage 4: add WE light
-  * Lights transition from NSGreen, NSYellow, **WEGreen, WEYellow**, Ped Walk, Ped Don't Walk
-  * States: NSG, NSY, **WEG, WEY**, PED, PEDDW**
-    * NSR is replaced by two new states for pedestrians
-  * Duration: 
-    * NSG, NSR, **WEG**, PED = GO_TIME (5000)
-    * NSY, **WEY,** PEDDW = TRANSITION_TIME (1000)
-
-| State                | NS Stoplight | WE Stoplight | Pedestrian Light      |
-| -------------------- | ------------ | ------------ | --------------------- |
-| NS Traffic Flows     | Green        | Red          | Don’t walk (flashing) |
-| NS Traffic Stopping  | Yellow       | Red          | Don’t walk (flashing) |
-| WE Traffic Flow      | Red          | Green        | Don’t walk (flashing) |
-| WE Traffic Stopping  | Red          | Yellow       | Don’t walk (flashing) |
-| Pedestrians Go       | Red          | Red          | Walk                  |
-| Pedestrians Stopping | Red          | Red          | Don’t walk (flashing) |
-
-
-
-<img src="lecture_finite_state_machines.assets/ped_signal.jpg" alt="ped_signal" style="width:200px;" />
-
-
 
 ## Credits
 
