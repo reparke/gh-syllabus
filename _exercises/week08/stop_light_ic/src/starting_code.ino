@@ -26,6 +26,37 @@ const int BLINK_RATE = 500;        // time for blinking don't walk light
 // for testing purposes only
 int lights[] = {NSRed, NSYel, NSGrn, WERed, WEYel, WEGrn, WALK, DONTWALK};
 
+// stage 1: NS lights only (vertical)
+/* NSG, NSY, NSR
+ */
+
+enum State { NSG, NSY, NSR };
+State currentState = NSG;  // start in NS green
+int stateLength = 0;
+
+// make a state transition function
+State getNextState(State c) {
+  // swithch or ifs
+  switch (c) {
+    case NSG:
+      return NSY;
+    case NSY:
+      return NSR;
+    case NSR:
+      return NSG;
+  }
+}
+
+int getStateDuration(State c) {
+  switch (c) {
+    case NSG:
+    case NSR:
+      return GO_TIME;
+    case NSY:
+      return TRANSITION_TIME;
+  }
+}
+
 void setup() {
   Serial.begin(9600);
   pinMode(NSRed, OUTPUT);
@@ -37,17 +68,10 @@ void setup() {
   pinMode(WALK, OUTPUT);
   pinMode(DONTWALK, OUTPUT);
 }
-void loop() {
-  // test all lights -- delete once wiring is verified
-  turnAllLightsOn();
-  delay(2000);
-  turnAllLightsOff();
-  cycleLights(500);
-}
 
 /* ======= FUNCTIONS =========== */
 // TODO: COMPLETE
-void setLight() {
+void setLight(State c) {
   digitalWrite(NSRed, LOW);
   digitalWrite(NSYel, LOW);
   digitalWrite(NSGrn, LOW);
@@ -56,6 +80,30 @@ void setLight() {
   digitalWrite(WEGrn, LOW);
   digitalWrite(WALK, LOW);
   digitalWrite(DONTWALK, LOW);
+
+  switch (c) {
+    case NSY:
+      digitalWrite(NSYel, HIGH);
+      break;
+    // case NSR:                    //stage 2
+    case NSR:
+      digitalWrite(NSRed, HIGH);
+      break;
+    case NSG:
+      digitalWrite(NSGrn, HIGH);
+      break;
+  }
+}
+/*
+  check what state and change the state
+  get the duration
+  implement the state -- turn on lights
+*/
+void loop() {
+  currentState = getNextState(currentState);
+  stateLength = getStateDuration(currentState);
+  setLight(currentState);
+  delay(stateLength);
 }
 
 // TODO: COMPLETE getNextState
