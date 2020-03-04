@@ -12,6 +12,7 @@ void setup() {
 
   //register
   Particle.variable("isDoorOpen", isDoorOpen);
+  Particle.variable("isLedOn", isLedOn);
 
   //register function
   Particle.function("ledStatus", ledStatus);
@@ -37,10 +38,17 @@ void loop() {
 //ALWAYS return an int, and takes one String parameter
 int ledStatus(String cmd) {
   if (cmd.equalsIgnoreCase("on")) {     //turn LED on
+    
     digitalWrite(PIN_LED, HIGH);
-    return 0;                           //0 represents OK 
+    isLedOn = true;
+    
+    
+    return 0;                                // 0 represents OK
   } else if (cmd.equalsIgnoreCase("off")) {  // turn LED on
+
     digitalWrite(PIN_LED, LOW);
+    isLedOn = false;
+    
     return 0;
   }
 

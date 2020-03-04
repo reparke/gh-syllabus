@@ -15,7 +15,7 @@
 
   Function
   --------
-  - create function to turn on / off LED
+  -      create function to turn on / off LED
   - register, test with cloud
   - optional: have them do blink
   - question: how do we know if light is on or not? --> add state variale

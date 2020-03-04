@@ -81,7 +81,7 @@ the key functioning elements.
 Deliverables
 ------------
 
-**Proposal – due 11/11/19 at 11:59 pm**
+**Proposal – due 4/6/20 at 11:59 pm**
 
 -   Write a proposal document with following details:
 
@@ -101,13 +101,13 @@ Deliverables
     must submit a revised proposal which describes any changes. Failure to do
     will lose 10%*
 
-**Project Milestone – in-class 11/26/19**
+**Project Milestone – in-class 4/26/20**
 
 -   Requirements
 
     -   Fritzing diagram
 
-**Project – final deliverables and demonstration due 12/12/19 \@ 4:30 pm**
+**Project – final deliverables and demonstration due 5/7/29 during final exam time**
 
 -   In-person demonstration
 
