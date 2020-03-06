@@ -82,14 +82,14 @@ Here is an example:
 -   Publish the temperature as a **PUBLIC** event
 
 -   For the event name, you must use the following format  
-    **ITP348-A6/XXX** *replace XXX with your 3 letter initial*
+    **ITP348-ENVIRO/XXX** *replace XXX with your 3 letter initial*
 
 -   Check the Particle console to make sure the event is publishing properly
 
 >   **Stage 3: Subscribing and storing events**
 
--   Subscribe to the event: **ITP348-A6** (this will include an event beginning
-    with **ITP348-A6**)
+-   Subscribe to the event: **ITP348-ENVIRO** (this will include an event beginning
+    with **ITP348-ENVIRO**)
 
 -   You will create what is called a “circular buffer.” Basically, when the
     first event arrives, you will store the name and temperature in index 0, and

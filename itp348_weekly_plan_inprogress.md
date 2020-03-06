@@ -316,22 +316,24 @@
      - Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
    - Assignment
      - Due start of current week: A5 - Reaction Timer
+       - Warn students that it was time consuming
+       - **==IDEA==** make reaction timer a statemachine assignment and move forward (replace other assigment)
      - Given out start of current week: ==CREATE NEW ASSIGNMENT==
 8. #### Week 8
 
    - Reading
-     - 
+     - ==Send wiring diagram out ahead of time==
    - Day 1
      - Lecture
-       - Multitasking
-       - ==Finite state machines==
+       - Switch and enum
+       - Finite state machines
      - Lab
-       - blink without delay
+       - Starting with sample code
+       - walk through NS light state transitions (length, state)
+       - use delay() (not millis)
      - Feedback
-       - Each one of these could have been a full class. We had to go through the material very quickly and didn't get much time with audio
-       - A6 improvements
-         - warn students that it was hard and time consuming
-         - Give students more time to with material. Ideally, assignment should come a week later
+       - next day cover millis, then rest of light blinking
+       - some students enjoyed the complexity of all parts, other seemed bored
    - Day 2
      - ==Should add some material since audio was half lecture last time. Maybe cover some of the music / tones==
      - Lecture
