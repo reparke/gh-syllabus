@@ -1,3 +1,15 @@
+---
+marp: true
+theme: itp
+
+week: 9
+category: lectures
+title: Soldering
+
+---
+
+<!-- headingDivider: 2 -->
+
 # Soldering
 
 <img src="lecture_soldering.assets/image-20200310161933767.png" alt="image-20200310161933767" style="width:600px;" />
