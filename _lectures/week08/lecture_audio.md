@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 theme: itp
 
 week: 8
@@ -57,16 +57,6 @@ title: Sound and Piezo Buzzers
 * Buzzers are polarized so look for the **+**
 * Negative pin to **gnd** and positive pin to Argon output
 
-## Optional: Controlling Volume
-
-<img src="lecture_audio.assets/1570925716449.png" alt="1570925716449" style="width:750px;" />
-
-## Optional: Controlling Volume
-
-* All tones will be at the same volume since Argon can change only frequency (not amplitude)
-* To control volume, connect a potentiometer between `negative` and `gnd`
-* Potentiometer acts a current limit resistor to control volume
-
 ## Producing Sound
 
 Syntax
@@ -117,6 +107,15 @@ noTone(<<PIN>>);
 
 * Musical notes can represented as constants ([code link](pitches.h))
 
+## Optional: Controlling Volume
+
+<img src="lecture_audio.assets/1570925716449.png" alt="1570925716449" style="width:750px;" />
+
+## Optional: Controlling Volume
+
+* All tones will be at the same volume since Argon can change only frequency (not amplitude)
+* To control volume, connect a potentiometer between `negative` and `gnd`
+* Potentiometer acts a current limit resistor to control volume
 
 ## References
 
