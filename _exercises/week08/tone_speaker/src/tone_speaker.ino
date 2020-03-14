@@ -6,6 +6,7 @@
 unsigned long currentTime;  // for testing
 int songChoice = 1;
 const int PIN_SPEAKER = D2;
+const int PIN_BUTTON = D3;
 
 int pos = 0;  // variable to store the servo position
 
@@ -20,6 +21,7 @@ int maxNote = melody1[0];
 int minNote = melody1[0];
 void setup() {
   pinMode(PIN_SPEAKER, OUTPUT);
+  pinMode(PIN_BUTTON, INPUT);
 
   for (int i = 0; i < arraySize(melody1); i++) {
     if (melody1[i] > maxNote) {
@@ -36,7 +38,12 @@ void loop() {
   unsigned long curTime = millis();
   currentTime = curTime;
   // tone(PIN_SPEAKER, 2000, 500);
-  Serial.println("Tone!");
+  int val = digitalRead(PIN_BUTTON);
+  Serial.println("button: " + String(val));
+
+  if(val == LOW) {
+    tone(PIN_SPEAKER, 4000, 0);
+  }
   // delay(1000);
   // playSong("");
 }
