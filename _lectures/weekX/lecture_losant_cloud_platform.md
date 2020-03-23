@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 11
+week: x
 category: lectures
 title: Cloud Platform and Interface
 ---

@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 12
+week: x
 category: lectures
 title: DHT 22 - Temperature and Humidity Sensor
 ---

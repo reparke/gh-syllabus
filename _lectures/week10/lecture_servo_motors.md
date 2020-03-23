@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 9
+week: 10
 category: lectures
 title: Servo Motors
 
@@ -11,8 +11,6 @@ title: Servo Motors
 <!-- headingDivider: 2 -->
 
 # Servo Motors
-
-#### Guest Lecture by Ray Kim
 
 ## Goals
 
@@ -114,4 +112,5 @@ int angleVal = map(potVal, 0, 1023, 0, 180);
 ## Credits
 
 * Images created with [Fritzing](https://fritzing.org/home/)
+* Original slides created by Ray Kim
 

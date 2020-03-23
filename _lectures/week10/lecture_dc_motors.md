@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 9
+week: 10
 category: lectures
 title: DC Motors
 ---
@@ -10,8 +10,6 @@ title: DC Motors
 <!-- headingDivider: 2 -->
 
 # DC Motors
-####  Guest Lecture by Ray Kim
-
 ## Goals
 
 1. Discuss the different types of motors used in small electronic devices
@@ -185,3 +183,4 @@ void loop() {
 ## Credits
 
 * Images created with [Fritzing](https://fritzing.org/home/)
+* Original slides created by Ray Kim

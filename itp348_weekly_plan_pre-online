@@ -1,4 +1,4 @@
-#### Things to implement
+#### 	Things to implement
 
 * assignment 1: change wifi setup instructions to just describe "claiming a device" a second time
 
@@ -241,6 +241,7 @@
    - Assignment
      - Due start of current week: A3 - Cylon light 
      - Given out start of current week: A4 - Electronic dice 
+   
 6. #### Week 6
 
    - Reading (==Send this to students before class to watch==)
@@ -278,6 +279,7 @@
       - Due start of current week: A4 - Electronic dice 
       - Given out start of current week: A5 - Reaction Timer
       - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
+   
 7. #### Week 7
 
    - Reading
@@ -319,6 +321,7 @@
        - Warn students that it was time consuming
        - **==IDEA==** make reaction timer a statemachine assignment and move forward (replace other assigment)
      - Given out start of current week: ==CREATE NEW ASSIGNMENT==
+   
 8. #### Week 8
 
    - Reading
@@ -335,40 +338,72 @@
        - next day cover millis, then rest of light blinking
        - some students enjoyed the complexity of all parts, other seemed bored
    - Day 2
-     - ==Should add some material since audio was half lecture last time. Maybe cover some of the music / tones==
-     - Lecture
-       - audio
-     - Lab
-       - make simple tone
+     - Continued with FSM
+   - Feedback
+     - Students felted overwhelmed with FSM, switch, and enum all at once
+     - Better to introduce them slowly over time and build up to complicated stoplight example
    - Assignment
      - Due start of current week: ==CREATE NEW ASSIGNMENT== (if one is created)
      - Given out start of current week: A7 - Shared particle cloud temperature monitor
-9. #### Week 9 - Motors and Servos
+   
+9. #### Week 9 - Soldering and Speaker
+
+   * Day 1
+      * Soldering demo in EE lab
+      * had students build sparkfun flashlight
+      * Then Neftali did a quick demo of how to lay out a simple PCB in Fritzing
+   * Feedback
+     * Took about 1 hour
+     * soldering was fun but really simple. It would be cool to have a second, more complex circuit
+   * Day 2
+     * Lecture
+       * Speaker
+       * Tone
+       * Pitches
+   * Assignment
+      * Due start of current week: A7 - Shared environment monitor
+      * Given out start of current week: A8 - Alarm clock
+   
+10. #### Week 10 - Motors and Servos
 
    - ==need to order fan blades for students==
    - Reading
+     
      - notes on motors: [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
    - Day 1
      - Lecture
-       - DC Motor (Ray)
+       - DC Motors
      - Lab
        - Students copy sketch to make fan blade rotate direction
        - Do experimental exercise to determine min / max PWM values
      - Feedback
        - Students seemed to enjoy making the motor + fan work, but this only took 1 hour
        - Improvised lecture by demonstrating analog joystick to control fan blade and rotation
-   - Day 2
-     - Lecture
-       - Servo motors (Ray)
-       - Very short presentation
+        - Lecture
+          - Servo motors
+          - Very short presentation
+     
      - Lab
-       - Finished discussing buzzer and playing musical notes
-     - Feedback
-       - Consider combining both lectures on motors into one day
-   - Assignment
-     - Due start of current week: A7 - Shared environment monitor
-     - Given out start of current week: A8 - Alarm clock
-10. #### Week 10
+       - Connect servo to DC motor
+       - control fan speed and direction with two potentiometers
+- Feedback
+- Day 2
+  - Lecture
+    - Losant
+  - Lab (together)
+    - Create application
+    - Create devices
+    - Create integrations
+    - Create workflows
+- Feedback
+  - start by sending one piece of data before using split to send multiple
+- Assignment
+
+  * Due start of current week: A8 - Alarm clock
+  * Given out start of current week: ==A9 - Bluetooth car==
+  * ==This wouldn't have worked because the would have been given car assigment BEFORE covering the car and bluetooth==
+
+11. #### Week 11
 
    - ==**Before class**== - Have students install Bluetooth phone apps
            - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
@@ -391,26 +426,6 @@
       - Have students code on their own D7 on with **press up** and D7 off when **release up**
       - (If time) have students code play tone when **press right **
       - Have students try using color picker to change RGB colors
-    - Lab - ble_health_temp_start
-      - Distribute github link to download (post on slides)
-      - Describe project goals
-      - Explain **argon_ble_setup.h** at a high level
-        - Have students change **DEVICE_NAME**
-      - Draw picture of how temperature data is organized
-        - 6 bytes total
-        - byte 1: 8 bits of flags
-        - bytes 2-5: 4 byte floating point number
-        - byte 6: temperature type
-      - Define constants and globals
-        - UPDATE_INTERVAL_MS
-        - prevUpdate = 0;  // time of last update in millis()
-        - float prevTempF = -1.0;        // previous temperature in Fahr
-        - uint8_t batteryLevel = -1;     // battery level percentage [0-100]
-      - Write **loop()** together
-      - Write **getTemp()** together
-        - Call       **update_ble_temperature**
-      - Write **getBatteryLevel()** together
-        - call update_ble_battery_level
     - Example - ble_uart_rgb_accel_example
       - Distribute github link to download (post on slides)
       - Describe project goals
@@ -418,12 +433,15 @@
       - explain **updateRGBvalues()**
       - explain **changeRgbLight()**
       - Demo device with code
-   - Feedback - Day 1
-      - With lecture slides and assembly, we barely finished lab 1
+    - Feedback - Day 1
+    - 
    - Day 2
-      - Feedback Day 2
-         - health thermometer service was a bust. We couldn't connect to the Argon. I would eliminate this next semester
-         - Car building went well. We just covered **carForward** and need to finish Bluetooth part next week. In the future we might be able to cover all of car in one day by eliminating health thermometer
+       - Lecture
+          - car bluetooth
+      - Lab
+         - build BT controls from Adafruit app
+     - Feedback Day 2
+        - Car building went well. We just covered **carForward** and need to finish Bluetooth part next week. In the future we might be able to cover all of car in one day by eliminating health thermometer
      - Lecture
        - LIPO battery
      - Lab
@@ -438,28 +456,13 @@
        - **Test BT**
        - Connect switch to enable
    - Assignment
-     - Due start of current week: A8 - Alarm clock
-     - Given out start of current week: A9 - Bluetooth car 
+     - Due start of current week: ==A9 - Bluetooth car (this doesn't work in terms of placement)==
+     - Given out start of current week: 
 11. #### Week 11
 
 - Reading
   - 
 - Day 1
-  - Lecture
-    - car bluetooth
-  - Lab
-    - build BT controls from Adafruit app
-  - Lecture
-    - Losant
-  - Lab (together)
-    - Create application
-    - Create devices
-    - Create integrations
-    - Create workflows
-  - Feedback
-    - give brief overview of nodeRed (block programming) and javascript
-    - start by sending one piece of data before using split to send multiple
-- Day 2
   - Activity
     - Race competition
   - Lecture
@@ -471,8 +474,10 @@
 - Feedback
   - make sure to set up voting ahead of time for best customization for voting
   - [Create bracket online](https://challonge.com/tournament/bracket_generator)
+- Day 2
+  - ==cancel==
 - Assignment
-  - Due start of current week: A9 - Bluetooth car
+  - Due start of current ==week: ?==
   - Given out start of current week: Proposal
 
 12. #### Week 12
@@ -534,9 +539,9 @@
        - Use **tap** feature
        - Use **portrait / landscape** detection
        - Use accelerometer to control RGB LED
-   - Day 2 **==Class Cancelled due to Thanksgiving==**
+   - Day 2 
      - Lecture
-       - 
+       - ==Guest lecture==
      - Lab
        - 
      - Lecture
@@ -565,3 +570,36 @@
 [Two-Layer Chassis Assembly](https://youtu.be/L7-98Ejmb4M)
 
 [Pictures of installation](https://learn.sparkfun.com/tutorials/assembly-guide-for-sparkfun-jetbot-ai-kit/1-circular-robotics-chassis-kit-two-layer-assembly) (only relevant through half of the first page)
+
+
+
+---
+
+
+
+**Skipped / Eliminated****
+
+- BLE Health service
+  - The goal was to send a temperature from Argon to Bluefruit app but it rarely worked
+  - Lab - ble_health_temp_start
+    - Distribute github link to download (post on slides)
+    - Describe project goals
+    - Explain **argon_ble_setup.h** at a high level
+      - Have students change **DEVICE_NAME**
+    - Draw picture of how temperature data is organized
+      - 6 bytes total
+      - byte 1: 8 bits of flags
+      - bytes 2-5: 4 byte floating point number
+      - byte 6: temperature type
+    - Define constants and globals
+      - UPDATE_INTERVAL_MS
+      - prevUpdate = 0;  // time of last update in millis()
+      - float prevTempF = -1.0;        // previous temperature in Fahr
+      - uint8_t batteryLevel = -1;     // battery level percentage [0-100]
+    - Write **loop()** together
+    - Write **getTemp()** together
+      - Call       **update_ble_temperature**
+    - Write **getBatteryLevel()** together
+      - call update_ble_battery_level
+  - - 
+ - 

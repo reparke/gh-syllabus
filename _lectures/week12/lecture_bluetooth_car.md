@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 10
+week: 12
 category: lectures
 title: Bluetooth Car
 ---
