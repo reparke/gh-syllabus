@@ -134,6 +134,10 @@ int angleVal = map(potVal, 0, 1023, 0, 180);
 3. Using tape, connect your DC motor (with fan blade) to the servo. With the fan spinning, use the pot to control the position of the fan
 4. Now use the pot to control the speed of the fan while the servo rotates continuosly
 
+## Wiring
+
+<img src="lecture_servo_motors.assets/servo_dc_fan_controller_bb.png" alt="servo_dc_fan_controller_bb" style="width:600px;" />
+
 ## Credits
 
 * Images created with [Fritzing](https://fritzing.org/home/)
