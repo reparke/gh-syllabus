@@ -9,7 +9,7 @@ title: Cloud Platform and Interface
 
 <!-- headingDivider: 2 -->
 
-# Cloud Platform and Interface
+# Losant Cloud Platform and Interface
 
 ## Losant IoT Platform
 

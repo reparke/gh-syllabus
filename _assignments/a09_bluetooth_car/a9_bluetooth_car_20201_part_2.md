@@ -1,12 +1,12 @@
-
+---
 week_assigned: 10
 number: 9
 category: assignment
-title: Bluetooth Car
-date_due: Mar 30 @ in class
+title: Bluetooth Car (part 2)
+date_due: Apr 7 @ in class
 
-
-Assignment 9 – Bluetooth Car
+---
+Assignment 9 – Bluetooth Car part 2
 ============================
 
 [Submit on Blackboard](https://blackboard.usc.edu/)
@@ -14,14 +14,13 @@ Assignment 9 – Bluetooth Car
 Goals
 -----
 
--   Connect car chassis and motors
-
 -   Control car via Bluetooth
+
 
 **Overview**
 
-This assignment is to build a small car and then control it via Bluetooth with a
-smartphone. In class we will then race all the vehicles.
+This assignment is to control the car via Bluetooth with a
+smartphone.
 
 **Components**
 
@@ -42,8 +41,6 @@ smartphone. In class we will then race all the vehicles.
 -   No Fritzing diagram is needed. Wiring diagram and plans are provided in the
     lecture notes.
 
--   Build the car (see lecture notes)
-
 -   Create the sketch to drive the car and enable communication with Bluefruit
     app. We will create the basics of driving functions and Bluetooth
     communication in class. It will be up to you to make any changes or
@@ -52,26 +49,26 @@ smartphone. In class we will then race all the vehicles.
 -   Add some element(s) that distinguish your car. These can be blinking lights
     or something more elaborate.
 
--   Plan to bring car (with fully charged battery) and phone to class
 
 **Competitions**
 
 ### **Best designed car**
 
--   Students will vote anonymously for the best designed car. A prize will be
-    awarded to the winner
+-   Submit a photo of your car
+-   Students will vote anonymously for the best designed car
+-   A prize will be awarded to the winner
 
-### **Driving tournament winner**
+### **Best steering and driving**
 
--   There will be multiple heats and a final race to determine a winner. A prize
-    will be awarded to the winner.
+-   Submit a short (~5-10 sec) of your car driving and turning
+-   Students will vote anonymously for the car that drives / handles the best
+-   A prize will be awarded to the winner.
 
 **Required naming convention** (replace \# with the current assignment number)
 
 -   **Project Name**
-
-    -   itp348_a\#_lastname_firstname
-
+-   itp348_a\#_lastname_firstname
+    
 -   **Zip File** (include entire project folder)
 
     -   itp348_a\#_lastname_firstname.zip
@@ -100,9 +97,9 @@ Grading
 -------
 
 | Item                         | Points |
-|------------------------------|--------|
+| ---------------------------- | ------ |
 | Car structure                | 5      |
 | Driving and Bluetooth sketch | 5      |
 | Car customization            | 5      |
-| Participating in competition | 5      |
+| Steering / handling          | 5      |
 | Total                        | 20     |
