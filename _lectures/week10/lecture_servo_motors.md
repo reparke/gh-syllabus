@@ -127,6 +127,13 @@ int angleVal = map(potVal, 0, 1023, 0, 180);
 
 ```
 
+## Exercise
+
+1. Connect a servo and write code to sweep through the entire range of value (Remember: use `15` and `165` instead of `0` and `180` to avoid damaging servo)
+2. Connect a potentiometer to control the position of the servo
+3. Using tape, connect your DC motor (with fan blade) to the servo. With the fan spinning, use the pot to control the position of the fan
+4. Now use the pot to control the speed of the fan while the servo rotates continuosly
+
 ## Credits
 
 * Images created with [Fritzing](https://fritzing.org/home/)
