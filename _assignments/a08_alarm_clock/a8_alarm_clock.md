@@ -58,13 +58,12 @@ IFTTT.
 >   **Stage 1: Speaker and Tones**
 
 -   Connect the speaker, LED, and push button (push button discussed later)
-
 -   Create three different “songs” for the alarm. One can be a simple alarm
     buzzer, but the other two should have distinct melodies (at least 16 notes).
     You can use the list of musical notes and frequencies (or do something
     different).
-
 -   Test the system playing the notes
+-   The LED should flash when the alarm is going off
 
 >   **Stage 2: Configure Alarm Settings via IFTTT**
 
@@ -74,10 +73,9 @@ IFTTT.
 
     -   Hint: Using the IFTTT **Button widget** trigger
 
--   Create a IFTTT applet that allows you to choose between the song or the
+-   Create a IFTTT applet that allows you to cycle between the songs or the
     buzzer sound that will play on the argon when the alarm goes off
-
-    -   Hint: Using the IFTTT **Button widget** trigger
+-   Hint: Using the IFTTT **Button widget** trigger
 
 >   **Stage 3: Set Alarm Time via IFTTT**
 
