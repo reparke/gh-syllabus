@@ -12,6 +12,8 @@ title: Servo Motors
 
 # Servo Motors
 
+<img src="lecture_servo_motors.assets/image-20200323184116654.png" alt="image-20200323184116654" style="width:500px" />
+
 ## Goals
 
 1. Discuss servos
@@ -21,7 +23,7 @@ title: Servo Motors
 
 ## Servo
 
-* Short for “servomechanism”
+* Short for “**servomechanism**”
   * A servomotor is a type of servomechanism
 * Uses feedback mechanism to precisely control the position or effect of a mechanical device
 
@@ -50,16 +52,21 @@ title: Servo Motors
 
 3. Write to the Servo object
 
-## Servo Code
+## Servo Code - Creating the Servo Object
 
 ```c++
-const int SERVOPIN = D2;
+const int SERVO_PIN = D2;
 //Create the servo object
 Servo servoObj;
 void setup(){
     //attach the servo object to the servo pin 
-    servoObj.attach(SERVOPIN);
+    servoObj.attach(SERVO_ON);
 }
+```
+
+## Servo Code - Turning the Physical Servo
+
+```c++
 void loop(){
     servoObj.write(0); //write the servo to position 0 degrees
     delay(1000); //wait one second
@@ -69,6 +76,8 @@ void loop(){
     delay(1000);
 }
 ```
+
+
 
 ## Servo Limitations
 
@@ -86,6 +95,15 @@ void loop(){
 
 
 * Use the map() function
+
+## Reminder: Argon PWM Pin Groups
+
+* PWM pins are assigned to one of three groups
+* All pins in a group must produce the same PWM value
+
+  * Pins D4, D5, D6, D8
+  * Pins A0, A1, A2, A3
+  * Pins D2, D3, A4, A5
 
 ## `map()` Function
 
@@ -113,4 +131,5 @@ int angleVal = map(potVal, 0, 1023, 0, 180);
 
 * Images created with [Fritzing](https://fritzing.org/home/)
 * Original slides created by Ray Kim
+* [Sparkfun](https://www.sparkfun.com/products/14760)
 

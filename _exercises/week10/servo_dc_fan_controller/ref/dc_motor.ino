@@ -1,12 +1,23 @@
 /*
  * Created by Ray Kim (USC)
+ * modified by Rob Parke
  */
-#include "Particle.h"
+/*
+| Motor Controller | Argon |
+| ---------------- | ----- |
+| PWMA             | D8    |
+| AIN2             | D7    |
+| AIN1             | D6    |
+| VCC              | 3v3   |
+| GND              | GND   |
+| VM               | 3v3   |
+| STBY             | 3v3   |
+*/
 
 const int AIN1 = D3;
 const int AIN2 = D4;
 const int PWMA = D5;
-const int STBY = D2;
+// const int STBY = D2;
 
 // setup() runs once, when the device is first turned on.
 void setup() {
@@ -14,7 +25,7 @@ void setup() {
 pinMode(AIN1, OUTPUT);
 pinMode(AIN2, OUTPUT);
 pinMode(PWMA, OUTPUT);
-pinMode(STBY, INPUT_PULLUP);
+// pinMode(STBY, INPUT_PULLUP);
 
 }
 

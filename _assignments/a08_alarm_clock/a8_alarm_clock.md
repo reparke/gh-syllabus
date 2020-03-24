@@ -3,7 +3,7 @@ week_assigned: 9
 number: 8
 category: assignment
 title: Alarm  Clock
-date_due: Mar 23 @ 11:59 pm
+date_due: Mar 26 @ 11:59 pm
 
 ---
 Assignment 8 – Alarm Clock

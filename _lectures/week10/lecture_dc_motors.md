@@ -97,86 +97,88 @@ title: DC Motors
 
 <img src="lecture_dc_motors.assets/DCMotor.gif" alt="Motor gif" style="width:1100px" />
 
-## Motor Controllers
+## Exercise
 
-* Spin is controlled by current direction
+* Attach fan blade to motor
+* Connect red wire on motor to 3v3; connect black wire to ground
+  * What happens?
+* Reverse the wires
+  * What happens?
+* Was the speed the same in either case?
 
-* 
-  If direction is reversed, the motor spins in the opposite direction
-
-* Motor controllers don’t give a (+) or (-) connection
-  * Just have an IN1 or IN2 because we can change polarity
-
-## Motor Controller
-
-* Motor controllers also provide circuit protection
+## Motors
 
 * Motors can generate electricity
   * Generators
   * Alternators
+* Spin is controlled by current direction
+* If direction is reversed, the motor spins in the opposite direction
+* It is not practical to have to reverse the wires to change motor direction
+* Also, we have no way to control speed
 
-<!-- Having a spinning motor attached to a circuit generates an electromotive force -->
+## Motor Controller
+<img src="lecture_dc_motors.assets/image-20200323180344596.png" alt="image-20200323180344596" style="width:500px;" />
+
+## Motor Driver
+
+* Motor (*motor controller*) provide greater control over motors 
+* Motor drivers don’t give a (+) or (-) connection
+* Just have an IN1 or IN2 because we can change polarity
+* Motor drivers also provide circuit protection
+* Motor drivers can control two different motors independently
+
+<!-- Having a spinning motor attached to a circuit generates an electromotive force so this could damage argon-->
+
+## Motor Controller Wiring Guide
+
+| Motor Controller         | Explanation                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| PWMA                     | Motor A speed (PWM)                                          |
+| AI1, AI2                 | Motor A direction control (connect to Argon)                 |
+| AO1, AO2                 | Motor A output (connect to motor)                            |
+| PWMB, BI1, BI2, BO1, BO2 | Controls for motor B                                         |
+| VCC                      | Power for chip (3v3)                                         |
+| VM                       | Power for motors (3v3, but could connect to different source for more powerful motors) |
+| STBY                     | Enable motor (3v3)                                           |
+| GND                      | Ground                                                       |
+
+
+
+## Controlling the Motor Direction
+
+* Setting the direction is done by changing the two input pins to HIGH and LOW separately
+  * Ex: AI1 = HIGH; AI2 = LOW
+* Setting them both to LOW means stopping the motor
+
+## Controlling the Motor Speed
+
+* The PWM method of controlling motor speed operates on this range: **[0-255]**
+* Typically the PWM must be somewhat greater than 0 before it starts to spin
 
 ## Wiring Diagram
 
-<img src="lecture_dc_motors.assets/DCMotor_bb.png" alt="DCMotor_bb" style="width:750px;" />
+<img src="lecture_dc_motors.assets/DCMotor_bb.png" alt="DCMotor_bb.png" style="width:750px;" />
 
-## Motor Speed
+## Wiring Guide
 
-* The PWM method of controlling motor speed operates on this range: **[0-255]**
-* Setting the direction is done by changing the two input pins to HIGH and LOW separately
-  * Setting them both to LOW means stopping the motor
+| Motor Controller | Argon |
+| ---------------- | ----- |
+| PWMA             | D5    |
+| AIN2             | D3    |
+| AIN1             | D4    |
+| VCC              | 3v3   |
+| GND              | GND   |
+| VM               | 3v3   |
+| STBY             | 3v3   |
 
-## Motor Sketch
 
-```C++
-const int AIN1 = D3;
-const int AIN2 = D4;
-const int PWMA = D5;
-const int STBY = D2;
-
-void setup() {
-  pinMode(AIN1, OUTPUT);
-  pinMode(AIN2, OUTPUT);
-  pinMode(PWMA, OUTPUT);
-  pinMode(STBY, INPUT_PULLUP);
-}
-```
-
-## Motor Sketch
-
-```c++
-void loop() {
-  //set the direction one HIGH, one LOW
-  digitalWrite(AIN1, HIGH);
-  digitalWrite(AIN2, LOW);
-  analogWrite(PWMA, 255); //full speed one way
-  delay(1000); //run for 1 second
-  analogWrite(PWMA,0); // stop
-  delay(1000);
-
-  //change direction
-  digitalWrite(AIN1, LOW);
-  digitalWrite(AIN2, HIGH);
-  analogWrite(PWMA, 255); //full speed opposite way
-  delay(1000);
-  analogWrite(PWMA,0); //stop
-  delay(1000);
-```
 
 ## Exercise
 
-* The theoretical PWM values are 0 to 255
-
-* 
-  What is the actual range of values for which the motor will turn over (start to spin)? 
-
-## Exercise
-
-* Attach the fan blade to the DC motor (if you haven’t already) and write a sketch that powers up the fan from the practical minimum (the value we established in the previous exercise) to the maximum
-
-* 
-  Write it so that it ramps up in speed, getting progressively faster until it maxes out at 255.
+* Attach the fan blade to the DC motor
+* The theoretical PWM values are 0 to 255. Write a sketch to determine the min and max values.
+* Write a sketch that powers up the fan from the practical minimum (the value we established in the previous exercise) to the maximum
+* There should be a ramp up in speed, getting progressively faster until it maxes out
 
 
 
@@ -184,3 +186,4 @@ void loop() {
 
 * Images created with [Fritzing](https://fritzing.org/home/)
 * Original slides created by Ray Kim
+* [Sparkfun](https://www.sparkfun.com/products/14451)

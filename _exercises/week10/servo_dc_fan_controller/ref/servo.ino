@@ -4,7 +4,7 @@
 Servo myservo;  // create servo object to control a servo
 // twelve servo objects can be created on most boards
 
-const int PIN_SERVO = A3;
+const int PIN_SERVO = D2;
 
 int pos = 0;  // variable to store the servo position
 
