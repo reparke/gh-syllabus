@@ -131,24 +131,26 @@ title: DC Motors
 
 ## Motor Controller Wiring Guide
 
-| Motor Controller         | Explanation                                                  |
-| ------------------------ | ------------------------------------------------------------ |
-| PWMA                     | Motor A speed (PWM)                                          |
-| AI1, AI2                 | Motor A direction control (connect to Argon)                 |
-| AO1, AO2                 | Motor A output (connect to motor)                            |
-| PWMB, BI1, BI2, BO1, BO2 | Controls for motor B                                         |
-| VCC                      | Power for chip (3v3)                                         |
-| VM                       | Power for motors (3v3, but could connect to different source for more powerful motors) |
-| STBY                     | Enable motor (3v3)                                           |
-| GND                      | Ground                                                       |
+| Motor Controller         | Explanation                                           |
+| ------------------------ | ----------------------------------------------------- |
+| PWMA                     | Motor A speed (PWM)                                   |
+| AI1, AI2                 | Motor A direction control (connect to Argon)          |
+| AO1, AO2                 | Motor A output (connect to motor)                     |
+| PWMB, BI1, BI2, BO1, BO2 | Controls for motor B                                  |
+| VCC                      | Power for chip (3v3)                                  |
+| VM                       | Power for motors (3v3, or higher for powerful motors) |
+| STBY                     | Enable motor (3v3)                                    |
+| GND                      | Ground                                                |
 
 
 
 ## Controlling the Motor Direction
 
 * Setting the direction is done by changing the two input pins to HIGH and LOW separately
-  * Ex: AI1 = HIGH; AI2 = LOW
+  * Ex: AI1 = HIGH; AI2 = LOW is one direction
+  * Ex: AI1 = LOW; AI2 = HIGH is one direction
 * Setting them both to LOW means stopping the motor
+* Setting them both to HIGH can damage the motor
 
 ## Controlling the Motor Speed
 

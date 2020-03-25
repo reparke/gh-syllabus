@@ -31,8 +31,8 @@ title: Servo Motors
 
 * Hobby servos typically control angles
   * Some servos are continuous and are essentially precisely controlled DC motors with a feedback mechanism
-
 * Service range of typical servos are between 0 and 180 degrees
+  * However, rotating to the full range (0 and 180) can damage so often we use a smaller range such as 15-165
 
 ## Wiring Diagram
 
@@ -60,7 +60,7 @@ const int SERVO_PIN = D2;
 Servo servoObj;
 void setup(){
     //attach the servo object to the servo pin 
-    servoObj.attach(SERVO_ON);
+    servoObj.attach(SERVO_PIN);
 }
 ```
 
@@ -68,11 +68,11 @@ void setup(){
 
 ```c++
 void loop(){
-    servoObj.write(0); //write the servo to position 0 degrees
+    servoObj.write(15); //write the servo to position 15 degrees
     delay(1000); //wait one second
     servoObj.write(90); //write the servo to position 90 degrees
     delay(1000);
-    servoObj.write(180); //write servo to position 180 degrees
+    servoObj.write(165); //write servo to position 165 degrees
     delay(1000);
 }
 ```
@@ -89,21 +89,12 @@ void loop(){
 ## Controlling a Servo
 
 * We can use a potentiometer to control a servo’s positioning
-* Potentiometers have values 0 – 1023
+* Potentiometers have values 0 – 4095
 
-* Have to scale that value to be 0 – 180 
+* Have to scale that value to be 15 – 165 
 
 
 * Use the map() function
-
-## Reminder: Argon PWM Pin Groups
-
-* PWM pins are assigned to one of three groups
-* All pins in a group must produce the same PWM value
-
-  * Pins D4, D5, D6, D8
-  * Pins A0, A1, A2, A3
-  * Pins D2, D3, A4, A5
 
 ## `map()` Function
 
@@ -122,10 +113,18 @@ map(value, fromLow, fromHigh, toLow, toHigh)
 ```c++
 int potVal = analogRead(POTPIN);
 
-
-int angleVal = map(potVal, 0, 1023, 0, 180);
+int angleVal = map(potVal, 0, 4095, 15, 165);
 
 ```
+
+## Reminder: Argon PWM Pin Groups
+
+* PWM pins are assigned to one of three groups
+* All pins in a group must produce the same PWM value
+
+  * Pins D4, D5, D6, D8
+  * Pins A0, A1, A2, A3
+  * Pins D2, D3, A4, A5
 
 ## Exercise
 
