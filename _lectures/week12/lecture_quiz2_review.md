@@ -3,9 +3,8 @@ marp: true
 theme: itp
 
 week: 10
-category: lectures
+category: lectures_hidden
 title: Quiz 
-
 ---
 
 <!-- headingDivider: 2 -->

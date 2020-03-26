@@ -409,6 +409,8 @@
 
 11. #### Week 11
 
+    * ==**Idea for next semester**== move motors and bluetooth earlier and make an assignment out of it (something like the fan)
+
    - ==**Before class**== - Have students install Bluetooth phone apps
            - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
            - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
