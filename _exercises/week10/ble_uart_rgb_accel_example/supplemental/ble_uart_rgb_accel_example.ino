@@ -78,6 +78,7 @@ float avg(const float *accel) {
   return sum / AVERAGING_LENGTH;
 }
 
+// void changeRgbLight(uint8_t r, uint8_t g, uint8_t b) {
 void changeRgbLight(int r, int g, int b) {
   analogWrite(PIN_RED, r);
   analogWrite(PIN_GREEN, g);
@@ -109,33 +110,54 @@ void onDataReceived(const uint8_t *buffer, size_t len,
   if ((char)buffer[0] == '!') {  // Sensor data flag
     switch ((char)buffer[1]) {
       case 'Q':
+        if (checkCRC(buffer) == false) {
+          break;
+        }
         Serial.println("Quaternion Data:");
         printQuaternionData(buffer);
         break;
       case 'A':
+        if (checkCRC(buffer) == false) {
+          break;
+        }
         // Serial.println("Accelerometer Data:");
         // printSensorDataXYZ(buffer);
         updateSensorDataXYZ(buffer);
         break;
       case 'G':
+        if (checkCRC(buffer) == false) {
+          break;
+        }
         Serial.println("Gyro Data:");
         printSensorDataXYZ(buffer);
         break;
       case 'M':
+        if (checkCRC(buffer) == false) {
+          break;
+        }
         Serial.println("Magnetometer Data:");
         printSensorDataXYZ(buffer);
         break;
       case 'L':
+        if (checkCRC(buffer) == false) {
+          break;
+        }
         Serial.println("Location Data:");
         printLocationData(buffer);
         break;
       case 'B':
+        if (checkCRC(buffer) == false) {
+          break;
+        }
         Serial.print("Button ");
         Serial.print((char)buffer[2]);
         Serial.print(" ");
         printButtonState((char)buffer[3]);
         break;
       case 'C':
+        if (checkCRC(buffer) == false) {
+          break;
+        }
         Serial.println("Color ");
         printColorData(buffer);
         break;
@@ -234,3 +256,102 @@ void printButtonState(char buttonState) {
     Serial.println("unknown state");
   }
 }
+
+/*RP 10/17/19
+After porting from Arduino to Argon, this CRC check always fails even
+the reported values are correct.
+This function could be error-check and re-enabled */
+boolean checkCRC(const uint8_t *buffer) {
+  //   uint8_t len = sizeof(buffer);
+  //   uint8_t crc = buffer[len - 2];
+  //   uint8_t sum = 0;
+
+  //   for (int i = 0; i < (len - 1); i++) {
+  //     sum += buffer[i];
+  //   }
+
+  //   Serial.print("CRC ");
+
+  //   if ((crc & ~sum) == 0) {
+  //     Serial.println("PASS");
+  //     return true;
+  //   }
+
+  //   else {
+  //     Serial.println("FAIL");
+  //     return false;
+  //   }
+  return true;
+}
+
+/* #include "Particle.h"
+
+// This example does not require the cloud so you can run it in manual mode or
+// normal cloud-connected mode
+// SYSTEM_MODE(MANUAL);
+
+const size_t UART_TX_BUF_SIZE = 20;
+
+void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
+                    void* context);
+
+// These UUIDs were defined by Nordic Semiconductor and are now the defacto
+// standard for UART-like services over BLE. Many apps support the UUIDs now,
+// like the Adafruit Bluefruit app.
+const BleUuid serviceUuid("6E400001-B5A3-F393-E0A9-E50E24DCCA9E");
+const BleUuid rxUuid("6E400002-B5A3-F393-E0A9-E50E24DCCA9E");
+const BleUuid txUuid("6E400003-B5A3-F393-E0A9-E50E24DCCA9E");
+
+BleCharacteristic txCharacteristic("tx", BleCharacteristicProperty::NOTIFY,
+                                   txUuid, serviceUuid);
+BleCharacteristic rxCharacteristic("rx",
+                                   BleCharacteristicProperty::WRITE_WO_RSP,
+                                   rxUuid, serviceUuid, onDataReceived, NULL);
+
+void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
+                    void* context) {
+  // Log.trace("Received data from: %02X:%02X:%02X:%02X:%02X:%02X:",
+  // peer.address()[0], peer.address()[1], peer.address()[2], peer.address()[3],
+  // peer.address()[4], peer.address()[5]);
+
+  for (size_t ii = 0; ii < len; ii++) {
+    // Serial.println("LED Data received");
+    // Serial.write(data[ii]);
+    // Serial.println(data[ii]);
+  }
+  uint8_t x = *((uint8_t *)(data+2));
+  Serial.print("x = " + String(x));
+  uint8_t y = *((uint8_t *)(data+3));
+  Serial.print(", y = " + String(y));
+  uint8_t z = *((uint8_t *)(data+4));
+  Serial.println(", z = " + String(z));
+}
+
+void setup() {
+  Serial.begin(9600);
+
+  BLE.addCharacteristic(txCharacteristic);
+  BLE.addCharacteristic(rxCharacteristic);
+
+  BleAdvertisingData data;
+  data.appendServiceUUID(serviceUuid);
+  BLE.advertise(&data);
+}
+
+void loop() {
+  if (BLE.connected()) {
+    // Serial.println("BLE LED connected");
+
+    uint8_t txBuf[UART_TX_BUF_SIZE];
+    size_t txLen = 0;
+
+    while (Serial.available() && txLen < UART_TX_BUF_SIZE) {
+      txBuf[txLen++] = Serial.read();
+      Serial.write(txBuf[txLen - 1]);
+    }
+    if (txLen > 0) {
+      txCharacteristic.setValue(txBuf, txLen);
+    }
+  }
+}
+*/

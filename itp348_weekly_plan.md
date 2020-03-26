@@ -387,6 +387,10 @@
        - Connect servo to DC motor
        - control fan speed and direction with two potentiometers
 - Feedback
+  - students followed remotely and enjoyed building the fan
+  - I skipped the separate servo part and went directly to using the servo to control the fan
+  - Next year, start with DC fan, then immediately wire servo to spin, then pot
+  - ==Need to change the DC motor slides. They are too technical==
 - Day 2
   - Lecture
     - Losant
@@ -408,6 +412,7 @@
    - ==**Before class**== - Have students install Bluetooth phone apps
            - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
            - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
+           - Send wiring guide with full fan circuit 
    - Reading
         - [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
         - [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
@@ -426,6 +431,8 @@
       - Have students code on their own D7 on with **press up** and D7 off when **release up**
       - (If time) have students code play tone when **press right **
       - Have students try using color picker to change RGB colors
+    - Lab - ble_uart_control_start
+      - Have students try to control servo and fan motor on their own
     - Example - ble_uart_rgb_accel_example
       - Distribute github link to download (post on slides)
       - Describe project goals
@@ -433,6 +440,8 @@
       - explain **updateRGBvalues()**
       - explain **changeRgbLight()**
       - Demo device with code
+    - Example - health therometer
+      - Skip
     - Feedback - Day 1
     - 
    - Day 2
