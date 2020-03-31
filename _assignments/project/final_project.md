@@ -96,10 +96,10 @@ Deliverables
     -   Rough budget for how much it would cost to build your device. You should
         include items in your kit as well as items not in your kit (e.g.
         building supplies, other sensors, etc.)
-
 -   *Note: If you later modify your project from your original proposal, you
     must submit a revised proposal which describes any changes. Failure to do
     will lose 10%*
+-   [Sample proposal](https://reparke.github.io/ITP348-Physical-Computing/assignments/project/samples/project_proposal_sample.pdf)
 
 **Project Milestone – in-class 4/26/20**
 
@@ -123,30 +123,30 @@ Deliverables
 
     -   Assume a future ITP348 student is taking the course and told to make a
         specific change to your project (add a feature, fix an error, etc.).
-
-    -   Provide instructions how to setup your device and then explain key
+-   Provide instructions how to setup your device and then explain key
         elements (include any other helpful documentation like sequence
         diagrams, Fritzing diagrams, etc.)
-
-    -   Consider the following:
-
-        -   What would they need to know to setup your project and get it
+    -   [Sample developer documentation](https://reparke.github.io/ITP348-Physical-Computing/assignments/project/samples/project_developer_guide_sample.pdf)
+-   Consider the following:
+    
+    -   What would they need to know to setup your project and get it
             running?
-
-        -   What would they need to know to modify it? (Assume that they don’t
+    
+    -   What would they need to know to modify it? (Assume that they don’t
             want to read through all your code - they want some sort of a quick
             start guide that will help them identify where they should start
             looking/working first)
-
-        -   Give a general overview of all aspects of your project with
+    
+    -   Give a general overview of all aspects of your project with
             sufficient detail for them to know where to look to make
             modifications.
-
+    
 -   User documentation
 
     -   Assume a non-technical person would like to use your device. What do
         they need to know to get started and to use specific features? (You can
         omit initial setup)
+    -   [Sample user documentation](https://reparke.github.io/ITP348-Physical-Computing/assignments/project/samples/project_user_guide_sample.pdf)
 
 **Submission**
 
