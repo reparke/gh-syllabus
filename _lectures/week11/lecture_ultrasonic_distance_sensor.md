@@ -113,6 +113,7 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 
 * Sound waves can reflect off surfaces in room can give incorrect readings
 * For example, air conditioning vents and other nearby ultrasonic sensors can cause interference
+* There should be **500 ms** delay between readings
 
 ## Lab
 

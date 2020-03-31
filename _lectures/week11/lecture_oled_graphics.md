@@ -93,7 +93,14 @@ const uint8_t heart_bmp[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x
 
 ## Lab
 
-* 
+* Using the ultrasonic distance sensor, display graphics and distance measurement on the OLED
+  * Large error graphic when out of range
+  * Small warning message when less than 5 inches
+  * Small graphics and distance message otherwise
+
+<img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2024%20PM.jpg" alt="Photo Mar 30, 10 21 24 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2020%2059%20PM.jpg" alt="Photo Mar 30, 10 20 59 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2005%20PM.jpg" alt="Photo Mar 30, 10 21 05 PM" style="width:200px;" />
+
+
 
 ## Tools for converting images to bitmaps
 
