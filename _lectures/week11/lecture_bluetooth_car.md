@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 12
+week: 11
 category: lectures
 title: Bluetooth Car
 ---
@@ -64,7 +64,12 @@ title: Bluetooth Car
 
 ## Exercise: Assembling the Chassis
 
-* [Download starting project](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_car_start)
+* Getting started
+
+  * Download project: Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+  * Paste the following link into the top right
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/ble_car_start
+
 * Build chassis
   * [Assembly Instructions](guide_build_chassis)
   

@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 11
+week: 12
 category: lectures
 title: Accelerometer
 ---
