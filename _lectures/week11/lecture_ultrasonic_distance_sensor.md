@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 theme: itp
 
 week: 11
@@ -114,6 +114,13 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 * Sound waves can reflect off surfaces in room can give incorrect readings
 * For example, air conditioning vents and other nearby ultrasonic sensors can cause interference
 * There should be **500 ms** delay between readings
+
+## Lab
+
+* Getting started
+  * Download project: Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+  * Paste the following link into the top right
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/ultrasonic_oled_start
 
 ## Lab
 

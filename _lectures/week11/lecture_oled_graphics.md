@@ -41,7 +41,11 @@ describe in one slide image vs canvas size
 * Ex:
 
 ```c++
-const uint8_t heart_bmp[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0xe0, 0xf0, 0xf8, 0xfc, ... }; 
+const uint8_t heart_bmp[] = { 
+  0x00, 0x00, 0x00, 0x00, 
+  0x00, 0x00, 0x00, 0x80, 
+  0xe0, 0xf0, 0xf8, 0xfc, 
+  ... }; 
 ```
 
 
@@ -53,40 +57,51 @@ const uint8_t heart_bmp[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x
   * Each image to be converted should be black and white
   * Color and greyscale can work but not well
 * Image Size
-  * Sparkfun library requires that each bitmap be specified as 64x48 pixels or 384 bytes
-  * This applies even if parts of the image is blank
+  * Use small or actual size images for better conversion to bitmap
+## Example Images
+
+| Original Black/White Image                                   | Bitmap on OLED                                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <img src="lecture_oled_graphics.assets/trojan.jpg" alt="trojan" style="width:200px;" /> | <img src="lecture_oled_graphics.assets/trojan_cropped.jpg" alt="trojan_cropped" style="width:200px;" /> |
+
+* Color white is what will be displayed on OLED
 
 
 
 ## Output Restrictions
 
 * For SparkFun OLED, draw mode is `vertical - 1 byte per pixel`
-* If you're using the SparkFun library, the final **canvas size** must be 
+* Sparkfun library requires that each bitmap be specified as 64x48 pixels or 384 bytes (**canvas size**)
+  * This applies even if parts of the image is blank
 
 
 
 ## Ex: Converting Image with [Image2CPP](https://javl.github.io/image2cpp/)
 
-<img src="lecture_oled_graphics.assets/image-20200317223318751.png" alt="image-20200317223318751" style="width:500px;" />
+<img src="lecture_oled_graphics.assets/image-20200317223318751.png" alt="image-20200317223318751" style="width:1200px;" />
 
 ## 
 
-<img src="lecture_oled_graphics.assets/image-20200317223350648.png" alt="image-20200317223350648" style="width:500px;" />
+<img src="lecture_oled_graphics.assets/image-20200317223350648.png" alt="image-20200317223350648" style="width:1100px;" />
 
 ## 
 
-<img src="lecture_oled_graphics.assets/image-20200317223446692.png" alt="image-20200317223446692" style="width:500px;" />
+<img src="lecture_oled_graphics.assets/image-20200317223446692.png" alt="image-20200317223446692" style="width:1200px;" />
 
 ## 
 
-<img src="lecture_oled_graphics.assets/image-20200317223504443.png" alt="image-20200317223504443" style="width:500px;" />
+<img src="lecture_oled_graphics.assets/image-20200317223504443.png" alt="image-20200317223504443" style="width:1200px;" />
 
 ## Storing Byte Array 
 
 * Create a `const uint8_t` array (byte array)
 
 ```c++
-const uint8_t heart_bmp[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0xe0, 0xf0, 0xf8, 0xfc, ... }; 
+const uint8_t heart_bmp[] = { 
+  0x00, 0x00, 0x00, 0x00, 
+  0x00, 0x00, 0x00, 0x80, 
+  0xe0, 0xf0, 0xf8, 0xfc, 
+  ... }; 
 ```
 
 * Use library to display bitmap
@@ -98,7 +113,7 @@ const uint8_t heart_bmp[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x
   * Small warning message when less than 5 inches
   * Small graphics and distance message otherwise
 
-<img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2024%20PM.jpg" alt="Photo Mar 30, 10 21 24 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2020%2059%20PM.jpg" alt="Photo Mar 30, 10 20 59 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2005%20PM.jpg" alt="Photo Mar 30, 10 21 05 PM" style="width:200px;" />
+ <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2005%20PM.jpg" alt="Photo Mar 30, 10 21 05 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2024%20PM.jpg" alt="Photo Mar 30, 10 21 24 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2020%2059%20PM.jpg" alt="Photo Mar 30, 10 20 59 PM" style="width:200px;" />
 
 
 
