@@ -60,7 +60,7 @@ smartphone.
 
 ### **Best steering and driving**
 
--   Submit a short (~5-10 sec) of your car driving and turning
+-   Upload a short video to YouTube of your car driving in a figure-8 pattern (driving and turning)
 -   Students will vote anonymously for the car that drives / handles the best
 -   A prize will be awarded to the winner.
 

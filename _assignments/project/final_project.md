@@ -26,7 +26,7 @@ Overview
 
 The project is to create a prototype of a connected device. The final submission
 does not need to be “ready for manufacturing” but it must work and demonstrate
-the key functioning elements.
+the key functioning elements. Here is a [partial list of components and services](sample_components) covered in class.
 
 **Project Requirements**
 
@@ -36,7 +36,7 @@ the key functioning elements.
 
 -   Use at least two sensors we discussed in class
 
--   Use at least two actuators (e.g. switch, button, etc.)
+-   Use at least two component to interact with environment (e.g. switch, button, etc.)
 
 -   Use cloud / internet connectivity in a meaningful way
 
@@ -167,28 +167,28 @@ Deliverables
 Grading
 -------
 
-| Item                                       | Points |
-|--------------------------------------------|--------|
-| App proposal                               |        |
-| Motivation / Need / Audience               | **4**  |
-| Features                                   | **4**  |
-| Budget                                     | **4**  |
-|                                            |        |
-| Project Milestone                          | **10** |
-|                                            |        |
-| Final Device                               |        |
-| Sensors                                    | **5**  |
-| Actuators                                  | **5**  |
-| Sending data to cloud platform             | **10** |
-| Controlling device from cloud              | **10** |
-| User-Interface                             | **10** |
-| In-person demonstration                    | **10** |
-| Coding style and organization              | **5**  |
-| Developer documentation                    | **5**  |
-| User documentation                         | **5**  |
-| Device fulfills original proposal features | **10** |
-|                                            |        |
-| Total                                      | 97     |
+| Item                                           | Points |
+| ---------------------------------------------- | ------ |
+| App proposal                                   |        |
+| Motivation / Need / Audience                   | **4**  |
+| Features                                       | **4**  |
+| Budget                                         | **4**  |
+|                                                |        |
+| Project Milestone                              | **10** |
+|                                                |        |
+| Final Device                                   |        |
+| Sensors                                        | **5**  |
+| Receive / produce interaction with environment | **5**  |
+| Sending data to cloud platform                 | **10** |
+| Controlling device from cloud                  | **10** |
+| User-Interface                                 | **10** |
+| In-person demonstration                        | **10** |
+| Coding style and organization                  | **5**  |
+| Developer documentation                        | **5**  |
+| User documentation                             | **5**  |
+| Device fulfills original proposal features     | **10** |
+|                                                |        |
+| Total                                          | 97     |
 
 **Acknowledgements**
 

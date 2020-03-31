@@ -41,7 +41,7 @@ const int PWMB = D3;  // speed control pin on the motor driver for the left
 const int BIN2 = D4;  // control pin 2 on the motor driver for the left motor
 const int BIN1 = D5;  // control pin 1 on the motor driver for the left motor
 
-int pinMotorEnable = D2;  // switch to turn the robot on and off
+
 
 // VARIABLES
 int motorSpeed = 125;      // starting speed for the motor
