@@ -4,7 +4,7 @@ theme: itp
 
 week: 11
 category: lectures
-title: Ultrasonic Distance Sensor
+title: OLED Screen Graphics
 ---
 
 <!-- headingDivider: 2 -->
