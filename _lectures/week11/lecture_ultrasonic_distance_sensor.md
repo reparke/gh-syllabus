@@ -49,7 +49,7 @@ title: Ultrasonic Distance Sensor
 | Sensor | Argon     | Function                    |
 | ------ | --------- | --------------------------- |
 | GND    | GND       | Ground                      |
-| VCC    | VUSB      | Power (requires 5v)         |
+| VCC    | VUSB      | Power **(requires 5v)**     |
 | TRIG   | Ouput Pin | start output pulse sequence |
 | ECHO   | Input Pin | receive reflection response |
 
@@ -114,7 +114,13 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 * Sound waves can reflect off surfaces in room can give incorrect readings
 * For example, air conditioning vents and other nearby ultrasonic sensors can cause interference
 
+## Lab
 
+* Connect the ultrasonic distance sensor
+* Using the serial monitor, display
+  * Error message when out of range
+  * Warning message when less than 5 inches
+  * Distance message otherwise
 
 ## Credit
 

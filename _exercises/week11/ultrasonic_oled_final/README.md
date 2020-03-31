@@ -1,10 +1,10 @@
-# ble_uart_control
+# TE4_enviro_v5
 
-A Particle project named ble_uart_control
+A Particle project named TE4_enviro_v5
 
 ## Welcome to your project!
 
-Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for ble_uart_control.
+Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for TE4_enviro_v5.
 
 #### ```/src``` folder:  
 This is the source folder that contains the firmware files for your project. It should *not* be renamed. 
