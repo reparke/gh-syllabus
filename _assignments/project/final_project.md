@@ -3,7 +3,7 @@ week_assigned: 10
 number: 9
 category: assignment
 title: Project
-date_due: Proposal Apr 6 @ 11:59 pm; Milestone Apr 21 in-class; Finished device and presentation May 7 during final exam time
+date_due: Proposal Apr 8 @ 11:59 pm; Milestone Apr 21 in-class; Finished device and presentation May 7 during final exam time
 
 ---
 
@@ -81,7 +81,7 @@ the key functioning elements. Here is a [partial list of components and services
 Deliverables
 ------------
 
-**Proposal – due 4/6/20 at 11:59 pm**
+**Proposal – due 4/8/20 at 11:59 pm**
 
 -   Write a proposal document with following details:
 
