@@ -391,58 +391,10 @@
   - I skipped the separate servo part and went directly to using the servo to control the fan
   - Next year, start with DC fan, then immediately wire servo to spin, then pot
   - ==Need to change the DC motor slides. They are too technical==
-- Week 11
-  * ==**Idea for next semester**== move motors and bluetooth earlier and make an assignment out of it (something like the fan)
-- Day 2
-  - Lecture
-    - Losant
-  - Lab (together)
-    - Create application
-    - Create devices
-    - Create integrations
-    - Create workflows
+  - ==**Idea for next semester**== move motors and bluetooth earlier and make an assignment out of it (something like the fan)
+
 - Feedback
   - start by sending one piece of data before using split to send multiple
-- Assignment
-
-  * Due start of current week: A8 - Alarm clock
-  * Given out start of current week: ==A9 - Bluetooth car==
-  * ==This wouldn't have worked because the would have been given car assigment BEFORE covering the car and bluetooth==
-
-   - ==**Before class**== - Have students install Bluetooth phone apps
-      - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
-      - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
-      - Send wiring guide with full fan circuit 
-   - Reading
-     - [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
-     - [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
-- Questions
-  - Day 1 ==**Give students velcro and have them assemble chassis before Thurs**==
-    - Lecture
-      - Bluetooth
-      - Show Bluefruit app and nRF Toolbox
-    - Lab - ble_uart_control_start
-      - Distribute github link to download (post on slides)
-      - Describe project goals
-      - Explain **argon_ble_setup.h** at a high level
-        - Have students change **DEVICE_NAME**
-      - Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
-      - Code together blinking D7 when **press 1**
-      - Have students code on their own D7 on with **press up** and D7 off when **release up**
-      - (If time) have students code play tone when **press right **
-      - Have students try using color picker to change RGB colors
-    - Lab - ble_uart_control_start
-      - Have students try to control servo and fan motor on their own
-    - Example - ble_uart_rgb_accel_example
-      - Distribute github link to download (post on slides)
-      - Describe project goals
-      - explain **onDataReceived()**
-      - explain **updateRGBvalues()**
-      - explain **changeRgbLight()**
-      - Demo device with code
-    - Example - health therometer
-      - Skip
-    - Feedback - Day 1
 
 ==**Idea for next semester**== move motors and bluetooth earlier and make an assignment out of it (something like the fan)
 
@@ -479,63 +431,54 @@
   - Example - health therometer
     - Skip
   - Feedback - Day 2
-  
    - Assignment
-     - Due start of current week: ==A9 - Bluetooth car (this doesn't work in terms of placement)==
-     - Given out start of current week: 
-11. #### Week 11
+     
+     * Due start of current week: A8 - Alarm clock
+     * Given out start of current week: ==A9 - Bluetooth car== part 1 (build chassis only)
+11. Week 11
 
 - Reading
   - 
 - Day 1
   - Lecture
-    - car bluetooth
-  - Lab
-    - build BT controls from Adafruit app
-  - Feedback Day 1
-    - Car building went well. We just covered **carForward** and need to finish Bluetooth part next week. In the future we might be able to cover all of car in one day by eliminating health thermometer
-  - Lecture
     - LIPO battery
-  - Lab
-    - Have students assemble chassis before class
-    - Wire motor controller
-    - Have students download starting code
-    - Walk through BLE code
-    - build `leftMotor()` and `rightMotor()`
-    - build four direction and stop functions
-    - **Test functions in `loop()` without BT**
-    - create `onDataReceived()`
-    - **Test BT**
-    - Connect switch to enable
-- Day 1
-  - Activity
-    - Race competition
+    - car bluetooth - gave overview of coding -- no specifics but pseudocode design for carForward, leftMotor, etc..
   - Lecture
-    - Losant
+    - project overview
+    - Ultrasonic distance sensor 
+    - OLED graphics
   - Lab
-    - Review workflow (make sure everyone is getting data in device by going to overview)
-    - Create dashboard
-    - Create web application
-- Feedback
-  - make sure to set up voting ahead of time for best customization for voting
-  - [Create bracket online](https://challonge.com/tournament/bracket_generator)
+    - Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
+  - Feedback Day 1
+    - Went generally well. Ran out of time to talk about graphics. Could have covered graphics if we didn't cover car
 - Day 2
-  - ==cancel==
-- Assignment
-  - Due start of current ==week: ?==
-  - Given out start of current week: Proposal
+  - Lecture
+    - OLED graphics
+    - walk through of Thingspeak (==need to make slides==)
+      - Create webhook in Particle
+      - send temperature data through `Particle.publish` to thingspeak
+  - Feedback day 2
+    - Recommend **NOT** using thingsspeak again. Thingspeak integration with webhook is fairly simple. It is also possible to discuss JSON to send multiple values.
+    - However, thingsspeak doesn't have a way to send commands to Argon (have to use something like IFTTT)
+  - Assignment
+    - Due start of current: ==A9 - Bluetooth car== part 1
+    - Given out start of current week: ==A9 - Bluetooth car== part 2 **and** Proposal
 
 12. #### Week 12
 
    - Reading
      - 
-   - Day 1 -- ==**Google Guest Lecture on Accessibility**==
+   - Day 1 
      - Lecture
-       - Google guest lecture
+       - Finish ThingSpeak integration with multiple values as JSON
      - Lab
-       - After guest lecture, we all met in a circle and discuss project proposals and gave feedback
+       - Finish ThingSpeak integration with multiple values as JSON walk through example
      - Lecture
-       - 
+       - Explain what APIs are
+       - Discuss weather stack and have them make account; show example call
+       - show jsON slides
+       - walkthrough integration
+       - write json code together
      - Lab
        - 
    - Day 2
@@ -551,11 +494,11 @@
 
 - Reading
   - 
-- Day 1 -- ==Class Cancelled==
+- Day 1 -- ==**Google Guest Lecture on Accessibility**==
   - Lecture
-    - 
+    - Guest Lecture
   - Lab
-    - 
+    - After guest lecture, we all met in a circle and discuss project proposals and gave feedback
 - Day 2
   - Lecture
     - I2C LCD
@@ -647,4 +590,30 @@
     - Write **getBatteryLevel()** together
       - call update_ble_battery_level
   - - 
- - 
+  
+ - #### Week 11
+
+   * Day 2
+
+   - - Lecture
+       - Losant
+     - Lab (together)
+       - Create application
+       - Create devices
+       - Create integrations
+       - Create workflows
+   
+- Week 12
+
+  - Day 1
+    - Activity
+      - Race competition
+    - Lecture
+      - Losant
+    - Lab
+      - Review workflow (make sure everyone is getting data in device by going to overview)
+      - Create dashboard
+      - Create web application
+  - Feedback
+    - make sure to set up voting ahead of time for best customization for voting
+    - [Create bracket online](https://challonge.com/tournament/bracket_generator)
