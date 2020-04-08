@@ -27,9 +27,6 @@ title: APIs and JSON
       "Partly cloudy"
     ],
     "humidity": 56,
-    "uv_index": 3,
-    "visibility": 10,
-    "is_day": "yes"
   }
 }
 ```
@@ -126,8 +123,6 @@ title: APIs and JSON
   * Ex:`"daily_temp"` is a **key** and its **value** is an **array** 
   * Ex: `89` is an **int** and is at index`0`
 
-## 
-
 
 
 ## Parsing JSON
@@ -143,7 +138,7 @@ title: APIs and JSON
 
 ## Parsing with `JsonParserGeneratorRK`
 
-```json
+```c++
 void jsonSubscriptionHandler(const char *event, const char *data) {
   //Part 1 allows for webhook responses to be delivered in multple "chunks"; you don't need to change this
   int responseIndex = 0;
@@ -157,13 +152,18 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
   //Part 2 is where you can parse the actual data; you code goes in the IF
   if (jsonParser.parse()) {
 
-  	/ ****** YOUR PARSING CODE GOES HERE ********/
+  	/****** YOUR PARSING CODE GOES HERE ********/
   
   }
 }
 ```
 
 
+
+## Useful Links
+
+- [JsonParserGeneratorRK library](https://github.com/rickkas7/JsonParserGeneratorRK)
+- [JSON Online Formatter](https://jsonformatter.org/json-pretty-print)
 
 ## Credit
 

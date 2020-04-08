@@ -474,14 +474,25 @@
      - Lab
        - Finish ThingSpeak integration with multiple values as JSON walk through example
      - Lecture
-       - Explain what APIs are
-       - Discuss weather stack and have them make account; show example call
-       - show jsON slides
+       - Explain what APIs are; show them a few public ones
+       - Discuss [weather stack](https://weatherstack.com/) show example call
+       - show JSON slides
        - walkthrough integration
        - write json code together
      - Lab
-       - 
+       - Create [weather stack](https://weatherstack.com/) account
+       - Have them use their own api key to view JSON in a browser (use formatter online if necessary
+       - Create webhook in Particle
+       - Copy code from particle publishing and subscribing
+       - Test: publish request and see if subscribe code retrieves JSON data
    - Day 2
+     - Lecture
+       - Briefly talk about JSON
+       - Show students an example of how the code works for JSON parser
+     - Lab
+       - Have students show description, temp, location, rainfall
+     - Lab
+       - find another API to show
      - Lecture
        - Discuss DHT 22
        - Discuss controlling devices from Losant

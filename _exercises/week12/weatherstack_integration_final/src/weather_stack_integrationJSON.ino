@@ -18,12 +18,13 @@ String city;
 
 void setup() {
   // Subscribe to the integration response event
-  Particle.subscribe("hook-response/JSONWeatherStack", jsonSubscriptionHandler,
+  Particle.subscribe("hook-response/WeatherStackJSON", jsonSubscriptionHandler,
                      MY_DEVICES);
 }
 
 
 void jsonSubscriptionHandler(const char *event, const char *data) {
+  // Serial.println(String(event) + " " + String(data));
   int responseIndex = 0;
 
   const char *slashOffset = strrchr(event, '/');
@@ -69,7 +70,7 @@ void loop() {
 
 //   String data = "fetch:ip";	//auto detect IP but doesn't get right IP
   // Trigger the integration
-  Particle.publish("JSONWeatherStack", data, PRIVATE);
+  Particle.publish("WeatherStackJSON", data, PRIVATE);
   // Wait 60 seconds
   delay(60000);
 }

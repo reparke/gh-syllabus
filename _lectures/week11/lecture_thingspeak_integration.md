@@ -1,3 +1,15 @@
+---
+marp: true
+theme: itp
+
+week: 11
+category: lectures
+title: ThingSpeak Integration
+---
+
+<!-- headingDivider: 2 -->
+
+
 # ThingSpeak 
 
 ## ThingSpeak ([https://thingspeak.com](https://thingspeak.com))
@@ -24,13 +36,13 @@
 
 **Particle integration settings**
 
-<img src="thingspeak_integration.assets/image-20200404195445383.png" alt="image-20200404195445383" style="width:500px;" />
+<img src="lecture_thingspeak_integration.assets/image-20200404195445383.png" alt="image-20200404195445383" style="width:500px;" />
 
 ## Example 1: Send Single Data Point from Argon to ThingSpeak
 
 **ThingSpeak Channel Setttings**
 
-<img src="thingspeak_integration.assets/image-20200404195342458.png" alt="image-20200404195342458" style="width:500px;" />
+<img src="lecture_thingspeak_integration.assets/image-20200404195342458.png" alt="image-20200404195342458" style="width:500px;" />
 
 ## Example 1: Send Single Data Point from Argon to ThingSpeak
 
@@ -55,13 +67,13 @@ void loop() {
 
 **Particle integration settings**
 
-<img src="thingspeak_integration.assets/image-20200404194632886.png" alt="image-20200404194632886" style="width:500px;" />
+<img src="lecture_thingspeak_integration.assets/image-20200404194632886.png" alt="image-20200404194632886" style="width:500px;" />
 
 ## Example 2: Send Multiple Data PointsArgon to Thingspeak 
 
 **ThingSpeak channel settings**
 
-<img src="thingspeak_integration.assets/image-20200404194744347.png" alt="image-20200404194744347" style="width:500px;" />
+<img src="lecture_thingspeak_integration.assets/image-20200404194744347.png" alt="image-20200404194744347" style="width:500px;" />
 
 ## Example 2: Send Multiple Data PointsArgon to Thingspeak 
 
@@ -86,7 +98,9 @@ void loop() {
 }
 ```
 
-## 
+##  
+
+ 
 
 `String data` variable will be in the following format
 
