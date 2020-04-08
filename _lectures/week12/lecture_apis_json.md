@@ -75,7 +75,7 @@ title: APIs and JSON
 * Built around key-value pair idea (like a dictionary or hash)
 * Two data types
   * **objects** (single item denoted with `{`   `}`)
-  * **arrays** (multiple items denoted with `[`   ``]`)
+  * **arrays** (multiple items denoted with `[`   `]`)
 
 ## JSON Basics - Objects
 
@@ -156,7 +156,9 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
 
   //Part 2 is where you can parse the actual data; you code goes in the IF
   if (jsonParser.parse()) {
-  	//parsing code goes here
+
+  	/ ****** YOUR PARSING CODE GOES HERE ********/
+  
   }
 }
 ```
