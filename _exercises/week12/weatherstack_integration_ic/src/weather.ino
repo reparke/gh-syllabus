@@ -1,13 +1,15 @@
 
 #include "JsonParserGeneratorRK.h"
 
-JsonParser jsonParser;          
+JsonParser jsonParser;
+String fullJSON;
 
 void setup() {
   // Subscribe to the integration response event
   Serial.begin(9600);
   Particle.subscribe("hook-response/WeatherStackJSON", myHandler, MY_DEVICES);
 }
+
 
 void myHandler(const char *event, const char *data) {
 
@@ -16,21 +18,44 @@ void myHandler(const char *event, const char *data) {
   const char *slashOffset = strrchr(event, '/');
   if (slashOffset)
     responseIndex = atoi(slashOffset + 1);
-  if (responseIndex == 0)
+  if (responseIndex == 0) {
+    fullJSON = "";
     jsonParser.clear();
+  }
   jsonParser.addString(data);
+  fullJSON += String(data);
+
 
   //Part 2 is where you can parse the actual data; you code goes in the IF
   if (jsonParser.parse()) {
-
-  	
-  
+    /*
+      City
+        Weather description
+        Temp: XX
+        Rainfall: XXX
+    */
+    String city =
+        jsonParser.getReference().key("location").key("name").valueString();
+    double temp = jsonParser.getReference()
+                      .key("current")
+                      .key("temperature")
+                      .valueDouble();
+    double rainfull = jsonParser.getReference()
+                      .key("current")
+                      .key("precip")
+                      .valueDouble();
+    String description = jsonParser.getReference()
+                             .key("current")
+                             .key("weather_description")
+                             .index(0)
+                             .valueString();
+    Serial.println(city);
   }
 }
 
 void loop() {
   // Get some data
-  String data = String(10);
+  String data = "90089";
   // Trigger the integration
   Particle.publish("WeatherStackJSON", data, PRIVATE);
   // Wait 60 seconds

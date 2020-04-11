@@ -1,3 +1,18 @@
+Alternate weather integration service
+
+* This is the final project:
+
+* http://303.itpwebdev.com/~molld/assignment6/list.html
+
+* This is the script that is specifically used in the assignment utilizing the API:
+
+* http://303.itpwebdev.com/~molld/assignment6/main.js
+
+* Let me know if you have trouble accessing anything or want more information!
+* 
+
+
+
 Links
 
 * Overiew and tutorial https://github.com/rickkas7/JsonParserGeneratorRK
