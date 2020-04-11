@@ -12,10 +12,11 @@ title: Guide to Smart Watch Assembly
 ### **Items You will Need:**
 
 1. Scissors
-
 2. Strip of stretchable fabric / neoprene (3" x 15")
-
 3. Strip of plastic velcro tape (12")
+4.  Breadboard
+5. LiPo battery
+6. Argon
 
 ### **STEP 1:**
 
