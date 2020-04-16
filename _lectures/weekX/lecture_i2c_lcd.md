@@ -147,12 +147,12 @@ title: I2C LCD Screen
 
 ## Serial I2C LCD Wiring
 
-| LCD      | Argon       | SPI Function   | Notes                                           |
-| -------- | ----------- | -------------- | ----------------------------------------------- |
-| GND      | GND         | Ground         | Ground                                          |
-| VCC      | VUSB        | Power          | must be 5v                                      |
-| SDA      | SDA         | data line      |                                                 |
-| SCK      | SCK         | clock          |                                                 |
+| LCD  | Argon | Function  | Notes      |
+| ---- | ----- | --------- | ---------- |
+| GND  | GND   | Ground    | Ground     |
+| VCC  | VUSB  | Power     | must be 5v |
+| SDA  | SDA   | data line |            |
+| SCK  | SCK   | clock     |            |
 
 ## Special Notes
 

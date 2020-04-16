@@ -527,7 +527,20 @@
 
    - Reading
      - 
-   - Day 1
+   - Day 2 
+     * Lecture 
+       * how to get a button working
+       * to work with graphics
+       * how to work with the clock
+     
+     * Lecture
+       * heart rate rate sensor
+         * what is it
+         * How does it work
+         * how to program it
+     * Lecture
+       * Connect to weather
+   - Day x
      - Lab
        - Revisit ultrasonic sensor lab to show working code (didn't work for some students)
      - Activity
@@ -538,15 +551,6 @@
        - Use **tap** feature
        - Use **portrait / landscape** detection
        - Use accelerometer to control RGB LED
-   - Day 2 
-     - Lecture
-       - ==Guest lecture==
-     - Lab
-       - 
-     - Lecture
-       - 
-     - Lab
-       - 
    - Assignment
      - AX - 
 15. #### Week 15
