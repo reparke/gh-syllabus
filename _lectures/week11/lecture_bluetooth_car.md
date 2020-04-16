@@ -66,7 +66,7 @@ title: Bluetooth Car
 
 * Getting started
 
-  * Download project: Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+  * Download project: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
     https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/ble_car_start
 

@@ -165,7 +165,7 @@ Sometimes the argon doesn't properly disconnect from app. When app is then opene
 * Use Bluefruit app to control an RGB LED and a buzzer 
 * Send commands **from** app **to** argon, interpret them in Argon, and perform an action
 * Getting started
-  * Download starting code: Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+  * Download starting code: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
     https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_uart_control_start
 * In Bluefruit app, connect to over UART (listed as "controller")

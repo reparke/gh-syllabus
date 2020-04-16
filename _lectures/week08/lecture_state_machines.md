@@ -90,7 +90,7 @@ dispense +cupcake taken| idle
 
 * We are going to build a stoplight / pedestrian crossing for a two way intersection
 * Download starting code
-  * Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+  * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
     https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week08/stop_light_start
 

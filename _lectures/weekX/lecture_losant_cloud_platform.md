@@ -70,7 +70,10 @@ title: Cloud Platform and Interface
 
 ## Lab
 
-* [Download starting project](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/losant_temperature_start) 
+* [Download project: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
+
+* Paste the following link into the top right
+  https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/losant_temperature_start) 
 
 * Create account at [Losant](https://accounts.losant.com/signin) (we will go through the steps together)
 

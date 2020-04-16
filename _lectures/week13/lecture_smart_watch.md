@@ -150,7 +150,7 @@ todo: review debouncing logic
 ## Starting Project
 
 * For assembly and wiring, refer to [these instructions](guide_build_watch.md)
-* Download starting code: Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+* Download starting code: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
     https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week13/smart_watch_start
 

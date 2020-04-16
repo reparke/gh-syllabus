@@ -117,10 +117,9 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 
 ## Lab
 
-* Getting started
-  * Download project: Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
-  * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/ultrasonic_oled_start
+* Download project: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
+* Paste the following link into the top right
+  https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/ultrasonic_oled_start
 
 ## Lab
 
