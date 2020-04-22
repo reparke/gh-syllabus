@@ -493,14 +493,6 @@
        - Have students show description, temp, location, rainfall
      - Lab
        - find another API to show
-     - Lecture
-       - Discuss DHT 22
-       - Discuss controlling devices from Losant
-     - Lab
-       - Revise firmware and Losant environment to support input controls (blink light on / off)
-     - Assignment
-       - Due start of current week: A10 - Bluetooth car 
-       - Given out start of current week: 
 13. #### Week 13
 
 - Reading
@@ -511,15 +503,16 @@
   - Lab
     - After guest lecture, we all met in a circle and discuss project proposals and gave feedback
 - Day 2
-  - Lecture
-    - I2C LCD
-    - Ultrasonic distance sensor
+  - Lecture 
+    * Debouncing
   - Lab
-    - exercises in slides
-  - Feedback
-    - Fail.
-    - The LCD devices only worked for half the students (either faulty devices or bad libraries). Definitely DO NOT use LCDs again
-    - Ultrasonic sensor worked mostly
+    - create State enum and state transistions
+    - set up debouncing
+  - Lecture
+    * heart rate rate sensor
+      * what is it
+      * How does it work
+      * how to program it
 - Assignment
   - project
 
@@ -527,24 +520,21 @@
 
    - Reading
      - 
-   - Day 2 
-     * Lecture 
-       * how to get a button working
-       * to work with graphics
-       * how to work with the clock
-     
+   - Day 1
      * Lecture
-       * heart rate rate sensor
-         * what is it
-         * How does it work
-         * how to program it
+       * Review debouncing
+       * Review heart rate sensor
+     * Lab
+       * Program heart screen
+     * Lecture
+       * Time
+     * Lab
+     * how to work with the clock
      * Lecture
        * Connect to weather
-   - Day x
-     - Lab
-       - Revisit ultrasonic sensor lab to show working code (didn't work for some students)
+   - Day 2
      - Activity
-       - Check milestone
+       - Check milestone (postponed to next week)
      - Lecture
        - accelerometer
      - Lab
@@ -618,7 +608,7 @@
        - Create integrations
        - Create workflows
    
-- Week 12
+- ## Week 12
 
   - Day 1
     - Activity
@@ -632,3 +622,29 @@
   - Feedback
     - make sure to set up voting ahead of time for best customization for voting
     - [Create bracket online](https://challonge.com/tournament/bracket_generator)
+  - Day 2
+  - Lecture
+    - Discuss DHT 22
+    - Discuss controlling devices from Losant
+  - Lab
+    - Revise firmware and Losant environment to support input controls (blink light on / off)
+  - Assignment
+    - Due start of current week: A10 - Bluetooth car 
+    - Given out start of current week: 
+  
+- ## Week 13
+
+- Lecture
+
+  - I2C LCD
+  - Ultrasonic distance sensor
+
+- Lab
+
+  - exercises in slides
+
+- Feedback
+
+  - Fail.
+  - The LCD devices only worked for half the students (either faulty devices or bad libraries). Definitely DO NOT use LCDs again
+  - Ultrasonic sensor worked mostly

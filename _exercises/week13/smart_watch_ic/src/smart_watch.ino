@@ -92,10 +92,26 @@ long debounceDelay = 200;    // the debounce time; increase if the output
 //////////////////////////
 // States               //
 //////////////////////////
-// need to build this
+enum State { TIME, HEART, WEATHER };
+State currentState = HEART;
+
+// state transition function
+// look at current state and decide where we go next
+State getNextState(State s) {
+  switch (s) {
+    case TIME:
+      return HEART;
+      // break -- don't need because return exists
+    case HEART:
+      return WEATHER;
+    case WEATHER:
+      return TIME;
+  }
+}
 
 void setup() {
-  Serial.begin(115200);
+  heartReadTimer.start();
+  Serial.begin(9600);
   Serial.println("Initializing MAX30102...");
 
   // Initialize MAX30102sensor
@@ -120,7 +136,7 @@ void setup() {
   oled.drawBitmap(usc_bmp);
   oled.display();
   delay(1000);  // Delay 1000 ms
-
+  Serial.println("finished OLED display");
   // initialize button
   pinMode(PIN_BUTTON, INPUT);
 }
@@ -129,6 +145,7 @@ void runHeartScreen() {
   // for debugging
   Serial.println("Time");
   oled.clear(PAGE);  // Clear the display
+  oled.setCursor(0, 0);
   oled.print("Time");
   oled.display();
 }
@@ -137,6 +154,7 @@ void runTimeScreen() {
   // for debugging
   Serial.println("Time");
   oled.clear(PAGE);  // Clear the display
+  oled.setCursor(0, 0);
   oled.print("Time");
   oled.display();
 }
@@ -145,12 +163,60 @@ void runWeatherScreen() {
   // for debugging
   Serial.println("Weather");
   oled.clear(PAGE);  // Clear the display
+  oled.setCursor(0, 0);
   oled.print("Weather");
   oled.display();
 }
 
+/*
+
+Debouncing Algorithm
+
+    If current button reading is not the same as last button state
+        Reset debounce counter
+    If signal has been stable long enough (currentTime-lastDebounce >
+debounceDelay) If current button reading is different from current button state
+            Update button state (legitimate button press)
+            Here you execute desired code for button presses
+    Update previous button state with the reading value
+
+*/
 void loop() {
   int reading = digitalRead(PIN_BUTTON);  // check button read
+  unsigned long currentDebounceTime = millis();
+
+  if (reading != prevButtonState) {
+    lastDebounceTime = millis();
+  }
+
+  // debounce delay often 50-200 ms
+  // we check for stable signal
+  if ((currentDebounceTime - lastDebounceTime) > debounceDelay) {
+    // we know we have stable signal
+    // see if input has changed
+    if (reading != curButtonState) {
+      curButtonState = reading;
+      // legit button press so update current button state
+
+      // FINALLY! here is your button code
+      // if want to execute when button pressed down ONLY
+      if (curButtonState == LOW) {
+        currentState = getNextState(currentState);
+        switch (currentState) {
+          case TIME:
+            runTimeScreen();
+            break;
+          case HEART:
+            runHeartScreen();
+            break;
+          case WEATHER:
+            runWeatherScreen();
+            break;
+        }
+      }
+    }
+  }
+  prevButtonState = reading;  // update for next loop
 }
 
 /* ====================== HEART RATE FUNCTIONS ===============

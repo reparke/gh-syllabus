@@ -188,22 +188,25 @@ void setup() {
 
 ## Time
 
-* Figure out and set timezone `Time.zone(TIMEZONE)` ([guide](https://greenwichmeantime.com/time-zone/definition/))
+* `setup()
 
-* Enable DST `Time.beginDST()`
+  * Set current timezone `Time.zone(<<TIMEZONE>>);` ([timezone guide](https://greenwichmeantime.com/time-zone/definition/))
+  * Enable DST `Time.beginDST();`
 
 * Draw clock bitmap `clock_16x12`
 
-* Figure out date format
+* Display date format  ([formatting guide](http://www.cplusplus.com/reference/ctime/strftime/))
+<!-- String dateFormat = "%a %d";-->
   ```c++
-  String dateFormat = "%a %d";
-  oled.println(Time.format(dateFormat));
+  oled.println(Time.format(<<DATE_FORMAT_STRING>>));
   ```
-* Figure out time format
+  
+* Display time format ([formatting guide](http://www.cplusplus.com/reference/ctime/strftime/))
+<!-- String timeFormat = "%I:%M%p"; -->
+  
     ```c++
-  String timeFormat = "%I:%M%p";
-  oled.println(Time.format(timeFormat));
-  ```
+  oled.println(Time.format(<<TIME_FORMAT_STRING>>));
+    ```
 
 ##  
 
