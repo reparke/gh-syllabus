@@ -79,6 +79,7 @@ MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
 //////////////////////////
 // Time  Variables      //
 //////////////////////////
+const float TIMEZONE = -8;  //PST
 
 //////////////////////////
 // Button Variables     //
@@ -110,6 +111,9 @@ State getNextState(State s) {
 }
 
 void setup() {
+  Time.zone(TIMEZONE);
+  Time.beginDST();      
+
   heartReadTimer.start();
   Serial.begin(9600);
   Serial.println("Initializing MAX30102...");
@@ -189,11 +193,24 @@ void runHeartScreen() {
 }
 
 void runTimeScreen() {
+  String dateFormat = "%a %d";
+  String timeFormat = "%I:%M:%S";
+
   // for debugging
   Serial.println("Time");
+  
   oled.clear(PAGE);  // Clear the display
-  oled.setCursor(0, 0);
-  oled.print("Time");
+  oled.drawBitmap(clock_16x12);
+
+  oled.setCursor(20, 0);
+  oled.setFontType(0);
+  oled.print(Time.format(dateFormat));
+
+  oled.setFontType(1);
+  oled.setCursor(0, 20);
+  oled.print(Time.format(timeFormat));
+
+
   oled.display();
 }
 

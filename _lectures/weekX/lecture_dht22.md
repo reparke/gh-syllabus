@@ -11,7 +11,7 @@ title: DHT 22 - Temperature and Humidity Sensor
 
 # DHT 22 - Temperature and Humidity Sensor
 
- <img src="lecture_dht22.assets/10167-01.jpg" alt="https://cdn.sparkfun.com//assets/parts/4/4/7/2/10167-01.jpg" style="width:800px;" /> 
+ <img src="lecture_dht22.assets/10167-01.jpg" alt="DHT 22" style="width:800px;" /> 
 
 
 
@@ -25,11 +25,13 @@ title: DHT 22 - Temperature and Humidity Sensor
  <img src="lecture_dht22.assets/10167-02_pinout.jpg" alt="Annotated RHT03" style="width:400px;" /> 
 
 1. 3.3V
-2. Digital input
+2. Digital input (needs 10k pull-up resistor)
 3. No connection
 4. Ground
 
+## Wiring
 
+<img src="lecture_dht22.assets/dht22_bb.png" alt="dht22_bb" style="width:500px;" />
 
 ## Software Library
 
@@ -51,7 +53,7 @@ title: DHT 22 - Temperature and Humidity Sensor
 ```c++
 #define DHTPIN D3		//DHT connected pin
 #define DHTTYPE DHT22	//specific DHT model we have
-PietteTech_DHT DHT(DHTPIN, DHTTYPE); //DHT software object
+PietteTech_DHT dht(DHTPIN, DHTTYPE); //DHT software object
 ```
 
 ## ```setup()```
@@ -95,6 +97,7 @@ float k = dht.getTempKelvin();
 ## Credit
 
 * [Sparkfun](https://www.sparkfun.com/products/10167)
+* Diagrams created with [Frizting](https://fritzing.org)
 
 
 
