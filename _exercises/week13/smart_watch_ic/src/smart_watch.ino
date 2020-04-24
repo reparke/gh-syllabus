@@ -87,7 +87,7 @@ const int PIN_BUTTON = D3;
 int prevButtonState = HIGH;  // the last VERIFIED state
 int curButtonState;          // the current VERIFIED state
 long lastDebounceTime = 0;   // the last time the output pin was toggled
-long debounceDelay = 200;    // the debounce time; increase if the output
+long debounceDelay = 50;     // the debounce time; increase if the output
 
 //////////////////////////
 // States               //
@@ -143,10 +143,48 @@ void setup() {
 
 void runHeartScreen() {
   // for debugging
-  Serial.println("Time");
-  oled.clear(PAGE);  // Clear the display
-  oled.setCursor(0, 0);
-  oled.print("Time");
+  // oled.clear(PAGE);  // Clear the display
+  // oled.setCursor(0, 0);
+  // oled.print("Time");
+  // oled.display();
+  /*
+
+    Calculate most recent heart BPM
+    If heart rate is above a threshold
+        Display BPM
+    Else display ---
+    Display body temperature
+*/
+  calcHeartBeatAvg();
+  // debugging code
+  int irValue = heartRateSensor.getIR();
+  Serial.print("IR=");
+  Serial.print(irValue);
+  Serial.print(", BPM=");
+  Serial.print(beatsPerMinute);
+  Serial.print(", Avg BPM=");
+  Serial.println(beatAvg);
+
+  // if (irValue < LOW_IR_THRESHOLD) {
+  //   beatAvg = 0;
+  // }
+
+  if (beatAvg > LOW_BPM_THRESHOLD && irValue > LOW_IR_THRESHOLD) {
+    oled.clear(PAGE);
+    oled.drawBitmap(heart16x12);
+    oled.setFontType(1);  // small
+    oled.setCursor(20, 0);
+    oled.println(String(beatAvg));
+  } else {
+    oled.clear(PAGE);
+    oled.drawBitmap(heart16x12);
+    oled.setFontType(1);  // small
+    oled.setCursor(20, 0);
+    oled.println("---");
+  }
+  oled.setCursor(0, 20);
+  oled.print("Body\nTemp");
+  oled.print(String(heartRateSensor.readTemperatureF()));
   oled.display();
 }
 
@@ -202,19 +240,19 @@ void loop() {
       // if want to execute when button pressed down ONLY
       if (curButtonState == LOW) {
         currentState = getNextState(currentState);
-        switch (currentState) {
-          case TIME:
-            runTimeScreen();
-            break;
-          case HEART:
-            runHeartScreen();
-            break;
-          case WEATHER:
-            runWeatherScreen();
-            break;
-        }
       }
     }
+  }
+  switch (currentState) {
+    case TIME:
+      runTimeScreen();
+      break;
+    case HEART:
+      runHeartScreen();
+      break;
+    case WEATHER:
+      runWeatherScreen();
+      break;
   }
   prevButtonState = reading;  // update for next loop
 }

@@ -78,7 +78,7 @@ title: Accelerometer
 
 * Download starting code: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week14/accelerometer_start
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week12/accelerometer_start
 * Connect sensor and run example code
 * Recommended library for Argon
   * ```SparkFunMMA8452Q```
