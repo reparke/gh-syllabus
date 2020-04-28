@@ -7,6 +7,7 @@ category: lectures
 title: Accelerometer
 ---
 
+
 <!-- headingDivider: 2 -->
 
 # Accelerometers
@@ -107,7 +108,7 @@ if (accel.available()) {	//check if available
 ## Library Operations
 
 * Check for vibrations
-  * `accel.readTap()` returns boolean
+  * `accel.readTap()` greater than 0 is a vibration (*doesn't work with Argon library*)
 * Check orientation
   * `accel.readPL()` returns int value relating to orientation of sensor
 
