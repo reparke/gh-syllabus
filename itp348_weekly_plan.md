@@ -536,6 +536,7 @@
      - Activity
        - Check milestone (postponed to next week)
      - Lecture
+       - Discuss DHT 22
        - accelerometer
      - Lab
        - Use **tap** feature
@@ -548,8 +549,20 @@
 - Reading
   - 
 - Day 1
+  - Activity
+    - Check milestone 
   - Lecture
-    - Work on project 
+    - PIR sensor
+  - Lab
+    - Do basic wiring together
+    - ask students to enable longer delay-to-off time
+  - Lecture
+    - accelerometer
+  - Lab
+    - Copy example code for display graphs
+    - Use **tap** feature
+    - Use **portrait / landscape** detection
+    - Use accelerometer to control RGB LED (if time)
 - Day 2
   - Lecture
     - Work on project 
@@ -624,7 +637,7 @@
     - [Create bracket online](https://challonge.com/tournament/bracket_generator)
   - Day 2
   - Lecture
-    - Discuss DHT 22
+    - 
     - Discuss controlling devices from Losant
   - Lab
     - Revise firmware and Losant environment to support input controls (blink light on / off)
