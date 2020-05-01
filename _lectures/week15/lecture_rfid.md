@@ -56,12 +56,13 @@ title: RFID
 | Sensor | Argon                  |
 | ------ | ---------------------- |
 | 3.3v   | 3.3v                   |
-| GND    | GND                    |
 | Reset  | Any digital output pin |
-| SS     | Any digital output pin |
+| GND    | GND                    |
+| IRQ    | -                      |
 | MOSI   | MO                     |
 | MISO   | MI                     |
 | SCK    | SCK                    |
+| SDA    | Any digital output pin |
 
 ## RFID Library
 
