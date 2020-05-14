@@ -48,7 +48,7 @@ title: ThingSpeak Integration
 
 **Argon code**
 
-```C++
+```c++
 double temp;
 
 void loop() {
@@ -69,7 +69,7 @@ void loop() {
 
 <img src="lecture_thingspeak_integration.assets/image-20200404194632886.png" alt="image-20200404194632886" style="width:500px;" />
 
-## Example 2: Send Multiple Data PointsArgon to Thingspeak 
+## Example 2: Send Multiple Data Points from Argon to Thingspeak 
 
 **ThingSpeak channel settings**
 

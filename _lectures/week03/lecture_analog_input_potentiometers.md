@@ -12,14 +12,27 @@ title: Analog Input with Potentiometers
 
 # Analog Input
 
+## Plan
+
+* Analog vs. digital
+* Potentiometer
+* Voltage dividers
+* Reading analog input
+
+
+
 
 ## Analog vs. Digital
 <img src="lecture_analog_input_potentiometers.assets/analog-clock.png" alt="analog clock" style="width:500px" /> <img src="lecture_analog_input_potentiometers.assets/clock-997589_960_720.jpg" alt="digital clock" style="width:500px" />
 
 ## Analog vs. Digital
 
-* Analog: **infinite** variations / states
-* Digital: **discrete** (or **finite**) states
+| Analog                                                       | Digital                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <img src="lecture_analog_input_potentiometers.assets/analog-clock.png" alt="analog clock" style="width:300px" /> | <img src="lecture_analog_input_potentiometers.assets/clock-997589_960_720.jpg" alt="digital clock" style="width:300px" /> |
+| **infinite** variations / states                             | **discrete** (or **finite**) states                          |
+
+ 
 
 ## Potentiometer (Pot)
 
@@ -55,15 +68,15 @@ title: Analog Input with Potentiometers
 
 * **Vout** is the wiper (middle pin; connects to Argon analog input)
 * Inside the potentiometer is a resistor
-* As the knob moves, the wiper divides the resistor, and the ratio of resistance between *Vin-and-Wiper* and *Wiper-and-Gnd* varies
-* This is called a **variable voltages divider** *(more on this later)* 
+* As the knob moves, the wiper divides the resistor, and the ratio of resistance between ***Vin-and-Wiper*** and ***Wiper-and-Gnd*** varies
+* This is called a **variable voltage divider** *(more on this later)* 
 
-## Example
+## Question
 
 <img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:400px" />
 
-* With a 10K Ohm pot, if the wiper is exactly halfway, what is the resistance between Vout and Gnd?
-* If the wiper is all the way to the top, what is the resistance between Vout and Gnd?
+* With a 10K Ohm pot, if the wiper is exactly halfway, what is the resistance between **Vout** and **Gnd**?
+* If the wiper is all the way to the top, what is the resistance between **Vout** and **Gnd**?
 <!-- middle: 5K Ohms; 
 top: 10K ohms because it is the R between Vout and Gnd
 -->
@@ -73,15 +86,15 @@ top: 10K ohms because it is the R between Vout and Gnd
 <img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:400px" />
 
 * Argon input pins can measure **voltage**, not **resistance**
-* By connecting **Vin** (3.3v), **Gnd**, and **Vout** (wiper), we can now vary the **voltage** difference *Vin-and-Wiper* and *Wiper-and-Gnd*
+* By connecting **Vin** (3.3v), **Gnd**, and **Vout** (wiper), we can now vary the **voltage** difference ***Vin-and-Wiper*** and ***Wiper-and-Gnd***
 
 ## Voltage Dividers
 
 <img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:400px" />
 
 
-* If the wiper is exactly halfway, what is the voltage between Vout and Gnd?
-* If the wiper is all the way to the top, what is the voltage between Vout and Gnd?
+* If the wiper is exactly halfway, what is the voltage between **Vout** and **Gnd**?
+* If the wiper is all the way to the top, what is the voltage between **Vout** and **Gnd**?
 
 <!--  middle: 1.67v because the wiper is "seeing" halfway through the drop of 3.3v across the entire resistor; 
 bottom: 0v because Vout and Gnd are directly connected;
@@ -116,16 +129,22 @@ void loop() {
 }
 ```
 
-* Using our example of Vin=3.3v and a 10k potentiometer, what do you expect for the range of values of **potValue**?
+
+
+## Wiring Diagram 
+
+<img src="lecture_analog_input_potentiometers.assets/pot_bb.png" style="width:400px;" />
+
+* Using **Vin=3.3v** and a 10k potentiometer, what do you expect for the range of values of **potValue**?
 
 <!-- we would expect a range of 0-3.3v, but we will see with
 ADC that that is not what we get
 -->
 
-
-
 ## Credit
+
 - [Pixabay](https://pixabay.com/photos/potentiometer-guitar-electric-guitar-482082/)
 - [Pixabay](https://pixabay.com/vectors/variable-resistance-resistors-36565/)
 - [Sparkfun](https://learn.sparkfun.com/tutorials/resistors#types-of-resistors)
 - [Sparkfun](https://learn.sparkfun.com/tutorials/voltage-dividers)
+- Diagrams created with [Fritzing](https://fritzing.org)

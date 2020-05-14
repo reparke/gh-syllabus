@@ -64,6 +64,8 @@ title: RFID
 | SCK    | SCK                    |
 | SDA    | Any digital output pin |
 
+<!--This sensor has an SDA pin, but it is SPI, not I2C. It is really a data pin -->
+
 ## RFID Library
 
   * `MFRC522` is an Argon compatible library
