@@ -1,9 +1,9 @@
 ---
-week_assigned: 10
-number: 9
+week_assigned: 9
+number: 9 part 2
 category: assignment
 title: Bluetooth Car (part 2)
-date_due: Apr 7 @ in class
+date_due: Oct 20 @ in class
 
 ---
 Assignment 9 – Bluetooth Car part 2

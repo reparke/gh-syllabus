@@ -1,9 +1,9 @@
 ---
-week_assigned: 9
+week_assigned: 8
 number: 8
 category: assignment
 title: Alarm  Clock
-date_due: Mar 26 @ 11:59 pm
+date_due: Oct 13 @ 11:59 pm
 
 ---
 Assignment 8 – Alarm Clock
@@ -39,7 +39,7 @@ IFTTT.
 
 -   2 x push buttons (plus any necessary resistors)
 
--   Jumper wire (standard male-male)
+-   Jumper wire
 
 **Requirements**
 

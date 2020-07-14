@@ -1,6 +1,6 @@
 ---
 week_assigned: 10
-number: 9
+number: 11
 category: assignment
 title: Project
 date_due: Partial List of Components for Project 
@@ -43,9 +43,13 @@ This list include the components we covered in the course. You can also use comp
 * Servo
 * Car chassis
 * Buzzer
-* 
 
 ### Cloud Services
+
+* InitialState
+  * Storing data
+  * Graphic data
+  * Dashboard
 
 * ThingSpeak
   * Storing data

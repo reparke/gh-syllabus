@@ -1,9 +1,9 @@
 ---
-week_assigned: 4
+week_assigned: 3
 number: 3
 category: assignment
 title: Scanning Light
-date_due: Feb 10 @ 11:59 pm
+date_due: Sep 8 @ 11:59 pm
 ---
 
 Assignment 3 – Scanning Light
@@ -28,8 +28,7 @@ Goals
 This assignment is to create variable scanning / oscillating light pattern on 5
 LEDs. The scanning rate will be controlled with a potentiometer. This pattern is
 often seen in TV and films such as [KITT from Knight
-Rider](https://www.youtube.com/watch?v=WxE2xWZNfOc) and the [Cylons from
-Battlestar Galatica](https://youtu.be/-z-HQBfnwiA?t=5).
+Rider](https://www.youtube.com/watch?v=WxE2xWZNfOc) and the [Cylons from Battlestar Galatica](https://youtu.be/-z-HQBfnwiA?t=5).
 
 The light pattern will oscillate from right to left and back again. As the
 potentiometer is turned, the lights will blink faster or slower. However, in
@@ -52,7 +51,7 @@ Here is an example with 7 lights.
 
 -   1 x 10k Ohm potentiometer
 
--   Jumper wire (standard male-male)
+-   Jumper wire (standard header-header)
 
 **Requirements**
 
@@ -119,5 +118,4 @@ Grading
 | Total                             | 20     |
 
 
-*Inspiration for project from* [Dr. Peter
-Dalmaris](https://www.udemy.com/course/arduino-step-by-step-2017-getting-started-projects/)
+*Inspiration for project from* [Dr. Peter Dalmaris](https://www.udemy.com/course/arduino-step-by-step-2017-getting-started-projects/)

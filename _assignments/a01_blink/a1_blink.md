@@ -3,7 +3,7 @@ week_assigned: 1
 number: 1
 category: assignment
 title: Basic Blink
-date_due: Jan 20 @ 11:59 pm
+date_due: Aug 25 @ 11:59 pm
 ---
 
 Assignment 1 – Basic Blink
@@ -33,17 +33,8 @@ Goals
 
 -   The Argon can remember the settings for multiple Wifi networks (just like a
     phone). If you need to configure for a different network than the one you
-    first connected it, first connect the Argon via USB to your computer and
-    open Workbench
-
--   Go to **View \> Command Palette**
-
--   Type **Particle: Launch CLI**
-
--   In the new window, type  
-    **particle serial wifi --port COM4 –verbose**
-
--   Follow the instructions to connect to the new Wifi
+    first connected it, simply follow the instructions in the video again at https://docs.particle.io/quickstart/argon/#1-set-up-your-argonassignment when your phone is on the new Wifi network.
+    
 
 ### Create Workbench Project
 

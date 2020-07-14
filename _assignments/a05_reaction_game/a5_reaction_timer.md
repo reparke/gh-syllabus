@@ -1,9 +1,9 @@
 ---
-week_assigned: 6
+week_assigned: 5
 number: 5
 category: assignment
 title: Reaction Timer Game
-date_due: Feb 24 @ 11:59 pm
+date_due: Sep 22 @ 11:59 pm
 
 ---
 
@@ -43,7 +43,7 @@ your own design and modifications
 
 -   4 x push button (and any associated resistors)
 
--   Jumper wire (standard male-male)
+-   Jumper wire 
 
 **Requirements**
 

@@ -1,9 +1,9 @@
 ---
-week_assigned: 8
-number: 7
+week_assigned: 6
+number: 6
 category: assignment
 title: Shared Environment Monitor
-date_due: Mar 9 @ 11:59 pm
+date_due: Oct 6 @ 11:59 pm
 
 ---
 
@@ -49,7 +49,7 @@ Here is an example:
 
 -   1 x  push button (plus any necessary resistors)
 
--   Jumper wire (standard male-male)
+-   Jumper wire
 
 **Requirements**
 

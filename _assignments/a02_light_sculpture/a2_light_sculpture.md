@@ -1,9 +1,9 @@
 ---
-week_assigned: 3
+week_assigned: 2
 number: 2
 category: assignment
 title: Light Sculpture
-date_due: Feb 2 @ 11:59 pm
+date_due: Sep 1 @ 11:59 pm
 ---
 
 Assignment 2 – Light Sculpture
@@ -24,7 +24,7 @@ Goals
 This assignment is to create a physical art sculpture using the Argon and LEDs.
 The specifics of what the sculpture looks like or what it does is entirely up to
 you. You can put LEDs on a box, on a card, inside straws or ping-pongs, etc. One
-suggestion is that you can use “extending” jumper wires (female-male) to have
+suggestion is that you can use “extending” jumper wires (header-receptacle) to have
 the LEDs away from the breadboard. If you want to use these, ask the instructor.
 
 Some example are below.
@@ -43,20 +43,20 @@ Some example are below.
 
 -   Breadboard
 
--   3 x LEDs (or more)
+-   5 x LEDs (or more)
 
--   3 x 330 Ohm resistors
+-   5 x 330 Ohm resistors
 
--   Jumper wire (standard male-male)
+-   Jumper wire (standard header-header)
 
 -   Creative supplies for sculpture (e.g. cardboard box, straws, glue sticks,
     felt, paper, ping-pong balls, etc.)
 
--   Optional: extension jumper wires (female-male)
+-   Optional: extension jumper wires (receptacle-header)
 
 **Requirements**
 
--   Connect at least three LEDs to Argon
+-   Connect at least five LEDs to Argon
 
 -   Control LEDs on / off / blink from code
 
@@ -95,8 +95,8 @@ Grading
 -------
 
 | Item                                         | Points |
-|----------------------------------------------|--------|
-| Three LEDs used                              | 10     |
+| -------------------------------------------- | ------ |
+| Five LEDs used                               | 10     |
 | Appropriate resistors                        | 5      |
 | 3d sculpture (not just lights on breadboard) | 5      |
 |                                              |        |

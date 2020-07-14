@@ -13,7 +13,7 @@ menuPosition: 1
 
 # ITP 348 – Introduction to Physical Computing 
 
-# Spring 2020
+# Fall 2020
 
 ### Course Info
 
@@ -54,19 +54,12 @@ necessary.**
 
 ## Learning Objectives
 
--   Design and use common electronic components to build, simple circuits. 
-
--   Produce an electronic device that measures environmental conditions and
-    sends readings to a cloud storage platform. 
-
--   Produce an electronic device that produces effects in the physical world to
-    accomplish a task.
-
--   Build an interface app to enable communication between a user and a device.
-
--   Control a device from an interface app.
-
--   Plan features to account for accessibility.
+-   Design a device using a microcontroller and electronic components. 
+2.	Produce an embedded device that measures environmental conditions and sends readings to a cloud storage platform. 
+3.	Produce an embedded device that produces effects in the physical world to accomplish a task.
+4.	Build an interface app to enable communication between a user and a device.
+5.	Control a device from an interface app.
+6.	Describe accessibility challenges for an embedded device and suggest modifications.
 
 ## Learning Outcomes
 
@@ -77,7 +70,7 @@ necessary.**
 
 -   Use a microcontroller to communicate with sensors and motors
 
-**Prerequisite(s):** ITP 109 or ITP 165 or ITP 115 (equivalent courses or
+**Prerequisite(s):** ITP 115 or ITP 165 or ITP 109 (equivalent courses or
 knowledge will be considered)
 
 ### Format
@@ -138,12 +131,10 @@ individually and submitted on Blackboard.
 
 #### Schedule
 
-- Week 11 – Project assigned
-- Week 12 – Submit project proposal
-- Week 13 – Receive feedback on proposal; Revise and resubmit proposal if
-  necessary
-- Weeks 14 – Submit device schematic
-- Weeks 14 to 16 – Work on project (in-class milestone week 14)
+- Week 10 – Project assigned
+- Week 11 – Submit project proposal
+- Week 12 – Receive feedback on proposal; submit device schematic
+- Weeks 12 – 14 – Work on project (in-class milestone week 12)
 - Final exam period – Final presentation (Graded)
 
 #### Basic Requirements
@@ -266,26 +257,23 @@ submission that they intend to use a grace day.
 
 **Course Schedule: A Weekly Breakdown**
 
-|         | **Topics/Daily Activities**                                  | **Readings**  | **Assignment (given out on Tuesday; due one week Monday @ 11:59 pm)** |
-| ------- | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
-| Week 1  | Intro to Physical Computing / C++ Review                     | Posted online | A0 - Installation                                            |
-| Week 2  | Electricity, components, microcontrollers, Ohm’s Law, LEDs   | Posted online | A1 - Blink                                                   |
-| Week 3  | Interacting: analog to digital, buttons, serial              | Posted online | A2 - Light sculpture                                         |
-| Week 4  | Multicolored LEDs, software library, functions, variable resistors | Posted online | A3 - Scanning Light                                          |
-| Week 5  | Voltage dividers, photoresistors, RGB LEDs                   | Posted online | A4 - Dice                                                    |
-| Week 6  | SPI communication, OLED, temperature sensors                 | Posted online | A5 - Reaction Timer                                          |
-| Week 7  | Digital temperature sensors, serial vs. parallel, cloud functions, cloud variables | Posted online | A6 -- Shared Environment Monitor                             |
-| Week 8  | Piezobuzzers, ultrasonic sensor *(Fall break)*               | Posted online | A7 - Proximity alarm                                         |
-| Week 9  | Motion: DC motors, servos                                    | Posted online | A8                                                           |
-|         | *Spring break*                                               |               |                                                              |
-| Week 10 | Bluetooth, remote controlled car                             | Posted online | A9 - Motors                                                  |
-| Week 11 | Cloud platform, web and mobile apps                          | Posted online | Project proposal                                             |
-| Week 12 | Other sensors, accelerometers, processing, passive infrared sensors | Posted online | *(project proposal feedback given)*                          |
-| Week 13 | Accessibility                                                | Posted online | Proposal revision                                            |
-| Week 14 | Hardware startups *(Thanksgiving)*                           | Posted online | Project schematic                                            |
-| Week 15 | Advanced topics                                              | Posted online | *(work on project)*                                          |
-| Final   | Final project presentation                                   |               | Project code, device, app, in-class demo                     |
-|         |                                                              |               | Date: For the date and time of the final for this class, consult the USC *Schedule of Classes* at [www.usc.edu/soc](http://www.usc.edu/soc)*.* |
+|                 | **Topics/Daily Activities**                                  | **Readings**  | **Assignment (given out on Tuesday; due one week Monday @ 11:59 pm)** |
+| --------------- | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
+| Week 1          | Intro to Internet of Things (IoT), electricity, microcontrollers, Ohm’s Law, LEDs | Posted online | A0 and A1                                                    |
+| Week 2          | Analog to digital conversion, pulse width modulation, serial | Posted online | A2                                                           |
+| Week 3          | Digital input, multitasking                                  | Posted online | A3                                                           |
+| Week 4          | RGB LEDs, voltage dividers, photoresistors, cloud variables  | Posted online | A4                                                           |
+| Week 5          | Temperature sensors, SPI communication, OLED, cloud variables | Posted online | A5                                                           |
+| Week 6          | Cloud communication                                          | Posted online | A6                                                           |
+| Week 7          | Finite state machines, audio                                 | Posted online | A7                                                           |
+| Week 8          | Ultrasonic sensors, graphics, data dashboards                | Posted online | A8                                                           |
+| Week 9          | DC motors, servos, Bluetooth, remote controlled car          | Posted online | A9                                                           |
+| Week 10         | JSON, APIs, cloud  integration                               | Posted online | Project proposal                                             |
+| Week 11         | Wearables, accessibility, heart rate sensors, debouncing     | Posted online | Project schematic; *(project proposal feedback given)*       |
+| Week 12         | Accelerometers, digital temperature sensors                  | Posted online | *(work on project)*                                          |
+| Week 13         | RFID, passive infrared sensors                               | Posted online | *(work on project)*                                          |
+| Final (Week 14) | Final project presentation                                   | Posted online | Project code, device, app, in-class demo                     |
+|                 |                                                              |               | Date: For the date and time of the final for this class, consult the USC *Schedule of Classes* at [www.usc.edu/soc](http://www.usc.edu/soc)*.* |
 
 #### Academic Conduct
 

@@ -34,13 +34,13 @@ title: Kit Overview
 ## Recommendation for Organization
 
 - Store small components in parts box 
-<img src="assets/13867-01a.jpg" alt="Small box" style="width:300px" />
+<img src="lecture_kit_overview.assets/13867-01a.jpg" alt="Small box" style="width:300px" />
 
-- Alternatively, create store in individual small envelopes <img src="assets/md-5720202.jpg" alt="small envelopes" style="width:200px" />
+- Alternatively, create store in individual small envelopes <img src="lecture_kit_overview.assets/md-5720202.jpg" alt="small envelopes" style="width:200px" />
 
 ## Recommendation for Organization
 - Keep everything protected in large case 
-<img src="assets/SIK_V4-01.jpg" alt="large case" style="width:300px" />
+<img src="lecture_kit_overview.assets/SIK_V4-01.jpg" alt="large case" style="width:300px" />
 
 ## Particle Argon
 
@@ -48,7 +48,7 @@ title: Kit Overview
 - Similar to an Arduino, this is the "brains" of our projects (just like the processor in our computers)
 - Handle it carefully
 
-<img src="assets/Argon-Angled_750x750.jpg" alt="Argon" style="width:300px" />
+<img src="lecture_kit_overview.assets/Argon-Angled_750x750.jpg" alt="Argon" style="width:300px" />
 
 ## Credits
 

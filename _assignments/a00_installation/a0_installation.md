@@ -3,7 +3,7 @@ week_assigned: 1
 number: 0
 category: assignment
 title: Installation and Setup
-date_due: Jan 20 @ 11:59 pm
+date_due: Aug 25 @ 11:59 pm
 ---
 
 Assignment 0 – Installation and Setup
@@ -51,11 +51,9 @@ Install Fritzing
 
 >   Fritzing is a program to create visual layouts of device projects.
 
--   Open the internet browser of your choice and visit the site:
+-   ITP has paid for a Fritzing support license for the class. To download it, please go to the course Blackboard site and click on "Fritzing Download".
 
-    <http://fritzing.org/download/>
-
-- Download and install Particle Workbench
+- Download and install Fritzing, and then continue these instructions
 
   Install Fritzing Library for Argon
   ----------------

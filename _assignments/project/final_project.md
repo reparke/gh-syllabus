@@ -1,9 +1,9 @@
 ---
 week_assigned: 10
-number: 9
+number: 10
 category: assignment
 title: Project
-date_due: Proposal Apr 8 @ 11:59 pm; Milestone Apr 21 in-class; Finished device and presentation May 7 during final exam time
+date_due: Proposal Oct 27 @ 11:59 pm; Schematic Nov 10 @ 11:59pm; Finished device and presentation Nov 17 duing final exam time
 
 ---
 
@@ -81,7 +81,7 @@ the key functioning elements. Here is a [partial list of components and services
 Deliverables
 ------------
 
-**Proposal – due 4/8/20 at 11:59 pm**
+**Proposal**
 
 -   Write a proposal document with following details:
 
@@ -101,13 +101,13 @@ Deliverables
     will lose 10%*
 -   [Sample proposal](https://reparke.github.io/ITP348-Physical-Computing/assignments/project/samples/project_proposal_sample.pdf)
 
-**Project Milestone – in-class 4/26/20**
+**Project Milestone**
 
 -   Requirements
 
     -   Fritzing diagram
 
-**Project – final deliverables and demonstration due 5/7/29 during final exam time**
+**Project – final deliverables and demonstration due during final exam time**
 
 -   In-person demonstration
 
@@ -174,7 +174,7 @@ Grading
 | Features                                       | **4**  |
 | Budget                                         | **4**  |
 |                                                |        |
-| Project Milestone                              | **10** |
+| Project Milestone / Schematic                  | **10** |
 |                                                |        |
 | Final Device                                   |        |
 | Sensors                                        | **5**  |

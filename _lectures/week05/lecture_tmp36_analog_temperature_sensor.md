@@ -70,11 +70,10 @@ Now to fahrenheit
 * Connect a TMP36 and output the current temperature to the serial monitor
 * Consider what type of input is this signal? How will this value be read by Argon?
 
-<!-- This also tests a few C++ features
-Variable types: analog read value is INT, but voltage and temperature need to be DOUBLE
-Division: C++ division (in Cel->Fahr) needs to be between doubles
-
-Note: this picture is the BOTTOM VIEW, not top down
+<!-- This also tests a few C++ features 
+Variable types: analog read value is INT, but voltage and temperature need to be DOUBLE 
+Division: C++ division (in Cel->Fahr) needs to be between doubles 
+ Note: this picture is the BOTTOM VIEW, not top down
 -->
 
 

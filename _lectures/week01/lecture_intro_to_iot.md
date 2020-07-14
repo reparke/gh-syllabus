@@ -46,28 +46,28 @@ title: Intro to IoT
 - Mi.Mu / Imogen Heap (https://youtu.be/3QtklTXbKUQ?t=660)
 - Form - AR swim googles
 
-<img src="assets/form_googles.png" alt="width:500px" style="width:400px" />
+<img src="lecture_intro_to_iot.assets/form_googles.png" alt="width:500px" style="width:400px" />
 
 ## Examples: Education
   - Lumi - teach piano
   - Cubetto - learn programming without a screen
-<img src="assets\lumi.jpg" alt="width:500px" style="width:400px" /> <img src="assets/cubertto.jpg" alt="width:500px" style="width:400px" />
+<img src="lecture_intro_to_iot.assets\lumi.jpg" alt="width:500px" style="width:400px" /> <img src="lecture_intro_to_iot.assets/cubertto.jpg" alt="width:500px" style="width:400px" />
 
 ## Examples: Health
   - UFO - beauty mask
   - Jolt - concussion sensor for athletes
-<img src="assets\ufo_facemask.jpg" alt="width:500px" style="width:400px" /> <img src="assets/jolt.jpg" alt="width:500px" style="width:400px" />
+<img src="lecture_intro_to_iot.assets\ufo_facemask.jpg" alt="width:500px" style="width:400px" /> <img src="lecture_intro_to_iot.assets/jolt.jpg" alt="width:500px" style="width:400px" />
 
 ## Examples: Social Good
   - Grillo - early earthquake warnings in rural Mexico and Chile
   - ReWalk - exoskeleton to help people with spinal cord injuries
-<img src="assets/re_walk.jpg" alt="width:200px" style="width:400px" /><img src="assets\earthquake_monitor.png" alt="width:300px" style="width:400px" />
+<img src="lecture_intro_to_iot.assets/re_walk.jpg" alt="width:200px" style="width:400px" /><img src="lecture_intro_to_iot.assets\earthquake_monitor.png" alt="width:300px" style="width:400px" />
 
 ## What is IoT?
 
 ## Internet of Things
 
-<img src="assets/iot_cloud.jpg" alt="width:700px" style="width:400px" />
+<img src="lecture_intro_to_iot.assets/iot_cloud.jpg" alt="width:700px" style="width:400px" />
 
 ## Internet of Things
 
@@ -83,9 +83,9 @@ title: Intro to IoT
 |                                           |                                                      |
 | ----------------------------------------- | ---------------------------------------------------- |
 | 1. Basic prototype                        | 2. PCB prototype                                     |
-| <img src="assets/1564253817153.jpg" alt="height:150px" style="height:160px" /> | <img src="assets/16258754459_998d85ecb9_z.jpg" alt="height:150px" style="height:160px" /> |
+| <img src="lecture_intro_to_iot.assets/1564253817153.jpg" alt="height:150px" style="height:160px" /> | <img src="lecture_intro_to_iot.assets/16258754459_998d85ecb9_z.jpg" alt="height:150px" style="height:160px" /> |
 | 3. Manufacturing                          |                                                      |
-| <img src="assets/pcb_mfg.jpg" alt="height:160px" style="height:160px" />       |                                                      |
+| <img src="lecture_intro_to_iot.assets/pcb_mfg.jpg" alt="height:160px" style="height:160px" />       |                                                      |
 
    
 

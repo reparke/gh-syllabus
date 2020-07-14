@@ -1,10 +1,14 @@
-#### 		Things to implement
+## 		Things to implement
 
-* assignment 1: change wifi setup instructions to just describe "claiming a device" a second time
+* Create "behavioral norms"
+* wk1: record c++ review and create bb quiz
+* wk0: record introduction for students
+* wk1: record software tools for reference
+* general: try to incorporate `enum` or `switch` earlier in semester
 
-#### General Feedback (Fall 2019)
+## General Feedback (Fall 2019)
 
-* Assignment 0 is given out week 1, day 1; due week 2, day 1; that is the pattern
+* Assignment 0 and 1 are given out week 1, day 1; due week 2, day 1; that is the pattern
 * Develop a way to post readings on website
 * Try to integrate lectures, readings, assignments all on one webpage under "weeks"
 * students like being show a small bit of using a sensor, and then extending it on their own
@@ -12,275 +16,402 @@
 
   
 
-0. #### Pre-semester
+## Pre-semester
 
-    - [ ] Send students installation instructions
-    - [x] purchase items (see Evernote pre-semester tasks)
-    
-    - Reading
-      - Enabling the Internet of Things https://web.eecs.umich.edu/~prabal/teaching/resources/eecs582/want15iot.pdf
-    
-- Day 1 
-  - Lecture
-    - Course introduction / syllabus (PDF file)
-    - Ice breaker *(see slides in local ITP 348 Docs folder)*
-    - Introduction to IoT
-    - Possibly show this [mind map](https://www.mindmeister.com/1308604904?t=O0Vcty0Uys) from Boris Tomas
-  - Lab
-    - none
-- Day 2
-  
-  - Lecture
-  
-    - Pass out argons
-       - students are responsible for returning devices if they drop before drop deadline
-    - Kit Overview
-    - Software tools
-       - Workbench (open and discuss)
-       - Fritzing (open and show example project)
-    - Safety
-    - *Explain what particle does, cloud, flash (no slides)*
-   - Lab
-     
-     - Paper circuits
-     - Then ask student to complete a creative expression with multiple LEDs
-  - Assignment
-    - Due start of current week: none
-    - Given out start of current week: A0 - Software and tool installation
-  - ==Feedback==
-    - Day 2 "making project" was fun; ping pong balls and glue guns were a hit
-  
+- [ ] Send students installation instructions / video
+- [x] purchase items (see Evernote pre-semester tasks)
 
-2. #### Electricity, Microcontrollers, LEDs
-   
-   - Reading
-     - http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/
-     - https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all
-     
-   - Day 1
-     
-     - Support
-       - TA and I spent some time class helping install
-       - Demonstrate how to reset device and go to safe mode
-     - Lecture
-       * C++ Syntax
-       * Argon Microcontroller
-     - Lab
-       * Have students work in pairs to answer datasheet questions from Argon Microcontroller slide
-     - Lecture
-       - Electricity and Ohm's Law
-     - Lab
-       - Walk students through connecting LED + Resistor to VUSB on Argon
-         - Ask students how they would connect more than 1 LEDs
-         - Ask students how they would make LEDs blink
-       - ==Feedback==
-         - 1/3 students had seen C++ already (skipped over c++ slides quickly)
-         - Most students were familiar with electricity principles, units (kilo, milli) so the electricity presentation very simple
-         - Didn't get to finish Electricity lecture or get to lab; should have gone faster
-     
-   - Day 2
-     - Lecture: Open Workbench
-       * IDE like PyCharm
-       * Create project
-       * explain folder structure
-       * Walk through command palette
-       * Login, Target project
-     - Lecture
-       * Argon program structure
-       * Show students how to download and install fritzing parts
-     - Lab
-       * Let students try to complete blinking of three LEDs
-       * Build three LEDs; 
-       * show in Fritzing (students observe)
-       * show formal coding with variables (students code together)
-     - Lecture
-       - LEDs
-     - Lab
-       - just ask the question: Compare 10k ohm vs 330 ohm resistor
-     - Lecture
-       - Look at LED datasheet; calculate ideal resistance for LED
-     
-   - Assignment
-     
-     - Due start of current week: A0 - Software and tool installation
-     - Given out start of current week: A1 - Blink
-   
-   - Feedback
-     
-     - Day 2 generally went well; students wired three LEDs for about 20 minutes; should refine Ohms Law and explain math examples a little more
-   
-3. #### ADC, Potentiometers, Serial Monitor
+- Reading
+  - Enabling the Internet of Things https://web.eecs.umich.edu/~prabal/teaching/resources/eecs582/want15iot.pdf
 
-   - Reading
-     - https://learn.sparkfun.com/tutorials/analog-vs-digital/all
-     - https://learn.sparkfun.com/tutorials/pulse-width-modulation/all
-     - https://www.youtube.com/watch?v=GQLED3gmONg
-   - Day 1
-     - mention quiz topics for next week short in-class quiz
-     - Review calculation for choosing resistor for LED (if not done last week)
-     - Lecture
-       - Serial monitor
-     - Guided activity
-       - Do simple example where there is a global variable that gets incremented and display its value with Serial monitor
-     - Lecture
-       - Analog vs. digital
-       - Pulse width modulation, PWM pins, analogWrite 
-     - Lab
-       - Make light fully bright for 2 sec, half as bright for 2 sec, 1/3 as bright for 2 sec, 
-       - Challenge: Increase light level of LED automatically
-     - Lab
-       - Have students use for loop to sweep the brightness of an LED
-     - ==Feedback==
-       - Need to add additional material; could have gone fast through PWM and done more than just fade a LED
-   - Day 2
-     - Lecture
-       * C++ `for` loops
-     - Lecture
-       - Potentiometer, voltage dividers
-     - Lab
-     
-       - Have students connect pot to 3.3v, gnd, and A0; display the values
-     - Lecture
-     
-       - Analog to digital conversion; explain the math / conversion between voltage and input values
-     - Lab
-     
-       - Use potentiometer to control light level
-     - Extra
-       - If extra time, pull material from using multimeters
-     - Feedback
-       - a little slow; spent 20 min asking for course feedback which was helpful
-       - could have gone through multimeters
-   - Assignment
-     
-     - Due start of current week: A1 - Blink
-     - Given out start of current week: A2 - Light Sculpture (have students bring to class; ==bring camera==)
-   
-4. #### Buttons, RGB LEDs
+## 1. Intro, Microcontrollers, LEDs
 
-   - Reading
-     - https://learn.sparkfun.com/tutorials/pull-up-resistors
-   - Day 1
-     - ==Have students present light sculpture== Start class with presentations
-     - Guided activity
-       - Ask them to **digitalRead()** on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
-       - connect button with pullup
-       - Ask what is the voltage at pin when button pressed and not pressed
-     - Lecture
-       - Digital Input
-       - Push buttons: component, schematic, pull-up resistors
-     - Guided activity
-       * Fritzing explain
-       * Create button with resistors in Fritzing
-     - Guided activity
-       - Connect button with resistor on Argon
-     - Lab (students work on)
-       - Turn LED on while button pressed
-       - Turn LED off after button pressed
-       - Connect 3 LEDs and control on/off with button presses (3 states)
-     - Feedback
-       - Seemed to drag: Students finished first lab task and we reviewed solution. Would be better to go faster through slides and let them play, then have more time for other things
-   - Day 2 ==(skipped this lecture, and jumped to RGB LEDs; w5d1 was cancelled so this material wasn't covered)==
-     - Guided activity
-       - Latching button and debouncing (if time)
-     - Lecture
-       - Latching button and debouncing (==need to make slides==)
-     - Lecture
-       - Switch (==need to make slides==)
-         * connect middle pin to argon
-         * connect outer pins to power and ground
-         * when moving the switch, it connects either left two, or right two pins
-     - Guided activity
-       * Connect switch to enable: middle pin to enable pin, outer pin to power and ground
-       * enable and reset are active low
-   - Assignment
-     - Due start of current week: A2 - Light Sculpture 
-     - Given out start of current week: A3 - Cylon light 
-   - Feedback day 1
-     - 
-   
-5. #### Week 5
-   
-   - Reading
-     - https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
-   - Day 1
-     - **Have Quiz**
-     - Discussion
-       - how come when we turned the potentiometer on the cylon light, the blinking frequency didn't change right away? Get them to thinking delay / blocking
-     - Lecture
-       - RGB LED lecture
-     - Lab
-       - Display random color
-     - Lecture
-       - Functions in C++ *(this should be review from week 2)*
-     - Lab
-       - Button press trigger random color
-       - Rewrite sketch using `displayColor(r, g, b)` and `displayRandomColor()`
-       - cycle button presses to display C (BG) M (RB) Y (RG)
-     - Lecture
-       - Libraries
-     - Lab
-       - Have students find and install `rgb-controls`
-       - Ask them to create some colors effects on their own
-       - Then walk through example together
-       - If time, introduce a button to control states (idea of a state machine)
-     - Feedback
-       - All the content took most of the class, but it feel slow and dragged
-       - Try adding more content, or combining with LEDs?
-   - Day 2 
-     - Lecture
-       - Using multimeter
-     - Lab
-       - Have students measure resistance of pot when its out of a circuit
-       - Show fritzing drawing, and have them measure voltage
-     - Lecture
-       - TMP36
-     - Lab (in slides)
-       * Connect a TMP36 and output the current temperature to the serial monitor
-       * Consider what type of input is this signal? How will this value be read by Argon
-   - Assignment
-     - Due start of current week: A3 - Cylon light 
-     - Given out start of current week: A4 - Electronic dice 
-   
-6. #### Week 6
+### Reading / Video
 
-   - Reading (==Send this to students before class to watch==)
-     - https://www.khanacademy.org/science/ap-physics-1/ap-circuits-topic/kirchhoffs-loop-rule-ap/v/ee-kirchhoffs-voltage-law
+* http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/
+* https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all
+* Video discussion of C++ review (make little videos for functions); curate or record
+* Have short blackboard quiz
 
-   - Day 1
-     - Lecture
-       - Libraries
-       - Discuss OLED
-     - Lab
-       - Have students connect OLED to display "Hello World"
-     - Guided Activity
-       - Walk students through wiring
-     - Lab
-       - Have students create an Etch-A-Sketch with OLED
+### Day 1
 
-   - Day 2
-     - Lecture
-       - Reading resistors (lab exercise is built into slides)
-     - Experiential Learning
-       - Photoresistor part 1
-       - Discuss
-       - Photoresistor part 2
-       - Discuss
-       - Photoresistor part 3
-       - Discuss and show code
-     - Feedback
-       - some students enjoyed the exploration; others seemed a little lost
-       - change some things on the handout that were worded poorly
-       - create some short, simple photoresistor wiring notes
-       - One good thing was this followed learning about using the multimeter since the activity required it
-     - Lecture
-       - (if time) show derivation of mathematically deriving exact resistor to calibrate. Explain this is an important part of engineering
-   - Assignment
-      - Due start of current week: A4 - Electronic dice 
-      - Given out start of current week: A5 - Reaction Timer
-      - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
-   
-7. #### Week 7
+#### Lecture
+
+- Course introduction / syllabus
+- Ice breaker *(see slides in local ITP 348 Docs folder)* 
+- Introduction to IoT
+- Possibly show this [mind map](https://www.mindmeister.com/1308604904?t=O0Vcty0Uys) from Boris Tomas
+- Safety
+
+#### Lab
+
+- Paper circuits
+- Time permitting
+  - (on ground) ask student to complete a creative expression with multiple LEDs
+  - (online) have student connect Argon to USB and connect an LED to 3.3v
+  - Walk students through connecting LED + Resistor to VUSB on Argon
+    - Ask students how they would connect more than 1 LEDs
+    - Ask students how they would make LEDs blink
+  - just ask the question: Compare 10k ohm vs 330 ohm resistor
+
+### Day 2
+
+#### Lecture
+
+- Pass out argons 
+   - students are responsible for returning devices if they drop before drop deadline
+   - If online, students will already have these
+- Kit Overview
+- Software tools
+   - Workbench (open and discuss)
+   - Fritzing (open and show example project)
+
+#### Lecture
+
+* C++ Syntax (skip)
+* Argon Microcontroller
+
+#### Lab
+
+* Have students work in pairs to answer datasheet questions from Argon Microcontroller slide
+
+#### Lecture
+
+- Electricity and Ohm's Law
+- Argon program structure
+- LED and Digital output
+
+#### Lab
+
+- turn on LED
+
+#### Lecture (if time)
+
+- Look at LED datasheet; calculate ideal resistance for LED
+
+#### Feedback
+
+- Most students were familiar with electricity principles, units (kilo, milli) so the electricity presentation very simple
+- Didn't get to finish Electricity lecture or get to lab; should have gone faster
+
+#### Feedback
+
+- Day 2 "making project" was fun; ping pong balls and glue guns were a hit
+
+### Assignment
+
+- Due start of current week: none
+- Given out start of current week: A0 - Software and tool installation; A1 - Blink
+
+## 2. Pulse Width Modulation, ADC
+
+### Reading
+
+- Video: Software tools
+  - Lecture: Open Workbench
+    * IDE like PyCharm
+    * Create project
+    * explain folder structure
+    * Walk through command palette
+    * Login, Target project
+  - Show students how to download and install fritzing parts
+
+### Day 1
+
+#### Notes
+
+- TA and I spent some time class helping install
+- Demonstrate how to reset device and go to safe mode
+
+#### Lecture
+
+- Analog vs. digital
+- Pulse width modulation, PWM pins, analogWrite 
+
+#### Lab
+
+- Make light fully bright for 2 sec, half as bright for 2 sec, 1/3 as bright for 2 sec, 
+- Challenge: Increase light level of LED automatically
+
+#### Lab
+
+- Have students use for loop to sweep the brightness of an LED
+
+#### Lecture
+
+* C++ `for` loops
+
+#### Feedback
+
+- ==Need to add additional exercises==
+
+### Day 2
+
+#### Lecture
+
+- Serial monitor
+
+- Guided activity
+- Do simple example where there is a global variable that gets incremented and display its value with Serial monitor
+
+#### Lecture
+
+- Potentiometer, voltage dividers
+
+#### Lab
+
+- Have students connect pot to 3.3v, gnd, and A0; display the values on serial monitor
+
+#### Lecture
+
+- Analog to digital conversion; explain the math / conversion between voltage and input values
+
+#### Lab
+
+- Use potentiometer to control light level
+
+#### Lecture
+
+- Using multimeter (if time)
+
+#### Lab
+
+- Have students measure resistance of pot when its out of a circuit
+
+- Show fritzing drawing, and have them measure voltage
+
+#### Feedback
+
+- 
+
+#### Assignment
+
+- Due start of current week: A0 and A1 - Blink
+- Given out start of current week: A2 - Light Sculpture (have students bring to class; ==bring camera==) 
+
+## 3. Buttons, Digital Input, RGB
+
+### Reading
+
+- https://learn.sparkfun.com/tutorials/pull-up-resistors
+- https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
+
+### Day 1
+
+- ==Have students present light sculpture== Start class with presentations
+
+#### Guided activity
+
+- Ask them to **digitalRead()** on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
+- connect button with pullup
+- Ask what is the voltage at pin when button pressed and not pressed
+
+#### Lecture
+
+- Using multimeter
+
+#### Lab
+
+- Have students measure resistance of pot when its out of a circuit
+- Show fritzing drawing, and have them measure voltage
+
+#### Lecture
+
+- Digital Input
+- Push buttons: component, schematic, pull-up resistors
+
+#### Guided activity
+
+* Fritzing explain
+* Create button with resistors in Fritzing
+
+#### Guided activity
+
+- Connect button with resistor on Argon
+
+#### Lab (students work on)
+
+- Turn LED on while button pressed
+- Turn LED off after button pressed
+- Connect two LEDs
+
+#### Guided activity
+
+- Latching button (if time) ==identify way to program this==
+- Connect 3 LEDs and control on/off with button presses (3 states)
+
+#### Lecture
+
+- Latching button (==need to make slides==؟)
+- If no slides, draw picture of square wave
+
+#### Lecture (==if time==)
+
+- Reading resistors (lab exercise is built into slides)
+
+#### Feedback
+
+- 
+
+### Day 2
+
+#### Lecture
+
+- Switch
+  * connect middle pin to argon
+  * connect outer pins to power and ground
+  * when moving the switch, it connects either left two, or right two pins
+
+#### Guided activity
+
+* Connect switch middle pin to digital input pin, outer pin to power and ground
+* use serial monitor to display switch value
+
+#### Lecture
+
+- RGB LED lecture
+
+#### Lab
+
+- Display random color
+
+#### Lecture
+
+- Functions in C++ *(this should be review from week 2)*
+
+#### Lab
+
+- Button press trigger random color
+- Rewrite sketch using `displayColor(r, g, b)` and `displayRandomColor()`
+- cycle button presses to display C (BG) M (RB) Y (RG)
+
+#### Lecture
+
+- Libraries
+
+#### Lab
+
+- Have students find and install `rgb-controls`
+- Ask them to create some colors effects on their own
+- Then walk through example together
+- If time, introduce a button to control states (idea of a state machine)
+
+
+#### Feedback
+
+### Assignment
+
+- Due start of current week: A2 - Light Sculpture 
+- Given out start of current week: A3 - Cylon light 
+
+### Feedback 
+
+- 
+
+## 4. Multitasking, photoresistors
+
+### Reading
+
+* [Kirchoff's Voltage Law](https://www.khanacademy.org/science/ap-physics-1/ap-circuits-topic/kirchhoffs-loop-rule-ap/v/ee-kirchhoffs-voltage-law)
+
+### Day 1
+
+#### Lecture
+
+- Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
+- Multitasking with millis
+
+#### Lab
+
+- Review latching code from previous class; code together LED1 toggling with button
+- Then add LED2 blink have light blink to show delay is block so millis is needed
+- Rewrite with blink LED2 and toggle LED1 using millis
+- Then rewrite to remove toggle but have LEDs blink at different rates
+
+### Day 2 
+
+#### Interactive breakout
+
+* Photoresistor (work in groups)
+
+#### Lecture
+
+* Photoresistor
+
+#### Lab
+
+* Calibrate photoresistor
+
+#### Lecture (skip)
+
+- (if time) show derivation of mathematically deriving exact resistor to calibrate. Explain this is an important part of engineering
+
+#### Lecture
+
+- Particle Cloud variables
+
+#### Lab
+
+- publish photoresistor value and "state" (for example bright, ambient, or dark to Particle cloud)
+
+### Assignment
+
+- Due start of current week: A3 - Cylon light 
+- Given out start of current week: A4 - Electronic dice
+
+---
+
+left off here
+
+## 5. TMP36, Cloud Function, OLED
+
+### Day 1
+
+#### Lecture
+
+- TMP36
+
+#### Lab (in slides)
+
+* Connect a TMP36 and output the current temperature to the serial monitor
+* Consider what type of input is this signal? How will this value be read by Argon
+
+#### Lecture
+
+- Particle Cloud functions
+
+#### Lab
+
+- Connect RGB LED and have students remotely control it
+- 
+
+## Day 2
+
+#### Lecture
+
+- Libraries
+- Discuss OLED
+
+#### Lab
+
+- Have students connect OLED to display "Hello World"
+
+#### Guided Activity
+
+- Walk students through wiring
+
+#### Lab
+
+- Have students create an Etch-A-Sketch with OLED
+
+### Assignment
+
+- Due start of current week: A4 - Electronic dice 
+- Given out start of current week: A5 - Reaction Timer
+- Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
+
+
+3. #### Week 7
 
    - Reading
      - [Particle Cloud Functions](https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions)
@@ -321,14 +452,21 @@
        - Warn students that it was time consuming
        - **==IDEA==** make reaction timer a statemachine assignment and move forward (replace other assigment)
      - Given out start of current week: ==CREATE NEW ASSIGNMENT==
-   
-8. #### Week 8
+
+2. #### Week 8
 
    - Reading
      - ==Send wiring diagram out ahead of time==
    - Day 1
      - Lecture
-       - Switch and enum
+       - `Switch `statement (==maybeneed to pull from FSM==)
+     - Lab
+       - continue with LED and button
+       - Use button to change states
+       - Each button press changes state by increasing a counter, and switch changes blink rate
+       - Consider enum if time--enum could store state
+     - Lecture
+       -  enum
        - Finite state machines
      - Lab
        - Starting with sample code
@@ -345,8 +483,8 @@
    - Assignment
      - Due start of current week: ==CREATE NEW ASSIGNMENT== (if one is created)
      - Given out start of current week: A7 - Shared particle cloud temperature monitor
-   
-9. #### Week 9 - Soldering and Speaker
+
+3. #### Week 9 - Soldering and Speaker
 
    * Day 1
       * Soldering demo in EE lab
@@ -363,8 +501,8 @@
    * Assignment
       * Due start of current week: A7 - Shared environment monitor
       * Given out start of current week: A8 - Alarm clock
-   
-10. #### Week 10 - Motors and Servos
+
+4. #### Week 10 - Motors and Servos
 
    - ==need to order fan blades for students==
    - Reading
@@ -581,7 +719,27 @@
 
 ---
 
+**Use when extra time**
 
+- - 
+
+## Week 5
+
+#### Experiential Learning
+
+- Photoresistor part 1
+- Discuss
+- Photoresistor part 2
+- Discuss
+- Photoresistor part 3
+- Discuss and show code
+
+#### Feedback
+
+- some students enjoyed the exploration; others seemed a little lost
+- change some things on the handout that were worded poorly
+- create some short, simple photoresistor wiring notes
+- One good thing was this followed learning about using the multimeter since the activity required it
 
 **Skipped / Eliminated****
 

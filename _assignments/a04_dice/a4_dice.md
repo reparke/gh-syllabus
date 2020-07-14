@@ -1,9 +1,9 @@
 ---
-week_assigned: 5
+week_assigned: 4
 number: 4
 category: assignment
 title: Dice
-date_due: Feb 17 @ 11:59 pm
+date_due: Sep 15 @ 11:59 pm
 ---
 
 Assignment 4 – Dice
@@ -48,7 +48,7 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
 
 -   1 push button
 
--   Jumper wire (standard male-male)
+-   Jumper wire (standard header-header)
 
 **Requirements**
 
@@ -109,10 +109,8 @@ Grading
 
 Credits
 
--   Image by
-    [Clker-Free-Vector-Images](https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26772)
-    from
-    [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26772)
-
+-   Image by [Clker-Free-Vector-Images](https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26772)
+    from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26772)
+    
 -   Inspiration for project from [Dr. Peter
     Dalmaris](https://www.udemy.com/course/arduino-step-by-step-2017-getting-started-projects/)
