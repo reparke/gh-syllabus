@@ -4,7 +4,7 @@ theme: jekyll-theme-cayman
  
 courseName: ITP 348 - Intro to Physical Computing
 
-# small title that is at the top of every page
+# small title that is at the top of every page 
 subtitle: Course Content
 
 # baseurl is the same as the name of the repository
