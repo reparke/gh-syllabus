@@ -33,7 +33,10 @@ docsUrl: ""
 # url where the student's grading info is kept 
 gradingUrl: "https://blackboard.usc.edu" 
 
+#enable search to appear
 search: true
+#enable full-text search (could slow page load)
+search_full_content: true
 
 # change only if you know what you are doing
 collections:
