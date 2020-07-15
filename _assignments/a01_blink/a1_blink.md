@@ -4,6 +4,12 @@ number: 1
 category: assignments
 title: Basic Blink
 date_due: Aug 25 @ 11:59 pm
+
+layout: single
+toc: true
+toc_label: "Key Topics"
+toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
+classes: wide
 ---
 
 Assignment 1 – Basic Blink

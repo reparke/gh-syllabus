@@ -55,12 +55,16 @@ defaults:
       toc: true
       toc_label: "Key Topics"
       toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
-      classes: wide
+      toc_sticky: true
   - scope:
       path: ""
       type: assignments
     values:
       layout: single
+      toc: true
+      toc_label: "Key Topics"
+      toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
+      toc_sticky: true
   - scope:
       path: ""
       type: readings

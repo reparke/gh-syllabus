@@ -1,6 +1,13 @@
-# ITP 348 – Introduction to Physical Computing
+---
+header:
+  overlay_image: /assets/images/header.png
+  overlay_filter: rgba(153,0,0,0.3) # same as adding an opacity of 0.5 to a black background
+  show_overlay_excerpt: false
+  excerpt: ""
+---
 
-Welcome to the course page for ITP 348 - Introduction to Physical Computing! This course is offered by the [Information Technology Program](https://itp.usc.edu/) in the [Viterbi School of Engineering](https://viterbischool.usc.edu/) at the [University of Southern California](https://www.usc.edu)
+
+Welcome to the course page for **ITP 348 - Introduction to Physical Computing**! This course is offered by the [Information Technology Program](https://itp.usc.edu/) in the [Viterbi School of Engineering](https://viterbischool.usc.edu/) at the [University of Southern California](https://www.usc.edu)
 
 
 #### Course Links
