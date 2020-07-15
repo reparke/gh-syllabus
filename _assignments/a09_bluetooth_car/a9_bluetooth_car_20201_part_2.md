@@ -1,7 +1,7 @@
 ---
 week_assigned: 9
 number: 9
-category: assignment
+category: assignments
 title: Bluetooth Car (part 2)
 date_due: Oct 20 @ in class
 

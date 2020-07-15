@@ -1,8 +1,7 @@
 ---
 title: Resources
 layout: single
-menuItem: Resources
-menuPosition: 5
+category: Resources
 ---
 
 *[References](#references) - [Projects and Sensors](#project-and-sensor-ideas) - [Other Courses](#other-courses-materials)*

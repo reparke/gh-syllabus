@@ -1,7 +1,7 @@
 ---
 week_assigned: 4
 number: 4
-category: assignment
+category: assignments
 title: Dice
 date_due: Sep 15 @ 11:59 pm
 ---

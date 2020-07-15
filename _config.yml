@@ -17,7 +17,7 @@ breadcrumbs: true
 
 # configuration
 # fill in the course details
-courseName: ITP 348 - Intro to Physical Computing
+# courseName: ITP 348 - Intro to Physical Computing
 
 
 
@@ -46,15 +46,15 @@ defaults:
       path: ""
       type: lectures
     values:
-      layout: category
+      layout: posts
   - scope:
       path: ""
       type: assignments
     values:
-      layout: category
+      layout: posts
   - scope:
       path: ""
       type: readings
     values:
-      layout: category
+      layout: posts
 

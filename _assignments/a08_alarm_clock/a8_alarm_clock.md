@@ -1,7 +1,7 @@
 ---
 week_assigned: 8
 number: 8
-category: assignment
+category: assignments
 title: Alarm  Clock
 date_due: Oct 13 @ 11:59 pm
 

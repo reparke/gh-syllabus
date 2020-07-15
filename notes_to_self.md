@@ -9,3 +9,15 @@ When converting Word docs to Markdown using Writetage, the images are inserted u
   `\!\[([a-zA-Z0-9.\/=_\-\?\& :]*)\]\(([a-zA-Z0-9.\/=_\-\?\&\\]*)\)`
 - **replace**
   `<img src="$2" alt="$1" style="width:400px" />`
+
+  Theme
+  https://jekyllthemes.io/theme/minimal-mistakes
+
+  Installing theme
+  https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+  Installing Jekyll for local testing
+  https://docs.github.com/en/enterprise/2.14/user/articles/setting-up-your-github-pages-site-locally-with-jekyll
+
+  Customization
+  https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/

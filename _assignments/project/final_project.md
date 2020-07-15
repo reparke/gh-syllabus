@@ -1,7 +1,7 @@
 ---
 week_assigned: 10
 number: 10
-category: assignment
+category: assignments
 title: Project
 date_due: Proposal Oct 27 @ 11:59 pm; Schematic Nov 10 @ 11:59pm; Finished device and presentation Nov 17 duing final exam time
 

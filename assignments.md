@@ -1,15 +1,10 @@
 ---
 title: Assignments
 layout: category
-menuItem: Assignments
-menuPosition: 3
+category: assignments
 classes: wide
+
 ---
-
-{% if site.docsUrl != "" %}
-You can download all required reading in the [Study materials]({{ site.docsUrl }}) at the faculty website.
-{% endif %}
-
 
 
 <ul>

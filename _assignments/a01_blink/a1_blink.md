@@ -1,7 +1,7 @@
 ---
 week_assigned: 1
 number: 1
-category: assignment
+category: assignments
 title: Basic Blink
 date_due: Aug 25 @ 11:59 pm
 ---

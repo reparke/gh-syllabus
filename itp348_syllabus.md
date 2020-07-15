@@ -1,13 +1,10 @@
 ---
 title: Syllabus
 layout: single
-menuItem: Syllabus
-menuPosition: 1
+cateogory: syllabus
 ---
 
-# ITP 348 – Introduction to Physical Computing 
-
-# Fall 2020
+## Fall 2020
 
 ### Course Info
 

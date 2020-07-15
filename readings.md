@@ -1,15 +1,13 @@
 ---
 title: Readings
 layout: single
-menuItem: Readings
-menuPosition: 4
+category: Readings
+
 
 
 ---
 
-{% if site.docsUrl != "" %}
-You can download all required reading in the [Study materials]({{ site.docsUrl }}) at the faculty website.
-{% endif %} 
+
 * Week 2
   * [http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/](http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/)
   * [https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all)

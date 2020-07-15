@@ -1,11 +1,3 @@
----
-week_assigned: 6
-number: 6
-category: ADD CATEGORY
-title: Shared Environment Monitor
-date_due: TBD @ 11:59 pm
-
----
 
 Assignment 9 – ==NEED TO CREATE==
 =========================================

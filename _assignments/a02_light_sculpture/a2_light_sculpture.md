@@ -1,7 +1,7 @@
 ---
 week_assigned: 2
 number: 2
-category: assignment
+category: assignments
 title: Light Sculpture
 date_due: Sep 1 @ 11:59 pm
 ---
