@@ -1,6 +1,6 @@
 ---
 title: Resources
-layout: page
+layout: single
 menuItem: Resources
 menuPosition: 5
 ---

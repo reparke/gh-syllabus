@@ -1,6 +1,6 @@
 ---
 title: Lectures
-layout: page
+layout: single
 menuItem: Lectures
 menuPosition: 2
 

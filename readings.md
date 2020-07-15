@@ -1,6 +1,6 @@
 ---
 title: Readings
-layout: page
+layout: single
 menuItem: Readings
 menuPosition: 4
 

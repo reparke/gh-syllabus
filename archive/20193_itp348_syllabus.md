@@ -1,9 +1,4 @@
----
-title: Syllabus
-layout: page
-menuItem: -
-menuPosition: 1
----
+
 
 [University of Southern California](https://www.usc.edu)
 

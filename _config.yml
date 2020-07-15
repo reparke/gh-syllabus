@@ -1,25 +1,40 @@
-theme: jekyll-theme-cayman
+#added for new theme
+title: "ITP 348 - Intro to Physical Computing"
+#may need to use course name and title
+name: "Rob Parke"
+remote_theme: "mmistakes/minimal-mistakes@4.19.3"
+minimal_mistakes_skin: "air"
+plugins:
+  - jekyll-include-cache
+  
+description: "ITP 348 - Intro to Physical Computing @ USC (Open Educational Resource)"
+url: https://reparke.github.io
+repository: "reparke/ITP348-Physical-Computing"
+logo: "/assets/images/itp_logo_100x105.jpg"
+breadcrumbs: true
+
+#theme: jekyll-theme-cayman
+
 # configuration
 # fill in the course details
- 
 courseName: ITP 348 - Intro to Physical Computing
 
-# small title that is at the top of every page 
-subtitle: Course Content
+
+
+# small title that is at the top of every page
+# subtitle: Course Content
 
 # baseurl is the same as the name of the repository
-baseurl: /ITP348-Physical-Computing
+baseurl: /ITP348-Physical-Computing/
 
 # url where the required reading is available to download
 docsUrl: "" 
 
-# url where the student's grading info is kept
+# url where the student's grading info is kept 
 gradingUrl: "https://blackboard.usc.edu" 
 
 # change only if you know what you are doing
 collections:
-  syllabus:
-    output: true
   assignments:
     output: true
   lectures:
@@ -29,21 +44,17 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: syllabus
-    values:
-      layout: unit
-  - scope:
-      path: ""
       type: lectures
     values:
-      layout: unit
+      layout: category
   - scope:
       path: ""
       type: assignments
     values:
-      layout: unit
+      layout: category
   - scope:
       path: ""
       type: readings
     values:
-      layout: unit
+      layout: category
+

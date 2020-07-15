@@ -1,0 +1,17 @@
+main:
+  - title: "Syllabus"
+    url: /itp348_syllabus
+  - title: "Assignments"
+    url: /assignments
+  - title: "Lectures"
+    url: /Lectures/
+  - title: "Resources"
+    url: /resources
+  - title: "Readings"
+    url: /readings
+  - title: "Blackboard"
+    url: https://blackboard.usc.edu
+  - title: "Kit"
+    url: /kit
+  - title: "Piazza"
+    url: 

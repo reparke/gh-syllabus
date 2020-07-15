@@ -1,9 +1,9 @@
 ---
 title: Assignments
-layout: page
+layout: category
 menuItem: Assignments
 menuPosition: 3
-
+classes: wide
 ---
 
 {% if site.docsUrl != "" %}
@@ -20,6 +20,7 @@ You can download all required reading in the [Study materials]({{ site.docsUrl }
   	(Due: <b>{{ week.date_due }}</b>)</li>
 {% endfor %}
 </ul>
+
 
 
 
