@@ -2,6 +2,8 @@
 title: Lectures
 category: lectures
 layout: single
+classes: wide
+
 ---
 
 
