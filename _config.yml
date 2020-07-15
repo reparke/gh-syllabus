@@ -33,6 +33,8 @@ docsUrl: ""
 # url where the student's grading info is kept 
 gradingUrl: "https://blackboard.usc.edu" 
 
+search: true
+
 # change only if you know what you are doing
 collections:
   assignments:
@@ -46,15 +48,19 @@ defaults:
       path: ""
       type: lectures
     values:
-      layout: posts
+      layout: single
+      toc: true
+      toc_label: "Key Topics"
+      toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
+      classes: wide
   - scope:
       path: ""
       type: assignments
     values:
-      layout: posts
+      layout: single
   - scope:
       path: ""
       type: readings
     values:
-      layout: posts
+      layout: single
 

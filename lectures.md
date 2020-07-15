@@ -1,8 +1,7 @@
 ---
 title: Lectures
-layout: single
 category: lectures
-
+layout: single
 ---
 
 

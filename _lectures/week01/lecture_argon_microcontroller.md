@@ -6,7 +6,6 @@ paginate: true
 week: 1
 category: lectures
 title: Argon Microcontroller
-layout: posts
 
 footer: 'ITP 348 - Rob Parke - USC'
 ---
