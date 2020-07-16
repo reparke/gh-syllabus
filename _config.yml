@@ -3,15 +3,15 @@ title: "ITP 348 - Intro to Physical Computing"
 #may need to use course name and title
 name: "Rob Parke"
 remote_theme: "mmistakes/minimal-mistakes@4.19.3"
-minimal_mistakes_skin: "air"
+minimal_mistakes_skin: "itp"
 plugins:
   - jekyll-include-cache
   
 description: "ITP 348 - Intro to Physical Computing @ USC (Open Educational Resource)"
 url: https://reparke.github.io
 repository: "reparke/ITP348-Physical-Computing"
-logo: "/assets/images/itp_logo_100x105.jpg"
-breadcrumbs: true
+logo: "/assets/images/usc_monogram_gold_on_trans.png"
+breadcrumbs: false
 
 #theme: jekyll-theme-cayman
 
@@ -25,7 +25,7 @@ breadcrumbs: true
 # subtitle: Course Content
 
 # baseurl is the same as the name of the repository
-baseurl: /ITP348-Physical-Computing/
+baseurl: /ITP348-Physical-Computing
 
 # url where the required reading is available to download
 docsUrl: "" 
