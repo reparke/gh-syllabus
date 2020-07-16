@@ -41,7 +41,9 @@ $secondary-color: $gold !default;  //added by RP
   background-color: $masthead-background-color !important;
   color: $masthead-text-color;
 }
-
+.masthead__menu-item :hover { //added by RP
+  text-decoration-color:  $masthead-text-color  !important;
+}
 //popout nav bar options
 .greedy-nav .hidden-links { //added by RP
   background-color: $masthead-background-color !important;
@@ -49,9 +51,8 @@ $secondary-color: $gold !default;  //added by RP
 }
 
 //selected items in popout nav bar
-.hidden-links .masthead__menu-item:hover { //added by RP
-  // background-color: mix($masthead-background-color, $white,50%) !important;
-  background-color: #00ffff !important;
+.greedy-nav .hidden-links .masthead__menu-item :hover { //added by RP
+  background-color: mix($masthead-background-color, $white,50%) !important;
   color: $masthead-text-color;
 }
 
@@ -81,6 +82,11 @@ $secondary-color: $gold !default;  //added by RP
 //toc (within page) title bar
 .toc .nav__title {  //added by RP
   background-color: $gold !important;
+}
+
+//custom license footer
+.page__footer-license {
+  font-size: 0.75em;
 }
 
 

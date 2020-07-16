@@ -6,6 +6,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.19.3"
 minimal_mistakes_skin: "itp"
 plugins:
   - jekyll-include-cache
+  - jekyll-feed
   
 description: "ITP 348 - Intro to Physical Computing @ USC (Open Educational Resource)"
 url: https://reparke.github.io
