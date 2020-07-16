@@ -253,6 +253,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll
+  jekyll-feed
   jekyll-include-cache
   minimal-mistakes-jekyll
 
