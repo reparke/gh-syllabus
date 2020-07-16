@@ -39,6 +39,13 @@ search: true
 #enable full-text search (could slow page load)
 search_full_content: true
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-7460857-8"
+    anonymize_ip: false # default
+
+
 # change only if you know what you are doing
 collections:
   assignments:

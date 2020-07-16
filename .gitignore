@@ -6,8 +6,11 @@ _site/*
 # by GitHub pages for the .md files
 *.html
 
-#make sure to include custom site layout HTML
+# Force include all files and subfolders in custom 
+# site layout HTML
 !_includes/**
+!_layout/**
+
 
 # =============================
 # Particle Workbench specific .gitignore
