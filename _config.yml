@@ -79,3 +79,17 @@ defaults:
     values:
       layout: single
 
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/reparke/ITP348-Physical-Computing"
+    - label: "Wordpress"
+      icon: "fab fa-fw fa-wordpress"
+      url: "https://sites.usc.edu/parke"
+    - label: "ITP"
+      icon: ""
+      url: "https://itp.usc.edu"
+    - label: "USC"
+      icon: ""
+      url: "https://usc.edu"
