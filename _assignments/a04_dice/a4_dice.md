@@ -1,5 +1,5 @@
 ---
-week_assigned: 4
+week: 4
 number: 4
 category: assignments
 title: Dice

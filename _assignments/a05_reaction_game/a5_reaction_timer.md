@@ -1,5 +1,5 @@
 ---
-week_assigned: 5
+week: 5
 number: 5
 category: assignments
 title: Reaction Timer Game

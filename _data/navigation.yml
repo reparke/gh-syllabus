@@ -1,4 +1,6 @@
 main:
+  - title: "Schedule"
+    url: /schedule
   - title: "Syllabus"
     url: /itp348_syllabus
   - title: "Assignments"

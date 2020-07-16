@@ -1,5 +1,5 @@
 ---
-week_assigned: 10
+week: 10
 number: 10
 category: assignments
 title: Project

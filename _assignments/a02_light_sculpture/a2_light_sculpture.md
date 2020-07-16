@@ -1,5 +1,5 @@
 ---
-week_assigned: 2
+week: 2
 number: 2
 category: assignments
 title: Light Sculpture

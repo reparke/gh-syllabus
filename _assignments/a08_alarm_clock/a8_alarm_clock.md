@@ -1,5 +1,5 @@
 ---
-week_assigned: 8
+week: 8
 number: 8
 category: assignments
 title: Alarm  Clock

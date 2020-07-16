@@ -1,7 +1,7 @@
 ---
-week_assigned: 1
+week: 1
 number: 0
-category: assignment
+category: assignments
 title: Installation and Setup
 date_due: Aug 25 @ 11:59 pm
 ---

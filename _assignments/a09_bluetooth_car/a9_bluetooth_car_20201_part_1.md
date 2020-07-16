@@ -1,5 +1,5 @@
 ---
-week_assigned: 8
+week: 8
 number: 9
 category: assignments
 title: Bluetooth Car (part 1)

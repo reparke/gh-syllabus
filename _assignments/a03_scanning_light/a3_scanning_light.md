@@ -1,5 +1,5 @@
 ---
-week_assigned: 3
+week: 3
 number: 3
 category: assignments
 title: Scanning Light

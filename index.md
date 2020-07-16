@@ -14,6 +14,7 @@ Welcome to the course page for **ITP 348 - Introduction to Physical Computing**!
 
 You'll find course material and useful links on the side. 
 
+- [Week by Week Schedule](schedule.md) - Weekly schedule of lectures, assignments, readings
 - [Syllabus](itp348_syllabus.md) - Course plan, policies, and date
 - [Lectures](lectures.html) - HTML slides shows of lectures
 - [Assignments](assignments.html) - Assignment writeups
