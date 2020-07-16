@@ -1,5 +1,5 @@
 #make sure to include custom site layout HTML
-!_includes/*
+!_includes/**
 
 _site/*
 
