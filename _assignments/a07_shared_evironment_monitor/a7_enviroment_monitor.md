@@ -1,6 +1,6 @@
 ---
 week_assigned: 6
-number: 6
+number: 7
 category: assignments
 title: Shared Environment Monitor
 date_due: Oct 6 @ 11:59 pm

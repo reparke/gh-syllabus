@@ -1,0 +1,100 @@
+/* ==========================================================================
+   ITP skin
+   ========================================================================== */
+
+/* Exact Color Variables */ //added by RP
+$cardinal:  #990000;
+$gold: #FFCC00;
+$white: #fff;
+
+/* Colors */
+$background-color: #FAFAF0 !default;
+$text-color: #222831 !default;
+$masthead-primary-color:$white;                //added by RP
+$masthead-text-color:mix(#000, $masthead-primary-color, 10%)  !default;                //added by RP
+$muted-text-color: #393e46 !default;
+$primary-color: $cardinal !default;
+$border-color: mix(#fff, #393e46, 75%) !default;
+// $footer-background-color: $primary-color !default;
+$footer-background-color: #000 !default;
+$link-color:$cardinal!default;
+// $masthead-link-color: $text-color !default;
+$masthead-link-color: $masthead-text-color !default;
+// $masthead-link-color-hover: $text-color !default;
+
+$masthead-link-color-hover: $gold !default;
+$navicon-link-color-hover: $gold !default;
+
+
+$masthead-background-color: $cardinal !default;  //added by RP
+$secondary-color: $gold !default;  //added by RP
+
+/* Rules */
+//overall title bar
+.masthead { //added by RP
+  background-color: $masthead-background-color !important;
+  color: $masthead-text-color;
+}
+
+//smaller top nav bar
+.greedy-nav { //added by RP
+  background-color: $masthead-background-color !important;
+  color: $masthead-text-color;
+}
+.masthead__menu-item :hover { //added by RP
+  text-decoration-color:  $masthead-text-color  !important;
+}
+//popout nav bar options
+.greedy-nav .hidden-links { //added by RP
+  background-color: $masthead-background-color !important;
+  color: $masthead-text-color;
+}
+
+//selected items in popout nav bar
+.greedy-nav .hidden-links .masthead__menu-item :hover { //added by RP
+  background-color: mix($masthead-background-color, $white,50%) !important;
+  color: $masthead-text-color;
+}
+
+//navbar popout graphic
+.greedy-nav__toggle {  //added by RP
+  background-color:  $masthead-text-color  !important;
+
+}
+
+//navbar popout graphic hover
+.greedy-nav__toggle:hover {  //added by RP
+  background-color:  $gold  !important;
+
+}
+
+//navbar search icon
+.search__toggle {  //added by RP
+  color: $masthead-text-color !important;
+}
+
+//navbar search icon hover
+.search__toggle:hover {  //added by RP
+  color: $gold !important;
+}
+
+
+//toc (within page) title bar
+.toc .nav__title {  //added by RP
+  background-color: $gold !important;
+}
+
+//custom license footer
+.page__footer-license {
+  font-size: 0.75em;
+}
+
+
+/* from original theme */
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
