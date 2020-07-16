@@ -1,6 +1,3 @@
-#make sure to include custom site layout HTML
-!_includes/**
-
 _site/*
 
 # HTML files
@@ -8,6 +5,9 @@ _site/*
 # However, students prefer the single text page that is generated
 # by GitHub pages for the .md files
 *.html
+
+#make sure to include custom site layout HTML
+!_includes/**
 
 # =============================
 # Particle Workbench specific .gitignore
