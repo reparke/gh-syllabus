@@ -82,12 +82,26 @@ $secondary-color: $gold !default;  //added by RP
 //toc (within page) title bar
 .toc .nav__title {  //added by RP
   background-color: $gold !important;
+  color:$text-color !important;
 }
 
 //custom license footer
 .page__footer-license {
   font-size: 0.75em;
 }
+
+
+//used in schedule.md
+.weekly_schedule_content_area {
+  margin-left:1em;
+}
+.weekly_schedule_content_label{
+  font-weight: normal;
+  margin-top: 1em;
+}
+// .weekly_schedule_content_item{
+
+// }
 
 
 /* from original theme */

@@ -1,5 +1,5 @@
 ---
-title: Schedule
+title: Weekly Schedule
 layout: single
 toc: true
 toc_label: "Quick Links"
@@ -15,28 +15,45 @@ toc_sticky: true
 {% for weeks in all_items %}
 
 <h2 id="week_{{ weeks.name }}">Week - {{ weeks.name }}<a class="header-link" href="#week_{{ weeks.name }}" title="Permalink"><!-- <i class="fa fa-link"></i> --></a></h2>
-
-  <h3 class="no_toc">Lectures</h3>
-  <ul>
-    {% assign content_items = weeks.items %}
-    {% for item in content_items %}
-      {% if item.category == "lectures" %}
-        <li>
-          <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-  <h3 class="no_toc">Assignments</h3>
-  <ul>
-    {% assign content_items = weeks.items %}
-    {% for item in content_items %}
-      {% if item.category == "assignments" %}
-        <li>
-          <a href="{{ site.baseurl }}{{ item.url }}">#{{ item.number}} - {{ item.title }}</a> 
-        (Due: <b>{{ item.date_due }}</b>)
-        </li>    
-      {% endif %}
-    {% endfor %}
-  </ul>
+<div class="weekly_schedule_content_area">
+    <h3 class="no_toc weekly_schedule_content_label">Reading / Video (pre-lecture material)</h3>
+    <ul><li class="weekly_schedule_content_item">TBD</li></ul>
+    <ul>
+      {% assign content_items = weeks.items %}
+      {% for item in content_items %}
+        {% if item.category == "reading" %}
+          <li class="weekly_schedule_content_item">
+            <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="weekly_schedule_content_area">
+    <h3 class="no_toc weekly_schedule_content_label">Lectures</h3>
+    <ul>
+      {% assign content_items = weeks.items %}
+      {% for item in content_items %}
+        {% if item.category == "lectures" %}
+          <li class="weekly_schedule_content_item">
+            <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="weekly_schedule_content_area">
+    <h3 class="no_toc weekly_schedule_content_label">Assignments</h3>
+    <ul>
+      {% assign content_items = weeks.items %}
+      {% for item in content_items %}
+        {% if item.category == "assignments" %}
+          <li class="weekly_schedule_content_item">
+            <a href="{{ site.baseurl }}{{ item.url }}">#{{ item.number}} - {{ item.title }}</a> 
+          (Due: <b>{{ item.date_due }}</b>)
+          </li>    
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 {% endfor %}
