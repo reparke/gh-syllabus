@@ -1,3 +1,7 @@
+---
+layout: single
+classes: wide
+---
 ## 		Things to implement
 
 * Create "behavioral norms"
