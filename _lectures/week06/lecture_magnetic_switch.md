@@ -2,29 +2,33 @@
 marp: true
 theme: itp
 
-week: 5
+week: 6
 category: lectures
-title: Enum
+title: Magnetic Switch
 
 ---
 
 <!-- headingDivider: 2 -->
 
-# Enum
-<img src="lecture_tmp36_analog_temperature_sensor.assets/10988-01-1567639528368.jpg" alt="Temperature Sensor - TMP36" style="width:550px" />
+# Magnetic Switch
 
-## TMP 36
+<img src="lecture_magnetic_switch.assets/magnetic_switch.jpg" style="width:600px;" />
 
-* Analog temperature sensor
-* Measures environment temperature and returns a voltage
+##  Magnetic Switch
+
+* Switch is "normally open" (open circuit)
+* Switch is activated / closed (completing the circuit) when placed near a magnet
+* Often used in Measures environment temperature and returns a voltage
 * Output voltage is linearly proportional to temperature
   * What does this mean?
 
 
 
-## TMP 36
+## How Reed Switches Work
 
-<img src="lecture_tmp36_analog_temperature_sensor.assets/1567471132352.png" alt="Temperature Sensor - TMP36" style="width:800px" />
+<img src="lecture_magnetic_switch.assets/Reed_switch_(aka).jpg" alt="image-20200716183944885" style="zoom:width:400px" />
+
+
 
 
 
@@ -79,9 +83,8 @@ Division: C++ division (in Cel->Fahr) needs to be between doubles
 
 ## Credit
 
-- [Analog datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Temp/TMP35_36_37.pdf)
-- [Sparkfun](https://www.sparkfun.com/products/10988)
-- Images created with [Fritzing](https://fritzing.org/home/)
+- André Karwath ([image](https://en.wikipedia.org/wiki/Reed_switch#/media/File:Reed_switch_(aka).jpg), [license](https://creativecommons.org/licenses/by-sa/2.5/deed.en))
+- [Sparkfun](https://www.sparkfun.com/products/13247)
 
 
 

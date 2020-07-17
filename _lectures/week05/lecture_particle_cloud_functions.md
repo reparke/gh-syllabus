@@ -4,7 +4,7 @@ theme: itp
 
 week: 4
 category: lectures
-title: Cloud Communication - Accessing Variables
+title: Cloud Communication - Calling Functions
 ---
 
 <!-- headingDivider: 2 -->
@@ -16,17 +16,18 @@ title: Cloud Communication - Accessing Variables
 
 ## Review: Particle Cloud Features
 
+**Does**
+
 * Update device code and firmware
-* Receive status messages (like we do with Serial monitor)
+* Receive status messages 
+
 * Read the values of variables
 * Control device / execute function calls
 
-## Review: Particle Cloud Does NOT
+**Does NOT**
 
 * Store data from device 
-  * Ex. the hourly temperature for the past 6 months)
 * Run analytics
-  * Ex. how often does one of my 4,000 device fail)
 * Manage device with publicly-accessible web/mobile 
 
 ## Review: Key operations in Particle Cloud

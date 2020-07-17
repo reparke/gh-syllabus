@@ -365,9 +365,7 @@ title: Weekly Plan
 - Due start of current week: A3 - Cylon light 
 - Given out start of current week: A4 - Electronic dice
 
----
 
-left off here
 
 ## 5. TMP36, Cloud Function, OLED
 
@@ -389,7 +387,10 @@ left off here
 #### Lab
 
 - Connect RGB LED and have students remotely control it
-- 
+
+#### Lecture
+
+* Consider covering `switch` to handle cloud function calls
 
 ## Day 2
 
@@ -416,99 +417,134 @@ left off here
 - Given out start of current week: A5 - Reaction Timer
 - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
+## Week 7
 
-3. #### Week 7
+### Reading
 
-   - Reading
-     - [Particle Cloud Functions](https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions)
-     - Have students create an [IFTTT account](https://ifttt.com/) 
-   - Day 1
-     - Lecture
-       - Particle Cloud API
-       - Magnetic switch (no slides)
-       <!-- connect one pin with pullup resistor to power and argon; other pin to gnd; 
-         HIGH means open circuit; 
-         LOW means closed circuit-->
-     - Lab
-       - wire switch (show fritzing)
-       - publish switch event in console
-       - publish variable
-       - create function to turn off/on LED
-       - subscribe to variable -- work in pairs 
-         - create unique event ITP348/Door/<<UNIQUE_NAME>>
-   - Day 2
-     - Lecture
-       - Continue with Particle cloud
-     - Lecture
-       - IFTTT
-     - Guided activity
-       - set up IFTTT [https://ifttt.com/create](https://ifttt.com/create)
-       - Install iOS / Android app
-       - how do create an alarm?
-         - If Particle - Publish <event name> open
-         - Then send notification
-         - Could enhance by using your location
-         - set up location trigger to enter or exit that sets a variable
-         - then change publish event
-       - **Ask students to work in pairs and come up with a cool idea**
-   - Feedback
-     - Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
-   - Assignment
-     - Due start of current week: A5 - Reaction Timer
-       - Warn students that it was time consuming
-       - **==IDEA==** make reaction timer a statemachine assignment and move forward (replace other assigment)
-     - Given out start of current week: ==CREATE NEW ASSIGNMENT==
+- [Particle Cloud Functions](https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions)
+- Have students create an [IFTTT account](https://ifttt.com/) 
 
-2. #### Week 8
+### Day 1
 
-   - Reading
-     - ==Send wiring diagram out ahead of time==
-   - Day 1
-     - Lecture
-       - `Switch `statement (==maybeneed to pull from FSM==)
-     - Lab
-       - continue with LED and button
-       - Use button to change states
-       - Each button press changes state by increasing a counter, and switch changes blink rate
-       - Consider enum if time--enum could store state
-     - Lecture
-       -  enum
-       - Finite state machines
-     - Lab
-       - Starting with sample code
-       - walk through NS light state transitions (length, state)
-       - use delay() (not millis)
-     - Feedback
-       - next day cover millis, then rest of light blinking
-       - some students enjoyed the complexity of all parts, other seemed bored
-   - Day 2
-     - Continued with FSM
-   - Feedback
-     - Students felted overwhelmed with FSM, switch, and enum all at once
-     - Better to introduce them slowly over time and build up to complicated stoplight example
-   - Assignment
-     - Due start of current week: ==CREATE NEW ASSIGNMENT== (if one is created)
-     - Given out start of current week: A7 - Shared particle cloud temperature monitor
+#### Lecture
 
-3. #### Week 9 - Soldering and Speaker
+- Particle Cloud: publish and subscribe
+- Magnetic switch (no slides)
+<!-- connect one pin with pullup resistor to power and argon; other pin to gnd; 
+  HIGH means open circuit; 
+  LOW means closed circuit-->
 
-   * Day 1
-      * Soldering demo in EE lab
-      * had students build sparkfun flashlight
-      * Then Neftali did a quick demo of how to lay out a simple PCB in Fritzing
-   * Feedback
-     * Took about 1 hour
-     * soldering was fun but really simple. It would be cool to have a second, more complex circuit
-   * Day 2
-     * Lecture
-       * Speaker
-       * Tone
-       * Pitches
-   * Assignment
-      * Due start of current week: A7 - Shared environment monitor
-      * Given out start of current week: A8 - Alarm clock
+#### Lab
 
-4. #### Week 10 - Motors and Servos
+- wire switch (show fritzing)
+- publish switch event in console
+- publish variable
+- create function to turn off/on LED
+- subscribe to variable -- work in pairs 
+  - create unique event ITP348/Door/<<UNIQUE_NAME>>
+
+#### Lecture
+
+* ==need more here==
+
+### Day 2
+
+#### Lecture
+
+- IFTTT
+
+#### Guided activity
+
+- set up IFTTT [https://ifttt.com/create](https://ifttt.com/create)
+- Install iOS / Android app
+- how do create an alarm?
+  - If Particle - Publish <event name> open
+  - Then send notification
+  - Could enhance by using your location
+  - set up location trigger to enter or exit that sets a variable
+  - then change publish event
+- **Ask students to work in pairs and come up with a cool idea**
+
+#### Feedback
+
+- Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
+
+#### Assignment
+
+- Due start of current week: A5 - Reaction Timer
+  - Warn students that it was time consuming
+  - **==IDEA==** make reaction timer a statemachine assignment and move forward (replace other assigment)
+- Given out start of current week: ==CREATE NEW ASSIGNMENT==
+
+## Week 8
+
+### Reading
+
+- ==Send wiring diagram out ahead of time==
+
+### Day 1
+
+#### Lecture
+
+- `Switch `statement (==maybeneed to pull from FSM==)
+
+#### Lab
+
+- continue with LED and button
+- Use button to change states
+- Each button press changes state by increasing a counter, and switch changes blink rate
+- Consider enum if time--enum could store state
+
+#### Lecture
+
+- enum
+- Finite state machines
+
+#### Lab
+
+- Starting with sample code
+- walk through NS light state transitions (length, state)
+- use delay() (not millis)
+
+### Feedback
+
+- next day cover millis, then rest of light blinking
+- some students enjoyed the complexity of all parts, other seemed bored
+
+### Day 2
+
+- Continued with FSM
+
+### Feedback
+
+- Students felted overwhelmed with FSM, switch, and enum all at once
+- Better to introduce them slowly over time and build up to complicated stoplight example
+
+### Assignment
+
+- Due start of current week: ==CREATE NEW ASSIGNMENT== (if one is created)
+- Given out start of current week: A7 - Shared particle cloud temperature monitor
+
+## Week 9 - Soldering and Speaker
+
+* Day 1
+   * Soldering demo in EE lab
+   * had students build sparkfun flashlight
+   * Then Neftali did a quick demo of how to lay out a simple PCB in Fritzing
+* Feedback
+  * Took about 1 hour
+  * soldering was fun but really simple. It would be cool to have a second, more complex circuit
+* Day 2
+  * Lecture
+    * Speaker
+    * Tone
+    * Pitches
+* Assignment
+   * Due start of current week: A7 - Shared environment monitor
+   * Given out start of current week: A8 - Alarm clock
+
+
+1. #### Week 10 - Motors and Servos
 
    - ==need to order fan blades for students==
    - Reading
