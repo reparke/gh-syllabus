@@ -15,18 +15,18 @@ This list include the components we covered in the course. You can also use comp
 ### Sensors
 
 -   Temperature sensors
-    -   TMP 36
-    -   DHT 22
--   Humidity sensor: DHT 22
--   Ultrasonic distance sensor
--   PIR (infrared movement detection)
--   MAX30102 heart rate and temperature sensor
+    -   [TMP 36](https://www.sparkfun.com/products/10988)
+    -   [DHT 22](https://www.sparkfun.com/products/10167)
+-   Humidity sensor: [DHT 22](https://www.sparkfun.com/products/10167)
+-   [Ultrasonic distance sensor](https://www.sparkfun.com/products/15569)
+-   [Passive infrared sensor (PIR)](https://www.sparkfun.com/products/13285) (infrared movement detection)
+-   [MAX30105 heart rate and temperature sensor](https://www.sparkfun.com/products/14045)
 -   RGB sensor + gesture detection sensor
--   RFID sensor 
--   Infrared sensor
+-   [RFID sensor](https://www.amazon.com/gp/product/B01CSTW0IA) 
+-   [Infrared sensor](https://www.sparkfun.com/products/246)
 
-* Accelerometer
-* Piezo movement detector
+* [Accelerometer](https://www.sparkfun.com/products/14480)
+* [Piezo movement detector](https://www.sparkfun.com/products/10293)
 
 ### Environmental Interaction
 
@@ -41,25 +41,29 @@ This list include the components we covered in the course. You can also use comp
 
 * DC motors + motor driver
 * Servo
-* Car chassis
 * Buzzer
+
+### In-class projects
+
+* Bluetooth-controlled car
+* Smart watch (heart rate + weather)
 
 ### Cloud Services
 
-* InitialState
+* [InitialState](https://www.initialstate.com/)
   * Storing data
   * Graphic data
   * Dashboard
 
-* ThingSpeak
+* [ThingSpeak](https://thingspeak.com/)
   * Storing data
   * Graphic data
   * Dashboard
-* Tinamous
+* [Tinamous](https://www.tinamous.com/)
   * Storing data
   * Graphic data
-* IFTTT
-* Losant
+* [IFTTT](https://www.ifttt.com/)
+* [Losant](https://www.losant.com/)
   * Storing data
   * Graphic data
   * Dashboard

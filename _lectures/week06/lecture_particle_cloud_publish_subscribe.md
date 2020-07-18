@@ -109,11 +109,25 @@ Particle.publish("tempFahr", String(85.9), PRIVATE);
 * Names and values must always be strings
 * Should only publish 1 event / sec (or burst of 4 events in 1 sec)
 
+## Lab
 
+* Wire diagram with switch and RGB LED
+* Create cloud variable state (make `isDoorOpen` variable)
+  * What kind of variable should this be?
+* Publish cloud event with state if `isDoorOpen`
+  * Event name should be 
+    `ITP348/Door/<<YOUR_INITIALS>>`
 
+## Lab
 
+<img src="lecture_particle_cloud_publish_subscribe.assets/switch-magnetic-door_and_rgb_led_bb-1594972874666.png" style="width:600px;" />
 
-##  
+##  Key operations
+
+* Accessing data (cloud variables)
+* Control device (cloud functions)
+* Publishing (events part 1)
+* **Subscribing (events part 2)**
 
 ## Events Part 2: Subscribing to Events 
 
@@ -190,6 +204,17 @@ void setup() {
 ```
 * `MY_DEVICES` subscribes to PRIVATE events
 * `ALL_DEVICES` subscribes to PUBLIC events
+
+## Lab
+
+* Working in pairs, have an "open door" on one student's device
+  change the LED color on the other student's device
+  * Create event handler
+  * Register subscriber for the *other* student's event
+    `ITP348/Door/<<THEIR_INITIALS>>`
+* LED colors
+  * Red means "door is open"
+  * White means "door is closed"
 
 ## Documentation
 

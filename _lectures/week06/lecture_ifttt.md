@@ -52,6 +52,10 @@ title: IFTTT
 * Publish an event (need to **subscribe**)
 * Call a function (uses **function**)
 
+## Lab
+
+<img src="lecture_ifttt.assets/switch-magnetic-door_and_rgb_led_bb.png" style="width:500px;" />
+
 ## Documentation
 
 * [Particle IFTTT Tutorial](https://docs.particle.io/tutorials/integrations/ifttt/#introduction)

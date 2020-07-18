@@ -93,3 +93,18 @@ footer:
     - label: "USC"
       icon: ""
       url: "https://usc.edu"
+
+calendar:
+  semester_start_sunday: 2020-08-16 00:00:00 -0700
+  semester_num_weeks: 14
+  semester_has_spring_break: false
+  semester_week_of_spring_break: 8
+  seconds_to_start_next_week: 604800
+  seconds_to_end_current_week: 604799
+  col_week_number: 0
+  col_is_spring_break: 1
+  col_end_current_week: 2
+  col_start_next_week: 3
+
+
+# Speed up build by excluding folders

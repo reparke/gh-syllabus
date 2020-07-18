@@ -18,73 +18,45 @@ title: Magnetic Switch
 
 * Switch is "normally open" (open circuit)
 * Switch is activated / closed (completing the circuit) when placed near a magnet
-* Often used in Measures environment temperature and returns a voltage
-* Output voltage is linearly proportional to temperature
-  * What does this mean?
+* Often used to check for open drawers, doors, etc.
+* These are also called a *reed switch* 
 
 
 
 ## How Reed Switches Work
 
-<img src="lecture_magnetic_switch.assets/Reed_switch_(aka).jpg" alt="image-20200716183944885" style="zoom:width:400px" />
+<img src="lecture_magnetic_switch.assets/Reed_switch_(aka).jpg" alt="image-20200716183944885" style="height:600px" />
 
 
 
 
 
+## Wiring and Operation
 
-## TMP 36 Datasheet
+* Connect one wire  
+  * 3.3v with 10k pullup resistor
+  * Argon digital input pin
+* Connect other wire to ground
+* Switch is **not polarized** so use either wire
+* When reading signal from Argon
+  * **HIGH** means open circuit (no magnet present) 
+  * **LOW** means closed circuit (magnet present)
 
-* What are the most important elements we should be looking for?
-* [Datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Temp/TMP35_36_37.pdf)
+## Wiring Example
 
-<!-- pin outs: 1=Vin, 2=Vout, 3=ground
-orientation: flat part goes up
-measurement range: -40 C -- 125 C (-40 F -- 257 F)
-voltage range: 2.7 V to 5.5
-scale factor: 10mV per C with a 500mv offset
-accuracy: +- 1 C 
--->
+<img src="lecture_magnetic_switch.assets/switch-magnetic-door_bb.png" style="width:500px;" />
 
-## Conversion
+## Quick Note
 
-* 10 mV / deg Celsius with a 500 mV offset
-* Try this: if **Vout** is 1.2V, what is the temperature in Celsius? in Fahrenheit?
-* *Remember:*
-  * `T(fahr) = T(cel) * (9/5) + 32`
-  * `T(cel) = (T(fahr) - 32 ) * (5/9)`
-
-<!-- consider offset: 
-1.2v - 500mv = 1.2V - 0.5V = 0.7V
-now handle conversion
- 0.7 V * degC / 10mV = 0.7V * degC / 0.01V 
-=0.7V * degC * 100 = 70 degC
-Now to fahrenheit
-158 degF
--->
-
-## Wiring
-
-<img src="lecture_tmp36_analog_temperature_sensor.assets/1567470883820.png" alt="TMP36 wiring" style="width:800px" />
-
-- Note that is **BOTTOM VIEW**
-
-## Lab
-
-* Connect a TMP36 and output the current temperature to the serial monitor
-* Consider what type of input is this signal? How will this value be read by Argon?
-
-<!-- This also tests a few C++ features 
-Variable types: analog read value is INT, but voltage and temperature need to be DOUBLE 
-Division: C++ division (in Cel->Fahr) needs to be between doubles 
- Note: this picture is the BOTTOM VIEW, not top down
--->
+* Wire ends are thin and twisted together so be careful inserting them into breadboard
+* For greater durability, wire ends can be soldered
 
 
 ## Credit
 
 - André Karwath ([image](https://en.wikipedia.org/wiki/Reed_switch#/media/File:Reed_switch_(aka).jpg), [license](https://creativecommons.org/licenses/by-sa/2.5/deed.en))
 - [Sparkfun](https://www.sparkfun.com/products/13247)
+- Images created with [Fritzing](https://fritzing.org/home/)
 
 
 

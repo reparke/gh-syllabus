@@ -428,24 +428,28 @@ title: Weekly Plan
 
 #### Lecture
 
-- Particle Cloud: publish and subscribe
-- Magnetic switch (no slides)
-<!-- connect one pin with pullup resistor to power and argon; other pin to gnd; 
-  HIGH means open circuit; 
-  LOW means closed circuit-->
+- Magnetic switch
+- Particle Cloud: Publish
 
 #### Lab
 
-- wire switch (show fritzing)
-- publish switch event in console
-- publish variable
-- create function to turn off/on LED
-- subscribe to variable -- work in pairs 
+- Wire switch and RGB LED
+- Publish variable state (door open or closed)
+- Publish switch event in console (this won't take very long)
+
+#### Lecture
+
+* Particle Cloud: Subscribe
+
+#### Lab
+
+* Create function to change LED colors: white switch is closed, red switch is open
+* subscribe to variable -- work in pairs 
   - create unique event ITP348/Door/<<UNIQUE_NAME>>
 
 #### Lecture
 
-* ==need more here==
+* ==may need more here==
 
 ### Day 2
 
@@ -465,6 +469,11 @@ title: Weekly Plan
   - then change publish event
 - **Ask students to work in pairs and come up with a cool idea**
 
+#### Lecture
+
+* ==may need more here==
+* Also could work on reaction timer because it is challenging
+
 #### Feedback
 
 - Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
@@ -474,7 +483,9 @@ title: Weekly Plan
 - Due start of current week: A5 - Reaction Timer
   - Warn students that it was time consuming
   - **==IDEA==** make reaction timer a statemachine assignment and move forward (replace other assigment)
-- Given out start of current week: ==CREATE NEW ASSIGNMENT==
+- Given out start of current week:  A6 - Preliminary Proposal Ideas
+  - This seems early for this, but the semester is shortened by 2 weeks
+  - Could consider moving this later in a future semester
 
 ## Week 8
 
@@ -486,7 +497,7 @@ title: Weekly Plan
 
 #### Lecture
 
-- `Switch `statement (==maybeneed to pull from FSM==)
+- `Switch `statement (==maybe need to pull from FSM==)
 
 #### Lab
 
@@ -522,7 +533,7 @@ title: Weekly Plan
 
 ### Assignment
 
-- Due start of current week: ==CREATE NEW ASSIGNMENT== (if one is created)
+- Due start of current week:   A6 - Preliminary Proposal Ideas ==(need to finalize this)==
 - Given out start of current week: A7 - Shared particle cloud temperature monitor
 
 ## Week 9 - Soldering and Speaker

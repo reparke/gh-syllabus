@@ -1,0 +1,13 @@
+calc start
+{% assign num_weeks = site.calendar.semester_num_weeks %}
+{% capture week_dates %}
+    {% for i in (1..num_weeks) %}
+        {% assign start_next_week = site.calendar.seconds_to_end_current_week | times: i %}
+        {% assign end_current_week = site.calendar.seconds_to_start_next_week | times: i %}
+        {{ site.calendar.semester_start_sunday | date:'%s' | plus: end_current_week | date_to_string }}|{{ site.calendar.semester_start_sunday | date:'%s' | plus: start_next_week | date_to_string }}
+        {% if forloop.last == false %}::{% endif%}
+    {% endfor %}
+{% endcapture %}
+
+{{week_dates}}
+calc end

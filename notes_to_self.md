@@ -21,3 +21,18 @@ When converting Word docs to Markdown using Writetage, the images are inserted u
 
   Customization
   https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+
+  Liquid: Functions
+  http://hamishwillee.github.io/2014/11/13/jekyll-includes-are-functions/
+
+  Liquid: Date Formatting
+  http://alanwsmith.com/jekyll-liquid-date-formatting-examples
+
+  Liquid: Date Manipulation
+  https://community.shopify.com/c/Shopify-Design/Simple-Date-Math-Manipulation-Help-Needed-for-Liquid/td-p/204393
+
+  Liquid: Hack to Create Associate and Multi-Dimensional Arrays
+  https://raisedbyturtles.org/shopify-associative-arrays
+  Basically you can't. However you can create parallel arrays
+
+  
