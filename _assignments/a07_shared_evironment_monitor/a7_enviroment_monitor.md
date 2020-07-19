@@ -1,5 +1,5 @@
 ---
-week: 6
+week: 7
 number: 7
 category: assignments
 title: Shared Environment Monitor

@@ -16,27 +16,26 @@ toc_sticky: true
   {% assign week.end = elements[0] %}
 {% endfor %}
 
-{{dates_array}}
 {% assign lectures = site.lectures | sort: "number" %}
 {% assign assignments = site.assignments | sort: "number" %}
 {% assign all_items = lectures | concat: assignments | group_by: 'week'  %}
+ 
 
-
-{% for weeks in all_items %}
+{% for week in all_items %}
   {% comment %}
     Capture stores strings so convert to int to use in array
   {% endcomment %}
-  {% assign index = weeks.name | times: 1 %} 
+  {% assign index = week.name | times: 1 %} 
 
   {% assign current_dates = dates_array[index] | split: '|' %}
 
-  <h2 id="week_{{ weeks.name }}">Week - {{ weeks.name }} {{current_dates[0]}} ({{current_dates[2]}}-{{current_dates[3]}})
-  <a class="header-link" href="#week_{{ weeks.name }}" title="Permalink"></a></h2>
+  <h2 id="week_{{ week.name }}">Week - {{ week.name }} ({{current_dates[2] | strip}}-{{current_dates[3] | strip}})
+  <a class="header-link" href="#week_{{ week.name }}" title="Permalink"></a></h2>
   <div class="weekly_schedule_content_area">
     <h3 class="no_toc weekly_schedule_content_label">Reading / Video (pre-lecture material)</h3>
     <ul><li class="weekly_schedule_content_item">TBD</li></ul>
     <ul>
-      {% assign content_items = weeks.items %}
+      {% assign content_items = week.items %}
       {% for item in content_items %}
         {% if item.category == "reading" %}
           <li class="weekly_schedule_content_item">
@@ -49,7 +48,7 @@ toc_sticky: true
   <div class="weekly_schedule_content_area">
     <h3 class="no_toc weekly_schedule_content_label">Lectures</h3>
     <ul>
-      {% assign content_items = weeks.items %}
+      {% assign content_items = week.items %}
       {% for item in content_items %}
         {% if item.category == "lectures" %}
           <li class="weekly_schedule_content_item">
@@ -62,7 +61,7 @@ toc_sticky: true
   <div class="weekly_schedule_content_area">
     <h3 class="no_toc weekly_schedule_content_label">Assignments</h3>
     <ul>
-      {% assign content_items = weeks.items %}
+      {% assign content_items = week.items %}
       {% for item in content_items %}
         {% if item.category == "assignments" %}
           <li class="weekly_schedule_content_item">

@@ -7,8 +7,8 @@ classes: wide
 
 
 <ul>
-{% assign syllabus = site.assignments | sort: "number" %}
-{% for week in syllabus %}
+{% assign all_assignments = site.assignments | sort: "number" %}
+{% for week in all_assignments %}
   <li>
   	<a href="{{ site.baseurl }}{{ week.url }}">#{{ week.number}} - {{ week.title }}</a> 
   	(Due: <b>{{ week.date_due }}</b>)</li>

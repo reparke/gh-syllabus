@@ -15,8 +15,8 @@
         {% assign end_current_week = site.calendar.seconds_to_end_current_week | times: i %}
         {{i}}
         |spring break place holder
-        |{{ site.calendar.semester_start_sunday | date:'%s' | plus: start_current_week | date_to_string }}
-        |{{ site.calendar.semester_start_sunday | date:'%s' | plus: end_current_week | date_to_string }}
+        |{{ site.calendar.semester_start_sunday | date:'%s' | plus: start_current_week | date_to_string | strip}}
+        |{{ site.calendar.semester_start_sunday | date:'%s' | plus: end_current_week | date_to_string | strip}}
         {% if forloop.last == false %}::{% endif%}
     {% endfor %}
 {% endcapture %}
