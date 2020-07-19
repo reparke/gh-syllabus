@@ -19,7 +19,6 @@ toc_sticky: true
 {% assign lectures = site.lectures | sort: "number" %}
 {% assign assignments = site.assignments | sort: "number" %}
 {% assign all_items = lectures | concat: assignments | group_by: 'week'  %}
- 
 
 {% for week in all_items %}
   {% comment %}
@@ -29,7 +28,7 @@ toc_sticky: true
 
   {% assign current_dates = dates_array[index] | split: '|' %}
 
-  <h2 id="week_{{ week.name }}">Week - {{ week.name }} ({{current_dates[2] | strip}}-{{current_dates[3] | strip}})
+  <h2 id="week_{{ week.name }}">Week - {{ week.name }} ({{current_dates[2] | strip}} - {{current_dates[3] | strip}})
   <a class="header-link" href="#week_{{ week.name }}" title="Permalink"></a></h2>
   <div class="weekly_schedule_content_area">
     <h3 class="no_toc weekly_schedule_content_label">Reading / Video (pre-lecture material)</h3>
@@ -72,4 +71,5 @@ toc_sticky: true
       {% endfor %}
     </ul>
   </div>
+
 {% endfor %}
