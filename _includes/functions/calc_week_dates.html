@@ -1,13 +1,27 @@
-calc start
+{% comment %}
+    Function: calc_week_dates
+    Generating string will all the dates of the semester by weeks
+    Input: none
+    Output: string with dates of the semester
+        Format: "week1"|"is_spring_break"|"start_day"|"end"
+{% endcomment %}
+
+
 {% assign num_weeks = site.calendar.semester_num_weeks %}
 {% capture week_dates %}
-    {% for i in (1..num_weeks) %}
-        {% assign start_next_week = site.calendar.seconds_to_end_current_week | times: i %}
-        {% assign end_current_week = site.calendar.seconds_to_start_next_week | times: i %}
-        {{ site.calendar.semester_start_sunday | date:'%s' | plus: end_current_week | date_to_string }}|{{ site.calendar.semester_start_sunday | date:'%s' | plus: start_next_week | date_to_string }}
+    {% for i in (0..num_weeks) %}
+        {% assign offset = i | minus: 1 %} 
+        {% assign start_current_week = site.calendar.seconds_in_week | times: offset %}
+        {% assign end_current_week = site.calendar.seconds_to_end_current_week | times: i %}
+        {{i}}
+        |spring break place holder
+        |{{ site.calendar.semester_start_sunday | date:'%s' | plus: start_current_week | date_to_string }}
+        |{{ site.calendar.semester_start_sunday | date:'%s' | plus: end_current_week | date_to_string }}
         {% if forloop.last == false %}::{% endif%}
     {% endfor %}
 {% endcapture %}
-
+{% comment %}
+    This is the return value
+{% assign start_next_week = site.calendar.seconds_to_end_current_week | times: i %}
+{% endcomment %}
 {{week_dates}}
-calc end

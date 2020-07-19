@@ -6,32 +6,33 @@ toc_label: "Quick Links"
 toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: true
 ---
-{{site.baseurl}}
-9
-{{site.calendar.semester_num_weeks}}
-
 
 {% capture dates_string %}
   {% include /functions/calc_week_dates.html %}
 {% endcapture %}
 {% assign dates_array = dates_string | split: '::'%}	
-bar
+{% for week in dates_array %}
+  {% assign elements = week | split: '|' %}
+  {% assign week.end = elements[0] %}
+{% endfor %}
 
+{{dates_array}}
 {% assign lectures = site.lectures | sort: "number" %}
 {% assign assignments = site.assignments | sort: "number" %}
 {% assign all_items = lectures | concat: assignments | group_by: 'week'  %}
 
+
 {% for weeks in all_items %}
-{% comment %}
-  Capture stores strings so convert to int to use in array
-{% endcomment %}
-{% assign index = weeks.name | times: 1 %} 
+  {% comment %}
+    Capture stores strings so convert to int to use in array
+  {% endcomment %}
+  {% assign index = weeks.name | times: 1 %} 
 
-{% assign current_dates = dates_array[index] | split: '|' %}
+  {% assign current_dates = dates_array[index] | split: '|' %}
 
-<h2 id="week_{{ weeks.name }}">Week - {{ weeks.name }} {{ current_dates[0] }}
-<a class="header-link" href="#week_{{ weeks.name }}" title="Permalink"><!-- <i class="fa fa-link"></i> --></a></h2>
-<div class="weekly_schedule_content_area">
+  <h2 id="week_{{ weeks.name }}">Week - {{ weeks.name }} {{current_dates[0]}} ({{current_dates[2]}}-{{current_dates[3]}})
+  <a class="header-link" href="#week_{{ weeks.name }}" title="Permalink"></a></h2>
+  <div class="weekly_schedule_content_area">
     <h3 class="no_toc weekly_schedule_content_label">Reading / Video (pre-lecture material)</h3>
     <ul><li class="weekly_schedule_content_item">TBD</li></ul>
     <ul>
