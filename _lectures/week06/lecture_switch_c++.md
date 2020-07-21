@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 3
+week: 6
 category: lectures
 title: Switch in C++
 ---
@@ -13,7 +13,7 @@ title: Switch in C++
 
 ## Consider
 
-We are trying to give driving direction, and there is a finite set of actions *(these are simplified)*:
+We are trying to design a self-driving car, and it has a finite set of actions *(these are simplified)*:
 
 * turn right
 * turn left

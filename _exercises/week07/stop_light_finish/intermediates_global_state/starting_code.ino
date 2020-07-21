@@ -1,14 +1,3 @@
-/* Wiring guide
-  NorthSouth Red LED      -   D2
-  NorthSouth Yellow LED   -   D3
-  NorthSouth Green LED    -   D4
-  WestEast Red LED        -   A0
-  WestEast Yellow LED     -   A1
-  WestEast Green LED      -   D5
-
-  Walk White LED          -   D6
-  Don't Walk Red LED      -   D7
-*/
 
 const int NSRed = D2;
 const int NSYel = D3;
@@ -23,11 +12,12 @@ const int GO_TIME = 5000;          // time for green, red, walk, don't walk
 const int TRANSITION_TIME = 1000;  // time for yellow
 const int BLINK_RATE = 500;        // time for blinking don't walk light
 
-// for testing purposes only
+// for testing purposes onle
 int lights[] = {NSRed, NSYel, NSGrn, WERed, WEYel, WEGrn, WALK, DONTWALK};
 
 void setup() {
   Serial.begin(9600);
+  // put your setup code here, to run once:
   pinMode(NSRed, OUTPUT);
   pinMode(NSYel, OUTPUT);
   pinMode(NSGrn, OUTPUT);
@@ -58,9 +48,9 @@ void setLight() {
   digitalWrite(DONTWALK, LOW);
 }
 
-// TODO: COMPLETE getNextState
+// TODO: COMPLETE updateNextState
 
-// TODO: COMPLETE getNextStateDuration
+// TODO: COMPLETE updateNextStateDuration
 
 /* ======= FUNCTIONS FOR DEBUGGING LED WIRING ========= */
 // functions used for testing only

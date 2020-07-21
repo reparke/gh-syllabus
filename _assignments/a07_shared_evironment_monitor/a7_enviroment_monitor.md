@@ -82,7 +82,7 @@ Here is an example:
 -   Publish the temperature as a **PUBLIC** event
 
 -   For the event name, you must use the following format  
-    **ITP348-ENVIRO/XXX** *replace XXX with your 3 letter initial*
+    **ITP348-ENVIRO/XXX** *replace XXX with your 3 letter initial*s
 
 -   Check the Particle console to make sure the event is publishing properly
 
@@ -110,18 +110,17 @@ Here is an example:
 
 <img src="media/stats.jpg" style="height:200px;" />
 
-In **loop()**, use the button to switch between two “states” of your device.
+In **loop()**, use the button to switch between two “screens” of your device.
 
--   **Stats State**
-
-    -   The OLED should display your current temperature, the average of the
+-   **Stats Screen**
+-   The OLED should display your current temperature, the average of the
         most recent public temperatures, and the maximum of the most recent
         temperatures. These values should be automatically updated as new
         temperatures arrive
 
 <img src="media/cropped_temp.jpg" style="height:200px;" />
 
-**Temperature Feed State**
+**Temperature Feed Screen**
 
 -   The OLED should display the most recent temperatures (you will only be able
     to fix up to 6). This should be automatically updated as new temperatures

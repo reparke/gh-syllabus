@@ -12,7 +12,7 @@ title: State Machines
 
 
 
-## What's the point?
+## What's the main point?
 
 * Our devices should operate remotely without constant user intervention
 * Our devices can receive many different sensor data (**input**), in different situations (**states**), resulting in different actions (**outputs**)
@@ -37,19 +37,22 @@ title: State Machines
 
 ## Example #1 Stoplight
 
-* Consider stoplight with no pedestrians
+* Consider a simplified stoplight without any pedestrians
 * What states are there?
 * How do we transition to new states?
 
 ## Example #1 Stoplight Diagram
 
+<!-- draw state diagram
+-->
+
 ## Example #1 Stoplight
 
-| State            | Stoplight |
-| ---------------- | --------- |
-| Traffic Flows    | Green     |
-| Traffic Stopping | Yellow    |
-| Traffic Stopped  | Red       |
+| State            | Output (Stoplight Color) |
+| ---------------- | ------------------------ |
+| Traffic Flows    | Green                    |
+| Traffic Stopping | Yellow                   |
+| Traffic Stopped  | Red                      |
 
 ## Example #2 Sprinkles Cupcake ATM
 
@@ -82,6 +85,41 @@ dispense +cupcake taken| idle
 | Dispense cupcake    | Cupcake taken      | Idle                |
 | Dispense cupcake    | Cupcake remains    | Dispense cupcake    |
 
+## State Machines in Argon
+
+* In order to implement this in our firmware, what elements / functions to we need to create?
+* inputs (could be `millis()` timer, `digitalRead`, `analogRead`)
+* outputs (could be LEDs, speakers, OLED screen)
+* state (create `enum` to track current state and next state)
+* state transition logic (this is typically a function we create which has conditional logic like `switch` which looks at the current state and any input to determine what the next state should be) 
+
+## State Transition Logic Example
+
+| State               | Input        | Next State          |
+| ------------------- | ------------ | ------------------- |
+| Process credit card | Card valid   | Dispense cupcake    |
+| Process credit card | Card invalid | Process credit card |
+
+```c++
+//Globals
+enum State {IDLE, DISPLAY, PROCESS, DISPENSE };
+State currentState;
+bool cardValid;
+```
+```c++
+void updateNextState() {
+   switch(currentState) {
+      case PROCESS:						//processing credit card
+         if (cardValid == true) {
+            currentState = DISPENSE;
+         }
+         //no else needed because remain in PROCESS state
+   }
+}
+```
+
+
+
 ## In class Lab - Stoplight and Pedestrian Signal
 
 <img src="lecture_finite_state_machines.assets/stoplight.jpg" alt="stoplight" style="height:300px;" /> <img src="lecture_finite_state_machines.assets/ped_signal.jpg" alt="ped_signal" style="width:200px;" />
@@ -92,7 +130,7 @@ dispense +cupcake taken| idle
 * Download starting code
   * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week08/stop_light_start
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week07/stop_light_start
 
 ## Wiring Diagram
 
@@ -120,9 +158,9 @@ dispense +cupcake taken| idle
 
 ## Approach
 
-* We will need to create a way to represent the states using **enum**
+* We will need to create a way to represent the states using `enum`
 * We will need to track state transitions with **variables** for state
-* We will need to control timing with **millis()**
+* We will need to control timing with `millis()`
 
 * What does `loop()` do
   * calculate new state

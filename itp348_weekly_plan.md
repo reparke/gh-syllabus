@@ -11,6 +11,7 @@ title: Weekly Plan
 * wk0: record introduction for students
 * wk1: record software tools for reference
 * general: try to incorporate `enum` or `switch` earlier in semester
+* idea: involve students in a couple weeks where we "flip" the classroom
 
 ## General Feedback (Fall 2019)
 
@@ -365,8 +366,6 @@ title: Weekly Plan
 - Due start of current week: A3 - Cylon light 
 - Given out start of current week: A4 - Electronic dice
 
-
-
 ## 5. TMP36, Cloud Function, OLED
 
 ### Day 1
@@ -392,7 +391,7 @@ title: Weekly Plan
 
 * Consider covering `switch` to handle cloud function calls
 
-## Day 2
+### Day 2
 
 #### Lecture
 
@@ -417,11 +416,10 @@ title: Weekly Plan
 - Given out start of current week: A5 - Reaction Timer
 - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
-## Week 7
+## 6. Particle Cloud Publish and Subscribe; IFTTT
 
 ### Reading
 
-- [Particle Cloud Functions](https://docs.particle.io/reference/device-os/firmware/photon/#cloud-functions)
 - Have students create an [IFTTT account](https://ifttt.com/) 
 
 ### Day 1
@@ -473,6 +471,7 @@ title: Weekly Plan
 
 * ==may need more here==
 * Also could work on reaction timer because it is challenging
+* Could cover [IFTTT webhooks](https://ifttt.com/maker_webhooks) but they require HTML / JS editing to work, and they require JSON to send text values
 
 #### Feedback
 
@@ -482,12 +481,12 @@ title: Weekly Plan
 
 - Due start of current week: A5 - Reaction Timer
   - Warn students that it was time consuming
-  - **==IDEA==** make reaction timer a statemachine assignment and move forward (replace other assigment)
+  - **==IDEA==** make reaction timer a state machine assignment and move forward (replace other assignment)
 - Given out start of current week:  A6 - Preliminary Proposal Ideas
   - This seems early for this, but the semester is shortened by 2 weeks
   - Could consider moving this later in a future semester
 
-## Week 8
+## 7. Finite State Machines
 
 ### Reading
 
@@ -497,18 +496,19 @@ title: Weekly Plan
 
 #### Lecture
 
-- `Switch `statement (==maybe need to pull from FSM==)
+- `switch ` statement
+- `enum`
 
-#### Lab
+#### Guided Activity
 
-- continue with LED and button
-- Use button to change states
-- Each button press changes state by increasing a counter, and switch changes blink rate
-- Consider enum if time--enum could store state
+- *To save time, this exercise is just an illustration of coding with `switch` and `enum`*
+- Create new project without any hardware
+- Walk students through creating an `enum` for favorite food
+- Create a global variable to store current food
+- Create a `switch` statement to use Serial monitor to display main ingredients in each dish
 
 #### Lecture
 
-- enum
 - Finite state machines
 
 #### Lab
@@ -524,109 +524,122 @@ title: Weekly Plan
 
 ### Day 2
 
+#### Lecture
+
 - Continued with FSM
+
+#### Lab
+
+- Continued with stoplight example
+
+#### Lecture (if time)
+
+* Speaker
+* Tone
+* Pitches
 
 ### Feedback
 
-- Students felted overwhelmed with FSM, switch, and enum all at once
-- Better to introduce them slowly over time and build up to complicated stoplight example
+- 
 
 ### Assignment
 
-- Due start of current week:   A6 - Preliminary Proposal Ideas ==(need to finalize this)==
-- Given out start of current week: A7 - Shared particle cloud temperature monitor
-
-## Week 9 - Soldering and Speaker
-
-* Day 1
-   * Soldering demo in EE lab
-   * had students build sparkfun flashlight
-   * Then Neftali did a quick demo of how to lay out a simple PCB in Fritzing
-* Feedback
-  * Took about 1 hour
-  * soldering was fun but really simple. It would be cool to have a second, more complex circuit
-* Day 2
-  * Lecture
-    * Speaker
-    * Tone
-    * Pitches
-* Assignment
-   * Due start of current week: A7 - Shared environment monitor
-   * Given out start of current week: A8 - Alarm clock
+- Due start of current week:   A6 - Preliminary Proposal Ideas
+- Given out start of current week: A7 - Shared environment monitor
 
 
-1. #### Week 10 - Motors and Servos
 
-   - ==need to order fan blades for students==
-   - Reading
-     
-     - notes on motors: [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
-   - Day 1
-     - Lecture
-       - DC Motors
-     - Lab
-       - Students copy sketch to make fan blade rotate direction
-       - Do experimental exercise to determine min / max PWM values
-     - Feedback
-       - Students seemed to enjoy making the motor + fan work, but this only took 1 hour
-       - Improvised lecture by demonstrating analog joystick to control fan blade and rotation
-        - Lecture
-          - Servo motors
-          - Very short presentation
-     
-     - Lab
-       - Connect servo to DC motor
-       - control fan speed and direction with two potentiometers
-- Feedback
-  - students followed remotely and enjoyed building the fan
-  - I skipped the separate servo part and went directly to using the servo to control the fan
-  - Next year, start with DC fan, then immediately wire servo to spin, then pot
-  - ==Need to change the DC motor slides. They are too technical==
-  - ==**Idea for next semester**== move motors and bluetooth earlier and make an assignment out of it (something like the fan)
+## 8. Motors and Servos
 
-- Feedback
-  - start by sending one piece of data before using split to send multiple
+### Before class
 
-==**Idea for next semester**== move motors and bluetooth earlier and make an assignment out of it (something like the fan)
+- Send wiring guide with full fan circuit 
+- ask students to have a narrow bottle of water and some tape
+- Have students install Bluetooth phone apps
+     - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
+   - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
 
-   - ==**Before class**== - Have students install Bluetooth phone apps
-           - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
-           - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
-           - Send wiring guide with full fan circuit 
-   - Reading
-        - [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
-        - [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
-- Day 2 ==**Give students velcro and have them assemble chassis before Thurs**==
-  - Lecture
-    - Bluetooth
-    - Show Bluefruit app and nRF Toolbox
-  - Lab - ble_uart_control_start
-    - Distribute github link to download (post on slides)
-    - Describe project goals
-    - Explain **argon_ble_setup.h** at a high level
-      - Have students change **DEVICE_NAME**
-    - Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
-    - Code together blinking D7 when **press 1**
-    - Have students code on their own D7 on with **press up** and D7 off when **release up**
-    - (If time) have students code play tone when **press right **
-    - Have students try using color picker to change RGB colors
-  - Lab - ble_uart_control_start
-    - Have students try to control servo and fan motor on their own
-  - Example - ble_uart_rgb_accel_example
-    - Distribute github link to download (post on slides)
-    - Describe project goals
-    - explain **onDataReceived()**
-    - explain **updateRGBvalues()**
-    - explain **changeRgbLight()**
-    - Demo device with code
-  - Example - health therometer
-    - Skip
-  - Feedback - Day 2
-   - Assignment
-     
-     * Due start of current week: A8 - Alarm clock
-     * Given out start of current week: ==A9 - Bluetooth car== part 1 (build chassis only)
-11. Week 11
+### Reading
+
+- Motors
+  - [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
+- Bluetooth
+  * [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
+  * [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
+
+### Day 1
+
+#### Lecture
+
+- DC Motors
+
+#### Lab
+
+- Students copy sketch to make fan blade rotate direction
+- Do experimental exercise to determine min / max PWM values
+
+#### Lecture
+
+- Servo motors
+
+#### Lab
+
+- Connect servo to DC motor
+- control fan speed and direction with a potentiometers (do one version where it controls rotation of servo, then one where it controls motor speed)
+
+#### Feedback
+
+- students followed remotely and enjoyed building the fan
+- I skipped the separate servo part and went directly to using the servo to control the fan
+- Next year, start with DC fan, then immediately wire servo to spin, then pot
+- ==Need to change the DC motor slides. They are too technical==
+- ==**Idea for next semester**==: create assignment using motors and bluetooth (something like the fan)
+
+### Day 2
+
+ ==**Give students velcro and have them assemble chassis before Thurs**==
+#### Lecture
+
+- Bluetooth
+- Show Bluefruit app and nRF Toolbox
+
+#### Lab - ble_uart_control_start
+
+- Distribute github link to download (post on slides)
+- Describe project goals
+- Explain **argon_ble_setup.h** at a high level
+  - Have students change **DEVICE_NAME**
+- Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
+- Code together blinking D7 when **press 1**
+- Have students code on their own D7 on with **press up** and D7 off when **release up**
+- (If time) have students code play tone when **press right **
+- Have students try using color picker to change RGB colors
+
+#### Lab - ble_uart_control_start
+
+- Have students try to control servo and fan motor on their own
+
+#### Example - ble_uart_rgb_accel_example
+
+- Distribute github link to download (post on slides)
+- Describe project goals
+- explain **onDataReceived()**
+- explain **updateRGBvalues()**
+- explain **changeRgbLight()**
+- Demo device with code
+
+### Feedback
+
+### Assignment
+
+* Due start of current week: A7 - Shared environment monitor
+* Given out start of current week: A8 - Alarm clock
+
+
+
+
+
+## 11
 
 - Reading
   - 
@@ -652,12 +665,13 @@ title: Weekly Plan
     - Recommend **NOT** using thingsspeak again. Thingspeak integration with webhook is fairly simple. It is also possible to discuss JSON to send multiple values.
     - However, thingsspeak doesn't have a way to send commands to Argon (have to use something like IFTTT)
   - Assignment
-    - Due start of current: ==A9 - Bluetooth car== part 1
-    - Given out start of current week: ==A9 - Bluetooth car== part 2 **and** Proposal
+    - Due start of current week: A8 - Alarm clock
+    - Given out start of current week: ==A9 - Bluetooth car== part 1 (build chassis only)
 
-12. #### Week 12
+## 12. 
 
    - Reading
+     
      - 
    - Day 1 
      - Lecture
@@ -680,11 +694,20 @@ title: Weekly Plan
      - Lecture
        - Briefly talk about JSON
        - Show students an example of how the code works for JSON parser
+       
      - Lab
+       
        - Have students show description, temp, location, rainfall
+       
      - Lab
+       
        - find another API to show
-13. #### Week 13
+       
+       Assignment
+       
+       - Due start of current: ==A9 - Bluetooth car== part 1
+       - Given out start of current week: ==A9 - Bluetooth car== part 2 **and** Proposal
+## 13.
 
 - Reading
   - 
@@ -707,7 +730,7 @@ title: Weekly Plan
 - Assignment
   - project
 
-14. #### Week 14
+## 14.
 
    - Reading
      - 
@@ -735,7 +758,7 @@ title: Weekly Plan
        - Use accelerometer to control RGB LED
    - Assignment
      - AX - 
-15. #### Week 15
+## 15. 
 
 - Reading
   - 
@@ -760,7 +783,7 @@ title: Weekly Plan
 - Assignment
   - AX - 
 
-16. #### Week 16 - Final Project Presentation
+## 16 - Final Project Presentation
 
    
 
@@ -772,11 +795,9 @@ title: Weekly Plan
 
 ---
 
-**Use when extra time**
+## **Use when extra time**
 
-- - 
-
-## Week 5
+## Week 5 - Photoresistor
 
 #### Experiential Learning
 
@@ -794,7 +815,23 @@ title: Weekly Plan
 - create some short, simple photoresistor wiring notes
 - One good thing was this followed learning about using the multimeter since the activity required it
 
-**Skipped / Eliminated****
+## Week 8 - Soldering
+
+* Day 1
+  * Soldering demo in EE lab
+  * had students build sparkfun flashlight
+  * Then Neftali did a quick demo of how to lay out a simple PCB in Fritzing
+* Feedback
+  * Took about 1 hour
+  * soldering was fun but really simple. It would be cool to have a second, more complex circuit
+
+
+
+---
+
+
+
+## **Skipped / Eliminated**
 
 - BLE Health service
   - The goal was to send a temperature from Argon to Bluefruit app but it rarely worked

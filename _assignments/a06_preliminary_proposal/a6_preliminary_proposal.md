@@ -15,18 +15,17 @@ Preliminary Ideas for Final Project
 Goals
 -----
 
--   Brainstorm and thoughtfully consider potential ideas for final project that are appealing
+-   Brainstorm and thoughtfully consider potential ideas for final project that you find appealing
 -   These ideas can be refined or changed later
 
 Overview
 --------
 
-The final project for this class is to create a prototype of a connected device. The final submission does not need to be “ready for manufacturing” but it must work and demonstrate
-the key functioning elements. 
+* The final project for this class is to create a prototype of a connected device. The final submission does not need to be “ready for manufacturing” but it must work and demonstrate the key functioning elements. 
+* At this point in the class, we have covered only 50% of the material you will use in the project. However, you have already developed understanding of firmware and electronics.
 
-At this point in the class, we have covered only 50% of the material you will use in the project. However, you have already developed understanding of firmware and electronics.
+* Using the overall project requirements and list of components we will discuss in class, create two potential project ideas for your final project.
 
-Using the overall project requirements and list of components we will discuss in class, create two potential project ideas for your final project.
 
 ## **Project Requirements**
 
@@ -53,96 +52,36 @@ Using the overall project requirements and list of components we will discuss in
 -   Earthquake monitor
 -   Retrofitted children’s toy
 -   Home monitoring station
+-   [Highlights from past ITP 348 student projects](https://sites.usc.edu/parke/tag/itp348_projects/)
 
 
 
-## Partial List of Components 
+## List of Components 
 
-This list include the components we covered in the course. You can also use components not discussed in the course, but you are not required or expected to do so.
+[This list](https://reparke.github.io/ITP348-Physical-Computing/assignments/project/sample_components.html) includes the components and services we will cover in this course (and you have in your kits). You can also use components not discussed in the course, but you are not required or expected to do so.
 
-### Sensors
 
--   Temperature sensors
-    -   [TMP 36](https://www.sparkfun.com/products/10988)
-    -   [DHT 22](https://www.sparkfun.com/products/10167)
--   Humidity sensor: [DHT 22](https://www.sparkfun.com/products/10167)
--   [Ultrasonic distance sensor](https://www.sparkfun.com/products/15569)
--   [Passive infrared sensor (PIR)](https://www.sparkfun.com/products/13285) (infrared movement detection)
--   [MAX30105 heart rate and temperature sensor](https://www.sparkfun.com/products/14045)
--   RGB sensor + gesture detection sensor
--   [RFID sensor](https://www.amazon.com/gp/product/B01CSTW0IA) 
--   [Infrared sensor](https://www.sparkfun.com/products/246)
-
-* [Accelerometer](https://www.sparkfun.com/products/14480)
-* [Piezo movement detector](https://www.sparkfun.com/products/10293)
-
-### Environmental Interaction
-
-* Button
-* Switch
-* LEDs
-* Magnetic switch
-* OLED screen
-* Potentiometer
-
-### Actuator
-
-* DC motors + motor driver
-* Servo
-* Buzzer
-
-### In-class projects
-
-* Bluetooth-controlled car
-* Smart watch (heart rate + weather)
-
-### Cloud Services
-
-* [InitialState](https://www.initialstate.com/)
-  * Storing data
-  * Graphic data
-  * Dashboard
-
-* [ThingSpeak](https://thingspeak.com/)
-  * Storing data
-  * Graphic data
-  * Dashboard
-* [Tinamous](https://www.tinamous.com/)
-  * Storing data
-  * Graphic data
-* [IFTTT](https://www.ifttt.com/)
-* [Losant](https://www.losant.com/)
-  * Storing data
-  * Graphic data
-  * Dashboard
-  * Executing commands on device
-  * Creating public web interface
 
 Deliverables (for this preliminary proposal)
 ------------
 
-* Two distinct ideas
+* Two distinct ideas (i.e. they should address different problems)
 
 
-* The repo for this project contains two files: `project1.md` and `project2.md`.  Complete the questions in each to describe two different projects.
-* Pick projects that you would be willing to work on.
-* The projects should be distinct.  They should cover different topic/problems.
-* Assume that one will be selected for you.  The numbers (`project1` and `project2`) don’t indicate priority or preference.
+* For each of your two ideas ideas, describe the following:
 
 
+  * Describe the problem or need you have identified
 
--   Write a proposal document with following details:
+  * Describe why you believe it is necessary to address
 
-    -   Describe the problem or need you have identified, why you believe it is
-        necessary to address, and how your device would address this need.
+  * Describe how your device would address this need
 
-    -   Describe the target audience
+  * Describe what you anticipate will be challenges you will face in building this
 
-    -   List the key features, sensors, interaction patterns (e.g. how will
-        users interact with the device), and internet / cloud platforms
+  * List the key features and what components (e.g. sensors) and services (e.g. InitialState) you will use
 
-        
-        
+    
 
 **Submission**
 
@@ -155,7 +94,7 @@ Deliverables (for this preliminary proposal)
 
 -   **Project Name**
 
-    -   itp348_project_lastname_firstname
+    -   itp348_project_ideas_lastname_firstname
 
 -   **Zip File** (include entire project folder)
 
@@ -164,12 +103,12 @@ Deliverables (for this preliminary proposal)
 Grading
 -------
 
-| Item                | Points |
-| ------------------- | ------ |
-| Preliminary idea #1 | **10** |
-| Preliminary idea #2 | **10** |
-|                     |        |
-| Total               | 20     |
+| Item                                            | Points |
+| ----------------------------------------------- | ------ |
+| Preliminary idea #1: all requirements completed | **10** |
+| Preliminary idea #2: all requirements completed | **10** |
+|                                                 |        |
+| Total                                           | 20     |
 
 **Acknowledgements**
 

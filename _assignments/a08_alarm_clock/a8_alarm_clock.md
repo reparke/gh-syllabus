@@ -57,11 +57,8 @@ IFTTT.
 
 >   **Stage 1: Speaker and Tones**
 
--   Connect the speaker, LED, and push button (push button discussed later)
--   Create three different “songs” for the alarm. One can be a simple alarm
-    buzzer, but the other two should have distinct melodies (at least 16 notes).
-    You can use the list of musical notes and frequencies (or do something
-    different).
+-   Connect the speaker, LED, and push buttons (push buttons discussed later)
+-   Create two different “songs” for the alarm. Each should have distinct melodies (at least 16 notes). You can use the list of musical notes and frequencies (or do something different).
 -   Test the system playing the notes
 -   The LED should flash when the alarm is going off
 
@@ -88,7 +85,7 @@ IFTTT.
     hour. It is recommended (not required) to create another **Button widget**
     trigger that you can use for testing
 
->   **Stage 4: Configure timing and buttons (Stop and Snooze)**
+>   **Stage 4: Configure operations two physical buttons (Stop and Snooze)**
 
 -   The logic of alarm is as follows (note these are not meant to necessary be
     exact coding, just a general flow)

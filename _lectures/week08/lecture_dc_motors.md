@@ -22,28 +22,12 @@ title: DC Motors
 
 ## DC Motor Composition
 
-* Every DC motor has the same basic main:
-  * Armature
-  * Stator
-  * Commutator
+* DC motors have three main parts:
+  * Stator (stationary part with magnets)
+  * Armature (rotating wire)
+  * Commutator (supplies current to armature)
 
-## DC Motor Types
 
-* Brushed DC Motor
-  * Uses physical contact points in the commutator to switch the direction of current
-* Brushless DC Motor
-  * Electronically commutated motor (ECM or EC motor)
-  * Synchronous DC motor
-  * Uses an inverter which electrically switches the DC power supply to an alternating current (AC) power supply
-
-## DC Motor Types
-
-* Brushed
-  * Pro: Relatively inexpensive
-  * Con: Parts wear out over time
-* Brushless
-  * Pro: Less wear on moving parts
-  * Con: More expensive
 
 ## DC Motor Applications
 
@@ -71,11 +55,11 @@ title: DC Motors
 * The guiding principle behind electric motors is the **Lorentz Force**
 
 
-* A current in a magnetic field produces a physical force
-  * Force direction is given by the “right-hand rule”
-    * Current direction along your index
-    * Magnetic field along your middle
-    * Force direction is along your thumb
+* Electrical current in a magnetic field produces a physical force
+* Force direction is given by the “right-hand rule”
+  * Current direction along your index
+  * Magnetic field along your middle
+  * Force direction is along your thumb
 
 ## Lorentz Force
 
@@ -96,6 +80,24 @@ title: DC Motors
 ## Lorentz Force
 
 <img src="lecture_dc_motors.assets/DCMotor.gif" alt="Motor gif" style="width:1100px" />
+
+## DC Motor Types
+
+* Brushed DC Motor
+  * Uses physical contact points in the commutator to switch the direction of current
+* Brushless DC Motor
+  * Electronically commutated motor (ECM or EC motor)
+  * Synchronous DC motor
+  * Uses an inverter which electrically switches the DC power supply to an alternating current (AC) power supply
+
+## DC Motor Types
+
+* Brushed
+  * Pro: Relatively inexpensive
+  * Con: Parts wear out over time
+* Brushless
+  * Pro: Less wear on moving parts
+  * Con: More expensive
 
 ## Exercise
 

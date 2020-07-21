@@ -37,28 +37,28 @@ void setup() {
 
 /* ======== FUNCTIONS =========== */
 // stage 1: create function with NSY NSR NSG
-State getNextState(State s) {
-  switch (s) {
+void updateNextState() {
+  switch (currentState) {
     case NSY:
       // return NSR; //stage 2
-      return PED;
+      currentState = PED;
     case PED:        // stage 2
-      return PEDDW;  // stage 2
+      currentState = PEDDW;  // stage 2
     // case NSR:    //stage 2
     case PEDDW:
-      return NSG;
+      currentState = NSG;
     case NSG:
-      return NSY;
+      currentState = NSY;
   }
 }
 // stage 1: time for NSY and then NSR NSG
-int getNextStateDuration(State s) {
-  switch (s) {
+void updateNextStateDuration() {
+  switch (currentState) {
     case NSY:
     case PEDDW:  // stage 2
-      return TRANSITION_TIME;
+      stateLength = TRANSITION_TIME;
     default:
-      return GO_TIME;
+      stateLength = GO_TIME;
   }
 }
 // stage 1: add state parameter; add
@@ -103,8 +103,10 @@ void loop() {
     // update state timer
     prevMillisState = curMillis;
     Serial.println("Changing State");
-    currentState = getNextState(currentState);
-    stateLength = getNextStateDuration(currentState);
+    // currentState = getNextState(currentState);
+    // stateLength = getNextStateDuration(currentState);
+    updateNextState();
+    updateNextStateDuration();
     setLight(currentState);
   }
 
@@ -114,5 +116,33 @@ void loop() {
 
     isDWLedOn = !isDWLedOn;
     digitalWrite(DONTWALK, isDWLedOn);
+  }
+}
+
+
+/* ======== FUNCTIONS that have input/return for state =========== */
+// stage 1: create function with NSY NSR NSG
+State getNextState(State s) {
+  switch (s) {
+    case NSY:
+      // return NSR; //stage 2
+      return PED;
+    case PED:        // stage 2
+      return PEDDW;  // stage 2
+    // case NSR:    //stage 2
+    case PEDDW:
+      return NSG;
+    case NSG:
+      return NSY;
+  }
+}
+// stage 1: time for NSY and then NSR NSG
+int getNextStateDuration(State s) {
+  switch (s) {
+    case NSY:
+    case PEDDW:  // stage 2
+      return TRANSITION_TIME;
+    default:
+      return GO_TIME;
   }
 }

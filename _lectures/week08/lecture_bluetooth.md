@@ -164,10 +164,15 @@ Sometimes the argon doesn't properly disconnect from app. When app is then opene
 
 * Use Bluefruit app to control an RGB LED and a buzzer 
 * Send commands **from** app **to** argon, interpret them in Argon, and perform an action
+
+## Lab #1: Controlling Argon via UART (part 1)
+
 * Getting started
-  * Download starting code: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
+* We are going to build a stoplight / pedestrian crossing for a two way intersection
+* Download starting code
+  * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_uart_control_start
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week08/ble_uart_control_start
 * In Bluefruit app, connect to over UART (listed as "controller")
 
 ## Lab #1: Controlling Argon via UART (part 2)
@@ -204,10 +209,12 @@ On-board LED    D7
 
 * Use Bluefruit app to control a servo and motor
 * Send commands **from** app **to** argon, interpret them in Argon, and perform an action
-* Getting started
-  * Download project: Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+* Download starting code
+  
+  * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
+  
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_uart_control_start
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week08/ble_uart_control_start
 * In Bluefruit app, connect to over UART (listed as "controller")
 
 ## Lab #2: Control Fan (part 2)
@@ -249,10 +256,10 @@ Motor Controller
 
 * Use Bluefruit app to send accelerometer data from phone to Argon
 * Control RGB LED colors with accelerometer data
-* Getting started
-  * Download code: Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+* Download starting code
+  * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_uart_rgb_accel_example
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week08/ble_uart_rgb_accel_example
 
 ## Demo #1: Control RGB LED with Phone Accelerometers (part 2)
 
@@ -273,12 +280,12 @@ Motor Controller
 
 * Argon is using Bluetooth health thermometer service
 
-* Getting started
+* Download starting code
 
-  * Download code: Go to [http://kinolien.github.io/gitzip/](http://kinolien.github.io/gitzip/)
+  * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
 
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_health_temp_final
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week08/ble_health_temp_final
 
 ## Demo #2: Read Health Thermometer Service (part 2)
 
