@@ -700,7 +700,7 @@ toc_sticky: true
 ## Assignment
 
 - Due start of current week: A8 - Alarm clock
-- Given out start of current week: A9 - Bluetooth car part 1 (build chassis only)
+- Given out start of current week: A9 - Bluetooth car part 1
 
 ## 10. Car; Battery; Cloud Data Storage and Dashboards 
 

@@ -2,12 +2,10 @@
 marp: true
 theme: itp
 
-week: 9
-category: lectures
 title: Guide to Car Chassis Assembly
 ---
 
-## **ITP 348: Car Chassis Setup**
+## ITP 348: Car Chassis Setup
 
 ## Items You will Need
 

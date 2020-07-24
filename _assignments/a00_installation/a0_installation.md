@@ -14,11 +14,8 @@ Assignment 0 – Installation and Setup
 **Requirements**
 
 -   Create Particle account
-
 -   Install Particle Workbench
-
 -   Install Fritzing
-
 -   Add argon device to your Particle account
 
 \_______________________________________\_
@@ -53,26 +50,26 @@ Install Fritzing
 
 -   ITP has paid for a Fritzing support license for the class. To download it, please go to the course Blackboard site and click on "Fritzing Download".
 
-- Download and install Fritzing, and then continue these instructions
+-   Download and install Fritzing, and then continue these instructions
 
-  Install Fritzing Library for Argon
-  ----------------
+Install Fritzing Library for Argon
+----------------
 
-  >   There are special components required to create Fritzing designs with the Argon.
+>   There are special components required to create Fritzing designs with the Argon.
 
-  - Download the Argon library for Fritzing:
+- Download the Argon library for Fritzing:
 
-    [https://github.com/reparke/Fritzing-Parts/archive/master.zip](https://github.com/reparke/Fritzing-Parts/archive/master.zip)
+  [https://github.com/reparke/Fritzing-Parts/archive/master.zip](https://github.com/reparke/Fritzing-Parts/archive/master.zip)
 
-  - Unzip the file (take note of the folder location)
-  
-  - Open Fritzing
-  
-  - On **Parts** panel on the right side of the screen, click the small dropdown menu and choose **Import…**
-  
-  - Navigate to the folder with the file you downloaded and open `Particle_Mesh_Parts.fzpz`
-  
-  - If you want to save the mesh library for future use, click the small dropdown menu on the **Parts** panel again and chose *Save Bin*
+- Unzip the file (take note of the folder location)
+
+- Open Fritzing
+
+- On **Parts** panel on the right side of the screen, click the small dropdown menu and choose **Import…**
+
+- Navigate to the folder with the file you downloaded and open `Particle_Mesh_Parts.fzpz`
+
+- If you want to save the mesh library for future use, click the small dropdown menu on the **Parts** panel again and chose *Save Bin*
 
 Add Argon device to your Particle account
 -----------------------------------------
