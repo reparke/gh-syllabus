@@ -1,9 +1,9 @@
 ---
-week: 9
+week: 10
 number: 9
 category: assignments
 title: Bluetooth Car (part 2)
-date_due: Oct 20 @ in class
+date_due: Oct 27 @ in class
 
 ---
 Assignment 9 – Bluetooth Car part 2
@@ -89,17 +89,15 @@ Deliverables
 
 5.  Upload zip file to Blackboard site for our course
 
-6.  A photograph of your device connected to USB with the blue light on.
+6.  A photograph of your customized car connected to the battery with the blue light on.
 
-7.  A (very) short video demonstrating your project functioning
+7.  A (very) short video demonstrating your car being controlled over Bluetooth and driving (accelerating, reversing, stopping, turning right / left).
 
 Grading
 -------
 
 | Item                         | Points |
 | ---------------------------- | ------ |
-| Car structure                | 5      |
 | Driving and Bluetooth sketch | 5      |
-| Car customization            | 5      |
 | Steering / handling          | 5      |
-| Total                        | 20     |
+| Total                        | 10     |

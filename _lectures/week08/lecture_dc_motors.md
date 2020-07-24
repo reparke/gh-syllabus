@@ -38,6 +38,8 @@ title: DC Motors
   * Electric scooters
   * High-torque applications
 
+<!--Torque is a measure of force that causes an object to rotate about an axis-->
+
 ## DC Motor Construction
 
 <img src="lecture_dc_motors.assets/dc_motor_construction.png" alt="dc_motor_construction" style="width:900px" />
@@ -55,7 +57,7 @@ title: DC Motors
 * The guiding principle behind electric motors is the **Lorentz Force**
 
 
-* Electrical current in a magnetic field produces a physical force
+* **Electrical current in a magnetic field produces a physical force**
 * Force direction is given by the “right-hand rule”
   * Current direction along your index
   * Magnetic field along your middle
@@ -68,6 +70,14 @@ title: DC Motors
 ## Lorentz Force
 
 <img src="lecture_dc_motors.assets/lorentz2.png" alt="Lorentz Force" style="width:600px" />
+
+<!--in this picture, force on right side of armature is INTO screen while force on left side of armature is OUT of screen (since current is opposite direction)-->
+
+## Lorentz Force
+
+<img src="lecture_dc_motors.assets/lorentz2_current_reversed.png" alt="Lorentz Force" style="width:600px" />
+
+<!--in this picture, force on right side of armature is INTO screen while force on left side of armature is OUT of screen (since current is opposite direction)-->
 
 ## Lorentz Force
 

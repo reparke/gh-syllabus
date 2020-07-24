@@ -1,7 +1,11 @@
 ---
 title: Syllabus
 layout: single
-cateogory: syllabus
+category: syllabus
+toc: true
+toc_label: "Quick Links"
+toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
+toc_sticky: true
 ---
 
 ## Fall 2020
@@ -39,7 +43,7 @@ physical world. Assignments will use **motion detectors**, **robotic arms**, and
 
 This course teaches students to design electronic devices that interact with the
 physical world by building circuits and developing software algorithms that run
-on a microcontroller. Students are expected to be familiar with object-oriented
+on a microcontroller. Students are expected to be familiar with introductory
 programming, but **no prior experience with electronics or microcontrollers is
 necessary.**
 
@@ -73,18 +77,18 @@ Blackboard. All assignments will be posted to Blackboard and will be submitted
 through Blackboard. **Students must familiarize themselves with Blackboard
 before the course begins**.
 
-### Course Materials
+### Course Kit
 
 Students will be required to purchase a kit at the USC bookstore for this
 course. This kit is created specifically for the course and must be purchased
 during the first week of class. Additional components will be provided by the
 instructor
 
-##### Required Readings
+### Required Readings
 
 Readings will be posted on Blackboard during the semester.
 
-##### Supplementary Books
+#### Supplementary Books
 
 - Scherz, Paul, et. al*. Practical Electronics for Inventors (3rd Edition)*.
   McGraw-Hill Education, 2013. ISBN: 978-0071771337  
@@ -98,7 +102,7 @@ Readings will be posted on Blackboard during the semester.
   the Arduino*. Apress, 2015. ISBN: 978-1484209417  
   Amazon: <http://a.co/9NcBY1V>
 
-
+## Course Deliverables
 
 ### Hardware Assignments
 
@@ -143,15 +147,15 @@ and provided links to any reference material will be considered cheating.
 
 #### Project Grading Breakdown
 
-| **Item**                    | **Points** |
-|-----------------------------|------------|
-| Proposal                    | 10         |
-| Device schematic            | 20         |
-| Device firmware (C++)       | 25         |
-| Web or mobile interface app | 20         |
-| Functional device           | 25         |
-|                             |            |
-| Total                       | 100        |
+| Item                        | Points |
+| --------------------------- | ------ |
+| Proposal                    | 10     |
+| Device schematic            | 20     |
+| Device firmware (C++)       | 25     |
+| Web or mobile interface app | 20     |
+| Functional device           | 25     |
+|                             |        |
+| Total                       | 100    |
 
 #### Project Demonstration
 
@@ -167,49 +171,38 @@ added depending on size of the class.
 
 
 
-### Course Grading Breakdown
+## Course Grading Breakdown
 
-| **Item**                  | **% of Grade** |
-|---------------------------|----------------|
-| Participation             | 10             |
-| Assignments               | 40             |
-| In-Class Labs and Quizzes | 20             |
-| Final Project             | 30             |
-|                           |                |
-| Total                     | 100%           |
+| Item                      | % of Grade |
+| ------------------------- | ---------- |
+| Participation             | 10         |
+| Assignments               | 40         |
+| In-Class Labs and Quizzes | 20         |
+| Final Project             | 30         |
+|                           |            |
+| Total                     | 100%       |
 
 ### Grading Scale
 
 Course final grades will be determined using the following scale
 
 - A 93-100
-
 - A- 90-92
-
 - B+ 87-89
-
 - B 83-86
-
 - B- 80-82
-
 - C+ 77-79
-
 - C 73-76
-
 - C- 70-72
-
 - D+ 67-69
-
 - D 65-66
-
 - F 64 and below
 
-
-#### Grading Timeline
+### Grading Timeline
 
 Assignments will receive feedback after about one week.
 
-#### Policies and Expectations
+### Policies and Expectations
 
 Students are expected to:
 
@@ -217,13 +210,13 @@ Students are expected to:
 
 -   Attend and complete weekly assignments
 
-#### Grading Issues
+### Grading Issues
 
 Students will have one week after graded feedback is given to contest scores
 (e.g. assignments, midterm, and project). After two week, scores will not be
 changed.
 
-#### Late Policy
+### Late Policy
 
 -   Assignments are due on the stated day on Blackboard (typically at 11:59 pm)
 
@@ -246,9 +239,9 @@ submission that they intend to use a grace day.
 
 *(Adapted from Stanford’s EE365 policy)*
 
-**Course Schedule: A Weekly Breakdown**
+## Course Schedule: A Weekly Breakdown
 
-|                 | **Topics/Daily Activities**                                  | **Readings**  | **Assignment (given out on Tuesday; due one week Monday @ 11:59 pm)** |
+| Week                 | Topics/Daily Activities                                  | Readings  | Assignment (given out on Tuesday; due one week Monday @ 11:59 pm) |
 | --------------- | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
 | Week 1          | Intro to Internet of Things (IoT), electricity, microcontrollers, Ohm’s Law, LEDs | Posted online | A0 and A1                                                    |
 | Week 2          | Analog to digital conversion, pulse width modulation, serial | Posted online | A2                                                           |
@@ -266,7 +259,7 @@ submission that they intend to use a grace day.
 | Final (Week 14) | Final project presentation                                   | Posted online | Project code, device, app, in-class demo                     |
 |                 |                                                              |               | Date: For the date and time of the final for this class, consult the USC *Schedule of Classes* at [www.usc.edu/soc](http://www.usc.edu/soc)*.* |
 
-#### Academic Conduct
+## Academic Conduct
 
 Plagiarism – presenting someone else’s ideas as your own, either verbatim or
 recast in your own words – is a serious academic offense with serious
@@ -279,66 +272,68 @@ misconduct, [http://policy.usc.edu/scientific-misconduct](http://policy.usc.edu
 
  
 
-#### Support Systems
+## Support Systems
 
-*Student Counseling Services (SCS) - (213) 740-7711 – 24/7 on call*
+### *Student Counseling Services (SCS) - (213) 740-7711 – 24/7 on call*
 
 Free and confidential mental health treatment for students, including short-term
 psychotherapy, group counseling, stress fitness workshops, and crisis
 intervention. <https://engemannshc.usc.edu/counseling/>
 
-*National Suicide Prevention Lifeline - 1-800-273-8255*
+### *National Suicide Prevention Lifeline - 1-800-273-8255*
 
 Provides free and confidential emotional support to people in suicidal crisis or
 emotional distress 24 hours a day, 7 days a week.
 [http://www.suicidepreventionlifeline.org](http://www.suicidepreventionlifeline.org/)
 
-*Relationship and Sexual Violence Prevention Services (RSVP) - (213) 740-4900 -
+### *Relationship and Sexual Violence Prevention Services (RSVP) - (213) 740-4900 -
+
 24/7 on call*
 
 Free and confidential therapy services, workshops, and training for situations
 related to gender-based harm. <https://engemannshc.usc.edu/rsvp/>
 
-*Sexual Assault Resource Center*
+### *Sexual Assault Resource Center*
 
 For more information about how to get help or help a survivor, rights, reporting
 options, and additional resources, visit the website: <http://sarc.usc.edu/>
 
-*Office of Equity and Diversity (OED)/Title IX Compliance – (213) 740-5086*
+### *Office of Equity and Diversity (OED)/Title IX Compliance – (213) 740-5086*
 
 Works with faculty, staff, visitors, applicants, and students around issues of
 protected class. <https://equity.usc.edu/>
 
-*Bias Assessment Response and Support*
+### *Bias Assessment Response and Support*
 
 Incidents of bias, hate crimes and microaggressions need to be reported allowing
 for appropriate investigation and response.
 <https://studentaffairs.usc.edu/bias-assessment-response-support/>
 
-*The Office of Disability Services and Programs*
+### *The Office of Disability Services and Programs*
 
 Provides certification for students with disabilities and helps arrange relevant
 accommodations. [http://dsp.usc.edu](http://dsp.usc.edu/)
 
-*Student Support and Advocacy – (213) 821-4710*
+### *Student Support and Advocacy – (213) 821-4710*
 
 Assists students and families in resolving complex issues adversely affecting
 their success as a student EX: personal, financial, and academic.
 <https://studentaffairs.usc.edu/ssa/>
 
-*Diversity at USC*
+### *Diversity at USC*
 
 Information on events, programs and training, the Diversity Task Force
 (including representatives for each school), chronology, participation, and
 various resources for students. <https://diversity.usc.edu/>
 
-*USC Emergency Information*
+### *USC Emergency Information*
 
 Provides safety and other updates, including ways in which instruction will be
 continued if an officially declared emergency makes travel to campus infeasible,
 <http://emergency.usc.edu>
 
-*USC Department of Public Safety – 213-740-4321 (UPC) and 323-442-1000 (HSC) for
+### *USC Department of Public Safety – 213-740-4321 (UPC) and 323-442-1000 (HSC) for
+
 24-hour emergency assistance or to report a crime*.
 
 Provides overall safety to USC community.

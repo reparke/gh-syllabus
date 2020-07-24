@@ -2,6 +2,10 @@
 layout: single
 classes: wide
 title: Weekly Plan
+toc: false
+toc_label: "Quick Links"
+toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
+toc_sticky: true
 
 ---
 ## 		Things to implement
@@ -12,6 +16,7 @@ title: Weekly Plan
 * wk1: record software tools for reference
 * general: try to incorporate `enum` or `switch` earlier in semester
 * idea: involve students in a couple weeks where we "flip" the classroom
+* a8 (alarm): revise to use state machines
 
 ## General Feedback (Fall 2019)
 
@@ -515,11 +520,11 @@ title: Weekly Plan
 
 - Starting with sample code
 - walk through NS light state transitions (length, state)
-- use delay() (not millis)
+- use delay() (not `millis`)
 
 ### Feedback
 
-- next day cover millis, then rest of light blinking
+- next day cover `millis`, then rest of light blinking
 - some students enjoyed the complexity of all parts, other seemed bored
 
 ### Day 2
@@ -549,7 +554,7 @@ title: Weekly Plan
 
 
 
-## 8. Motors and Servos
+## 8. Motors, Servos, Bluetooth
 
 ### Before class
 
@@ -601,7 +606,8 @@ title: Weekly Plan
 #### Lecture
 
 - Bluetooth
-- Show Bluefruit app and nRF Toolbox
+- Argon BLE syntax
+- Show Bluefruit app (skip nRF Toolbox)
 
 #### Lab - ble_uart_control_start
 
@@ -621,6 +627,8 @@ title: Weekly Plan
 
 #### Example - ble_uart_rgb_accel_example
 
+<!--skip for time -->
+
 - Distribute github link to download (post on slides)
 - Describe project goals
 - explain **onDataReceived()**
@@ -637,153 +645,250 @@ title: Weekly Plan
 
 
 
+## 9. Ultrasonic Distance Sensor; OLED Graphics
 
+### Reading
 
-## 11
+- 
 
-- Reading
-  - 
-- Day 1
-  - Lecture
-    - LIPO battery
-    - car bluetooth - gave overview of coding -- no specifics but pseudocode design for carForward, leftMotor, etc..
-  - Lecture
-    - project overview
-    - Ultrasonic distance sensor 
-    - OLED graphics
-  - Lab
-    - Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
-  - Feedback Day 1
-    - Went generally well. Ran out of time to talk about graphics. Could have covered graphics if we didn't cover car
-- Day 2
-  - Lecture
-    - OLED graphics
-    - walk through of Thingspeak (==need to make slides==)
-      - Create webhook in Particle
-      - send temperature data through `Particle.publish` to thingspeak
-  - Feedback day 2
-    - Recommend **NOT** using thingsspeak again. Thingspeak integration with webhook is fairly simple. It is also possible to discuss JSON to send multiple values.
-    - However, thingsspeak doesn't have a way to send commands to Argon (have to use something like IFTTT)
-  - Assignment
-    - Due start of current week: A8 - Alarm clock
-    - Given out start of current week: ==A9 - Bluetooth car== part 1 (build chassis only)
+### Day 1
 
-## 12. 
+#### Lecture
 
-   - Reading
-     
-     - 
-   - Day 1 
-     - Lecture
-       - Finish ThingSpeak integration with multiple values as JSON
-     - Lab
-       - Finish ThingSpeak integration with multiple values as JSON walk through example
-     - Lecture
-       - Explain what APIs are; show them a few public ones
-       - Discuss [weather stack](https://weatherstack.com/) show example call
-       - show JSON slides
-       - walkthrough integration
-       - write json code together
-     - Lab
-       - Create [weather stack](https://weatherstack.com/) account
-       - Have them use their own api key to view JSON in a browser (use formatter online if necessary
-       - Create webhook in Particle
-       - Copy code from particle publishing and subscribing
-       - Test: publish request and see if subscribe code retrieves JSON data
-   - Day 2
-     - Lecture
-       - Briefly talk about JSON
-       - Show students an example of how the code works for JSON parser
-       
-     - Lab
-       
-       - Have students show description, temp, location, rainfall
-       
-     - Lab
-       
-       - find another API to show
-       
-       Assignment
-       
-       - Due start of current: ==A9 - Bluetooth car== part 1
-       - Given out start of current week: ==A9 - Bluetooth car== part 2 **and** Proposal
-## 13.
+- project overview
+- Ultrasonic distance sensor 
+- OLED graphics
 
-- Reading
-  - 
-- Day 1 -- ==**Google Guest Lecture on Accessibility**==
-  - Lecture
-    - Guest Lecture
-  - Lab
-    - After guest lecture, we all met in a circle and discuss project proposals and gave feedback
-- Day 2
-  - Lecture 
-    * Debouncing
-  - Lab
-    - create State enum and state transistions
-    - set up debouncing
-  - Lecture
-    * heart rate rate sensor
-      * what is it
-      * How does it work
-      * how to program it
-- Assignment
-  - project
+#### Lab
 
-## 14.
+- Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
 
-   - Reading
-     - 
-   - Day 1
-     * Lecture
-       * Review debouncing
-       * Review heart rate sensor
-     * Lab
-       * Program heart screen
-     * Lecture
-       * Time
-     * Lab
-     * how to work with the clock
-     * Lecture
-       * Connect to weather
-   - Day 2
-     - Activity
-       - Check milestone (postponed to next week)
-     - Lecture
-       - Discuss DHT 22
-       - accelerometer
-     - Lab
-       - Use **tap** feature
-       - Use **portrait / landscape** detection
-       - Use accelerometer to control RGB LED
-   - Assignment
-     - AX - 
-## 15. 
+### Feedback Day 1
 
-- Reading
-  - 
-- Day 1
-  - Activity
-    - Check milestone 
-  - Lecture
-    - PIR sensor
-  - Lab
-    - Do basic wiring together
-    - ask students to enable longer delay-to-off time
-  - Lecture
-    - accelerometer
-  - Lab
-    - Copy example code for display graphs
-    - Use **tap** feature
-    - Use **portrait / landscape** detection
-    - Use accelerometer to control RGB LED (if time)
-- Day 2
-  - Lecture
-    - Work on project 
-- Assignment
-  - AX - 
+- Went generally well. Ran out of time to talk about graphics.
 
-## 16 - Final Project Presentation
+### Day 2
+
+#### Lecture
+
+- OLED graphics (if necessary)
+- JSON overview
+- Dashboard and Initial State integration (single values)
+
+#### Guided Activity
+
+* Create InitialState account
+
+* Create webhook in Particle
+
+- Send photoresistor value`Particle.publish` to InitialState
+
+#### Lecture
+
+- InitialState integration (multiple values)
+
+#### Lab
+
+* Continue from before
+
+- Send photoresistor value and light level threshold`Particle.publish` to InitialState
+
+## Feedback
+
+- Pre-class concern: we will be interleaving car
+
+## Assignment
+
+- Due start of current week: A8 - Alarm clock
+- Given out start of current week: A9 - Bluetooth car part 1 (build chassis only)
+
+## 10. Car; Battery; Cloud Data Storage and Dashboards 
+
+### Reading
+
+- 
+
+### Day 1 
+
+#### Lecture
+
+- LIPO battery
+- car bluetooth - gave overview of coding -- no specifics but pseudocode design for carForward, leftMotor, etc. (students will build this for their)
+
+#### Lecture
+
+- Finish InitialState Integration (if necessary)
+
+#### Lab
+
+- Finish InitialState Integration (if necessary)
+
+#### Lecture
+
+- APIs and JSON Parsing
+- Show students a few public APIs
+- Discuss [weather stack](https://weatherstack.com/) show example call
+- Walkthrough integration (==need to make these==)
+- Write json code together
+
+#### Lab
+
+- Create [weather stack](https://weatherstack.com/) account
+- Have them use their own API key to view JSON in a browser (use formatter online if necessary
+- Create webhook in Particle
+- Copy code from particle publishing and subscribing
+- Test: publish request and see if subscribe code retrieves JSON data
+
+### Day 2
+
+#### Lecture	
+
+- Show students an example of how the code works for JSON parser
+
+#### Lab
+
+- Have students show description, temp, location, rainfall
+
+#### Lab
+
+- find another API to show
+
+### Assignment
+
+- Due start of current: ==A9 - Bluetooth car== part 1
+- Given out start of current week: ==A9 - Bluetooth car== part 2 **and** Proposal
+
+## 11.
+
+### Reading
+
+- 
+
+### Day 1 -- ==**Google Guest Lecture on Accessibility**==
+
+#### Lecture
+
+#### Guest Lecture
+
+#### Lab
+
+- After guest lecture, we all met in a circle and discuss project proposals and gave feedback
+
+### Day 2
+
+#### Lecture 
+
+* Debouncing
+
+#### Lab
+
+- create State enum and state transistions
+- set up debouncing
+
+#### Lecture
+
+* heart rate rate sensor
+  * what is it
+  * How does it work
+  * how to program it
+
+### Assignment
+
+- project
+
+## 12.
+
+### Reading
+
+- 
+
+### Day 1
+
+#### Lecture
+
+* Review debouncing
+* Review heart rate sensor
+
+#### Lab
+
+* Program heart screen
+
+#### Lecture
+
+* Time
+
+#### Lab
+
+* how to work with the clock
+
+#### Lecture
+
+* Connect to weather
+
+### Day 2
+
+#### Activity
+
+- Check milestone (postponed to next week)
+
+#### Lecture
+
+- Discuss DHT 22
+- accelerometer
+
+#### Lab
+
+- Use **tap** feature
+- Use **portrait / landscape** detection
+- Use accelerometer to control RGB LED
+
+### Assignment
+
+- AX - 
+
+## 13. 
+
+### Reading
+
+- 
+
+### Day 1
+
+#### Activity
+
+- Check milestone 
+
+#### Lecture
+
+- PIR sensor
+
+#### Lab
+
+- Do basic wiring together
+- ask students to enable longer delay-to-off time
+
+#### Lecture
+
+- accelerometer
+
+#### Lab
+
+- Copy example code for display graphs
+- Use **tap** feature
+- Use **portrait / landscape** detection
+- Use accelerometer to control RGB LED (if time)
+
+### Day 2
+
+#### Lecture
+
+- Work on project 
+
+### Assignment
+
+- AX - 
+
+## 14 - Final Project Presentation
 
    
 
@@ -795,7 +900,7 @@ title: Weekly Plan
 
 ---
 
-## **Use when extra time**
+# **Use when extra time**
 
 ## Week 5 - Photoresistor
 
@@ -817,95 +922,167 @@ title: Weekly Plan
 
 ## Week 8 - Soldering
 
-* Day 1
-  * Soldering demo in EE lab
-  * had students build sparkfun flashlight
-  * Then Neftali did a quick demo of how to lay out a simple PCB in Fritzing
-* Feedback
-  * Took about 1 hour
-  * soldering was fun but really simple. It would be cool to have a second, more complex circuit
+### Day 1
 
+#### Lab
 
+* Soldering demo in EE lab
+* had students build sparkfun flashlight
+* Then Neftali did a quick demo of how to lay out a simple PCB in Fritzing
+
+### Feedback
+
+* Took about 1 hour
+* soldering was fun but really simple. It would be cool to have a second, more complex circuit
+
+## Losant part 1
+
+### Day 2
+
+#### Lecture
+
+- Losant
+
+#### Lab (together)
+
+- Create application
+- Create devices
+- Create integrations
+- Create workflows
+
+## Losant part 2 + Rate
+
+### Day 1
+
+#### Activity
+
+- Race competition
+
+#### Lecture
+
+- Losant
+
+#### Lab
+
+- Review workflow (make sure everyone is getting data in device by going to overview)
+- Create dashboard
+- Create web application
+
+### Feedback
+
+- make sure to set up voting ahead of time for best customization for voting
+- [Create bracket online](https://challonge.com/tournament/bracket_generator)
+
+### Day 2
+
+#### Lecture
+
+- Discuss controlling devices from Losant
+
+#### Lab
+
+- Revise firmware and Losant environment to support input controls (blink light on / off)
+
+### Assignment
+
+- Due start of current week: A10 - Bluetooth car 
+- Given out start of current week: 
 
 ---
 
 
 
-## **Skipped / Eliminated**
+# **Skipped / Eliminated**
 
-- BLE Health service
-  - The goal was to send a temperature from Argon to Bluefruit app but it rarely worked
-  - Lab - ble_health_temp_start
-    - Distribute github link to download (post on slides)
-    - Describe project goals
-    - Explain **argon_ble_setup.h** at a high level
-      - Have students change **DEVICE_NAME**
-    - Draw picture of how temperature data is organized
-      - 6 bytes total
-      - byte 1: 8 bits of flags
-      - bytes 2-5: 4 byte floating point number
-      - byte 6: temperature type
-    - Define constants and globals
-      - UPDATE_INTERVAL_MS
-      - prevUpdate = 0;  // time of last update in millis()
-      - float prevTempF = -1.0;        // previous temperature in Fahr
-      - uint8_t batteryLevel = -1;     // battery level percentage [0-100]
-    - Write **loop()** together
-    - Write **getTemp()** together
-      - Call       **update_ble_temperature**
-    - Write **getBatteryLevel()** together
-      - call update_ble_battery_level
-  - - 
-  
- - #### Week 11
+## BLE Health Service
 
-   * Day 2
+- The goal was to send a temperature from Argon to Bluefruit app but it rarely worked
 
-   - - Lecture
-       - Losant
-     - Lab (together)
-       - Create application
-       - Create devices
-       - Create integrations
-       - Create workflows
-   
-- ## Week 12
+#### Lab - ble_health_temp_start
 
-  - Day 1
-    - Activity
-      - Race competition
-    - Lecture
-      - Losant
-    - Lab
-      - Review workflow (make sure everyone is getting data in device by going to overview)
-      - Create dashboard
-      - Create web application
-  - Feedback
-    - make sure to set up voting ahead of time for best customization for voting
-    - [Create bracket online](https://challonge.com/tournament/bracket_generator)
-  - Day 2
-  - Lecture
-    - 
-    - Discuss controlling devices from Losant
-  - Lab
-    - Revise firmware and Losant environment to support input controls (blink light on / off)
-  - Assignment
-    - Due start of current week: A10 - Bluetooth car 
-    - Given out start of current week: 
-  
-- ## Week 13
+- Distribute github link to download (post on slides)
+- Describe project goals
+- Explain **argon_ble_setup.h** at a high level
+  - Have students change **DEVICE_NAME**
+- Draw picture of how temperature data is organized
+  - 6 bytes total
+  - byte 1: 8 bits of flags
+  - bytes 2-5: 4 byte floating point number
+  - byte 6: temperature type
+- Define constants and globals
+  - UPDATE_INTERVAL_MS
+  - prevUpdate = 0;  // time of last update in millis()
+  - float prevTempF = -1.0;        // previous temperature in Fahr
+  - uint8_t batteryLevel = -1;     // battery level percentage [0-100]
+- Write **loop()** together
+- Write **getTemp()** together
+  - Call       **update_ble_temperature**
+- Write **getBatteryLevel()** together
+  - call update_ble_battery_level
 
-- Lecture
 
-  - I2C LCD
-  - Ultrasonic distance sensor
 
-- Lab
+## LCD screen
 
-  - exercises in slides
+#### Lecture
 
-- Feedback
+- I2C LCD
+- Ultrasonic distance sensor
 
-  - Fail.
-  - The LCD devices only worked for half the students (either faulty devices or bad libraries). Definitely DO NOT use LCDs again
-  - Ultrasonic sensor worked mostly
+#### Lab
+
+- exercises in slides
+
+### Feedback
+
+- Fail.
+- The LCD devices only worked for half the students (either faulty devices or bad libraries). Definitely DO NOT use LCDs again
+- Ultrasonic sensor worked mostly
+
+## ThingSpeak 
+
+### Day 2
+
+### Lecture
+
+- OLED graphics
+- walk through of Thingspeak (==need to make slides==)
+  - Create webhook in Particle
+  - send temperature data through `Particle.publish` to thingspeak
+
+### Feedback day1
+
+- Recommend **NOT** using thingsspeak again. Thingspeak integration with webhook is fairly simple. It is also possible to discuss JSON to send multiple values.
+- However, thingsspeak doesn't have a way to send commands to Argon (have to use something like IFTTT)
+
+### Assignment
+
+- Due start of current week: A8 - Alarm clock
+- Given out start of current week: ==A9 - Bluetooth car== part 1 (build chassis only)
+
+### Day 1 (following week)
+
+#### Lecture
+
+- Finish ThingSpeak integration with multiple values as JSON
+
+#### Lab
+
+- Finish ThingSpeak integration with multiple values as JSON walk through example
+
+#### Lecture
+
+- Explain what APIs are; show them a few public ones
+- Discuss [weather stack](https://weatherstack.com/) show example call
+- show JSON slides
+- walkthrough integration
+- write json code together
+
+#### Lab
+
+- Create [weather stack](https://weatherstack.com/) account
+- Have them use their own api key to view JSON in a browser (use formatter online if necessary
+- Create webhook in Particle
+- Copy code from particle publishing and subscribing
+- Test: publish request and see if subscribe code retrieves JSON data
+

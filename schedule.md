@@ -1,7 +1,7 @@
 ---
 title: Weekly Schedule
 layout: single
-toc: false
+toc: true
 toc_label: "Quick Links"
 toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: true

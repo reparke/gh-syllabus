@@ -40,9 +40,9 @@ title: Cloud Communication - Accessing Variables
 ## IoT Cloud Platform Companies
 
 * Very competitive and growth space
-* Established firms: Google Cloud Platform, Microsoft Azure, Amazon Web Services
-* Startups: Particle, Losant, Ubidots
-* Various: Thingspeak (Mathworks), IFTTT
+* Established firms: [Google Cloud IoT](https://cloud.google.com/solutions/iot), [Microsoft Azure IoT](https://azure.microsoft.com/en-us/overview/iot/), [Amazon Web Services](https://aws.amazon.com/iot/)
+* Startups: [Particle](https://particle.io), [Losant](https://www.losant.com/), [Ubidots](https://ubidots.com/), [Initial State](https://www.initialstate.com/), [Tinamous](https://www.tinamous.com/)
+* Various: [Thingspeak](https://thingspeak.com/) (supports MATLAB), [IFTTT](https://www.ifttt.com)
 
 ## Particle Cloud Features
 
