@@ -89,6 +89,9 @@ $secondary-color: $gold !default;  //added by RP
 .page__footer-license {
   font-size: 0.75em;
 }
+.page__footer-license a {
+  color: $gold !important;
+}
 
 
 //used in schedule.md
