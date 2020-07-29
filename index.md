@@ -4,7 +4,6 @@ header:
   overlay_filter: rgba(0,0,0,0.3) # same as adding an opacity of 0.5 to a black background
   show_overlay_excerpt: false
   excerpt: ""
-head_: <meta name="google-site-verification" content="zqAULEYrvdQNHU_PQUGQzS0gFmLyA5UDceJEk31IkKE" />
 ---
 
 
