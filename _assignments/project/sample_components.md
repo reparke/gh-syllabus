@@ -1,10 +1,8 @@
 ---
 week: 10
-number: 11
 category: assignment
-title: Project
-date_due: Partial List of Components for Project 
-
+title: Partial List of Components for Project
+show_in_list: false
 ---
 
 Partial List of Components for Project 
@@ -12,7 +10,7 @@ Partial List of Components for Project
 
 This list include the components we covered in the course. You can also use components not discussed in the course, but you are not required or expected to do so.
 
-### Sensors
+## Sensors
 
 -   Temperature sensors
     -   [TMP 36](https://www.sparkfun.com/products/10988)
@@ -28,7 +26,7 @@ This list include the components we covered in the course. You can also use comp
 * [Accelerometer](https://www.sparkfun.com/products/14480)
 * [Piezo movement detector](https://www.sparkfun.com/products/10293)
 
-### Environmental Interaction
+## Environmental Interaction
 
 * Button
 * Switch
@@ -37,18 +35,18 @@ This list include the components we covered in the course. You can also use comp
 * OLED screen
 * Potentiometer
 
-### Actuator
+## Actuator
 
 * DC motors + motor driver
 * Servo
 * Buzzer
 
-### In-class projects
+## In-class projects
 
 * Bluetooth-controlled car
 * Smart watch (heart rate + weather)
 
-### Cloud Services
+## Cloud Services
 
 * [InitialState](https://www.initialstate.com/)
   * Storing data

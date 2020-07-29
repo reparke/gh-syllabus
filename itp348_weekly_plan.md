@@ -645,7 +645,7 @@ toc_sticky: true
 
 
 
-## 9. Ultrasonic Distance Sensor; OLED Graphics
+## 9. Ultrasonic Distance Sensor; OLED Graphics; Cloud Dashboards
 
 ### Reading
 
@@ -672,7 +672,8 @@ toc_sticky: true
 #### Lecture
 
 - OLED graphics (if necessary)
-- JSON overview
+- API and JSON overview
+- Show students a few public APIs
 - Dashboard and Initial State integration (single values)
 
 #### Guided Activity
@@ -702,56 +703,54 @@ toc_sticky: true
 - Due start of current week: A8 - Alarm clock
 - Given out start of current week: A9 - Bluetooth car part 1
 
-## 10. Car; Battery; Cloud Data Storage and Dashboards 
+## 10. APIs; Weather; Car; Battery 
 
 ### Reading
 
-- 
+- Create [Weather Stack account](https://weatherstack.com/)
 
 ### Day 1 
 
-#### Lecture
-
-- LIPO battery
-- car bluetooth - gave overview of coding -- no specifics but pseudocode design for carForward, leftMotor, etc. (students will build this for their)
-
-#### Lecture
-
-- Finish InitialState Integration (if necessary)
-
-#### Lab
+#### Lecture / Lab
 
 - Finish InitialState Integration (if necessary)
 
 #### Lecture
 
-- APIs and JSON Parsing
-- Show students a few public APIs
+- JSON Parsing
 - Discuss [weather stack](https://weatherstack.com/) show example call
-- Walkthrough integration (==need to make these==)
+- Walkthrough integration
 - Write json code together
 
 #### Lab
 
-- Create [weather stack](https://weatherstack.com/) account
+- Create [weather stack](https://weatherstack.com/) account (hopefully they have already done this)
 - Have them use their own API key to view JSON in a browser (use formatter online if necessary
 - Create webhook in Particle
 - Copy code from particle publishing and subscribing
 - Test: publish request and see if subscribe code retrieves JSON data
 
-### Day 2
-
-#### Lecture	
-
 - Show students an example of how the code works for JSON parser
-
-#### Lab
 
 - Have students show description, temp, location, rainfall
 
-#### Lab
+#### Idea
 
 - find another API to show
+
+### Day 2
+
+#### Lecture / Lab
+
+* Finish Weather Stack
+
+#### Lecture 
+
+* LIPO battery
+
+#### Lecture
+
+* car bluetooth - gave overview of coding -- no specifics but pseudocode design for carForward, leftMotor, etc. (students will build this for their)
 
 ### Assignment
 

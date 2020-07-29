@@ -62,6 +62,9 @@ toc_sticky: true
     <ul>
       {% assign content_items = week.items %}
       {% for item in content_items %}
+         {% if item.show_in_list == false %}
+   			{% continue %}
+         {% endif %}
         {% if item.category == "assignments" %}
           <li class="weekly_schedule_content_item">
             <a href="{{ site.baseurl }}{{ item.url }}">#{{ item.number}} - {{ item.title }}</a> 

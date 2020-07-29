@@ -1,8 +1,8 @@
 ---
-marp: true
-theme: itp
-
+week: 9
+category: assignments
 title: Guide to Car Chassis Assembly
+show_in_list: false
 ---
 
 ## ITP 348: Car Chassis Setup

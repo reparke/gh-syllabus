@@ -4,12 +4,12 @@ theme: itp
 
 week: 9
 category: lectures
-title: JSON Overview
+title: APIs and JSON Overview
 ---
 
 <!-- headingDivider: 2 -->
 
-# JSON Overview
+# APIs and JSON Overview
 
 ```json
 {
@@ -33,8 +33,43 @@ title: JSON Overview
 
 ## Big Idea
 
-* We want to send signals and data from our Argon to the cloud
-* Sending one temperature value is not hard
+* We want our device to interact with services all over the internet--e.g. permanently store all heart rate data in the cloud, retrieve the weather forecast tomorrow, etc.
+* **APIs** provide the mechanism we use to communicate with these other services
+* **JSON** is a common format for the data we send and receive through an API
+
+  
+
+## APIs (Application Programming Interface)
+
+* A specification used as an interface between different pieces of software
+* Allows code we write to connect to other services, gather data, etc.
+* Usually related to a software library
+* May also be related to a software framework
+* May also be an implementation of a protocol
+* Publishing APIs has allowed web communities to create an open architecture for sharing content and data between communities and applications
+
+## Examples of APIs
+
+* Weather data - [https://weatherstack.com](https://weatherstack.com)
+* Dictionaries - [Merriam-Webste](https://dictionaryapi.com/)
+* Transit data - [Bay Area Rapid Transit](http://api.bart.gov)
+* Useful lists of public APIs
+  * [https://github.com/toddmotto/public-apis](https://github.com/toddmotto/public-apis)
+  * [https://github.com/abhishekbanthia/Public-APIs](https://github.com/abhishekbanthia/Public-APIs)
+
+## General Process to Interacting with Data from API
+
+* Identify API you want to use (make account if necessary)
+* Create a Particle webhook that interacts with the API
+* Use `Particle.publish` to trigger webhook
+* Use `Particle.subscribe` to "listen" for response from webhook (optional)
+* Create **function handler** that is used by `Particle.subscribe` to process JSON
+* We will walk though each of these steps in an example shortly
+
+
+## Where does JSON come in?
+
+* Sending one temperature value to a webservice is not hard
 * Sending dozens of sensor every second requires creating much more complex way of representing / store those values so we can send them to the cloud
 * JSON is an excellent, common way we exchange complex data
 

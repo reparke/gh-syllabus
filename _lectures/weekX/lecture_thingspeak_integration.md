@@ -22,7 +22,7 @@ title: ThingSpeak Integration
 ## Configuring Argon and ThingSpeak
 
 * The following examples are provided as a quick reference
-* More detailed steps were described in the lecture on 4/2/2020 and the video recording is available on Blackboard
+* More detailed steps were described in the lecture 
 
 ## General Steps to Connect Argon and ThingSpeak
 

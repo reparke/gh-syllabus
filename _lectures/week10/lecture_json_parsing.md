@@ -2,14 +2,14 @@
 marp: true
 theme: itp
 
-week: 9
+week: 10
 category: lectures
-title: APIs and JSON Parsing
+title: JSON Parsing
 ---
 
 <!-- headingDivider: 2 -->
 
-# APIs and JSON Parsing
+# JSON Parsing
 
 ```json
 {
@@ -33,31 +33,11 @@ title: APIs and JSON Parsing
 
 
 
-## APIs
+## Recall: What is JSON?
 
-* A specification used as an interface between different pieces of software
-* Allows code we write to connect to other services, gather data, etc.
-* Usually related to a software library
-* May also be related to a software framework
-* May also be an implementation of a protocol
-* Publishing APIs has allowed web communities to create an open architecture for sharing content and data between communities and applications
-
-## Examples of APIs
-
-* Weather data - [https://weatherstack.com](https://weatherstack.com)
-* Dictionaries - [Merriam-Webste](https://dictionaryapi.com/)
-* Transit data - [Bay Area Rapid Transit](http://api.bart.gov)
-* Useful lists of public APIs
-  * [https://github.com/toddmotto/public-apis](https://github.com/toddmotto/public-apis)
-  * [https://github.com/abhishekbanthia/Public-APIs](https://github.com/abhishekbanthia/Public-APIs)
-
-## Steps to Interacting with Data from API
-
-1. Identify API you want to use (make account if necessary)
-2. Create a Particle webhook that interacts with the API
-3. Use `Particle.publish` to trigger webhook
-4. Use `Particle.subscribe` to "listen" for response from webhook
-5. Create **function handler** that is used by `Particle.subscribe` to process JSON
+* When we communicate with an API to request information (e.g. the weather next week a certain city), the API will provides us data
+* The data is often in a JSON format
+* We need to be able to convert it into something usable
 
 ## Recall: JSON (JavaScript Object Notation)
 
@@ -101,12 +81,17 @@ title: APIs and JSON Parsing
   * Ex:`"daily_temp"` is a **key** and its **value** is an **array** 
   * Ex: `89` is an **int** and is at index`0`
 
-## Parsing JSON
+## Parsing JSON with C code directly
 
-* Typically parsing can be done using a library (in almost any language)
-* We will use `JsonParserGeneratorRK` which is written specifically for Argon and can be installed from **Workbench**
+* JSON is `String` data 
+* It is possible to parse JSON using C-language techniques like `strtok`, `strcpy`, `atoi` 
+* However, this is considered unsafe due to potential for security vulnerabilities 
+* Buffer overrun if the response from the webserver was larger than expected or malformed
+* **Instead, we will use a JSON library to parse**
 
-## Parsing with `JsonParserGeneratorRK`
+## Parsing JSON with a Library
+
+* We will use the library `JsonParserGeneratorRK` which is written specifically for Argon and can be installed from **Workbench**
 
 * The library provides sample code for interacting with most APIs that provide JSON data
 * The sample code allows for responses from the webhook that come in multiple parts

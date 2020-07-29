@@ -11,7 +11,7 @@ title: Data Visualization and Dashboard with Initial State
 
 # Data Visualization and Dashboards with Initial State 
 
-![](lecture_data_dashboards_initial_state_integration.assets/Infruid's_Self-Service_BI_Tool_Dashboard.jpg)
+![bg opacity:.75](lecture_data_dashboards_initial_state_integration.assets/Infruid's_Self-Service_BI_Tool_Dashboard.jpg)
 
 ## What do we do with all this data?
 
@@ -54,14 +54,22 @@ title: Data Visualization and Dashboard with Initial State
 * The following examples are provided as a quick reference
 * More detailed steps are described in the lecture 
 
-## General Steps to Connect Argon and Initial State 
+## Steps to Connect Argon and Initial State 
 
 1. Create account at  [https://initialstate.com](https://initialstate.com) 
 2. Create **stream bucket** at [https://initialstate.com](https://initialstate.com)  
 3. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
 4. Write firmware sketch and flash Argon
 
+## Aside: Access Key 
 
+* Also known as API key
+* Many webservices require you to register and then they provide you with an API key (ex: `zaCELgL. 0imfnc8mVLWwsAawjYr4Rx-Af50DDqtlx`)
+* This randomly-generated string serves as the login and password (credentials) to your account
+* Purposes
+  * Account security (no one but you can read / write data)
+  * Prevent abuse / hacking
+  * Throttling / account limits (enforce limits on read/write frequency)
 
 ## Example 1: Send Single Data Point from Argon to Initial State
 
