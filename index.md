@@ -23,7 +23,8 @@ You'll find course material and useful links on the side.
 - [Readings](readings.md) - Weekly readings
 - [Resources](resources.md) - Helpful pages and documentation for the course
 - [Blackboard](https://blackboard.usc.edu) - For submitting assignments
-- [Piazza](piazza.com/usc/fall2020/itp348/home) - Discussion board for assignments and class
+- [Piazza](https://piazza.com/usc/fall2020/itp348/home) - Discussion board for assignments and class
+- [Feedback](https://parke.wufoo.com/forms/feedback-form/) - If you find this material helpful in any way or you find it useful, please let me know by filling out this form. I would love to hear about it!
 
 
 
