@@ -6,7 +6,8 @@ remote_theme: "mmistakes/minimal-mistakes@4.19.3"
 minimal_mistakes_skin: "itp"
 plugins:
   - jekyll-include-cache
-  # - jekyll-feed
+  - jekyll-feed
+  - jekyll-sitemap
   
 description: "ITP 348 - Intro to Physical Computing @ USC (Open Educational Resource)"
 url: https://reparke.github.io
@@ -94,6 +95,7 @@ footer:
       icon: ""
       url: "https://usc.edu"
 
+#This are variables that are used to calculate dates for each week
 calendar:
   semester_start_sunday: 2020-08-16 00:00:00 -0700
   semester_num_weeks: 14

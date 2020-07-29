@@ -255,6 +255,7 @@ DEPENDENCIES
   jekyll
   jekyll-feed
   jekyll-include-cache
+  jekyll-sitemap
   minimal-mistakes-jekyll
 
 BUNDLED WITH
