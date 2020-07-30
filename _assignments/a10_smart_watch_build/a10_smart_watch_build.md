@@ -1,12 +1,12 @@
 ---
 week: 9
-number: 9
+number: 10
 category: assignments
-title: Bluetooth Car (part 1)
+title: Smart Watch Build (part 1)
 date_due: Oct 20 @ in class
 
 ---
-Assignment 9 – Bluetooth Car part 1
+Assignment 10 – Smart Watch Build
 ============================
 
 [Submit on Blackboard](https://blackboard.usc.edu/)
@@ -14,33 +14,24 @@ Assignment 9 – Bluetooth Car part 1
 Goals
 -----
 
--   Connect car chassis and motors
-
+-   Connect and build smart watch wrist strap and sensors
 
 **Overview**
 
-This assignment is to build a small car, which we will program in class. This week you will build and customize the far, and next week you will complete the programming for the car to operate.
+This assignment is to build a smart watch, which we will program in class. Given the semester schedule, you will build it now for us to use in a week.
 
 **Components**
 
--   Argon
-
--   Breadboard
-
--   Car chassis
-
--   2 x DC hobby motors
-
--   LiPo battery
-
+-    
 
 **Requirements**
 
 -   No Fritzing diagram is needed. Wiring diagram and plans are provided in the
     lecture notes.
--   [Follow the build instructions](guide_build_chassis)
--   Add decorative elements to distinguish your car. There will be a competition the following week for best customized car.
--   Plan to bring car (with fully charged battery) and phone to class
+-   [Follow the assembly instruction guide](guide_build_watch)
+-   Plan to bring watch (with fully charged battery) and phone to class
+
+**==Important: The assembly guide shows the battery being connected. Since we will be using the battery with the car, it is recommended to skip connecting the battery to the Argon until we are programming the watch in class==**
 
 ## Required naming convention
 
@@ -69,8 +60,7 @@ Deliverables
 Grading
 -------
 
-| Item              | Points |
-| ----------------- | ------ |
-| Car structure     | 5      |
-| Car customization | 5      |
-| Total             | 10     |
+| Item           | Points |
+| -------------- | ------ |
+| Watch assembly | 5      |
+| Total          | 10     |

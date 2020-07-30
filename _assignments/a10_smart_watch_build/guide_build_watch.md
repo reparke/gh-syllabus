@@ -1,15 +1,14 @@
 ---
-marp: true
-theme: itp
-
-week: 11
-category: lectures
+week: 9
+category: assignments
 title: Guide to Smart Watch Assembly
+show_in_list: false
+
 ---
 
-## **ITP 348: Smart Watch Setup**
+## Smart Watch Assembly ==need to modify this to use velcro==
 
-### **Items You will Need:**
+### Items You will Need: 
 
 1. Scissors
 2. Strip of stretchable fabric / neoprene (3" x 15")
@@ -18,20 +17,20 @@ title: Guide to Smart Watch Assembly
 5. LiPo battery
 6. Argon
 
-### **STEP 1:**
+### STEP 1:
 
 Cut the fabric to go around your wrist. The neoprene will need to wrap around your wrist so make it longer at first to test. The strip should comfortably wrap around your arm **without stretching**. 
 
 ![watch_v2_3](guide_build_watch.assets/watch_v2_3.jpg)
 
-### **STEP 2:**
+### STEP 2:
 
 Cut velcro strips. You will need 6 pieces of velcro
 
 * 5 - 1"x1" squares
 * 1 - 2"x1" strip 
 
-### **STEP 3:**
+### STEP 3:
 
 Attach velcro to the top of the neoprene. Before attaching the velcro on the top of the neoprene, wrap the neoprene strip around your wrist so that it is stretched and snug, but comfortable. Take note of there the "center" is so you can attach the Argon here later.
 
@@ -45,7 +44,7 @@ Second, attach the 2"x1" strip at the end of the strip. Match the picture below 
 
 
 
-### **STEP 4:**
+### STEP 4:
 
 Attach velcro to the "bottom" of the neoprene. Flip the neoprene over so that the long velcro strip you attached in *Step 3* is now on right, under side. Now attach a 1"x1" square of velcro about 1/2" from the end from the left. This piece will attach the watch to your wrist 
 
@@ -55,7 +54,7 @@ Attach velcro to the "bottom" of the neoprene. Flip the neoprene over so that th
 
 
 
-### **STEP 5:**
+### STEP 5:
 
 Attach velcro to LiPo battery (may have been done in a previous project). Place a 1"x1" square of velcro in the center on top and bottom of the battery.
 
@@ -65,13 +64,13 @@ Attach velcro to LiPo battery (may have been done in a previous project). Place 
 
 
 
-### **STEP 6:**
+### STEP 6:
 
 Attach velcro to bottom of breadboard (may have been done in a previous project). Carefully peel off adhesive covering on bottom of breadboard (**don't take off actual foam-like adhesive**) and place** a 1"x1" square of velcro on the bottom of the breadboard.
 
 
 
-### **Step 7**
+### Step 7
 
 Wire the components. Below are two diagrams for wiring. The second design uses a switch and is optional.
 

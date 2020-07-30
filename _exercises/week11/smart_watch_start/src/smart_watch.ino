@@ -47,7 +47,7 @@ Switch:
 #include "bitmaps_weather.h"
 
 //////////////////////////
-// MAX30102 Definition  //
+// MAX30105 Definition  //
 //////////////////////////
 MAX30105 heartRateSensor;
 
@@ -96,9 +96,9 @@ long debounceDelay = 200;    // the debounce time; increase if the output
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Initializing MAX30102...");
+  Serial.println("Initializing MAX30105...");
 
-  // Initialize MAX30102sensor
+  // Initialize MAX30105sensor
   if (!heartRateSensor.begin(
           Wire, I2C_SPEED_FAST)) {  // Use default I2C port, 400kHz speed
     Serial.println("MAX30102 was not found. Check wiring/power. ");

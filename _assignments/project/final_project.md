@@ -1,9 +1,9 @@
 ---
 week: 10
-number: 10
+number: 11
 category: assignments
 title: Project
-date_due: Proposal Oct 27 @ 11:59 pm; Schematic Nov 10 @ 11:59pm; Finished device and presentation Nov 17 duing final exam time
+date_due: Proposal Oct 27 @ 11:59 pm; Schematic Nov 03 @ 11:59pm; Finished device and presentation Nov 17 during final exam time
 
 ---
 

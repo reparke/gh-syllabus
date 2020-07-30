@@ -8,7 +8,7 @@ title: Checking the Weather (Weather Stack integration)
 show_in_list: false
 ---
 
-
+<!-- This is the full Argon code for reference -->
 
 
 

@@ -16,7 +16,9 @@ toc_sticky: true
 * wk1: record software tools for reference
 * general: try to incorporate `enum` or `switch` earlier in semester
 * idea: involve students in a couple weeks where we "flip" the classroom
-* a8 (alarm): revise to use state machines
+* a8 (alarm): revise to use state machines (if time)
+* wk11: building smart watch: need to text and pictures to use velcro
+* need to test sparkfun max 30105
 
 ## General Feedback (Fall 2019)
 
@@ -702,6 +704,7 @@ toc_sticky: true
 
 - Due start of current week: A8 - Alarm clock
 - Given out start of current week: A9 - Bluetooth car part 1
+- Given out start of current week: A10 - Smart Watch Assembly
 
 ## 10. APIs; Weather; Car; Battery 
 
@@ -737,6 +740,7 @@ toc_sticky: true
 #### Idea
 
 - find another API to show
+- Show students how to use GPS coordinates
 
 ### Day 2
 
@@ -754,8 +758,8 @@ toc_sticky: true
 
 ### Assignment
 
-- Due start of current: ==A9 - Bluetooth car== part 1
-- Given out start of current week: ==A9 - Bluetooth car== part 2 **and** Proposal
+- Due start of current week: A9 - Bluetooth car part 1 ==**and**== A10 - Smart Watch Assembly
+- Given out start of current week: A11 - Bluetooth car part 2 ==**and**== Proposal
 
 ## 11.
 
@@ -764,6 +768,9 @@ toc_sticky: true
 - 
 
 ### Day 1 -- ==**Google Guest Lecture on Accessibility**==
+
+* Consider using this day for a guest lecture
+* Consider covering debouncing by itself today, then talking about project as a class
 
 #### Lecture
 
@@ -793,7 +800,8 @@ toc_sticky: true
 
 ### Assignment
 
-- project
+- Due start of current week: A11 - Bluetooth car part 2 ==**and**== Proposal
+- Continue working on project schematic
 
 ## 12.
 
@@ -832,8 +840,8 @@ toc_sticky: true
 
 #### Lecture
 
-- Discuss DHT 22
-- accelerometer
+- DHT 22
+- Accelerometer
 
 #### Lab
 
@@ -843,7 +851,8 @@ toc_sticky: true
 
 ### Assignment
 
-- AX - 
+- Due start of current week: project schematic
+- Continue working on project 
 
 ## 13. 
 
@@ -885,7 +894,8 @@ toc_sticky: true
 
 ### Assignment
 
-- AX - 
+- Due start of current week: nothing
+- Continue working on project 
 
 ## 14 - Final Project Presentation
 

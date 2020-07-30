@@ -20,13 +20,13 @@ title: Smart Watch
   * For assembly and wiring, refer to [these instructions](guide_build_watch.md)
   * Download starting code: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
     * Paste the following link into the top right
-      https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week13/smart_watch_start
+      https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/smart_watch_start
 
   ## What's Included
 
   * Libraries
     * Micro OLED
-    * MAX30102 heart rate sensor
+    * MAX30105 heart rate sensor
   * Bitmaps byte arrays for heart rate, clock, and weather (`.h` files)
   * Heart rate BPM calculation
 
@@ -76,9 +76,7 @@ title: Smart Watch
 
 <img src="lecture_smart_watch.assets/image-20200416155711370.png" alt="image-20200416155711370" style="width:500px" />
 
-*MAX30105 and MAX30102 are similar sensors*
-
-## MAX30102 Heart Rate / SpO2 Sensor
+## MAX30105 Heart Rate / SpO2 Sensor
 
 * Use red and infrared lights
 * Measure 
@@ -88,7 +86,7 @@ title: Smart Watch
 * Best for use on finger or earlobe due to red / infrared light
 * Wrist-based sensors typically use green light (like Apple Watch)
 
-## MAX30102 Operation
+## MAX30105 Operation
 
 * Uses built-in LEDs to pulse light onto skin
 * Measures light reflecting back
@@ -96,7 +94,7 @@ title: Smart Watch
 * Uses I2C communication
   * I2C is another protocol like SPI we used for OLED
 
-## MAX30102 Wiring
+## MAX30105 Wiring
 
 | Sensor | Argon | Function              |
 | ------ | ----- | --------------------- |
@@ -226,7 +224,7 @@ void setup() {
 
 ## References
 
-* [MAX30102 datasheet](https://datasheets.maximintegrated.com/en/ds/MAX30102.pdf)
+* [MAX30105 datasheet](https://cdn.sparkfun.com/assets/learn_tutorials/5/7/7/MAX30105_3.pdf)
 * [Particle Argon reference - software timers](https://docs.particle.io/reference/device-os/firmware/argon/#software-timers)
 
 ## Credit

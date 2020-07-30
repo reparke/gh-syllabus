@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 13
+week: 16
 category: lectures
 title: RGB and Gesture Sensor
 ---
