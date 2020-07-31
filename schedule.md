@@ -16,9 +16,10 @@ toc_sticky: true
   {% assign week.end = elements[0] %}
 {% endfor %}
 
+{% assign readings = site.readings | sort: "number" %}
 {% assign lectures = site.lectures | sort: "number" %}
 {% assign assignments = site.assignments | sort: "number" %}
-{% assign all_items = lectures | concat: assignments | group_by: 'week'  %}
+{% assign all_items = lectures | concat: readings | concat: assignments | group_by: 'week'  %}
 
 {% for week in all_items %}
   {% comment %}
@@ -27,9 +28,70 @@ toc_sticky: true
   {% assign index = week.name | times: 1 %} 
 
   {% assign current_dates = dates_array[index] | split: '|' %}
+  {% if index != 16 %}
 
   <h2 id="week_{{ week.name }}">Week {{ week.name }} ({{current_dates[2] | strip}} - {{current_dates[3] | strip}})
   <a class="header-link" href="#week_{{ week.name }}" title="Permalink"></a></h2>
+  <div class="weekly_schedule_content_area">
+    <h3 class="no_toc weekly_schedule_content_label">Reading / Video (pre-lecture material)</h3>
+    <ul>
+      {% assign content_items = week.items %}
+      {% for item in content_items %}
+        {% if item.category == "readings" %}
+          <li class="weekly_schedule_content_item">
+            <a href="{{ site.baseurl }}{{ item.url }}">Week {{ week.week }} Reading</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="weekly_schedule_content_area">
+    <h3 class="no_toc weekly_schedule_content_label">Lectures</h3>
+    <ul>
+      {% assign content_items = week.items %}
+      {% for item in content_items %}
+        {% if item.category == "lectures" %}
+          <li class="weekly_schedule_content_item">
+            <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="weekly_schedule_content_area">
+    <h3 class="no_toc weekly_schedule_content_label">Assignments</h3>
+    <ul>
+      {% assign content_items = week.items %}
+      {% for item in content_items %}
+         {% if item.show_in_list == false %}
+   			{% continue %}
+         {% endif %}
+        {% if item.category == "assignments" %}
+          <li class="weekly_schedule_content_item">
+            <a href="{{ site.baseurl }}{{ item.url }}">#{{ item.number}} - {{ item.title }}</a> 
+          (Due: <b>{{ item.date_due }}</b>)
+          </li>    
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+It is inefficient to have identical for loops (one for current semester content and one for bonus material. 
+Consider revising and possibly using Liquid sort function
+{% endcomment %}
+
+{% for week in all_items %}
+  {% comment %}
+    Capture stores strings so convert to int to use in array
+  {% endcomment %}
+  {% assign index = week.name | times: 1 %} 
+
+  {% assign current_dates = dates_array[index] | split: '|' %}
+  {% if index == 16 %}
+  <h2 id="#bonus_material">Bonus Material<a class="header-link" href="#bonus_material" title="Permalink"></a></h2>
   <div class="weekly_schedule_content_area">
     <h3 class="no_toc weekly_schedule_content_label">Reading / Video (pre-lecture material)</h3>
     <ul><li class="weekly_schedule_content_item">TBD</li></ul>
@@ -74,5 +136,5 @@ toc_sticky: true
       {% endfor %}
     </ul>
   </div>
-
+  {% endif %}
 {% endfor %}

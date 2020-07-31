@@ -4,7 +4,7 @@ theme: itp
 
 week: 16
 category: lectures
-title: Cloud Platform and Interface
+title: Losant Cloud Platform and Interface
 ---
 
 <!-- headingDivider: 2 -->

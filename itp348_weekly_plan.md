@@ -761,29 +761,32 @@ toc_sticky: true
 - Due start of current week: A9 - Bluetooth car part 1 ==**and**== A10 - Smart Watch Assembly
 - Given out start of current week: A11 - Bluetooth car part 2 ==**and**== Proposal
 
-## 11.
+## 11. Project Proposal Review, Accessibility, Debouncing, Heart Rate Sensor
 
 ### Reading
 
 - 
 
-### Day 1 -- ==**Google Guest Lecture on Accessibility**==
+### Day 1
 
-* Consider using this day for a guest lecture
-* Consider covering debouncing by itself today, then talking about project as a class
-
-#### Lecture
+* This will either be a project discussion, accessibility lecture, or both
 
 #### Guest Lecture
 
-#### Lab
+* ==**Google Guest Lecture on Accessibility**== 
 
-- After guest lecture, we all met in a circle and discuss project proposals and gave feedback
+#### Activity
+
+* Alternative idea: ==**project discussion**==
+* Depending on time, have class meet in a large group or in 3 person groups
+* Each person describes their proposal (==need to develop some framework and questions audience can ask== )
+* Consider covering debouncing by itself today, then talking about project as a class
 
 ### Day 2
 
 #### Lecture 
 
+* Overview of smart watch program structure
 * Debouncing
 
 #### Lab
@@ -793,17 +796,14 @@ toc_sticky: true
 
 #### Lecture
 
-* heart rate rate sensor
-  * what is it
-  * How does it work
-  * how to program it
+* Heart rate rate sensor
 
 ### Assignment
 
 - Due start of current week: A11 - Bluetooth car part 2 ==**and**== Proposal
 - Continue working on project schematic
 
-## 12.
+## 12. Smart Watch, Time, Digital Temperature Sensors, Accelerometer
 
 ### Reading
 
@@ -854,7 +854,7 @@ toc_sticky: true
 - Due start of current week: project schematic
 - Continue working on project 
 
-## 13. 
+## 13. PIR, RFID
 
 ### Reading
 
