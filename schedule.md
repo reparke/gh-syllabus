@@ -33,13 +33,13 @@ toc_sticky: true
   <h2 id="week_{{ week.name }}">Week {{ week.name }} ({{current_dates[2] | strip}} - {{current_dates[3] | strip}})
   <a class="header-link" href="#week_{{ week.name }}" title="Permalink"></a></h2>
   <div class="weekly_schedule_content_area">
-    <h3 class="no_toc weekly_schedule_content_label">Reading / Video (pre-lecture material)</h3>
+    <h3 class="no_toc weekly_schedule_content_label">Readings / Videos / Pre-Lecture Activities</h3>
     <ul>
       {% assign content_items = week.items %}
       {% for item in content_items %}
         {% if item.category == "readings" %}
           <li class="weekly_schedule_content_item">
-            <a href="{{ site.baseurl }}{{ item.url }}">Week {{ week.week }} Reading</a>
+            <a href="{{ site.baseurl }}{{ item.url }}">Pre-Lecture Activities</a> (complete prior to <b>{{current_dates[2] | strip}})</b>
           </li>
         {% endif %}
       {% endfor %}
@@ -60,6 +60,7 @@ toc_sticky: true
   </div>
   <div class="weekly_schedule_content_area">
     <h3 class="no_toc weekly_schedule_content_label">Assignments</h3>
+    <p><i>Due the following week</i></p>
     <ul>
       {% assign content_items = week.items %}
       {% for item in content_items %}
@@ -93,14 +94,13 @@ Consider revising and possibly using Liquid sort function
   {% if index == 16 %}
   <h2 id="#bonus_material">Bonus Material<a class="header-link" href="#bonus_material" title="Permalink"></a></h2>
   <div class="weekly_schedule_content_area">
-    <h3 class="no_toc weekly_schedule_content_label">Reading / Video (pre-lecture material)</h3>
-    <ul><li class="weekly_schedule_content_item">TBD</li></ul>
+    <h3 class="no_toc weekly_schedule_content_label">Pre-Lecture Activities / Reading / Video</h3>
     <ul>
       {% assign content_items = week.items %}
       {% for item in content_items %}
         {% if item.category == "reading" %}
           <li class="weekly_schedule_content_item">
-            <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+            <a href="{{ site.baseurl }}{{ item.url }}">Pre-Lecture Activities</a> (complete prior to <b>{{current_dates[2] | strip}})</b>
           </li>
         {% endif %}
       {% endfor %}

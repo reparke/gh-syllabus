@@ -10,15 +10,15 @@ toc_sticky: true
 ---
 ## 		Things to implement
 
-* Create "behavioral norms"
-* wk1: record c++ review and create bb quiz
-* wk0: record introduction for students
-* wk1: record software tools for reference
-* general: try to incorporate `enum` or `switch` earlier in semester
-* idea: involve students in a couple weeks where we "flip" the classroom
-* a8 (alarm): revise to use state machines (if time)
-* wk11: building smart watch: need to text and pictures to use velcro
-* need to test sparkfun max 30105
+* [ ] Create "behavioral norms"
+* [ ] wk1: record c++ review and create bb quiz
+* [x] wk0: record introduction for students
+* [ ] wk1: record software tools for reference
+* [ ] general: try to incorporate `enum` or `switch` earlier in semester
+* [ ] idea: involve students in a couple weeks where we "flip" the classroom
+* [ ] a8 (alarm): revise to use state machines (if time)
+* [ ] wk11: building smart watch: need to text and pictures to use velcro
+* [ ] need to test sparkfun max 30105
 
 ## General Feedback (Fall 2019)
 
@@ -42,8 +42,8 @@ toc_sticky: true
 
 ### Reading / Video
 
-* http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/
-* https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all
+* [http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/](http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/)
+* [https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all)
 * Video discussion of C++ review (make little videos for functions); curate or record
 * Have short blackboard quiz
 
@@ -651,7 +651,7 @@ toc_sticky: true
 
 ### Reading
 
-- 
+- Create [Initial State](https://www.initialstate.com/) account
 
 ### Day 1
 
@@ -696,11 +696,11 @@ toc_sticky: true
 
 - Send photoresistor value and light level threshold`Particle.publish` to InitialState
 
-## Feedback
+### Feedback
 
 - Pre-class concern: we will be interleaving car
 
-## Assignment
+### Assignment
 
 - Due start of current week: A8 - Alarm clock
 - Given out start of current week: A9 - Bluetooth car part 1
@@ -898,12 +898,6 @@ toc_sticky: true
 - Continue working on project 
 
 ## 14 - Final Project Presentation
-
-   
-
-[Two-Layer Chassis Assembly](https://youtu.be/L7-98Ejmb4M)
-
-[Pictures of installation](https://learn.sparkfun.com/tutorials/assembly-guide-for-sparkfun-jetbot-ai-kit/1-circular-robotics-chassis-kit-two-layer-assembly) (only relevant through half of the first page)
 
 
 

@@ -17,7 +17,11 @@ show_in_list: false
 6.  2 Wheels and 2 Screws
 7.  4 Long Screws and 4 Hex Jam Nuts
 
-Video: [Two-Layer Chassis Assembly](https://youtu.be/L7-98Ejmb4M)
+## Instructions
+
+* Follow the steps in this guide to assemble the
+* The following video can be helpful in assembling the chassis: [Two-Layer Chassis Assembly](https://youtu.be/L7-98Ejmb4M)
+* The following 
 
 <!--[Pictures of installation](https://learn.sparkfun.com/tutorials/assembly-guide-for-sparkfun-jetbot-ai-kit/1-circular-robotics-chassis-kit-two-layer-assembly) (only relevant through half of the first page)-->
 
@@ -129,5 +133,3 @@ Screw on Wheels to DC Motors and add the wheel rubber tires.
 
 * [Sparkfun](https://www.sparkfun.com/products/13853)
 * [Particle](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
-
-* Images created with [Fritzing](https://fritzing.org)

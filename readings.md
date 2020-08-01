@@ -1,5 +1,5 @@
 ---
-title: Readings
+title: Pre-Lecture Activities / Reading / Video
 layout: single
 category: Readings
 toc: true
@@ -16,7 +16,8 @@ toc_sticky: true
 {% assign dates_array = dates_string | split: '::' %}	
 
 
-<h2>Weekly Readings and Videos (pre-lecture)</h2>
+<p><i>To be completed prior to coming to lecture in a given week</i></p>
+
 {% assign all_readings = site.readings | group_by: 'week' %}
 {% for week in all_readings %}
 {% assign index = week.name | times: 1 %} 
@@ -26,7 +27,7 @@ toc_sticky: true
 <ul>
     {% assign items = week.items | sort: 'order' %}
     {% for item in items %}
-    <li><a href="{{ site.baseurl }}{{ item.url }}">Week {{ week.name }} ({{current_dates[2] | strip}} - {{current_dates[3] | strip}})</a></li>
+    <li><a href="{{ site.baseurl }}{{ item.url }}">Week {{ week.name }}</a> (complete prior to <b>{{current_dates[2] | strip}})</b></li>
     {% endfor %}
 </ul>
 {% endif %}
