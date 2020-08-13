@@ -350,7 +350,7 @@ toc_sticky: true
 
 #### Lecture
 
-* Photoresistor
+* Photoresistor (==concern: breakout group questions ask students to measure voltage but they haven't learned that yet; could they just display analogRead values?==)
 
 #### Lab
 

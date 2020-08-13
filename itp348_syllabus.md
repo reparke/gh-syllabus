@@ -50,11 +50,11 @@ necessary.**
 ## Learning Objectives
 
 -   Design a device using a microcontroller and electronic components. 
-2.	Produce an embedded device that measures environmental conditions and sends readings to a cloud storage platform. 
-3.	Produce an embedded device that produces effects in the physical world to accomplish a task.
-4.	Build an interface app to enable communication between a user and a device.
-5.	Control a device from an interface app.
-6.	Describe accessibility challenges for an embedded device and suggest modifications.
+* Produce an embedded device that measures environmental conditions and sends readings to a cloud storage platform. 
+* Produce an embedded device that produces effects in the physical world to accomplish a task.
+* Build an interface app to enable communication between a user and a device.
+* Control a device from an interface app.
+* Describe accessibility challenges for an embedded device and suggest modifications.
 
 ## Learning Outcomes
 

@@ -12,7 +12,7 @@ plugins:
 description: "ITP 348 - Intro to Physical Computing @ USC (Open Educational Resource)"
 url: https://reparke.github.io
 repository: "reparke/ITP348-Physical-Computing"
-logo: "/assets/images/usc_monogram_gold_on_trans.png"
+# logo: "/assets/images/usc_monogram_gold_on_trans.png"
 breadcrumbs: false
 
 #theme: jekyll-theme-cayman
