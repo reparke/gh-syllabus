@@ -3,7 +3,7 @@ week: 7
 number: 7
 category: assignments
 title: Crowdsourced Environment Monitor
-date_due: Oct 6 @ 11:59 pm
+date_due: Oct 5 @ 11:59 pm
 
 ---
 

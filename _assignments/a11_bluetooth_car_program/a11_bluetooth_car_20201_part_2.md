@@ -3,7 +3,7 @@ week: 10
 number: 11
 category: assignments
 title: Bluetooth Car (part 2)
-date_due: Oct 27 @ in class
+date_due: Oct 26 @ 11:59 pm
 
 ---
 Assignment 9 – Bluetooth Car part 2
@@ -16,7 +16,6 @@ Goals
 
 -   Control car via Bluetooth
 
-
 **Overview**
 
 This assignment is to control the car via Bluetooth with a smartphone.
@@ -24,15 +23,10 @@ This assignment is to control the car via Bluetooth with a smartphone.
 **Components**
 
 -   Argon
-
 -   Breadboard
-
 -   Car chassis
-
 -   2 x DC hobby motors
-
 -   LiPo battery
-
 -   Decorative elements to distinguish your car
 
 **Requirements**

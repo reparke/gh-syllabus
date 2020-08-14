@@ -3,7 +3,7 @@ week: 1
 number: 0
 category: assignments
 title: Installation and Setup
-date_due: Aug 25 @ 11:59 pm
+date_due: Aug 24 @ 11:59 pm
 ---
 
 Assignment 0 – Installation and Setup

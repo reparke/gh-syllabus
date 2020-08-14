@@ -3,7 +3,7 @@ week: 3
 number: 3
 category: assignments
 title: Scanning Light
-date_due: Sep 8 @ 11:59 pm
+date_due: Sep 7 @ 11:59 pm
 ---
 
 Assignment 3 – Scanning Light
