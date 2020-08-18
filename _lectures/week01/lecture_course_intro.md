@@ -28,6 +28,8 @@ title: Course Introduction
 
 - Neftali Hernadez 
 - [neftalih@usc.edu](mailto:neftalih@usc.edu) 
+- Radhika Agarwal
+- [agrawalr@usc.edu](mailto:agrawalr@usc.edu)
 - Office hours for will be posted on Blackboard
 - For grading issues, contact the TA first
 - For general questions, you can contact either of us
