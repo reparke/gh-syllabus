@@ -17,7 +17,7 @@ footer: 'ITP 348 - Rob Parke - USC'
 ## C++ Compared to Python and Java
 
 * For comparison of programs side-by-side using functions, arrays / lists, and functions using C++, Python, and Java, see this page:
-  [C++ comparison](/{{site.resourcesUrl}}/c++_comparison.md)
+  [C++ comparison](/{{site.baseurl}}/c++_comparison.md)
 
 ## C++ and Other Languages
 

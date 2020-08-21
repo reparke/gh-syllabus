@@ -25,5 +25,5 @@ void loop() {
   //stay off for 1 sec
   delay(1000);
 
-  //control (or command) + shift + P
+  //control (or command) + shift + 
 }
