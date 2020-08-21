@@ -29,8 +29,8 @@ breadcrumbs: false
 # baseurl is the same as the name of the repository
 baseurl: /ITP348-Physical-Computing
 
-# url where the required reading is available to download
-docsUrl: "" 
+# url where the useful documents are available to download
+resourcesUrl: "https://reparke.github.io/ITP348-Physical-Computing" 
 
 # url where the student's grading info is kept 
 gradingUrl: "https://blackboard.usc.edu" 
