@@ -9,8 +9,6 @@ toc_sticky: true
 
 ---
 
-*[References](#references) - [Projects and Sensors](#project-and-sensor-ideas) - [Other Courses](#other-courses-materials)*
-
 
 
 ## References

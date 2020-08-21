@@ -100,14 +100,15 @@ dispense +cupcake taken| idle
 | Dispense cupcake    | Cupcake taken      | Idle                |
 | Dispense cupcake    | Cupcake remains    | Dispense cupcake    |
 
+
 ## State Machines in Argon
 
-* In order to implement this in our firmware, what elements / functions to we need to create?
+* In order to implement this in our firmware, what elements / functions do we need to create?
   * inputs 
   * outputs
   * state 
   * state transition logic 
-* How would we implement these in firmware?
+* How could we implement these in firmware?
 
 
 ## State Machines in Argon
