@@ -2,6 +2,7 @@
 title: C++ Syntax Comparison with Python and Java
 layout: single
 classes: wide
+category: C++ Comparison
 toc: true
 toc_label: "Quick Links"
 toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
