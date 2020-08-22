@@ -2,12 +2,14 @@
 title: C++ Syntax Comparison with Python and Java
 layout: single
 classes: wide
-category: C++ Comparison
+week: 1
+category: lectures  # this is needed so show_in_list: false will cause page to be hidden
+show_in_list: false
+
 toc: true
 toc_label: "Quick Links"
 toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: true
-show_in_list: false
 
 ---
 

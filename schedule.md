@@ -51,6 +51,9 @@ toc_sticky: true
       {% assign content_items = week.items %}
       {% for item in content_items %}
         {% if item.category == "lectures" %}
+          {% if item.show_in_list == false %}
+            {% continue %}
+          {% endif %}
           <li class="weekly_schedule_content_item">
             <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
           </li>
@@ -112,6 +115,9 @@ Consider revising and possibly using Liquid sort function
       {% assign content_items = week.items %}
       {% for item in content_items %}
         {% if item.category == "lectures" %}
+          {% if item.show_in_list == false %}
+            {% continue %}
+          {% endif %}        
           <li class="weekly_schedule_content_item">
             <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
           </li>

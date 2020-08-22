@@ -26,6 +26,9 @@ toc_sticky: true
 <ul>
     {% assign items = week.items | sort: 'order' %}
     {% for item in items %}
+      {% if item.show_in_list == false %}
+        {% continue %}
+      {% endif %}
     <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
 </ul>
@@ -45,6 +48,9 @@ Consider revising and possibly using Liquid sort function
 <ul>
     {% assign items = week.items | sort: 'order' %}
     {% for item in items %}
+      {% if item.show_in_list == false %}
+        {% continue %}
+      {% endif %}    
     <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
 </ul>
