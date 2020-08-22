@@ -7,7 +7,6 @@ week: 1
 category: lectures
 title: C++ Syntax
 
-footer: 'ITP 348 - Rob Parke - USC'
 ---
 
 <!-- headingDivider: 2 -->
@@ -121,7 +120,7 @@ const int MAX_PRESSES = 4;
 
 ```python
 age = "Jurassic"
-age = "34"
+age = 34
 ```
 
 * C++ is called **strongly typed** language: 
@@ -129,7 +128,7 @@ age = "34"
 
 ```c++
 String age = "Jurassic";
-age = "34"		//Error!;
+age = 34		//Error!;
 ```
 
 ## Functions: Return Values
