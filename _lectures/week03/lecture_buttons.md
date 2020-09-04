@@ -95,7 +95,7 @@ title: Push Buttons
 <!-- Pull down resistors to ground are fine too. Pull ups are more common for historical reasons (required more current for TTL logic). May also reduce interferance from noise since cutoff between HIGH (3.3v) and LOW (0v) is not 1.67v but much lower so better to have "default" state further from the cutoff -->
 
 ## Lab
-  <img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:600px" />
+  <img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:500px" />
 
 1. Turn LED on **only** while button pressed
 2. Toggle LED on and off **after each time** button is pressed

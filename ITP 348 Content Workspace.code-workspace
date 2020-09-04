@@ -3,5 +3,14 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"markdown.marp.themes": [
+			"marp-custom-themes/itp.css"
+		],
+		"files.autoSave": "afterDelay",
+		"editor.wordWrap": "on",
+		"markdown.marp.exportType": "html",
+		"markdown.marp.enableHtml": true
+	}
 }

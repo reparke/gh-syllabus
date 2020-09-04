@@ -7,7 +7,7 @@ week: 1
 category: lectures  
 title: Electricity
 
-footer: 'ITP 348 - Rob Parke - USC'
+footer: ' '
 ---
 
 <!-- headingDivider: 2 -->

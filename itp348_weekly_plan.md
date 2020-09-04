@@ -83,11 +83,6 @@ toc_sticky: true
 #### Lecture
 
 * C++ Syntax (skip)
-* Argon Microcontroller
-
-#### Lab
-
-* Have students work in pairs to answer datasheet questions from Argon Microcontroller slide
 
 #### Lecture
 
@@ -111,6 +106,8 @@ toc_sticky: true
 #### Feedback
 
 - Day 2 "making project" was fun; ping pong balls and glue guns were a hit
+- Online Fall 2020: skipped making project and did LED blink together
+- Felt too rushed in online environment; some students still didn't have kits with LEDs and we had really discussed the IDE / setup
 
 ### Assignment
 
@@ -139,6 +136,14 @@ toc_sticky: true
 
 #### Lecture
 
+* Argon Microcontroller
+
+#### Lab
+
+* Have students work in pairs to answer datasheet questions from Argon Microcontroller slide
+
+#### Lecture
+
 - Analog vs. digital
 - Pulse width modulation, PWM pins, analogWrite 
 
@@ -157,7 +162,7 @@ toc_sticky: true
 
 #### Feedback
 
-- ==Need to add additional exercises==
+- spend time reviewing LEDs + resistors since we went quickly in previous week
 
 ### Day 2
 
@@ -256,7 +261,7 @@ toc_sticky: true
 
 #### Lecture
 
-- Latching button (==need to make slides==؟)
+- Latching button (==need to make slides==)
 - If no slides, draw picture of square wave
 
 #### Lecture (==if time==)
