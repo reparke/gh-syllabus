@@ -2,7 +2,7 @@ main:
   - title: "Schedule"
     url: /schedule
   - title: "Exercises"
-    url: https://github.com/reparke/ITP348-Physical-Computing
+    url: https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises
   - title: "Assignments"
     url: /assignments
   - title: "Lectures"
