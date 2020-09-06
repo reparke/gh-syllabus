@@ -22,6 +22,7 @@ You'll find course material and useful links on the side.
 - [Assignments](assignments.html) - Assignment writeups
 - [Exercises](https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises) - GitHub repository with my own sample exercises as well as in-class code projects (denoted by **_ic** at end of the project names). All projects are created with [Particle Workbench](https://www.particle.io/workbench/)
 - [Readings](readings.md) - Weekly readings
+- [Kit](kit.md) - Kit components
 - [Resources](resources.md) - Helpful pages and documentation for the course
 - [Blackboard](https://blackboard.usc.edu) - For submitting assignments
 - [Piazza](https://piazza.com/usc/fall2020/itp348/home) - Discussion board for assignments and class

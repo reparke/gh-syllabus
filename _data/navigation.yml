@@ -1,8 +1,8 @@
 main:
   - title: "Schedule"
     url: /schedule
-  - title: "Syllabus"
-    url: /itp348_syllabus
+  - title: "Exercises"
+    url: https://github.com/reparke/ITP348-Physical-Computing
   - title: "Assignments"
     url: /assignments
   - title: "Lectures"
@@ -13,6 +13,8 @@ main:
     url: /readings
   - title: "Blackboard"
     url: https://blackboard.usc.edu
+  - title: "Syllabus"
+    url: /itp348_syllabus
   - title: "Kit"
     url: /kit
   - title: "Piazza"
