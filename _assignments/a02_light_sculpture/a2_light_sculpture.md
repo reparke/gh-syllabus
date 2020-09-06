@@ -96,7 +96,8 @@ Grading
 
 | Item                                         | Points |
 | -------------------------------------------- | ------ |
-| Five LEDs used                               | 10     |
+| Five LEDs used                               | 5      |
+| Code to control LEDs                         | 5      |
 | Appropriate resistors                        | 5      |
 | 3d sculpture (not just lights on breadboard) | 5      |
 |                                              |        |
