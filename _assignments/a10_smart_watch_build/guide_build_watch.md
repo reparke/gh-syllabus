@@ -11,8 +11,8 @@ show_in_list: false
 ### Items You will Need: 
 
 1. Scissors
-2. Strip of stretchable fabric / neoprene (3" x 15")
-3. Strip of plastic velcro tape (12")
+2. Strip of loop-side (soft) Velcro (2" x 14")
+3. Strip of hook-side (rough) Velcro (1/2" x 2")
 4.  Breadboard
 5. LiPo battery
 6. Argon
