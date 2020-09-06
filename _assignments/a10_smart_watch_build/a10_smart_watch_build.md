@@ -22,7 +22,11 @@ This assignment is to build a smart watch, which we will program in class. Given
 
 **Components**
 
--    
+-    Strip of stretchable fabric / neoprene (3" x 15")
+-    Strip of plastic velcro tape (12")
+-    Breadboard
+-    LiPo battery
+-    Argon
 
 **Requirements**
 
@@ -63,4 +67,4 @@ Grading
 | Item           | Points |
 | -------------- | ------ |
 | Watch assembly | 5      |
-| Total          | 10     |
+| Total          | 5      |

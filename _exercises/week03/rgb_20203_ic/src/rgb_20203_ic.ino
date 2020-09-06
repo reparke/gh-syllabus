@@ -44,20 +44,25 @@ void displayRandomColor() {
 
   displayColor(r, g, b);
 }
+void loop() {
+  //test red
+  analogWrite(PIN_RED, 255);
+  analogWrite(PIN_GREEN, 0);
+  analogWrite(PIN_BLUE, 0);
+  delay(2000);
+  //test green
+  analogWrite(PIN_RED, 0);
+  analogWrite(PIN_GREEN, 255);
+  analogWrite(PIN_BLUE, 0);
+  delay(2000);
+  //test blue
+  analogWrite(PIN_RED, 0);
+  analogWrite(PIN_GREEN, 0);
+  analogWrite(PIN_BLUE, 255);
+  delay(2000);
 
-  // //test red
-  // analogWrite(PIN_RED, 255);
-  // analogWrite(PIN_GREEN, 0);
-  // analogWrite(PIN_BLUE, 0);
-  // delay(2000);
-  // //test green
-  // analogWrite(PIN_RED, 0);
-  // analogWrite(PIN_GREEN, 255);
-  // analogWrite(PIN_BLUE, 0);
-  // delay(2000);
-  // //test blue
-  // analogWrite(PIN_RED, 0);
-  // analogWrite(PIN_GREEN, 0);
-  // analogWrite(PIN_BLUE, 255);
-  // delay(2000);
+    pinMode(D7, OUTPUT);
+  digitalWrite(D7, HIGH);
+
+}
 
