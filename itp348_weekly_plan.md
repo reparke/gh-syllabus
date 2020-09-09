@@ -347,6 +347,12 @@ toc_sticky: true
 - Rewrite with blink LED2 and toggle LED1 using millis
 - Then rewrite to remove toggle but have LEDs blink at different rates
 
+#### Feedback
+
+- went over multimeters for resistors (didn't get to voltage)
+- particle.io was down
+- students seemed VERY confused about millis() and delay
+
 ### Day 2 
 
 #### Interactive breakout

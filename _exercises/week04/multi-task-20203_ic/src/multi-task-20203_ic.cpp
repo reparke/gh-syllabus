@@ -1,20 +1,26 @@
+/******************************************************/
+//       THIS IS A GENERATED FILE - DO NOT EDIT       //
+/******************************************************/
+
+#include "Particle.h"
+#line 1 "c:/Users/Rob/Documents/_GitHub/ITP_348_Content_Public/_exercises/week04/multi-task-20203_ic/src/multi-task-20203_ic.ino"
+void setup();
+void loop();
+#line 1 "c:/Users/Rob/Documents/_GitHub/ITP_348_Content_Public/_exercises/week04/multi-task-20203_ic/src/multi-task-20203_ic.ino"
 const int PIN_LED1 = D3;
 const int PIN_LED2 = D4;
 const int PIN_BUTTON = D2;
 
 //millis() or time will be in unsigned long
 //what was the LAST time we checked
-unsigned long prevMillisLed1 = 0;
-unsigned long prevMillisLed2 = 0;
+unsigned long prevMillis = 0;
 
 //any intervals we want to track
 unsigned long intervalOnLed1 = 2000; // 2 sec
-unsigned long intervalOnLed2 = 1200; // 2 sec
 
 //what state are with in
 //we need to know if LED is on or it is off
 bool state_LED1 = false; //LED 1 starts off
-bool state_LED2 = false; //LED 2 starts off
 
 void setup() {
   pinMode(D2, INPUT);
@@ -34,11 +40,9 @@ void loop() {
   //    if no,  do nothing
   int val = digitalRead(PIN_BUTTON);
   Serial.println("Button: " + String(val));
-
-  //LED 1 code
-  if ((currMillis - prevMillisLed1) > intervalOnLed1) {
+  if ((currMillis - prevMillis) > intervalOnLed1) {
     //update the prevMillis
-    prevMillisLed1 = currMillis;
+    prevMillis = currMillis;
 
     //switch the light
     if (state_LED1 == false) {    //means light is off
@@ -54,27 +58,6 @@ void loop() {
 
       //turn off
       digitalWrite(PIN_LED1, LOW);
-    }
-  }
-  //LED 2 code
-  if ((currMillis - prevMillisLed2) > intervalOnLed2) {
-    //update the prevMillis
-    prevMillisLed2 = currMillis;
-
-    //switch the light
-    if (state_LED2 == false) {    //means light is off
-      //change state
-      state_LED2 = true;
-
-      //turn on light
-      digitalWrite(PIN_LED2, HIGH);
-    }
-    else {  //light is on now
-      //change state
-      state_LED2 = false;
-
-      //turn off
-      digitalWrite(PIN_LED2, LOW);
     }
   }
 
