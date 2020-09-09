@@ -325,7 +325,7 @@ toc_sticky: true
 
 ### Feedback 
 
-- 
+- overall worked well but over zoom, we didn't have time for libraries
 
 ## 4. Multitasking, photoresistors
 
