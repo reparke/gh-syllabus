@@ -22,6 +22,7 @@ toc_sticky: true
 {% assign index = week.name | times: 1 %} 
 {% assign current_dates = dates_array[index] | split: '|' %}
 {% if index != 16 %}
+
 <h2 id="week_{{ week.name }}">Week {{ week.name }} ({{current_dates[2] | strip}} - {{current_dates[3] | strip}})<a class="header-link" href="#week_{{ week.name }}" title="Permalink"></a></h2>
 <ul>
     {% assign items = week.items | sort: 'order' %}
