@@ -24,6 +24,8 @@ title: Cloud Communication - Calling Functions
 * Read the values of variables
 * Control device / execute function calls
 
+## Review: Particle Cloud Features
+
 **Does NOT**
 
 * Store data from device 
@@ -105,6 +107,10 @@ Function must return an `int` (typically -1 for fail)
 
   `POST /v1/devices/{DEVICE_ID}/{FUNCTION}`
 
+## Lab Wiring
+
+<img src="lecture_particle_cloud_functions.assets/rgb_led_tmp36.png" alt="rgb_led_tmp36" style="width:800px;" />
+
 ## Lab
 
 * Connect at RGB LED
@@ -113,6 +119,7 @@ Function must return an `int` (typically -1 for fail)
   * Turn on the light
   * Turn off the light
   * Change the color (*it is easiest to create a few accepted light colors*)
+* Review Cloud Variables by sending current temperature as a Cloud Variable
 
 ## Documentation
 

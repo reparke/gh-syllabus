@@ -59,11 +59,35 @@ Now to fahrenheit
 158 degF
 -->
 
-## Wiring
+## Important: C++ `int` and `float`
+
+- Division with `ints` in C++ truncates decimals
+
+```c++
+int x = 3;
+int y = 6;
+float result = x / y; // 0 since 3/6 is truncated` 
+```
+
+  - Instead, make sure to **cast** (convert) one of the `int` values to be a `float`
+
+```c++
+int x = 3;
+int y = 6;
+float result = (float) x / y;
+```
+
+​    
+
+## TMP36 Wiring
 
 <img src="lecture_tmp36_analog_temperature_sensor.assets/1567470883820.png" alt="TMP36 wiring" style="width:800px" />
 
 - Note that is **BOTTOM VIEW**
+
+## Lab Wiring
+
+<img src="lecture_tmp36_analog_temperature_sensor.assets/tmp36_bb.png" alt="tmp36_bb" style="width:900px;" />
 
 ## Lab
 

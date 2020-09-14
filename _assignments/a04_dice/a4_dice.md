@@ -54,8 +54,6 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
 
 -   Create a Fritzing breadboard prototype layout of your design
 -   Once you’re satisfied with the design, connect the device
--   When turned counter-clockwise, the lights should be very dim and blinking
-    slowly
 -   **Hint #1:** the state of each die value (which lights are on and off) can be
     represented as a 3x3 matrix (2 dimensional array / list. However, an easier
     way to think about this is as a 9-element array / list. You should create 6
