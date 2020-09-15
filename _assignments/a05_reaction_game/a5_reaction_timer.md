@@ -18,7 +18,7 @@ Goals
 
 -   Control RGB LEDs
 
--   Use push button for analog input
+-   Use push button for digital input
 
 -   Process timed events
 
