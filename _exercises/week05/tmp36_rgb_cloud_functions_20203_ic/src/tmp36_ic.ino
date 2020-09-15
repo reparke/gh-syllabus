@@ -17,6 +17,7 @@ Now to fahrenheit
 // Part 1 - TMP36
 const int PIN_TMP36 = A5;
 double tempC = 0;
+double tempF = 0;
 
 const int PIN_RED = D2;
 const int PIN_GREEN = D3;
@@ -30,9 +31,11 @@ void setup() {
     // Part 2 - Cloud functions
     pinMode(PIN_RED, OUTPUT);
     pinMode(PIN_BLUE, OUTPUT);
+    pinMode(D7, OUTPUT);
     pinMode(PIN_GREEN, OUTPUT);
 
     Particle.function("Change LED Color", changeLedColor);
+    Particle.variable("Temperature (F)", tempF);
 }
 
 void loop() {
@@ -46,7 +49,7 @@ void loop() {
     tempC = (tmp36Voltage - 0.5) * 100;  // divide 0.01 mv
     Serial.println("TMP36 tempC: " + String(tempC));
 
-    double tempF =
+    tempF =
         tempC * (9.0 / 5) + 32;  // NOTE: C++ division of ints truncates decimal
     Serial.println("TMP36 tempF: " + String(tempF));
 
@@ -106,6 +109,10 @@ int changeLedColor(String color) {
         analogWrite(PIN_GREEN, g);
         analogWrite(PIN_BLUE, b);
         Serial.print("random");
+        digitalWrite(D7, HIGH);
+        delay(1000);
+        digitalWrite(D7, LOW);
+
         return 0;
     } else {
         Serial.print("error");

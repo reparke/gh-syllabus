@@ -16,6 +16,7 @@ Now to fahrenheit
 
 const int PIN_TMP36 = A5;
 double tempC = 0;
+double tempF = 0;
 
 // setup() runs once, when the device is first turned on.
 void setup() {
@@ -36,7 +37,7 @@ void loop() {
   tempC = (tmp36Voltage - 0.5) * 100;   //divide 0.01 mv
   Serial.println("TMP36 tempC: " + String(tempC));
 
-  double tempF =
+  tempF =
       tempC * (9.0 / 5) + 32;  // NOTE: C++ division of ints truncates decimal
   Serial.println("TMP36 tempF: " + String(tempF));
 
