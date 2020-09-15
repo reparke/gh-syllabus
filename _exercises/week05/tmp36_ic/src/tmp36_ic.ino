@@ -14,7 +14,7 @@ Now to fahrenheit
 158 degF
 */
 
-const int PIN_TMP36 = A0;
+const int PIN_TMP36 = A5;
 double tempC = 0;
 
 // setup() runs once, when the device is first turned on.
