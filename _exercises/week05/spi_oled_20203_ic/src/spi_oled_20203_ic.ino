@@ -34,7 +34,7 @@
 
   Distributed as-is; no warranty is given.
 *******************************************************************************/
-#include "SparkFunMicroOLED.h"  // Include MicroOLED library
+#include "SparkFunMicroOLED.h" // Include MicroOLED library
 #include "math.h"
 
 //////////////////////////////////
@@ -59,17 +59,17 @@ void setup()
 
 void loop()
 {
-  pixelExample();  // Run the pixel example function
-  lineExample();   // Then the line example function
-  shapeExample();  // Then the shape example
-  textExamples();  // Finally the text example
+  pixelExample(); // Run the pixel example function
+  lineExample();  // Then the line example function
+  shapeExample(); // Then the shape example
+  textExamples(); // Finally the text example
 }
 
 void pixelExample()
 {
   printTitle("Pixels", 1);
 
-  for (int i=0; i<512; i++)
+  for (int i = 0; i < 512; i++)
   {
     oled.pixel(random(oled.getLCDWidth()), random(oled.getLCDHeight()));
     oled.display();
@@ -85,9 +85,9 @@ void lineExample()
 
   printTitle("Lines!", 1);
 
-  for (int i=0; i<3; i++)
+  for (int i = 0; i < 3; i++)
   {
-    for (int deg=0; deg<360; deg+=15)
+    for (int deg = 0; deg < 360; deg += 15)
     {
       xEnd = lineWidth * cos(deg * M_PI / 180.0);
       yEnd = lineWidth * sin(deg * M_PI / 180.0);
@@ -96,7 +96,7 @@ void lineExample()
       oled.display();
       delay(10);
     }
-    for (int deg=0; deg<360; deg+=15)
+    for (int deg = 0; deg < 360; deg += 15)
     {
       xEnd = lineWidth * cos(deg * M_PI / 180.0);
       yEnd = lineWidth * sin(deg * M_PI / 180.0);
@@ -114,36 +114,36 @@ void shapeExample()
 
   // Silly pong demo. It takes a lot of work to fake pong...
   int paddleW = 3;  // Paddle width
-  int paddleH = 15;  // Paddle height
+  int paddleH = 15; // Paddle height
   // Paddle 0 (left) position coordinates
   int paddle0_Y = (oled.getLCDHeight() / 2) - (paddleH / 2);
   int paddle0_X = 2;
   // Paddle 1 (right) position coordinates
   int paddle1_Y = (oled.getLCDHeight() / 2) - (paddleH / 2);
   int paddle1_X = oled.getLCDWidth() - 3 - paddleW;
-  int ball_rad = 2;  // Ball radius
+  int ball_rad = 2; // Ball radius
   // Ball position coordinates
   int ball_X = paddle0_X + paddleW + ball_rad;
-  int ball_Y = random(1 + ball_rad, oled.getLCDHeight() - ball_rad);//paddle0_Y + ball_rad;
-  int ballVelocityX = 1;  // Ball left/right velocity
-  int ballVelocityY = 1;  // Ball up/down velocity
-  int paddle0Velocity = -1;  // Paddle 0 velocity
-  int paddle1Velocity = 1;  // Paddle 1 velocity
+  int ball_Y = random(1 + ball_rad, oled.getLCDHeight() - ball_rad); //paddle0_Y + ball_rad;
+  int ballVelocityX = 1;                                             // Ball left/right velocity
+  int ballVelocityY = 1;                                             // Ball up/down velocity
+  int paddle0Velocity = -1;                                          // Paddle 0 velocity
+  int paddle1Velocity = 1;                                           // Paddle 1 velocity
 
   //while(ball_X >= paddle0_X + paddleW - 1)
   while ((ball_X - ball_rad > 1) &&
          (ball_X + ball_rad < oled.getLCDWidth() - 2))
   {
     // Increment ball's position
-    ball_X+=ballVelocityX;
-    ball_Y+=ballVelocityY;
+    ball_X += ballVelocityX;
+    ball_Y += ballVelocityY;
     // Check if the ball is colliding with the left paddle
     if (ball_X - ball_rad < paddle0_X + paddleW)
     {
       // Check if ball is within paddle's height
       if ((ball_Y > paddle0_Y) && (ball_Y < paddle0_Y + paddleH))
       {
-        ball_X++;  // Move ball over one to the right
+        ball_X++;                       // Move ball over one to the right
         ballVelocityX = -ballVelocityX; // Change velocity
       }
     }
@@ -153,7 +153,7 @@ void shapeExample()
       // Check if ball is within paddle's height
       if ((ball_Y > paddle1_Y) && (ball_Y < paddle1_Y + paddleH))
       {
-        ball_X--;  // Move ball over one to the left
+        ball_X--;                       // Move ball over one to the left
         ballVelocityX = -ballVelocityX; // change velocity
       }
     }
@@ -178,11 +178,11 @@ void shapeExample()
     }
 
     // Draw the Pong Field
-    oled.clear(PAGE);  // Clear the page
+    oled.clear(PAGE); // Clear the page
     // Draw an outline of the screen:
     oled.rect(0, 0, oled.getLCDWidth() - 1, oled.getLCDHeight());
     // Draw the center line
-    oled.rectFill(oled.getLCDWidth()/2 - 1, 0, 2, oled.getLCDHeight());
+    oled.rectFill(oled.getLCDWidth() / 2 - 1, 0, 2, oled.getLCDHeight());
     // Draw the Paddles:
     oled.rectFill(paddle0_X, paddle0_Y, paddleW, paddleH);
     oled.rectFill(paddle1_X, paddle1_Y, paddleW, paddleH);
@@ -190,7 +190,7 @@ void shapeExample()
     oled.circle(ball_X, ball_Y, ball_rad);
     // Actually draw everything on the screen:
     oled.display();
-    delay(25);  // Delay for visibility
+    delay(25); // Delay for visibility
   }
   delay(1000);
 }
@@ -205,7 +205,7 @@ void textExamples()
   oled.setCursor(0, 0); // Set cursor to top-left
   // There are 255 possible characters in the font 0 type.
   // Lets run through all of them and print them out!
-  for (int i=0; i<=255; i++)
+  for (int i = 0; i <= 255; i++)
   {
     // You can write byte values and they'll be mapped to
     // their ASCII equivalent character.
@@ -215,14 +215,14 @@ void textExamples()
     // We can only display 60 font 0 characters at a time.
     // Every 60 characters, pause for a moment. Then clear
     // the page and start over.
-    if ((i%60 == 0) && (i != 0))
+    if ((i % 60 == 0) && (i != 0))
     {
       delay(500);           // Delay 500 ms
       oled.clear(PAGE);     // Clear the page
       oled.setCursor(0, 0); // Set cursor to top-left
     }
   }
-  delay(500);  // Wait 500ms before next example
+  delay(500); // Wait 500ms before next example
 
   // Demonstrate font 1. 8x16. Let's use the print function
   // to display every character defined in this font.
@@ -231,8 +231,8 @@ void textExamples()
   oled.setCursor(0, 0); // Set cursor to top-left
   // Print can be used to print a string to the screen:
   oled.print(" !\"#$%&'()*+,-./01234");
-  oled.display();       // Refresh the display
-  delay(1000);          // Delay a second and repeat
+  oled.display(); // Refresh the display
+  delay(1000);    // Delay a second and repeat
   oled.clear(PAGE);
   oled.setCursor(0, 0);
   oled.print("56789:;<=>?@ABCDEFGHI");
@@ -258,16 +258,16 @@ void textExamples()
   // This font looks like 7-segment displays.
   // Lets use this big-ish font to display readings from the
   // analog pins.
-  for (int i=0; i<25; i++)
+  for (int i = 0; i < 25; i++)
   {
-    oled.clear(PAGE);            // Clear the display
-    oled.setCursor(0, 0);        // Set cursor to top-left
-    oled.setFontType(0);         // Smallest font
+    oled.clear(PAGE);           // Clear the display
+    oled.setCursor(0, 0);       // Set cursor to top-left
+    oled.setFontType(0);        // Smallest font
     oled.print("A0:");          // Print "A0"
-    oled.setFontType(2);         // 7-segment font
-    oled.print(analogRead(A0));  // Print a0 reading
-    oled.setCursor(0, 16);       // Set cursor to top-middle-left
-    oled.setFontType(0);         // Repeat
+    oled.setFontType(2);        // 7-segment font
+    oled.print(analogRead(A0)); // Print a0 reading
+    oled.setCursor(0, 16);      // Set cursor to top-middle-left
+    oled.setFontType(0);        // Repeat
     oled.print("A1:");
     oled.setFontType(2);
     oled.print(analogRead(A1));
@@ -281,7 +281,7 @@ void textExamples()
   }
 
   // Demonstrate font 3. 12x48. Stopwatch demo.
-  oled.setFontType(3);  // Use the biggest font
+  oled.setFontType(3); // Use the biggest font
   int ms = 0;
   int s = 0;
   while (s <= 50)
@@ -289,18 +289,18 @@ void textExamples()
     oled.clear(PAGE);     // Clear the display
     oled.setCursor(0, 0); // Set cursor to top-left
     if (s < 10)
-      oled.print("00");   // Print "00" if s is 1 digit
+      oled.print("00"); // Print "00" if s is 1 digit
     else if (s < 100)
-      oled.print("0");    // Print "0" if s is 2 digits
-    oled.print(s);        // Print s's value
-    oled.print(":");      // Print ":"
-    oled.print(ms);       // Print ms value
-    oled.display();       // Draw on the screen
-    ms++;         // Increment ms
-    if (ms >= 10) // If ms is >= 10
+      oled.print("0"); // Print "0" if s is 2 digits
+    oled.print(s);     // Print s's value
+    oled.print(":");   // Print ":"
+    oled.print(ms);    // Print ms value
+    oled.display();    // Draw on the screen
+    ms++;              // Increment ms
+    if (ms >= 10)      // If ms is >= 10
     {
-      ms = 0;     // Set ms back to 0
-      s++;        // and increment s
+      ms = 0; // Set ms back to 0
+      s++;    // and increment s
     }
     delay(1);
   }
@@ -317,7 +317,7 @@ void printTitle(String title, int font)
   oled.clear(PAGE);
   oled.setFontType(font);
   // Try to set the cursor in the middle of the screen
-  oled.setCursor(middleX - (oled.getFontWidth() * (title.length()/2)),
+  oled.setCursor(middleX - (oled.getFontWidth() * (title.length() / 2)),
                  middleY - (oled.getFontWidth() / 2));
   // Print the title:
   oled.print(title);

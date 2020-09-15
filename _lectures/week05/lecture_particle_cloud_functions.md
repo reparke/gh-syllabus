@@ -113,13 +113,32 @@ Function must return an `int` (typically -1 for fail)
 
 ## Lab
 
-* Connect at RGB LED
-* Create a cloud function called `changeLight`
-* Function should allow you to remotely
-  * Turn on the light
-  * Turn off the light
-  * Change the color (*it is easiest to create a few accepted light colors*)
 * Review Cloud Variables by sending current temperature as a Cloud Variable
+* Connect at RGB LED
+* Create a cloud function called `int changeLEDColor(String color)`
+  * Function should take a string and then change the color (*red, green, blue, cyan, magenta, yellow, white, off, random*)
+* Connect `changeLEDColor` to the cloud via `Particle.function`
+* Control light color from your phone
+
+## Quick Note: C++ and Strings
+
+- Unlike in Python, we **can not** use `==` to compare two Strings
+
+- To compare the contents of two strings. we use the object methods `equals` or  `equalsIgnoreCase`
+
+- Example
+
+  ```c++
+  String str1 = "cat";
+  String str2 = "gato";
+  if (str1.equals(str2)) {
+      //if the strings are the same
+  } else {
+      //if the strings are NOT the sameD
+  }
+  ```
+
+  
 
 ## Documentation
 
