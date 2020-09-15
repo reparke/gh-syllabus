@@ -160,14 +160,25 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 </span>
 
+## OLED Library
+
+* We need a library to handle much of the complex communication with the OLED 
+* To install a library, go to the command palette and type `Install Library`
+* Install the OLED library: `SparkFunMicroOLED`
+
 ## Lab
 
-* Use notes and guides to connect OLED and display `Hello world!`
-* Then we will review together as a class
+* Connect OLED and install library
+  * Use: `D/C (pin D6)`, `RST (pin D7)`, `CS (pin A2)`
+* Run sample code; Modify sample code to display `Hello world!`
 * Finally, create an [Etch A Sketch](https://www.youtube.com/watch?v=vVA9wdiIlN4) using the OLED screen with two potentiometers (to draw) and one button (to reset)
 * [Library code](https://github.com/sparkfun/Micro_OLED_Breakout/tree/V_1.0)
 * [Library guide](https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-arduino-library)
 * [Datasheet](https://cdn.sparkfun.com/assets/learn_tutorials/3/0/8/SSD1306.pdf)
+
+## Lab - Etch-a-Sketch
+
+<img src="lecture_spi_oled.assets/etch-a-sketch_v2_bb.png" style="width:900px;" />
 
 ## Credit
 
