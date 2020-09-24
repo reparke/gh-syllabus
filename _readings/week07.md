@@ -6,4 +6,11 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* TBD
+### enum in C++
+{% include video id="l8tWfgAYcoU" provider="youtube" %}
+
+### State Machines
+{% include video id="Wh8xGIYP1Dc" provider="youtube" %}
+
+### Sound
+{% include video id="EwLqgkAlv4c" provider="youtube" %}

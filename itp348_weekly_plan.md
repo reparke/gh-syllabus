@@ -439,11 +439,20 @@ toc_sticky: true
 ### Reading
 
 - Have students create an [IFTTT account](https://ifttt.com/) 
+- Trigger events: https://help.ifttt.com/hc/en-us/articles/115010361688-How-do-I-manage-or-add-new-widgets-on-my-device-
 
 ### Day 1
 
 #### Lecture
 
+- Fall 2020
+  - take time to review questions, OLED, particle functions
+  - have students brainstorm project ideas
+- Review some pasts projects for preliminary project idea
+  - https://sites.usc.edu/parke/tag/itp348_projects/
+  - https://5cf99969afabc800087c618c.onlosant.com/photon_temperature
+  - https://iot.app.initialstate.com/#/tiles/bkt_13hhui7kc4h38hz
+  - 
 - Magnetic switch
 - Particle Cloud: Publish
 
@@ -467,6 +476,10 @@ toc_sticky: true
 
 * ==may need more here==
 
+## Feedback
+
+- Going through project and publishing lab took most of the time
+
 ### Day 2
 
 #### Lecture
@@ -483,6 +496,7 @@ toc_sticky: true
   - Could enhance by using your location
   - set up location trigger to enter or exit that sets a variable
   - then change publish event
+- Create button
 - **Ask students to work in pairs and come up with a cool idea**
 
 #### Lecture
