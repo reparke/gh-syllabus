@@ -3,6 +3,7 @@ marp: true
 theme: itp
 
 week: 7
+show_in_list: false
 category: lectures
 title: enum in C++
 ---
