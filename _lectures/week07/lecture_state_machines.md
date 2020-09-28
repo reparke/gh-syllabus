@@ -199,8 +199,12 @@ void updateNextState() {
 * Wire device as shown below
 
 ## Wiring Diagram
+![bg contain right](lecture_finite_state_machines.assets/stoplight_bb.png)
+
+## Wiring Diagram
 ![bg contain right](lecture_finite_state_machines.assets/IMG_8948.jpg)
 You'll need
+
 * 2 green LEDs
 * 2 yellow LEDs
 * 3 red LEDs
@@ -209,7 +213,7 @@ You'll need
 
 <!-- <img src="lecture_finite_state_machines.assets/IMG_8948.jpg" alt="IMG_8948" style="height:500px;" /> -->
 
-## Wiring Diagram
+## Wiring Pin Guide
 
 | LED                   | Argon Pins |
 | ---------------------------- | ---- |
