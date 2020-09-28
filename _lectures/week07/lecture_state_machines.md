@@ -195,7 +195,7 @@ void updateNextState() {
 * Download starting code
   * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week07/stop_light_start
+```https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week07/stop_light_start```
 * Wire device as shown below
 
 ## Wiring Diagram
