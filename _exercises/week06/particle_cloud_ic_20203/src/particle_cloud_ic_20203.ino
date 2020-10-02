@@ -13,7 +13,7 @@ void setup() {
     pinMode(PIN_RED, OUTPUT);
     pinMode(PIN_BLUE, OUTPUT);
     pinMode(PIN_GREEN, OUTPUT);
-    
+
     pinMode(PIN_SWITCH, INPUT);
     Serial.begin(9600);
 
@@ -22,6 +22,7 @@ void setup() {
 
     //subscribe to partner's event
     Particle.subscribe("ITP348/Door/NH", switchEventHandler, ALL_DEVICES);
+    blinkLed("twice");
 }
 
 void loop() {
