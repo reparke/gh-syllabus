@@ -137,7 +137,22 @@ int angleVal = map(potVal, 0, 4095, 15, 165);
 
 <img src="lecture_servo_motors.assets/servo_dc_fan_controller_bb.png" alt="servo_dc_fan_controller_bb" style="width:600px;" />
 
-## Credits
+
+
+## Motor Controller Wiring Guide
+
+| Motor Controller         | Explanation                                           |
+| ------------------------ | ----------------------------------------------------- |
+| PWMA                     | Motor A speed (PWM)                                   |
+| AI1, AI2                 | Motor A direction control (connect to Argon)          |
+| AO1, AO2                 | Motor A output (connect to motor)                     |
+| PWMB, BI1, BI2, BO1, BO2 | Controls for motor B                                  |
+| VCC                      | Power for chip (3v3)                                  |
+| VM                       | Power for motors (3v3, or higher for powerful motors) |
+| STBY                     | Enable motor (3v3)                                    |
+| GND                      | Ground                                                |
+
+Credits
 
 * Images created with [Fritzing](https://fritzing.org/home/)
 * Original slides created by Ray Kim
