@@ -82,4 +82,21 @@ void loop() {}
 void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
                     void* context) {
     // TODO finish event handler
+  /* === START DEBUG PRINTING ===
+           uncomment following loop to see commands being sent by app ==
+   */
+/*)
+  for (size_t ii = 0; ii < len; ii++) {
+    Serial.print(data[ii]);
+    Serial.print(" ");
+  }
+  Serial.println();
+  for (size_t ii = 0; ii < len; ii++) {
+    Serial.write(data[ii]);
+    Serial.print(" ");
+  }
+  Serial.println();
+*/
+  /* === END DEBUG PRINTING === */
+  
 }

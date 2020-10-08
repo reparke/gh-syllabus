@@ -41,7 +41,6 @@ Specifications
   When color picker is used, change RGB LED color
 */
 
-
 // RBG LED Pins
 const int PIN_RED = A2;
 const int PIN_GREEN = A1;
@@ -58,18 +57,17 @@ const int AIN2 = D4;
 const int PWMA = D5;
 
 void setup() {
-  /* === START BLE SETUP === */
-  argon_ble_setup();
-  /* === END BLE SETUP === */
+    /* === START BLE SETUP === */
+    argon_ble_setup();
+    /* === END BLE SETUP === */
 
-  pinMode(PIN_LED, OUTPUT);
-  pinMode(PIN_BLUE, OUTPUT);
-  pinMode(PIN_GREEN, OUTPUT);
-  pinMode(PIN_RED, OUTPUT);
-  Serial.begin(9600);
+    pinMode(PIN_LED, OUTPUT);
+    pinMode(PIN_BLUE, OUTPUT);
+    pinMode(PIN_GREEN, OUTPUT);
+    pinMode(PIN_RED, OUTPUT);
+    Serial.begin(9600);
 }
 void loop() {}
-
 
 /*  Sample Code to communicate from Argon to Adafruit Bluefruit app
     https://learn.adafruit.com/bluefruit-le-connect/controller
@@ -83,5 +81,22 @@ void loop() {}
 // Note: uint8_t is a byte ("unsigned integer of length 8 bits")
 void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
                     void* context) {
-  // TODO finish event handler
+    // TODO finish event handler
+  /* === START DEBUG PRINTING ===
+           uncomment following loop to see commands being sent by app ==
+   */
+/*)
+  for (size_t ii = 0; ii < len; ii++) {
+    Serial.print(data[ii]);
+    Serial.print(" ");
+  }
+  Serial.println();
+  for (size_t ii = 0; ii < len; ii++) {
+    Serial.write(data[ii]);
+    Serial.print(" ");
+  }
+  Serial.println();
+*/
+  /* === END DEBUG PRINTING === */
+  
 }
