@@ -629,7 +629,6 @@ toc_sticky: true
 
 ### Day 2
 
- ==**Give students velcro and have them assemble chassis before Thurs**==
 #### Lecture
 
 - Bluetooth
@@ -724,6 +723,7 @@ toc_sticky: true
 ### Feedback
 
 - Pre-class concern: we will be interleaving car
+-  ==**Give students velcro and have them assemble chassis before Thurs**==
 
 ### Assignment
 

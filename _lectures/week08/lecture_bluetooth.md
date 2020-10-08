@@ -115,14 +115,6 @@ title: Bluetooth
   * Temperature type (e.g. mouth, armpit, ear, etc.)
   * Interval (time between reading)
 
-## Making the Connection: Custom Mobile Apps 
-
-<img src="lecture_bluetooth.assets/ember.png" alt="ember" style="width:300px;" /> <img src="lecture_bluetooth.assets/iosbluetooth.png" alt="iosbluetooth" style="width:300px;" />
-
-## Making the Connection: Mobile Testing Apps
-<img src="lecture_bluetooth.assets/nrftoolbox.png" alt="nRF Toolbox" style="width:300px;" /> <img src="lecture_bluetooth.assets/bluefruit.png" alt="Adafruit Bluefruit" style="width:300px;" />
-
-
 
 ## Making the Connection
 
@@ -137,6 +129,13 @@ title: Bluetooth
 * There are many great resources and tools online to create iOS and Androids to communicate over BLE
 
 * This is definitely the best option for a commercial product
+
+## Making the Connection: Custom Mobile Apps 
+
+<img src="lecture_bluetooth.assets/ember.png" alt="ember" style="width:300px;" /> <img src="lecture_bluetooth.assets/iosbluetooth.png" alt="iosbluetooth" style="width:300px;" />
+
+
+## Connecting with Mobile Apps
 
 * Building a mobile app is beyond the scope of this class, but we can use free testing apps to explore BLE functionality
 
