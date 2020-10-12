@@ -116,7 +116,26 @@ const uint8_t heart_bmp[] = {
 
  <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2005%20PM.jpg" alt="Photo Mar 30, 10 21 05 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2024%20PM.jpg" alt="Photo Mar 30, 10 21 24 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2020%2059%20PM.jpg" alt="Photo Mar 30, 10 20 59 PM" style="width:200px;" />
 
+## OLED Pins
 
+<span style="font-size:75%">
+
+| OLED | Argon    |
+| --------- | ------------ |
+| GND       | GND          |
+| 3V3       | 3V3          |
+| D1 (SDI)  | MO           |
+| D0 (SCK)  | SCK          |
+| D2 (SDO)  | -            |
+| D/C       | A0 |
+| RST       | A1 |
+| CS        | A2 |
+
+</span>
+
+## Wiring Diagram
+
+<img src="lecture_oled_graphics.assets/oled_ultrasonic_bb.png" style="width:800px;" />
 
 ## Tools for converting images to bitmaps
 

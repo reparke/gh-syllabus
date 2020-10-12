@@ -61,9 +61,8 @@ title: Data Visualization and Dashboard with Initial State
 3. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
 4. Write firmware sketch and flash Argon
 
-## Aside: Access Key 
+## Aside: Access Key (or API key)
 
-* Also known as API key
 * Many webservices require you to register and then they provide you with an API key (ex: `zaCELgL. 0imfnc8mVLWwsAawjYr4Rx-Af50DDqtlx`)
 * This randomly-generated string serves as the login and password (credentials) to your account
 * Purposes
@@ -130,7 +129,7 @@ URL: `https://groker.init.st/api/events`
 
 ## Recall: Escape Characters
 
-* The Initial State value contains multiple quotation marks `"` in the value
+* Initial State value contains quotation marks `"` in the value
 
 ```json
 {"key": "temp", "value": 32}
@@ -178,7 +177,7 @@ void loop() {
 ## Example 2: Send Multiple Data Points from Argon to Initial State  
 
 * Sending one data point at a time is valid, but is tedious if there are many values to send
-* Since Initial State accepts JSON data, we send a JSON array with many data point
+* Instead, we can send a JSON array with many data point
 
 ```json
 [
@@ -188,7 +187,7 @@ void loop() {
 ]
 ```
 
-* The only difference in our setup is changing the formatting of the data we send
+* We just need to change the formatting of the data we send
 
 ## Aside: Creating JSON Automatically 
 

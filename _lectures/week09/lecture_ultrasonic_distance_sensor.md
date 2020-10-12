@@ -1,5 +1,5 @@
 ---
-marp: false
+marp: true
 theme: itp
 
 week: 9
@@ -72,8 +72,7 @@ delayMicroseconds(<<DELAY_VAL>>);
 ## Timing Part 2: Echo
 
 * Sensor "listens" for sound wave to reflect / bounce off object
-* Sensor automatically makes echo pin **LOW**
-* When sound wave reflection is received, echo pin goes **HIGH**
+* When sound wave reflection is received, echo pin goes **HIGH** for duration of reflection, then goes **LOW**
 * In order to measure the time it takes for an input to be received, use the ```pulseIn()```
 
 ## Measure Time with ```pulseIn```
@@ -88,8 +87,8 @@ int time = pulseIn(<<PIN>>, <<VALUE>>);
 * Example
 
 ```c++
-//Start timing when D2 is LOW
-//Stop timing when D2 is HIGH
+//Start timing when D2 is HIGH
+//Stop timing when D2 is LOW
 int time = pulseIn(D2, HIGH); 
 ```
 
@@ -119,7 +118,7 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 
 * Download project: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
 * Paste the following link into the top right
-  https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week11/ultrasonic_oled_start
+  https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week09/ultrasonic_oled_start
 
 ## Lab
 
@@ -128,6 +127,10 @@ CONV_FACTOR_CM_TO_IN = 0.3437
   * Error message when out of range
   * Warning message when less than 5 inches
   * Distance message otherwise
+
+## Wiring Diagram
+
+<img src="lecture_ultrasonic_distance_sensor.assets/ultrasonic_bb.png" style="width:800px;" />
 
 ## Credit
 

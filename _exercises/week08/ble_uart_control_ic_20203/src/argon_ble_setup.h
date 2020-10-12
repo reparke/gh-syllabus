@@ -1,6 +1,6 @@
 #include "Particle.h"
 
-const String DEVICE_NAME = "res_inn_argon";  // CHANGE THIS
+const String DEVICE_NAME = "dev1";  // CHANGE THIS
 
 /*
 1) ADD BLUETOOTH SERVICES ===============================
