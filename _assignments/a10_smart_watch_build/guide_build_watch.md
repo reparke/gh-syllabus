@@ -52,7 +52,7 @@ Attach velcro to bottom of breadboard (may have been done in a previous project)
 ![watch_v3_6](guide_build_watch.assets/watch_v3_6.png)
 
 
-### Step 7
+### Step 5:
 
 Wire the components. Below are two diagrams for wiring. The second design uses a switch and is optional.
 
