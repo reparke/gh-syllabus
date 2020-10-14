@@ -18,6 +18,7 @@ Ultrasonic Sensor
 
 */
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
+#include "bitmaps.h"
 
 //////////////////////////
 // MicroOLED Definition //
@@ -36,6 +37,10 @@ const int PIN_TRIGGER = D3; //ARGON OUTPUT sends to sensor
 //global constant
 double SPEED_SOUND_CM = 0.03444; //temperature dependent
 double CONV_CM_TO_IN = 0.3437;
+
+int MAX_RANGE_CM = 78;  // 30 in
+int MIN_RANGE_CM = 0;
+int WARNING_RANGE_CM = 12;  //4.7
 
 void setup() {
   Serial.begin(9600);  // begin serial communication with the computer
@@ -64,8 +69,21 @@ void loop() {
 
   double distanceCm = roundTripTime * SPEED_SOUND_CM / 2;
   double distanceIn = distanceCm * CONV_CM_TO_IN;
+  Serial.print("Dist to object: ");
+  if (distanceCm >= MAX_RANGE_CM ||
+      distanceCm <= MIN_RANGE_CM) {  // these units can be CM only because that
+                                     // is what the sensor reports
 
-  Serial.println("Distance (cm): " + String(distanceCm) + ", Distance (in): " + String(distanceIn));
+      Serial.print("out of range " + String(distanceCm));
+
+  } else if (distanceCm > 0 && distanceCm < WARNING_RANGE_CM) {
+      Serial.print("Warning " + String(distanceCm));
+  } else {
+      Serial.print("OK distance" + String(distanceCm));
+  }
+
+  Serial.println();
+
   delay(250);
 
 
