@@ -91,11 +91,10 @@ title: JSON Parsing
 
 ## Parsing JSON with a Library
 
-* We will use the library `JsonParserGeneratorRK` which is written specifically for Argon and can be installed from **Workbench**
-
-* The library provides sample code for interacting with most APIs that provide JSON data
-* The sample code allows for responses from the webhook that come in multiple parts
-* Adapt the code below by customizing the code within `if(jsonParser.parse())`
+- `JsonParserGeneratorRK` is a great Argon-specific library for parsing JSON code and can be installed from **Workbench**
+* Use the sample code below for your event handler
+* The first part allows for responses from the webhook that come in multiple parts (you don't need to change this)
+* The second part is where you can adapt your own code
 
 ## Parsing with `JsonParserGeneratorRK`
 
@@ -119,7 +118,58 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
 }
 ```
 
+## Example
+- Import library
+```c++
+#include "JsonParserGeneratorRK.h"
+```
+- Create global `JsonParser` object to read JSON
+```c++
+JsonParser jsonParser; 
+```
 
+## Example: Configuration
+- Create the Particle webhook
+- Publish event
+- Subscribe to response and call event handler
+- *These processes are described in the WeatherStack example*
+&nbsp;
+- Now let's look at the actual JSON response
+
+
+## Example: Consider the following JSON
+
+```json
+{
+  "place": {
+    "city": "los angeles",
+    "state": "california"
+  }
+}
+```
+## Example
+- The JSON will be passed to the `data` parameter of event handler 
+```c++
+void jsonSubscriptionHandler(const char *event, const char *data) {
+```
+- The first part of our event handler accounts for a single JSON broken up into multiple events
+- This code is complete and you don't need to modify it
+- The part we are interested is the actual JSON parsing
+
+## Example
+```c++
+void jsonSubscriptionHandler(const char *event, const char *data) {
+  /* ... rest of function code */
+  if (jsonParser.parse()) {
+
+    String city = jsonParser.getReference()
+               .key("place")
+               .key("city")
+               .valueString();
+   Serial.println("The city " + city);
+  }
+}
+```
 
 ## Useful Links
 

@@ -1,32 +1,64 @@
 ---
 marp: true
 theme: itp
-show_in_list: false
 
 week: 10
 category: lectures
-title: Checking the Weather (Weather Stack integration)
+title: Retrieving Data from API
 ---
 
 <!-- headingDivider: 2 -->
 
-# THIS IS OLD--replaced with "retrieving data"
-
 # Connecting to API and Parsing Data
+
+## Overview
+
+- APIs provide useful data we can use in our device (e.g. weather and location data)
+- Each API will be configured slightly differently but the process to connect is generally similar
+
+##  
+
+![bg](lecture_retrieving_data_from_api.assets/Slide1.PNG)
+
+##  
+
+![bg](lecture_retrieving_data_from_api.assets/Slide2.PNG)
+
+##  
+
+![bg](lecture_retrieving_data_from_api.assets/Slide3.PNG)
+
+##  
+
+![bg](lecture_retrieving_data_from_api.assets/Slide4.PNG)
+
+##  
+
+![bg](lecture_retrieving_data_from_api.assets/Slide5.PNG)
 
 ## Steps to Connect Argon and API
 
+0. Determine how to use the API
 1. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
 2. Use `Particle.publish` to trigger webhook
 3. Use `Particle.subscribe` to "listen" for response from webhook
 4. Create **function handler** that is used by `Particle.subscribe` to process JSON
 
-## Example: Request Weather Data for Specific Zip Code
+## Step 0: How to use the API
 
-* We will walk through the steps for obtaining basic weather data by zip code from Weather Stack
-* Different APIs and the JSON response are all slightly different, but the general process is the same
+- Each API is different, but they will usually have documentation that describes how to connect
+- Typically, this will include
+  - Endpoint (URL you communicate with)
+  - Parameters to include in your request (e.g. name of city you want weather data for)
+  - How to obtain an API key (if necessary)
 
-## Step 1: Create Webhook to Connect to Weather Stack
+## Step 0: How to Use the API
+
+Example: WeatherStack
+
+![image-20201017181859930](lecture_retrieving_data_from_api.assets/image-20201017181859930.png)
+
+## Step 1: Create Webhook In Particle Console
 
 **Particle integration settings**
 
@@ -55,7 +87,7 @@ void loop() {
 
 ```c++
 #include "JsonParserGeneratorRK.h"
-JsonParser jsonParser;  // dynamic version: needs to be global if multi-part responses will be sent
+JsonParser jsonParser;  // object to handle parsing
 
 String response;	//stores JSON webhook response
 double temp;		//stores temperature
@@ -65,36 +97,6 @@ void setup() {
   Particle.subscribe("hook-response/JSONWeatherStack", jsonSubscriptionHandler, MY_DEVICES);
 }
 ```
-## Part 4: Creating the function handler to receive the JSON
-
-* `JsonParserGeneratorRK` provides some helping code to handle JSON responses that come in multiple pieces (*this is called Step 1* in the code below). We don't need to change
-* *Step 2* in the code below is where we parse our unique 
-
-## Part 4: Argon firmware
-
-```c++
-void jsonSubscriptionHandler(const char *event, const char *data) {
-  //Step 1 allows for webhook responses to be delivered in multple 
-  //"chunks"; you don't need to change this
-  int responseIndex = 0;
-  const char *slashOffset = strrchr(event, '/');
-  if (slashOffset)
-    responseIndex = atoi(slashOffset + 1);
-  if (responseIndex == 0)
-    jsonParser.clear();
-  jsonParser.addString(data);
-
-  //Step 2 is where you can parse the actual data; your code goes in the IF
-  if (jsonParser.parse()) {
-  	/****** YOUR PARSING CODE GOES HERE ********/
-```
-
-## Part 4: Creating the function handler to receive the JSON
-
-* JSON is simply a way of storing data, but there is no rule about HOW the data is organized
-* Every API will use slightly different organizations
-* Before we can parse Weather Stack JSON, we need to examine how it looks
-
 ## Weather Stack JSON Response
 
 ```json
@@ -155,6 +157,30 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
 }
 ```
 ![right:50%](lecture_weatherstack_integration.assets/image-20200405005641533_temperature.png)
+
+## Part 4: Creating the function handler to receive the JSON
+
+* `JsonParserGeneratorRK` provides some helping code to handle JSON responses that come in multiple pieces (*this is called Step 1* in the code below). We don't need to change
+* *Step 2* in the code below is where we parse our unique 
+
+## Part 4: Argon firmware
+
+```c++
+void jsonSubscriptionHandler(const char *event, const char *data) {
+  //Step 1 allows for webhook responses to be delivered in multple 
+  //"chunks"; you don't need to change this
+  int responseIndex = 0;
+  const char *slashOffset = strrchr(event, '/');
+  if (slashOffset)
+    responseIndex = atoi(slashOffset + 1);
+  if (responseIndex == 0)
+    jsonParser.clear();
+  jsonParser.addString(data);
+
+  //Step 2 is where you can parse the actual data; your code goes in the IF
+  if (jsonParser.parse()) {
+  	/****** YOUR PARSING CODE GOES HERE ********/
+```
 
 ## Part 4: Creating the function handler to receive the JSON
 

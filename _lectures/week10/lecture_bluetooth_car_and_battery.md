@@ -19,7 +19,7 @@ title: Bluetooth Car and Battery
 
 ## Lithium-Ion Polymer Battery (LiPo)
 
-<img src="lecture_bluetooth_car.assets/1572470513438.png" alt="1572470513438" style="width:800px" />
+<img src="lecture_bluetooth_car_and_battery.assets/1572470513438.png" alt="1572470513438" style="width:800px" />
 
 ## Lithium-Ion Polymer Battery (LiPo)
 
