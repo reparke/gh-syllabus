@@ -733,6 +733,14 @@ toc_sticky: true
 
 ## 10. APIs; Weather; Car; Battery 
 
+### Day 1
+
+#### Lab
+
+- As review, we spent the entire class period reviewing how to send data to initial stack
+- Students worked in breakout rooms to create webhook and send GPS and a battery value to initial state
+- This took the entire class period
+
 ### Reading
 
 - Create [Weather Stack account](https://weatherstack.com/)

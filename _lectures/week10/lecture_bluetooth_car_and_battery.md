@@ -68,7 +68,7 @@ title: Bluetooth Car and Battery
 
   * Download project: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week09/ble_car_start
+    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_car_start
 
   
 

@@ -27,7 +27,7 @@ void loop() {
     String data = "[{\"key\":\"temperature\", \"value\":" + String(temperature) + "},{\"key\":\"weather\",\"value\":\""+weather+"\"}]";
 
     // Trigger the integration
-    // Particle.publish("initial_state_20203", data, PRIVATE);
+    Particle.publish("initial_state_20203", data, PRIVATE);
     // Wait 60 seconds
     delay(5000);
 }
