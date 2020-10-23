@@ -82,6 +82,29 @@ void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
   }
 }
 
+
+/*
+  carForward
+    leftMotor in forward direction
+    rightMotor in forward direction
+
+  carBackward
+    swap direction
+
+  carRight
+    leftMotor moves by some amount
+    rightMotor moves by some amount
+
+  carleft
+    similar
+
+  carStop
+    any button is release
+
+  leftMotor "forward" is some amount
+    "backward" is the amount
+*/
+
 void setup() {
   argon_ble_setup();
 
@@ -101,26 +124,3 @@ void setup() {
 
 /********************************************************************************/
 void loop() {}
-
-/*
-  carForward
-    leftMotor "forward direction"
-    rightMotor "forward direction"
-
-  carBackward
-    swap direction
-
-  carRight
-    leftMotor some amount
-    rightMotor some amount
-
-  carLeft
-    similar
-
-  leftMotor         speed > 0 is forward, speed < 0 is backward
-    "forward" means changing the AIN1 2 signals accordingly
-
-  test motor function
-
-  then do bluetooth      
-*/
