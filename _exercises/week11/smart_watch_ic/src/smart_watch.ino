@@ -85,7 +85,7 @@ const float TIMEZONE = -8;  //PST
 // Button Variables     //
 //////////////////////////
 const int PIN_BUTTON = D3;
-int prevButtonState = HIGH;  // the last VERIFIED state
+int prevReading = HIGH;  // the last VERIFIED state
 int curButtonState;          // the current VERIFIED state
 long lastDebounceTime = 0;   // the last time the output pin was toggled
 long debounceDelay = 50;     // the debounce time; increase if the output
@@ -128,7 +128,7 @@ void setup() {
   heartRateSensor.setup();  // Configure sensor with default settings
   heartRateSensor.setPulseAmplitudeRed(
       0x0A);  // Turn Red LED to low to indicate sensor is running
-  heartRateSensor.setPulseAmplitudeGreen(0);  // Turn off Green LED
+//  heartRateSensor.setPulseAmplitudeGreen(0);  // Turn off Green LED
   heartReadTimer.start();  // start recurring timer to read heart rate sensor
 
   // initialize OLED
@@ -237,10 +237,10 @@ debounceDelay) If current button reading is different from current button state
 
 */
 void loop() {
-  int reading = digitalRead(PIN_BUTTON);  // check button read
+  int curReading = digitalRead(PIN_BUTTON);  // check button read
   unsigned long currentDebounceTime = millis();
 
-  if (reading != prevButtonState) {
+  if (curReading != prevReading) {
     lastDebounceTime = millis();
   }
 
@@ -271,7 +271,7 @@ void loop() {
       runWeatherScreen();
       break;
   }
-  prevButtonState = reading;  // update for next loop
+  prevReading = curReading;  // update for next loop
 }
 
 /* ====================== HEART RATE FUNCTIONS ===============

@@ -84,7 +84,7 @@ MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
 // Button Variables     //
 //////////////////////////
 const int PIN_BUTTON = D3;
-int prevButtonState = HIGH;  // the last VERIFIED state
+int prevReading = HIGH;  // the last VERIFIED state
 int curButtonState;          // the current VERIFIED state
 long lastDebounceTime = 0;   // the last time the output pin was toggled
 long debounceDelay = 200;    // the debounce time; increase if the output
@@ -101,14 +101,14 @@ void setup() {
   // Initialize MAX30105sensor
   if (!heartRateSensor.begin(
           Wire, I2C_SPEED_FAST)) {  // Use default I2C port, 400kHz speed
-    Serial.println("MAX30102 was not found. Check wiring/power. ");
+    Serial.println("MAX30105 was not found. Check wiring/power. ");
     while (1)
       ;
   }
   heartRateSensor.setup();  // Configure sensor with default settings
-  heartRateSensor.setPulseAmplitudeRed(
-      0x0A);  // Turn Red LED to low to indicate sensor is running
-  heartRateSensor.setPulseAmplitudeGreen(0);  // Turn off Green LED
+  heartRateSensor.setPulseAmplitudeRed(0x0A);  // Turn Red LED to low to indicate sensor is running
+  heartRateSensor.enableDIETEMPRDY();
+  
   heartReadTimer.start();  // start recurring timer to read heart rate sensor
 
   // initialize OLED

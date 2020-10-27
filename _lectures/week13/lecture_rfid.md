@@ -46,12 +46,12 @@ title: RFID
 
 
 
-* Each key card and key fob have a unique code stored in their RFID tag
+* Each key card and key fob have a **unique code** stored in their RFID tag (e.g. `OB 45 EA 0E`)
 
   
 
 
-## Sensor Wiring
+## Sensor Wiring (SPI)
 
 | Sensor | Argon                  |
 | ------ | ---------------------- |
@@ -70,13 +70,13 @@ title: RFID
 
   * `MFRC522` is an Argon compatible library
 
-## Sample Code
+## Sample Code #1: Find the Card ID
 
 * The following code is adapted from the library example
 * Swiping key card in front of sensor will display the unique ID from each card
-* Once the card's unique ID is known, that ID can be used for tracking or identification
+* Once the card's unique ID is known, that ID can be used for tracking or identification (copy it from Serial monitor)
 
-## Sample Code
+## Sample Code #1: Setup
 
 ```c++
 #include "MFRC522.h"
@@ -84,17 +84,21 @@ title: RFID
 const int SS_PIN = D2;
 const int RST_PIN = D3'
 
-MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
+MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 object
 
 void setup() {
   Serial.begin(9600); 
   mfrc522.setSPIConfig();
   mfrc522.PCD_Init();  // Init MFRC522 card
-  Serial.println("Scan PICC to see UID and type...");
 }
 
+```
+
+## Sample Code #1: Testing and Resting
+
+```c++
 void loop() {
-  // Look for new cards
+  // Look for new cards (exit if no card is found)
   if (!mfrc522.PICC_IsNewCardPresent()) {
     return;
   }
@@ -109,7 +113,49 @@ void loop() {
 
 ```
 
+## Sample Code #2: Checking for Authorization
 
+- Once you have the unique for one or more cards, that ID can then be used to provide authorized access
+- Based on the card that is present, different outputs can be enable (e.g. doors unlocked)
+- To proceed, you will need the unique ID form a card which will be something like  `OB 45 EA 0E`
+
+## Sample Code #2: Setup
+
+```c++
+#include "MFRC522.h"
+
+const int SS_PIN = D2;
+const int RST_PIN = D3'
+const String matchId = "OB 45 EA 0E"; //target id to match
+
+MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
+
+void setup() {
+  Serial.begin(9600); 
+  mfrc522.setSPIConfig();
+  mfrc522.PCD_Init();  // Init MFRC522 card
+  Serial.println("Scan PICC to see UID and type...");
+}
+```
+
+## Sample Code #2: Match ID
+
+```c++
+void loop() {
+  String scanId = ""; 
+  if (mfrc522.PICC_IsNewCardPresent()) { // check sensor
+    if(mfrc522.PICC_ReadCardSerial()) { // check valid read
+      for (byte i = 0; i < mfrc522.uid.size; i++) {
+        scanId += String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
+        scanId += String(mfrc522.uid.uidByte[i], HEX));
+      }
+      if (scanId.equals(matchId)) {
+          // this means scanned card and target card match
+      }
+    }
+  }
+}
+```
 
 ## Wiring
 

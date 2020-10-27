@@ -4,14 +4,14 @@ theme: itp
 
 week: 12
 category: lectures
-title: DHT 22 - Temperature and Humidity Sensor
+title: DHT - Temperature and Humidity Sensor
 ---
 
 <!-- headingDivider: 2 -->
 
-# DHT 22 - Temperature and Humidity Sensor
+# DHT - Temperature and Humidity Sensor
 
- <img src="lecture_dht22.assets/10167-01.jpg" alt="DHT 22" style="width:800px;" /> 
+<img src="lecture_dht.assets/dht22.jpg" alt="DHT 22" style="width:300px;" /> <img src="lecture_dht.assets/dht11.png" alt="DHT 11" style="width:300px;" /> 
 
 
 
@@ -20,18 +20,25 @@ title: DHT 22 - Temperature and Humidity Sensor
 * DHT 22 (also DHT 11, RHT 03) measure temperature and relative humidity
 * Unlike TMP36, this has a digital interface and no calculation or conversion is needed
 
-## Wiring Guide
-
- <img src="lecture_dht22.assets/10167-02_pinout.jpg" alt="Annotated RHT03" style="width:400px;" /> 
+## Wiring Guide - 4 Pins
+![bg right](lecture_dht.assets/10167-02_pinout.jpg) 
 
 1. 3.3V
 2. Digital input (needs 10k pull-up resistor)
 3. No connection
 4. Ground
 
+
+## Wiring Guide - 3 Pins
+
+![bg right](lecture_dht.assets/10167-02_pinout_3pin.jpg) 
+
+1. 3.3V
+2. Digital input (needs 10k pull-up resistor)
+3. Ground
 ## Wiring
 
-<img src="lecture_dht22.assets/dht22_bb.png" alt="dht22_bb" style="width:500px;" />
+<img src="lecture_dht.assets/dht22_bb.png" alt="dht22_bb" style="width:500px;" />
 
 ## Software Library
 

@@ -36,57 +36,15 @@ title: Smart Watch
 * Need to design `getNextState()` function
 * Need to support state transitions in `loop()`
 
-##  
+##  Debouncing
 
-## Problem with Buttons
-<img src="lecture_smart_watch.assets/Bouncy_Switch.png" alt="switch_bounce.png" style="width:900px;" />
-
-## Problem with Buttons
-
-<img src="lecture_smart_watch.assets/Bouncy_Switch.png" alt="switch_bounce.png" style="width:400px;" />
-
-* Buttons and switches are mechanical and they tend to fluctuate briefly when pressed
-* Leads to circuit "bounce" before the value stabilizes
-* Argon typically goes through `loop()` multiple times before this stops so we can get false buttons presses or incorrect values
-
-## Solving Debouncing
-
-* This works by only considering input if the signal has been stable (*the same*) for a fixed amount of time 
-* Everytime we see the signal is "bounce", we reset our `millis()` counter
-* Once we verify the signal has been stable for long enough, we then check for a button press
-* We need to distinguish **current button reading** (which may be noisy) from **current button state** (which we have confirmed is a legitimate HIGH / LOW value)
-
-## Debouncing Algorithm
-
-* If current button reading is **not** the same as last button state
-  * Reset debounce counter
-* If signal has been stable long enough (currentTime-lastDebounce > debounceDelay)
-  * If current button reading is different from current button state
-    * Update button state (legitimate button press)
-    * **Here you execute desired code for button presses**
-* Update previous button state with the reading value
-
-##  
+- We need to use debouncing techniques to get proper readings on button presses
 
 ## Heart Rate Screen
 
 <img src="lecture_smart_watch.assets/heart.jpg" style="width:500px;" />
 
-## Detecting Heart Rate
-
-<img src="lecture_smart_watch.assets/image-20200416155711370.png" alt="image-20200416155711370" style="width:500px" />
-
-## MAX30105 Heart Rate / SpO2 Sensor
-
-* Use red and infrared lights
-* Measure 
-  * heart rate
-  * blood oxygen (SpO2 pulse oximetry)
-  * temperature
-* Best for use on finger or earlobe due to red / infrared light
-* Wrist-based sensors typically use green light (like Apple Watch)
-
-## MAX30105 Operation
+## Detecting Heart Rate with MAX30105 Heart Rate / SpO2 Sensor
 
 * Uses built-in LEDs to pulse light onto skin
 * Measures light reflecting back
@@ -102,29 +60,6 @@ title: Smart Watch
 | VCC    | 3V3   | Power (requires 3.3v) |
 | SDA    | SDA   | I2C data              |
 | SCL    | SCL   | I2C clock             |
-
-## I2C for Serial, Synchronous Communication
-
-<img src="../weekX/lecture_i2c_lcd.assets/52ddb2d8ce395fad638b4567.png" alt="Synchronous communication" style="width:1000px;" />
-
-## I2C
-
-* Inter-integrated Circuit  (I2C) is a protocol to allow a central device to communicate with multiple "peripheral" chips
-* Serial
-* Synchronous
-* Only two pins
-  * Data (```SDA```)
-  * Clock (```SCK```)
-
-## I2C vs SPI
-
-
-| I2C                  | SPI                                              |
-| -------------------- | ------------------------------------------------ |
-| Uses 2 wires         | Uses 4 wires; more devices means even more wires |
-| Uses more power      | Uses less power                                  |
-| Lower transfer speed | Higher transfer speed                            |
-| Standardized         | Multiple "versions"                              |
 
 
 
@@ -186,7 +121,7 @@ void setup() {
 
 ## Time
 
-* `setup()
+* `setup()`
 
   * Set current timezone `Time.zone(<<TIMEZONE>>);` ([timezone guide](https://greenwichmeantime.com/time-zone/definition/))
   * Enable DST `Time.beginDST();`
