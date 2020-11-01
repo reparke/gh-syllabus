@@ -11,3 +11,7 @@ title: Pre-Lecture Activities
     {% include video id="GtgVViZe1sM" provider="youtube" %}
   * Watch **PIR Sensor**
     {% include video id="zyXEYmRyDBA" provider="youtube" %}
+  
+  - Build
+  
+    ![](week13.assets/rfid_bb.png)
