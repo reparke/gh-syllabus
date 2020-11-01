@@ -57,11 +57,11 @@ title: PIR - Passive Infrared Sensor
 
 ## Wiring
 
-| PIR (Sparkfun)  | Argon                                                    |
-| --------------- | -------------------------------------------------------- |
-| + (red wire)    | 5v                                                       |
-| - (white wire)  | GND                                                      |
-| AL (black wire) | digital input pin <br />(with 10K pullup resistor to 5v) |
+| PIR (Sparkfun)      | Argon                                                    |
+| ------------------- | -------------------------------------------------------- |
+| + **(red wire)**    | 5v                                                       |
+| - **(white wire)**  | GND                                                      |
+| AL **(black wire)** | digital input pin <br />(with 10K pullup resistor to 5v) |
 
 *Note: The wire color and pin order is specific to the [Sparkfun PIR sensor](https://www.sparkfun.com/products/13285) and not all PIR sensor*
 
@@ -69,7 +69,10 @@ title: PIR - Passive Infrared Sensor
 
 <img src="lecture_pir.assets/pir_sparkfun_bb.png" style="width:1000px;" />
 
+## Lab
 
+- Part 1: Connect sensor; turn on on-board LED when motion is detected and turn off when motion stops
+- Part 2: Create a "hold length" of 5 sec whenever movement is detected
 
 ## Credit
 

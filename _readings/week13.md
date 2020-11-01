@@ -6,4 +6,8 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* TBD
+* **For Thursday**
+  * Watch **RFID Sensor**
+    {% include video id="GtgVViZe1sM" provider="youtube" %}
+  * Watch **PIR Sensor**
+    {% include video id="zyXEYmRyDBA" provider="youtube" %}

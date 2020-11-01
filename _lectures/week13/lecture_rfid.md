@@ -4,14 +4,14 @@ theme: itp
 
 week: 13
 category: lectures
-title: RFID
+title: RFID (Radio Frequency ID Scanner	)
 ---
 
 <!-- headingDivider: 2 -->
 
-# RFID 
+# RFID - Radio Frequency ID 
 
-*This content is incomplete but provides some code examples to get started using RFID*
+<img src="lecture_rfid.assets/rfid_mfc522_sensor.jpg" style="width:600px;" />
 
 
 
@@ -26,7 +26,7 @@ title: RFID
 
 * Inventory tracking
   * items, clothing, parts for manufacturing
-* Access and identificato
+* Access and identification
   * hotel key cards
   * ID cards (USC Card has an RFID tag)
 * Contact-less payment
@@ -125,8 +125,8 @@ void loop() {
 #include "MFRC522.h"
 
 const int SS_PIN = D2;
-const int RST_PIN = D3'
-const String matchId = "OB 45 EA 0E"; //target id to match
+const int RST_PIN = D3
+const String MATCH_ID = "OB 45 EA 0E"; //target id to match
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
 
@@ -141,23 +141,71 @@ void setup() {
 ## Sample Code #2: Match ID
 
 ```c++
-void loop() {
-  String scanId = ""; 
-  if (mfrc522.PICC_IsNewCardPresent()) { // check sensor
-    if(mfrc522.PICC_ReadCardSerial()) { // check valid read
-      for (byte i = 0; i < mfrc522.uid.size; i++) {
-        scanId += String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
-        scanId += String(mfrc522.uid.uidByte[i], HEX));
-      }
-      if (scanId.equals(matchId)) {
-          // this means scanned card and target card match
-      }
+String scanId = "";
+if (mfrc522.PICC_IsNewCardPresent()) {    // check sensor
+  if (mfrc522.PICC_ReadCardSerial()) {  // check valid read
+    for (byte i = 0; i < mfrc522.uid.size; i++) {
+      scanId += String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");	       scanId += String(mfrc522.uid.uidByte[i], HEX);
+     }
+     scanId.toUpperCase();  //scanId will be lowercase
+     scanId.trim();         //scanId has an intial leading " "
+	//now we can check for a match!
+    if (scanId == MATCH_ID) {
+      //we found a match!
     }
   }
 }
 ```
 
+## Sample Code #2: Match ID Explained
+
+- The ID is 4 bytes long and is read 1 byte at a time
+- This code from the library assembles the ID into a String in *hexadecimal*
+
+```c++
+if (mfrc522.PICC_IsNewCardPresent()) {    // check sensor
+  if (mfrc522.PICC_ReadCardSerial()) {  // check valid read
+    for (byte i = 0; i < mfrc522.uid.size; i++) {
+      scanId += String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");	       scanId += String(mfrc522.uid.uidByte[i], HEX);
+     }
+```
+
+## Sample Code #2: Match ID Explained
+
+- `scanId` will be stored in lowercase with a leading space
+  - Ex: ` _Ob 45 ea 0e` (*_ here is represents a space*)
+- Since our `MATCH_ID` is upper case with no leading space, we modify `scanId`
+
+```c++
+scanId.toUpperCase();  //scanId will be lowercase
+scanId.trim();         //scanId has an intial leading " "
+```
+
 ## Wiring
+
+| Sensor | Argon                   |
+| ------ | ----------------------- |
+| 3.3v   | 3.3v                    |
+| Reset  | A5 (any GPIO pin works) |
+| GND    | GND                     |
+| IRQ    | -                       |
+| MOSI   | MO                      |
+| MISO   | MI                      |
+| SCK    | SCK                     |
+| SDA    | A4 (any GPIO pin works) |
+
+## Diagram
+
+<img src="lecture_rfid.assets/rfid_bb.png" style="width:800px;" />
+
+## Lab
+
+- Connect RFID
+- Obtain IDs of two cards
+- Create program to turn D7 LED on with one card and off with second card
+- Use a `millis()` timer to pause 1 second between each card read
+
+## Obtaining Sensors and Cards
 
 * Sensor: [Amazon](https://www.amazon.com/gp/product/B01CSTW0IA)
 * Key cards: [Amazon](https://www.amazon.com/gp/product/B01M0ACMDS)
@@ -165,12 +213,6 @@ void loop() {
 ## Credit
 
 * [Sparkfun](https://www.sparkfun.com/products/13285)
-
-
-
-
-
-
 
 
 

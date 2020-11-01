@@ -122,21 +122,24 @@ Function must return an `int` (typically -1 for fail)
 
 ## Quick Note: C++ and Strings
 
-- Unlike in Python, we **can not** use `==` to compare two Strings
+- Similar to Python, we **can** use `==` to compare the *contents* of two Strings
 
-- To compare the contents of two strings. we use the object methods `equals` or  `equalsIgnoreCase`
+```c++
+String str1 = "cat";
+String str2 = "gato";
+if (str1 == str2) {
+ 
+```
 
-- Example
+- We can also compare strings by their capitalization using `equalsIgnoreCase`
 
-  ```c++
-  String str1 = "cat";
-  String str2 = "gato";
-  if (str1.equals(str2)) {
-      //if the strings are the same
-  } else {
-      //if the strings are NOT the sameD
-  }
-  ```
+```c++
+String str1 = "cat";
+String str2 = "CaT";
+if (str1.equalsIgnoreCase(str2)) {
+// statement will be true
+
+```
 
   
 

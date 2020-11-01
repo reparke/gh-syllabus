@@ -41,6 +41,7 @@ toc_sticky: true
 * [Fritzing Software](http://fritzing.org/home/)
 * Particle Library Parts: [Direct download](https://github.com/reparke/Fritzing-Parts/raw/master/Particle_Mesh_Parts.fzbz) and [GitHub repository](https://reparke.github.io/Fritzing-Parts/)
 * AdaFruit Library Parts (useful for OLEDs): [Direct download](https://github.com/adafruit/Fritzing-Library/raw/master/AdaFruit.fzbz) and [GitHub repository](https://github.com/adafruit/Fritzing-Library)
+* RFID MFC522 Part: [Fritzing page](https://fritzing.org/projects/mfrc522)
 
 
 
