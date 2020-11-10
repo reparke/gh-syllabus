@@ -108,7 +108,19 @@ State getNextState(State s) {  //setup logic for state transition
     }
 }
 
+//time screen - draw clock picture
+//print date
+//print time
+
 void setup() {
+    //set time zone
+    //no DST
+
+    Time.zone(-8);
+    //build logic for DST
+    //if 
+    //Time.beginDST()
+    
     Serial.begin(115200);
     Serial.println("Initializing MAX30105...");
 
@@ -177,7 +189,15 @@ void runTimeScreen() {
     Serial.println("Time");
     oled.setCursor(0, 0);
     oled.clear(PAGE);  // Clear the display
-    oled.print("Time");
+    oled.drawBitmap(clock_16x12);
+    oled.setFontType(0);
+    oled.setCursor(20,0);
+    oled.print(Time.format("%h %d"));       //date
+
+    oled.setFontType(1);
+    oled.setCursor(0, 20);
+    oled.print(Time.format("%I:%M%p")); //12:49pm
+
     oled.display();
 }
 
