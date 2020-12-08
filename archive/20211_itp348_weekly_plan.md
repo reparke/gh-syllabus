@@ -1,13 +1,3 @@
----
-layout: single
-classes: wide
-title: Weekly Plan
-toc: false
-toc_label: "Quick Links"
-toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
-toc_sticky: true
-
----
 ## 		Things to implement
 
 * [ ] Create "behavioral norms"
@@ -18,13 +8,9 @@ toc_sticky: true
 * [ ] idea: involve students in a couple weeks where we "flip" the classroom
 * [ ] a8 (alarm): revise to use state machines (if time)
 * [ ] wk11: building smart watch: need to text and pictures to use velcro
-* [x] need to test sparkfun max 30101
-* [ ] account for wellness days in schedule
-* [ ] account for extra two weeks in schedule
-* [ ] replace IFTTT with Blynk
-* [ ] extend discussion of state machines
+* [ ] need to test sparkfun max 30105
 
-## General Feedback (Spring 2021)
+## General Feedback (Fall 2019)
 
 * Assignment 0 and 1 are given out week 1, day 1; due week 2, day 1; that is the pattern
 * Develop a way to post readings on website

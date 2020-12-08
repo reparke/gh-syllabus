@@ -1,14 +1,4 @@
----
-title: Syllabus
-layout: single
-category: syllabus
-toc: true
-toc_label: "Quick Links"
-toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
-toc_sticky: true
----
-
-## Syllabua 2021 (Draft - not complete)
+## Fall 2020
 
 ### Course Info
 
