@@ -58,8 +58,10 @@ toc_sticky: true
 - Course introduction / syllabus
 - Ice breaker *(see slides in local ITP 348 Docs folder)* 
 - Introduction to IoT
+- Kit Overview
 - Possibly show this [mind map](https://www.mindmeister.com/1308604904?t=O0Vcty0Uys) from Boris Tomas
 - Safety
+- Explain course website
 
 #### Lab
 
@@ -79,7 +81,6 @@ toc_sticky: true
 - Pass out argons 
    - students are responsible for returning devices if they drop before drop deadline
    - If online, students will already have these
-- Kit Overview
 - Software tools
    - Workbench (open and discuss)
    - Fritzing (open and show example project)
@@ -260,12 +261,12 @@ toc_sticky: true
 
 #### Guided activity
 
-- Latching button (if time) ==identify way to program this==
+- Latching button (if time) **==identify way to program this==**
 - Connect 3 LEDs and control on/off with button presses (3 states)
 
 #### Lecture
 
-- Latching button (==need to make slides==)
+- Latching button **(==need to make slides==)**
 - If no slides, draw picture of square wave
 
 #### Lecture (==if time==)
@@ -339,33 +340,14 @@ toc_sticky: true
 
 ### Day 1
 
-#### Lecture
-
-- Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
-- Multitasking with millis
-
-#### Lab
-
-- Review latching code from previous class; code together LED1 toggling with button
-- Then add LED2 blink have light blink to show delay is block so millis is needed
-- Rewrite with blink LED2 and toggle LED1 using millis
-- Then rewrite to remove toggle but have LEDs blink at different rates
-
-#### Feedback
-
-- went over multimeters for resistors (didn't get to voltage)
-- particle.io was down
-- students seemed VERY confused about millis() and delay
-
-### Day 2 
-
 #### Interactive breakout
 
 * Photoresistor (work in groups)
 
 #### Lecture
 
-* Photoresistor (==concern: breakout group questions ask students to measure voltage but they haven't learned that yet; could they just display analogRead values?==)
+* Photoresistor (**==concern: breakout group questions ask students to measure voltage but they haven't learned that yet; could they just display analogRead values?==)**
+* Revise questions
 
 #### Lab
 
@@ -382,6 +364,30 @@ toc_sticky: true
 #### Lab
 
 - publish photoresistor value and "state" (for example bright, ambient, or dark to Particle cloud)
+
+### Day 2
+
+#### Lecture
+
+- Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
+- Multitasking with millis
+
+#### Lab
+
+- **==Need to make new==**: publish light level once per sec, blink two LEDs at different rate
+- Review latching code from previous class; code together LED1 toggling with button
+- Then add LED2 blink have light blink to show delay is block so millis is needed
+- Rewrite with blink LED2 and toggle LED1 using millis
+- Then rewrite to remove toggle but have LEDs blink at different rates
+
+#### Feedback
+
+- went over multimeters for resistors (didn't get to voltage)
+- particle.io was down
+- students seemed VERY confused about millis() and delay
+
+  
+
 
 ### Assignment
 
@@ -438,12 +444,11 @@ toc_sticky: true
 - Given out start of current week: A5 - Reaction Timer
 - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
-## 6. Particle Cloud Publish and Subscribe; IFTTT
+## 6. Particle Cloud Publish and Subscribe; Blynk
 
 ### Reading
 
-- Have students create an [IFTTT account](https://ifttt.com/) 
-- Trigger events: https://help.ifttt.com/hc/en-us/articles/115010361688-How-do-I-manage-or-add-new-widgets-on-my-device-
+- Have students create an [Blynk](https://blynk.io/) account
 
 ### Day 1
 
@@ -456,7 +461,6 @@ toc_sticky: true
   - https://sites.usc.edu/parke/tag/itp348_projects/
   - https://5cf99969afabc800087c618c.onlosant.com/photon_temperature
   - https://iot.app.initialstate.com/#/tiles/bkt_13hhui7kc4h38hz
-  - 
 - Magnetic switch
 - Particle Cloud: Publish
 
@@ -488,30 +492,25 @@ toc_sticky: true
 
 #### Lecture
 
-- IFTTT
+- Blynk
 
 #### Guided activity
 
-- set up IFTTT [https://ifttt.com/create](https://ifttt.com/create)
+- set up Blynk
 - Install iOS / Android app
-- how do create an alarm?
-  - If Particle - Publish <event name> open
-  - Then send notification
-  - Could enhance by using your location
-  - set up location trigger to enter or exit that sets a variable
-  - then change publish event
-- Create button
+- Demonstrate basic Blynk integration
 - **Ask students to work in pairs and come up with a cool idea**
+
+#### Lab
+
+- Using RGB and switch, use app to control RGB color and get notification for switch
 
 #### Lecture
 
 * ==may need more here==
 * Also could work on reaction timer because it is challenging
-* Could cover [IFTTT webhooks](https://ifttt.com/maker_webhooks) but they require HTML / JS editing to work, and they require JSON to send text values
 
 #### Feedback
-
-- Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
 
 #### Assignment
 
@@ -522,7 +521,7 @@ toc_sticky: true
   - This seems early for this, but the semester is shortened by 2 weeks
   - Could consider moving this later in a future semester
 
-## 7. Finite State Machines
+## 7. Finite State Machines ==NEED TO EXTEND TO SECOND DAY==
 
 ### Reading
 
@@ -568,12 +567,6 @@ toc_sticky: true
 
 - Continued with stoplight example
 
-#### Lecture (if time)
-
-* Speaker
-* Tone
-* Pitches
-
 ### Feedback
 
 - 
@@ -585,25 +578,22 @@ toc_sticky: true
 
 
 
-## 8. Motors, Servos, Bluetooth
-
-### Before class
-
-- Send wiring guide with full fan circuit 
-- ask students to have a narrow bottle of water and some tape
-- Have students install Bluetooth phone apps
-     - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
-   - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
+## 8. Motors, Servos
 
 ### Reading
 
 - Motors
   - [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
-- Bluetooth
-  * [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
-  * [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
 
 ### Day 1
+
+#### Lecture
+
+* Speaker
+* Tone
+* Pitches
+
+### Day 2
 
 #### Lecture
 
@@ -631,7 +621,29 @@ toc_sticky: true
 - ==Need to change the DC motor slides. They are too technical==
 - ==**Idea for next semester**==: create assignment using motors and bluetooth (something like the fan)
 
-### Day 2
+### Assignment
+
+- Due start of current week:   A7 - Shared environment monitor
+- Given out start of current week: A8 - Alarm clock (due in two weeks)
+- Given out start of current week: A9 - Bluetooth car part 1 (due in one week)
+
+## 9. Bluetooth
+
+### Before class
+
+- Send wiring guide with full fan circuit 
+- ask students to have a narrow bottle of water and some tape
+- Have students install Bluetooth phone apps
+  - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
+  - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
+
+### Reading
+
+- Bluetooth
+  * [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
+  * [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
+
+### Day 1
 
 #### Lecture
 
@@ -666,22 +678,38 @@ toc_sticky: true
 - explain **changeRgbLight()**
 - Demo device with code
 
+### Day
+
+#### Lecture
+
+- LIPO battery
+
+#### Lecture
+
+- car bluetooth - gave overview of coding -- no specifics but  pseudocode design for carForward, leftMotor, etc. (students will build  this for their)
+
+#### Lecture
+
+- ==**Consider moving ultrasonic sensor for extra time**==
+
 ### Feedback
 
 ### Assignment
 
-* Due start of current week: A7 - Shared environment monitor
-* Given out start of current week: A8 - Alarm clock
+* Due start of current week: A9 - Bluetooth car part 1 (due in one week)
+* Given out start of current week: none, but continue to work on  A8 - Alarm clock 
 
 
 
-## 9. Ultrasonic Distance Sensor; OLED Graphics; Cloud Dashboards
+## 10. Ultrasonic Distance Sensor; OLED Graphics
 
 ### Reading
 
-- Create [Initial State](https://www.initialstate.com/) account
+- 
 
-### Day 1
+### Day 1 ==**Wellness day**==
+
+### Day 2
 
 #### Lecture
 
@@ -697,11 +725,25 @@ toc_sticky: true
 
 - Went generally well. Ran out of time to talk about graphics.
 
-### Day 2
+### Assignment
+
+- Due start of current week: A8 - Alarm clock
+- Given out start of current week: A10 - Bluetooth car part 2
+- Given out start of current week: A11 - Smart Watch Assembly
+
+
+
+## 11. Cloud Dashboards; APIs; Weather;  (==**This may be too much content**==)
+
+### Reading
+
+- Create [Initial State](https://www.initialstate.com/) account
+- Create [Weather Stack account](https://weatherstack.com/)
+
+### Day 1
 
 #### Lecture
 
-- OLED graphics (if necessary)
 - API and JSON overview
 - Show students a few public APIs
 - Dashboard and Initial State integration (single values)
@@ -724,32 +766,13 @@ toc_sticky: true
 
 - Send photoresistor value and light level threshold`Particle.publish` to InitialState
 
-### Feedback
-
-- Pre-class concern: we will be interleaving car
--  ==**Give students velcro and have them assemble chassis before Thurs**==
-
-### Assignment
-
-- Due start of current week: A8 - Alarm clock
-- Given out start of current week: A9 - Bluetooth car part 1
-- Given out start of current week: A10 - Smart Watch Assembly
-
-## 10. APIs; Weather; Car; Battery 
-
-### Day 1
-
 #### Lab
 
 - As review, we spent the entire class period reviewing how to send data to initial stack
 - Students worked in breakout rooms to create webhook and send GPS and a battery value to initial state
 - This took the entire class period
 
-### Reading
-
-- Create [Weather Stack account](https://weatherstack.com/)
-
-### Day 1 
+### Day 2
 
 #### Lecture / Lab
 
@@ -779,26 +802,13 @@ toc_sticky: true
 - find another API to show
 - Show students how to use GPS coordinates
 
-### Day 2
-
-#### Lecture / Lab
-
-* Finish Weather Stack
-
-#### Lecture 
-
-* LIPO battery
-
-#### Lecture
-
-* car bluetooth - gave overview of coding -- no specifics but pseudocode design for carForward, leftMotor, etc. (students will build this for their)
-
 ### Assignment
 
-- Due start of current week: A9 - Bluetooth car part 1 ==**and**== A10 - Smart Watch Assembly
-- Given out start of current week: A11 - Bluetooth car part 2 ==**and**== Proposal
+- Due start of current week: A10 - Bluetooth car part 2
+- Due start of current week: A11 - Smart Watch Assembly
+- Given out start of current week: Proposal
 
-## 11. Project Proposal Review, Accessibility, Debouncing, Heart Rate Sensor
+## 12. Smart Watch, Time, Digital Temperature Sensors,
 
 ### Reading
 
@@ -806,20 +816,12 @@ toc_sticky: true
 
 ### Day 1
 
-* This will either be a project discussion, accessibility lecture, or both
-
-#### Guest Lecture
-
-* ==**Google Guest Lecture on Accessibility**== 
-
 #### Activity
 
 * Alternative idea: ==**project discussion**==
 * Depending on time, have class meet in a large group or in 3 person groups
 * Each person describes their proposal (==need to develop some framework and questions audience can ask== )
 * Consider covering debouncing by itself today, then talking about project as a class
-
-### Day 2
 
 #### Lecture 
 
@@ -835,18 +837,7 @@ toc_sticky: true
 
 * Heart rate rate sensor
 
-### Assignment
-
-- Due start of current week: A11 - Bluetooth car part 2 ==**and**== Proposal
-- Continue working on project schematic
-
-## 12. Smart Watch, Time, Digital Temperature Sensors, Accelerometer
-
-### Reading
-
-- 
-
-### Day 1
+### Day 2
 
 #### Lecture
 
@@ -869,29 +860,71 @@ toc_sticky: true
 
 * Connect to weather
 
-### Day 2
+### Assignment
+
+- Due start of current week: Proposal
+- Continue working on project 
+
+## 13. Guest Lecture, RFID
+
+### Reading
+
+- 
+
+### Day 1
 
 #### Activity
 
-- Check milestone (postponed to next week)
+- Check milestone 
 
 #### Lecture
 
-- DHT 22
-- Accelerometer
+- ==**Google Guest Lecture on Accessibility**== 
+
+### Day 2
+
+#### Lecture
+
+- RFID
 
 #### Lab
 
-- Use **tap** feature
-- Use **portrait / landscape** detection
-- Use accelerometer to control RGB LED
+- 
 
 ### Assignment
 
-- Due start of current week: project schematic
+- Due start of current week: nothing
 - Continue working on project 
 
-## 13. PIR, RFID
+## 14. Accelerometer
+
+### Reading
+
+- 
+
+### Day 1 
+
+#### Lecture
+
+- PIR sensor
+
+#### Lab
+
+- Do basic wiring together
+- ask students to enable longer delay-to-off time
+
+### Day 2
+
+#### Lecture
+
+- **==WELLNESS DAY==**
+
+### Assignment
+
+- Due start of current week: nothing
+- Continue working on project 
+
+## 15. PIR, DHT
 
 ### Reading
 
@@ -929,12 +962,20 @@ toc_sticky: true
 
 - Work on project 
 
+- DHT 22
+
+#### Lab
+
+- Use **tap** feature
+- Use **portrait / landscape** detection
+- Use accelerometer to control RGB LED
+
 ### Assignment
 
 - Due start of current week: nothing
 - Continue working on project 
 
-## 14 - Final Project Presentation
+## 16 - Final Project Presentation
 
 
 
@@ -1126,3 +1167,31 @@ toc_sticky: true
 - Copy code from particle publishing and subscribing
 - Test: publish request and see if subscribe code retrieves JSON data
 
+## IFTTT
+
+#### Lecture
+
+- IFTTT
+
+#### Guided activity
+
+- set up IFTTT [https://ifttt.com/create](https://ifttt.com/create)
+- Install iOS / Android app
+- how do create an alarm?
+  - If Particle - Publish <event name> open
+  - Then send notification
+  - Could enhance by using your location
+  - set up location trigger to enter or exit that sets a variable
+  - then change publish event
+- Create button
+- **Ask students to work in pairs and come up with a cool idea**
+
+#### Lecture
+
+* ==may need more here==
+* Also could work on reaction timer because it is challenging
+* Could cover [IFTTT webhooks](https://ifttt.com/maker_webhooks) but they require HTML / JS editing to work, and they require JSON to send text values
+
+#### Feedback
+
+- Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well

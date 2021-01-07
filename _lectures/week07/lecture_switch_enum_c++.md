@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 6
+week: 7
 category: lectures
 title: Switch and Enum in C++
 ---

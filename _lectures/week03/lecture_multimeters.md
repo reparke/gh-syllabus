@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 5
+week: 3
 category: lectures
 title: Multimeters
 
