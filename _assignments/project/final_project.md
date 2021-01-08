@@ -3,7 +3,7 @@ week: 10
 number: 12
 category: assignments
 title: Project
-date_due: Proposal Apr 5 @ 11:59 pm; Schematic Apr 13 @ 11:59pm; Finished device and presentation May 6 during final exam time
+date_due: Proposal Apr 5 @ 11:59 pm; Schematic Apr 15 @ in class; Finished device and presentation May 6 during final exam time
 
 ---
 

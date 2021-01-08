@@ -8,7 +8,7 @@ toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: true
 ---
 
-## Syllabua 2021 (Draft - not complete)
+## Syllabus 2021
 
 ### Course Info
 
@@ -126,10 +126,10 @@ individually and submitted on Blackboard.
 
 #### Schedule
 
-- Week 10 – Project assigned
-- Week 11 – Submit project proposal
-- Week 12 – Receive feedback on proposal; submit device schematic
-- Weeks 12 – 14 – Work on project (in-class milestone week 12)
+- Week 11 – Project assigned
+- Week 12 – Submit project proposal
+- Week 13 – Receive feedback on proposal; submit device schematic
+- Weeks 12 – 16 – Work on project (in-class milestone week 13)
 - Final exam period – Final presentation (Graded)
 
 #### Basic Requirements
@@ -241,22 +241,24 @@ submission that they intend to use a grace day.
 
 ## Course Schedule: A Weekly Breakdown
 
-| Week                 | Topics/Daily Activities                                  | Readings  | Assignment (given out on Tuesday; due one week Monday @ 11:59 pm) |
+| Week                 | Topics/Daily Activities                                  | Pre-Lecture Videos and Readings | Assignment (given out on Tuesday; due one week Monday @ 11:59 pm) |
 | --------------- | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
 | Week 1          | Intro to Internet of Things (IoT), electricity, microcontrollers, Ohm’s Law, LEDs | Posted online | A0 and A1                                                    |
 | Week 2          | Analog to digital conversion, pulse width modulation, serial | Posted online | A2                                                           |
-| Week 3          | Digital input, multitasking                                  | Posted online | A3                                                           |
-| Week 4          | RGB LEDs, voltage dividers, photoresistors, cloud variables  | Posted online | A4                                                           |
-| Week 5          | Temperature sensors, SPI communication, OLED, cloud variables | Posted online | A5                                                           |
-| Week 6          | Cloud communication                                          | Posted online | A6                                                           |
-| Week 7          | Finite state machines, audio                                 | Posted online | A7                                                           |
-| Week 8          | Ultrasonic sensors, graphics, data dashboards                | Posted online | A8                                                           |
-| Week 9          | DC motors, servos, Bluetooth, remote controlled car          | Posted online | A9                                                           |
-| Week 10         | JSON, APIs, cloud  integration                               | Posted online | Project proposal                                             |
-| Week 11         | Wearables, accessibility, heart rate sensors, debouncing     | Posted online | Project schematic; *(project proposal feedback given)*       |
-| Week 12         | Accelerometers, digital temperature sensors                  | Posted online | *(work on project)*                                          |
-| Week 13         | RFID, passive infrared sensors                               | Posted online | *(work on project)*                                          |
-| Final (Week 14) | Final project presentation                                   | Posted online | Project code, device, app, in-class demo                     |
+| Week 3          | Digital input, buttons, RGB LEDs                | Posted online | A3                                                           |
+| Week 4          | Voltage dividers, photoresistors, multitasking, cloud variables | Posted online | A4                                                           |
+| Week 5          | Temperature sensors, SPI communication, OLED, cloud functions | Posted online | A5                                                           |
+| Week 6          | Cloud communication (publish and subscribe), mobile app integration | Posted online | A6                                                           |
+| Week 7          | Finite state machines                                 | Posted online | A7                                                           |
+| Week 8          | Bluetooth, remote controlled car                             | Posted online | A8 (due in one week)<br />A9 (due in two weeks) |
+| Week 9          | DC motors, servos          | Posted online | Continue working on A9                             |
+| Week 10         | Ultrasonic sensors, OLED graphics | Posted online | A10<br />A11                                 |
+| Week 11         | JSON, APIs, dashboards | Posted online | Project proposal |
+| Week 12         | Wearables, heart rate sensors, debouncing | Posted online | *(work on project)*                                          |
+| Week 13         | RFID, accessibility                | Posted online | Project schematic (**due in class on Thurs**) |
+| Week 14 | Accelerometers | Posted online | *(work on project)* |
+| Week 15 | Digital temperature sensors, passive infrared sensors | Posted online | *(work on project)* |
+| Final (Week 16) | Final project presentation                                   | Posted online | Project code, device, app, in-class demo                     |
 |                 |                                                              |               | Date: For the date and time of the final for this class, consult the USC *Schedule of Classes* at [www.usc.edu/soc](http://www.usc.edu/soc)*.* |
 
 ## Academic Conduct

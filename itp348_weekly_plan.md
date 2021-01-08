@@ -624,8 +624,8 @@ toc_sticky: true
 ### Assignment
 
 - Due start of current week:   A7 - Shared environment monitor
-- Given out start of current week: A8 - Alarm clock (due in two weeks)
-- Given out start of current week: A9 - Bluetooth car part 1 (due in one week)
+- Given out start of current week: A8 - Bluetooth car part 1 (due in one week)
+- Given out start of current week: A9 - Alarm clock (due in two weeks)
 
 ## 9. Bluetooth
 
@@ -696,8 +696,8 @@ toc_sticky: true
 
 ### Assignment
 
-* Due start of current week: A9 - Bluetooth car part 1 (due in one week)
-* Given out start of current week: none, but continue to work on  A8 - Alarm clock 
+* Due start of current week: A8 - Bluetooth car part 1 (due in one week)
+* Given out start of current week: none, but continue to work on  A9 - Alarm clock 
 
 
 
@@ -727,7 +727,7 @@ toc_sticky: true
 
 ### Assignment
 
-- Due start of current week: A8 - Alarm clock
+- Due start of current week: A9 - Alarm clock
 - Given out start of current week: A10 - Bluetooth car part 2
 - Given out start of current week: A11 - Smart Watch Assembly
 
@@ -808,7 +808,7 @@ toc_sticky: true
 - Due start of current week: A11 - Smart Watch Assembly
 - Given out start of current week: Proposal
 
-## 12. Smart Watch, Time, Digital Temperature Sensors,
+## 12. Smart Watch, Heart Rate Sensor
 
 ### Reading
 
@@ -873,15 +873,15 @@ toc_sticky: true
 
 ### Day 1
 
-#### Activity
-
-- Check milestone 
-
 #### Lecture
 
 - ==**Google Guest Lecture on Accessibility**== 
 
 ### Day 2
+
+#### Activity
+
+- Check milestone 
 
 #### Lecture
 
@@ -931,10 +931,6 @@ toc_sticky: true
 - 
 
 ### Day 1
-
-#### Activity
-
-- Check milestone 
 
 #### Lecture
 

@@ -20,17 +20,25 @@ title: Intro to IoT
 ## What are smart devices?
 
 ## Physical computing
-* "Physical Computing is an approach to learning how humans communicate through computers that starts by considering how humans express themselves physically" --Tom Igoe
+*"Physical Computing is an approach to learning how humans communicate through computers that starts by considering how humans express themselves physically"* 
+
+--Tom Igoe
+
 * Interacting with "smart" devices in the environment
 * Involves programming, electronics, 3d printing, wearables, networking, interaction design
+
+
 
 ## Why learn this? 
 
 * Jobs
+  - 2020: 4.5 million Internet of Things (IoT) developers
+    - 57% annual growth rate
   - 2020: 26 billion Internet nodes (excl. phones, tablets, and computers)
     - 30 fold increase from 2009
   - 2020: 4.5 million Internet of Things (IoT) developers
     - 57% annual growth rate
+  - 2025: projected 42 billion IoT devices globally 
 * Cross-discipline
   - CS, EE, data analytics, product design, entrepreneurship, making
 
@@ -127,7 +135,9 @@ title: Intro to IoT
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |                                                              |                                                              |
 
+## Reference
 
+- [AI - IoT](https://www.visualcapitalist.com/aiot-when-ai-meets-iot-technology/)
 
 ## Credits
 
