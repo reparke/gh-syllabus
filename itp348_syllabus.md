@@ -173,14 +173,14 @@ added depending on size of the class.
 
 ## Course Grading Breakdown
 
-| Item                      | % of Grade |
-| ------------------------- | ---------- |
-| Participation             | 10         |
-| Assignments               | 40         |
-| In-Class Labs and Quizzes | 20         |
-| Final Project             | 30         |
-|                           |            |
-| Total                     | 100%       |
+| Item                                      | % of Grade |
+| ----------------------------------------- | ---------- |
+| Assignments                               | 40         |
+| Social Issues in Smart Devices Assignment | 5          |
+| In-Class Labs and Quizzes                 | 20         |
+| Final Project                             | 35         |
+|                                           |            |
+| Total                                     | 100%       |
 
 ### Grading Scale
 
