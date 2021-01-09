@@ -10,19 +10,21 @@ toc_sticky: true
 ---
 ## 		Things to implement
 
-* [ ] Create "behavioral norms"
-* [ ] wk1: record c++ review and create bb quiz
-* [x] wk0: record introduction for students
+* [ ] wk 0: create social issue assignment
+* [ ] wk 0: Create "behavioral norms"
 * [ ] wk1: record software tools for reference
+* [ ] wk1: record c++ review and create bb quiz
+* [ ] wk3: create latch slides
+* [ ] wk4: revise photoresistor slides / change questions
+* [ ] wk6: revise Blynk lab
+* [ ] wk7: create lecture / lab activities for FSM day 2
+* [ ] wk8: revise alarm clock assignment to use FSM **and** Blynk
+* [ ] wk11: may be too much dashboard content; consider moving single data point for initial state to earlier week
 * [ ] general: try to incorporate `enum` or `switch` earlier in semester
-* [ ] idea: involve students in a couple weeks where we "flip" the classroom
-* [ ] a8 (alarm): revise to use state machines (if time)
-* [ ] wk11: building smart watch: need to text and pictures to use velcro
-* [x] need to test sparkfun max 30101
-* [ ] account for wellness days in schedule
-* [ ] account for extra two weeks in schedule
-* [ ] replace IFTTT with Blynk
-* [ ] extend discussion of state machines
+* [x] wk11: building smart watch: need to text and pictures to use velcro
+* [x] account for wellness days in schedule
+* [x] account for extra two weeks in schedule
+* [x] replace IFTTT with Blynk
 
 ## General Feedback (Spring 2021)
 
@@ -625,7 +627,7 @@ toc_sticky: true
 
 - Due start of current week:   A7 - Shared environment monitor
 - Given out start of current week: A8 - Bluetooth car part 1 (due in one week)
-- Given out start of current week: A9 - Alarm clock (due in two weeks)
+- Given out start of current week: ==A9 - Alarm clock (due in two weeks)==
 
 ## 9. Bluetooth
 

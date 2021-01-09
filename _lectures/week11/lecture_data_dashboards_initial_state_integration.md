@@ -76,13 +76,13 @@ title: Data Visualization and Dashboard with Initial State
 
 <img src="lecture_data_dashboards_initial_state_integration.assets/image-20200703180348874.png" alt="image-20200703180348874" style="width:500px;" />
 
-## Example 1: Send Single Data Point from Argon to ThingSpeak
+## Example 1: Send Single Data Point from Argon to Initial State
 
 **Particle integration settings**
 
 <img src="lecture_data_dashboards_initial_state_integration.assets/image-20200703160032339.png" alt="image-20200703160032339" style="width:600px;" />
 
-## Example 1: Send Single Data Point from Argon to ThingSpeak
+## Example 1: Send Single Data Point from Argon to Initial State
 
 **Particle integration settings**
 
@@ -92,7 +92,7 @@ URL: `https://groker.init.st/api/events`
 
 <img src="lecture_data_dashboards_initial_state_integration.assets/image-20200703180944077.png" alt="image-20200703180944077" style="width:500px;" />
 
-## Example 1: Send Single Data Point from Argon to ThingSpeak
+## Example 1: Send Single Data Point from Argon to Initial State
 
 **Particle integration settings**
 
