@@ -1,5 +1,5 @@
 ---
-week: 01
+week: 1
 number: 16
 category: assignments
 title: Social Issues in IoT / Smart Devices

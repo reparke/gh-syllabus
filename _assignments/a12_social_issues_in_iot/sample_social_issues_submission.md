@@ -11,15 +11,21 @@ show_in_list: false
 # Sample Submission for Social Issues Assignment
 
 Jubilation Lee, Scott Summers, Ororo Monroe
- ITP 341
- Social Issues in Tech Assignment
- Oct 14, 2048
+
+ITP 348
+
+Social Issues in Tech Assignment
+
+Oct 14, 2048
 
 **Article**
 
 Silicon Valley Courts Brand-Name Teachings, Raising Ethics Issues
+
 New York Times
+
 Oct 8, 2048
+
 Link: [https://www.nytimes.com/2017/09/02/technology/silicon-valley-teachers-tech.html](https://www.nytimes.com/2017/09/02/technology/silicon-valley-teachers-tech.html)
 
 **Summary**
