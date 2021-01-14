@@ -5,19 +5,19 @@ main:
     url: https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises
   - title: "Assignments"
     url: /assignments
+  - title: "Blackboard"
+    url: https://blackboard.usc.edu
+  - title: "Piazza"
+    url: https://piazza.com/usc/spring2021/itp348/home
+  - title: "Kit"
+    url: /kit
   - title: "Lectures"
     url: /lectures
   - title: "Resources"
     url: /resources
   - title: "Readings"
     url: /readings
-  - title: "Blackboard"
-    url: https://blackboard.usc.edu
   - title: "Syllabus"
     url: /itp348_syllabus
-  - title: "Kit"
-    url: /kit
-  - title: "Piazza"
-    url: https://piazza.com/usc/fall2020/itp348/home
   - title: "Feedback"
     url: https://parke.wufoo.com/forms/feedback-form/
