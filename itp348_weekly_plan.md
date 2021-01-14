@@ -11,7 +11,7 @@ toc_sticky: true
 ## 		Things to implement
 
 * [ ] recruit guest lecturers (x2)
-* [ ] wk 0: create social issue assignment
+* [x] wk 0: create social issue assignment
 * [x] wk 0: Create "behavioral norms"
 * [ ] wk1: record software tools for reference
 * [x] wk1: record c++ review and create bb quiz
@@ -93,11 +93,11 @@ toc_sticky: true
 
 ## General Feedback (Spring 2021)
 
-* Assignment 0 and 1 are given out week 1, day 1; due week 2, day 1; that is the pattern
-* Develop a way to post readings on website
-* Try to integrate lectures, readings, assignments all on one webpage under "weeks"
-* students like being show a small bit of using a sensor, and then extending it on their own
-* students like hands-on
+- [ ] Assignment 0 and 1 are given out week 1, day 1; due week 2, day 1; that is the pattern
+- [x] Develop a way to post readings on website
+- [x] Try to integrate lectures, readings, assignments all on one webpage under "weeks"
+- [ ] students like being show a small bit of using a sensor, and then extending it on their own
+- [ ] students like hands-on
 
   
 
