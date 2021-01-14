@@ -4,7 +4,7 @@ theme: itp
 
 week: 12
 category: lectures
-title: Heart Rate Sensor
+title: Heart Rate Sensor (MAX30101)
 ---
 
 <!-- headingDivider: 2 -->
@@ -17,9 +17,9 @@ title: Heart Rate Sensor
 
 ## Detecting Heart Rate
 
-<img src="lecture_smart_watch.assets/image-20200416155711370.png" alt="image-20200416155711370" style="width:500px" />
+<img src="lecture_heart_rate_sensor.assets/MAX30101.jpg" alt="image-20200416155711370" style="width:500px" />
 
-## MAX30105 Heart Rate / SpO2 Sensor
+## MAX30101 Heart Rate / SpO2 Sensor
 
 * Measure 
   * heart rate
@@ -131,3 +131,6 @@ long irValue = heartRateSensor.getIR();
 bool didBeatOccur = checkForBeat(irValue);
 ```
 
+## Credits
+
+- [Sparkfun](https://www.sparkfun.com/products/16474)

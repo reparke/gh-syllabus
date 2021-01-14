@@ -10,12 +10,16 @@ toc_sticky: true
 ---
 ## 		Things to implement
 
+* [ ] recruit guest lecturers (x2)
 * [ ] wk 0: create social issue assignment
 * [ ] wk 0: Create "behavioral norms"
 * [ ] wk1: record software tools for reference
 * [ ] wk1: record c++ review and create bb quiz
 * [ ] wk3: create latch slides
 * [ ] wk4: revise photoresistor slides / change questions
+* [ ] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
+* [ ] wk5: add API graphic illustration for webhook
+* [ ] wk5: revise lab and slides to show TMP36, not photoresistor
 * [ ] wk6: revise Blynk lab
 * [ ] wk7: create lecture / lab activities for FSM day 2
 * [ ] wk8: revise alarm clock assignment to use FSM **and** Blynk
@@ -25,6 +29,65 @@ toc_sticky: true
 * [x] account for wellness days in schedule
 * [x] account for extra two weeks in schedule
 * [x] replace IFTTT with Blynk
+
+**Videos and Wiring Diagrams Needed to Publish**
+
+- [x] Week 1
+- - [x] C++ syntax
+- [ ] Week 2
+- - [ ] PWM (omit questions from video and ask in class)
+  - [ ] Potentiometers
+- [ ] Week 3
+- - [ ] Buttons 
+  - [ ] Digital input (?)
+  - [ ] RGB LEDS
+- [ ] Week 4
+- - [ ] Multi-tasking
+  - [ ] Photoresistor
+  - [ ] Cloud Overview and Publish (perhaps only overview)
+- [ ] Week 5
+- - [ ] OLED
+  - [ ] TMP36
+  - [ ] Webhooks / APIs (Initial State can be live)
+- [ ] Week 6
+- - [ ] Blynk
+  - [ ] magnetic switch
+  - [ ] cloud subscribe
+
+- [x] Week 7
+  - [x] Switch / enum
+  - [x] State machines
+
+- [ ] Week 8
+- - [x] Sound
+	- [ ] Motors
+
+- [x] Week 9
+- - [x] Bluetooth
+  - [x] LiPo batteries
+  - [x] Ultrasonic sensor (in case we have time)
+
+- [x] Week 10
+  - [x] Ultrasonic sensor (again in case)
+
+- [ ] Week 11
+  - [x] OLED graphics
+  - [ ] JSON / APIs (may need to re-record)
+  - [x] JSON parsing
+  - [x] Retrieving data from APIs
+
+- [x] Week 12
+  - [x] Debouncing
+  - [x] Heart rate sensors
+
+- [x] Week 13
+  - [x] RFID
+
+- [ ] Week 14
+  - [ ] Accelerometer
+
+- [x] Week 15
+  - [x] PIR
 
 ## General Feedback (Spring 2021)
 
@@ -361,7 +424,7 @@ toc_sticky: true
 
 #### Lecture
 
-- Particle Cloud variables
+- Particle Cloud Publish
 
 #### Lab
 
@@ -411,15 +474,15 @@ toc_sticky: true
 
 #### Lecture
 
-- Particle Cloud functions
+- APIs and webhooks
 
-#### Lab
+#### Guided Activity
 
-- Connect RGB LED and have students remotely control it
+- Create InitialState account
+- Create webhook in Particle
+- Send TMP36 value`Particle.publish` to InitialState
 
-#### Lecture
-
-* Consider covering `switch` to handle cloud function calls
+- Use Initial state to send temperature data
 
 ### Day 2
 
@@ -446,7 +509,7 @@ toc_sticky: true
 - Given out start of current week: A5 - Reaction Timer
 - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
-## 6. Particle Cloud Publish and Subscribe; Blynk
+## 6. Particle Cloud Subscribe; Blynk
 
 ### Reading
 
@@ -464,19 +527,15 @@ toc_sticky: true
   - https://5cf99969afabc800087c618c.onlosant.com/photon_temperature
   - https://iot.app.initialstate.com/#/tiles/bkt_13hhui7kc4h38hz
 - Magnetic switch
-- Particle Cloud: Publish
-
-#### Lab
-
-- Wire switch and RGB LED
-- Publish variable state (door open or closed)
-- Publish switch event in console (this won't take very long)
-
-#### Lecture
 
 * Particle Cloud: Subscribe
 
-#### Lab
+#### Lab part 1
+
+- Wire switch and RGB LED
+- Publish switch event in console (this won't take very long)
+
+#### Lab part 2
 
 * Create function to change LED colors: white switch is closed, red switch is open
 * subscribe to variable -- work in pairs 
@@ -568,6 +627,7 @@ toc_sticky: true
 #### Lab
 
 - Continued with stoplight example
+- ==**Idea: create new guided FSM students build in pairs; discuss parameters ahead of time and states**==
 
 ### Feedback
 
@@ -746,27 +806,12 @@ toc_sticky: true
 
 #### Lecture
 
-- API and JSON overview
-- Show students a few public APIs
-- Dashboard and Initial State integration (single values)
-
-#### Guided Activity
-
-* Create InitialState account
-
-* Create webhook in Particle
-
-- Send photoresistor value`Particle.publish` to InitialState
-
-#### Lecture
-
+- JSON overview
 - InitialState integration (multiple values)
 
 #### Lab
 
-* Continue from before
-
-- Send photoresistor value and light level threshold`Particle.publish` to InitialState
+* Send photoresistor value and light level threshold`Particle.publish` to InitialState
 
 #### Lab
 
@@ -980,6 +1025,20 @@ toc_sticky: true
 ---
 
 # **Use when extra time**
+
+## Week 5
+
+#### Lecture
+
+- Particle Cloud functions
+
+#### Lab
+
+- Connect RGB LED and have students remotely control it
+
+#### Lecture
+
+* Consider covering `switch` to handle cloud function calls
 
 ## Week 5 - Photoresistor
 

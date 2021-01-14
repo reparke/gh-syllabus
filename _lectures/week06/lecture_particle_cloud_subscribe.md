@@ -10,7 +10,7 @@ title: Cloud Communication - Publish and Subscribe
 <!-- headingDivider: 2 -->
 
 # Cloud Communication
-<img src="lecture_particle_cloud_publish_subscribe.assets/iot_cloud.jpg" alt="iot_cloud" style="width:800px;" />
+<img src="lecture_particle_cloud_subscribe.assets/iot_cloud.jpg" alt="iot_cloud" style="width:800px;" />
 
 ## Review: Particle Cloud Features
 
@@ -30,56 +30,13 @@ title: Cloud Communication - Publish and Subscribe
 
 ## Review: Key operations
 
-* **Accessing data (cloud variables)**
-* Control device (cloud functions)
-* Publishing (events part 1)
-* Subscribing (events part 2)
-
-## Review: Cloud Variable Example
-
-```c++
-double f;			//declare global variable
-String lightValue;	//declare global variable
-
-void setup() {
-  Particle.variable("lightValue", photoSensor);	//register variable
-  Particle.variable("tempFahr", f);				//register variable
-```
-
-## Review: Cloud Variable Example
-
-<img src="../week05/lecture_particle_cloud_functions.assets/app_variables.jpg" alt="1569447605240" style="height:700px;" />
-
-## Review: Key operations
-
-* Accessing data (cloud variables)
-* **Control device (cloud functions)**
-* Publishing (events part 1)
-* Subscribing (events part 2)
-
-## Review: Cloud Variable Example
-
-```c++
-int ledStatus(String command) {...}	//actual C++ function
-    
-void setup() {
-  Particle.function("ledStatus", ledStatus); //register func
-```
-
-
-
-## Review: Cloud Variable Example
-
-<img src="lecture_particle_cloud_publish_subscribe.assets/app_functions.jpg" alt="1569447605240" style="width:800px;" />
-
-## Key operations
-
-* Accessing data (cloud variables)
-* Control device (cloud functions)
 * **Publishing (events part 1)**
 * Subscribing (events part 2)
 
-## Events Part 1: Publishing Events
+* Accessing data (cloud variables)
+* Control device (cloud functions)
+
+## Review: Publishing Events
 
 * Events are messages sent from an Argon to the cloud **as often as you choose**
 * Events can private (viewable by only by you and devices in your account) 
@@ -89,7 +46,7 @@ void setup() {
 
 ## Events in Particle Console
 
-<img src="lecture_particle_cloud_publish_subscribe.assets/1569446342143.png" alt="1569446342143" style="width:800px;" />
+<img src="lecture_particle_cloud_subscribe.assets/1569446342143.png" alt="1569446342143" style="width:800px;" />
 
 
 
@@ -109,25 +66,12 @@ Particle.publish("tempFahr", String(85.9), PRIVATE);
 * Names and values must always be strings
 * Should only publish 1 event / sec (or burst of 4 events in 1 sec)
 
-## Lab
-
-* Wire diagram with switch and RGB LED
-* Create cloud variable state (make `isDoorOpen` variable)
-  * What kind of variable should this be?
-* Publish cloud event with state if `isDoorOpen`
-  * Event name should be 
-    `ITP348/Door/<<YOUR_INITIALS>>`
-
-## Lab
-
-<img src="lecture_particle_cloud_publish_subscribe.assets/switch-magnetic-door_and_rgb_led_bb-1594972874666.png" style="width:600px;" />
-
 ##  Key operations
 
-* Accessing data (cloud variables)
-* Control device (cloud functions)
 * Publishing (events part 1)
 * **Subscribing (events part 2)**
+* Accessing data (cloud variables)
+* Control device (cloud functions)
 
 ## Events Part 2: Subscribing to Events 
 
@@ -205,16 +149,27 @@ void setup() {
 * `MY_DEVICES` subscribes to PRIVATE events
 * `ALL_DEVICES` subscribes to PUBLIC events
 
-## Lab
+## Lab Goal
 
 * Working in pairs, have an "open door" on one student's device
   change the LED color on the other student's device
-  * Create event handler
-  * Register subscriber for the *other* student's event
-    `ITP348/Door/<<THEIR_INITIALS>>`
-* LED colors
-  * Red means "door is open"
-  * White means "door is closed"
+
+## Lab Part 1:
+
+* Publish **public** cloud event with state `doorOpen` or `doorClosed` when switch is opened
+* Event name should be 
+  `ITP348/Door/<<YOUR_INITIALS>>`
+
+<img src="lecture_particle_cloud_subscribe.assets/switch-magnetic-door_and_rgb_led_bb-1594972874666.png" style="width:600px;" />
+
+## Lab Part 2:
+
+* Create event handler
+* Register subscriber for the *other* student's event
+  `ITP348/Door/<<THEIR_INITIALS>>`
+
+* Red means "door is open"
+* White means "door is closed"
 
 ## Documentation
 

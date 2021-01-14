@@ -6,21 +6,13 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* Create [Weather Stack](https://weatherstack.com/) account
+* Watch **Ultrasonic Distance Sensor**
+  {% include video id="vyQC0CpwKmo" provider="youtube" %}
 
-* **For Tuesday**
+* Watch **OLED Graphics**
+  {% include video id="Csic8vEiIDY" provider="youtube" %}
 
-  * Watch **JSON Parsing**
-    {% include video id="IiCvB_-_DWQ" provider="youtube" %}
-  * Watch **Retrieving Data from APIs**
-    {% include video id="frekkX8kha4" provider="youtube" %}
+* Build 
 
+  ![oled_ultrasonic_bb](week09.assets/oled_ultrasonic_bb.png)
 
-
-* **For Thursday**
-
-  * Watch **Lithium Ion Batteries**
-    {% include video id="_XG_fL9DO78" provider="youtube" %}
-* Build
-  * Have completed car chassis 
-  

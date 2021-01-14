@@ -246,12 +246,12 @@ submission that they intend to use a grace day.
 | Week 1          | Intro to Internet of Things (IoT), electricity, microcontrollers, Ohm’s Law, LEDs | Posted online | A0 and A1                                                    |
 | Week 2          | Analog to digital conversion, pulse width modulation, serial | Posted online | A2                                                           |
 | Week 3          | Digital input, buttons, RGB LEDs                | Posted online | A3                                                           |
-| Week 4          | Voltage dividers, photoresistors, multitasking, cloud variables | Posted online | A4                                                           |
-| Week 5          | Temperature sensors, SPI communication, OLED, cloud functions | Posted online | A5                                                           |
-| Week 6          | Cloud communication (publish and subscribe), mobile app integration | Posted online | A6                                                           |
+| Week 4          | Voltage dividers, photoresistors, multitasking, cloud publishing | Posted online | A4                                                           |
+| Week 5          | Temperature sensors, SPI communication, OLED, webhooks, dashboards | Posted online | A5                                                           |
+| Week 6          | Cloud subscription, mobile app integration | Posted online | A6                                                           |
 | Week 7          | Finite state machines                                 | Posted online | A7                                                           |
-| Week 8          | Bluetooth, remote controlled car                             | Posted online | A8 (due in one week)<br />A9 (due in two weeks) |
-| Week 9          | DC motors, servos          | Posted online | Continue working on A9                             |
+| Week 8          | DC motors, servos                             | Posted online | A8 (due in one week)<br />A9 (due in two weeks) |
+| Week 9          | Bluetooth, remote controlled car          | Posted online | Continue working on A9                             |
 | Week 10         | Ultrasonic sensors, OLED graphics | Posted online | A10<br />A11                                 |
 | Week 11         | JSON, APIs, dashboards | Posted online | Project proposal |
 | Week 12         | Wearables, heart rate sensors, debouncing | Posted online | *(work on project)*                                          |

@@ -6,22 +6,23 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* Create [Initial State](https://www.initialstate.com/) account
+* For **Tuesday**
+  * Install Bluetooth apps on your phone
+    - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
+    - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
+  * Watch **Bluetooth** Video
 
-* **For Tuesday**
+    * {% include video id="a56EeVg3z_s" provider="youtube" %}
+    * Watch **Lithium Ion Batteries**
+      {% include video id="_XG_fL9DO78" provider="youtube" %}
+  * Bluetooth Reference
+    * [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
+    * [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
 
-  * Watch **Ultrasonic Distance Sensor**
-    {% include video id="vyQC0CpwKmo" provider="youtube" %}
-  * Build 
 
-  ![oled_ultrasonic_bb](week09.assets/oled_ultrasonic_bb.png)
 
 * **For Thursday**
 
-  * Watch **OLED Graphics**
-    {% include video id="Csic8vEiIDY" provider="youtube" %}
-  * Watch **JSON and APIs**
-    {% include video id="3nSaiAQluus" provider="youtube" %}
-* Build
+  * Watch **Ultrasonic Distance Sensor**
+    {% include video id="vyQC0CpwKmo" provider="youtube" %}
   
-  ![photoresistor_and_fixed_resistor_bb](week09.assets/photoresistor_and_fixed_resistor_bb.png)

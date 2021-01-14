@@ -6,4 +6,4 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* Create an [IFTTT account](https://ifttt.com/) 
+* Create an [Blynk account](https://blynk.io/) 

@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 5
+week: 16
 category: lectures
 title: Cloud Communication - Calling Functions
 ---
@@ -32,34 +32,12 @@ title: Cloud Communication - Calling Functions
 * Run analytics
 * Manage device with publicly-accessible web/mobile 
 
-## Review: Key operations in Particle Cloud
-
-* **Accessing data (cloud variables)**
-* Control device (cloud functions)
-* Publishing (events part 1)
-* Subscribing (events part 2)
-
-## Review: Cloud Variable Example
-
-```c++
-double f;			//declare global variable
-String lightValue;	//declare global variable
-
-void setup() {
-  Particle.variable("lightValue", photoSensor);	//register variable
-  Particle.variable("tempFahr", f);				//register variable
-```
-
-## Review: Accessing Cloud Variables - App
-
-<img src="lecture_particle_cloud_functions.assets/app_variables.jpg" alt="1569447605240" style="height:700px;" />
-
 ## Key operations in Particle Cloud
 
-* Accessing data (cloud variables)
-* **Control device (cloud functions)**
 * Publishing (events part 1)
 * Subscribing (events part 2)
+* Accessing data (cloud variables)
+* **Control device (cloud functions)**
 
 ## Cloud Functions
 

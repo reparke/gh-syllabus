@@ -9,8 +9,6 @@ title: Pre-Lecture Activities
 * **For Thursday**
   * Watch **RFID Sensor**
     {% include video id="GtgVViZe1sM" provider="youtube" %}
-  * Watch **PIR Sensor**
-    {% include video id="zyXEYmRyDBA" provider="youtube" %}
   
   - Build
   
