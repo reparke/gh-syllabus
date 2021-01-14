@@ -1,6 +1,6 @@
 ---
 week: 1
-number: 16
+number: 12
 category: assignments
 title: Social Issues in IoT / Smart Devices
 date_due: rolling  (students will signup a different date throughout the semester)
