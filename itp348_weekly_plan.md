@@ -12,12 +12,14 @@ toc_sticky: true
 
 * [ ] recruit guest lecturers (x2)
 * [ ] wk 0: create social issue assignment
-* [ ] wk 0: Create "behavioral norms"
+* [x] wk 0: Create "behavioral norms"
 * [ ] wk1: record software tools for reference
-* [ ] wk1: record c++ review and create bb quiz
+* [x] wk1: record c++ review and create bb quiz
 * [ ] wk3: create latch slides
 * [ ] wk4: revise photoresistor slides / change questions
 * [ ] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
+* [ ] wk 5: announce quiz for following week
+* [ ] wk 6: create Bb quiz
 * [ ] wk5: add API graphic illustration for webhook
 * [ ] wk5: revise lab and slides to show TMP36, not photoresistor
 * [ ] wk6: revise Blynk lab
