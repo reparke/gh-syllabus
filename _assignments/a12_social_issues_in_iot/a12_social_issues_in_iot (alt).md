@@ -5,7 +5,9 @@ category: assignments
 title: Social Issues in IoT / Smart Devices
 date_due: rolling: each student will signup a different date throughout the semester
 show_in_list: false
+
 ---
+
 ==This version includes in extra credit for class presentation==
 
 Social Issues in IoT / Smart Devices

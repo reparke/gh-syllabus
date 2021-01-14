@@ -4,6 +4,7 @@ number: 16
 category: assignments
 title: Social Issues in IoT / Smart Devices
 date_due: rolling: students will signup a different date throughout the semester
+
 ---
 Social Issues in IoT / Smart Devices
 ============================
@@ -47,6 +48,10 @@ Students will work in pairs and sign up for a time slot throughout the semester 
 - Write at least three questions for discussion
   - Questions should not be simple yes / no questions, but should be open-ended and lead to conversations
   - For some tips to writing questions, see [https://teachingcommons.stanford.edu/resources/teaching/student-teacher-communication/designing-effective-discussion-questions](https://teachingcommons.stanford.edu/resources/teaching/student-teacher-communication/designing-effective-discussion-questions)
+
+**Sample Submission**
+
+- Here is an [example](sample_social_issues_submission) of Piazza submission
 
 ## Deliverables
 

@@ -47,14 +47,15 @@ your own design and modifications
 
 **Requirements**
 
--   General game setup
+-   Create a Fritzing breadboard prototype layout of your design
 
+-   Once you’re satisfied with the design, build the device and create firmware
+-   General game setup
     -   Two players each control two push buttons
 
     -   Each button represents either “red” or “blue”
 
     -   Between the two rows of buttons is a RGB LED
-
 -   Algorithm for each round
 
     -   RGB LED will flash white three times. Use a delay in between each flash
@@ -73,10 +74,6 @@ your own design and modifications
         serial monitor.
 
     -   Press reset on the argon to reset the game
-
--   Create a Fritzing breadboard prototype layout of your design
-
--   Once you’re satisfied with the design, build the device and create firmware
 
 **Required naming convention** (replace \# with the current assignment number)
 

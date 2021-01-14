@@ -21,11 +21,7 @@ Goals
 
 **Overview**
 
-This assignment is to create a physical art sculpture using the Argon and LEDs.
-The specifics of what the sculpture looks like or what it does is entirely up to
-you. You can put LEDs on a box, on a card, inside straws or ping-pongs, etc. One
-suggestion is that you can use “extending” jumper wires (header-receptacle) to have
-the LEDs away from the breadboard. If you want to use these, ask the instructor.
+This assignment is to create a physical art sculpture using the Argon and LEDs. The specifics of what the sculpture looks like or what it does is entirely up to you. You can put LEDs on a box, on a card, inside straws or ping-pongs, etc. One suggestion is that you can use “extending” jumper wires (header-receptacle) to have the LEDs away from the breadboard. If you want to use these, ask the instructor.
 
 Some example are below.
 
@@ -76,11 +72,10 @@ Deliverables
 *[Submit on Blackboard](https://blackboard.usc.edu)*
 
 
-1.  A compressed file containing your project. Follow the guidelines for full
-    credit.
-
-    *Here are the instructions for submission*
-
+1.  A compressed file containing your project. Follow the guidelines for full credit.
+    
+*Here are the instructions for submission*
+    
 2.  Navigate to your project folder.
 
 3.  Include the *entire* folder in a zip file
