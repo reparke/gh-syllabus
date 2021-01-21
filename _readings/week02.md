@@ -7,6 +7,18 @@ title: Pre-Lecture Activities
 ## Week {{page.week}}
 
 * [https://learn.sparkfun.com/tutorials/analog-vs-digital/all](https://learn.sparkfun.com/tutorials/analog-vs-digital/all)
-* [https://learn.sparkfun.com/tutorials/pulse-width-modulation/all](https://learn.sparkfun.com/tutorials/pulse-width-modulation/all)
-* [https://www.youtube.com/watch?v=GQLED3gmONg](https://www.youtube.com/watch?v=GQLED3gmONg)
 
+* Watch **Analog vs. Digital** 
+  {% include video id="rEDHXbWXGl8" provider="youtube" %}
+* Watch **Analog Input with Potentiometers**
+  {% include video id="lopRGUS7UEk" provider="youtube" %}
+
+
+
+### Optional
+
+* Watch **For Loops in C++**
+  {% include video id="2ahS1PG-Ip4" provider="youtube" %}
+
+* Watch **Pulse Width Modulation** (we will cover this in class)
+  {% include video id="GQLED3gmONg" provider="youtube" %}

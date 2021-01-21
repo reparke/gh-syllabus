@@ -34,12 +34,7 @@ title: Course Introduction
 - For grading issues, contact the TA first
 - For general questions, you can contact either of us
 
-## New class!
-
-- Fun
-- ...also a little bit like the Wild West
-
-## New class!
+## New(ish) class!
 
 - Your feedback is really important throughout the semester
 - I want to know 

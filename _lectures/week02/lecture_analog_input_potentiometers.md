@@ -72,12 +72,13 @@ title: Analog Input with Potentiometers
 * As the knob moves, the wiper divides the resistor, and the ratio of resistance between ***Vin-and-Wiper*** and ***Wiper-and-Gnd*** varies
 * This is called a **variable voltage divider** *(more on this later)* 
 
+
 ## Question
 
 <img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:400px" />
 
 * With a 10K Ohm pot, if the wiper is exactly halfway, what is the resistance between **Vout** and **Gnd**?
-* If the wiper is all the way to the top, what is the resistance between **Vout** and **Gnd**?
+
 <!-- middle: 5K Ohms; 
 top: 10K ohms because it is the R between Vout and Gnd
 -->
@@ -101,6 +102,14 @@ top: 10K ohms because it is the R between Vout and Gnd
 bottom: 0v because Vout and Gnd are directly connected;
 top: 3.3v because vout is connected to 3.3v, which is being dropped over 10K resisor;-->
 
+## Voltage Divider
+
+* As those resistances changes, so does the **voltage** difference between ***Vin-and-Vout*** and ***Vout-and-Gnd***
+* This is known as a **voltage divider**
+  ![bg right:50% fit](lecture_analog_input_potentiometers.assets/photoresistor_wiper_equals_vin.png)  
+  ![bg fit](lecture_analog_input_potentiometers.assets/photoresistor_wiper_equals_zero.png)
+  <!-- 
+  <img src="lecture_photoresistor.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:350px" /> -->
 
 
 ## Setting up Analog Input

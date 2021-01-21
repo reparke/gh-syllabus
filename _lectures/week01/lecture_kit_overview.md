@@ -21,6 +21,7 @@ title: Kit Overview
 - The kit for the course is **required** and must be purchase from the bookstore
 - This includes all the most of the components we will discuss during the semester
 - Additional parts will be provided by instructor
+- [Kit parts and pictures](https://reparke.github.io/ITP348-Physical-Computing/kit)
 
 ## Student Responsibilities
 
