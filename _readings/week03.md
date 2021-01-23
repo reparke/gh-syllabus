@@ -8,11 +8,9 @@ title: Pre-Lecture Activities
 ## Week {{page.week}}
 
 * Watch **Push Buttons**
-  {% include video id=" " provider="youtube" %}
+  {% include video id="-sXQDeUBzQw" provider="youtube" %}
 * Watch **RGB LEDs**
-  {% include video id=" " provider="youtube" %}
-
-
+  {% include video id="Fwwn9kwbOdc" provider="youtube" %}
 
 
 
