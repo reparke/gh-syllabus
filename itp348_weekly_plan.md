@@ -36,9 +36,9 @@ toc_sticky: true
 
 - [x] Week 1
 - - [x] C++ syntax
-- [ ] Week 2
+- [x] Week 2
 - - [ ] PWM (omit questions from video and ask in class)
-  - [ ] Potentiometers
+  - [x] Potentiometers
 - [ ] Week 3
 - - [ ] Buttons 
   - [ ] Digital input (?)
@@ -166,20 +166,20 @@ toc_sticky: true
 
 - turn on LED
 
-#### Lecture (if time)
+#### Lecture (Skipped in Spring 2021)
 
 - Look at LED datasheet; calculate ideal resistance for LED
+
+#### Activity (on ground)
+
+- Day 2 "making project" was fun; ping pong balls and glue guns were a hit
 
 #### Feedback
 
 - Most students were familiar with electricity principles, units (kilo, milli) so the electricity presentation very simple
-- Didn't get to finish Electricity lecture or get to lab; should have gone faster
+- Online: skipped making project and did LED blink together
 
-#### Feedback
-
-- Day 2 "making project" was fun; ping pong balls and glue guns were a hit
-- Online Fall 2020: skipped making project and did LED blink together
-- Felt too rushed in online environment; some students still didn't have kits with LEDs and we had really discussed the IDE / setup
+- Skipped all coding completely since students still didn't have kits with LEDs. Instead we assembled our Argons + antennas and wired an LED to 3.3v and ground
 
 ### Assignment
 
