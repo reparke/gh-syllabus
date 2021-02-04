@@ -45,7 +45,27 @@ title: APIs and Webhooks
 
 * Identify API you want to use (make account if necessary)
 * Create a Particle **webhook** that interacts with the API
-* Note: this describe **sending data only**. We will discuss later in the semster how to receive data
+  * A **webhook** is trigger we create at the Particle Cloud
+  * When we send data to a webhook, it causes the Particle Cloud to perform an action we defined
+* Note: this describe **sending data only**. We will discuss later in the semester how to receive data
+
+## 
+
+<img src="api_send_only_visualization/Slide1.PNG" alt="Slide1" style="width:700px" />
+
+## 
+
+<img src="lecture_api_webhook.assets/Slide2.PNG" alt="Slide2" style="width:700px" />
+
+## 
+
+<img src="lecture_api_webhook.assets/Slide3.PNG" alt="Slide3" style="width:700px" />
+
+## Creating a Webhook
+
+Go to [Particle Cloud Console Integrations](https://console.particle.io/integrations) > Webhook
+
+<img src="lecture_api_webhook.assets/image-20210201184535076.png" alt="image-20210201184535076" style="width:700px" />
 
 ## Credit
 

@@ -74,74 +74,25 @@ title: Data Visualization and Dashboard with Initial State (Single Values)
 
 **Initial State Settings**
 
-<img src="lecture_data_dashboards_initial_state_single_values.assets/image-20200703180348874.png" alt="image-20200703180348874" style="width:500px;" />
+![img](lecture_data_dashboards_initial_state_single_values.assets/SNAGHTMLf87d3e3.PNG)
+
+
 
 ## Example 1: Send Single Data Point from Argon to Initial State
 
 **Particle integration settings**
 
-<img src="lecture_data_dashboards_initial_state_single_values.assets/image-20200703160032339.png" alt="image-20200703160032339" style="width:600px;" />
+![image-20210201152825606](lecture_data_dashboards_initial_state_single_values.assets/image-20210201152825606.png)
 
 ## Example 1: Send Single Data Point from Argon to Initial State
 
 **Particle integration settings**
 
-JSON Data: `{{{PARTICLE_EVENT_VALUE}}}`
+`YOUR_CUSTOM_DATA_LABEL `     >      `{{{PARTICLE_EVENT_VALUE}}}`
 
-URL: `https://groker.init.st/api/events`
-
-<img src="lecture_data_dashboards_initial_state_single_values.assets/image-20200703180944077.png" alt="image-20200703180944077" style="width:500px;" />
-
-## Example 1: Send Single Data Point from Argon to Initial State
-
-**Particle integration settings**
-
-<img src="lecture_data_dashboards_initial_state_single_values.assets/SNAGHTML22743719.PNG" alt="img" style="width:500px;" />
+![img](lecture_data_dashboards_initial_state_single_values.assets/SNAGHTMLf92f8fa.PNG)
 
 
-
-## Example 1: Send Single Data Point from Argon to Initial State
-
-**Particle integration setting: HTTP Headers**
-
-`Accept-Version`	>	`~0`      ***note: this is a tilde ~, NOT a hyphen -***
-
-`X-IS-AccessKey`	>	*<<USE YOUR OWN API KEY>>>*
-
-`X-IS-BucketKey`	>	*<<USE YOUR OWN BUCKET KEY>>>*
-
-
-
-
-## Example 1: Send Single Data Point from Argon to Initial State
-
-* Initial State expects data to be entered in JSON format
-
-```json
-{"key": "temp", "value": 32}
-```
-
-*Where `temp` is the your chosen data label, and `32` is the current value*
-
-* Each time we send data to Initial State, we sent one single data point
-
-*We will cover JSON in-depth next week. For now, we will use this format with JSON format with `{}` to send data*
-
-## Recall: Escape Characters
-
-* Initial State value contains quotation marks `"` in the value
-
-```json
-{"key": "temp", "value": 32}
-```
-
-* Since `"` marks the beginning and end of `String`, we need to tell the Argon specifically when we want to include `"` in the value
-* We use the **escape character ** `\"` to tell the Argon to ignore the `"` and consider it as part of the `String`
-* Thus we have our variable would become
-
-```json
-String msg = "{\"key\": \"temp\", \"value\": 32}";
-```
 
 
 
@@ -155,24 +106,22 @@ double temp;
 void loop() {
   temp = 89;		//just example; temp should come from sensor
     
-  String data = "{ \"key\":\"temperature\","   
-                "\"value\":" + String(temp)+"}";
   // Trigger the integration
-  Particle.publish("inital_state_json", String(temp), PRIVATE);
+  Particle.publish("inital_state_single", String(temp), PRIVATE);
   delay(60000);	//use delay or millis to avoid publishing too frequently
 }
 ```
 
 
 
-## Lab - Send Photoresistor Value to Initial State
+## Lab - Send Temperature Value to Initial State
 
-* Connect photoresistor to Argon
-* Read photoresistor value and send to InitialState
+* Connect TMP 36 to Argon
+* Read temperature value and send to Initial State
 
-## Lab - Send Photoresistor Value to Initial State
+## Lab - Send Temperature Value to Initial State
 
-<img src="lecture_data_dashboards_initial_state_single_values.assets/photoresistor_and_fixed_resistor_bb.png" style="width:500px;" />
+<img src="lecture_data_dashboards_initial_state_single_values.assets/tmp36_bb.png" style="width:500px;" />
 
 
 

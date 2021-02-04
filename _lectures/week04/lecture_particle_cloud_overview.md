@@ -4,13 +4,13 @@ theme: itp
 
 week: 4
 category: lectures
-title: Cloud Communication - Accessing Variables
+title: Cloud Communication - Overview
 ---
 
 <!-- headingDivider: 2 -->
 
 # Cloud Communication
-<img src="lecture_particle_cloud_variables.assets/iot_cloud.jpg" alt="iot_cloud" style="width:800px;" />
+<img src="lecture_particle_cloud_overview.assets/iot_cloud.jpg" alt="iot_cloud" style="width:800px;" />
 
 ## Review: What is the Cloud?
 
@@ -75,10 +75,10 @@ title: Cloud Communication - Accessing Variables
 
 ## Key operations in Particle Cloud
 
-* Accessing data (cloud variables)
-* Control device (cloud functions)
 * Publishing (events part 1)
 * Subscribing (events part 2)
+* Accessing data (cloud variables)
+* Control device (cloud functions)
 
 
 

@@ -15,13 +15,13 @@ toc_sticky: true
 * [x] wk 0: Create "behavioral norms"
 * [ ] wk1: record software tools for reference
 * [x] wk1: record c++ review and create bb quiz
-* [ ] wk3: create latch slides
-* [ ] wk4: revise photoresistor slides / change questions
-* [ ] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
+* [x] wk3: create latch slides
+* [x] wk4: revise photoresistor slides / change questions
+* [x] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
 * [ ] wk 5: announce quiz for following week
 * [ ] wk 6: create Bb quiz
-* [ ] wk5: add API graphic illustration for webhook
-* [ ] wk5: revise lab and slides to show TMP36, not photoresistor
+* [x] wk5: add API graphic illustration for webhook
+* [x] wk5: revise lab and slides to show TMP36, not photoresistor
 * [ ] wk6: revise Blynk lab
 * [ ] wk7: create lecture / lab activities for FSM day 2
 * [ ] wk8: revise alarm clock assignment to use FSM **and** Blynk
@@ -32,21 +32,23 @@ toc_sticky: true
 * [x] account for extra two weeks in schedule
 * [x] replace IFTTT with Blynk
 
-**Videos and Wiring Diagrams Needed to Publish**
+## **Videos and Wiring Diagrams Needed to Publish**
 
 - [x] Week 1
 - - [x] C++ syntax
 - [x] Week 2
-- - [ ] PWM (omit questions from video and ask in class)
+- - [ ] PWM (skip and leave for class)
+  - [x] Analog input
   - [x] Potentiometers
-- [ ] Week 3
-- - [ ] Buttons 
-  - [ ] Digital input (?)
-  - [ ] RGB LEDS
+- [x] Week 3
+- - [x] Buttons 
+  - [x] Digital input (?)
+  - [x] RGB LEDS
 - [ ] Week 4
 - - [ ] Multi-tasking
-  - [ ] Photoresistor
-  - [ ] Cloud Overview and Publish (perhaps only overview)
+  - [ ] Photoresistor (skip since there is a handout)
+  - [x] Cloud Overview 
+  - [ ] Publish (skip)
 - [ ] Week 5
 - - [ ] OLED
   - [ ] TMP36
@@ -216,8 +218,8 @@ toc_sticky: true
 
 #### Lecture
 
-- Analog vs. digital
-- Pulse width modulation, PWM pins, analogWrite 
+- Analog vs. digital (video)
+- Pulse width modulation (lecture, PWM pins, analogWrite 
 
 #### Lab
 
@@ -230,7 +232,7 @@ toc_sticky: true
 
 #### Lecture
 
-* C++ `for` loops
+* C++ `for` loops (video)
 
 #### Feedback
 
@@ -273,7 +275,7 @@ toc_sticky: true
 
 #### Feedback
 
-- 
+- didn't have time for pot to control LED with PWM
 
 #### Assignment
 
@@ -308,8 +310,8 @@ toc_sticky: true
 
 #### Lecture
 
-- Digital Input
-- Push buttons: component, schematic, pull-up resistors
+- Digital Input (video)
+- Push buttons: component, schematic, pull-up resistors (video)
 
 #### Guided activity
 
@@ -333,8 +335,7 @@ toc_sticky: true
 
 #### Lecture
 
-- Latching button **(==need to make slides==)**
-- If no slides, draw picture of square wave
+- No slides for latch. Instead draw pictures with square wave
 
 #### Lecture (==if time==)
 
@@ -413,8 +414,7 @@ toc_sticky: true
 
 #### Lecture
 
-* Photoresistor (**==concern: breakout group questions ask students to measure voltage but they haven't learned that yet; could they just display analogRead values?==)**
-* Revise questions
+* Photoresistor (**==hopefully we will have had time for multimeters in week 3==)**
 
 #### Lab
 
@@ -449,11 +449,8 @@ toc_sticky: true
 
 #### Feedback
 
-- went over multimeters for resistors (didn't get to voltage)
-- particle.io was down
 - students seemed VERY confused about millis() and delay
 
-  
 
 
 ### Assignment

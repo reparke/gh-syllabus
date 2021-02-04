@@ -31,9 +31,9 @@ title: Photoresistors
 
 ## Part 1: Understanding a photoresistor 
 
-1. A photoresistor is a device whose resistance varies with the amount of light present. Which input function will we use? `analogRead` or `digitalRead`? __
+1. A photoresistor is a device whose resistance varies with the amount of light present. Which input function will we use for reading? `analogRead` or `digitalRead`? __
 
-2. Based on you answer to #1, what is the range of values the argon will read when using the photoresistor.
+2. Based on you answer to #1, what is the range of values the argon will see when reading the input from photoresistor.
 
    * What is the maximum value the argon will read?  __ <!-- 4095 -->
    * What is the minimum value the argon will read?  __ <!-- 0 -->

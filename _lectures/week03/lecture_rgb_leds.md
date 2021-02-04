@@ -97,7 +97,20 @@ title: RGB LEDs
 * R + G + B **≠** W
 * Due to variations in manufacturing and resistor tolerances
 
-## Lab
+## Lab 1
+
+<img src="lecture_rgb_leds.assets/image-20210204155745432.png" alt="image-20210204155745432" style="width:500px;" />
+
+## Lab steps
+
+
+1. Wire an RGB LED 
+2. When switch is to one direction, display your favorite color
+3. When switch is other direction, display a random color
+4. Rewrite sketch using `displayColor(r, g, b)` and `displayRandomColor()`
+5. Import `rgb-controls` library to animate colors
+
+## Lab 2
 
 <img src="lecture_rgb_leds.assets/rgb_led_switch_bb.png" alt="rgb_led_switch_bb" style="width:500px;" />
 
