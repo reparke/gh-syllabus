@@ -46,7 +46,7 @@ toc_sticky: true
   - [x] RGB LEDS
 - [ ] Week 4
 - - [ ] Multi-tasking
-  - [ ] Photoresistor (skip since there is a handout)
+  - [x] Photoresistor
   - [x] Cloud Overview 
   - [ ] Publish (skip)
 - [ ] Week 5
@@ -398,9 +398,9 @@ toc_sticky: true
 
 ### Feedback 
 
-- overall worked well but over zoom, we didn't have time for libraries
+- overall worked well but over zoom, we didn't have time for **libraries or functions or switch or multimeters**
 
-## 4. Multitasking, photoresistors
+## 4. Photoresistors, Multitasking
 
 ### Reading
 
@@ -408,13 +408,15 @@ toc_sticky: true
 
 ### Day 1
 
-#### Interactive breakout
+#### 2021 Spring Idea
 
-* Photoresistor (work in groups)
+* modify photoresistor lab to remove handout exploration, and make it a group lab that also reviews some elements from prior weeks
+  * buttons, RGB LEDs, LEDs, potentiometers / ADC, PWM
+* still include setting threshold
 
 #### Lecture
 
-* Photoresistor (**==hopefully we will have had time for multimeters in week 3==)**
+* Photoresistor (video)
 
 #### Lab
 
@@ -458,7 +460,7 @@ toc_sticky: true
 - Due start of current week: A3 - Cylon light 
 - Given out start of current week: A4 - Electronic dice
 
-## 5. TMP36, Cloud Function, OLED
+## 5. TMP36, OLED
 
 ### Day 1
 

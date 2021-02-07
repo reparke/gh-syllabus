@@ -11,8 +11,6 @@ title: Photoresistors
 <!-- headingDivider: 2 -->
 
 # Measuring Light with Photoresistors
-### ITP 348 - Introduction to Physical Computing
-
 ![bg opacity:.85 left:50%](lecture_photoresistor.assets/09088-02-L.jpg)
 
 
@@ -22,53 +20,48 @@ title: Photoresistors
 * Implement a device using photoresistor
 * Calibrate photoresistor with appropriate values in firmware
 
+## Photoresistors
 
-## Part 1: Understanding a photoresistor 
+* Measures light levels
+* Contains a photosensitive **variable resistor**
+* **Brighter light --> less resistance**
+* Also called photocells or photodetectors
 
-* Working in breakout groups, answer the following questions in **Part 1**
+## Notes about Photoresistors
 
+| Useful for                                                   | Not Useful for                                             |
+| ------------------------------------------------------------ | ---------------------------------------------------------- |
+| Detect relative change in light level                        | Detecting absolute light level                             |
+| Knowing when to brighten / darken a display screen screen (e.g. phone) | Comparing light level across different devices and sensors |
 
+## Wiring a Photoresistor
 
-## Part 1: Understanding a photoresistor 
+<img src="lecture_photoresistor.assets/photoresistor_without_fixed_resistor_bb.png" alt="wiring" style="width:800px" />
 
-1. A photoresistor is a device whose resistance varies with the amount of light present. Which input function will we use for reading? `analogRead` or `digitalRead`? __
+* Consider wiring a photo resistor to 3.3v and ground
+* Measure voltage
+* The resistance will vary with light, but what is the problem?
 
-2. Based on you answer to #1, what is the range of values the argon will see when reading the input from photoresistor.
+## What happens in bright light?
 
-   * What is the maximum value the argon will read?  __ <!-- 4095 -->
-   * What is the minimum value the argon will read?  __ <!-- 0 -->
+<img src="lecture_photoresistor.assets/light_on.png" style="width:600px;" />
 
-## Part 1: Understanding a photoresistor 
+* Bright light --> resistance decreases
+* Analog input reads 3.3v
 
-3. With the photoresistor <u>not</u> connected to the argon, use multimeter to measure resistance of photoresistor under the following conditions.
+## What happens in darkness?
 
-   * Resistance in ambient (normal) room light: __ <!-- 2k -->
-   * Resistance in bright light (cell phone light): __ <!-- 500 -->
-   * Resistance in darkness: __ <!-- 9k -->
+<img src="lecture_photoresistor.assets/light_off.png" style="width:600px;" />
 
-## Part 1: Understanding a photoresistor 
+* Darkness --> resistance increases
+* Analog input **still** reads 3.3v
+* ?
 
+## Why is this happening?
 
-4. Connect photoresistor to **3.3v** and **GND** as shown below. 
-    <img src="lecture_photoresistor.assets/1568075929357.png" alt="wiring" style="width:800px" />
+<img src="lecture_photoresistor.assets/photoresistor_without_fixed_resistor_bb.png" alt="wiring" style="width:800px" />
 
-## Part 1: Understanding a photoresistor 
-
-
-5. Using a multimeter, measure voltage in ambient room light: __ <!-- 3.3v -->
-
-6. Using a multimeter, measure voltage in bright light (cell phone light): __ <!-- 3.3v -->
-
-7. Using a multimeter, measure voltage in darkness: __ <!-- 3.3v -->
-
-8. What do you notice? __ <!-- The voltage is always the same-->
-
-9. Why do you think this is? __ <!-- The resistance varies, but the voltage drop is always the same by KVL -->
-
-##  Part 2: Discuss Together
-
-* What do you learn? 
-* Did this work as you expected?
+<!-- We are always measure the pin connected to 3.3v so reading won't change -->
 
 ## Review: Potentiometers
 
@@ -77,36 +70,28 @@ title: Photoresistors
 * A **potentiometer** is also a variable resistor (like a photoresistor).
 * When the potentiometer's **resistance** varied, we were able to "see" (read) a voltage change (unlike with the photoresistor)
 * Why was that?
-   <!-- The pot has three terminal which creates a voltage divider; there are two different "resistors" and we are measure the ratio of the two -->
+  <!-- The pot has three terminal which creates a voltage divider; there are two different "resistors" and we are measure the ratio of the two -->
+* Could we use a similar approach? <!-- use a fixed second resistor -->
 
 
-* Is there a way we could use a similar approach to measure voltage changes with the photoresistor? __ <!-- use a fixed second resistor -->
 
 ## Review
-![bg right contain](lecture_photoresistor.assets/511ac8f5ce395f5846000000.png)
-<!-- 
-<img src="lecture_photoresistor.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:350px" /> -->
 
-* Inside the potentiometer is a wiper can move across a fixed resistor
+![bg right contain](lecture_photoresistor.assets/511ac8f5ce395f5846000000.png)
+
+
+
+* Potentiometers have **3 pins**: 3.3v, GND, and a wiper can move across a fixed resistor
 * **Vout** represents the voltage at wiper
 * As the knob moves the wiper across the resistor,  the ratio of resistance between ***Vin-and-Vout*** and ***Vout-and-Gnd*** varies
 
 
 ## Review
+
 * As those resistances changes, so does the **voltage** difference between ***Vin-and-Vout*** and ***Vout-and-Gnd***
 * This is known as a **voltage divider**
-![bg right:50% fit](lecture_photoresistor.assets/photoresistor_wiper_equals_vin.png)  
-![bg fit](lecture_photoresistor.assets/photoresistor_wiper_equals_zero.png)
-<!-- 
-<img src="lecture_photoresistor.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:350px" /> -->
-
-
-
-## Photoresistor Problem
-
-* Since the potentiometer wiper divides the internal resistor, it *effectively* creates two resistors 
-* We can measure the change between those two resistors
-* However, without a second resistor in our photoresistor circuit, we can not measure differential change
+  ![bg right:50% fit](lecture_photoresistor.assets/photoresistor_wiper_equals_vin.png)  
+  ![bg fit](lecture_photoresistor.assets/photoresistor_wiper_equals_zero.png)
 
 ## Photoresistor solution
 
@@ -123,15 +108,15 @@ title: Photoresistors
 
 ## Lab
 
-<img src="lecture_photoresistor.assets/photoresistor_and_fixed_resistor_bb.png" alt="photoresistor_and_fixed_resistor_bb" style="width:800px;" />
+<img src="lecture_photoresistor.assets/photoresistor_and_fixed_resistor_RGB_LED_bb.png" alt="photoresistor_and_fixed_resistor_bb" style="width:800px;" />
 
-## Lab
+## Lab (with breakout groups)
 
-* Work in breakout groups
 * Read and display the voltage between the photoresistor and resistor.
 * Measure it based on different lighting conditions: normal room light, covering the sensor with your hand, shining
 * Display on the serial monitor if you room light **dark**, **light**, or **ambient**
    * Hint: how will you determine what type of light is present?
+* Display a different LED color based on the light states
 
 
 ## Credit
