@@ -412,7 +412,7 @@ toc_sticky: true
 
 * modify photoresistor lab to remove handout exploration, and make it a group lab that also reviews some elements from prior weeks
   * buttons, RGB LEDs, LEDs, potentiometers / ADC, PWM
-* still include setting threshold
+* ==Consider covering functions and libraries on Day 1, and leaving publishing for day 2==
 
 #### Lecture
 

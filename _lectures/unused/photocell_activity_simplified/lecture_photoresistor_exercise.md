@@ -1,13 +1,4 @@
----
-marp: true
-theme: itp
-show_int_list: false
 
-week: 4
-category: lectures
-title: Photoresistors
-
----
 
 <!-- headingDivider: 2 -->
 

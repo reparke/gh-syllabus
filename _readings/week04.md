@@ -1,7 +1,7 @@
 ---
 week: 4
 category: readings
-title: Pre-Lecture Activities
+title: Pre-Lecture 
 ---
 
 ## Week {{page.week}}

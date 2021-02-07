@@ -1,12 +1,5 @@
----
-marp: true
-theme: itp
-show_in_list: false
 
-week: 5
-category: lectures
-title: Data Visualization and Dashboard with Initial State (Single Values)
----
+
 
 <!-- headingDivider: 2 -->
 
