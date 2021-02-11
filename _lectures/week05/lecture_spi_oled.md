@@ -49,12 +49,9 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 
 
-## OLED Screen
-
-<img src="lecture_spi_oled.assets/OLED_only.jpg" alt="SparkFun Micro OLED" style="width:550px;" />
-
 ## OLED screen
 
+![bg opacity:.85 right:40%](lecture_spi_oled.assets/OLED_only.jpg)
 * Blue text on black screen
 * 64 pixels (H) x 48 pixels (W)
 * Operates at 3.3v
@@ -64,13 +61,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 
 ## Breakout Board
-
-<img src="lecture_spi_oled.assets/breakout_only.jpg" alt="SparkFun Micro OLED" style="width:550px;" />
-
-
-
-## Breakout Board
-
+![bg opacity:.85 right:50%](lecture_spi_oled.assets/breakout_only.jpg)
 * Custom circuit board that provides access to ("breaks out") the **very delicate** small pins on the screen
 * This breakout board allows us to connect up to 16 pins, but we only need to worry about the top 8 pins
 
@@ -80,6 +71,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 ## 
 <span style="font-size:75%">
+<img src="lecture_spi_oled.assets/breakout_top_row.jpg" alt="SparkFun Micro OLED" style="width:650px;" />
 
 | OLED | SPI Function | Notes                                                        |
 | --------- | ------------ | ------------------------------------------------------------ |
@@ -104,14 +96,14 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 ## What is Synchronous Communication?
 
-<img src="lecture_spi_oled.assets/52ddb2d8ce395fad638b4567.png" alt="Synchronous communication" style="width:1000px;" />
+<img src="lecture_spi_oled.assets/52ddb2d8ce395fad638b4567.png" alt="Synchronous communication" style="width:700px;" />
 
-## What is Synchronous Communication?
-
+## Synchronous Communication
+![bg opacity:.85 right:41% width:530px](lecture_spi_oled.assets/52ddb2d8ce395fad638b4567.png)
 * Clock pin and data pin(s)
 * Clock is an oscillating square wave
-* On the rising edge *(low to high)* or falling edge *(high to low)* of the clock, the receiver samples ("reads") the signal present on data line 
-* **Synchronous:** data is sent on regular intervals controlled by a clock
+* Receiver reads **data** signal on **clock** rising edge *(low to high)* 
+* **Synchronous:** data sent on regular intervals controlled by a clock
 * **Serial:** one bit at time is sent / received
 
 ## What is Serial Peripheral Interface (SPI)?
@@ -125,13 +117,16 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 
 ## SPI Structure
-* SPI supports two data pins for bidirectional communication (one pin for sending data, one pin for receiving)
+
+<img src="lecture_spi_oled.assets/spi_illustration.png" alt="SPI illustration" style="width:700px;" />
+
+
+## SPI Structure
+![bg opacity:.85 right:47% width:600px](lecture_spi_oled.assets/spi_illustration.png)
+* Two data pins for bidirectional communication (one for sending data, one for receiving)
 * Data <u>from</u> Argon (**M**ain **O**ut) <u>to</u> OLED (**S**econdary **I**n) is the **MOSI** pin
 * Data <u>to</u> Argon (**M**ain **I**n) <u>from</u> OLED (**S**econdary **O**ut) is the **MISO** pin
 
-## SPI Structure
-
-<img src="lecture_spi_oled.assets/spi_illustration.png" alt="SPI illustration" style="width:800px;" />
 
 ## Additional Pins 
 <img src="lecture_spi_oled.assets/breakout_top_row.jpg" alt="SparkFun Micro OLED" style="width:750px;" />

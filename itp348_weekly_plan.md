@@ -50,8 +50,8 @@ toc_sticky: true
   - [x] Cloud Overview 
   - [ ] Publish (skip)
 - [ ] Week 5
-- - [ ] OLED
-  - [ ] TMP36
+- - [x] OLED
+  - [x] TMP36
   - [ ] Webhooks / APIs (Initial State can be live)
 - [ ] Week 6
 - - [ ] Blynk
@@ -77,9 +77,7 @@ toc_sticky: true
 - [ ] Week 11
   - [x] OLED graphics
   - [ ] JSON / APIs (may need to re-record)
-  - [x] JSON parsing
-  - [x] Retrieving data from APIs
-
+  
 - [x] Week 12
   - [x] Debouncing
   - [x] Heart rate sensors
@@ -434,12 +432,23 @@ toc_sticky: true
 
 - publish photoresistor value and "state" (for example bright, ambient, or dark to Particle cloud)
 
+### Feedback
+
+* Started with review
+* This was a good amount of material; we had time to introduce functions to use RGB
+
 ### Day 2
 
 #### Lecture
 
 - Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
-- Multitasking with millis
+- Multitasking with millis. 
+
+#### Guided Activity
+
+- Start: Blink one LED on and off, display serial message when button presed
+- Walk through blocking example with button
+- Demostrate millis example with one light blinking
 
 #### Lab
 

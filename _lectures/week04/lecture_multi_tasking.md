@@ -137,5 +137,58 @@ void loop() {
     ledState = !ledState; //toggle true / false
     digitalWrite(LED_PIN, ledState);
   }
+  
+```
+
+## Lab
+
+* We will start a project together
+* You will then work in breakout rooms to continue
+* We will join together as a group to discuss each stage
+* You will individually turn in your code as an in-class lab
+
+## Lab
+
+<img src="lecture_multi_tasking.assets/image-20200709230855362.png" alt="image-20200709230855362" style="height:300px;" />
+* Goals
+  * Blink **LED1** every 300 **milliseconds**
+  * Create a toggle button (latch) to turn **LED2** on at **rising edge** and off again at the rising edge
+  * Track the number of times the button is pressed
+  * Publish the number of button presses to the Particle cloud every **1000 milliseconds** 
+
+##  Stages to Build
+
+1. Use delay to register button press (without toggle) and blink **LED1** 
+2. Use `millis()` to fix blocking in #1 (we'll do #1 and #2 together)
+3. Enable toggle button to turn **LED2** on and off on the **rising edge**
+4. Track number of button presses and use `millis()` to publish number of button presses every **1000 ms**
+
+## Starting Code
+
+```c++
+const int PIN_BUTTON = D2;
+const int PIN_LED1 = D3;
+const int PIN_LED2 = D4;
+
+void setup()
+{
+  pinMode(PIN_BUTTON, INPUT);
+  pinMode(PIN_LED1, OUTPUT);
+  pinMode(PIN_LED2, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  digitalWrite(PIN_LED1, HIGH);
+  delay(300);
+  digitalWrite(PIN_LED1, LOW);
+  delay(300);
+  digitalWrite(PIN_LED1, HIGH);
+  delay(300);
+  digitalWrite(PIN_LED1, LOW);
+  delay(300);
+}
+
 ```
 

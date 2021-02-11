@@ -24,7 +24,7 @@ title: Photoresistors
 
 * Measures light levels
 * Contains a photosensitive **variable resistor**
-* **Brighter light --> less resistance**
+* Changes in light level causes a change in resistance
 * Also called photocells or photodetectors
 
 ## Notes about Photoresistors
