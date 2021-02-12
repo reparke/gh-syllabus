@@ -6,7 +6,7 @@
 // connect switch (Gnd - A0 - 3.3v)
 // */
 // #include <blynk.h>    //library
-// char auth[] = "bRWQIXbU2uQmtoarMYEmRT3s_d8gmAEn";  //this is a array of characters with our token
+// char auth[] = "nrfFtX1ekx8jkb5cK0ZwrlZxKf3s7ARN";  //this is a array of characters with our token
 
 // //if you're sending values to from ARGON to APP (push), we MUST use millis()
 // //limit is 10 values per sec
@@ -70,8 +70,8 @@
 //     Blynk.virtualWrite(VPIN_SWITCH, digitalRead(A0)); //send data from argon ===> app
 //   }
 // }
-#include <blynk.h>                                //library
-char auth[] = "bRWQIXbU2uQmtoarMYEmRT3s_d8gmAEn"; //this is a array of characters with our token
+#include <blynk.h>    //library
+char auth[] = "nrfFtX1ekx8jkb5cK0ZwrlZxKf3s7ARN";  //this is a array of characters with our token
 
 //if you're sending values to from ARGON to APP (push), we MUST use millis()
 //limit is 10 values per sec
@@ -97,41 +97,43 @@ void setup()
   pinMode(PIN_RED, OUTPUT);
   pinMode(PIN_BLUE, OUTPUT);
   pinMode(PIN_GREEN, OUTPUT);
-
   pinMode(PIN_SWITCH, INPUT);
   Serial.begin(9600);
 
-  Particle.variable("isDoorOpen", isDoorOpen); //particle variables need to be GLOBAL
-  Particle.function("blinkLed", blinkLed);
+    //1. have delay
+    delay(5000);    //needs to be delay, not millis
 
-  //subscribe to partner's event
-  // Particle.subscribe("ITP348/Door/NH", switchEventHandler, ALL_DEVICES);
-  blinkLed("twice");
+    //2. connect to blynk
+    Blynk.begin(auth);
+
+  // blinkLed("twice");
 }
 
 void loop()
 {
-  switchRead = digitalRead(PIN_SWITCH);
+    Blynk.run(); // do NOT put in millis timer
 
-  if (switchRead == HIGH)
-  { // just read that switch is open
-    if (isDoorOpen == false)
-    {
-      isDoorOpen = true;
-      Blynk.virtualWrite(VPIN_SWITCH, isDoorOpen); //send data from argon ===> app
-      Serial.println("closed --> open");
-    }
-  }
-  else
-  { // just read that switch is closed
-    if (isDoorOpen == true)
-    {
-      isDoorOpen = false;
-      Blynk.virtualWrite(VPIN_SWITCH, isDoorOpen); //send data from argon ===> app
+  // switchRead = digitalRead(PIN_SWITCH);
 
-      Serial.println("open --> closed");
-    }
-  }
+  // if (switchRead == HIGH)
+  // { // just read that switch is open
+  //   if (isDoorOpen == false)
+  //   {
+  //     isDoorOpen = true;
+  //     Blynk.virtualWrite(VPIN_SWITCH, isDoorOpen); //send data from argon ===> app
+  //     Serial.println("closed --> open");
+  //   }
+  // }
+  // else
+  // { // just read that switch is closed
+  //   if (isDoorOpen == true)
+  //   {
+  //     isDoorOpen = false;
+  //     Blynk.virtualWrite(VPIN_SWITCH, isDoorOpen); //send data from argon ===> app
+
+  //     Serial.println("open --> closed");
+  //   }
+  // }
 }
 
 void switchEventHandler(const char *event, const char *data)

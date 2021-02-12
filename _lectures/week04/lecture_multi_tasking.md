@@ -150,6 +150,9 @@ void loop() {
 ## Lab
 
 <img src="lecture_multi_tasking.assets/image-20200709230855362.png" alt="image-20200709230855362" style="height:300px;" />
+
+
+
 * Goals
   * Blink **LED1** every 300 **milliseconds**
   * Create a toggle button (latch) to turn **LED2** on at **rising edge** and off again at the rising edge

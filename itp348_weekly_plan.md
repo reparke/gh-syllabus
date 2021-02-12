@@ -441,6 +441,9 @@ toc_sticky: true
 
 #### Lecture
 
+* ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
+* ==Announce survey==
+
 - Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
 - Multitasking with millis. 
 
@@ -452,17 +455,18 @@ toc_sticky: true
 
 #### Lab
 
-- **==Need to make new==**: publish light level once per sec, blink two LEDs at different rate
-- Review latching code from previous class; code together LED1 toggling with button
-- Then add LED2 blink have light blink to show delay is block so millis is needed
-- Rewrite with blink LED2 and toggle LED1 using millis
-- Then rewrite to remove toggle but have LEDs blink at different rates
+- Use delay to register button press (without toggle) and blink **LED1** 
+- Use `millis()` to fix blocking in #1 (we'll do #1 and #2 together)
+- Enable toggle button to turn **LED2** on and off on the **rising edge**
+- Track number of button presses and use `millis()` to publish number of button presses every **1000 ms**
 
 #### Feedback
 
-- students seemed VERY confused about millis() and delay
+- fall 2020: students seemed VERY confused about millis() and delay
 
+#### Lecture
 
+* If time, cover multimeter or reading resistors
 
 ### Assignment
 
@@ -475,6 +479,8 @@ toc_sticky: true
 
 #### Lecture
 
+- ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
+- ==Announce survey==
 - TMP36
 
 #### Lab (in slides)
