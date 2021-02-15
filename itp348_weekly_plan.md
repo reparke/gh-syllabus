@@ -18,13 +18,14 @@ toc_sticky: true
 * [x] wk3: create latch slides
 * [x] wk4: revise photoresistor slides / change questions
 * [x] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
-* [ ] wk 5: announce quiz for following week
-* [ ] wk 6: create Bb quiz
+* [x] wk 5: announce quiz for following week
+* [ ] wk 5: use millis in next assignment (summer)
+* [x] wk 6: create Bb quiz
 * [x] wk5: add API graphic illustration for webhook
 * [x] wk5: revise lab and slides to show TMP36, not photoresistor
 * [ ] wk6: revise Blynk lab
 * [ ] wk7: create lecture / lab activities for FSM day 2
-* [ ] wk8: revise alarm clock assignment to use FSM **and** Blynk
+* [ ] wk8: revise alarm clock assignment to use FSM **and** Blynk (for blynk, use either simple buttons or "time input" to set alarm time)
 * [ ] wk11: may be too much dashboard content; consider moving single data point for initial state to earlier week
 * [ ] general: try to incorporate `enum` or `switch` earlier in semester
 * [x] wk11: building smart watch: need to text and pictures to use velcro
@@ -481,6 +482,8 @@ toc_sticky: true
 
 - ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
 - ==Announce survey==
+- ==Remind students about extra credit for posting on social issues==
+- Quiz is open Thurs 2/18 after class (6 pm PST) until Monday 2/22 at 11:59 pm PST. Once you start it, you will have 60 minutes but it might take you 15 min.
 - TMP36
 
 #### Lab (in slides)
@@ -523,6 +526,7 @@ toc_sticky: true
 
 - Due start of current week: A4 - Electronic dice 
 - Given out start of current week: A5 - Reaction Timer
+- ==Consider revising Reaction Timer to something involving millis()==
 - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
 ## 6. Particle Cloud Subscribe; Blynk

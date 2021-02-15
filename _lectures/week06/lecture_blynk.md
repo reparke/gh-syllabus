@@ -152,6 +152,11 @@ void loop() {
 
 
 - Connect magnetic switch 
+- Ideas:
+
+  - Send text command Blynk->Argon to enable or disable light
+  - Use gauge to measure temperature
+  - 
 
 ## Resources
 
