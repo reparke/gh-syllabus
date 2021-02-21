@@ -12,30 +12,6 @@ title: Cloud Communication - Publish and Subscribe
 # Cloud Communication
 <img src="lecture_particle_cloud_subscribe.assets/iot_cloud.jpg" alt="iot_cloud" style="width:800px;" />
 
-## Review: Particle Cloud Features
-
-**Does**
-
-* Update device code and firmware
-* Receive status messages 
-
-* Read the values of variables
-* Control device / execute function calls
-
-**Does NOT**
-
-* Store data from device 
-* Run analytics
-* Manage device with publicly-accessible web/mobile 
-
-## Review: Key operations
-
-* **Publishing (events part 1)**
-* Subscribing (events part 2)
-
-* Accessing data (cloud variables)
-* Control device (cloud functions)
-
 ## Review: Publishing Events
 
 * Events are messages sent from an Argon to the cloud **as often as you choose**
@@ -66,13 +42,6 @@ Particle.publish("tempFahr", String(85.9), PRIVATE);
 * Names and values must always be strings
 * Should only publish 1 event / sec (or burst of 4 events in 1 sec)
 
-##  Key operations
-
-* Publishing (events part 1)
-* **Subscribing (events part 2)**
-* Accessing data (cloud variables)
-* Control device (cloud functions)
-
 ## Events Part 2: Subscribing to Events 
 
 * Argon can by notified when a particular event published
@@ -89,6 +58,27 @@ Particle.publish("tempFahr", String(85.9), PRIVATE);
 * Argon then **automatically** executes the **event handler function**
   * This seems confusing--WE DO NOT call the event handler function
   * We just define the function body, and Argon calls it when the event arrives
+
+## Illustration - Subscription Setup
+
+<img src="lecture_particle_cloud_subscribe.assets/Slide1.PNG" style="width:800px;" />
+
+## Illustration - Subscription Setup
+
+<img src="lecture_particle_cloud_subscribe.assets/Slide2.PNG" style="width:800px;" />
+
+## Illustration - Event Published
+
+<img src="lecture_particle_cloud_subscribe.assets/Slide3.PNG" style="width:800px;" />
+
+## Illustration - Subscription Notification
+
+<img src="lecture_particle_cloud_subscribe.assets/Slide4.PNG" style="width:800px;" />
+
+## Illustration - Event Handler Function
+
+<img src="lecture_particle_cloud_subscribe.assets/Slide5.PNG" style="width:800px;" />
+
 
 ## Subscribing Process
 
@@ -113,12 +103,12 @@ Particle.publish("tempFahr", String(85.9), PRIVATE);
 ## Subscribing Syntax: Event Handler
 
 ```C++
-void <<EVENT_HANDLER>>(const char *event, const char *data) {
+void <<EVENT_HANDLER>>(const char* event, const char* data) {
 ```
 
 Example
 ```C++
-void tempEventHandler(const char *event, const char *data) {
+void tempEventHandler(const char* event, const char* data) {
     Serial.println("Just received the event called " +
                    String(event) + " with the value " + 
                    String(data));
@@ -127,7 +117,7 @@ void tempEventHandler(const char *event, const char *data) {
 ## Subscribing Syntax: Event Handler
 
 ```C++
-void tempEventHandler(const char *event, const char *data) {
+void tempEventHandler(const char* event, const char* data) {
 ```
 
 * `event` is the parameter that will be the event name

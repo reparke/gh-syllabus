@@ -25,7 +25,7 @@ title: Magnetic Switch
 
 ## How Reed Switches Work
 
-<img src="lecture_magnetic_switch.assets/Reed_switch_(aka).jpg" alt="image-20200716183944885" style="height:600px" />
+<img src="lecture_magnetic_switch.assets/Reed_switch_(aka).jpg" alt="image-20200716183944885" style="width:900px" />
 
 
 

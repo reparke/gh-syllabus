@@ -16,6 +16,7 @@ toc_sticky: true
 * [ ] wk1: record software tools for reference
 * [x] wk1: record c++ review and create bb quiz
 * [x] wk3: create latch slides
+* [ ] wk3: change die assignment to explicitly suggest on array for the pin labels, and multiple array for the dice labels (Summer) 
 * [x] wk4: revise photoresistor slides / change questions
 * [x] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
 * [x] wk 5: announce quiz for following week
@@ -27,6 +28,7 @@ toc_sticky: true
 * [ ] wk7: create lecture / lab activities for FSM day 2
 * [ ] wk8: revise alarm clock assignment to use FSM **and** Blynk (for blynk, use either simple buttons or "time input" to set alarm time)
 * [ ] wk11: may be too much dashboard content; consider moving single data point for initial state to earlier week
+* [ ] wk11: inquire about future class TAs and kit TA
 * [ ] general: try to incorporate `enum` or `switch` earlier in semester
 * [x] wk11: building smart watch: need to text and pictures to use velcro
 * [x] account for wellness days in schedule
@@ -480,7 +482,7 @@ toc_sticky: true
 
 #### Lecture
 
-- ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
+- ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
 - ==Announce survey==
 - ==Remind students about extra credit for posting on social issues==
 - Quiz is open Thurs 2/18 after class (6 pm PST) until Monday 2/22 at 11:59 pm PST. Once you start it, you will have 60 minutes but it might take you 15 min.
@@ -521,6 +523,10 @@ toc_sticky: true
 #### Lab
 
 - Have students create an Etch-A-Sketch with OLED
+
+### Feedback
+
+* This took longer than expected since there was much debugging needed. We finished basic setup of OLED but didn't have time to introduce lab for etch-a-sketch
 
 ### Assignment
 

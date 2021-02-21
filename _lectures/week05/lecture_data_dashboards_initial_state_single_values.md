@@ -56,7 +56,7 @@ title: Data Visualization and Dashboard with Initial State (Single Values)
 
 ## Steps to Connect Argon and Initial State 
 
-1. Create account at  [https://initialstate.com](https://initialstate.com) 
+1. Create account at  [https://initialstate.com](https://initialstate.com) (make sure to use your student email and change ) 
 2. Create **stream bucket** at [https://initialstate.com](https://initialstate.com)  
 3. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
 4. Write firmware sketch and flash Argon

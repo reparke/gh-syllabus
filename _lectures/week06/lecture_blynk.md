@@ -30,8 +30,6 @@ title: Creating IoT Mobile Apps with Blynk
 
 ## Blynk Evaluation
 
-
-
 | Advantages                                                   | Disadvantages                                    |
 | ------------------------------------------------------------ | ------------------------------------------------ |
 | Highly customizable                                          | Free version has limitations                     |
@@ -156,7 +154,6 @@ void loop() {
 
   - Send text command Blynk->Argon to enable or disable light
   - Use gauge to measure temperature
-  - 
 
 ## Resources
 
