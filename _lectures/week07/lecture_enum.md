@@ -5,7 +5,7 @@ theme: itp
 week: 7
 show_in_list: false
 category: lectures
-title: enum in C++
+title: Switch / Enum Part 2: Enum
 ---
 
 <!-- headingDivider: 2 -->
@@ -14,21 +14,14 @@ title: enum in C++
 
 ## Recall
 
-In an early discussion, we were trying to give driving direction, and there was a finite set of actions:
+* In an early discussion, we were trying to give driving direction, and there was a finite set of actions:
+  * turn right
+  * turn left
+  * continue straight
+  * arrive
 
-* turn right
-* turn left
-* continue straight
-* arrive
-
-
-
-## Recall
-
-* We found `switch` provided a convenient way to choose among specific, finite values
-* We could have used `if...else` as well but `switch` is often more convenient for finite values
-
-
+* `switch` provided a convenient way to choose among specific, finite values
+  * `if...else` also works, but `switch` is often more convenient for finite values
 
 ## Switch 
 
@@ -158,3 +151,15 @@ switch (action) {
 	    Serial.println("Error!");
 }
 ```
+
+## Tip: Converting `String` to `enum`
+
+* If you have an `int` stored as a `String` but want to use `enum` for your a `switch` statement, first covert to an `int` with `toInt()` and then cast to `enum`
+
+```c++
+enum Operation {LEFT, RIGHT, STRAIGHT, ARRIVE};
+String opStr = "0";		//this often comes from an event handler
+int opInt = opStr.toInt(); 	//int 0
+Operation op = (Operation) opInt;	//Operation LEFT
+```
+

@@ -1,12 +1,3 @@
----
-marp: true
-theme: itp
-
-week: 7
-category: lectures
-title: Switch and Enum in C++
----
-
 <!-- headingDivider: 2 -->
 
 # `switch`and `enum` Statements in C++

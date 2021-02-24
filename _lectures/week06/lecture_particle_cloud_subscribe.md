@@ -139,6 +139,16 @@ void setup() {
 * `MY_DEVICES` subscribes to PRIVATE events
 * `ALL_DEVICES` subscribes to PUBLIC events
 
+## Exercise
+
+<img src="lecture_particle_cloud_subscribe.assets/image-20210220175201317.png" style="width:600px;" />
+
+## Exercise
+
+* Subscribe to public event called `ITP348_color_change_event`
+* The data of this event will be a number from 0-3. Use this number to change the color on your LED below
+  * 0 is white, 1 is green, 2 is magenta, 3 is yellow, 4 is red
+
 ## Lab Goal
 
 * Working in pairs, have an "open door" on one student's device
@@ -146,20 +156,26 @@ void setup() {
 
 ## Lab Part 1:
 
-* Publish **public** cloud event with state `doorOpen` or `doorClosed` when switch is opened
-* Event name should be 
-  `ITP348/Door/<<YOUR_INITIALS>>`
-
 <img src="lecture_particle_cloud_subscribe.assets/switch-magnetic-door_and_rgb_led_bb-1594972874666.png" style="width:600px;" />
+
+
+
+## Lab Part 1:
+
+* Create an `enum` called `DoorState` with the values `OPEN` and `CLOSED`. Make a global variable called `myDoor` to track your switch
+* When the magnetic switch is opened or closed, change the state of `myDoor`
+* Publish **public** cloud event with the data `doorIsOpen` or `doorIsClosed` when `myDoor` changes. Note **only one** publish should occur every time door is opened or closed
+* Your name should be 
+  `ITP348/Door/<<YOUR_INITIALS>>`
 
 ## Lab Part 2:
 
 * Create event handler
-* Register subscriber for the *other* student's event
+* Register a subscriber for the **your partner's** student's event
   `ITP348/Door/<<THEIR_INITIALS>>`
-
-* Red means "door is open"
-* White means "door is closed"
+* Change the RGB colors based on their door status
+  * Red means "door is open"
+  * White means "door is closed"
 
 ## Documentation
 

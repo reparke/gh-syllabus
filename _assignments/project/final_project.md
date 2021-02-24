@@ -32,11 +32,15 @@ the key functioning elements. Here is a [partial list of components and services
 * Use at least two sensors we discussed in class
 * Use at least two component to interact with environment (e.g. switch, button, etc.)
 * Use cloud / internet connectivity in a meaningful way
-* Must send data to a cloud system or storage
-* Must receive feedback from cloud system to produce effects in the physical
-  world (i.e. control device remotely)
-* Must have an interface app to enable communication between a user and a
-  device. It is recommended to use Losant but other systems may be used
+* Must send data to a cloud system and display a dashboard (e.g. Initial State, Losant, ThingSpeak)
+* Must have interface app and be able to receive feedback from cloud system to produce effects in the physical world (i.e. control device remotely)
+  -   Acceptable
+      -   Blynk (mobile app) 
+      -   Intial State (website)
+      -   Losant (website)
+      -   If using Bluetooth, the Bluefruit app will be considered as long as it is substantially different from car assignment
+  -   Not acceptable 
+      -   Particle app 
 * Comment your code and follow consistent coding convention
 * Developer and user documentation (see below)
 * Your project has to compile and run *(projects that fail to run will receive
@@ -44,7 +48,7 @@ the key functioning elements. Here is a [partial list of components and services
 * No late submission will be accepted
 * Note: in the coming weeks we will discuss the following components in case
   you want to include them in your project
-  * Losant IoT cloud framework (for interacting with and making web apps)
+  * Heart rate sensors
   * Digital temperature and humidity sensor
   * Ultrasonic distance sensor
   * Accelerometer
@@ -121,18 +125,17 @@ Grading
 | Item                                           | Points |
 | ---------------------------------------------- | ------ |
 | **App proposal**                               |        |
-|   Motivation / Need / Audience                   | **4**  |
-|   Features                                       | **4**  |
-|   Budget                                         | **4**  |
+| Motivation / Need / Audience                   | **4**  |
+| Features                                       | **4**  |
+| Budget                                         | **4**  |
 |                                                |        |
 | **Project Milestone / Schematic**              | **10** |
 |                                                |        |
 | **Final Device**                               |        |
-| Sensors                                        | **5**  |
-| Receive / produce interaction with environment | **5**  |
-| Sending data to cloud platform                 | **10** |
-| Controlling device from cloud                  | **10** |
-| User-Interface                                 | **10** |
+| Sensors                                        | **10** |
+| Receive / produce interaction with environment | **10** |
+| Sending data to cloud platform / dashboard     | **10** |
+| Controlling device from cloud remotely         | **10** |
 | In-person demonstration                        | **10** |
 | Coding style and organization                  | **5**  |
 | Developer documentation                        | **5**  |

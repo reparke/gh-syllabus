@@ -24,6 +24,8 @@ Goals
 
 **Overview**
 
+<img src="a5_reaction_timer.assets/IMG_1609-2.jpg" style="width=700px;" />
+
 This assignment is to create a simple reaction timer game. Two players will each
 have two buttons (“red” and “blue”). A RGB LED will flash white three times, and
 then it will flash either red or blue. The player that presses their correct

@@ -51,8 +51,9 @@ title: Creating IoT Mobile Apps with Blynk
 
 - Use **virtual pins** to send and receive data from Argon
 - These are not real hardware pins, but just a concept used by Blynk
-- You can send `ints` and `Strings` on these "pins" because they just channels to send data, not physical pins 
-- 32 pins are supported (some devices support 128)
+- Virtual pins support `ints` and `Strings` (unlike hardware pins) 
+- 32-128 pins are supported (label `V0`, `V1`, etc.)
+- Note: You **can not** use `const int` to define virtual pins. If you want to define pin label, use `#define VPIN_LED V2` syntax
 
 ## Configuring Blynk
 
@@ -101,8 +102,6 @@ BLYNK_WRITE(<<VIRTUAL_PIN>>){
 ## Example: Send data from Blynk App to Argon
 
 ```c++
-const int VPIN_SLIDER = V0;	//similar to digital and analog pins
-
 BLYNK_WRITE(V0){
   //assign incoming value from pin V0 to a variable
   int pinValue = param.asInt(); //or param.asStr(), param.asDouble()
@@ -122,13 +121,12 @@ Blynk.virtualWrite(<<PIN>>, <<VALUE>>);
 
 ```c++
 unsigned long blynkDelay = 10000; //change this as needed
-const int VPIN_TEMP = V1;
 
 void loop() {
   unsigned long curMillis = millis();
   if (curMillis - prevMillis > blynkDelay) {
     double tempF = ...; //read a sensor
-    Blynk.virtualWrite(VPIN_TEMP, tempFermF);
+    Blynk.virtualWrite(V1, tempFermF);
     prevMillis = curMillis;
   }
  
@@ -139,21 +137,29 @@ void loop() {
 ## App: Send data from Argon to Blynk App
 
 ![blynk (4)](lecture_blynk.assets/blynk (4).png)
+## Exercise
+
+* Install Blynk app on your phone
+
+
+- Connect RGB led and magnetic switch 
+
+* Build Blynk with the following features
+  * Use button to control onboard LED via pin `V5` (app --> argon)
+  * Send random number (0-255) to app and display on pin `V6` (argon --> app)
+  * Use virtual LED to show random number on pin `V6` (argon --> app)
+
 ## Lab
 
 <img src="lecture_blynk.assets/switch-magnetic-door_and_rgb_led_bb.png" style="width:500px;" />
 
-- Install Blynk app on your phone
+## Lab
 
-
-- Connect RGB led 
-
-
-- Connect magnetic switch 
-- Ideas:
-
-  - Send text command Blynk->Argon to enable or disable light
-  - Use gauge to measure temperature
+* Work in teams and create the following functionality in Blynk app
+  * Use ZeRGBa to control LED on pins `V0 V1 V2` (app --> argon)
+  * Use display to show if switch is open on pin `V3` (argon --> app)
+  * Create gauge display the random number on pin `V6` (argon --> app)
+  * Create text input to send text on pin `V4` (app --> argon)
 
 ## Resources
 

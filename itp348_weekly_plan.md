@@ -21,14 +21,16 @@ toc_sticky: true
 * [x] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
 * [x] wk 5: announce quiz for following week
 * [ ] wk 5: use millis in next assignment (summer)
+* [ ] wk 5: move enum and switch videos to week 6 (summer)
 * [x] wk 6: create Bb quiz
 * [x] wk5: add API graphic illustration for webhook
 * [x] wk5: revise lab and slides to show TMP36, not photoresistor
-* [ ] wk6: revise Blynk lab
+* [x] wk6: revise Blynk lab
 * [ ] wk7: create lecture / lab activities for FSM day 2
 * [ ] wk8: revise alarm clock assignment to use FSM **and** Blynk (for blynk, use either simple buttons or "time input" to set alarm time)
-* [ ] wk11: may be too much dashboard content; consider moving single data point for initial state to earlier week
+* [x] wk11: may be too much dashboard content; consider moving single data point for initial state to earlier week
 * [ ] wk11: inquire about future class TAs and kit TA
+* [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
 * [ ] general: try to incorporate `enum` or `switch` earlier in semester
 * [x] wk11: building smart watch: need to text and pictures to use velcro
 * [x] account for wellness days in schedule
@@ -58,8 +60,8 @@ toc_sticky: true
   - [ ] Webhooks / APIs (Initial State can be live)
 - [ ] Week 6
 - - [ ] Blynk
-  - [ ] magnetic switch
-  - [ ] cloud subscribe
+  - [x] magnetic switch
+  - [x] cloud subscribe
 
 - [x] Week 7
   - [x] Switch / enum
@@ -540,21 +542,25 @@ toc_sticky: true
 ### Reading
 
 - Have students create an [Blynk](https://blynk.io/) account
+- Have students come to class with RGB LED wired (Tues) and then add magnetic switch (thurs)
 
 ### Day 1
 
 #### Lecture
 
-- Fall 2020
-  - take time to review questions, OLED, particle functions
-  - have students brainstorm project ideas
-- Review some pasts projects for preliminary project idea
-  - https://sites.usc.edu/parke/tag/itp348_projects/
-  - https://5cf99969afabc800087c618c.onlosant.com/photon_temperature
-  - https://iot.app.initialstate.com/#/tiles/bkt_13hhui7kc4h38hz
-- Magnetic switch
+- Magnetic switch (video)
 
-* Particle Cloud: Subscribe
+* Particle Cloud: Subscribe (video)
+
+#### Guided Activity
+
+* See subscribe notes for "Exercise"
+* Rob publishes event that triggers their RGB LED
+
+#### Lecture
+
+* Switch and enum
+* Rewrite above code with switch and enum
 
 #### Lab part 1
 
@@ -567,15 +573,21 @@ toc_sticky: true
 * subscribe to variable -- work in pairs 
   - create unique event ITP348/Door/<<UNIQUE_NAME>>
 
-#### Lecture
-
-* ==may need more here==
-
 ## Feedback
 
 - Going through project and publishing lab took most of the time
 
 ### Day 2
+
+#### Lecture
+
+* Fall 2020
+  - take time to review questions, OLED, particle functions
+  - have students brainstorm project ideas
+* Review some pasts projects for preliminary project idea
+  - https://sites.usc.edu/parke/tag/itp348_projects/
+  - https://5cf99969afabc800087c618c.onlosant.com/photon_temperature
+  - https://iot.app.initialstate.com/#/tiles/bkt_13hhui7kc4h38hz
 
 #### Lecture
 
@@ -595,7 +607,6 @@ toc_sticky: true
 #### Lecture
 
 * ==may need more here==
-* Also could work on reaction timer because it is challenging
 
 #### Feedback
 

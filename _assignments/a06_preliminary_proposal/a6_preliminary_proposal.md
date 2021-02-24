@@ -37,14 +37,19 @@ Overview
 
 -   Use cloud / internet connectivity in a meaningful way
 
--   Must send data to a cloud system or storage
+-   Must send data to a cloud system and display a dashboard (e.g. Initial State, Losant, ThingSpeak)
 
--   Must receive feedback from cloud system to produce effects in the physical world (i.e. control device remotely)
-    
--   Must have an interface app to enable communication between a user and a device. It is recommended to use Losant but other systems may be used
-    
+- Must have interface app and be able to receive feedback from cloud system to produce effects in the physical world (i.e. control device remotely)
 
-    
+  -   Acceptable
+      -   Blynk (mobile app) 
+      -   Intial State (website)
+      -   Losant (website)
+      -   If using Bluetooth, the Bluefruit app will be considered as long as it is substantially different from car assignment
+  -   Not acceptable 
+      -   Particle app 
+
+  
 
 ## **Possible Project Ideas**
 

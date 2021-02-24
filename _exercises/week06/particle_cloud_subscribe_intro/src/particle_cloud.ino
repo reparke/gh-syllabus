@@ -1,154 +1,87 @@
-/*
-  Publish
-  -------
-  - first demonstrate switch working on serial monitor
-  - design logic first
-  - create publish statements
-  - demonstrate publish in console
 
-  Variable
-  --------
-  - motivation: What if we aren't watching the event? how can we know
-    what the current state is?
-  - publish variable
-  - check on app that status changes
-
-  Function
-  --------
-  -      create function to turn on / off LED
-  - register, test with cloud
-  - optional: have them do blink
-  - question: how do we know if light is on or not? --> add state variale
-  - then create light state and register it
-  - show that on the website, the state of light doesn't automatically update\\
-
-  Subscribe
-  =========
-  - discuss goal: work in pairs, and have an open door on one student's device
-  make your LED turn on
-  - have each team create a unique event name
-      ITP348/Door/<<UNIQUE_NAME>>
-  - create event handler
-  - register subscriber
-
-  IFTTT
-  =====
-  - set If <EVENT_NAME> open, then send notification
-  - create new function to override alarm based on location (describe)
-*/
-
-// 1. PUBLISH
+const int PIN_LED = D7;
+const int PIN_RED = D3;
+const int PIN_GREEN = D4;
+const int PIN_BLUE = D5;
 const int PIN_SWITCH = D2;
-int switchVal;  // low = closed, high = open
-bool doorOpen = false;
+enum Color { WHITE, GREEN, MAGENTA, YELLOW, RED };
 
-// 3. FUNCTION
-const int PIN_LED = D3;
-// 3b. FUNCTION
-bool lightOn = false;
-
-// 5. IFTTT
-bool isAlarmArmed = true;
-
+// make sure to list this function BEFORE setup and loop
+void displayColors(Color c) {
+    // if (c == WHITE)
+    // {
+    //   analogWrite(PIN_RED, 255);
+    //   analogWrite(PIN_GREEN, 255);
+    //   analogWrite(PIN_BLUE, 255);
+    // }
+    // else if (c == GREEN) {
+    //   analogWrite(PIN_RED, 0);
+    //   analogWrite(PIN_GREEN, 255);
+    //   analogWrite(PIN_BLUE, 0);
+    // }
+    // else if (c == MAGENTA) {
+    //   analogWrite(PIN_RED, 255);
+    //   analogWrite(PIN_GREEN, 0);
+    //   analogWrite(PIN_BLUE, 255);
+    // }
+    // else if (c == YELLOW) {
+    //   analogWrite(PIN_RED, 255);
+    //   analogWrite(PIN_GREEN, 255);
+    //   analogWrite(PIN_BLUE, 0);
+    // }
+    switch (c) {
+        case WHITE:
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 255);
+            analogWrite(PIN_BLUE, 255);
+            break;
+        case GREEN:
+            analogWrite(PIN_RED, 0);
+            analogWrite(PIN_GREEN, 255);
+            analogWrite(PIN_BLUE, 0);
+            break;
+        case MAGENTA:
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 0);
+            analogWrite(PIN_BLUE, 255);
+            break;
+        case YELLOW:
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 255);
+            analogWrite(PIN_BLUE, 0);
+            break;
+        case RED:
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 0);
+            analogWrite(PIN_BLUE, 0);
+            break;
+    }
+}
 void setup() {
-  // 1. PUBLISH
-  Serial.begin(9600);
-  pinMode(PIN_SWITCH, INPUT);
+    pinMode(PIN_LED, OUTPUT);
+    pinMode(PIN_RED, OUTPUT);
+    pinMode(PIN_BLUE, OUTPUT);
+    pinMode(PIN_GREEN, OUTPUT);
+    pinMode(PIN_SWITCH, INPUT);
 
-  // 2. VARIABLE
-  Particle.variable("doorOpen", doorOpen);
-
-  // 3. FUNCTION
-  pinMode(PIN_LED, OUTPUT);
-
-  Particle.function("changeLED", changeLEDState);
-
-  // 3b. FUNCTION
-  Particle.variable("lightOn", lightOn);
-
-  // 4. SUBSCRIBE
-  Particle.subscribe("ITP348/Door", doorEventHandler, ALL_DEVICES);
-
-  //5. IFTTT
-  Particle.function("setAlarmStatus", setAlarmStatus);
-  Particle.variable("isAlarmArmed", isAlarmArmed);
+    Serial.begin(9600);
+    Particle.subscribe("ITP348_color_change_event", colorHandler, ALL_DEVICES);
+    displayColors(MAGENTA);
 }
 
+void colorHandler(const char *event, const char *data) {
+    String colorStr = String(data);
+    Serial.println("In color handler: color = " + colorStr);
+
+    int colorInt = colorStr.toInt();
+
+    Color color = (Color)colorInt;
+
+    displayColors(color);
+}
+
+// For Rob only--message sent to students
 void loop() {
-  // 1. PUBLISH
-  switchVal = digitalRead(PIN_SWITCH);
-  // Serial.println("Switch val = " + String(switchVal));
-
-  if (switchVal == HIGH) {  // just read that switch is open
-    if (doorOpen ==
-        false) {  // we do this so one event is fired, not endless events
-      doorOpen = true;
-
-      // 5. IFTTT only - add alarm trigger IF logic
-      if (isAlarmArmed == true) {
-        Particle.publish("ITP348/Door", "open");
-      }
-      Serial.println("\tDoor: closed -> open; doorOpen = " + String(doorOpen));
-    }
-  } else {  // just read that switch is closed
-    if (doorOpen ==
-        true) {  // we do this so one event is fired, not endless events
-      doorOpen = false;
-      Particle.publish("ITP348/Door", "closed");
-      Serial.println("\tDoor: open -> closed; doorOpen = " + String(doorOpen));
-    }
-  }
-}
-
-// 3. FUNCTION
-int changeLEDState(String command) {
-  if (command.equalsIgnoreCase("on")) {
-    digitalWrite(PIN_LED, HIGH);
-
-    // 3b. FUNCTION
-    lightOn = true;
-
-    return 0;
-  } else if (command.equalsIgnoreCase("off")) {
-    digitalWrite(PIN_LED, LOW);
-
-    // 3b. FUNCTION
-    lightOn = false;
-    return 0;
-  }
-  return -1;
-}
-
-// 4. SUBSCRIBE
-void doorEventHandler(const char *event, const char *data) {
-  String eventName = String(event);
-  String eventData = String(data);
-
-  if (eventName.equalsIgnoreCase("ITP348/Door")) {
-    if (eventData.equalsIgnoreCase("closed")) {
-      // call changeLEDState to make switch on another students device affect
-      // light
-      changeLEDState("off");
-      Particle.publish("ITP348/Door-Partner", "closed door -> LED off");
-
-    } else if (eventData.equalsIgnoreCase("open")) {
-      // call changeLEDState to make switch on another students device affect
-      // light
-      changeLEDState("on");
-      Particle.publish("ITP348/Door-Partner", "open door -> LED on");
-    }
-  }
-}
-
-// 5. IFTTT
-int setAlarmStatus(String update) {
-  if (update.equalsIgnoreCase("arm")) {
-    isAlarmArmed = true;
-    return 0;
-  } else if (update.equalsIgnoreCase("disarm")) {
-    isAlarmArmed = false;
-    return 0;
-  } else {
-    return -1;
-  }
+    Particle.publish("ITP348_color_change_event", String(random(0, 5)), PUBLIC);
+    delay(3000);
 }
