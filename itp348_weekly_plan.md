@@ -11,6 +11,7 @@ toc_sticky: true
 ## 		Things to implement
 
 * [ ] recruit guest lecturers (x2)
+* [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
 * [x] wk 0: create social issue assignment
 * [x] wk 0: Create "behavioral norms"
 * [ ] wk1: record software tools for reference
@@ -724,7 +725,7 @@ toc_sticky: true
 
 - Due start of current week:   A7 - Shared environment monitor
 - Given out start of current week: A8 - Bluetooth car part 1 (due in one week)
-- Given out start of current week: ==A9 - Alarm clock (due in two weeks)==
+- Given out start of current week: ==A9 - Timer with Blynk (due in two weeks)==
 
 ## 9. Bluetooth
 
@@ -796,7 +797,7 @@ toc_sticky: true
 ### Assignment
 
 * Due start of current week: A8 - Bluetooth car part 1 (due in one week)
-* Given out start of current week: none, but continue to work on  A9 - Alarm clock 
+* Given out start of current week: none, but continue to work on  A9 - Timer with Blynk 
 
 
 
@@ -826,7 +827,7 @@ toc_sticky: true
 
 ### Assignment
 
-- Due start of current week: A9 - Alarm clock
+- Due start of current week: A9 - Timer with Blynk
 - Given out start of current week: A10 - Bluetooth car part 2
 - Given out start of current week: A11 - Smart Watch Assembly
 

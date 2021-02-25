@@ -101,17 +101,17 @@ switch (action) {
 ## `enum ` Example
 
 * There are four actions or states we need to represent
-  * Turn Left, Turn Right, Go Straight, Arrive
+  * Turn left, Turn right, Go straight, arrive
 * Let's define our `enum` and call it `Operation`
 
 ```c++
-enum Operation {LEFT, RIGHT, STRAIGHT, ARRIVE};
+enum Operation {left, right, straight, arrive};
 ```
 
-* `Operation` value of `LEFT` is equivalent to `0`
-* `Operation` value of `RIGHT` is equivalent to `1`
-* `Operation` value of `STRAIGHT` is equivalent to `2`
-* `Operation` value of `ARRIVE` is equivalent to `3`
+* `Operation` value of `left` is equivalent to `0`
+* `Operation` value of `right` is equivalent to `1`
+* `Operation` value of `straight` is equivalent to `2`
+* `Operation` value of `arrive` is equivalent to `3`
 
 ## `enum ` Example
 
@@ -125,7 +125,7 @@ Operation action;
 * You could also assign a literal value to `action` like this
 
 ```c++
-Operation action = STRAIGHT;	//equivalent to int value of 2
+Operation action = straight;	//equivalent to int value of 2
 ```
 
 * We can now use our `Operation` value to control the `switch`
@@ -135,16 +135,16 @@ Operation action = STRAIGHT;	//equivalent to int value of 2
 ```c++
 Operation action = ...; 	
 switch (action) {			
-    case RIGHT:					
+    case right:					
     	Serial.println("Turn right (you can turn on red)");
     break; 
-    case LEFT:
+    case left:
     	Serial.println("Turn left (wait for arrow)");
     break;
-    case STRAIGHT:
+    case straight:
     	Serial.println("Keep going straight");
     break;
-    case ARRIVE:
+    case arrive:
     	Serial.println("You have arrived!");
     break;
     default:
@@ -157,7 +157,7 @@ switch (action) {
 * If you have an `int` stored as a `String` but want to use `enum` for your a `switch` statement, first covert to an `int` with `toInt()` and then cast to `enum`
 
 ```c++
-enum Operation {LEFT, RIGHT, STRAIGHT, ARRIVE};
+enum Operation {left, right, straight, arrive};
 String opStr = "0";		//this often comes from an event handler
 int opInt = opStr.toInt(); 	//int 0
 Operation op = (Operation) opInt;	//Operation LEFT

@@ -32,18 +32,52 @@ const int PIN_BLUE = D5;
 const int PIN_SWITCH = D2;
 
 // virtual pin headers
-// can NOT use const int for virtual pin labels (#define is ok)
-// // const int VPIN_RED = V0;
-// // const int VPIN_GREEN = V1;
-// // const int VPIN_BLUE = V2;
-// const int VPIN_SWITCH = V3;
-// // const int VPIN_TEXT = V4;
-// const int VPIN_LED = V5;
-// you do NOT need to set PINMODE for these virtual pins
 
 // retrieve from app
 // app ==> argon
 //  create a special function called BLYNK_WRITE(<<PIN>>)
+
+enum Color { WHITE = 1, GREEN, MAGENTA, BLUE, YELLOW, RED, ORANGE };
+
+void displayColor(Color c) {
+    switch (c) {
+        case WHITE:
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 255);
+            analogWrite(PIN_BLUE, 255);
+            break;
+        case BLUE:
+            analogWrite(PIN_RED, 0);
+            analogWrite(PIN_GREEN, 0);
+            analogWrite(PIN_BLUE, 255);
+            break;
+        case ORANGE:
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 165);
+            analogWrite(PIN_BLUE, 0);
+            break;
+        case GREEN:
+            analogWrite(PIN_RED, 0);
+            analogWrite(PIN_GREEN, 255);
+            analogWrite(PIN_BLUE, 0);
+            break;
+        case MAGENTA:
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 0);
+            analogWrite(PIN_BLUE, 255);
+            break;
+        case YELLOW:
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 255);
+            analogWrite(PIN_BLUE, 0);
+            break;
+        case RED:
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 0);
+            analogWrite(PIN_BLUE, 0);
+            break;
+    }
+}
 
 BLYNK_WRITE(V0) {  // RED
     // event handler for when the user moves the sliders on the app
@@ -64,9 +98,21 @@ BLYNK_WRITE(V2) {                     // BLUE
     analogWrite(PIN_BLUE, sliderValue);
     Serial.println("Blue: " + String(sliderValue));
 }
-BLYNK_WRITE(V4) {                       // TEXT
-    String command = param.asString();  // represents slider value
-    Serial.println("Command sent: " + command);
+
+BLYNK_WRITE(V4) {  // random color button
+    if (param.asInt() == 1) {           //since button widget is "push", we need this to avoid triggering on push and release
+        int rand = random(0, 7);
+        Color c = (Color)rand;
+        displayColor(c);
+
+        Serial.println("random color");
+    }
+}
+BLYNK_WRITE(V5) {                 // menu
+    int menuVal = param.asInt();  // represents slider value
+    Color c = (Color)menuVal;
+    displayColor(c);
+    Serial.println("menu val named color: " + String(menuVal));
 }
 
 void setup() {
@@ -96,9 +142,17 @@ void loop() {
 
         // NOW we send value
         // Blynk.virtualWrite(<<PIN>>, <<VALUE>>)
-        Blynk.virtualWrite(V3,
-                           switchVal);  // send data from argon ===> app
-                                        // switchRead = digitalRead(PIN_SWITCH);
+        if (switchVal == HIGH) {
+            Blynk.virtualWrite(
+                V3,
+                "open");  // send data from argon ===> app
+                          // switchRead = digitalRead(PIN_SWITCH);
+        } else {
+            Blynk.virtualWrite(
+                V3,
+                "closed");  // send data from argon ===> app
+                            // switchRead = digitalRead(PIN_SWITCH);
+        }
         int randNum = random(0, 255);
         Serial.println("sending random number: " + String(randNum));
         Blynk.virtualWrite(V6,

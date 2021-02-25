@@ -1,11 +1,3 @@
----
-week: 8
-number: 9
-category: assignments
-title: Alarm  Clock
-date_due: Mar 22 @ 11:59 pm (two weeks)
-
----
 Assignment 8 – Alarm Clock
 ==========================
 

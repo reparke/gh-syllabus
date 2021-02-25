@@ -15,9 +15,7 @@ title: Cloud Communication - Publish and Subscribe
 ## Review: Publishing Events
 
 * Events are messages sent from an Argon to the cloud **as often as you choose**
-* Events can private (viewable by only by you and devices in your account) 
-* Events can be public (viewing by anyone in the world)
-  * Public events should not include any confidential data
+* Events are private (viewable by only by you and devices in your account) 
 * Events can be accessed in [Particle console]([https://console.particle.io/](https://console.particle.io/)), app, or by other devices (subscribing)
 
 ## Events in Particle Console
@@ -29,14 +27,14 @@ title: Cloud Communication - Publish and Subscribe
 ## Publish Syntax
 
 ```c++
-Particle.publish(<<EVENT_NAME>>, <<EVENT_VALUE>>, <<FLAGS>>); 
+Particle.publish(<<EVENT_NAME>>, <<EVENT_VALUE>>); 
 ```
 
 Example
 
 ```c++
-Particle.publish("lightValue", "bright", PUBLIC); 
-Particle.publish("tempFahr", String(85.9), PRIVATE);
+Particle.publish("lightValue", "bright"); 
+Particle.publish("tempFahr", String(85.9));
 ```
 
 * Names and values must always be strings
@@ -88,14 +86,14 @@ Particle.publish("tempFahr", String(85.9), PRIVATE);
 ## Review: Publish Syntax
 
 ```c++
-Particle.publish(<<EVENT_NAME>>, <<EVENT_VALUE>>, <<FLAGS>>); 
+Particle.publish(<<EVENT_NAME>>, <<EVENT_VALUE>>); 
 ```
 
 Example
 
 ```c++
-Particle.publish("lightValue", "bright", PUBLIC); 
-Particle.publish("tempFahr", String(85.9), PRIVATE);
+Particle.publish("lightValue", "bright"); 
+Particle.publish("tempFahr", String(85.9));
 ```
 
 
@@ -128,16 +126,20 @@ void tempEventHandler(const char* event, const char* data) {
 
 ```C++
 Particle.subscribe(<<EVENT_NAME>>,
-                   <<EVENT_HANDLER_C++_FUNCTION>>,
-                   <<FLAGS>>);
+                   <<EVENT_HANDLER_C++_FUNCTION>>);
 ```
 Example 
 ```C++
 void setup() {
-    Particle.subscribe("tempFahr", tempEventHandler,MY_DEVICES);
+    Particle.subscribe("tempFahr", tempEventHandler);
 ```
-* `MY_DEVICES` subscribes to PRIVATE events
-* `ALL_DEVICES` subscribes to PUBLIC events
+* You can only subscribe events published in your account 
+
+## Important Note
+
+* The exercises that follow describe public events
+* As of Fall 2020, public events have been discontinued in Particle cloud
+* You can only publish private events and subscribe to private events in your Particle account
 
 ## Exercise
 

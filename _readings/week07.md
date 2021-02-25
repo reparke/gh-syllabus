@@ -6,7 +6,7 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
- ### switch and enum in C++
+ ### switch and enum in C++ (already covered in class last week)
 
   {% include video id="W6uycVUrkm4" provider="youtube" %}
 

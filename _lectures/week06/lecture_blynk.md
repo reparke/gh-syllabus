@@ -66,6 +66,8 @@ char auth[] = "YourAuthToken";
 void setup(){
   delay(5000); // Allow board to settle
   Blynk.begin(auth);
+  Blynk.syncAll(); //optional if you want the argon to be sent all app values when argon resets
+
 }
 ```
 
@@ -104,7 +106,7 @@ BLYNK_WRITE(<<VIRTUAL_PIN>>){
 ```c++
 BLYNK_WRITE(V0){
   //assign incoming value from pin V0 to a variable
-  int pinValue = param.asInt(); //or param.asStr(), param.asDouble()
+  int pinValue = param.asInt(); //or param.asStr() or .asDouble()
   Serial.println("V0 Slider value is: " + String(pinValue));
 }
 ```
@@ -157,9 +159,27 @@ void loop() {
 
 * Work in teams and create the following functionality in Blynk app
   * Use ZeRGBa to control LED on pins `V0 V1 V2` (app --> argon)
-  * Use display to show if switch is open on pin `V3` (argon --> app)
+  * Use display to show if switch is `open` or `closed` on pin `V3` (argon --> app)
+  * Create a button on `V4` to display a random color from an enumerated list
+  
+  ```c++
+  enum Color { WHITE = 1, GREEN, MAGENTA, BLUE, YELLOW, RED, ORANGE };
+  ```
+  
+  * Create a menu to display a named color from the enum options `Color`on pin `V5` (app --> argon)
   * Create gauge display the random number on pin `V6` (argon --> app)
-  * Create text input to send text on pin `V4` (app --> argon)
+  
+* What happens if you put `Blynk.syncAll();` at the end of `setup()`? 
+
+## Lab Blynk App
+
+|                                                              |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <img src="lecture_blynk.assets/IMG_1618.png" alt="IMG_1618" style="zoom:50%;" /> | <img src="lecture_blynk.assets/IMG_1619.png" alt="IMG_1619" style="zoom:50%;" /> |
+
+
+
+
 
 ## Resources
 

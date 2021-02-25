@@ -17,9 +17,7 @@ title: Cloud Communication - Publish
 ## Events Part 1: Publishing Events
 
 * Events are messages sent from an Argon to the cloud **as often as you choose**
-* Events can private (viewable by only by you and devices in your account) 
-* Events can be public (viewing by anyone in the world)
-  * Public events should not include any confidential data
+* Events are private (viewable by only by you and devices in your account) 
 * Events can be accessed in [Particle console]([https://console.particle.io/](https://console.particle.io/)), app, or by other devices (subscribing)
 
 ## Events in Particle Console
@@ -31,20 +29,20 @@ title: Cloud Communication - Publish
 ## Publish Syntax
 
 ```c++
-Particle.publish(<<EVENT_NAME>>, <<EVENT_VALUE>>, <<FLAGS>>); 
+Particle.publish(<<EVENT_NAME>>, <<EVENT_VALUE>>); 
 ```
 
 Example
 
 ```c++
-Particle.publish("lightValue", "bright", PUBLIC); 
-Particle.publish("tempFahr", String(85.9), PRIVATE);
+Particle.publish("lightValue", "bright"); 
+Particle.publish("tempFahr", String(85.9));
 ```
 
 * Names and values must always be strings
 * Should only publish 1 event / sec (or burst of 4 events in 1 sec)
 
-
+<!-- public event were removed Aug 2020 -->
 
 
 
