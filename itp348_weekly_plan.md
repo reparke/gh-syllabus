@@ -620,30 +620,52 @@ toc_sticky: true
   - This seems early for this, but the semester is shortened by 2 weeks
   - Could consider moving this later in a future semester
 
-## 7. Finite State Machines ==NEED TO EXTEND TO SECOND DAY==
+## 7. Finite State Machines 
 
 ### Reading
 
-- ==Send wiring diagram out ahead of time==
+- ==Send wiring diagrams out ahead of time==
 
 ### Day 1
 
 #### Lecture
 
-- `switch ` statement
-- `enum`
+- Finish Blynk overview
+- Discuss state machines
 
-#### Guided Activity
+#### Lab
 
-- *To save time, this exercise is just an illustration of coding with `switch` and `enum`*
-- Create new project without any hardware
-- Walk students through creating an `enum` for favorite food
-- Create a global variable to store current food
-- Create a `switch` statement to use Serial monitor to display main ingredients in each dish
+- Draw state diagram
+
+- Go through code to
+
+- phase 1
+
+  - add state duration
+  - create enum for cycle and for state
+  - create current state global variable
+
+  - phase 2
+    - Cycle getCyclePosition()
+
+  - phase 3
+    - loop
+
+  - phase 4
+    - setoutputs for idle
+
+  - phase 5
+    - nextduration for idle
+    - next state for idle
+
+  - phase 6
+    - setouputs, next duration, next state for economy
+
+### Day 2
 
 #### Lecture
 
-- Finite state machines
+- Finite state machines (video)
 
 #### Lab
 
@@ -656,18 +678,7 @@ toc_sticky: true
 - next day cover `millis`, then rest of light blinking
 - some students enjoyed the complexity of all parts, other seemed bored
 
-### Day 2
-
-#### Lecture
-
-- Continued with FSM
-
-#### Lab
-
-- Continued with stoplight example
-- ==**Idea: create new guided FSM students build in pairs; discuss parameters ahead of time and states**==
-
-### Feedback
+## Feedback
 
 - 
 
