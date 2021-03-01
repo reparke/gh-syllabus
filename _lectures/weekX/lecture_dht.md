@@ -112,27 +112,35 @@ float h;
 float c;
 float f;
 
+unsigned long prevMillis = 0;
+unsigned long updateDelay = 2500;
+
 void setup() {
   Serial.begin(9600);
   dht.begin();
 }
 
 void loop() {
-    int result =
-        dht.acquireAndWait(1000);  // wait up to 1 sec (default indefinitely)
-    if (result == DHTLIB_OK) {
-      h = dht.getHumidity();
-      c = dht.getCelsius();
-      f = dht.getFahrenheit();
-      Serial.println("Humidity: " + String(h, 1) + " %");
-      Serial.println("Temp (F): " + String(f, 1) + " deg F");
-      Serial.println("Temp (C): " + String(c, 1) + " deg C");
-      publishEvents();
-    } else {
-      Serial.println("Invalid reading");
-    }
-  }
+    unsigned long currMillis = millis();
+    if (currMillis - prevMillis > updateDelay) {
+        prevMillis = currMillis;
+		
+		int result =
+			dht.acquireAndWait(1000);  // wait up to 1 sec 
+		if (result == DHTLIB_OK) {
+		  h = dht.getHumidity();
+		  c = dht.getCelsius();
+		  f = dht.getFahrenheit();
+		  Serial.println("Humidity: " + String(h, 1) + " %");
+		  Serial.println("Temp (F): " + String(f, 1) + " deg F");
+		  Serial.println("Temp (C): " + String(c, 1) + " deg C");
+		  publishEvents();
+		} else {
+		  Serial.println("Invalid reading");
+		}
+	}
 }
+
 
 ```
 

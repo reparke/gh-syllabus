@@ -25,10 +25,13 @@ Goals
 This assignment is to create a device that monitors your environment. The device will display current and historical information about your temperature and humidity via an OLED screen as well as via a cloud-based dashboard (Initial State).
 
 Here is an example:
-
+### Device
 <img src="a7_enviroment_monitor.assets/IMG_1645.jpg" style="width:400px;" />
-
+### OLED Screen
 <img src="a7_enviroment_monitor.assets/IMG_1642.jpg" style="width:200px" /> <img src="a7_enviroment_monitor.assets/IMG_1644.jpg" style="width:200px" />
+
+### Dashboard
+<img src="a7_enviroment_monitor.assets/image-20210301124257587.png" alt="image-20210301124257587" style="width:500px" />
 
 ## Components
 
@@ -42,17 +45,14 @@ Here is an example:
 ## Requirements
 
 -   Create a Fritzing breadboard prototype layout of your design. Once you’re
-    satisfied with the design, connect the device
--   It is recommended to code the device in stages, and test at each stage
-
-###  Global variables
-
--   You can create other variables as needed, but these are required
--   `double temperatures[20]` to store the most recent public temperatures.
-    Since the argon has limited memory, we are only storing the 20 most recent
-    temperatures. Once the 20th temperature has been stored, we will overwrite
-    the 1st position. This is a technique known as a **circular buffer**
--   `int currentIndex` to store which position to be written next
+    satisfied with the design, connect the device.
+-   The device will read temperature and humidity from DHT 11 sensor
+-   The device will display current temperature and humidity on OLED
+-   When button is pressed, device will display high (max) and low (min) temperature and humidity values measured since device turned on via OLED
+    -   The means when you are reading the temperature, you should be computing the highs and lows
+-   Device will send current temperature and humidity to Initial State using Particle webhooks
+-   Note: this assignment intentionally uses a sensor not used in class (DHT11). However, notes and examples are provided below
+-   It is recommended to code the device in stages, and test at each stage.
 
 ###  Stage 1:  Setup buttons and states
 
@@ -62,90 +62,69 @@ Here is an example:
 
 ###  Stage 2: DHT11 
 
--   The temperature and humidity will be measured by the DHT11 digital temperature sensor
--   Connect the OLED screen and import the library
--   
+-   [DHT 11 notes and example](https://reparke.github.io/ITP348-Physical-Computing/lectures/weekX/lecture_dht.html)
+-   Using the notes and examples provided, measure the current temperature and humidity (test by displaying to serial monitor)
+-   Store the max and min of the temperature and humidity readings (test via serial monitor)
 
-###  Stage 2: OLED 
+###  Stage 3: OLED 
 
--   Connect the OLED screen and import the library
--   Using the class examples and library examples, Use necessary conversion formulas to calculate temperature in Fahrenheit
--   Display it on serial monitor to verify
+- Connect the OLED screen and import the library
 
-### 
+- Using the class examples and library examples, display text for the two screen states
 
-###  Stage 1: Temperature sensor
+  - Current data
 
--   Connect the temperature sensor
--   Use necessary conversion formulas to calculate temperature in Fahrenheit
--   Display it on serial monitor to verify
+    ```
+    Temp
+    77.0 F
+    Hum
+    22.4 %
+    ```
+  - Historical data
 
-### Stage 2: Publishing events
+    ```
+    Temp
+    H: 77.0 F
+    L: 59.0 F
+    Hum
+    H: 22 %
+  L: 19 %
+    ```
+    
 
--   Publish the temperature as a **PUBLIC** event
--   For the event name, you must use the following format  
+- Hint: You can control how many decimals display in the output via when casting a float using `String`
 
-    `ITP348-ENVIRO/XXX` *replace XXX with your 3 letter initial*s
+  - Consider `float tempFahr = 59.299283`
+  - `String(tempFahr, 3)` will display `59.299` with 3 decimal places
+  - `String(tempFahr, 0)` will display `59` with 0 decimal places
 
--   Check the Particle console to make sure the event is publishing properly
+### Stage 4: Dashboard setup
 
-### Stage 3: Subscribing and storing events
+-   Go to [Initial State](https://www.initialstate.com/) and create a new bucket
+-   Using the Initial State API URL, go to [Particle console](https://console.particle.io/) and configure webhooks
+    -   Hint: The label that Initial State gives the data widget is determined by how you configure the webhook. Since we are need to send two different pieces of data, how many webhooks should you create?
+-   In your firmware, publish the current temperature and humidity to Initial State.
 
--   Subscribe to the event: `ITP348-ENVIRO` (this will include any event beginning
-    with `ITP348-ENVIRO`)
--   You will create what is called a **circular buffer**. Basically, when the
-    first event arrives, you will store the name and temperature in index 0, and
-    increment the `currentIndex`. This will continue until `currentIndex`
-    reaches the max size of 20, and then it will reset to 0
--   To store the temperature, you can use the C++ function `atof()`, which
-    takes a `char *` as input and returns a `double`. For example,
+### Stage 5: Configuring Dashboard
 
-    `double num = atof(data)`, *where data is a* `char *`
-
--   It is recommended (not required) that you use the event handler to update
-    the array of temperatures, but display the actual temperatures in `loop()`
-
-### Stage 4: Displaying events on OLED
-
--   Connect a button and the OLED
--   In `loop()`, use the button to switch between two “screens” of your device.
-
-#### Stats Screen
-
--   The OLED should display your current temperature, the average of the most recent public temperatures, and the maximum of the most recent  temperatures.
--    These values should be automatically updated as new temperatures arrive
-
-<img src="media/stats.jpg" style="height:200px;" />
-
-
-
-#### Temperature Feed Screen
-
--   The OLED should display the most recent temperatures (you will only be able
-    to fix up to 6). This should be automatically updated as new temperatures
-    arrive.
-
-<img src="media/cropped_temp.jpg" style="height:200px;" />
-
-
-
-## Extra Credit
-
--   In addition to storing and displaying the recent temperatures, also store
-    and display the three letter usernames associated with each temperature (see
-    picture). Here are some suggestions:
--   Create `String names[20]` array to store the names of the most recent
-    events
--   In the event handler, in order to store the name, first convert the `char
-    *` to a `String`. Then use the [`substring`](https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/substring/) method to select certain characters from the event name, which can be stored in the array
--   Here is an example of the extra credit feed screen
-
-<img src="media/temp_ec.jpg" style="height:200px;" />
+-   You should have at least four widgets in your dashboard as shown above
+    * Current temperature as a gauge
+    * Current humidity as a gauge
+    * Historical temperature as a graph
+    * Historical humidity as a graph
+-   For each of these four widgets used, you should set appropriate minimums and maximums based on the type of data displayed
 
 Deliverables
 ------------
-1.	Your Workbench project with firmware source code
-2.	A short video demonstrating all the functionality of your project
+1.	Fritzing diagram
+2.	Workbench project with firmware source code
+3.	Photos (must be clear) should show:
+   1.	Device
+   2.	Initial State dashboard
+4.	Video demonstrating all the functionality of your project and should include
+   1.	OLED screen showing current data
+   2.	Button pressed trigger OLED historical data
+   3.	Initial State dashboard 
 
 ## Submission Instructions
 
@@ -170,8 +149,10 @@ Grading
 | Item                           | Points Possible |
 | ------------------------------ | --------------- |
 | Fritzing layout                | 5               |
-| Stage 1: temperature sensor    | 10              |
-| Stage 2: publishing event      | 5               |
-| Stage 3: subscribing to events | 10              |
-| Stage 4: displaying data       | 15              |
-| Total                          | 45              |
+| Stage 1a: buttons toggling     | 5               |
+| Stage 1b: `enum` and states    | 5               |
+| Stage 2: DHT 11                | 10              |
+| Stage 3: OLED                  | 10              |
+| Stage 4: Dashboard setup       | 10              |
+| Stage 5: Configuring Dashboard | 5               |
+| Total                          | 50              |
