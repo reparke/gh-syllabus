@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-week: 15
+week: 16
 category: lectures
 title: DHT - Temperature and Humidity Sensor
 ---
@@ -42,7 +42,7 @@ title: DHT - Temperature and Humidity Sensor
 
 ## Software Library
 
-* The DHT22 uses a protocol called **1Wire** to send data
+* The DHT11 uses a protocol called **1Wire** to send data
 * In order to communicate with the device, we will need to use a special library 
 * The Argon-compatible library we will use is
   ```PietteTech_DHT```
@@ -55,13 +55,14 @@ title: DHT - Temperature and Humidity Sensor
 #include "PietteTech_DHT.h"
 ```
 
-
-
 ```c++
-#define DHTPIN D3		//DHT connected pin
-#define DHTTYPE DHT22	//specific DHT model we have
+#define DHTPIN D3		//DHT data pin
+#define DHTTYPE DHT11	//specific DHT model we have
 PietteTech_DHT dht(DHTPIN, DHTTYPE); //DHT software object
 ```
+*  Available options for `DHTTYPE` 
+  * `DHT11`, `DHT21`, `DHT22`, `AM2301`, `AM2302`
+  * The blue sensor in our kit is a `DHT11`
 
 ## ```setup()```
 
@@ -97,9 +98,47 @@ float dp = dht.getDewPoint();
 float k = dht.getTempKelvin();
 ```
 
+## Full Example
+
+```c++
+#include "PietteTech_DHT.h"
+
+#define DHTTYPE DHT11  // DHT model you have
+#define DHTPIN D2      // DHT data pin
+
+PietteTech_DHT dht(DHTPIN, DHTTYPE);
+
+float h;
+float c;
+float f;
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop() {
+    int result =
+        dht.acquireAndWait(1000);  // wait up to 1 sec (default indefinitely)
+    if (result == DHTLIB_OK) {
+      h = dht.getHumidity();
+      c = dht.getCelsius();
+      f = dht.getFahrenheit();
+      Serial.println("Humidity: " + String(h, 1) + " %");
+      Serial.println("Temp (F): " + String(f, 1) + " deg F");
+      Serial.println("Temp (C): " + String(c, 1) + " deg C");
+      publishEvents();
+    } else {
+      Serial.println("Invalid reading");
+    }
+  }
+}
+
+```
+
 ## Notes
 
-* Always include a delay of about 2.5 seconds in between measurements
+* Always wait about 2.5 seconds in between measurements (use `millis` preferably for this instead of `delay`)
 
 ## Credit
 

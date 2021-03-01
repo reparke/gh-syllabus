@@ -22,21 +22,20 @@ Goals
 
 ## Overview
 
-This assignment is to create a public temperature feed for ITP 348. You will
-send from your home as public event to the Particle cloud. You will then use an OLED to display two screens: 1) feed of the most recent temperatures from all students, and 2) your own temperature along with the average and max of all the temperatures.
+This assignment is to create a device that monitors your environment. The device will display current and historical information about your temperature and humidity via an OLED screen as well as via a cloud-based dashboard (Initial State).
 
 Here is an example:
 
-<img src="media/circuit.jpg" style="width:500px" />
+<img src="a7_enviroment_monitor.assets/IMG_1645.jpg" style="width:400px;" />
 
-<img src="media/stats.jpg" style="height:200px" /><img src="media/cropped_temp.jpg" style="height:200px;" />
+<img src="a7_enviroment_monitor.assets/IMG_1642.jpg" style="width:200px" /> <img src="a7_enviroment_monitor.assets/IMG_1644.jpg" style="width:200px" />
 
 ## Components
 
 -   Argon
 -   Breadboard
 -   1 x micro OLED
--   1 x TMP36
+-   1 x DHT11
 -   1 x  push button (plus any necessary resistors)
 -   Jumper wire
 
@@ -54,6 +53,26 @@ Here is an example:
     temperatures. Once the 20th temperature has been stored, we will overwrite
     the 1st position. This is a technique known as a **circular buffer**
 -   `int currentIndex` to store which position to be written next
+
+###  Stage 1:  Setup buttons and states
+
+-   The button will be a toggle / latch style button that will switch from displaying current temperature and humidity to displaying the minimum and maximum temperature and humidity
+-   Connect the button and configure the toggle to switch between these two states (you can use the serial monitor to make sure the states change).
+-   Use a `enum` to define the two states
+
+###  Stage 2: DHT11 
+
+-   The temperature and humidity will be measured by the DHT11 digital temperature sensor
+-   Connect the OLED screen and import the library
+-   
+
+###  Stage 2: OLED 
+
+-   Connect the OLED screen and import the library
+-   Using the class examples and library examples, Use necessary conversion formulas to calculate temperature in Fahrenheit
+-   Display it on serial monitor to verify
+
+### 
 
 ###  Stage 1: Temperature sensor
 
