@@ -1,15 +1,10 @@
----
-marp: true
-theme: itp
-
-week: 7
-category: lectures
-title: State Machines Part 3 - Stoplight Example
----
 <!-- headingDivider: 2 -->
 
+<!-- old version -- uses single LEDS not RGB -->
+
 # State Machines
-## In class Lab - Stoplight and Pedestrian Signal
+
+## In class Lab - Stoplight and Pedestrian Signal 
 
 <img src="lecture_state_machines_stoplight.assets/stoplight.jpg" alt="stoplight" style="height:500px;" /> <img src="lecture_state_machines_stoplight.assets/ped_signal.jpg" alt="ped_signal" style="width:400px;" />
 
