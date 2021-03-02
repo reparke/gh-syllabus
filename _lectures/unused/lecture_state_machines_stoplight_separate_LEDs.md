@@ -47,31 +47,32 @@ title: State Machines Part 3 - Stoplight Example
 * Wire device as shown below
 
 ## Wiring Diagram
+![bg contain right](lecture_state_machines_stoplight.assets/stoplight_bb.png)
 
-![image-20210301155641411](lecture_state_machines_stoplight.assets/image-20210301155641411.png)
+## Wiring Diagram
+![bg contain right](lecture_state_machines_stoplight.assets/IMG_8948.jpg)
+You'll need
 
+* 2 green LEDs
+* 2 yellow LEDs
+* 3 red LEDs
+* 1 white LED
+* 6 330 Ohm resistors
 
-
-## Components
-* 2 RGB LEDs
-* 1 red LED (substitute if you don't have one)
-* 1 white LED (substitute if you don't have one)
-* 8 x 330 Ohm resistors
-
-
+<!-- <img src="lecture_finite_state_machines.assets/IMG_8948.jpg" alt="IMG_8948" style="height:500px;" /> -->
 
 ## Wiring Pin Guide
 
 | LED                   | Argon Pins |
 | ---------------------------- | ---- |
-| NorthSouth RGB LED - Red | D2     |
-| NorthSouth RGB LED - Green | D3      |
-| NorthSouth RGB LED - Blue | D4      |
-| WestEast RGB LED - Red |   A5   |
-| WestEast RGB LED - Green |    A4 |
-| WestEast RGB LED - Blue | A3  |
-| Don't Walk Red LED |  D5  |
-| Walk White LED |  D6   |
+| NorthSouth Red LED      | D2     |
+| NorthSouth Yellow LED  | D3      |
+| NorthSouth Green LED  | D4      |
+| WestEast Red LED    |   A0   |
+| WestEast Yellow LED  |     A1 |
+| WestEast Green LED   | D5     |
+| Walk White LED     |  D6    |
+| Don't Walk Red LED   |  D7    |
 
 ## Lab Stages
 1. North South stop light

@@ -24,9 +24,9 @@ Colors:
 
 const int POT_PIN = A3;
 const int BUTTON_PIN = D2;
-const int LED_RED_PIN = D3;    //red
-const int LED_GREEN_PIN = D4;  //green
-const int LED_BLUE_PIN = D5;  //blue
+const int LED_RED_PIN = D3;    // red
+const int LED_GREEN_PIN = D4;  // green
+const int LED_BLUE_PIN = D5;   // blue
 
 const int SHORT_CYCLE = 2000;
 const int LONG_CYCLE = 4000;
@@ -34,23 +34,19 @@ const int LONG_CYCLE = 4000;
 unsigned long prevMillisState = 0;
 unsigned long stateDuration = 0;
 
-enum State {
-    Idle,
-    Hot,
-    Cold,
-    ExtraDry,
-    RegularDry
-};
+// create enum State for states
+enum State { Idle, Hot, Cold, ExtraDry, RegularDry };
 
-enum Cycle {
-    Economy,
-    Deluxe,
-    SuperDeluxe
-};
+// create enum Cycle for cycles
+enum Cycle { Economy, Deluxe, SuperDeluxe };
+
+enum Color { Red, Blue, Orange, White, Black };
 
 State currentState = Idle;
 
-// function for debugging only
+/* DEBUGGING FUNCTIONS ONLY
+   ========================
+*/
 String displayState(State s) {
     switch (s) {
         case Idle:
@@ -65,8 +61,9 @@ String displayState(State s) {
             return "shortdry";
     }
 }
-
-// function for debugging only
+/* DEBUGGING FUNCTIONS ONLY
+   ========================
+*/
 String displayCycle(Cycle c) {
     switch (c) {
         case Economy:
@@ -78,7 +75,9 @@ String displayCycle(Cycle c) {
     }
 }
 
-
+/* ===== FUNCTIONS ====== */
+// TODO: create getCyclePotion
+// reads potentiometer and returns current Cycle
 Cycle getCyclePosition() {
     int value = analogRead(POT_PIN);
     if (value < 1365 && value >= 0)
@@ -89,7 +88,9 @@ Cycle getCyclePosition() {
         return SuperDeluxe;
 }
 
-void nextState() {
+// TODO: create updateNextState
+// uses button inputs and current state to update global state variable
+void updateNextState() {
     State next;
 
     switch (currentState) {
@@ -135,7 +136,10 @@ void nextState() {
 
     currentState = next;
 }
-void nextDuration() {
+
+// TODO: create updateNextDuration
+// update global state duration variable based on the current state
+void updateNextDuration() {
     int next;
 
     switch (currentState) {
@@ -158,50 +162,75 @@ void nextDuration() {
 
     stateDuration = next;
 }
-void setOutputs() {
-    switch (currentState) {
-        case Idle:
-            analogWrite(LED_RED_PIN, 255);
-            analogWrite(LED_GREEN_PIN, 255);
-            analogWrite(LED_BLUE_PIN, 255);
-            break;
 
-        case Hot:  //red
-            analogWrite(LED_RED_PIN, 255);
-            analogWrite(LED_GREEN_PIN, 0);
-            analogWrite(LED_BLUE_PIN, 0);
+void setColor(Color c) {
+    switch (c) {
+        case Red:
+            digitalWrite(LED_RED_PIN, HIGH);
+            digitalWrite(LED_GREEN_PIN, LOW);
+            digitalWrite(LED_BLUE_PIN, LOW);
             break;
-
-        case Cold:  //blue
-            analogWrite(LED_RED_PIN, 0);
-            analogWrite(LED_GREEN_PIN, 0);
-            analogWrite(LED_BLUE_PIN, 255);
+        case White:
+            digitalWrite(LED_RED_PIN, HIGH);
+            digitalWrite(LED_GREEN_PIN, HIGH);
+            digitalWrite(LED_BLUE_PIN, HIGH);
             break;
-
-        case RegularDry:  //orange
+        case Blue:
+            digitalWrite(LED_RED_PIN, LOW);
+            digitalWrite(LED_GREEN_PIN, LOW);
+            digitalWrite(LED_BLUE_PIN, HIGH);
+            break;
+        case Orange:
             analogWrite(LED_RED_PIN, 255);
             analogWrite(LED_GREEN_PIN, 165);
-            analogWrite(LED_BLUE_PIN, 0);
+            digitalWrite(LED_BLUE_PIN, LOW);
             break;
-
-        case ExtraDry:  //orange
-            analogWrite(LED_RED_PIN, 255);
-            analogWrite(LED_GREEN_PIN, 165);
-            analogWrite(LED_BLUE_PIN, 0);
+        case Black:
+            digitalWrite(LED_RED_PIN, LOW);
+            digitalWrite(LED_GREEN_PIN, LOW);
+            digitalWrite(LED_BLUE_PIN, LOW);
             break;
     }
 }
 
+// TODO: create updateOutputs
+// updates LEDs based on upcoming state
+void updateOutputs() {
+    switch (currentState) {
+        case Idle:
+            setColor(White);
+            break;
+
+        case Hot:  // red
+            setColor(Red);
+            break;
+
+        case Cold:  // blue
+            setColor(Blue);
+            break;
+
+        case RegularDry:  // orange
+            setColor(Orange);
+            break;
+
+        case ExtraDry:  // orange
+            setColor(Orange);
+            break;
+    }
+}
+
+// LOOP
 void loop() {
     unsigned long currMillis = millis();
     if (currMillis - prevMillisState > stateDuration) {
         prevMillisState = currMillis;
-        nextState();
-        nextDuration();
-        setOutputs();
+        updateNextState();
+        updateNextDuration();
+        updateOutputs();
         // if (currentState != 0) {
         //     Serial.print(displayCycle(getCyclePosition()));
-        //     Serial.println(", Next state " + displayState(currentState) + " for " + String(stateDuration));
+        //     Serial.println(", Next state " + displayState(currentState) + "
+        //     for " + String(stateDuration));
         // }
     }
 }
