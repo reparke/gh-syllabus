@@ -4,7 +4,7 @@ theme: itp
 
 week: 7
 category: lectures
-title: State Machines Part 3 - Stoplight Example
+title: State Machines Part 3 - Stoplight Example new
 ---
 <!-- headingDivider: 2 -->
 
@@ -43,7 +43,7 @@ title: State Machines Part 3 - Stoplight Example
 * Download starting code
   * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-```https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week07/stop_light_start```
+```https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week07/stop_light_rgb_leds_start```
 * Wire device as shown below
 
 ## Wiring Diagram
