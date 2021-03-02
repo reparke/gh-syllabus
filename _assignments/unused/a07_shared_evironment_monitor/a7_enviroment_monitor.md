@@ -1,12 +1,3 @@
----
-week: 7
-number: 7
-category: assignments
-title: Crowdsourced Environment Monitor
-date_due: Mar 8 @ 11:59 pm
-
----
-
 Assignment 7 – Crowdsourced Environment Monitor
 =========================================
 
