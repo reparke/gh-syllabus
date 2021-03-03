@@ -79,6 +79,7 @@ void displayColor(Color c) {
     }
 }
 
+//from app to argon
 BLYNK_WRITE(V0) {  // RED
     // event handler for when the user moves the sliders on the app
     // we have a slider that send an integer value from 0-255
@@ -101,7 +102,7 @@ BLYNK_WRITE(V2) {                     // BLUE
 
 BLYNK_WRITE(V4) {  // random color button
     if (param.asInt() == 1) {           //since button widget is "push", we need this to avoid triggering on push and release
-        int rand = random(0, 7);
+        int rand = random(1, 8);
         Color c = (Color)rand;
         displayColor(c);
 
@@ -109,8 +110,8 @@ BLYNK_WRITE(V4) {  // random color button
     }
 }
 BLYNK_WRITE(V5) {                 // menu
-    int menuVal = param.asInt();  // represents slider value
-    Color c = (Color)menuVal;
+    int menuVal = param.asInt();  // represents slider value - starts at index 1 (not 0)
+    Color c = (Color)menuVal;       //cast / converted our int to an enum
     displayColor(c);
     Serial.println("menu val named color: " + String(menuVal));
 }

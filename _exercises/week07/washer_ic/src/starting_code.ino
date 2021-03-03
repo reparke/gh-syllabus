@@ -32,7 +32,6 @@ const int SHORT_CYCLE = 2000;
 const int LONG_CYCLE = 4000;
 
 unsigned long prevMillisState = 0;
-unsigned long stateDuration = 0;
 
 // create enum State for states
 enum State { Idle, Hot, Cold, ExtraDry, RegularDry };
@@ -40,13 +39,18 @@ enum State { Idle, Hot, Cold, ExtraDry, RegularDry };
 // create enum Cycle for cycles
 enum Cycle { Economy, Deluxe, SuperDeluxe };
 
+// create enum Color for light colors
 enum Color { Red, Blue, Orange, White, Black };
 
-State currentState = Idle;
+// to manage state
+State currentState = Idle;  // starting state
+Cycle currentCycle = Economy;
+unsigned long stateDuration = 0;  // how long am I in the current state
 
-/* DEBUGGING FUNCTIONS ONLY
+/* DEBUGGING FUNCTIONS ONLY - uncomment if you need to use them
    ========================
 */
+/*
 String displayState(State s) {
     switch (s) {
         case Idle:
@@ -61,9 +65,7 @@ String displayState(State s) {
             return "shortdry";
     }
 }
-/* DEBUGGING FUNCTIONS ONLY
-   ========================
-*/
+
 String displayCycle(Cycle c) {
     switch (c) {
         case Economy:
@@ -74,102 +76,90 @@ String displayCycle(Cycle c) {
             return "superdeluxe";
     }
 }
+*/
 
 /* ===== FUNCTIONS ====== */
 // TODO: create getCyclePotion
 // reads potentiometer and returns current Cycle
-Cycle getCyclePosition() {
-    int value = analogRead(POT_PIN);
-    if (value < 1365 && value >= 0)
-        return Economy;
-    else if (value >= 1365 && value < 2730)
-        return Deluxe;
-    else
-        return SuperDeluxe;
-}
+void getCyclePosition() {
+    int pos = analogRead(
+        POT_PIN);  // 0 4095---> 0-1364 Eco, 1365-2729 Del, rest is SuperDel
+    if (pos >= 0 && pos < 1365) {
+        currentCycle = Economy;
+    } else if (pos >= 1365 && pos < 2730) {
+        currentCycle = Deluxe;
+    } else {
+        currentCycle = SuperDeluxe;
+    }
 
-// Alternate version of getCyclePotion that uses map
-// reads potentiometer and returns current Cycle
-// Cycle getCyclePosition() {
-//     int rawValue = analogRead(POT_PIN);
-//     int mappedVal = map(rawValue, 0, 4095, 0, 2);
-//     Cycle c = (Cycle)mappedVal;
-//     return c;
-// }
+    // //fun alt
+    // int value = map(analogRead(POT_PIN, 0, 4095, 0, 2));
+    // currentCycle = (Cycle) value;
+}
 
 // TODO: create updateNextState
 // uses button inputs and current state to update global state variable
 void updateNextState() {
-    State next;
-
     switch (currentState) {
         case Idle:
-            if (digitalRead(BUTTON_PIN) == 1) {
-                next = Idle;
-            } else {
-                Cycle cycle = getCyclePosition();
-                switch (cycle) {
+            if (digitalRead(BUTTON_PIN) == 0) {  // mag switch closed
+                getCyclePosition();
+                switch (currentCycle) {
                     case Economy:
-                        next = Cold;
+                        currentState = Cold;
                         break;
                     case Deluxe:
-                        next = Hot;
+                        currentState = Hot;
                         break;
                     case SuperDeluxe:
-                        next = Hot;
+                        currentState = Hot;
                         break;
                 }
             }
             break;
+        case Cold:
+            currentState = RegularDry;
+            break;
         case Hot:
-            if (getCyclePosition() == Deluxe) {
-                next = RegularDry;
-            } else if (getCyclePosition() == SuperDeluxe) {
-                next = ExtraDry;
+            if (currentCycle == Deluxe) {
+                currentState = RegularDry;
+            } else {
+                currentState = ExtraDry;
             }
             break;
-            next = ExtraDry;
-            break;
-        case Cold:
-            next = RegularDry;
-            break;
-
         case RegularDry:
-            next = Idle;
+            currentState = Idle;
             break;
-
         case ExtraDry:
-            next = Idle;
+            currentState = Idle;
             break;
     }
-
-    currentState = next;
 }
 
 // TODO: create updateNextDuration
 // update global state duration variable based on the current state
 void updateNextDuration() {
-    int next;
-
     switch (currentState) {
         case Idle:
-            next = 0;
+            stateDuration = 0;
             break;
         case Hot:
-            next = LONG_CYCLE;
+            if (currentCycle == Deluxe) {
+                stateDuration = SHORT_CYCLE;
+            } else {
+                stateDuration = LONG_CYCLE;
+            }
             break;
         case Cold:
-            next = SHORT_CYCLE;
+            stateDuration = SHORT_CYCLE;
             break;
         case RegularDry:
-            next = SHORT_CYCLE;
+            stateDuration = SHORT_CYCLE;
             break;
         case ExtraDry:
-            next = LONG_CYCLE;
+            stateDuration = LONG_CYCLE;
             break;
     }
-
-    stateDuration = next;
 }
 
 void setColor(Color c) {
@@ -201,7 +191,6 @@ void setColor(Color c) {
             break;
     }
 }
-
 // TODO: create updateOutputs
 // updates LEDs based on upcoming state
 void updateOutputs() {
@@ -209,38 +198,34 @@ void updateOutputs() {
         case Idle:
             setColor(White);
             break;
-
-        case Hot:  // red
-            setColor(Red);
-            break;
-
-        case Cold:  // blue
+        case Cold:
             setColor(Blue);
             break;
-
-        case RegularDry:  // orange
+        case Hot:
+            setColor(Red);
+            break;
+        case ExtraDry:
             setColor(Orange);
             break;
-
-        case ExtraDry:  // orange
+        case RegularDry:
             setColor(Orange);
             break;
     }
 }
-
 // LOOP
 void loop() {
-    unsigned long currMillis = millis();
-    if (currMillis - prevMillisState > stateDuration) {
-        prevMillisState = currMillis;
-        updateNextState();
-        updateNextDuration();
-        updateOutputs();
-        // if (currentState != 0) {
-        //     Serial.print(displayCycle(getCyclePosition()));
-        //     Serial.println(", Next state " + displayState(currentState) + "
-        //     for " + String(stateDuration));
-        // }
+    // check timer
+    // check cycle
+    // check if switch is closed
+    // update state
+
+    unsigned long curMillis = millis();
+    if (curMillis - prevMillisState >
+        stateDuration) {              // the timer is up....this could be ANY
+        prevMillisState = curMillis;  // update
+        updateNextState();     // 1. determine the next state we should go to
+        updateNextDuration();  // 2. change to new timer
+        updateOutputs();       // 3. change any LEDS etc. based the new state
     }
 }
 
