@@ -18,11 +18,3 @@ title: Pre-Lecture Activities
   * Bluetooth Reference
     * [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
     * [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
-
-
-
-* **For Thursday**
-
-  * Watch **Ultrasonic Distance Sensor**
-    {% include video id="vyQC0CpwKmo" provider="youtube" %}
-  

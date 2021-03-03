@@ -27,12 +27,13 @@ toc_sticky: true
 * [x] wk5: add API graphic illustration for webhook
 * [x] wk5: revise lab and slides to show TMP36, not photoresistor
 * [x] wk6: revise Blynk lab
-* [ ] wk7: create lecture / lab activities for FSM day 2
+* [x] wk7: create lecture / lab activities for FSM day 2
 * [ ] wk8: revise alarm clock assignment to use FSM **and** Blynk (for blynk, use either simple buttons or "time input" to set alarm time)
 * [x] wk11: may be too much dashboard content; consider moving single data point for initial state to earlier week
+* [ ] wk10: review initial state code. need if JSON needs to be covered first
 * [ ] wk11: inquire about future class TAs and kit TA
 * [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
-* [ ] general: try to incorporate `enum` or `switch` earlier in semester
+* [x] general: try to incorporate `enum` or `switch` earlier in semester
 * [x] wk11: building smart watch: need to text and pictures to use velcro
 * [x] account for wellness days in schedule
 * [x] account for extra two weeks in schedule
