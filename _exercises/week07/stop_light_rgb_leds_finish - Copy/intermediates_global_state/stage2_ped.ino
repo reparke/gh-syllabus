@@ -13,23 +13,27 @@ const int PIN_WE_BLUE = A3;
 const int PIN_DONT_WALK = D5;
 const int PIN_WALK = D6;
 
-const int LONG_LIGHT_DURATION = 5000;          // time for green, red, walk, don't walk
-const int SHORT_LIGHT_DURATION = 2000;  // time for yellow
+const int GO_TIME = 5000;          // time for green, red, walk, don't walk
+const int TRANSITION_TIME = 2000;  // time for yellow
 const int BLINK_RATE = 500;        // time for blinking don't walk light
 
 // stage 1: NS state changes
 unsigned long prevMillisState = 0;
 unsigned long stateLength = 0;
 
-enum State { stateNSG, stateNSY, stateNSR };
+// enum State { stateNSG, stateNSY, stateNSR }; //stage 2: add pedestrians
+enum State { stateNSG, stateNSY, statePED, statePEDDW };  //
+
 State currentState = stateNSG;
 
 enum Color { Red, Yellow, Green, Black };
 enum Light { lightNS, lightWE };
 
-// for testing purposes only
+// for testing purposes onle
 int lights[] = {PIN_NS_RED,   PIN_NS_GREEN, PIN_NS_BLUE, PIN_WE_RED,
                 PIN_WE_GREEN, PIN_WE_BLUE,  PIN_WALK,    PIN_DONT_WALK};
+
+
 
 void setup() {
     Serial.begin(9600);
@@ -89,13 +93,20 @@ void updateLights() {
     switch (currentState) {  // stage 1: add switch statement
         case stateNSY:
             setColor(lightNS, Yellow);
+            digitalWrite(PIN_DONT_WALK, HIGH);  // stage 2
             break;
-        case stateNSR:  // stage 2
-            // case statePED:
+        // case NSR:                    //stage 2
+        case statePED:
             setColor(lightNS, Red);
+            digitalWrite(PIN_WALK, HIGH);
+            break;
+        case statePEDDW:
+            setColor(lightNS, Red);
+            digitalWrite(PIN_DONT_WALK, HIGH);
             break;
         case stateNSG:
             setColor(lightNS, Green);
+            digitalWrite(PIN_DONT_WALK, HIGH);
             break;
     }
 }
@@ -104,18 +115,27 @@ void updateLights() {
 void updateNextStateDuration() {
     switch (currentState) {
         case stateNSY:
-            stateLength = SHORT_LIGHT_DURATION;
+        case statePEDDW:
+            stateLength = TRANSITION_TIME;
             break;
         default:
-            stateLength = LONG_LIGHT_DURATION;
+            stateLength = GO_TIME;
     }
 }
 void updateNextState() {
     switch (currentState) {
         case stateNSY:
-            currentState = stateNSR;  // stage 2
+            // currentState = stateNSR; //stage 2
+            currentState = statePED;
+            // currentState = stateWEG;
             break;
-        case stateNSR:  // stage 2
+        // case stateNSR:  //stage 2
+        case statePED:  // stage 2
+            // Reset the blink rate when changing OUT of PED
+            // isDWLedOn = true;        //commented out--why was this here?
+            currentState = statePEDDW;
+            break;
+        case statePEDDW:
             currentState = stateNSG;
             break;
         case stateNSG:
@@ -136,6 +156,8 @@ void loop() {
         updateLights();
         // Serial.println(" --> " + String(currentState));
     }
+
+   
 }
 
 /* ======= FUNCTIONS FOR DEBUGGING LED WIRING ========= */

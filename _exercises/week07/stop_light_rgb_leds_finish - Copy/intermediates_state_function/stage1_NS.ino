@@ -8,20 +8,15 @@ const int WEGrn = D5;
 const int PIN_WALK = D6;
 const int PIN_DONT_WALK = D7;
 
-const int LONG_LIGHT_DURATION = 5000;          // time for green, red, walk, don't walk
-const int SHORT_LIGHT_DURATION = 1000;  // time for yellow
+const int GO_TIME = 5000;          // time for green, red, walk, don't walk
+const int TRANSITION_TIME = 1000;  // time for yellow
 const int BLINK_RATE = 500;        // time for blinking don't walk light
 
 // stage 1: NS state changes
 unsigned long prevMillisState = 0;
 unsigned long stateLength = 0;
-
-// enum State { NSG, NSY, NSR }; //stage 2: add pedestrians
-enum State { stateNSG, stateNSY, statePED, statePEDDW };  // stage 2
+enum State { stateNSG, stateNSY, NSR };
 State currentState = stateNSG;
-
-unsigned long prevMillisBlink = 0;  // stage 3: blinking
-bool isDWLedOn = true;              // controls LED blinking for don't walk
 
 void setup() {
   Serial.begin(9600);
@@ -40,12 +35,8 @@ void setup() {
 State getNextState(State s) {
   switch (s) {
     case stateNSY:
-      // return NSR; //stage 2
-      return statePED;
-    case statePED:        // stage 2
-      return statePEDDW;  // stage 2
-    // case NSR:    //stage 2
-    case statePEDDW:
+      return NSR;
+    case NSR:
       return stateNSG;
     case stateNSG:
       return stateNSY;
@@ -55,13 +46,12 @@ State getNextState(State s) {
 int getNextStateDuration(State s) {
   switch (s) {
     case stateNSY:
-    case statePEDDW:  // stage 2
-      return SHORT_LIGHT_DURATION;
+      return TRANSITION_TIME;
     default:
-      return LONG_LIGHT_DURATION;
+      return GO_TIME;
   }
 }
-// stage 1: add state parameter; add
+// stage 1: add state parameter; add 
 void setLight(State s) {
   digitalWrite(PIN_NS_RED, LOW);
   digitalWrite(NSYel, LOW);
@@ -71,26 +61,16 @@ void setLight(State s) {
   digitalWrite(WEGrn, LOW);
   digitalWrite(PIN_WALK, LOW);
   digitalWrite(PIN_DONT_WALK, LOW);
-  // stage 1: add switch statement
+  //stage 1: add switch statement
   switch (s) {
     case stateNSY:
       digitalWrite(NSYel, HIGH);
-      digitalWrite(PIN_DONT_WALK, HIGH);  // stage 2
       break;
-    // case NSR:                    //stage 2
-    case statePED:
-      digitalWrite(PIN_WALK, HIGH);
+    case NSR:
       digitalWrite(PIN_NS_RED, HIGH);
-
-      break;
-    case statePEDDW:
-      digitalWrite(PIN_DONT_WALK, HIGH);
-      digitalWrite(PIN_NS_RED, HIGH);
-
       break;
     case stateNSG:
       digitalWrite(NSGrn, HIGH);
-      digitalWrite(PIN_DONT_WALK, HIGH);
       break;
   }
 }
@@ -107,12 +87,5 @@ void loop() {
     stateLength = getNextStateDuration(currentState);
     setLight(currentState);
   }
-
-  // stage 3:
-  if ((curMillis - prevMillisBlink) > BLINK_RATE && currentState != statePED) {
-    prevMillisBlink = curMillis;
-
-    isDWLedOn = !isDWLedOn;
-    digitalWrite(PIN_DONT_WALK, isDWLedOn);
-  }
 }
+

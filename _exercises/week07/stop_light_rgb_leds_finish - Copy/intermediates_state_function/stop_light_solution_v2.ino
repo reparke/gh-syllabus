@@ -13,8 +13,8 @@ const int WEGrn = D5;
 const int PIN_WALK = D6;
 const int PIN_DONT_WALK = D7;
 
-const int LONG_LIGHT_DURATION = 5000;          // time for green, red, walk, don't walk
-const int SHORT_LIGHT_DURATION = 2000;  // time for yellow
+const int GO_TIME = 5000;          // time for green, red, walk, don't walk
+const int TRANSITION_TIME = 2000;  // time for yellow
 const int BLINK_RATE = 500;        // time for blinking don't walk light
 
 unsigned long prevMillisState = 0;
@@ -85,9 +85,9 @@ int getNextStateDuration(State s) {
     case stateNSY:
     case stateWEY:
     case statePEDDW:
-      return SHORT_LIGHT_DURATION;
+      return TRANSITION_TIME;
     default:
-      return LONG_LIGHT_DURATION;
+      return GO_TIME;
   }
 }
 State getNextState(State s) {

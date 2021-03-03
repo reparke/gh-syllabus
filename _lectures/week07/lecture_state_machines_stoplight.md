@@ -17,6 +17,8 @@ title: State Machines Part 3 - Stoplight Example
 
 * We are going to build a stoplight for a two way intersection with a diagonal pedestrian crossing (meaning all traffic stops)
   * also known as a pedestrian scramble
+* Green lights, red lights, and the walk signal will stay on for 5 sec (`LONG_LIGHT_DURATION`)
+* Yellow lights and the don't walk signal will stay on for 2 sec (`SHORT_LIGHT_DURATION`)
 * Here is how this type of intersection works
 
 ## 
@@ -76,10 +78,10 @@ title: State Machines Part 3 - Stoplight Example
 | Walk White LED |  D6   |
 
 ## Lab Stages
-1. North South stop light
-2. Add Pedestrian Walk / Don't Walk light
-3. Make Don't Walk light blink
-4. Add West East stop light
+1. Create cycle with only North-South stop lights
+2. Add Pedestrian Walk / Don't Walk lights into cycle
+3. Make Don't Walk light blink when it is on
+4. Add West-East stop light into cycle
 
 * We will work through stage 1 together
 * You will work in pairs implement stages 2-4, and we will review together as a class after each stage

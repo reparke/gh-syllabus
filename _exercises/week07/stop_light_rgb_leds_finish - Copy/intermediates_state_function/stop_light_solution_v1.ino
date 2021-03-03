@@ -1,8 +1,8 @@
-// cf: http://siever.info/cse132/weeks/3/studio/
-// this code is adapted from Bill Siever
+//cf: http://siever.info/cse132/weeks/3/studio/
+// this code is from Bill Siever
 // two lane stoplight and pedestrian walk light
 
-// it uses a timing approach based on cur and prevMillis
+//it uses a timing approach to calculate "next period"
 
 const int PIN_NS_RED = D2;
 const int NSYel = D3;
@@ -13,31 +13,34 @@ const int WEGrn = D5;
 const int PIN_WALK = D6;
 const int PIN_DONT_WALK = D7;
 
-const int LONG_LIGHT_DURATION = 5000;          // time for green, red, walk, don't walk
-const int SHORT_LIGHT_DURATION = 2000;  // time for yellow
-const int BLINK_RATE = 500;        // time for blinking don't walk light
+const int GO_TIME = 5000;  // time for green, red, walk, don't walk
+const int TRANSITION_TIME = 1000; //time for yellow
+const int BLINK_RATE = 500; // time for blinking don't walk light
 
-unsigned long prevMillisState = 0;
-unsigned long prevMillisBlink = 0;
-
-enum State { stateNSY, stateWEG, stateWEY, statePED, statePEDDW, stateNSG };
+enum State {
+   stateNSY,   
+   stateWEG, 
+   stateWEY, 
+   statePED, 
+   statePEDDW,
+   stateNSG
+}; 
 State currentState = stateNSG;
-
-unsigned long stateLength = 0;
-
-bool pedOn = true;    //controls LED blinking for don't walk
+unsigned long nextStateChange = 0;
+unsigned long nextBlink = 0;
+bool pedOn = true;
 void setup() {
   Serial.begin(9600);
   // put your setup code here, to run once:
   pinMode(PIN_NS_RED, OUTPUT);
-  pinMode(NSYel, OUTPUT);
+  pinMode(NSYel, OUTPUT);  
   pinMode(NSGrn, OUTPUT);
   pinMode(PIN_WE_RED, OUTPUT);
-  pinMode(WEYel, OUTPUT);
+  pinMode(WEYel, OUTPUT);  
   pinMode(WEGrn, OUTPUT);
-  pinMode(PIN_WALK, OUTPUT);
+  pinMode(PIN_WALK, OUTPUT);  
   pinMode(PIN_DONT_WALK, OUTPUT);
-
+  
   digitalWrite(PIN_WALK, HIGH);
   digitalWrite(PIN_DONT_WALK, HIGH);
 }
@@ -50,79 +53,76 @@ void setLight(State s) {
   digitalWrite(WEGrn, LOW);
   digitalWrite(PIN_WALK, LOW);
   digitalWrite(PIN_DONT_WALK, LOW);
-  switch (s) {
+  switch(s) {
     case stateNSY:
       digitalWrite(NSYel, HIGH);
-      digitalWrite(PIN_WE_RED, HIGH);
-      break;
+      digitalWrite(PIN_WE_RED, HIGH);  
+    break;
     case stateWEG:
       digitalWrite(PIN_NS_RED, HIGH);
       digitalWrite(WEGrn, HIGH);
-      break;
+    break;
     case stateWEY:
       digitalWrite(PIN_NS_RED, HIGH);
       digitalWrite(WEYel, HIGH);
-      break;
+    break;
     case statePED:
       digitalWrite(PIN_NS_RED, HIGH);
       digitalWrite(PIN_WE_RED, HIGH);
       digitalWrite(PIN_WALK, HIGH);
-      break;
+    break;
     case statePEDDW:
       digitalWrite(PIN_NS_RED, HIGH);
       digitalWrite(PIN_WE_RED, HIGH);
       digitalWrite(PIN_DONT_WALK, HIGH);
-      break;
-    case stateNSG:
+    break;
+    case stateNSG: 
       digitalWrite(NSGrn, HIGH);
       digitalWrite(PIN_WE_RED, HIGH);
       digitalWrite(PIN_DONT_WALK, HIGH);
-      break;
+    break;
   }
 }
-int getNextStateDuration(State s) {
-  switch (s) {
+int stateDuration(State s) {
+  switch(s) {
     case stateNSY:
     case stateWEY:
     case statePEDDW:
-      return SHORT_LIGHT_DURATION;
+      return TRANSITION_TIME;
     default:
-      return LONG_LIGHT_DURATION;
+      return GO_TIME;
   }
 }
-State getNextState(State s) {
-  switch (s) {
+State nextState(State s) {
+  switch(s) {
     case stateNSY:
       return stateWEG;
     case stateWEG:
       return stateWEY;
-    case stateWEY:
+    case stateWEY: 
       return statePED;
     case statePED:
       // Reset the blink rate when changing OUT of PED
       pedOn = true;
+      nextBlink = millis() + BLINK_RATE;
       return statePEDDW;
     case statePEDDW:
       return stateNSG;
     case stateNSG:
-      return stateNSY;
+      return stateNSY;   
   }
 }
 void loop() {
-  unsigned long curMillis = millis();  // current time
-
-  if ((curMillis - prevMillisState) > stateLength) {
-    prevMillisState = curMillis;
+  if(millis()>nextStateChange) {
     Serial.println("Changing State");
-    currentState = getNextState(currentState);
-    stateLength = getNextStateDuration(currentState);
+    currentState = nextState(currentState);
+    nextStateChange += stateDuration(currentState);
     setLight(currentState);
   }
-
-  if ((curMillis - prevMillisBlink) > BLINK_RATE && currentState != statePED) {
-    prevMillisBlink = curMillis;
-
-    pedOn = !pedOn;
-    digitalWrite(PIN_DONT_WALK, pedOn);
-  }
+  
+  if(millis()>nextBlink && currentState != statePED) {
+      nextBlink += BLINK_RATE;
+      pedOn = !pedOn;
+      digitalWrite(PIN_DONT_WALK, pedOn);
+   }
 }

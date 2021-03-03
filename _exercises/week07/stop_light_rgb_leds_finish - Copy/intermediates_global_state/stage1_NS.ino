@@ -13,8 +13,8 @@ const int PIN_WE_BLUE = A3;
 const int PIN_DONT_WALK = D5;
 const int PIN_WALK = D6;
 
-const int LONG_LIGHT_DURATION = 5000;          // time for green, red, walk, don't walk
-const int SHORT_LIGHT_DURATION = 2000;  // time for yellow
+const int GO_TIME = 5000;          // time for green, red, walk, don't walk
+const int TRANSITION_TIME = 2000;  // time for yellow
 const int BLINK_RATE = 500;        // time for blinking don't walk light
 
 // stage 1: NS state changes
@@ -104,10 +104,10 @@ void updateLights() {
 void updateNextStateDuration() {
     switch (currentState) {
         case stateNSY:
-            stateLength = SHORT_LIGHT_DURATION;
+            stateLength = TRANSITION_TIME;
             break;
         default:
-            stateLength = LONG_LIGHT_DURATION;
+            stateLength = GO_TIME;
     }
 }
 void updateNextState() {

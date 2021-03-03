@@ -8,8 +8,8 @@ const int WEGrn = D5;
 const int PIN_WALK = D6;
 const int PIN_DONT_WALK = D7;
 
-const int LONG_LIGHT_DURATION = 5000;          // time for green, red, walk, don't walk
-const int SHORT_LIGHT_DURATION = 1000;  // time for yellow
+const int GO_TIME = 5000;          // time for green, red, walk, don't walk
+const int TRANSITION_TIME = 1000;  // time for yellow
 const int BLINK_RATE = 500;        // time for blinking don't walk light
 
 // for testing purposes onle

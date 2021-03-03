@@ -8,20 +8,16 @@ const int WEGrn = D5;
 const int PIN_WALK = D6;
 const int PIN_DONT_WALK = D7;
 
-const int LONG_LIGHT_DURATION = 5000;          // time for green, red, walk, don't walk
-const int SHORT_LIGHT_DURATION = 1000;  // time for yellow
+const int GO_TIME = 5000;          // time for green, red, walk, don't walk
+const int TRANSITION_TIME = 1000;  // time for yellow
 const int BLINK_RATE = 500;        // time for blinking don't walk light
 
 // stage 1: NS state changes
 unsigned long prevMillisState = 0;
 unsigned long stateLength = 0;
-
 // enum State { NSG, NSY, NSR }; //stage 2: add pedestrians
-enum State { stateNSG, stateNSY, statePED, statePEDDW };  // stage 2
+enum State { stateNSG, stateNSY, statePED, statePEDDW };
 State currentState = stateNSG;
-
-unsigned long prevMillisBlink = 0;  // stage 3: blinking
-bool isDWLedOn = true;              // controls LED blinking for don't walk
 
 void setup() {
   Serial.begin(9600);
@@ -56,9 +52,9 @@ int getNextStateDuration(State s) {
   switch (s) {
     case stateNSY:
     case statePEDDW:  // stage 2
-      return SHORT_LIGHT_DURATION;
+      return TRANSITION_TIME;
     default:
-      return LONG_LIGHT_DURATION;
+      return GO_TIME;
   }
 }
 // stage 1: add state parameter; add
@@ -106,13 +102,5 @@ void loop() {
     currentState = getNextState(currentState);
     stateLength = getNextStateDuration(currentState);
     setLight(currentState);
-  }
-
-  // stage 3:
-  if ((curMillis - prevMillisBlink) > BLINK_RATE && currentState != statePED) {
-    prevMillisBlink = curMillis;
-
-    isDWLedOn = !isDWLedOn;
-    digitalWrite(PIN_DONT_WALK, isDWLedOn);
   }
 }
