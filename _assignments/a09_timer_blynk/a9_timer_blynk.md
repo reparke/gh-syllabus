@@ -169,13 +169,13 @@ Deliverables
 1.	Fritzing diagram
 2.	Workbench project with firmware source code
 3.	Photos (must be clear) should show:
-   1.	Device
-   2.	Blynk app
+   * Device
+   * Blynk app
 4.	Video demonstrating all the functionality of your project and should include
-   1.	Starting alarm timer in Blynk app
-   2.	Pausing alarm timer
-   3.	Alarm timer gauge counting down
-   4.	Song playing
+   * Starting alarm timer in Blynk app
+   * Pausing alarm timer
+   * Alarm timer gauge counting down
+   * Song playing
 
 ## Submission Instructions
 
