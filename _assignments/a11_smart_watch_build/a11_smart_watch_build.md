@@ -6,7 +6,7 @@ title: Smart Watch Build (part 1)
 date_due: Mar 29 @ in class
 
 ---
-Assignment 10 – Smart Watch Build
+Assignment 11 – Smart Watch Build
 ============================
 
 [Submit on Blackboard](https://blackboard.usc.edu/)

@@ -8,7 +8,7 @@ date_due: Mar 22 @ 11:59 pm (two weeks)
 
 ---
 
-Assignment 8 – Timer with Blynk
+Assignment 9 – Timer with Blynk
 ==========================
 
 [Submit on Blackboard](https://blackboard.usc.edu/)
