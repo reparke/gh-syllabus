@@ -6,7 +6,7 @@ title: Bluetooth Car (part 2)
 date_due: Mar 29 @ 11:59 pm
 
 ---
-Assignment 10 – Bluetooth Car part 2
+Assignment 10	 – Bluetooth Car part 2
 ============================
 
 [Submit on Blackboard](https://blackboard.usc.edu/)

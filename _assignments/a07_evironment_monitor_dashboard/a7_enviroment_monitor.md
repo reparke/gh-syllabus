@@ -119,12 +119,12 @@ Deliverables
 1.	Fritzing diagram
 2.	Workbench project with firmware source code
 3.	Photos (must be clear) should show:
-   1.	Device
-   2.	Initial State dashboard
+   * Device
+   * Initial State dashboard
 4.	Video demonstrating all the functionality of your project and should include
-   1.	OLED screen showing current data
-   2.	Button pressed trigger OLED historical data
-   3.	Initial State dashboard 
+   * OLED screen showing current data
+   * Button pressed trigger OLED historical data
+   * Initial State dashboard 
 
 ## Submission Instructions
 
