@@ -119,6 +119,7 @@ noTone(<<PIN>>);
 
 ## References
 
+* [Notes for some popular songs](https://dragaosemchama.com/en/2019/02/songs-for-arduino/) (note that the format for playing notes is different in this code, but you can still extract the notes and duration from these examples)
 * Images created with [Fritzing](https://fritzing.org/home/)
 * [Pixabay](https://pixabay.com/illustrations/banner-header-sound-wave-music-1571999/)
 * [Sparkfun](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-experiment-guide---v40/circuit-2a-buzzer)
