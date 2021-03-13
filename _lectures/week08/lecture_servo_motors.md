@@ -34,6 +34,17 @@ title: Servo Motors
 * Service range of typical servos are between 0 and 180 degrees
   * However, rotating to the full range (0 and 180) can damage so often we use a smaller range such as 15-165
 
+## Inside Servo Motors
+
+<img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/5/2/6/servo-guts_1.jpg" alt="alt text" style="width:600px;" />
+
+## Quick Note on Wire Colors
+
+<img src="lecture_servo_motors.assets/servo-color-code.jpg" alt="bg opacity:.75" style="width:400px;" /><img  src="lecture_servo_motors.assets/image-20210310115209181.png" alt="image-20210310115209181" style="width:400px" />
+
+* The wiring colors vary with different servos so look carefully at your documentation
+* Many servos will require **5V** not **3.3V** so use `VUSB` 
+
 ## Wiring Diagram
 
 <img src="lecture_servo_motors.assets/servo_bb.png" alt="servo_bb" style="width:700px" />
@@ -156,5 +167,8 @@ Credits
 
 * Images created with [Fritzing](https://fritzing.org/home/)
 * Original slides created by Ray Kim
+* [Sparkfun](https://learn.sparkfun.com/tutorials/servo-trigger-hookup-guide/all)
 * [Sparkfun](https://www.sparkfun.com/products/14760)
+
+
 

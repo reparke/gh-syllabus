@@ -18,12 +18,3 @@ title: Pre-Lecture Activities
 
 - [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
 
-* Watch Video
-  
-  * {% include video id="a56EeVg3z_s" provider="youtube" %}
-  
-* Motors Reference
-  
-  - [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
-  
-

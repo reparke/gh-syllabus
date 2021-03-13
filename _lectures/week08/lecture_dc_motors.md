@@ -10,6 +10,8 @@ title: DC Motors
 <!-- headingDivider: 2 -->
 
 # DC Motors
+<img src="lecture_dc_motors.assets/dc_motors.png" style="width:800px;" />
+
 ## Goals
 
 1. Discuss the different types of motors used in small electronic devices
@@ -20,15 +22,6 @@ title: DC Motors
 
 4. DC motor applications
 
-## DC Motor Composition
-
-* DC motors have three main parts:
-  * Stator (stationary part with magnets)
-  * Armature (rotating wire)
-  * Commutator (supplies current to armature)
-
-
-
 ## DC Motor Applications
 
 * Hobby motors
@@ -37,20 +30,29 @@ title: DC Motors
 * Large DC motors
   * Electric scooters
   * High-torque applications
+* Motors can also generate electricity (generators / alternators)
 
 <!--Torque is a measure of force that causes an object to rotate about an axis-->
 
+## Three Main Parts of DC Motor  
+
+* Stator (stationary part with magnets)
+* Armature (rotating wire)
+* Commutator (supplies current to armature)
+
+## Inside Simple DC Motor
+
+<img src="lecture_dc_motors.assets/524dcee9757b7f00478b4567.jpg" alt="https://cdn.sparkfun.com/assets/a/1/6/0/2/524dcee9757b7f00478b4567.jpg" style="width:500px;" /> <img src="lecture_dc_motors.assets/BrushMotorAnatomy_1.png" alt="Disected Motor!" style="width:350px;" />
+
+
+
 ## DC Motor Construction
 
-<img src="lecture_dc_motors.assets/dc_motor_construction.png" alt="dc_motor_construction" style="width:900px" />
+<img src="lecture_dc_motors.assets/dc_motor_construction_single.png" alt="dc_motor_construction" style="width:600px" />
 
-## DC Motor Construction
+<img src="lecture_dc_motors.assets/dc_motor_construction.png" alt="dc_motor_construction" style="width:500px" />
 
-<img src="lecture_dc_motors.assets/dc_motor_construction2.png" alt="dc_motor_construction" style="width:750px" />
 
-## DC Motor Construction
-
-<img src="lecture_dc_motors.assets/dc_motor_construction3.png" alt="dc_motor_construction" style="width:900px" />
 
 ## Electricity and Magnetism
 
@@ -65,23 +67,18 @@ title: DC Motors
 
 ## Lorentz Force
 
-<img src="lecture_dc_motors.assets/lorentz.png" alt="Lorentz Force" style="width:800px" />
+<img src="lecture_dc_motors.assets/lorentz.png" alt="Lorentz Force" style="width:700px" />
 
 ## Lorentz Force
 
-<img src="lecture_dc_motors.assets/lorentz2.png" alt="Lorentz Force" style="width:600px" />
+<img src="lecture_dc_motors.assets/lorentz2.png" alt="Lorentz Force" style="width:350px" /> <img src="lecture_dc_motors.assets/lorentz2_current_reversed.png" alt="Lorentz Force" style="width:350px" />
 
-<!--in this picture, force on right side of armature is INTO screen while force on left side of armature is OUT of screen (since current is opposite direction)-->
+<!-- force on right side of armature is INTO screen while force on left side of armature is OUT of screen (since current is opposite direction)-->
 
-## Lorentz Force
-
-<img src="lecture_dc_motors.assets/lorentz2_current_reversed.png" alt="Lorentz Force" style="width:600px" />
-
-<!--in this picture, force on right side of armature is INTO screen while force on left side of armature is OUT of screen (since current is opposite direction)-->
 
 ## Lorentz Force
 
-* When the armature rotates 90 degrees, the two contacts then reverse the current
+* When the armature rotates 90 degrees, the two contacts reverse the current
 
 * This doesn’t change the direction of the current relative to the magnetic field
   * The Lorentz Force is acting in the SAME direction all the time
@@ -91,23 +88,17 @@ title: DC Motors
 
 <img src="lecture_dc_motors.assets/DCMotor.gif" alt="Motor gif" style="width:1100px" />
 
-## DC Motor Types
 
-* Brushed DC Motor
-  * Uses physical contact points in the commutator to switch the direction of current
-* Brushless DC Motor
-  * Electronically commutated motor (ECM or EC motor)
-  * Synchronous DC motor
-  * Uses an inverter which electrically switches the DC power supply to an alternating current (AC) power supply
 
 ## DC Motor Types
 
-* Brushed
-  * Pro: Relatively inexpensive
-  * Con: Parts wear out over time
-* Brushless
-  * Pro: Less wear on moving parts
-  * Con: More expensive
+| Brushed                                                      | Brushless (synchronous or electronically commutated motor)   |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Physical contact points in the commutator to switch current direction | Inverter to electrically switches the DC power supply to AC power supply |
+| Pro: Relatively inexpensive                                  | Pro: Less wear on moving parts                               |
+| Con: Parts wear out over time                                | Con: More expensive                                          |
+
+
 
 ## Exercise
 
@@ -120,9 +111,6 @@ title: DC Motors
 
 ## Motors
 
-* Motors can generate electricity
-  * Generators
-  * Alternators
 * Spin is controlled by current direction
 * If direction is reversed, the motor spins in the opposite direction
 * It is not practical to have to reverse the wires to change motor direction
@@ -143,6 +131,8 @@ title: DC Motors
 
 ## Motor Controller Wiring Guide
 
+<span style="font-size: smaller">
+
 | Motor Controller         | Explanation                                           |
 | ------------------------ | ----------------------------------------------------- |
 | PWMA                     | Motor A speed (PWM)                                   |
@@ -153,14 +143,14 @@ title: DC Motors
 | VM                       | Power for motors (3v3, or higher for powerful motors) |
 | STBY                     | Enable motor (3v3)                                    |
 | GND                      | Ground                                                |
-
+</span>
 
 
 ## Controlling the Motor Direction
 
-* Setting the direction is done by changing the two input pins to HIGH and LOW separately
-  * Ex: AI1 = HIGH; AI2 = LOW is one direction
-  * Ex: AI1 = LOW; AI2 = HIGH is one direction
+* Setting the direction is done by changing the two input pins to HIGH and LOW separatel
+  * Ex: `AI1 = HIGH` and `AI2 = LOW` is one direction
+  * Ex: `AI1 = LOW` and `AI2 = HIGH` is other direction
 * Setting them both to LOW means stopping the motor
 * Setting them both to HIGH can damage the motor
 
@@ -201,3 +191,4 @@ title: DC Motors
 * Images created with [Fritzing](https://fritzing.org/home/)
 * Original slides created by Ray Kim
 * [Sparkfun](https://www.sparkfun.com/products/14451)
+* For more in-depth discussion of motors, see this [page](https://learn.sparkfun.com/tutorials/motors-and-selecting-the-right-one/all)

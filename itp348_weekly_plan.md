@@ -10,6 +10,10 @@ toc_sticky: true
 ---
 ## 		Things to implement
 
+* [ ] need to order
+  * [ ] trimpots
+  * [x] microservos
+  * [ ] microoled
 * [ ] recruit guest lecturers (x2)
 * [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
 * [x] wk 0: create social issue assignment
@@ -713,8 +717,7 @@ toc_sticky: true
 
 #### Lab
 
-- Students copy sketch to make fan blade rotate direction
-- Do experimental exercise to determine min / max PWM values
+- Connect motor to 3v3
 
 #### Lecture
 
