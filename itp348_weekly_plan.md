@@ -13,7 +13,7 @@ toc_sticky: true
 * [ ] need to order
   * [ ] trimpots
   * [x] microservos
-  * [ ] microoled
+  * [x] microoled
 * [ ] recruit guest lecturers (x2)
 * [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
 * [x] wk 0: create social issue assignment
