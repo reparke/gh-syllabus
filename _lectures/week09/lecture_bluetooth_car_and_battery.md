@@ -90,7 +90,7 @@ title: Bluetooth Car and Battery
 
 ## LiPo Battery Connection
 
-<img src="F:\Github\ITP_348_Content_Public\_lectures\week09\lecture_bluetooth_car_and_battery.assets\car_lipo_hookup_no_wires_bb.png" style="width:600px;" />
+<img src="lecture_bluetooth_car_and_battery.assets\car_lipo_hookup_no_wires_bb.png" style="width:600px;" />
 
 
 
