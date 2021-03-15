@@ -129,7 +129,7 @@ Screw on Wheels to DC Motors and add the wheel rubber tires.
 <img src="guide_build_chassis.assets/IMG_8467.JPG" style="400px" />
 <img src="guide_build_chassis.assets/IMG_8468.JPG" alt="IMG_8468" style="width:400px" />
 
-![](guide_build_chassis.assets\car_lipo_hookup_no_wires_bb.png)
+<img src="guide_build_chassis.assets\car_lipo_hookup_no_wires_bb.png" style="width:500px;" />
 
 ## References
 
