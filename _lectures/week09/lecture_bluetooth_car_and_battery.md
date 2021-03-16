@@ -46,7 +46,7 @@ title: Bluetooth Car and Battery
   * Do not puncture
   * If punctured or swells, **stop using immediately**
   * Please **please** do not throw battery in the trash--it contains toxic metals that pollute the environment
-  * You can drop the battery off at a [recycling center in your area](https://earth911.com/)
+  * You can drop the battery off at a [recycling center in your area](https://earth911.com/) or at a [  ](https://www.homedepot.com/c/ab/how-to-dispose-of-batteries/9ba683603be9fa5395fab90124a115f1)
 
 ## LiPo and Argon
 

@@ -32,8 +32,7 @@
 // the motor will be controlled by the motor A pins on the motor driver
 const int AIN1 = D6;  // control pin 1 on the motor driver for the right motor
 const int AIN2 = D7;  // control pin 2 on the motor driver for the right motor
-const int PWMA =
-    D8;  // speed control pin on the motor driver for the right motor
+const int PWMA = D8;  // speed control pin on the motor driver for the right motor
 
 // the left motor will be controlled by the motor B pins on the motor driver
 const int PWMB = D3;  // speed control pin on the motor driver for the left
