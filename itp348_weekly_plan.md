@@ -965,7 +965,7 @@ toc_sticky: true
 - Due start of current week: Proposal
 - Continue working on project 
 
-## 13. Guest Lecture, RFID
+## 13. Accelerometer + RFID
 
 ### Reading
 
@@ -975,7 +975,12 @@ toc_sticky: true
 
 #### Lecture
 
-- ==**Google Guest Lecture on Accessibility**== 
+- Accelerometer 
+
+#### Lab
+
+- Do basic wiring together
+- ask students to enable longer delay-to-off time
 
 ### Day 2
 
@@ -996,22 +1001,17 @@ toc_sticky: true
 - Due start of current week: nothing
 - Continue working on project 
 
-## 14. Accelerometer
+## 14. Guest Lecture + Wellness Day
 
 ### Reading
 
 - 
 
-### Day 1 
+### Day 1
 
 #### Lecture
 
-- PIR sensor
-
-#### Lab
-
-- Do basic wiring together
-- ask students to enable longer delay-to-off time
+- ==**Google Guest Lecture on Accessibility**== 
 
 ### Day 2
 
