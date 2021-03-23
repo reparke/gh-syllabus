@@ -160,43 +160,8 @@ void setup() {
 
 ## Part 4: Creating the function handler to receive the JSON
 
-* `JsonParserGeneratorRK` provides some helping code to handle JSON responses that come in multiple pieces (*this is called Step 1* in the code below). We don't need to change
-* *Step 2* in the code below is where we parse our unique 
-
-## Part 4: Argon firmware
-
-```c++
-void jsonSubscriptionHandler(const char *event, const char *data) {
-  //Step 1 allows for webhook responses to be delivered in multple 
-  //"chunks"; you don't need to change this
-  int responseIndex = 0;
-  const char *slashOffset = strrchr(event, '/');
-  if (slashOffset)
-    responseIndex = atoi(slashOffset + 1);
-  if (responseIndex == 0)
-    jsonParser.clear();
-  jsonParser.addString(data);
-
-  //Step 2 is where you can parse the actual data; your code goes in the IF
-  if (jsonParser.parse()) {
-  	/****** YOUR PARSING CODE GOES HERE ********/
-```
-
-## Part 4: Creating the function handler to receive the JSON
-
-```c++
-void jsonSubscriptionHandler(const char *event, const char *data) {
-  /* ... rest of function code */
-  if (jsonParser.parse()) {
-
-    temp = jsonParser.getReference()
-               .key("current")
-               .key("temperature")
-               .valueDouble();
-   Serial.println("The weather in 90089 is " + description);
-  }
-}
-```
+* The last step is to create Argon code to handle the JSON response
+* We'll look at **JSON Parsing** separately`JsonParserGeneratorRK` provides some helping code to handle JSON responses that come in multiple pieces
 
 
 

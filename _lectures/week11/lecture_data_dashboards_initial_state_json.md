@@ -170,7 +170,9 @@ URL: `https://groker.init.st/api/events`
 
 * Generating this value as a `String` is going to be messy
 * There are libraries you can use for creating complex JSON messages
-* Though very useful, the libraries have a learning curve themselves so for the moment we will create the values manually
+* First we'll walk through creating JSON manually, and then we'll look at a library
+
+# Creating JSON manually
 
 ## Example: Send Multiple Data Points from Argon to Initial State  
 
@@ -181,11 +183,57 @@ void loop() {
   temp = 89;		//just example; temp should come from sensor
     
   String data = "[{ \"key\":\"temperature\", \"value\":" + 			
-      String(temp) + "},{\"key\":\"humidity\", \"value\":" +
-      String(humidity)+ "},{\"key\":\"weather\", \"value\": \"" +
-      String(weather)+ "\"}]";
+  String(temp) + "},{\"key\":\"humidity\", \"value\":" +
+  String(humidity)+ "},{\"key\":\"weather\", \"value\": \"" +
+  String(weather)+ "\"}]";
     
   Particle.publish("inital_state_json", String(temp), PRIVATE);
+  delay(60000);	//use delay or millis to avoid publishing too frequently
+}
+```
+
+# Creating JSON with a Library
+
+## Parsing JSON with a Library:  `ArduinoJson` 
+
+- `ArduinoJson` is a popular library for parsing JSON code and can be installed from **Workbench**
+
+* Use the sample code below
+
+## Configuration of `ArduinoJson`
+
+- Import library and set up Arduino compatibility
+
+```c++
+#include <Arduino.h>
+#define ARDUINOJSON_ENABLE_PROGMEM 0
+#include <ArduinoJson.h>
+```
+
+Example: Send Multiple Data Points from Argon to Initial State  
+
+**Argon code**
+
+```c++
+void loop() {
+  temp = 89;	//just example; temp should come from sensor
+  String output;
+    
+  JsonObject doc_0 = doc.createNestedObject();
+  doc_0["key"] = "temperature";
+  doc_0["value"] = 79;
+
+  JsonObject doc_1 = doc.createNestedObject();
+  doc_1["key"] = "humidity";
+  doc_1["value"] = 22;
+
+  JsonObject doc_2 = doc.createNestedObject();
+  doc_2["key"] = "weather";
+  doc_2["value"] = "sunny";
+
+  serializeJson(doc, output);
+    
+  Particle.publish("inital_state_json", output);
   delay(60000);	//use delay or millis to avoid publishing too frequently
 }
 ```
