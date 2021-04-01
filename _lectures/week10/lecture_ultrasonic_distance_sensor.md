@@ -118,7 +118,7 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 
 * Download project: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
 * Paste the following link into the top right
-  https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week09/ultrasonic_oled_start
+  https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ultrasonic_oled_start
 
 ## Lab
 

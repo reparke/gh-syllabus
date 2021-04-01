@@ -11,11 +11,14 @@ toc_sticky: true
 ## 		Things to implement
 
 * [ ] need to order
-  * [ ] trimpots
+  * [x] trimpots
   * [x] microservos
   * [x] microoled
-* [ ] recruit guest lecturers (x2)
+* [x] recruit guest lecturers (x2)
 * [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
+* [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
+* [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
+* [ ] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
 * [x] wk 0: create social issue assignment
 * [x] wk 0: Create "behavioral norms"
 * [ ] wk1: record software tools for reference
@@ -87,7 +90,7 @@ toc_sticky: true
 
 - [ ] Week 11
   - [x] OLED graphics
-  - [ ] JSON / APIs (may need to re-record)
+  - [ ] JSON / APIs (need to re-record)
   
 - [x] Week 12
   - [x] Debouncing
