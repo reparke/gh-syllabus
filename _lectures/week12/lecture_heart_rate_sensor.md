@@ -27,8 +27,9 @@ title: Heart Rate Sensor (MAX30101)
   * temperature
 * Red / infrared light useful on finger / earlobe
 * Green light useful on wrist (like Apple Watch)
+* Upgraded version 30105
 
-## MAX30105 Operation
+## MAX30101 Operation
 
 * Uses built-in LEDs to pulse light onto skin
 * Measures light reflecting back
@@ -36,7 +37,7 @@ title: Heart Rate Sensor (MAX30101)
 * Uses I2C communication
   * I2C is another protocol like SPI we used for OLED
 
-## MAX30105 Wiring
+## MAX30101 Wiring
 
 | Sensor | Argon | Function              |
 | ------ | ----- | --------------------- |
