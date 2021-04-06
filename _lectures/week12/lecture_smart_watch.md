@@ -26,7 +26,7 @@ title: Smart Watch
 
   * Libraries
     * Micro OLED
-    * MAX30105 heart rate sensor
+    * MAX30101 heart rate sensor
   * Bitmaps byte arrays for heart rate, clock, and weather (`.h` files)
   * Heart rate BPM calculation
 
@@ -44,7 +44,7 @@ title: Smart Watch
 
 <img src="lecture_smart_watch.assets/heart.jpg" style="width:500px;" />
 
-## Detecting Heart Rate with MAX30105 Heart Rate / SpO2 Sensor
+## Detecting Heart Rate with MAX30101 Heart Rate / SpO2 Sensor
 
 * Uses built-in LEDs to pulse light onto skin
 * Measures light reflecting back
@@ -52,7 +52,7 @@ title: Smart Watch
 * Uses I2C communication
   * I2C is another protocol like SPI we used for OLED
 
-## MAX30105 Wiring
+## MAX30101 Wiring
 
 | Sensor | Argon | Function              |
 | ------ | ----- | --------------------- |
@@ -159,7 +159,7 @@ void setup() {
 
 ## References
 
-* [MAX30105 datasheet](https://cdn.sparkfun.com/assets/learn_tutorials/5/7/7/MAX30105_3.pdf)
+* [MAX30101 datasheet](https://cdn.sparkfun.com/assets/8/1/c/9/0/MAX30101_Datasheet.pdf)
 * [Particle Argon reference - software timers](https://docs.particle.io/reference/device-os/firmware/argon/#software-timers)
 
 ## Credit

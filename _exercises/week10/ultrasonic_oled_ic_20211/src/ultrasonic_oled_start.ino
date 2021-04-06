@@ -18,6 +18,8 @@ Ultrasonic Sensor
 
 */
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
+#include "bitmaps.h"
+
 double SPEED_SOUND_CM_ROOM_TEMP_FAHR = 0.03444;
 int MAX_RANGE_CM = 78;
 int MIN_RANGE_CM = 0;
@@ -42,6 +44,7 @@ void setup() {
   Serial.begin(9600);  // begin serial communication with the computer
   oled.begin();        // Initialize the OLED
   oled.clear(ALL);     // Clear the display's internal memory
+  oled.drawBitmap(trojan);
   oled.display();      // Display what's in the buffer (splashscreen)
   delay(1000);         // Delay 1000 ms
   pinMode(PIN_TRIGGER, OUTPUT);

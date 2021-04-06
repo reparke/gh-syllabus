@@ -27,14 +27,6 @@ Ultrasonic Sensor
 #define PIN_OLED_DC A0   // Connect DC to pin 5 (required for SPI)
 #define PIN_OLED_CS A2   // Connect CS to pin A2 (required for SPI)
 MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
-//////////////////////////
-// MicroOLED Definition //
-//////////////////////////
-// #define PIN_OLED_RST D7  // Connect RST to pin D7 (any digital pin works)
-// #define DC_JUMPER  1  // Set to either 0 (default) or 1 based on jumper, matching the value of
-       // the DC Jumper
-// MicroOLED oled(MODE_I2C, PIN_OLED_RST,
-//                DC_JUMPER);  // Example I2C declaration RST=D7, DC=LOW (0)
 
 double SPEED_SOUND_CM_ROOM_TEMP_FAHR = 0.03444;
 double CONV_FACTOR_CM_TO_IN = 0.3437;
