@@ -194,11 +194,7 @@ void runWeatherScreen() {
 }
 
 void loop() {
-    int reading = digitalRead(PIN_BUTTON);  // check button read
-    Serial.print("BPM=");
-    Serial.print(beatsPerMinute);
-    Serial.print(", Avg BPM=");
-    Serial.println(beatAvg);
+    int curReading = digitalRead(PIN_BUTTON);  // check button read
 }
 
 /* ====================== HEART RATE FUNCTIONS ===============
