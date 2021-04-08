@@ -54,7 +54,7 @@ MAX30105 heartRateSensor;
 //////////////////////////
 // Heart Rate Variables //
 //////////////////////////
-int heartRateReadMs = 25;                          // for timer
+int heartRateReadMs = 15;                          // for timer
 Timer heartReadTimer(heartRateReadMs, updateBPM);  // for updateing beats
 
 const byte RATE_SIZE = 4;  // Increase this for more averaging. 4 is good.
