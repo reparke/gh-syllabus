@@ -110,7 +110,7 @@ if (accel.available()) {	//check if available
 * Recommended library for Argon
   * ```SparkFunMMA8452Q```
 * Check for vibrations
-  * `accel.readTap()` greater than 0 is a vibration (*doesn't work with Argon library*)
+  * `accel.readTap()` greater than 0 is a vibration
 * Check orientation
   * `accel.readPL()` returns int value relating to orientation of sensor
 
@@ -129,6 +129,33 @@ if (accel.available()) {	//check if available
 * Change LED colors based on orientation
 * Then change LED colors based acceleration
 * Then turn on LED if there is vibration
+
+## Example Code for Tap Detection
+
+see [explanation](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-photon-experiment-guide/experiment-8-activity-tracker)
+
+```c++
+byte threshold = 1;  // 2 * 0.063g = 0.063g (minimum threshold
+byte pulseTimeLimit = 255;  // 0.625 * 255 = 159ms (max)
+byte pulseLatency = 64;  // 1.25 * 64 = 640ms
+MMA8452Q accel;
+
+void setup() {
+    accel.begin(SCALE_2G,ODR_1);  // 2g and 1 Hz refresh
+    accel.setupTap(threshold, threshold, threshold, pulseTimeLimit,
+                   pulseLatency);
+}
+void loop() {
+    if (accel.available()) {
+        accel.read();
+    	if (accel.readTap() > 0) {
+        	Serial.println("Tap!");
+    	}
+    }
+}
+```
+
+
 
 ## Credit
 
