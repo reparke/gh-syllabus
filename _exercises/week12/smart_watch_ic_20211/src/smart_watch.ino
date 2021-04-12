@@ -79,7 +79,7 @@ float tempF;
     This delay was determined experimentally to work well
 */
 unsigned long prevHeartScreenUpdateMillis = 0;
-unsigned long HEART_SCREEN_UPDATE_MS = 1000;
+unsigned long HEART_SCREEN_UPDATE_MS = 1500;
 
 //////////////////////////
 // MicroOLED Definition //
@@ -169,18 +169,59 @@ void setup() {
     pinMode(PIN_BUTTON, INPUT);
 }
 
+/*
+    Calculate most recent heart BPM
+        calcBeatAvg()
+    If heart rate is above a threshold
+        Display BPM
+    Else display ---
+    Display body temperature
+
+*/
 void runHeartScreen() {
     // for debugging
-    Serial.println("Time");
-    oled.clear(PAGE);  // Clear the display
-    oled.print("Time");
-    oled.display();
+    // Serial.println("Heart");
+    // oled.clear(PAGE);  // Clear the display
+    // oled.print("Heart");
+    // oled.display();
+
+    unsigned long curMillis = millis();
+    if (curMillis - prevHeartScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
+        prevHeartScreenUpdateMillis = curMillis;
+
+        calcHeartBeatAvg();  // this is slow! -- beatAvg
+        if (beatAvg > LOW_BPM_THRESHOLD &&
+            irValue > LOW_IR_THRESHOLD) {  // VALID!
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print(String(beatAvg));
+        } else {
+            // INVALID!
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print("---");
+        }
+        tempF = heartRateSensor.readTemperatureF();
+        oled.setCursor(0, 20);
+        oled.print("Temp ");
+        oled.print(String(tempF, 0));
+        oled.display();
+        Serial.print("BPM: " + String(beatsPerMinute) +
+                     ", Avg: " + String(beatAvg));
+        Serial.println(", IRvalue: " + String(irValue) +
+                       ", Temp: " + String(tempF));
+    }
 }
 
 void runTimeScreen() {
     // for debugging
     Serial.println("Time");
     oled.clear(PAGE);  // Clear the display
+    oled.setCursor(0,0);
     oled.print("Time");
     oled.display();
 }
@@ -189,12 +230,37 @@ void runWeatherScreen() {
     // for debugging
     Serial.println("Weather");
     oled.clear(PAGE);  // Clear the display
+    oled.setCursor(0, 0);
     oled.print("Weather");
     oled.display();
 }
 
 void loop() {
     int curReading = digitalRead(PIN_BUTTON);  // check button read
+    unsigned long currentDebounceTime = millis();
+
+    if (curReading != prevReading) {
+        lastDebounceTime = millis();
+    }
+
+    // debounce delay often 50-200 ms
+    // we check for stable signal
+    if ((currentDebounceTime - lastDebounceTime) > debounceDelay) {
+        // we know we have stable signal
+        // see if input has changed
+        if (curReading != curButtonState) {
+            curButtonState = curReading;
+            // legit button press so update current button state
+            if (curButtonState == LOW) {
+                getNextState();     //button was pressed down, we should change
+            }
+
+            // FINALLY! here is your button code
+            // if want to execute when button pressed down ONLY
+        }
+    }
+    loadNextScreen();
+    prevReading = curReading;  // update for next loop
 }
 
 /* ====================== HEART RATE FUNCTIONS ===============

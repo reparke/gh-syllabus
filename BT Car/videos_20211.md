@@ -1,6 +1,8 @@
 
 
-# Option 1
+# Option 1 
+
+### (please click the popout link in the upper right corner)
 
 <iframe src="https://drive.google.com/file/d/1v0EJ3Bij5vUIEKCwBHR1bFXtsz4Dbd0v/preview" width="640" height="480"></iframe>
 
@@ -8,11 +10,16 @@
 ---
 
 # Option 2
+
+### (please click the popout link in the upper right corner)
+
 <iframe src="https://drive.google.com/file/d/1_wMpotTZFm332zlpCjRkfGdAvhyGgBRV/preview" width="640" height="480"></iframe>
 
 ---
 
 # Option 3
+### (please click the popout link in the upper right corner)
+
 
 <iframe src="https://drive.google.com/file/d/1vxRAuv3Uvd27s_-IZsanBrRSRJdfiYDt/preview" width="640" height="480"></iframe>
 
@@ -20,6 +27,8 @@
 ---
 
 # Option 4
+### (please click the popout link in the upper right corner)
+
 <iframe src="https://drive.google.com/file/d/11aoAMVJjYmAxVk54EfpBr95W0NtbSm_q/preview" width="640" height="480"></iframe>
 ---
 
@@ -36,24 +45,31 @@
 ---
 
 # Option 7
+### (please click the popout link in the upper right corner)
+
 <iframe src="https://drive.google.com/file/d/1LruVmxVgKVJsFoyRDw9kHW4tfD14rFoE/preview" width="640" height="480"></iframe>
 ---
 
 
 
 # Option 8
+### (please click the popout link in the upper right corner)
 
 <iframe src="https://drive.google.com/file/d/1QkHoa_zEI2e4EoKxuXltEbEJl7508oYH/preview" width="640" height="480"></iframe>
 <iframe src="https://drive.google.com/file/d/1iebKcjsJLBcFBRLU918V55u1FPAjrLGR/preview" width="640" height="480"></iframe>
 ---
 
 # Option 9
+### (please click the popout link in the upper right corner)
+
 <iframe src="https://drive.google.com/file/d/17EyYKVK2HbNUes1HJoBee7wt2K_qObVI/preview" width="640" height="480"></iframe>
 
 
 ---
 
 # Option 10
+### (please click the popout link in the upper right corner)
+
 <iframe src="https://drive.google.com/file/d/1xhliV8JANnPfrl-4XU__kHg0NUEQIGkP/preview" width="640" height="480"></iframe>
 ---
 
@@ -64,6 +80,8 @@
 ---
 
 # Option 12
+### (please click the popout link in the upper right corner)
+
 <iframe src="https://drive.google.com/file/d/16C2KB52mbPW9lWaEqEeBdDQahHgJ0Kkg/preview" width="640" height="480"></iframe>
 ---
 
@@ -74,11 +92,13 @@
 ---
 
 # Option 14
+### (please click the popout link in the upper right corner)
 
 <iframe src="https://drive.google.com/file/d/1wzQ39LRi31U1Tg0EovkvJ9-UqG7V-weB/preview" width="640" height="480"></iframe>
 ---
 
 # Option 15
+### (please click the popout link in the upper right corner)
 
 <iframe src="https://drive.google.com/file/d/1HUnQO4ptFV4lPrWHYVLrfCKhbcUvUxmR/preview" width="640" height="480"></iframe>
 
@@ -90,6 +110,7 @@
 ---
 
 # Option 17
+### (please click the popout link in the upper right corner)
 
 <iframe src="https://drive.google.com/file/d/1UISWhDuaARK7VAtURh3WYqj1UcJzpLfV/preview" width="640" height="480"></iframe>
 ---
@@ -103,5 +124,6 @@
 
 
 # Option 20
+### (please click the popout link in the upper right corner)
 
 <iframe src="https://drive.google.com/file/d/1KGxd1fKZyy9qVshiwAO22aby0Tci4roT/preview" width="640" height="480"></iframe>

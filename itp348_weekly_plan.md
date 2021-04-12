@@ -14,6 +14,9 @@ toc_sticky: true
   * [x] trimpots
   * [x] microservos
   * [x] microoled
+  * [ ] particle argons
+  * [ ] kit components for fall
+* [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
 * [x] recruit guest lecturers (x2)
 * [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
 * [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
