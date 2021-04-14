@@ -11,5 +11,5 @@ title: Pre-Lecture Activities
     {% include video id="GtgVViZe1sM" provider="youtube" %}
   
   - Build
-  <!--   ![](week13.assets/rfid_bb.png) -->
+  ![](week13.assets/rfid_bb.png) 
 

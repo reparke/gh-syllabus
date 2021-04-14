@@ -29,6 +29,11 @@ Switch:
   Pin 1 -- GND
   Pin 2 -- EN
 */
+// ArduinoJson
+#include <Arduino.h>
+#define ARDUINOJSON_ENABLE_PROGMEM 0
+#include <ArduinoJson.h>
+
 // libraries for MAX30102
 #include <Wire.h>
 
@@ -103,6 +108,24 @@ long debounceDelay = 50;    // the debounce time; increase if the output
 enum State { TIME, HEART, WEATHER };
 State currentState = HEART;
 
+//////////////////////////
+// Weather              //
+//////////////////////////
+String zipcode = "90089";  // los angeles
+unsigned long prevWeatherUpdate = 0;
+unsigned long WEATHER_UPDATE_MS = 60000;
+String payload;
+String response;
+double tempWeather;
+double humidity;
+int precipation;
+String description;
+String city;
+short code;
+
+///////////
+// Debug //
+///////////
 #define ENABLE_OLED
 #define ENABLE_SERIAL_DEBUG
 // #define ENABLE_HZ_DISPLAY
@@ -157,6 +180,14 @@ void setup() {
 #endif
     // initialize button
     pinMode(PIN_BUTTON, INPUT);
+
+    // WEATHERSTACK
+    Particle.publish("WeatherStackJSON",
+                     zipcode);  // publish once to load intial data
+
+    // Subscribe to the integration response event
+    Particle.subscribe("hook-response/WeatherStackJSON",
+                       jsonSubscriptionHandler);
 }
 
 void runHeartScreen() {
@@ -244,12 +275,52 @@ void runTimeScreen() {
 
 void runWeatherScreen() {
     // for debugging
-    Serial.println("Weather");
+    // Serial.println("Weather");
+    unsigned long curMillis = millis();
+    if (curMillis - prevWeatherUpdate > WEATHER_UPDATE_MS) {
+        prevWeatherUpdate = curMillis;
+        Particle.publish("WeatherStackJSON", zipcode);
+    }
+
 #ifdef ENABLE_OLED
 
     oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Weather");
+    switch (code) {
+        case 113:  // sunny
+            oled.drawBitmap(weather_sunny_16x12);
+            break;
+        case 116:  // cloudy
+        case 119:
+        case 122:
+            oled.drawBitmap(weather_cloudy_16x12);  // cloudy
+            break;
+        case 143:
+        case 176:
+        case 263:
+        case 266:
+        case 293:
+        case 296:
+        case 299:
+        case 302:
+        case 305:
+        case 308:
+        case 311:
+            oled.drawBitmap(weather_rain_16x12);  // cloudy
+            break;
+        default:
+            oled.drawBitmap(weather_default_16x12);  // cloudy
+            break;
+
+    }
+
+    oled.setCursor(30, 5);
+    oled.setFontType(0);
+    oled.print(tempWeather, 1);
+
+    oled.setFontType(0);
+    oled.setCursor(0, 20);
+    oled.print(city);
+
     oled.display();
 #endif
 }
@@ -354,4 +425,55 @@ void calcHeartBeatAvg() {
         beatAvg += rates[x];
     }
     beatAvg /= RATE_SIZE;
+}
+
+// DynamicJsonDocument doc(2048);
+void jsonSubscriptionHandler(const char *event, const char *data) {
+    StaticJsonDocument<2048> doc;
+    Serial.println("received!");
+    int responseIndex = 0;
+    const char *slashOffset = strrchr(event, '/');
+    if (slashOffset) {
+        responseIndex = atoi(slashOffset + 1);
+    }
+
+    if (responseIndex == 0) {
+        response = "";
+        doc.clear();
+    }
+    response += String(data);
+
+    DeserializationError error = deserializeJson(doc, response);
+
+    if (error == false) {
+        /* NOTE: something is not working properly with reading strings
+                When the strings are global variables, the Particle OS complains
+           that there are multiple functions for = This inelegant workaround
+           creates a local variable and assigns it back to the global. This is
+           inefficient and wastes memory. Try to improve
+        */
+        String placeholder = doc["location"]["name"];
+        city = placeholder;
+
+        JsonObject current = doc["current"];
+
+        tempWeather = current["temperature"];  // 68
+
+        String placeholder2 = current["weather_descriptions"][0];  // "Sunny"
+        description = placeholder2;
+
+        code = current["weather_code"];  // "Sunny"
+
+        precipation = current["precip"];  // 0
+        humidity = current["humidity"];   // 40
+
+        Serial.println(city + "\n  " + description +
+                       "\n  temperature: " + String(tempWeather, 1) +
+                       " F\n  humidity: " + String(humidity, 1) +
+                       "%\n  rainfall: " + String(precipation) + " in");
+    }
+    // else {
+    //   Serial.println(String(responseIndex) + " Error: " + String
+    //   (error.c_str())); Serial.println("\t"+payload);
+    // }
 }
