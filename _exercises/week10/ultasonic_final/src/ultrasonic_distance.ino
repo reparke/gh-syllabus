@@ -34,9 +34,11 @@ void loop() {
                                        // that is what the sensor reports
 
         Serial.print("out of range");
+        Particle.publish("out of range");
     } else {
         Serial.print(distanceCm);
         Serial.print(" cm");
+        Particle.publish(String(distanceCm) + " cm");
     }
     Serial.println();
 

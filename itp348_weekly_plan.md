@@ -10,12 +10,23 @@ toc_sticky: true
 ---
 ## 		Things to implement
 
+* [ ] Improvements
+  * [ ] add late days column to blackboard
+  * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
+  * [ ] tell students not to unclaim device
+  * [ ] distribute grading among TAs
+  * [ ] have TAs not attend every class
+  * [ ] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
+  * [ ] use something other than blackboard for submissions
+  * [ ] give list of items students should include in videos each week
+  * [ ] summary of info. Things like what do wires do I connect to what pins for <whatever sensor> or  what is the generic formula for button-pushing detection? "living document". Whether that's a required part of assignments or a group doc different students add to each week, I've found that when students have to be accountable for something beyond their own notes, we tend to put  effort into it.
 * [ ] need to order
   * [x] trimpots
   * [x] microservos
   * [x] microoled
   * [ ] particle argons
   * [ ] kit components for fall
+* [ ] change kit: replace SPI OLED with [I2C OLED](https://www.sparkfun.com/products/14532)
 * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
 * [x] recruit guest lecturers (x2)
 * [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
@@ -136,6 +147,10 @@ toc_sticky: true
 * Have short blackboard quiz
 
 ### Day 1
+
+#### Quote
+
+- Making and the maker movement is the physical manifestation of all your academic learning - how you apply your education to real-world problems (*Dr. Dorothy Jones-Davis*)
 
 #### Lecture
 
@@ -1000,7 +1015,13 @@ toc_sticky: true
 
 #### Lab
 
-- 
+- install library
+- run example code `DumpInfo` to display ids from cards; have students store those as `String`
+- Explain that we need to scan the card to compare, not print to Serial
+- Show how to go to definition of `PICC_DumpToSerial`; copy the for loop code to sketch
+- Ask students how to modify for storing in `String`
+- Print out value; show need to upper case and trim space
+- now ask them to check for authorization for one card or the other
 
 ### Assignment
 
@@ -1062,8 +1083,8 @@ toc_sticky: true
 
 #### Lecture
 
+- Discuss [what happens after prototyping](https://docs.particle.io/tutorials/learn-more/beyond-prototpying/)
 - Work on project 
-
 - DHT 22
 
 #### Lab

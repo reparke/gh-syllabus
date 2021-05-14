@@ -19,9 +19,11 @@ void loop() {
     // in steps of 1 degree
     myservo.write(pos);  // tell servo to go to position in variable 'pos'
     delay(15);           // waits 15ms for the servo to reach the position
+    Serial.println("pos: "+ String(pos));
   }
   for (pos = 165; pos >= 0; pos -= 1) {  // goes from 180 degrees to 0 degrees
     myservo.write(pos);  // tell servo to go to position in variable 'pos'
     delay(15);           // waits 15ms for the servo to reach the position
+    Serial.println("pos: " + String(pos));
   }
 }

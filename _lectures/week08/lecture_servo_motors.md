@@ -137,6 +137,30 @@ int angleVal = map(potVal, 0, 4095, 15, 165);
   * Pins A0, A1, A2, A3
   * Pins D2, D3, A4, A5
 
+## Fixing Servo Jittering
+
+- In some cases, the servo may start to make noise, stutter, or become hot when not it use
+- This can be due to a variety of factors such as unstable current supply or interrupts in the Argon execution
+- IF this happens, one simple solution is to `attach` before using the servo, and then `detach` after
+
+## Fixing Servo Jittering - Code
+
+```c++
+const int SERVO_PIN = D2;
+Servo servoObj;
+void setup(){ /*no attach code */ }
+}
+void loop(){
+    servoObj.attach(SERVO_PIN);
+    servoObj.write(15); //write the servo to position 15 degrees
+    delay(1000); //wait one second
+    servoObj.write(90); //write the servo to position 90 degrees
+    servoObj.detach();
+}
+```
+
+
+
 ## Exercise
 
 1. Connect a servo and write code to sweep through the entire range of value (Remember: use `15` and `165` instead of `0` and `180` to avoid damaging servo)

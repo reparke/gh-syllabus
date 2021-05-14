@@ -1,44 +1,37 @@
-const int PIN_MOTION = D2;
+const int PIN_PIR = D2;
 const int PIN_LED = D7;
 
+unsigned long prevAlarm = 0;
+unsigned long holdTime = 3000;  // 3s = 3000ms
 
-void setup()
-{
-    pinMode(PIN_MOTION, INPUT);
+void setup() {
+    pinMode(PIN_PIR, INPUT);
     pinMode(PIN_LED, OUTPUT);
     Serial.begin(9600);
 
-    delay(2000);    //need to a "baseline" of the room
+    // many PIR sensors recommend a short delay here
+    delay(2000);
 }
 
-void loop(){
-    int motion = digitalRead(PIN_MOTION);
-    //if motion is LOW, then movement was detected; if HIGH, no motion
+/*
+  alarm disabled / enabled
+  connect to webservice to track time
+  trip alarm, and it stays on
+  only trigger alarm AT MOST every X milliseconds
+*/
+void loop() {
+    int reading = digitalRead(PIN_PIR);
+    // low = movement, high = no movement
 
-    if(motion == HIGH) {
-        digitalWrite(PIN_LED, LOW);
-        Serial.println("movement stopped");
-    }
-    else {
-        digitalWrite(PIN_LED, HIGH);
-        Serial.println("movement detected");
-    }
-    delay(1000);
-}
-
-void part2AlarmHold() {
     unsigned long curMillis = millis();
-    int proximity = digitalRead(MOTION_PIN);
-    // Serial.println("Motion pin: " + String(proximity));
-    if (proximity == LOW)  // If the sensor's output goes low, motion is detected
-    {
-        digitalWrite(LED_PIN, HIGH);
+    if (reading == LOW) {
+        digitalWrite(PIN_LED, HIGH);
         Serial.println("Motion detected!");
-        prevAlarmMillis = curMillis;
-    } else if ((curMillis - prevAlarmMillis) > timeAfterAlarm) {
-        // } else  {
-        digitalWrite(LED_PIN, LOW);
-        Serial.println("Motion stopped!");
+        prevAlarm = curMillis;
+    } else {  // no movment detected
+        if (curMillis - prevAlarm > holdTime) {
+            digitalWrite(PIN_LED, LOW);
+            Serial.println("Motion stopped!");
+        }
     }
-
 }

@@ -32,35 +32,43 @@ const int LED_PIN = D7;     // LED pin - active-high
 const int timeAfterAlarm = 5000;
 unsigned long prevAlarmMillis = 0;
 
+unsigned long int timeBeforeAlarmActive = 500;
+unsigned long int prevActive = 0;
+
 bool alarmState = false;
 
 void setup() {
     Serial.begin(9600);
     // The PIR sensor's output signal is an open-collector,
     // so a pull-up resistor is required:
+    // pinMode(MOTION_PIN, INPUT_PULLUP);
     pinMode(MOTION_PIN, INPUT);
     pinMode(LED_PIN, OUTPUT);
-    delay(2000);  // wait to read the room
+    delay(10000);  // wait to read the room
 }
 
 void loop() {
     // part1Simple();
-    part2AlarmHold();
+    // part2AlarmHold();
+    part3AlarmDecreaseSensitivity();
 }
 
 void part2AlarmHold() {
     unsigned long curMillis = millis();
     int proximity = digitalRead(MOTION_PIN);
     // Serial.println("Motion pin: " + String(proximity));
-    if (proximity == LOW)  // If the sensor's output goes low, motion is detected
+    if (proximity ==
+        LOW)  // If the sensor's output goes low, motion is detected
     {
         digitalWrite(LED_PIN, HIGH);
         Serial.println("Motion detected!");
         prevAlarmMillis = curMillis;
     } else if ((curMillis - prevAlarmMillis) > timeAfterAlarm) {
-    // } else  {
+        // } else  {
         digitalWrite(LED_PIN, LOW);
-        Serial.println("Motion stopped!");
+        Serial.println("Motion not detected and no alarm!");
+    } else {
+        Serial.println("Motion not detected but still holding alarm!");
     }
 
     // delay(1000);
@@ -69,7 +77,8 @@ void part2AlarmHold() {
 void part1Simple() {
     int proximity = digitalRead(MOTION_PIN);
     // Serial.println("Motion pin: " + String(proximity));
-    if (proximity == LOW)  // If the sensor's output goes low, motion is detected
+    if (proximity ==
+        LOW)  // If the sensor's output goes low, motion is detected
     {
         digitalWrite(LED_PIN, HIGH);
         Serial.println("Motion detected!");
@@ -77,5 +86,26 @@ void part1Simple() {
         digitalWrite(LED_PIN, LOW);
         Serial.println("Motion stopped!");
     }
-    delay(1000);
+    // delay(1000);
+}
+
+void part3AlarmDecreaseSensitivity() {
+    unsigned long curMillis = millis();
+    int proximity = digitalRead(MOTION_PIN);
+    // Serial.println("Motion pin: " + String(proximity));
+    if (proximity ==
+        LOW)  // If the sensor's output goes low, motion is detected
+    {
+        if (curMillis - prevActive > timeBeforeAlarmActive) {
+            digitalWrite(LED_PIN, HIGH);
+            Serial.println("Motion detected!");
+        }
+
+    } else {
+        prevActive = curMillis;
+        digitalWrite(LED_PIN, LOW);
+        Serial.println("Motion stopped!");
+    }
+
+    // delay(1000);
 }
