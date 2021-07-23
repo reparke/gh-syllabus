@@ -11,22 +11,46 @@ toc_sticky: true
 ## 		Things to implement
 
 * [ ] Improvements
-  * [ ] add late days column to blackboard
+  * [ ] simplify grading scale so social issues is rolled into assignments
+  
+  * [x] add late days column to blackboard
+  
   * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
+  
   * [ ] tell students not to unclaim device
-  * [ ] distribute grading among TAs
+  
+  * [x] distribute grading among TAs
+  
   * [ ] have TAs not attend every class
+  
   * [ ] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
+  
   * [ ] use something other than blackboard for submissions
+  
   * [ ] give list of items students should include in videos each week
-  * [ ] summary of info. Things like what do wires do I connect to what pins for <whatever sensor> or  what is the generic formula for button-pushing detection? "living document". Whether that's a required part of assignments or a group doc different students add to each week, I've found that when students have to be accountable for something beyond their own notes, we tend to put  effort into it.
+  
+  * [ ] summary of info. Things like what do wires do I connect to what pins for <whatever sensor> or  what is the generic formula for button-pushing detection? "living document". Whether that's a required part of assignments or a group doc different students add to each week, I've found that when students have to be accountable for something beyond their own notes, we tend to put  effort into it.I have seen this in other classes, something like, as a midterm  prep we might all be required to add an answer to a group doc. Although  it's annoying to do at times, I think a lot of people appreciated  hearing facts in other people's words. 
+  
+    It's mostly a  collection of summaries. I think you put a lot of really useful info on  the site - almost everything we need. But I might actually print out and keep a book like I'm mentioning. Here's my idea:
+  
+    - Every sensor will be summarized in a group doc, so each student would do ~2  sensors/semester. The write up would have the quick-lookup details (I  attached an example)
+    - Maybe a summary of enums or states
+    - Maybe a page of "tips" - cool work-around or example of something not completely covered in class. 
+    - Maybe a page of "oops" - mistakes to be avoided
+    - Maybe a page of troubleshooting - there were a few tricky situations people posted on Piazza, a record of that would be cool
+    - Maybe a page of ideas - problems to solve. Maybe something you and the TAs add, challenges of all levels for fun
+  
+     I wish there were a way to make the entries build on each other, but I  can't think of how. I think that's the living part? I guess they could  work in pairs? Although this can be tedious, I think it's good to talk  through something with someone learning the same topic, even if it's  easy.
+  
+    Probably more words than was needed, but I hope this is helpful!
 * [ ] need to order
   * [x] trimpots
   * [x] microservos
   * [x] microoled
   * [ ] particle argons
   * [ ] kit components for fall
-* [ ] change kit: replace SPI OLED with [I2C OLED](https://www.sparkfun.com/products/14532)
+* [x] change kit: replace SPI OLED with [I2C OLED](https://www.sparkfun.com/products/14532)
+* [ ] add resistor for knock sensor
 * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
 * [x] recruit guest lecturers (x2)
 * [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
