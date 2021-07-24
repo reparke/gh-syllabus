@@ -86,7 +86,10 @@ title: Data Visualization and Dashboard with Initial State
 
 **Particle integration settings**
 
-JSON Data: `{{{PARTICLE_EVENT_VALUE}}}`
+{% comment %} This code below is because Liquid breaks with the triple brackets {% endcomment %}
+{% assign liquid_code_block = '{{{PARTICLE_EVENT_VALUE}}}' %}
+
+JSON Data: `{{ liquid_code_block }}`
 
 URL: `https://groker.init.st/api/events`
 

@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 paginate: true
-
+week: 1
 show_in_list: false
 
 ---

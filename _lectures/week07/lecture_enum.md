@@ -5,7 +5,7 @@ theme: itp
 week: 7
 show_in_list: false
 category: lectures
-title: Switch / Enum Part 2: Enum
+title: Switch / Enum Part 2 (Enum)
 ---
 
 <!-- headingDivider: 2 -->

@@ -88,7 +88,10 @@ title: Data Visualization and Dashboard with Initial State (Single Values)
 
 **Particle integration settings**
 
-`YOUR_CUSTOM_DATA_LABEL `     >      `{{{PARTICLE_EVENT_VALUE}}}`
+{% comment %} This code below is because Liquid breaks with the triple brackets {% endcomment %}
+{% assign liquid_code_block = '{{{PARTICLE_EVENT_VALUE}}}' %}
+`YOUR_CUSTOM_DATA_LABEL `     >      `{{ liquid_code_block }}`
+
 
 ![img](lecture_data_dashboards_initial_state_single_values.assets/SNAGHTMLf92f8fa.PNG)
 

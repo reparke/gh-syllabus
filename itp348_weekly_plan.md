@@ -11,7 +11,7 @@ toc_sticky: true
 ## 		Things to implement
 
 * [ ] Improvements
-  * [ ] simplify grading scale so social issues is rolled into assignments
+  * [x] simplify grading scale so social issues is rolled into assignments
   
   * [x] add late days column to blackboard
   
@@ -43,45 +43,82 @@ toc_sticky: true
      I wish there were a way to make the entries build on each other, but I  can't think of how. I think that's the living part? I guess they could  work in pairs? Although this can be tedious, I think it's good to talk  through something with someone learning the same topic, even if it's  easy.
   
     Probably more words than was needed, but I hope this is helpful!
-* [ ] need to order
+  
+* [x] need to order
   * [x] trimpots
   * [x] microservos
   * [x] microoled
-  * [ ] particle argons
-  * [ ] kit components for fall
+  * [x] particle argons
+  * [x] kit components for fall
+  
 * [x] change kit: replace SPI OLED with [I2C OLED](https://www.sparkfun.com/products/14532)
-* [ ] add resistor for knock sensor
+
+* [x] add resistor for knock sensor
+
+* [x] update kit on website
+
 * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
+
 * [x] recruit guest lecturers (x2)
+
 * [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
+
 * [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
+
 * [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
+
 * [ ] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
+
 * [x] wk 0: create social issue assignment
+
 * [x] wk 0: Create "behavioral norms"
+
 * [ ] wk1: record software tools for reference
+
 * [x] wk1: record c++ review and create bb quiz
+
 * [x] wk3: create latch slides
+
 * [ ] wk3: change die assignment to explicitly suggest on array for the pin labels, and multiple array for the dice labels (Summer) 
+
 * [x] wk4: revise photoresistor slides / change questions
+
 * [x] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
+
 * [x] wk 5: announce quiz for following week
+
 * [ ] wk 5: use millis in next assignment (summer)
+
 * [ ] wk 5: move enum and switch videos to week 6 (summer)
+
 * [x] wk 6: create Bb quiz
+
 * [x] wk5: add API graphic illustration for webhook
+
 * [x] wk5: revise lab and slides to show TMP36, not photoresistor
+
 * [x] wk6: revise Blynk lab
+
 * [x] wk7: create lecture / lab activities for FSM day 2
+
 * [x] wk8: revise alarm clock assignment to use FSM **and** Blynk (for blynk, use either simple buttons or "time input" to set alarm time)
+
 * [x] wk11: may be too much dashboard content; consider moving single data point for initial state to earlier week
+
 * [ ] wk10: review initial state code. need if JSON needs to be covered first
+
 * [ ] wk11: inquire about future class TAs and kit TA
+
 * [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
+
 * [x] general: try to incorporate `enum` or `switch` earlier in semester
+
 * [x] wk11: building smart watch: need to text and pictures to use velcro
+
 * [x] account for wellness days in schedule
+
 * [x] account for extra two weeks in schedule
+
 * [x] replace IFTTT with Blynk
 
 ## **Videos and Wiring Diagrams Needed to Publish**
@@ -1068,7 +1105,7 @@ toc_sticky: true
 
 #### Lecture
 
-- **==WELLNESS DAY==**
+- **==THANKSGIVING BREAK==**
 
 ### Assignment
 

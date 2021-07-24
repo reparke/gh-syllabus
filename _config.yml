@@ -97,7 +97,7 @@ footer:
 
 #This are variables that are used to calculate dates for each week
 calendar:
-  semester_start_sunday: 2021-01-18 00:00:00 -0700 #I think this should be Monday
+  semester_start_sunday: 2021-08-22 00:00:00 -0700 #I think this should be Monday
   semester_num_weeks: 16
   semester_has_spring_break: false
   semester_week_of_spring_break: 8

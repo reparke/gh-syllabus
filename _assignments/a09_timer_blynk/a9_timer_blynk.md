@@ -3,7 +3,7 @@ week: 8
 number: 9
 category: assignments
 title: Timer with Blynk
-date_due: Mar 22 @ 11:59 pm (two weeks)
+date_due: Oct 25 @ 11:59 pm (two weeks)
 
 
 ---

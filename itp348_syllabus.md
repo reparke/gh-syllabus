@@ -175,8 +175,7 @@ added depending on size of the class.
 
 | Item                                      | % of Grade |
 | ----------------------------------------- | ---------- |
-| Assignments                               | 40         |
-| Social Issues in Smart Devices Assignment | 5          |
+| Assignments                               | 45         |
 | In-Class Labs and Quizzes                 | 20         |
 | Final Project                             | 35         |
 |                                           |            |
