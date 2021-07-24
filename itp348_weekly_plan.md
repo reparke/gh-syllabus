@@ -81,6 +81,8 @@ toc_sticky: true
 
 * [ ] wk3: change die assignment to explicitly suggest on array for the pin labels, and multiple array for the dice labels (Summer) 
 
+* [ ] Wk4: review Blynk notes and video
+
 * [x] wk4: revise photoresistor slides / change questions
 
 * [x] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
@@ -107,7 +109,7 @@ toc_sticky: true
 
 * [ ] wk10: review initial state code. need if JSON needs to be covered first
 
-* [ ] wk11: inquire about future class TAs and kit TA
+* [x] wk11: inquire about future class TAs and kit TA
 
 * [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
 
@@ -707,7 +709,7 @@ toc_sticky: true
   - This seems early for this, but the semester is shortened by 2 weeks
   - Could consider moving this later in a future semester
 
-## 7. Finite State Machines 
+## 7. Finite State Machines (==cover sound / tone on second day due to Fall break==)
 
 ### Reading
 
@@ -776,7 +778,7 @@ toc_sticky: true
 
 
 
-## 8. Motors, Servos
+## 8. Motors, Servos + **==Fall BREAK==**
 
 ### Reading
 
@@ -791,7 +793,7 @@ toc_sticky: true
 * Tone
 * Pitches
 
-### Day 2
+### Day 2 **==FALL BREAK==**
 
 #### Lecture
 
@@ -904,14 +906,25 @@ toc_sticky: true
 
 - 
 
-### Day 1 ==**Wellness day**==
-
-### Day 2
+### Day 
 
 #### Lecture
 
 - project overview
 - Ultrasonic distance sensor 
+
+#### Lab
+
+- Get ultrasonic sensor working
+
+#### Lecture  / Lab
+
+- Start OLED graphics (most likely)
+
+### Day 2
+
+#### Lecture
+
 - OLED graphics
 
 #### Lab
@@ -1089,7 +1102,7 @@ toc_sticky: true
 - Due start of current week: nothing
 - Continue working on project 
 
-## 14. Guest Lecture + Wellness Day
+## 14. Guest Lecture 
 
 ### Reading
 
