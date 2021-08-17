@@ -8,8 +8,6 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-
-
   ### Sound
 
   {% include video id="EwLqgkAlv4c" provider="youtube" %}
