@@ -51,6 +51,24 @@ title: Magnetic Switch
 * Wire ends are thin and twisted together so be careful inserting them into breadboard
 * For greater durability, wire ends can be soldered
 
+## Lab:
+
+<img src="F:\Github\ITP_348_Content_Public\_lectures\week06\lecture_magnetic_switch.assets\switch-magnetic-door_and_rgb_led_bb.png" style="width:600px;" />
+
+
+
+## Lab Part 1:
+
+* Create an `enum` called `DoorState` with the values `OPEN` and `CLOSED`. Make a global variable called `myDoor` to track your switch
+* When the magnetic switch is opened or closed, change the state of `myDoor`
+* Publish cloud event with the data `doorIsOpen` or `doorIsClosed` when `myDoor` changes. Note **only one** publish should occur every time door is opened or closed
+* Your name should be 
+  `ITP348/Door/<<YOUR_INITIALS>>`
+
+* Change the RGB colors based on their door status
+  * Red means "door is open"
+  * White means "door is closed"
+
 
 ## Credit
 

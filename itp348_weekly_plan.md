@@ -10,123 +10,45 @@ toc_sticky: true
 ---
 ## 		Things to implement
 
-* [ ] Improvements
-  * [x] simplify grading scale so social issues is rolled into assignments
-  
-  * [x] add late days column to blackboard
-  
-  * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
-  
-  * [ ] tell students not to unclaim device
-  
-  * [x] distribute grading among TAs
-  
-  * [ ] have TAs not attend every class
-  
-  * [ ] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
-  
-  * [ ] use something other than blackboard for submissions
-  
-  * [ ] give list of items students should include in videos each week
-  
-  * [ ] summary of info. Things like what do wires do I connect to what pins for <whatever sensor> or  what is the generic formula for button-pushing detection? "living document". Whether that's a required part of assignments or a group doc different students add to each week, I've found that when students have to be accountable for something beyond their own notes, we tend to put  effort into it.I have seen this in other classes, something like, as a midterm  prep we might all be required to add an answer to a group doc. Although  it's annoying to do at times, I think a lot of people appreciated  hearing facts in other people's words. 
-  
-    It's mostly a  collection of summaries. I think you put a lot of really useful info on  the site - almost everything we need. But I might actually print out and keep a book like I'm mentioning. Here's my idea:
-  
-    - Every sensor will be summarized in a group doc, so each student would do ~2  sensors/semester. The write up would have the quick-lookup details (I  attached an example)
-    - Maybe a summary of enums or states
-    - Maybe a page of "tips" - cool work-around or example of something not completely covered in class. 
-    - Maybe a page of "oops" - mistakes to be avoided
-    - Maybe a page of troubleshooting - there were a few tricky situations people posted on Piazza, a record of that would be cool
-    - Maybe a page of ideas - problems to solve. Maybe something you and the TAs add, challenges of all levels for fun
-  
-     I wish there were a way to make the entries build on each other, but I  can't think of how. I think that's the living part? I guess they could  work in pairs? Although this can be tedious, I think it's good to talk  through something with someone learning the same topic, even if it's  easy.
-  
-    Probably more words than was needed, but I hope this is helpful!
-  
-* [x] need to order
-  * [x] trimpots
-  * [x] microservos
-  * [x] microoled
-  * [x] particle argons
-  * [x] kit components for fall
-  
-* [x] change kit: replace SPI OLED with [I2C OLED](https://www.sparkfun.com/products/14532)
+**Definite**
 
-* [x] add resistor for knock sensor
-
-* [x] update kit on website
-
+* [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
+* [ ] tell students not to unclaim device
+* [ ] have TAs not attend every class
+* [ ] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
+* [ ] give list of items students should include in videos each week
 * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
-
-* [x] recruit guest lecturers (x2)
-
-* [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
-
+* [ ] recruit guest lecturers (x2)
 * [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
-
 * [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
-
 * [ ] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
 
-* [x] wk 0: create social issue assignment
+**Possible**
 
-* [x] wk 0: Create "behavioral norms"
+* [ ] use something other than blackboard for submissions
 
-* [ ] wk1: record software tools for reference
+* [ ] summary of info. Things like what do wires do I connect to what pins for <whatever sensor> or  what is the generic formula for button-pushing detection? "living document". Whether that's a required part of assignments or a group doc different students add to each week, I've found that when students have to be accountable for something beyond their own notes, we tend to put  effort into it.I have seen this in other classes, something like, as a midterm  prep we might all be required to add an answer to a group doc. Although  it's annoying to do at times, I think a lot of people appreciated  hearing facts in other people's words. 
 
-* [x] wk1: record c++ review and create bb quiz
+  It's mostly a  collection of summaries. I think you put a lot of really useful info on  the site - almost everything we need. But I might actually print out and keep a book like I'm mentioning. Here's my idea:
 
-* [x] wk3: create latch slides
+  - Every sensor will be summarized in a group doc, so each student would do ~2  sensors/semester. The write up would have the quick-lookup details (I  attached an example)
+  - Maybe a summary of enums or states
+  - Maybe a page of "tips" - cool work-around or example of something not completely covered in class. 
+  - Maybe a page of "oops" - mistakes to be avoided
+  - Maybe a page of troubleshooting - there were a few tricky situations people posted on Piazza, a record of that would be cool
+  - Maybe a page of ideas - problems to solve. Maybe something you and the TAs add, challenges of all levels for fun
 
-* [ ] wk3: change die assignment to explicitly suggest on array for the pin labels, and multiple array for the dice labels (Summer) 
+   I wish there were a way to make the entries build on each other, but I  can't think of how. I think that's the living part? I guess they could  work in pairs? Although this can be tedious, I think it's good to talk  through something with someone learning the same topic, even if it's  easy.
 
-* [ ] Wk4: review Blynk notes and video
+  Probably more words than was needed, but I hope this is helpful!
+  
+  
 
-* [x] wk4: revise photoresistor slides / change questions
-
-* [x] wk5: revise dashboard slides and exercise to reflect sending SINGLE values
-
-* [x] wk 5: announce quiz for following week
-
-* [ ] wk 5: use millis in next assignment (summer)
-
-* [ ] wk 5: move enum and switch videos to week 6 (summer)
-
-* [x] wk 6: create Bb quiz
-
-* [x] wk5: add API graphic illustration for webhook
-
-* [x] wk5: revise lab and slides to show TMP36, not photoresistor
-
-* [x] wk6: revise Blynk lab
-
-* [x] wk7: create lecture / lab activities for FSM day 2
-
-* [x] wk8: revise alarm clock assignment to use FSM **and** Blynk (for blynk, use either simple buttons or "time input" to set alarm time)
-
-* [x] wk11: may be too much dashboard content; consider moving single data point for initial state to earlier week
-
-* [ ] wk10: review initial state code. need if JSON needs to be covered first
-
-* [x] wk11: inquire about future class TAs and kit TA
-
-* [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
-
-* [x] general: try to incorporate `enum` or `switch` earlier in semester
-
-* [x] wk11: building smart watch: need to text and pictures to use velcro
-
-* [x] account for wellness days in schedule
-
-* [x] account for extra two weeks in schedule
-
-* [x] replace IFTTT with Blynk
-
-## **Videos and Wiring Diagrams Needed to Publish**
+**Videos and Wiring Diagrams Needed to Publish**
 
 - [x] Week 1
 - - [x] C++ syntax
+  - [ ] record software tools for reference
 - [x] Week 2
 - - [ ] PWM (skip and leave for class)
   - [x] Analog input
@@ -135,6 +57,7 @@ toc_sticky: true
 - - [x] Buttons 
   - [x] Digital input (?)
   - [x] RGB LEDS
+  - [ ] wk3: change die assignment to explicitly suggest on array for the pin labels, and multiple array for the dice labels (Summer) 
 - [ ] Week 4
 - - [ ] Multi-tasking
   - [x] Photoresistor
@@ -144,11 +67,14 @@ toc_sticky: true
 - - [x] OLED
   - [x] TMP36
   - [ ] Webhooks / APIs (Initial State can be live)
+  - [ ] wk 5: use millis in next assignment (summer)
+  - [ ] wk 5: move enum and switch videos to week 6 (summer)
 - [ ] Week 6
 - - [ ] Blynk
   - [x] magnetic switch
   - [x] cloud subscribe
-
+  - [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
+  
 - [x] Week 7
   - [x] Switch / enum
   - [x] State machines
@@ -168,11 +94,13 @@ toc_sticky: true
 - [ ] Week 11
   - [x] OLED graphics
   - [ ] JSON / APIs (need to re-record)
+  - [ ] wk11: inquire about future class TAs and kit TA
   
 - [x] Week 12
   - [x] Debouncing
   - [x] Heart rate sensors
-
+  - [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
+  
 - [x] Week 13
   - [x] RFID
 
@@ -557,7 +485,7 @@ toc_sticky: true
 
 #### Feedback
 
-- fall 2020: students seemed VERY confused about millis() and delay
+- 
 
 #### Lecture
 
@@ -627,7 +555,7 @@ toc_sticky: true
 - ==Consider revising Reaction Timer to something involving millis()==
 - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
-## 6. Particle Cloud Subscribe; Blynk
+## 6. Magnetic Switch; Blynk
 
 ### Reading
 
@@ -640,40 +568,26 @@ toc_sticky: true
 
 - Magnetic switch (video)
 
-* Particle Cloud: Subscribe (video)
-
-#### Guided Activity
-
-* See subscribe notes for "Exercise"
-* Rob publishes event that triggers their RGB LED
-
-#### Lecture
-
-* Switch and enum
-* Rewrite above code with switch and enum
-
-#### Lab part 1
+#### Lab
 
 - Wire switch and RGB LED
 - Publish switch event in console (this won't take very long)
 
-#### Lab part 2
-
-* Create function to change LED colors: white switch is closed, red switch is open
-* subscribe to variable -- work in pairs 
   - create unique event ITP348/Door/<<UNIQUE_NAME>>
+- Create function to change LED colors: white switch is closed, red switch is open
 
-## Feedback
+#### Lecture
 
-- Going through project and publishing lab took most of the time
+- ​	Start Blynk?
+
+### Feedback
+
+- 
 
 ### Day 2
 
 #### Lecture
 
-* Fall 2020
-  - take time to review questions, OLED, particle functions
-  - have students brainstorm project ideas
 * Review some pasts projects for preliminary project idea
   - https://sites.usc.edu/parke/tag/itp348_projects/
   - https://5cf99969afabc800087c618c.onlosant.com/photon_temperature
@@ -709,11 +623,12 @@ toc_sticky: true
   - This seems early for this, but the semester is shortened by 2 weeks
   - Could consider moving this later in a future semester
 
-## 7. Finite State Machines (==cover sound / tone on second day due to Fall break==)
+## 7. Finite State Machines 
 
 ### Reading
 
 - ==Send wiring diagrams out ahead of time==
+- ==**Try to start Sound earlier due to fall break**==
 
 ### Day 1
 
@@ -778,7 +693,9 @@ toc_sticky: true
 
 
 
-## 8. Motors, Servos + **==Fall BREAK==**
+## 8. Motors, Servos
+
+- **==Fall 2021: Thurs is Holiday==**
 
 ### Reading
 
@@ -793,7 +710,7 @@ toc_sticky: true
 * Tone
 * Pitches
 
-### Day 2 **==FALL BREAK==**
+### Day 2
 
 #### Lecture
 
@@ -827,6 +744,8 @@ toc_sticky: true
 - Given out start of current week: ==A9 - Timer with Blynk (due in two weeks)==
 
 ## 9. Bluetooth
+
+- ==Fall 2021: May need to cover finish motors==
 
 ### Before class
 
@@ -877,7 +796,7 @@ toc_sticky: true
 - explain **changeRgbLight()**
 - Demo device with code
 
-### Day
+### Day 2
 
 #### Lecture
 
@@ -889,7 +808,7 @@ toc_sticky: true
 
 #### Lecture
 
-- ==**Consider moving ultrasonic sensor for extra time**==
+- 
 
 ### Feedback
 
@@ -906,7 +825,7 @@ toc_sticky: true
 
 - 
 
-### Day 
+### Day 1
 
 #### Lecture
 
@@ -915,11 +834,7 @@ toc_sticky: true
 
 #### Lab
 
-- Get ultrasonic sensor working
-
-#### Lecture  / Lab
-
-- Start OLED graphics (most likely)
+- Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
 
 ### Day 2
 
@@ -1102,7 +1017,7 @@ toc_sticky: true
 - Due start of current week: nothing
 - Continue working on project 
 
-## 14. Guest Lecture 
+## 14. Guest Lecture + Wellness Day
 
 ### Reading
 
@@ -1112,13 +1027,13 @@ toc_sticky: true
 
 #### Lecture
 
-- ==**Google Guest Lecture on Accessibility**== 
+- ==**Guest Lecture?**== 
 
 ### Day 2
 
 #### Lecture
 
-- **==THANKSGIVING BREAK==**
+- **==Thanksgiving==**
 
 ### Assignment
 
@@ -1156,6 +1071,8 @@ toc_sticky: true
 ### Day 2
 
 #### Lecture
+
+- ==Guest lecture?==
 
 - Discuss [what happens after prototyping](https://docs.particle.io/tutorials/learn-more/beyond-prototpying/)
 - Work on project 

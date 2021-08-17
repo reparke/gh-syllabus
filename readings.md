@@ -1,5 +1,5 @@
 ---
-title: Pre-Lecture Activities / Reading / Video
+title: Pre-Lecture Videos and Readings
 layout: single
 category: Readings
 toc: true
