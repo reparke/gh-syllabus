@@ -17,8 +17,8 @@ title: Course Introduction
 ## Rob Parke
 
 - Email: parke@usc.edu 
-- Office Hours: OHE 412 (hours on Piazza)
-- Senior Lecturer
+- Office Hours: online (hours on Piazza)
+- Associate Professor
 - Connected Devices and Making Minor
 - Sound Editor / Web Developer (previous)
 - USC Alum!<img src="lecture_course_intro.assets/image-20200113171156623.png" alt="USC ITP" style="width:300px" />
@@ -28,13 +28,13 @@ title: Course Introduction
 
 - Neftali Hernadez 
 - [neftalih@usc.edu](mailto:neftalih@usc.edu) 
-- Radhika Agarwal
-- [agrawalr@usc.edu](mailto:agrawalr@usc.edu)
+- Lydia Cardwell
+- [lcardwel@usc.edu](mailto:lcardwel@usc.edu)
 - Office hours for will be posted on Blackboard
-- For grading issues, contact the TA first
+- For grading issues, post on Piazza and tag the TA
 - For general questions, you can contact either of us
 
-## New(ish) class!
+## Continuous improvement!
 
 - Your feedback is really important throughout the semester
 - I want to know 

@@ -12,6 +12,7 @@ toc_sticky: true
 
 **Definite**
 
+* [ ] Spring 2022: if remote again, consider moving resistors and LEDs to USC kit so shipping delays on Sparkfun kit don't affect students during first two weeks
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] tell students not to unclaim device
 * [ ] have TAs not attend every class
