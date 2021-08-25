@@ -26,6 +26,19 @@ title: Intro to Making Smart Devices
 * Interacting with "smart" devices in the environment
 * Involves programming, electronics, 3d printing, wearables, networking, interaction design
 
+## What is IoT?
+
+## Internet of Things
+
+<img src="lecture_intro_making_smart_devices.assets/iot_cloud.jpg" alt="width:700px" style="width:400px" />
+
+## Internet of Things
+
+* Internet
+  - connect to the internet to send and receive data
+* Things
+  - "smart" devices that are programmed interact with environment 
+
 
 
 ## Why learn this? 
@@ -70,19 +83,6 @@ title: Intro to Making Smart Devices
   - ReWalk - exoskeleton to help people with spinal cord injuries
 <img src="lecture_intro_making_smart_devices.assets/re_walk.jpg" alt="width:200px" style="width:400px" /><img src="lecture_intro_making_smart_devices.assets\earthquake_monitor.png" alt="width:300px" style="width:400px" />
 
-## What is IoT?
-
-## Internet of Things
-
-<img src="lecture_intro_making_smart_devices.assets/iot_cloud.jpg" alt="width:700px" style="width:400px" />
-
-## Internet of Things
-
-* Internet
-  - connect to the internet to send and receive data
-* Things
-  - "smart" devices that are programmed interact with environment 
-
 
 ## Hardware
 
@@ -121,12 +121,12 @@ title: Intro to Making Smart Devices
 ## Past Student Projects
 
 
-| <img src="lecture_intro_making_smart_devices.assets/Device2-e1627015555253.jpg" alt="IMG_0981" style="width:500px;" /> | <img src="lecture_intro_making_smart_devices.assets/Project-Submission-Code-_-Device_kamrynmc_attempt_2021-05-05-16-17-49_IMG_4080.jpg" alt="ITP-348 Final Projects 014 121719" style="width:500px" /> |
+| <img src="lecture_intro_making_smart_devices.assets/Device2-e1627015555253.jpg" alt="IMG_0981" style="width: 500px" /> | <img src="lecture_intro_making_smart_devices.assets/Project-Submission-Code-_-Device_kamrynmc_attempt_2021-05-05-16-17-49_IMG_4080.jpg" alt="ITP-348 Final Projects 014 121719" style="width:500px" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |                                                              |                                                              |
-| ## Past Student Projects                                     |                                                              |
+|                                                              |                                                              |
 
-
+## Past Student Projects 
 | <img src="lecture_intro_making_smart_devices.assets/image-20210823194019330.png" alt="IMG_0981" style="width:450px;" /> | <img src="lecture_intro_making_smart_devices.assets/Project_Submission_-_Code___Device_yjkim_attempt_2021-04-30-15-57-08_IMG_0621_2-e1627018636863-768x1024.jpg" alt="ITP-348 Final Projects 014 121719" style="width:650px" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |                                                              |                                                              |

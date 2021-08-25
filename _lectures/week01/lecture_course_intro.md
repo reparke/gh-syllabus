@@ -54,10 +54,9 @@ title: Course Introduction
 
 | Item                      | Weight |
 | ------------------------- | ------ |
-| Participation             | 10%    |
-| Assignments               | 40%    |
+| Assignments               | 45%    |
 | In-Class Labs and Quizzes | 20%    |
-| Final Project             | 30%    |
+| Final Project             | 35%    |
 
 ## Exams
 
