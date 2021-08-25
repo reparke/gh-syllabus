@@ -12,7 +12,9 @@ title: Course Introduction
 
 # ITP 348
 
-### Introduction to Physical Computing
+### Making Smart Devices
+
+#### Introduction to Electronics/Wearables
 
 ## Rob Parke
 
