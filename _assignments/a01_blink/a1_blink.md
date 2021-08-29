@@ -60,12 +60,14 @@ Goals
     (and so presumably it does not have bugs or errors). In the picture below,
     the latest stable version has been noted.
 
-<img src="media/9e6b2684205c5b77cad0a7087031fec3.png" alt="target OS" style="width:400px" />
+<img src="a1_blink.assets\image-20210829162304279.png" alt="image-20210829162304279" alt="target OS" style="width:400px"/>
+
+
 
 -   Select the type of device to you want to build for. For our course, we will
     always use **argon**
 
-<img src="media/e800ce2f3ca3d6bda3d9378540418825.png" alt="target device" style="width:400px" />
+<img src="a1_blink.assets\image-20210829162158151.png" alt="image-20210829162158151" alt="target device" style="width:400px"/>
 
 -   Enter the name of the device you want to flash to. This will be the name
     gave your device when you initially connected it to your Particle account.
