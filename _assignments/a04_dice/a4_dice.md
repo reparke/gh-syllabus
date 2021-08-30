@@ -22,7 +22,7 @@ Goals
 
 -   Use C++ arrays
 
-**Overview**
+## Overview
 
 This assignment is to create an electronic die. When a button is pressed, the
 die will be “rolled” and a new value will appear. The die roll will be simulated
@@ -36,7 +36,7 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
 
 <img src="media/8edb46a465062f134bc3ad675231de83.png" alt="pattern of 6 sided die" style="width:400px" />
 
-**Components**
+### Components
 
 -   Argon
 
@@ -50,7 +50,7 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
 
 -   Jumper wire (standard header-header)
 
-**Requirements**
+### Requirements
 
 -   Create a Fritzing breadboard prototype layout of your design
 -   Once you’re satisfied with the design, connect the device
@@ -60,15 +60,19 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
     **const int** arrays that represent patterns for each die value.
 -   **Hint #2:** Check out this resource on [generating random numbers](https://www.arduino.cc/reference/en/language/functions/random-numbers/random/) in Arduino
 
-**Required naming convention** (replace \# with the current assignment number)
+### Required naming convention (replace \# with the current assignment number)
 
--   **Project Name**
+-   **Project Name**: `itp348_a#_lastname_firstname`
 
-    -   itp348_a\#_lastname_firstname
+-   **Zip File** (project folder): `itp348_a#_lastname_firstname.zip`
 
--   **Zip File** (include entire project folder)
+## Video Submission Checklist
 
-    -   itp348_a\#_lastname_firstname.zip
+*To receive credit, your submitted video must clearly demonstrate the following:*
+
+- [ ] TBD
+
+  - [ ] TBD
 
 Deliverables
 ------------
@@ -76,22 +80,25 @@ Deliverables
 *[Submit on Blackboard](https://blackboard.usc.edu)*
 
 
-1.  A compressed file containing your project. Follow the guidelines for full
-    credit.
+1. Fritzing layout file
 
-    *Here are the instructions for submission*
+2. A compressed file containing your project. Follow the guidelines for full
+   credit.
 
-2.  Navigate to your project folder.
+   *Here are the instructions for submission*
 
-3.  Include the *entire* folder in a zip file
 
-4.  Rename the zip file based on naming convention
+   - Navigate to your project folder.
 
-5.  Upload zip file to Blackboard site for our course
+   - Include the *entire* folder in a zip file
 
-6.  A photograph of your device connected to USB with the blue light on.
+   - Rename the zip file based on naming convention
 
-7.  A (very) short video demonstrating your project functioning
+   - Upload zip file to Blackboard site for our course
+
+3. A photograph of your device connected to USB with the blue light on.
+
+4. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
 
 Grading
 -------
@@ -105,7 +112,7 @@ Grading
 |                                     |        |
 | Total                               | 30     |
 
-Credits
+#### Credits
 
 -   Image by [Clker-Free-Vector-Images](https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26772)
     from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26772)

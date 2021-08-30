@@ -64,7 +64,7 @@ Here is an example with 7 lights.
     -   Fully clockwise: the lights blink so fast they "seem" to all be on constantly
     -   Fully counterclockwise: the lights blink very slowly
 -   Brightness: 
-    -   Potentiometer controls the brightness of the lights
+    -   Potentiometer controls the brightness of the lights using PWM
     -   Fully clockwise, the lights should be bright 
     -   Fully counter-clockwise: the lights should be very dim (**Note: the lights should by dim, but not turn off**)
 -   Do **not** use a `while` loop inside the `loop` function. You can either use a counter to track the LEDs or a `for` loop 
@@ -80,6 +80,19 @@ Here is an example with 7 lights.
 -   **Project Name**: `itp348_a#_lastname_firstname`
 
 -   **Zip File** (project folder): `itp348_a#_lastname_firstname.zip`
+
+## Video Submission Checklist
+
+*To receive credit, your submitted video must clearly demonstrate the following:*
+
+- [ ] LEDs oscillating at least three cycles back and forth
+
+- [ ] Slowly turning potentiometer clockwise 
+  - [ ] LEDs blink faster and get brighter
+- [ ] Slowly turning potentiometer counter-clockwise
+
+  - [ ] LEDs blink slower and get dimmer
+  - [ ] When fully counter-clockwise, lights should be dim but not off 
 
 Deliverables
 ------------
@@ -103,23 +116,13 @@ Deliverables
     
 6.  A photograph of your device connected to USB with the blue light on.
 
-3. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). Video must show
-
-
-   - LEDs oscillating at least three cycles back and forth
-   - Slowly turning potentiometer clockwise 
-
-     - LEDs blink faster and get brighter
-   - Slowly turning potentiometer counter-clockwise
-
-     - LEDs blink slower and get dimmer
-     - When fully counter-clockwise, lights should be dim but not off 
+3. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
 
 Grading
 -------
 
 | Item                              | Points |
-|----------------------------------:|--------|
+|:----------------------------------|--------|
 |**Components**                    |      |
 |5 LEDs wired with resistors | 1 |
 |Potentiometer wired correctly | 1 |
