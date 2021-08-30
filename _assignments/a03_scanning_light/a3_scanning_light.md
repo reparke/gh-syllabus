@@ -56,17 +56,18 @@ Here is an example with 7 lights.
 **Requirements**
 
 -   Connect five LEDs to Argon
-
--   Control potentiometer
-
--   Use the potentiometer to control both the oscillating rate *and* the
+-   Connect potentiometer and read value 
+-   Within `loop`, use the potentiometer to control both the blink rate *and* the
     brightness
-
-    -   When the potentiometer is turned fully clockwise, the lights should be
-        bright and fully on
-
--   When turned counter-clockwise, the lights should be very dim and blinking
-    slowly **Note: the lights should by dim, but not turn off**
+-   Blink rate: 
+    -   The potentiometer value should be used to control the *delay* value between each light blinking
+    -   Fully clockwise: the lights blink so fast they "seem" to all be on constantly
+    -   Fully counterclockwise: the lights blink very slowly
+-   Brightness: 
+    -   Potentiometer controls the brightness of the lights
+    -   Fully clockwise, the lights should be bright 
+    -   Fully counter-clockwise: the lights should be very dim (**Note: the lights should by dim, but not turn off**)
+-   Do **not** use a `while` loop inside the `loop` function. You can either use a counter to track the LEDs or a `for` loop 
 
 **Bonus**
 
@@ -76,12 +77,9 @@ Here is an example with 7 lights.
 
 **Required naming convention** (replace \# with the current assignment number)
 
--   **Project Name**
--   itp348_a\#_lastname_firstname
-    
--   **Zip File** (include entire project folder)
+-   **Project Name**: `itp348_a#_lastname_firstname`
 
-    -   itp348_a\#_lastname_firstname.zip
+-   **Zip File** (project folder): `itp348_a#_lastname_firstname.zip`
 
 Deliverables
 ------------
@@ -94,28 +92,47 @@ Deliverables
 
     *Here are the instructions for submission*
 
-2.  Navigate to your project folder.
-
-3.  Include the *entire* folder in a zip file
-
-4.  Rename the zip file based on naming convention
-
-5.  Upload zip file to Blackboard site for our course
-
+    
+    - Navigate to your project folder.
+    
+    - Include the *entire* folder in a zip file
+    
+    - Rename the zip file based on naming convention
+    
+    - Upload zip file to Blackboard site for our course
+    
 6.  A photograph of your device connected to USB with the blue light on.
 
-7.  A (very) short video demonstrating your project functioning
+3. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). Video must show
+
+
+   - LEDs oscillating at least three cycles back and forth
+   - Slowly turning potentiometer clockwise 
+
+     - LEDs blink faster and get brighter
+   - Slowly turning potentiometer counter-clockwise
+
+     - LEDs blink slower and get dimmer
+     - When fully counter-clockwise, lights should be dim but not off 
 
 Grading
 -------
 
 | Item                              | Points |
-|-----------------------------------|--------|
-| 5 LEDs used                       | 5      |
-| Potentiometer controls scan rate  | 10     |
-| Potentiometer controls brightness | 10     |
+|----------------------------------:|--------|
+|**Components**                    |      |
+|5 LEDs wired with resistors | 1 |
+|Potentiometer wired correctly | 1 |
+|Components initialized properly | 1 |
+|**Blink Rate** |  |
+| LEDs oscillate in one direction and back | 4   |
+| Potentiometer increases blink rate | 4 |
+| **Brightness**                                               |      |
+| Potentiometer increases brightness                           | 4 |
+| When potentiometer is counter-clockwise, lights are dim but still on | 2 |
+| **Looping**                                                  |  |
+| Counter variable or `for` loop used (not while)              | 3 |
 |                                   |        |
 | Total                             | 20     |
-
 
 *Inspiration for project from* [Dr. Peter Dalmaris](https://www.udemy.com/course/arduino-step-by-step-2017-getting-started-projects/)

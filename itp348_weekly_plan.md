@@ -21,10 +21,11 @@ toc_sticky: true
 * [ ] Spring 2022: if remote again, consider moving resistors and LEDs to USC kit so shipping delays on Sparkfun kit don't affect students during first two weeks
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] tell students not to unclaim device
-* [ ] have TAs not attend every class
-* [ ] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
-* [ ] give list of items students should include in videos each week
-* [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
+* [ ] **Assignments**
+  * [ ] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
+  * [ ] give list of items students should include in videos each week
+* [ ] **proposal**
+  * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
 * [ ] recruit guest lecturers (x2)
 * [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
 * [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
