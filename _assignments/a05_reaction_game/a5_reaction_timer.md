@@ -22,7 +22,7 @@ Goals
 
 -   Process timed events
 
-**Overview**
+## Overview
 
 <img src="a5_reaction_timer.assets/IMG_1609-2.jpg" style="width=700px;" />
 
@@ -35,7 +35,7 @@ the serial monitor.
 The exact layout of this project is left unspecified so you can come up with
 your own design and modifications
 
-**Components**
+## Components
 
 -   Argon
 
@@ -47,7 +47,7 @@ your own design and modifications
 
 -   Jumper wire 
 
-**Requirements**
+## Requirements
 
 -   Create a Fritzing breadboard prototype layout of your design
 
@@ -77,35 +77,47 @@ your own design and modifications
 
     -   Press reset on the argon to reset the game
 
-**Required naming convention** (replace \# with the current assignment number)
+**Naming convention **
 
--   **Project Name**
+*(replace \# with the current assignment number)*
 
-    -   itp348_a\#_lastname_firstname
+-   **Project Name**: `itp348_a#_lastname_firstname`
 
--   **Zip File** (include entire project folder)
+-   **Zip File** (project folder): `itp348_a#_lastname_firstname.zip`
 
-    -   itp348_a\#_lastname_firstname.zip
+## Video Submission Checklist
+
+*To receive credit, your submitted video must clearly demonstrate the following:*
+
+- [ ] TBD
+
+  - [ ] TBD
 
 Deliverables
 ------------
 
-1.  A compressed file containing your project. Follow the guidelines for full
-    credit.
+*[Submit on Blackboard](https://blackboard.usc.edu)*
 
-    *Here are the instructions for submission*
 
-2.  Navigate to your project folder.
+1. Fritzing layout file
 
-3.  Include the *entire* folder in a zip file
+2. A compressed file containing your project. Follow the guidelines for full
+   credit.
 
-4.  Rename the zip file based on naming convention
+   *Here are the instructions for submission*
 
-5.  Upload zip file to Blackboard site for our course
 
-6.  A photograph of your device connected to USB with the blue light on.
+   - Navigate to your project folder.
 
-7.  A (very) short video demonstrating your project functioning
+   - Include the *entire* folder in a zip file
+
+   - Rename the zip file based on naming convention
+
+   - Upload zip file to Blackboard site for our course
+
+3. A photograph of your device connected to USB with the blue light on.
+
+4. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
 
 Grading
 -------

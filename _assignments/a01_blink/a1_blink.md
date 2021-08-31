@@ -20,7 +20,7 @@ Goals
 
 -   Test device configuration
 
-**Requirements**
+## Requirements
 
 -   Connect to additional Wifi networks (optional)
 
@@ -111,26 +111,36 @@ Goals
 
 
 
+**Naming convention** 
+
+*(replace \# with the current assignment number)*
+
+-   **Project Name**: `itp348_a#_lastname_firstname`
+
+-   **Zip File** (project folder): `itp348_a#_lastname_firstname.zip`
+
 Deliverables
 ------------
 
 *[Submit on Blackboard](https://blackboard.usc.edu)*
 
 
-1.  A compressed file containing your project. Follow the guidelines for full
-    credit.
+1. A compressed file containing your project. Follow the guidelines for full
+   credit.
 
-    *Here are the instructions for submission*
+   *Here are the instructions for submission*
 
-2.  Navigate to your project folder.
 
-3.  Include the *entire* folder in a zip file
+   - Navigate to your project folder.
 
-4.  Rename the zip file so it follows this convention: *A\#.lastname.firstname*
+   - Include the *entire* folder in a zip file
 
-5.  Upload zip file to Blackboard site for our course
+   - Rename the zip file based on naming convention
 
-6.  A photograph of your device connected to USB with the blue light on.
+   - Upload zip file to Blackboard site for our course
+
+2. A photograph of your device connected to USB with the blue light on.
+
 
 Grading
 -------

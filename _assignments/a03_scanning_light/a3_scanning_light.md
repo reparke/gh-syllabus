@@ -23,7 +23,7 @@ Goals
 
 -   Use PWM to change LED intensity
 
-**Overview**
+## Overview
 
 This assignment is to create variable scanning / oscillating light pattern on 5
 LEDs. The scanning rate will be controlled with a potentiometer. This pattern is
@@ -39,7 +39,7 @@ Here is an example with 7 lights.
 
 <img src="media/24cca9ef54a3cdbd348cf9e02bf651c9.png" alt="" style="width:400px" />
 
-**Components**
+## Components
 
 -   Argon
 
@@ -53,7 +53,7 @@ Here is an example with 7 lights.
 
 -   Jumper wire (standard header-header)
 
-**Requirements**
+## Requirements
 
 -   Connect five LEDs to Argon
 -   Connect potentiometer and read value 
@@ -69,13 +69,15 @@ Here is an example with 7 lights.
     -   Fully counter-clockwise: the lights should be very dim (**Note: the lights should by dim, but not turn off**)
 -   Do **not** use a `while` loop inside the `loop` function. You can either use a counter to track the LEDs or a `for` loop 
 
-**Bonus**
+### Bonus
 
 -   Create an enclosure for your project that shows the LEDs and potentiometer and hides the breadboard.
 -   Use a for loop to iterate through the LEDs (hint: this will require the use
     of an array, which is like a C++ list).
 
-**Required naming convention** (replace \# with the current assignment number)
+**Naming convention** 
+
+*(replace \# with the current assignment number)*
 
 -   **Project Name**: `itp348_a#_lastname_firstname`
 
@@ -138,4 +140,6 @@ Grading
 |                                   |        |
 | Total                             | 20     |
 
-*Inspiration for project from* [Dr. Peter Dalmaris](https://www.udemy.com/course/arduino-step-by-step-2017-getting-started-projects/)
+**Credits**
+
+- *Inspiration for project from* [Dr. Peter Dalmaris](https://www.udemy.com/course/arduino-step-by-step-2017-getting-started-projects/)

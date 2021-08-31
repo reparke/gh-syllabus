@@ -104,4 +104,4 @@ Add Argon device to your Particle account
 Deliverables
 ------------
 
-1.  There is nothing to submit for this assignment.
+- There is nothing to submit for this assignment.

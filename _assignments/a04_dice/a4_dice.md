@@ -60,7 +60,9 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
     **const int** arrays that represent patterns for each die value.
 -   **Hint #2:** Check out this resource on [generating random numbers](https://www.arduino.cc/reference/en/language/functions/random-numbers/random/) in Arduino
 
-### Required naming convention (replace \# with the current assignment number)
+**Naming convention **
+
+*(replace \# with the current assignment number)*
 
 -   **Project Name**: `itp348_a#_lastname_firstname`
 
@@ -112,10 +114,11 @@ Grading
 |                                     |        |
 | Total                               | 30     |
 
-#### Credits
+**Credits**
 
 -   Image by [Clker-Free-Vector-Images](https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26772)
     from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26772)
     
 -   Inspiration for project from [Dr. Peter
     Dalmaris](https://www.udemy.com/course/arduino-step-by-step-2017-getting-started-projects/)
+

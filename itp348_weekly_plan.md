@@ -1,4 +1,5 @@
 ---
+
 layout: single
 classes: wide
 title: Weekly Plan
@@ -28,8 +29,6 @@ toc_sticky: true
   * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
 * [ ] recruit guest lecturers (x2)
 * [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
-* [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
-* [ ] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
 
 **Possible**
 
@@ -65,28 +64,37 @@ toc_sticky: true
 - - [x] Buttons 
   - [x] Digital input (?)
   - [x] RGB LEDS
-  - [ ] wk3: change die assignment to explicitly suggest on array for the pin labels, and multiple array for the dice labels (Summer) 
+  - [ ] a3: change die assignment to explicitly suggest on array for the pin labels, and multiple array for the dice labels (Summer) 
+  - [ ] a4: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 4
 - - [ ] Multi-tasking
   - [x] Photoresistor
   - [x] Cloud Overview 
   - [ ] Publish (skip)
+  - [ ] a5: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 5
 - - [x] OLED
   - [x] TMP36
   - [ ] Webhooks / APIs (Initial State can be live)
   - [ ] wk 5: use millis in next assignment (summer)
   - [ ] wk 5: move enum and switch videos to week 6 (summer)
+  - [ ] a6: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 6
 - - [ ] Blynk
   - [x] magnetic switch
   - [x] cloud subscribe
   - [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
+  - [ ] a7: revise with new naming, formatting, video checklist, and rubric
   
 - [x] Week 7
   - [x] Switch / enum
   - [x] State machines
-
+  - [ ] a8
+    - [ ]  revise with new naming, formatting, video checklist, and rubric
+    - [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
+    - [ ] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
+  - [ ] a9: revise with new naming, formatting, video checklist, and rubric
+  
 - [ ] Week 8
 - - [x] Sound
 	- [ ] Motors
@@ -98,11 +106,13 @@ toc_sticky: true
 
 - [x] Week 10
   - [x] Ultrasonic sensor (again in case)
-
+  - [ ] a10: revise with new naming, formatting, video checklist, and rubric
+  
 - [ ] Week 11
   - [x] OLED graphics
   - [ ] JSON / APIs (need to re-record)
   - [ ] wk11: inquire about future class TAs and kit TA
+  - [ ] a11: revise with new naming, formatting, video checklist, and rubric
   
 - [x] Week 12
   - [x] Debouncing
@@ -628,7 +638,7 @@ toc_sticky: true
   - Warn students that it was time consuming
   - **==IDEA==** make reaction timer a state machine assignment and move forward (replace other assignment)
 - Given out start of current week:  A6 - Preliminary Proposal Ideas
-  - This seems early for this, but the semester is shortened by 2 weeks
+  - This seems early for this
   - Could consider moving this later in a future semester
 
 ## 7. Finite State Machines 
