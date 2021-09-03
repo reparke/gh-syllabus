@@ -17,13 +17,18 @@ void loop() {
   // The core of your code will likely live here.
 
   //turn on LED
-  digitalWrite(D7, HIGH);
-  //stay on for 1 sec
-  delay(1000);
-  //turn off led
-  digitalWrite(D7, LOW);
-  //stay off for 1 sec
-  delay(1000);
+  // digitalWrite(D7, HIGH);
+  // //stay on for 1 sec
+  // delay(1000);
+  // //turn off led
+  // digitalWrite(D7, LOW);
+  // //stay off for 1 sec
+  // delay(1000);
+
+for (int i = 0; i < 255; i++) {
+  analogWrite(D7, i);
+  delay(10);
+}
 
   //control (or command) + shift + 
 }

@@ -61,7 +61,7 @@ toc_sticky: true
   - [x] Analog input
   - [x] Potentiometers
 - [x] Week 3
-- - [x] Buttons 
+- - [x] Butto  ns 
   - [x] Digital input (?)
   - [x] RGB LEDS
   - [ ] a3: change die assignment to explicitly suggest on array for the pin labels, and multiple array for the dice labels (Summer) 
@@ -242,6 +242,8 @@ toc_sticky: true
 
 ### Day 1
 
+==**Note: If students don't have LEDs / 330 Ohm resistors, have them use on-board D7 LED**==
+
 #### Notes
 
 - TA and I spent some time class helping install
@@ -249,7 +251,8 @@ toc_sticky: true
 
 #### Lecture
 
-* Argon Microcontroller
+* Argon Microcontroller (finish Fall 2021)
+* Start with LED example
 
 #### Lab
 
