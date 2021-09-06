@@ -152,6 +152,10 @@ I = R / V
 
 <img src="lecture_electricity.assets/1564547904128.png" alt="" style="height:300px" />
 
+## Breadboard Connections
+
+<img src="lecture_electricity.assets/518c0b34ce395fea62000002.jpg" style="width:600px;" />
+
 ## Credits
 
 - <a href="https://www.flickr.com/photos/59275783@N04/47522354472/">Mabacam</a> Flickr via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">cc</a> 
