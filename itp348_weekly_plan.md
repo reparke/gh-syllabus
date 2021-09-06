@@ -78,6 +78,7 @@ toc_sticky: true
   - [ ] Webhooks / APIs (Initial State can be live)
   - [ ] wk 5: use millis in next assignment (summer)
   - [ ] wk 5: move enum and switch videos to week 6 (summer)
+  - [ ] update Blynk slides
   - [ ] a6: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 6
 - - [ ] Blynk
@@ -90,6 +91,7 @@ toc_sticky: true
   - [x] Switch / enum
   - [x] State machines
   - [ ] a8
+    - [ ]  revise assignment to remove dropdown menu
     - [ ]  revise with new naming, formatting, video checklist, and rubric
     - [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
     - [ ] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
