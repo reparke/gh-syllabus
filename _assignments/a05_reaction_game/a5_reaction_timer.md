@@ -89,9 +89,12 @@ your own design and modifications
 
 *To receive credit, your submitted video must clearly demonstrate the following:*
 
-- [ ] TBD
-
-  - [ ] TBD
+- [ ] RGB LED flash white three times with delay
+- [ ] RGB LED changes to red or blue
+- [ ] Player 1 guesses correctly and displays on serial monitor
+- [ ] Player 1 guesses incorrectly and displays on serial monitor
+- [ ] Player 2 guesses correctly and displays on serial monitor
+- [ ] Player 2 guesses incorrectly and displays on serial monitor
 
 Deliverables
 ------------
