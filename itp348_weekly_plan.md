@@ -319,7 +319,7 @@ toc_sticky: true
 
 #### Feedback
 
-- didn't have time for pot to control LED with PWM
+- Fall 2021: I skipped the voltage divider derivation
 
 #### Assignment
 
