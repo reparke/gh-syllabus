@@ -105,10 +105,7 @@ title: RGB LEDs
 
 
 1. Wire an RGB LED 
-2. When switch is to one direction, display your favorite color
-3. When switch is other direction, display a random color
-4. Rewrite sketch using `displayColor(r, g, b)` and `displayRandomColor()`
-5. Import `rgb-controls` library to animate colors
+2. When button is pressed,  display a random color
 
 ## Lab 2
 
