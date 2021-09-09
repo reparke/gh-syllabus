@@ -18,7 +18,7 @@ toc_sticky: true
   * [ ] finalize kit VERY early and have students order in July or in Nov
   * [ ] Consider having bookstore purchase again
   * [ ] could ITP sell directly to students?
-  * [ ] could w
+  * [ ] 2 of the 15x20 cm resealable bags and 1 of 21x24 cm bags to use per box
 * [ ] Spring 2022: if remote again, consider moving resistors and LEDs to USC kit so shipping delays on Sparkfun kit don't affect students during first two weeks
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] tell students not to unclaim device
@@ -64,7 +64,7 @@ toc_sticky: true
 - - [x] Butto  ns 
   - [x] Digital input (?)
   - [x] RGB LEDS
-  - [ ] a3: change die assignment to explicitly suggest on array for the pin labels, and multiple array for the dice labels (Summer) 
+  - [ ] a3: change die assignment to explicitly suggest an array for the pin labels, and multiple array for the dice labels (Summer) 
   - [ ] a4: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 4
 - - [ ] Multi-tasking
@@ -78,6 +78,7 @@ toc_sticky: true
   - [ ] Webhooks / APIs (Initial State can be live)
   - [ ] wk 5: use millis in next assignment (summer)
   - [ ] wk 5: move enum and switch videos to week 6 (summer)
+  - [ ] update Blynk slides
   - [ ] a6: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 6
 - - [ ] Blynk
@@ -90,6 +91,7 @@ toc_sticky: true
   - [x] Switch / enum
   - [x] State machines
   - [ ] a8
+    - [ ]  revise assignment to remove dropdown menu
     - [ ]  revise with new naming, formatting, video checklist, and rubric
     - [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
     - [ ] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
@@ -317,7 +319,7 @@ toc_sticky: true
 
 #### Feedback
 
-- didn't have time for pot to control LED with PWM
+- Fall 2021: I skipped the voltage divider derivation
 
 #### Assignment
 

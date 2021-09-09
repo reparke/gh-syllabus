@@ -3,9 +3,9 @@
 marp: true
 theme: itp
 
-week: 6
+week: 16
 category: lectures
-title: Creating IoT Mobile Apps with Blynk
+title: Creating IoT Mobile Apps with Blynk (original version)
 ---
 
 <!-- headingDivider: 2 -->
@@ -13,6 +13,11 @@ title: Creating IoT Mobile Apps with Blynk
 # Blynk
 
 ![bg opacity:.75](lecture_blynk.assets/blynk.jpg)
+
+## Note: Original Blynk Platform
+
+- The following describe how to configure Blynk using the orginal Blynk platform
+- These instructions are still valid, but in June 2021 Blynk changed to a new platform
 
 ## What is Blynk?
 
