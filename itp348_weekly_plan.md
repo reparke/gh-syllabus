@@ -67,7 +67,7 @@ toc_sticky: true
   - [x] a3: change die assignment to explicitly suggest an array for the pin labels, and multiple array for the dice labels (Summer) 
   - [x] a4: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 4
-- - [ ] Multi-tasking
+- - [ ] Multi-tasking (maybe keep a)
   - [x] Photoresistor
   - [x] Cloud Overview 
   - [ ] Publish (skip)
@@ -512,7 +512,7 @@ toc_sticky: true
 
 #### Lecture
 
-* If time, cover multimeter or reading resistors
+* If time, cover multimeter or reading resistors or switches
 
 ### Assignment
 

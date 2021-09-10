@@ -114,9 +114,13 @@ title: Photoresistors
 
 * Read and display the voltage between the photoresistor and resistor.
 * Measure it based on different lighting conditions: normal room light, covering the sensor with your hand, shining
-* Display on the serial monitor if you room light **dark**, **light**, or **ambient**
+* Part 1: 
+   * Display on the serial monitor if you room light **dark**, **light**, or **ambient**
+   * Display a different LED color based on the light states
    * Hint: how will you determine what type of light is present?
-* Display a different LED color based on the light states
+* Part 2:
+   * Set the LED to specific color
+   * Use the values from the photoresistor to control the brightness of the LED. For example, use PWM to brighten / darken the light based on the photoresistor values. You will need to convert / scale the photoresistor values to the PWM values
 
 
 ## Credit
