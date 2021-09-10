@@ -37,15 +37,15 @@ Overview
 
 -   Use cloud / internet connectivity in a meaningful way
 
--   Must send data to a cloud system and display a dashboard (e.g. Initial State, Losant, ThingSpeak)
+-   Must send data to a cloud system and display a dashboard (e.g. [Initial State](https://www.initialstate.com/), [Losant](https://www.losant.com/), [ThingSpeak](https://thingspeak.com/))
 
 - Must have interface app and be able to receive feedback from cloud system to produce effects in the physical world (i.e. control device remotely)
 
   -   Acceptable
-      -   Blynk (mobile app) 
-      -   Intial State (website)
-      -   Losant (website)
-      -   If using Bluetooth, the Bluefruit app will be considered as long as it is substantially different from car assignment
+      -   [Blynk](https://blynk.io/) (mobile app) 
+      -   [Initial State](https://www.initialstate.com/) (website)
+      -   [Losant](https://www.losant.com/) (website)
+      -   If using Bluetooth, the [Bluefruit LE Connect](https://learn.adafruit.com/bluefruit-le-connect) app will be considered as long as it is substantially different from car assignment
   -   Not acceptable 
       -   Particle app 
 
@@ -70,6 +70,8 @@ Overview
 Deliverables (for this preliminary proposal)
 ------------
 
+*[Submit on Blackboard](https://blackboard.usc.edu)*
+
 * Two distinct ideas (i.e. they should address different problems)
 
 
@@ -86,34 +88,16 @@ Deliverables (for this preliminary proposal)
 
   * List the key features and what components (e.g. sensors) and services (e.g. InitialState) you will use
 
-    
-
-**Submission**
-
-- Submit all documents via Blackboard
-
-  
-
-
-**Required naming convention** (replace \# with the current assignment number)
-
--   **Project Name**
-
-    -   itp348_project_ideas_lastname_firstname
-
--   **Zip File** (include entire project folder)
-
-    -   itp348_project_lastname_firstname.zip
 
 Grading
 -------
 
-| Item                                            | Points |
-| ----------------------------------------------- | ------ |
-| Preliminary idea #1: all requirements completed | **10** |
-| Preliminary idea #2: all requirements completed | **10** |
-|                                                 |        |
-| Total                                           | 20     |
+| Item                                                | Points |
+| --------------------------------------------------- | ------ |
+| **Preliminary idea #1: all requirements completed** | 10     |
+| **Preliminary idea #2: all requirements completed** | 10     |
+|                                                     |        |
+| Total                                               | 20     |
 
 **Acknowledgements**
 

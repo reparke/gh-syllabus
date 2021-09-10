@@ -68,8 +68,8 @@ your own design and modifications
     -   Argon will wait for either player 1 or player 2 to press the correct
         button
 
-    -   The first player to press the correct button scores 100 points;
-        incorrect presses result in -100 point deduction
+    -   The first player to press the correct button scores **+100** points;
+        incorrect presses result in **-100** point deduction
 
     -   After each round, the winner of the round is displayed on the serial
         monitor. The cumulative scores of both players are also displayed on the
@@ -125,11 +125,18 @@ Deliverables
 Grading
 -------
 
-| Item                  | Points |
-|-----------------------|--------|
-| Fritzing layout       | 5      |
-| RGB LED configuration | 5      |
-| Button configuration  | 5      |
-| Game logic functional | 20     |
-|                       |        |
-| Total                 | 35     |
+| Item                                        | Points |
+| ------------------------------------------- | ------ |
+| **Fritzing layout**                         | 5      |
+| **Components**                              |        |
+| RGB LED configuration                       | 5      |
+| Button configuration                        | 5      |
+| **Game logic**                              |        |
+| RGB LED flashes                             | 2      |
+| RGB LED randomly chooses color              | 2      |
+| First correct answer gives +100 points      | 4      |
+| Incorrect answer gives -100 points          | 4      |
+| Serial monitor displays cumulative results  | 4      |
+| Reset button clears results and resets game | 4      |
+|                                             |        |
+| Total                                       | 35     |

@@ -64,14 +64,14 @@ toc_sticky: true
 - - [x] Butto  ns 
   - [x] Digital input (?)
   - [x] RGB LEDS
-  - [ ] a3: change die assignment to explicitly suggest an array for the pin labels, and multiple array for the dice labels (Summer) 
-  - [ ] a4: revise with new naming, formatting, video checklist, and rubric
+  - [x] a3: change die assignment to explicitly suggest an array for the pin labels, and multiple array for the dice labels (Summer) 
+  - [x] a4: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 4
 - - [ ] Multi-tasking
   - [x] Photoresistor
   - [x] Cloud Overview 
   - [ ] Publish (skip)
-  - [ ] a5: revise with new naming, formatting, video checklist, and rubric
+  - [x] a5: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 5
 - - [x] OLED
   - [x] TMP36
@@ -79,7 +79,7 @@ toc_sticky: true
   - [ ] wk 5: use millis in next assignment (summer)
   - [ ] wk 5: move enum and switch videos to week 6 (summer)
   - [ ] update Blynk slides
-  - [ ] a6: revise with new naming, formatting, video checklist, and rubric
+  - [x] a6: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 6
 - - [ ] Blynk
   - [x] magnetic switch

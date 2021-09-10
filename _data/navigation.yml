@@ -1,10 +1,12 @@
 main:
   - title: "Schedule"
     url: /schedule
-  - title: "Exercises"
-    url: https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises
+  - title: "Videos"
+    url: /readings
   - title: "Assignments"
     url: /assignments
+  - title: "Exercises"
+    url: https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises
   - title: "Blackboard"
     url: https://blackboard.usc.edu
   - title: "Piazza"
@@ -15,8 +17,6 @@ main:
     url: /lectures
   - title: "Resources"
     url: /resources
-  - title: "Videos"
-    url: /readings
   - title: "Syllabus"
     url: /itp348_syllabus
   - title: "Feedback"
