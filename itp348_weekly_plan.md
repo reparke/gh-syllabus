@@ -90,12 +90,12 @@ toc_sticky: true
 - [x] Week 7
   - [x] Switch / enum
   - [x] State machines
-  - [ ] a8
+  - [ ] a9
     - [ ]  revise assignment to remove dropdown menu
     - [ ]  revise with new naming, formatting, video checklist, and rubric
     - [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
     - [ ] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
-  - [ ] a9: revise with new naming, formatting, video checklist, and rubric
+  - [x] a8: revise with new naming, formatting, video checklist, and rubric
   
 - [ ] Week 8
 - - [x] Sound
@@ -108,13 +108,13 @@ toc_sticky: true
 
 - [x] Week 10
   - [x] Ultrasonic sensor (again in case)
-  - [ ] a10: revise with new naming, formatting, video checklist, and rubric
+  - [x] a10: revise with new naming, formatting, video checklist, and rubric
   
 - [ ] Week 11
   - [x] OLED graphics
   - [ ] JSON / APIs (need to re-record)
   - [ ] wk11: inquire about future class TAs and kit TA
-  - [ ] a11: revise with new naming, formatting, video checklist, and rubric
+  - [x] a11: revise with new naming, formatting, video checklist, and rubric
   
 - [x] Week 12
   - [x] Debouncing

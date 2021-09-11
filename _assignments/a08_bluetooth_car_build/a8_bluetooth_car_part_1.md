@@ -16,12 +16,11 @@ Goals
 
 -   Connect car chassis and motors
 
-
-**Overview**
+## Overview
 
 This assignment is to build a small car, which we will program in your next assignment. This week you will build and customize the car, and next week you will complete the programming for the car to operate.
 
-**Components**
+## Components
 
 -   Argon
 
@@ -33,8 +32,7 @@ This assignment is to build a small car, which we will program in your next assi
 
 -   LiPo battery
 
-
-**Requirements**
+## Requirements
 
 -   No Fritzing diagram is needed. Wiring diagram and plans are provided in the
     lecture notes.
@@ -42,26 +40,35 @@ This assignment is to build a small car, which we will program in your next assi
 -   Add decorative elements to distinguish your car. There will be a competition the following week for best customized car.
 -   Plan to bring car (with fully charged battery) and phone to class
 
-## Required naming convention
+**Naming convention **
 
-(replace \# with the current assignment number)
+*(replace \# with the current assignment number)*
 
--   **Project Name**
--   itp348_a\#_lastname_firstname
+-   **Project Name**: `itp348_a#_lastname_firstname`
 
--   **Zip File** (include entire project folder)
-
-    -   itp348_a\#_lastname_firstname.zip
+-   **Zip File** (project folder): `itp348_a#_lastname_firstname.zip`
 
 Deliverables
 ------------
+
+*[Submit on Blackboard](https://blackboard.usc.edu)*
+
 
 1. A compressed file containing your project. Follow the guidelines for full
    credit.
 
    *Here are the instructions for submission*
 
-2. Submit photograph(s) of your customized car with the battery connected the Argon and with the blue light on
+
+   - Navigate to your project folder.
+
+   - Include the *entire* folder in a zip file
+
+   - Rename the zip file based on naming convention
+
+   - Upload zip file to Blackboard site for our course
+
+2. A photograph of your customized car with the battery connected to the Argon and with the blue light on
 
    
 
@@ -69,8 +76,10 @@ Deliverables
 Grading
 -------
 
-| Item              | Points |
-| ----------------- | ------ |
-| Car structure     | 5      |
-| Car customization | 5      |
-| Total             | 10     |
+| Item                  | Points |
+| --------------------- | ------ |
+| **Car structure**     | 5      |
+| **Car customization** | 5      |
+|                       |        |
+| Total                 | 10     |
+

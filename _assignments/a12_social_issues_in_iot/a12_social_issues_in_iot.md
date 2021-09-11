@@ -50,6 +50,7 @@ Students will work in pairs and sign up for a time slot throughout the semester 
 ## Deliverables
 
 - Create a Piazza post with the article summary and questions to facilitate discussion. Post must clearly indicate the names of team members.
+- Include the post in the `social_issues` folder
 
 **Extra credit**
 
