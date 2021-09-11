@@ -1,11 +1,8 @@
----
 week: 7
 number: 7
 category: assignments
 title: Environment Monitor and Dashboard
 date_due: Oct 11 @ 11:59 pm
-
----
 
 Assignment 7 – Environment Monitor and Dashboard
 =========================================
@@ -88,7 +85,7 @@ Here is an example:
     L: 59.0 F
     Hum
     H: 22 %
-  L: 19 %
+    L: 19 %
     ```
     
 
@@ -114,34 +111,46 @@ Here is an example:
     * Historical humidity as a graph
 -   For each of these four widgets used, you should set appropriate minimums and maximums based on the type of data displayed
 
+**Naming convention **
+
+*(replace \# with the current assignment number)*
+
+-   **Project Name**: `itp348_a#_lastname_firstname`
+
+-   **Zip File** (project folder): `itp348_a#_lastname_firstname.zip`
+
+Video Submission Checklist
+------------
+
+- [ ] OLED screen showing current data
+- [ ] Button pressed trigger OLED historical data
+- [ ] Initial State dashboard receiving data
+
 Deliverables
 ------------
-1.	Fritzing diagram
-2.	Workbench project with firmware source code
-3.	Photos (must be clear) should show:
-   * Device
-   * Initial State dashboard
-4.	Video demonstrating all the functionality of your project and should include
-   * OLED screen showing current data
-   * Button pressed trigger OLED historical data
-   * Initial State dashboard 
 
-## Submission Instructions
+*[Submit on Blackboard](https://blackboard.usc.edu)*
 
-*Please follow the guidelines below for full credit.*
 
-* Navigate to your project folder.
-* Include the *entire* folder in a zip file
-* Rename the zip file based on naming convention
-* Upload zip file to Blackboard site for our course
-* Separately, upload your video Blackboard (or submit the link to a video hosted elsewhere)
+1. Fritzing layout file
 
-**Required naming convention** (replace \# with the current assignment number)
+2. A compressed file containing your project. Follow the guidelines for full
+   credit.
 
--   **Project Name**
-    -   `itp348_a#_lastname_firstname`
--   **Zip File** (include entire project folder)
-    -   `itp348_a#_lastname_firstname.zip`
+   *Here are the instructions for submission*
+
+
+   - Navigate to your project folder.
+
+   - Include the *entire* folder in a zip file
+
+   - Rename the zip file based on naming convention
+
+   - Upload zip file to Blackboard site for our course
+
+3. A photograph of your device connected to USB with the blue light on.
+4. ==A screenshot of your Initial State dashboard==
+5. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
 
 Grading
 -------

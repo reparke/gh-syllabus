@@ -24,69 +24,13 @@ Goals
 
 This assignment is to create a timer device which uses a Blynk app to configure the timer. The user can select a timer length and song from the Blynk app, and the Argon will play 1 of 3 songs through a speaker.
 
-## Device
+### Device
 
 <img src="a9_timer_blynk.assets/IMG_1688.jpg" alt="IMG_1688" style="width:500px;" />
 
-## Blynk App
+### Blynk App
 
 <img src="a9_timer_blynk.assets/IMG_1686.png" alt="IMG_1686" style="width:500px;" /><img src="a9_timer_blynk.assets/IMG_1687.png" alt="IMG_1687" style="width:500px;" />
-
-## App Functionality
-
-<img src="a9_timer_blynk.assets/SNAGHTML344516a7.PNG" alt="img" style="width:200px;" />
-
-* **Enable / Disable Button**
-
-  * When pressing app button
-
-    * Running: starts alarm countdown based on slider value; turns on LED
-    * Stopped: pauses alarm countdown and stores remaining time (e.g. if the timer was 5 min and 2 min are remaining, Argon will store that 2 min are remaining); turn off LED
-
-  * Other changes
-
-    * When alarm goes off, button should go back to STOPPED and LED turns off
-
-    
-
-  <img src="a9_timer_blynk.assets/image-20210306161004330.png" alt="image-20210306161004330" style="width:200px;" />
-
-* **Reset button**
-
-  * When pressing app button
-
-    * Alarm countdown stops
-    * Timer is reset to 0
-    * LED turns off
-
-    
-
-  <img src="a9_timer_blynk.assets/image-20210306161146384.png" alt="image-20210306161146384" style="width:200px;" />
-
-* **Alarm timer**
-
-  * When slider is moved, 
-    * Argon should store the desired timer length (use seconds instead of minutes)
-    * Time remaining should be updated to reflect timer length
-
-  
-
-  <img src="a9_timer_blynk.assets/image-20210306161346865.png" alt="image-20210306161346865" style="width:200px;" />
-
-* **Song selection**
-
-  * Displays 3 different song choices
-  * When song is selected, Argon should store the desire song choice
-
-
-
-<img src="a9_timer_blynk.assets/image-20210306161503157.png" alt="image-20210306161503157" style="width:300px;" />
-
-* **Time remaining**
-  * Displays amount of time remaining in the alarm
-  * Should be updated automatically when user chooses a time with the slider
-  * Should be updated automatically when timer is counting down
-  * Should reset to 0 when user presses reset button
 
 ## Components
 
@@ -95,6 +39,65 @@ This assignment is to create a timer device which uses a Blynk app to configure 
 -   1 x speaker
 -   1 x LED
 -   Jumper wire
+
+## App Functionality
+
+<img src="a9_timer_blynk.assets/SNAGHTML344516a7.PNG" alt="img" style="width:200px;" />
+
+### Enable / Disable Button
+
+* When pressing app button
+
+  * Running: starts alarm countdown based on slider value; turns on LED
+  * Stopped: pauses alarm countdown and stores remaining time (e.g. if the timer was 5 min and 2 min are remaining, Argon will store that 2 min are remaining); turn off LED
+
+* Other changes
+
+  * When alarm goes off, button should go back to STOPPED and LED turns off
+
+  
+
+<img src="a9_timer_blynk.assets/image-20210306161004330.png" alt="image-20210306161004330" style="width:200px;" />
+
+### Reset button
+
+* When pressing app button
+
+  * Alarm countdown stops
+  * Timer is reset to 0
+  * LED turns off
+
+  
+
+<img src="a9_timer_blynk.assets/image-20210306161146384.png" alt="image-20210306161146384" style="width:200px;" />
+
+### Alarm timer
+
+* When slider is moved, 
+  * Argon should store the desired timer length (use seconds instead of minutes)
+  * Time remaining should be updated to reflect timer length
+
+
+
+<img src="a9_timer_blynk.assets/image-20210306161346865.png" alt="image-20210306161346865" style="width:200px;" />
+
+### Song selection
+
+* Displays 3 different song choices
+* When song is selected, Argon should store the desire song choice
+
+
+
+<img src="a9_timer_blynk.assets/image-20210306161503157.png" alt="image-20210306161503157" style="width:300px;" />
+
+### Time remaining
+
+* Displays amount of time remaining in the alarm
+* Should be updated automatically when user chooses a time with the slider
+* Should be updated automatically when timer is counting down
+* Should reset to 0 when user presses reset button
+
+-   
 
 ## Requirements
 
@@ -163,36 +166,48 @@ This assignment is to create a timer device which uses a Blynk app to configure 
 
 * When alarm is trigged, play songs
 
+**Naming convention **
+
+*(replace \# with the current assignment number)*
+
+-   **Project Name**: `itp348_a#_lastname_firstname`
+
+-   **Zip File** (project folder): `itp348_a#_lastname_firstname.zip`
+
+## Video Submission Checklist
+
+*To receive credit, your submitted video must clearly demonstrate the following:*
+
+- [ ] Starting alarm timer in Blynk app
+- [ ] Pausing alarm timer
+- [ ] Alarm timer gauge counting down
+- [ ] Song playing
+
 Deliverables
 ------------
 
-1.	Fritzing diagram
-2.	Workbench project with firmware source code
-3.	Photos (must be clear) should show:
-   * Device
-   * Blynk app
-4.	Video demonstrating all the functionality of your project and should include
-   * Starting alarm timer in Blynk app
-   * Pausing alarm timer
-   * Alarm timer gauge counting down
-   * Song playing
+*[Submit on Blackboard](https://blackboard.usc.edu)*
 
-## Submission Instructions
 
-*Please follow the guidelines below for full credit.*
+1. Fritzing layout file
 
-* Navigate to your project folder.
-* Include the *entire* folder in a zip file
-* Rename the zip file based on naming convention
-* Upload zip file to Blackboard site for our course
-* Separately, upload your video Blackboard (or submit the link to a video hosted elsewhere)
+2. A compressed file containing your project. Follow the guidelines for full
+   credit.
 
-**Required naming convention** (replace \# with the current assignment number)
+   *Here are the instructions for submission*
 
--   **Project Name**
-    -   `itp348_a#_lastname_firstname`
--   **Zip File** (include entire project folder)
-    -   `itp348_a#_lastname_firstname.zip`
+
+   - Navigate to your project folder.
+
+   - Include the *entire* folder in a zip file
+
+   - Rename the zip file based on naming convention
+
+   - Upload zip file to Blackboard site for our course
+
+3. A photograph of your device connected to USB with the blue light on.
+4. ==A screenshot of your custom Blynk app==
+5. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
 
 Grading
 -------
