@@ -454,8 +454,6 @@ toc_sticky: true
 
 #### 2021 Spring Idea
 
-* modify photoresistor lab to remove handout exploration, and make it a group lab that also reviews some elements from prior weeks
-  * buttons, RGB LEDs, LEDs, potentiometers / ADC, PWM
 * ==Consider covering functions and libraries on Day 1, and leaving publishing for day 2==
 
 #### Lecture
@@ -477,6 +475,10 @@ toc_sticky: true
 #### Lab
 
 - publish photoresistor value and "state" (for example bright, ambient, or dark to Particle cloud)
+
+#### Lecture
+
+- Reading resistors (we had time in Fall 2021)
 
 ### Feedback
 
