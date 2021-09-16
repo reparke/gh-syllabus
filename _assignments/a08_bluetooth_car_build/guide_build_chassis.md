@@ -99,7 +99,22 @@ Screw on Wheels to DC Motors and add the wheel rubber tires.
 
 ## Part 2: Wiring
 
-### Step 7: Build Circuit with Motor Controller
+### Step 7: Attaching the Battery
+
+* The battery can be attached to either the top or bottom of the chassis, but to avoid damaging it, it is recommended to attach the battery to the top of the chassis
+* The breadboard can then be attached to the battery
+
+<img src="guide_build_chassis.assets/IMG_8467.JPG" style="400px" />
+<img src="guide_build_chassis.assets/IMG_8468.JPG" alt="IMG_8468" style="width:400px" />
+
+<img src="guide_build_chassis.assets\car_lipo_hookup_no_wires_bb.png" style="width:500px;" />
+
+
+
+*==Important: If you are working on another assignment concurrently, consider building the this project on a different breadboard==*
+
+### Step 8: Build Circuit with Motor Controller
+
 
 #### Motor Controller Wiring Guide
 
@@ -121,15 +136,6 @@ Screw on Wheels to DC Motors and add the wheel rubber tires.
 
 
 
-### Step 8: Attaching the Battery
-
-* The battery can be attached to either the top or bottom of the chassis, but to avoid damaging it, it is recommended to attach the battery to the top of the chassis
-* The breadboard can then be attached to the battery
-
-<img src="guide_build_chassis.assets/IMG_8467.JPG" style="400px" />
-<img src="guide_build_chassis.assets/IMG_8468.JPG" alt="IMG_8468" style="width:400px" />
-
-<img src="guide_build_chassis.assets\car_lipo_hookup_no_wires_bb.png" style="width:500px;" />
 
 ## References
 

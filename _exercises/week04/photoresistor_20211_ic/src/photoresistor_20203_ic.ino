@@ -94,6 +94,10 @@ void displayColorString(String color) {
     displayColorRGB(255, 255, 0);
   }
   //keep going
+  else if (color == "black") {
+    displayColorRGB(0, 0, 0);
+  }
+  //keep going
   else {
     displayColorRGB(255, 255, 255);
   }

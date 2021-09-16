@@ -3,10 +3,12 @@ week: 8
 number: 9
 category: assignments
 title: Timer with Blynk
-date_due: Oct 25 @ 11:59 pm (two weeks)
+date_due: Oct 25 @ 11:59 pm
 
 
 ---
+
+<!-- Make sure this assignment has two weeks between (car build is ok in between) -->
 
 Assignment 9 – Timer with Blynk
 ==========================
