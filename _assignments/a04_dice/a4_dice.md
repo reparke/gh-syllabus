@@ -114,17 +114,18 @@ Deliverables
 Grading
 -------
 
-| Item                                                         | Points |
-| ------------------------------------------------------------ | ------ |
-| **Fritzing layout**                                          | 5      |
-| **Components**                                               |        |
-| 9 LEDs connected correctly                                   | 5      |
-| Button wired correctly                                       | 5      |
-| **Button press changes lights**                              | 15     |
-| ==Extra Credit==<br />**6 Die LED patterns stored as arrays** | +3     |
-| **LED pin label constants stored in array**                  | +2     |
-|                                                              |        |
-| Total                                                        | 30     |
+| Item                                    | Points |
+| --------------------------------------- | ------ |
+| **Fritzing layout**                     | 5      |
+| **Components**                          |        |
+| 9 LEDs connected correctly              | 5      |
+| Button wired correctly                  | 5      |
+| **Button press changes lights**         | 15     |
+| **Extra Credit**                        |        |
+| 6 Die LED patterns stored as arrays     | +3     |
+| LED pin label constants stored in array | +2     |
+|                                         |        |
+| Total                                   | 30     |
 
 **Credits**
 
