@@ -23,6 +23,18 @@ title: Pre-Lecture Activities
 
 
 
+| OLED | Argon    |
+| --------- | ------------ |
+| GND       | GND          |
+| 3V3       | 3V3          |
+| D1 (SDI)  | MO           |
+| D0 (SCK)  | SCK          |
+| D2 (SDO)  | no connection |
+| D/C       | D6 |
+| RST       | D7 |
+| CS        | A2 |
+
+
 * Optional
   * OLED Library. We will go through through this process during class, but the video is useful if you ever need to refer back to it.
     {% include video id="u5yLxTFwPCg" provider="youtube" %}
