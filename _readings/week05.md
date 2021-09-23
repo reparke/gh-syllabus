@@ -15,6 +15,11 @@ title: Pre-Lecture Activities
 * **Thursday**
   * Watch OLED Screens
     {% include video id="KCJc-IDLkHc" provider="youtube" %}
+    
+  * Build
+    *Note: if you don't have room for both potentiometers and the button, you can leave off the button*
+  
+    <img src="week05.assets/etch-a-sketch_v2_bb.png" alt="etch-a-sketch_v2_bb" style="width:600px" />
 
 
 
