@@ -71,6 +71,7 @@ toc_sticky: true
   - [x] Photoresistor
   - [x] Cloud Overview 
   - [ ] Publish (skip)
+  - [ ] A5 (reaction timer): consider using millis ()
   - [x] a5: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 5
 - - [x] OLED
