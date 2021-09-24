@@ -56,18 +56,14 @@ Attach velcro to bottom of breadboard (may have been done in a previous project)
 
 Wire the components. Below are two diagrams for wiring. The second design uses a switch and is optional.
 
-*OLED Wiring*
+*OLED Wiring with Qwiic* 
 
 ```c++
 MicroOLED --------------- Argon
   GND ------------------- GND
   VCC ------------------- 3.3V
-  D1/MOSI --------------- MO
-  D0/SCK ---------------- SCK
-  D2  ------------------- unused
-  D/C ------------------- A0 (can be changed)
-  RST ------------------- A1 (can be changed)
-  CS  ------------------- A2 (can be changed)
+  SDA (blue) ------------ SDA
+  SCL (yellow) ---------- SCL
 ```
 
 *Additional Wiring*
@@ -90,6 +86,8 @@ Switch:
 ![watch_with_switch_bb](guide_build_watch.assets/watch_with_switch_bb.png)
 
 ### Completed Assembly
+
+*Note: These photos feature a slightly different OLED screen, but the overall design is the same*
 
 ![watch_v3_7](guide_build_watch.assets/watch_v3_7.png)
 

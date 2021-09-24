@@ -4,7 +4,7 @@ theme: itp
 
 week: 10
 category: lectures
-title: OLED Screen Graphics
+title: OLED Screen Graphics (I2C)
 ---
 
 <!-- headingDivider: 2 -->

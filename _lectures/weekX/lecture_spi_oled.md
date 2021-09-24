@@ -4,7 +4,7 @@ theme: itp
 
 week: 16
 category: lectures
-title: OLED Screens and SPI Communication
+title: OLED Screens (old SPI version)
 ---
 
 <!-- headingDivider: 2 -->
@@ -13,6 +13,13 @@ title: OLED Screens and SPI Communication
 https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-arduino-library -->
 
 # OLED Screens and SPI Communication
+
+## Note: Old Version with SPI
+
+- The following describes the SPI version of the OLED screen
+- This OLED is no longer used in our class 
+- Please see the I2C version of the OLED screen
+
 ### ITP 348 - Introduction to Physical Computing
 
 ![bg opacity:.95 left:50%](lecture_spi_oled.assets/oled_usc.jpg)

@@ -35,7 +35,7 @@ title: Heart Rate Sensor (MAX30101)
 * Measures light reflecting back
 * Operates at 3.3v
 * Uses I2C communication
-  * I2C is another protocol like SPI we used for OLED
+  * Same protocol as OLED
 
 ## MAX30101 Wiring
 
@@ -58,16 +58,6 @@ title: Heart Rate Sensor (MAX30101)
 * Only two pins
   * Data (```SDA```)
   * Clock (```SCK```)
-
-## I2C vs SPI
-
-
-| I2C                  | SPI                                              |
-| -------------------- | ------------------------------------------------ |
-| Uses 2 wires         | Uses 4 wires; more devices means even more wires |
-| Uses more power      | Uses less power                                  |
-| Lower transfer speed | Higher transfer speed                            |
-| Standardized         | Multiple "versions"                              |
 
 
 
