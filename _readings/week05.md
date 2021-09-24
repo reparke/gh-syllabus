@@ -19,20 +19,18 @@ title: Pre-Lecture Activities
   * Build
     *Note: if you don't have room for both potentiometers and the button, you can leave off the button*
   
-    <img src="week05.assets/etch-a-sketch_v2_bb.png" alt="etch-a-sketch_v2_bb" style="width:600px" />
+    <img src="week05.assets/etch-a-sketch_v3_i2c_bb.png" alt="etch-a-sketch" style="width:600px" />
 
+Use [Qwiic cable](https://www.sparkfun.com/products/14425) to connect OLED to Argon
 
+<img src="week05.assets/14425-Qwiic_Cable_-_Breadboard_Jumper__4-pin_-01.jpg" alt="Qwiic Cable - Breadboard Jumper (4-pin)" style="width:300px;" />
 
 | OLED | Argon    |
 | --------- | ------------ |
-| GND       | GND          |
-| 3V3       | 3V3          |
-| D1 (SDI)  | MO           |
-| D0 (SCK)  | SCK          |
-| D2 (SDO)  | no connection |
-| D/C       | D6 |
-| RST       | D7 |
-| CS        | A2 |
+| Black GND | GND          |
+| Red 3V3   | 3V3          |
+| Blue SDA | SDA        |
+| Yellow SCL | SCL       |
 
 
 * Optional

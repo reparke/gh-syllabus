@@ -72,6 +72,9 @@ toc_sticky: true
   - [x] Cloud Overview 
   - [ ] Publish (skip)
   - [ ] A5 (reaction timer): consider using millis ()
+  - [ ] re-record OLED with I2C slides
+  - [ ] revise OLED I2c slides
+  - [ ] revise later examples (watch and ultra sonic?) that use OLED
   - [x] a5: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 5
 - - [x] OLED
