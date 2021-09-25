@@ -1,7 +1,5 @@
 /* NOTE - Rob Parke 9/25/2021
 
-THIS VERSION OF THE CODE IS GLITCHING
-
 Updated version for Qwiic I2C OLED + MAX30101
 
 Eliminated software timers
