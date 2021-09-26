@@ -46,15 +46,20 @@ Attach a 2"x1" strip of velcro to the LiPo battery (may have been done in a prev
 
 ### STEP 4:
 
-Attach velcro to bottom of breadboard (may have been done in a previous project). Carefully peel off adhesive covering on bottom of breadboard (**don't take off actual foam-like adhesive**) and place** a 1"x1" square of velcro on the bottom of the breadboard. You may need to use two breadboards for this assignment, so you can put the velcro closer to the edges of the breadboards and connect both together if you'd like instead. Connect the breadboards with velcro on the bottoms to the velcro on the top of the LiPo battery.
+Attach velcro to bottom of breadboard (may have been done in a previous project). Carefully peel off adhesive covering on bottom of breadboard (**don't take off actual foam-like adhesive**) and place a 1"x1" square of velcro on the bottom of the breadboard. If you want you can also attach a piece of paper or cardboard to the bottom for the breadboard before attaching the velcro.
 
+Connect the breadboard with velcro on the bottom to the velcro on the top of the LiPo battery.
+*Breadboard with velcro*
+![watch_v3_5](guide_build_watch.assets/watch_v3_5a.png)
+*Battery with velcro and strap*
 ![watch_v3_5](guide_build_watch.assets/watch_v3_5.png)
+*Breadboard, battery, and strap*
 ![watch_v3_6](guide_build_watch.assets/watch_v3_6.png)
 
 
 ### Step 5:
 
-Wire the components. Below are two diagrams for wiring. The second design uses a switch and is optional.
+Wire the components. 
 
 *OLED Wiring with Qwiic* 
 
@@ -79,11 +84,9 @@ Switch:
 
 *Fritzing design*
 
-![watch_bb](guide_build_watch.assets/watch_bb.png)
+![watch_bb](guide_build_watch.assets/watch_with_switch_i2c_bb.png)
 
-*Fritizing design with switch*
 
-![watch_with_switch_bb](guide_build_watch.assets/watch_with_switch_bb.png)
 
 ### Completed Assembly
 
@@ -91,10 +94,11 @@ Switch:
 
 ![watch_v3_7](guide_build_watch.assets/watch_v3_7.png)
 
-![watch_v3_8](guide_build_watch.assets/watch_v3_8.png)
 
-![watch_v3_9](guide_build_watch.assets/watch_v3_9.png)
+
+![watch_v3_9](guide_build_watch.assets/watch_v3_8.jpg)
 
 ## Credits
 
 * Diagrams made with [Fritzing](https://fritzing.org/home/)
+

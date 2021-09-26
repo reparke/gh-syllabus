@@ -125,6 +125,18 @@ Here is an example:
 
 -   **Zip File** (project folder): `itp348_a#_lastname_firstname.zip`
 
+## Fritzing Part for Qwiic OLED
+
+For your Fritzing layout, you can just use a standard OLED part. However, if you want to access the official part, you can download from [here](https://github.com/sparkfun/Fritzing_Parts/raw/main/products/14532_sfe_Qwiic_OLED_Breakout.fzpz).
+
+To install the new part, you can complete the following steps
+
+- Open Fritzing
+  - On **Parts** panel on the right side of the screen, click the small dropdown menu and choose **Import …**
+- Navigate to the folder with the file you downloaded the file and open it
+
+- If you want to save the mesh library for future use, click the small dropdown menu on the **Parts** panel again and chose **Save Bin**
+
 Video Submission Checklist
 ------------
 

@@ -37,15 +37,6 @@ title: Heart Rate Sensor (MAX30101)
 * Uses I2C communication
   * Same protocol as OLED
 
-## MAX30101 Wiring
-
-| Sensor | Argon | Function              |
-| ------ | ----- | --------------------- |
-| GND    | GND   | Ground                |
-| VCC    | 3V3   | Power (requires 3.3v) |
-| SDA    | SDA   | I2C data              |
-| SCL    | SCL   | I2C clock             |
-
 ## I2C for Serial, Synchronous Communication
 
 <img src="../weekX/lecture_i2c_lcd.assets/52ddb2d8ce395fad638b4567.png" alt="Synchronous communication" style="width:1000px;" />
@@ -58,6 +49,15 @@ title: Heart Rate Sensor (MAX30101)
 * Only two pins
   * Data (```SDA```)
   * Clock (```SCK```)
+
+## MAX30101 Wiring
+
+| Sensor | Argon | Function              |
+| ------ | ----- | --------------------- |
+| GND    | GND   | Ground                |
+| VCC    | 3V3   | Power (requires 3.3v) |
+| SDA    | SDA   | I2C data              |
+| SCL    | SCL   | I2C clock             |
 
 
 
@@ -81,7 +81,7 @@ MAX30105 heartRateSensor; // object  Definition
 void setup() {
   // Initialize sensor and stop program if sensor missing
   if (!heartRateSensor.begin(Wire, I2C_SPEED_FAST)) {  
-    Serial.println("MAX30105 was not found");
+    Serial.println("MAX30101 was not found");
     while (1)
       ;
   }

@@ -30,36 +30,25 @@ title: Smart Watch
   * Bitmaps byte arrays for heart rate, clock, and weather (`.h` files)
   * Heart rate BPM calculation
 
-##  States
-
-* Three states: `TIME`, `WEATHER`, `HEART`
-* Need to design `getNextState()` function
-* Need to support state transitions in `loop()`
-
-##  Debouncing
-
-- We need to use debouncing techniques to get proper readings on button presses
-
-## Heart Rate Screen
-
-<img src="lecture_smart_watch.assets/heart.jpg" style="width:500px;" />
-
 ## Detecting Heart Rate with MAX30101 Heart Rate / SpO2 Sensor
 
 * Uses built-in LEDs to pulse light onto skin
 * Measures light reflecting back
 * Operates at 3.3v
 * Uses I2C communication
-  * I2C is another protocol like SPI we used for OLED
 
-## MAX30101 Wiring
+##  States
 
-| Sensor | Argon | Function              |
-| ------ | ----- | --------------------- |
-| GND    | GND   | Ground                |
-| VCC    | 3V3   | Power (requires 3.3v) |
-| SDA    | SDA   | I2C data              |
-| SCL    | SCL   | I2C clock             |
+* Three states: `TIME`, `WEATHER`, `HEART`
+* Need to design `getNextState()` function
+* Need to design `loadNextState()` function
+* Need to support state transitions in `loop()`
+
+## Heart Rate Screen
+
+<img src="lecture_smart_watch.assets/heart.jpg" style="width:500px;" />
+
+* 
 
 
 
@@ -67,41 +56,6 @@ title: Smart Watch
 
 * We want to always track heart beat so displayed as soon as heart screen loads (note: this is not power efficient)
 * We want to eliminate "noisy-ness" (flucutations) in heart rate so we will average the last for approximation of the heart rate (**smoothing**)
-
-## Heart Rate Requirements
-
-* Reading of the sensor needs to be fast in order for Argon to properly identify beat
-* Updating the OLED is display is (relatively) slow
-* Calculating actual heart rate average is also slow (uses for loop)
-* Solution
-  * Make reading from the sensor on a timer
-
-## Software Timers
-
-* Software timers are another way to have code repeat at a specific time
-
-```c++
-//Step 1: Declare global timer
-Timer timer(<<FUNCTION>>, <<delayInMS>>);
-
-//Step 2: Create your own function to repeat
-void <<FUNCTION>>() {}
-
-void setup() {
-    timer.start();		//Step 3: Start timer (repeats on its own)
-}
-```
-
-
-
-## `millis()` vs Software Timers
-
-| millis()                           | Software Timers                                              |
-| ---------------------------------- | ------------------------------------------------------------ |
-| no limit on timed actions          | limited to 10 timers                                         |
-| repeat time can be less than 1ms   | 1 ms is smallest repeat                                      |
-| need to execute action in `loop()` | timer runs on its own                                        |
-| all actions are synchonous         | timers may execute out of order (this can be both good and bad) |
 
 
 
@@ -129,13 +83,13 @@ void setup() {
 * Draw clock bitmap `clock_16x12`
 
 * Display date format  ([formatting guide](http://www.cplusplus.com/reference/ctime/strftime/))
-<!-- String dateFormat = "%a %d";-->
+  <!-- String dateFormat = "%a %d";-->
   ```c++
   oled.println(Time.format(<<DATE_FORMAT_STRING>>));
   ```
   
 * Display time format ([formatting guide](http://www.cplusplus.com/reference/ctime/strftime/))
-<!-- String timeFormat = "%I:%M%p"; -->
+  <!-- String timeFormat = "%I:%M%p"; -->
   
     ```c++
   oled.println(Time.format(<<TIME_FORMAT_STRING>>));
