@@ -1,12 +1,4 @@
----
-
-marp: true
-theme: itp
-
-week: 16
-category: lectures
 title: Creating IoT Mobile Apps with Blynk (original version)
----
 
 <!-- headingDivider: 2 -->
 

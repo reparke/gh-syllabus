@@ -53,7 +53,7 @@ title: Magnetic Switch
 
 ## Lab:
 
-<img src="F:\Github\ITP_348_Content_Public\_lectures\week06\lecture_magnetic_switch.assets\switch-magnetic-door_and_rgb_led_bb.png" style="width:600px;" />
+<img src="lecture_magnetic_switch.assets\switch-magnetic-door_and_rgb_led_bb.png" style="width:600px;" />
 
 
 
