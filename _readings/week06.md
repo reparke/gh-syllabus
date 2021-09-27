@@ -16,6 +16,5 @@ title: Pre-Lecture Activities
     
   * Wiring for class
 
-![image-20210220175201317](week06.assets/switch-magnetic-door_and_rgb_led_bb-1594972874666.png)
-
+![image-20210220175201317](week06.assets/switch-magnetic-door_and_rgb_led_bb.png)
 
