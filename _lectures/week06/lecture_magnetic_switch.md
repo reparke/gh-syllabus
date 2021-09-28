@@ -59,11 +59,9 @@ title: Magnetic Switch
 
 ## Lab Part 1:
 
-* Create an `enum` called `DoorState` with the values `OPEN` and `CLOSED`. Make a global variable called `myDoor` to track your switch
-* When the magnetic switch is opened or closed, change the state of `myDoor`
-* Publish cloud event with the data `doorIsOpen` or `doorIsClosed` when `myDoor` changes. Note **only one** publish should occur every time door is opened or closed
+* When the magnetic switch is opened or closed, publish cloud event with the message `door was opened` or `door was closed` when `doorState` changes. Note **only one** publish should occur every time door is opened or closed *(Hint: Think about how this operation is similar to other things we've done. what variables would you need to this?)*
 * Your name should be 
-  `ITP348/Door/<<YOUR_INITIALS>>`
+  `ITP348_Week6_Door`
 
 * Change the RGB colors based on their door status
   * Red means "door is open"

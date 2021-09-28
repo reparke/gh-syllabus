@@ -631,7 +631,6 @@ toc_sticky: true
 - set up Blynk
 - Install iOS / Android app
 - Demonstrate basic Blynk integration
-- **Ask students to work in pairs and come up with a cool idea**
 
 #### Lab
 

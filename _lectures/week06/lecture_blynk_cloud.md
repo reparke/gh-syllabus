@@ -84,13 +84,11 @@ Blynk Cloud website ([https://blynk.cloud](https://blynk.cloud))
 
 ## Integration Phase 1: Create datastreams
 
-![image-20210905212827674](lecture_blynk_cloud.assets/image-20210905212827674.png)
+<img src="lecture_blynk_cloud.assets/image-20210905212827674.png" alt="image-20210905212827674" style="width:400px" />
 
 
 
-![image-20210905213011243](lecture_blynk_cloud.assets/image-20210905213011243.png)
-
-![image-20210905213103832](lecture_blynk_cloud.assets/image-20210905213103832.png)
+<img src="lecture_blynk_cloud.assets/image-20210905213011243.png" alt="image-20210905213011243" style="width:400px" />
 
 Click **Save**
 
@@ -98,17 +96,18 @@ Click **Save**
 
 ## Integration Phase 1: Create new device
 
-![image-20210905214437218](lecture_blynk_cloud.assets/image-20210905214437218.png)
+<img src="lecture_blynk_cloud.assets/image-20210905214437218.png" alt="image-20210905214437218" style="width:400px" />
 
 
 
-![image-20210905214659317](lecture_blynk_cloud.assets/image-20210905214659317.png)
+<img src="lecture_blynk_cloud.assets/image-20210905214659317.png" alt="image-20210905214659317" style="width:400px;" />
 
-![image-20210905214734120](lecture_blynk_cloud.assets/image-20210905214734120.png)
+<img src="lecture_blynk_cloud.assets/image-20210905214734120.png" alt="image-20210905214734120" style="width:400px;" />
 
 ## Integration Phase 1: Configuration Info / Key
 
-​	Copy this info to include in sketch![image-20210905215009623](lecture_blynk_cloud.assets/image-20210905215009623.png)
+Copy this info to include in sketch (**Note: this is just an example--use the unique values for your template)**
+<img src="lecture_blynk_cloud.assets/image-20210905215009623.png" alt="image-20210905215009623" style="width:400px" />
 
 ## Integration Phase 2: Workbench
 
@@ -119,26 +118,27 @@ Click **Save**
 
 ## Integration Phase 2: Create Sketch
 
-Start with this template
+Add these lines to the top of your sketch
 
 ```c++
 #define BLYNK_TEMPLATE_ID "ADD_YOUR_OWN"
 #define BLYNK_DEVICE_NAME "ADD_YOUR_OWN"
-
 #define BLYNK_PRINT Serial 
-
 #include <blynk.h>
-
 #define BLYNK_IP IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
 char auth[] = "ADD_YOUR_OWN_AUTH_TOKEN";
-
-void setup() {
-    Serial.begin(9600);
-    Blynk.begin(auth, BLYNK_IP);
-}
-void loop() { Blynk.run(); }
 ```
+Add these line to the end of `setup()`
 
+```c++
+delay(5000);
+Blynk.begin(auth, BLYNK_IP);
+```
+Add this line to the top of `loop()`
+
+```c++
+Blynk.run();
+```
 
 <!--Change `BLYNK_AUTH_TOKEN` to be a `char[]`
 `#define BLYNK_AUTH_TOKEN "z31PRR2NbCeR91OvDzvNTEQzLC_Bezwg";`
@@ -235,46 +235,48 @@ void loop() {
 
 ![blynk (4)](lecture_blynk_cloud.assets/blynk (4).png)
 
-## Exercise
-
-* Install Blynk app on your phone
-* Create Blynk template
-* Create Blynk datastream
-
-
-- Connect RGB led and magnetic switch 
-
-* Build Blynk with the following features
-  * Use button to control onboard LED via pin `V5` (app --> argon)
-  * Send random number (0-255) to app and display on pin `V6` (argon --> app)
-  * Use virtual LED to show random number on pin `V6` (argon --> app)
-
-## Lab
+## Wiring for Exercise and Lab
 
 <img src="lecture_blynk_cloud.assets/switch-magnetic-door_and_rgb_led_bb.png" style="width:500px;" />
+
+## Exercise
+
+* Connect RGB led and magnetic switch 
+
+* Install Blynk app on your phone
+
+* Create Blynk template
+* Create Blynk datastream
+  * `Onboard LED` on virtual pin `V5`
+  * `Random Number` on virtual pin `V6`
+
+
+- Build Blynk with the following features
+
+
+  - Use button to control onboard LED (`D7`) via pin `V5` (app --> argon)
+  - Send random number (0-255) to app and display on pin `V6` (argon --> app)
+  - Use virtual LED to show random number on pin `V6` (argon --> app)
+  - Use a gauge to show random number on pin `V6`
+
+## Exercise App Layout
+
+<img src="lecture_blynk_cloud.assets/image-20210927175246789.png" alt="image-20210927175246789" style="width:300px" />
 
 ## Lab
 
 * Work in teams and create the following functionality in Blynk app
 
-  * Use ZeRGBa to control LED on pins `V0 V1 V2` (app --> argon)
-  * Use display to show if switch is `open` or `closed` on pin `V3` (argon --> app)
-  * Create a button on `V4` to display a random color from an enumerated list
-
-  ```c++
-  enum Color { WHITE = 1, GREEN, MAGENTA, BLUE, YELLOW, RED, ORANGE };
-  ```
-
-  * Create a menu to display a named color from the enum options `Color`on pin `V5` (app --> argon)
-  * Create gauge display the random number on pin `V6` (argon --> app)
-
+  * Use **ZeRGBa** to control RGB LED on pins `V0 V1 V2` (app --> argon)
+  * Use a display to show if magnetic switch is `open` or `closed` on pin `V3` (argon --> app)
+  * Use a button on `V4` to trigger the RGB LED to display a random color (white, yellow, magenta, red) (app --> argon)
+  * When one of the four random colors is displayed, send a string representing that color to the app on pin `V7`
+  
 * What happens if you put `Blynk.syncAll();` at the end of `setup()`? 
 
-## Lab Blynk App
+## Lab App Layout
 
-|                                                              |                                                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <img src="lecture_blynk_cloud.assets/IMG_1618.png" alt="IMG_1618" style="zoom:50%;" /> | <img src="lecture_blynk_cloud.assets/IMG_1619.png" alt="IMG_1619" style="zoom:50%;" /> |
+<img src="lecture_blynk_cloud.assets/image-20210927175456273.png" alt="image-20210927175456273" style="width:400px" />
 
 
 
