@@ -11,7 +11,7 @@ title: Creating IoT Mobile Apps with Blynk
 <!-- new version -->
 <!--NB: need to create a new template for each project; need to create datastream for each variable ahead of time; need to create device for each project-->
 
-# Blynk Overview and Configuration
+# Blynk Overview 
 
 ![bg opacity:.75](lecture_blynk_cloud.assets/blynk.jpg)
 	 
@@ -53,6 +53,8 @@ title: Creating IoT Mobile Apps with Blynk
 - Virtual pins support `ints` and `Strings` (unlike hardware pins) 
 - 32-128 pins are supported (label `V0`, `V1`, etc.)
 - Note: You **can not** use `const int` to define virtual pins. If you want to define pin label, use `#define VPIN_LED V2` syntax
+
+# Blynk Integation
 
 ## Three Phases to Integrate Blynk
 
@@ -106,17 +108,17 @@ Click **Save**
 
 ## Integration Phase 1: Configuration Info / Key
 
-Copy this info to include in sketch (**Note: this is just an example--use the unique values for your template)**
+Copy this info to include in sketch below (**Note: this is just an example--use the unique values for your template)**
 <img src="lecture_blynk_cloud.assets/image-20210905215009623.png" alt="image-20210905215009623" style="width:400px" />
 
 ## Integration Phase 2: Workbench
 
 - Create new sketch
 - Install `blynk` library
-- Start with template listed below
+- Modify sketch with Blynk configuration
 - Add your unique custom info / keys from Blynk Cloud
 
-## Integration Phase 2: Create Sketch
+## Integration Phase 2: Modify sketch with Blynk configuration
 
 Add these lines to the top of your sketch
 
@@ -146,39 +148,20 @@ to
 `char auth[] = "z31PRR2NbCeR91OvDzvNTEQzLC_Bezwg";`
 -->
 
-## Integration Phase 2: Add Your Own Custom Keys
-
-### Update values in sketch 
-
-- `#define BLYNK_TEMPLATE_ID ...`
-- `#define BLYNK_DEVICE_NAME ...`
-- `char auth[]=...`
-
-### Test
-
-- Device should appear connected 
-
 
 ## Integration Phase 3: Blynk App
 
 - Install Blynk app on your phone
 - Switch to [Developer Mode](https://docs.blynk.io/en/getting-started/developer-mode) and select the template you created
-- Build interface in Blynk mobile app
+- Build interface in Blynk app
 
-## How to build Blynk Sketches
+# Building Blynk Projects
 
-## Three important rules about `loop()`
+## Important notes about `loop()`
 
-- `loop()` must include the following code
+- Do **not** use `delay()` in `loop()` or it will interfere with cloud connection
 
-```c++
-void loop(){
-  Blynk.run();
-}
-```
-
-- Do **not** use delay in `loop()` or it will interfere with cloud connection
-- Must use a `millis()` or a timer to send data to app (limit to 10 values per second)
+- Instead, use a `millis()` or a timer to send data to app (limit to 10 values per second)
 
 ## App: Send data from Blynk App to Argon
 
@@ -242,22 +225,23 @@ void loop() {
 ## Exercise
 
 * Connect RGB led and magnetic switch 
-
 * Install Blynk app on your phone
-
 * Create Blynk template
 * Create Blynk datastream
-  * `Onboard LED` on virtual pin `V5`
-  * `Random Number` on virtual pin `V6`
+
+    | Datastream Name | Virtual Pin |
+    | --------------- | ----------- |
+    | `Onboard LED`   | `V5`        |
+    | `Random Number` | `V6`        |
 
 
 - Build Blynk with the following features
 
 
-  - Use button to control onboard LED (`D7`) via pin `V5` (app --> argon)
-  - Send random number (0-255) to app and display on pin `V6` (argon --> app)
-  - Use virtual LED to show random number on pin `V6` (argon --> app)
-  - Use a gauge to show random number on pin `V6`
+    - Use button to control onboard LED (`D7`) via pin `V5` (app --> argon)
+    - Send random number (0-255) to app and display on pin `V6` (argon --> app)
+    - Use virtual LED to show random number on pin `V6` (argon --> app)
+    - Use a gauge to show random number on pin `V6`
 
 ## Exercise App Layout
 
@@ -267,11 +251,20 @@ void loop() {
 
 * Work in teams and create the following functionality in Blynk app
 
-  * Use **ZeRGBa** to control RGB LED on pins `V0 V1 V2` (app --> argon)
-  * Use a display to show if magnetic switch is `open` or `closed` on pin `V3` (argon --> app)
-  * Use a button on `V4` to trigger the RGB LED to display a random color (white, yellow, magenta, red) (app --> argon)
-  * When one of the four random colors is displayed, send a string representing that color to the app on pin `V7`
-  
+  | Datastream                    | Virtual Pin |
+  | ----------------------------- | ----------- |
+  | `RGB Red`                     | `V0`        |
+  | `RGB Green`                   | `V1`        |
+  | `RGB Blue`                    | `V2`        |
+  | `Door State`                  | `V3`        |
+  | `Button Display Random Color` | `V4`        |
+  | `Displayed Color String`      | `V7`        |
+
+  * Use **ZeRGBa** to control RGB LED on pins `V0 V1 V2` *(app --> argon)*
+  * Use a display to show if magnetic switch is `open` or `closed` on pin `V3` *(argon --> app)*
+  * Use a button on `V4` to trigger the RGB LED to display a random color (white, yellow, magenta, red) *(app --> argon)*
+  * When one of the four random colors is displayed on the RGB LED, send a string representing that color to the app on pin `V7` *(argon --> app)*
+
 * What happens if you put `Blynk.syncAll();` at the end of `setup()`? 
 
 ## Lab App Layout
@@ -284,7 +277,7 @@ void loop() {
 
 ## Resources
 
-- [Blynk example builder](https://examples.blynk.cc/?board=Particle%20Photon&shield=Particle%20WiFi&example=Widgets%2FTerminal)
+- [Blynk Documentation](https://docs.blynk.io/en/)
 
 ## Credit
 
