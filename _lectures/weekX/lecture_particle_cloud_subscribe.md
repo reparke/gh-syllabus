@@ -4,7 +4,7 @@ theme: itp
 
 week: 16
 category: lectures
-title: Cloud Communication - Publish and Subscribe
+title: Cloud Communication - Subscribe
 ---
 
 <!-- headingDivider: 2 -->

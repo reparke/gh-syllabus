@@ -19,6 +19,7 @@ toc_sticky: true
   * [ ] Consider having bookstore purchase again
   * [ ] could ITP sell directly to students?
   * [ ] 2 of the 15x20 cm resealable bags and 1 of 21x24 cm bags to use per box
+* [ ] ==**Revise A5 reaction timer. Remove any need for a while loop**==
 * [ ] Spring 2022: if remote again, consider moving resistors and LEDs to USC kit so shipping delays on Sparkfun kit don't affect students during first two weeks
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] tell students not to unclaim device

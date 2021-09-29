@@ -8,7 +8,7 @@ title: Pre-Lecture Activities
 
 * **Tuesday**
   
-  * Create an [Blynk account](https://blynk.io/) 
+  * Create an [Blynk account](https://blynk.cloud/) 
     
   * Watch **Magnetic Switches**
     

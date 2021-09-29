@@ -35,4 +35,5 @@ When converting Word docs to Markdown using Writetage, the images are inserted u
   https://raisedbyturtles.org/shopify-associative-arrays
   Basically you can't. However you can create parallel arrays
 
-  
+  starting jekyll locally
+  bundle exec jekyll serve

@@ -22,33 +22,26 @@
 #define BLYNK_PRINT Serial  // Set serial output for debug prints
 //#define BLYNK_DEBUG       // Uncomment this to see detailed prints
 
-// Uncomment this, if you want to set network credentials
-//#include "cellular_hal.h"
-//STARTUP(cellular_credentials_set("broadband", "", "", NULL));
+/* Fill-in your Template ID (only if using Blynk.Cloud) */
+//#define BLYNK_TEMPLATE_ID   "YourTemplateID"
 
-// Run "ping blynk-cloud.com", and set Blynk IP to the shown address
-#define BLYNK_IP        IPAddress(45,55,130,102)
 
-// Set Blynk hertbeat interval.
-// Each heartbeat uses ~90 bytes of data.
-#define BLYNK_HEARTBEAT 60
-
-// Set Particle keep-alive ping interval.
-// Each ping uses 121 bytes of data.
-#define PARTICLE_KEEPALIVE 20
-
-#include <blynk.h>
+#include <BlynkSimpleSerialBLE.h>
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
 char auth[] = "YourAuthToken";
 
-void setup() {
-  Serial.begin(9600);
-  Particle.keepAlive(PARTICLE_KEEPALIVE);
-  Blynk.begin(auth, BLYNK_IP);
+void setup()
+{
+    Serial.begin(9600);
+    delay(5000); // Allow board to settle
+
+    BLESerial.begin();
+    Blynk.begin(BLESerial, auth);
 }
 
-void loop() {
-  Blynk.run();
+void loop()
+{
+    Blynk.run();
 }
