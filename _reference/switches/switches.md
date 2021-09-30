@@ -34,6 +34,27 @@ show_in_list: true
 
 ## Code
 
+```c++
+const int PIN_SWITCH = D2;
+
+void setup() {
+   pinMode(PIN_SWITCH, INPUT);  //configure
+   Serial.begin(9600);
+}
+
+void loop() {
+	//read button state
+   int switchVal = digitalRead(PIN_SWITCH); 
+   
+    if (switchVal == HIGH) {
+     Serial.write("Switch HIGH");
+   }
+   else {
+     Serial.write("Switch LOW");
+   }
+ }
+```
+
 
 
 ## Credit
