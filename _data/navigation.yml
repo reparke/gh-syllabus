@@ -7,6 +7,8 @@ main:
     url: /assignments
   - title: "Exercises"
     url: https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises
+  - title: "Reference"
+    url: /reference
   - title: "Blackboard"
     url: https://blackboard.usc.edu
   - title: "Piazza"

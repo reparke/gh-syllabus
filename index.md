@@ -28,6 +28,7 @@ You'll find course material and useful links on the side.
 - [Videos](readings.md) - Short weekly videos and readings to be reviewed before class
 - [Kit](kit.md) - Kit components
 - [Resources](resources.md) - Helpful pages and documentation for the course
+- [Quick Reference](reference.md) - Quick reference guide for wiring and coding of components
 
 
 #### Resources about This Site Structure

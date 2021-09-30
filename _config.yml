@@ -55,6 +55,8 @@ collections:
     output: true
   readings:
     output: true
+  reference:
+    output: true
 defaults:
   - scope:
       path: ""
@@ -79,6 +81,15 @@ defaults:
       type: readings
     values:
       layout: single
+  - scope:
+      path: ""
+      type: reference
+    values:
+      layout: single
+      toc: true
+      toc_label: "Key Topics"
+      toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
+      toc_sticky: true
 
 footer:
   links:
@@ -111,3 +122,9 @@ calendar:
 
 
 # Speed up build by excluding folders
+
+# enable code copy button
+# https://github.com/mmistakes/minimal-mistakes/discussions/2795
+after_footer_scripts:
+  - https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js
+  - assets/js/clipboardrouge.js
