@@ -2,7 +2,7 @@
 marp: true
 theme: itp
 
-category: RGB LEDs
+category: reference
 title: Switches
 show_in_list: true
 
@@ -12,11 +12,11 @@ show_in_list: true
 
 # Switches
 
-<img src="lecture_switches.assets/image-20200710132427002.png" alt="image-20200710132427002" style="width:600px;" />
+<img src="switches.assets/image-20200710132427002.png" alt="image-20200710132427002" style="width:600px;" />
 
 ## Wiring
 
-<img src="lecture_switches.assets/switch_bb.png" alt="image-20200711010114011" style="width:300px;" />
+<img src="switches.assets/switch_bb.png" alt="image-20200711010114011" style="width:300px;" />
 
 ## Operations
 
@@ -28,9 +28,9 @@ show_in_list: true
 
 ### Connections
 
-<img src="lecture_switches.assets/image-20200711010114011.png" alt="image-20200711010114011" style="width:300px;" />
+<img src="switches.assets/image-20200711010114011.png" alt="image-20200711010114011" style="width:300px;" />
 
-<img src="lecture_switches.assets/image-20200711010308308.png" alt="image-20200711010308308" style="width:300px;" />
+<img src="switches.assets/image-20200711010308308.png" alt="image-20200711010308308" style="width:300px;" />
 
 ## Code
 
