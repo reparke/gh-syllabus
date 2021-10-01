@@ -1,6 +1,3 @@
-// cf: http://siever.info/cse132/weeks/3/studio/
-// this code is adapted from Bill Siever
-// North-South traffic stoplight and East-West pedestrian walk light
 
 // it uses a timing approach based on cur and prevMillis
 #include "SparkFunMicroOLED.h"   // Include MicroOLED library

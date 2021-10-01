@@ -1,6 +1,6 @@
 // cf: http://siever.info/cse132/weeks/3/studio/
 // this code is adapted from Bill Siever
-// two lane stoplight and pedestrian walk light
+// North-South traffic stoplight and East-West pedestrian walk light
 
 // it uses a timing approach based on cur and prevMillis
 #include "SparkFunMicroOLED.h"   // Include MicroOLED library
@@ -14,11 +14,11 @@ const int LONG_LIGHT_DURATION = 5000;   // time for green, red, walk, don't walk
 const int SHORT_LIGHT_DURATION = 2000;  // time for yellow
 const int BLINK_RATE = 500;             // time for blinking don't walk light
 
-// Create variables for state change and state length
+// TODO: Create variables for state change and state length
 
-// Create enum State for stoplight states
+// TODO:  Create enum State for stoplight states
 
-// create enum Color for signal light colors
+// TODO: create enum Color for signal light colors
 
 void setup() {
     Serial.begin(9600);
@@ -49,26 +49,33 @@ void setColor() {}
 void updateLights() {}
 
 // TODO: COMPLETE updateOLED
-
 void updateOLED() {}
 
 void loop() {
-    // comment out this function after verifying OLED and RGB LED work
+    // TODO: comment out this function after verifying OLED and RGB LED work
     testLightandOLED();
 }
 
 /* ======= FUNCTIONS FOR DEBUGGING LED WIRING ========= */
 // functions used for testing only
 void testLightandOLED() {
-    // test R, G, B LEDs individually
+    // test R, G, B LEDs individually; then white
     int lights[] = {PIN_RED, PIN_GREEN, PIN_BLUE};
 
+    // test R G B
     for (int i = 0; i < arraySize(lights); i++) {
         digitalWrite(lights[i], HIGH);
         delay(1000);
         digitalWrite(lights[i], LOW);
         delay(500);
     }
+
+    // // show white
+    // for (int i = 0; i < arraySize(lights); i++) {
+    //     digitalWrite(lights[i], HIGH);
+    // }
+
+    //-----------------------
 
     // test OLED screen
     oled.clear(PAGE);

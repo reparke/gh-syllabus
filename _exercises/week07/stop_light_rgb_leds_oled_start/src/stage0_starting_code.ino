@@ -1,30 +1,30 @@
 // cf: http://siever.info/cse132/weeks/3/studio/
 // this code is adapted from Bill Siever
-// two lane stoplight and pedestrian walk light
+// North-South traffic stoplight and East-West pedestrian walk light
 
 // it uses a timing approach based on cur and prevMillis
 #include "SparkFunMicroOLED.h"   // Include MicroOLED library
 MicroOLED oled(MODE_I2C, 9, 1);  // Example I2C declaration RST=D7, DC=LOW
 
-const int PIN_NS_RED = D2;
-const int PIN_NS_GREEN = D3;
-const int PIN_NS_BLUE = D4;
+const int PIN_RED = D2;
+const int PIN_GREEN = D3;
+const int PIN_BLUE = D4;
 
 const int LONG_LIGHT_DURATION = 5000;   // time for green, red, walk, don't walk
 const int SHORT_LIGHT_DURATION = 2000;  // time for yellow
 const int BLINK_RATE = 500;             // time for blinking don't walk light
 
-// Create variables for state change and state length
+// TODO: Create variables for state change and state length
 
-// Create enum State for stoplight states
+// TODO:  Create enum State for stoplight states
 
-// create enum Color for signal light colors
+// TODO: create enum Color for signal light colors
 
 void setup() {
     Serial.begin(9600);
-    pinMode(PIN_NS_RED, OUTPUT);
-    pinMode(PIN_NS_GREEN, OUTPUT);
-    pinMode(PIN_NS_BLUE, OUTPUT);
+    pinMode(PIN_RED, OUTPUT);
+    pinMode(PIN_GREEN, OUTPUT);
+    pinMode(PIN_BLUE, OUTPUT);
 
     oled.begin();      // Initialize the OLED
     oled.clear(ALL);   // Clear the display's internal memory
@@ -49,26 +49,38 @@ void setColor() {}
 void updateLights() {}
 
 // TODO: COMPLETE updateOLED
-
 void updateOLED() {}
 
 void loop() {
-    // comment out this function after verifying OLED and RGB LED work
+    // TODO: comment out this function after verifying OLED and RGB LED work
     testLightandOLED();
 }
 
 /* ======= FUNCTIONS FOR DEBUGGING LED WIRING ========= */
 // functions used for testing only
 void testLightandOLED() {
-    // test R, G, B LEDs individually
-    int lights[] = {PIN_NS_RED, PIN_NS_GREEN, PIN_NS_BLUE};
+    // test R, G, B LEDs individually; then white
+    int lights[] = {PIN_RED, PIN_GREEN, PIN_BLUE};
 
+    // turn off LED
+    for (int i = 0; i < arraySize(lights); i++) {
+        digitalWrite(lights[i], LOW);
+    }
+
+    // test R G B
     for (int i = 0; i < arraySize(lights); i++) {
         digitalWrite(lights[i], HIGH);
         delay(1000);
         digitalWrite(lights[i], LOW);
         delay(500);
     }
+
+    // show white
+    for (int i = 0; i < arraySize(lights); i++) {
+        digitalWrite(lights[i], HIGH);
+    }
+
+    //-----------------------
 
     // test OLED screen
     oled.clear(PAGE);
