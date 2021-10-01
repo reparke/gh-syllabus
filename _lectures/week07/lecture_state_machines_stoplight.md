@@ -5,6 +5,7 @@ theme: itp
 week: 7
 category: lectures
 title: State Machines Part 3 - Stoplight Example
+
 ---
 <!-- headingDivider: 2 -->
 
@@ -15,29 +16,30 @@ title: State Machines Part 3 - Stoplight Example
 
 ## In class Lab - Stoplight and Pedestrian Signal
 
-* We are going to build a stoplight for a two way intersection with a diagonal pedestrian crossing (meaning all traffic stops)
-  * also known as a pedestrian scramble
+* We are going to build a stoplight and pedestrian signal for a intersection.
+* Car traffic goes North-South.
+* Pedstrian traffic goes East-West
 * Green lights, red lights, and the walk signal will stay on for 5 sec (`LONG_LIGHT_DURATION`)
 * Yellow lights and the don't walk signal will stay on for 2 sec (`SHORT_LIGHT_DURATION`)
 * Here is how this type of intersection works
 
 ## 
 
-![bg contain](lecture_state_machines_stoplight.assets/north-south-green.png)
+![bg contain](lecture_state_machines_stoplight.assets/traffic_go.png)
 ## 
 
-![bg contain](lecture_state_machines_stoplight.assets/north-south-yellow.png)
-
-## 
-
-![bg contain](lecture_state_machines_stoplight.assets/east-west-green.png)
-## 
-
-![bg contain](lecture_state_machines_stoplight.assets/east-west-yellow.png)
+![bg contain](lecture_state_machines_stoplight.assets/traffic_slow.png)
 
 ## 
 
-![bg contain](lecture_state_machines_stoplight.assets/pedestrian-walk.png)
+![bg contain](lecture_state_machines_stoplight.assets/ped_walk.png)
+## 
+
+![bg contain](lecture_state_machines_stoplight.assets/ped_dont_walk.png)
+
+## 
+
+
 
 ## In class Lab - Stoplight and Pedestrian Signal
 
@@ -46,45 +48,52 @@ title: State Machines Part 3 - Stoplight Example
   * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
   
-  `https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week07/stop_light_rgb_leds_start`
+  `https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week07/stop_light_rgb_leds_oled_start`
 
 * Wire device as shown below
 
 ## Wiring Diagram
 
-![image-20210301155641411](lecture_state_machines_stoplight.assets/image-20210301155641411.png)
+![image-20210301155641411](lecture_state_machines_stoplight.assets/stoplight_RGB_OLED_bb.png)
 
 
 
 ## Components
-* 2 RGB LEDs
-* 1 red LED (substitute if you don't have one)
-* 1 white LED (substitute if you don't have one)
-* 8 x 330 Ohm resistors
+* 1 RGB LEDs
+* MicroOLED
+* 3 x 330 Ohm resistors
 
 
 
 ## Wiring Pin Guide
 
-| LED                   | Argon Pins |
+| RGB LED               | Argon Pins |
 | ---------------------------- | ---- |
 | NorthSouth RGB LED - Red | D2     |
 | NorthSouth RGB LED - Green | D3      |
 | NorthSouth RGB LED - Blue | D4      |
-| WestEast RGB LED - Red |   A5   |
-| WestEast RGB LED - Green |    A4 |
-| WestEast RGB LED - Blue | A3  |
-| Don't Walk Red LED |  D5  |
-| Walk White LED |  D6   |
+
+| MicroOLED (Qwiic cable) | Argon Pins |
+| ----------------------- | ---------- |
+| GND                     | GND        |
+| 3V3                     | 3V3        |
+| SDA (Blue)              | SDA        |
+| SCL (Yellow)            | SCL        |
+
+
 
 ## Lab Stages
-1. Create cycle with only North-South stop lights
-2. Add Pedestrian Walk / Don't Walk lights into cycle
-3. Make Don't Walk light blink when it is on
-4. Add West-East stop light into cycle
+
+1. Create cycle with only traffic (North-South) stop lights
+
+2. Add Pedestrian Walk / Don't Walk (East-West) message to OLED 
+
+3. Make Don't Walk light blink when it is on (if time)
+
+   
 
 * We will work through stage 1 together
-* You will work in pairs implement stages 2-4, and we will review together as a class after each stage
+
 
 ## General Approach
 

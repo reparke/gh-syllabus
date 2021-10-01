@@ -3,48 +3,61 @@
 // two lane stoplight and pedestrian walk light
 
 // it uses a timing approach based on cur and prevMillis
+#include "SparkFunMicroOLED.h"   // Include MicroOLED library
+MicroOLED oled(MODE_I2C, 9, 1);  // Example I2C declaration RST=D7, DC=LOW
 
-const int PIN_NS_RED = D2;
-const int PIN_NS_GREEN = D3;
-const int PIN_NS_BLUE = D4;
-const int PIN_WE_RED = A5;
-const int PIN_WE_GREEN = A4;
-const int PIN_WE_BLUE = A3;
-const int PIN_DONT_WALK = D5;
-const int PIN_WALK = D6;
+const int PIN_RED = D2;
+const int PIN_GREEN = D3;
+const int PIN_BLUE = D4;
 
-const int LONG_LIGHT_DURATION = 5000;          // time for green, red, walk, don't walk
+const int LONG_LIGHT_DURATION = 5000;   // time for green, red, walk, don't walk
 const int SHORT_LIGHT_DURATION = 2000;  // time for yellow
-const int BLINK_RATE = 500;        // time for blinking don't walk light
+const int BLINK_RATE = 500;             // time for blinking don't walk light
 
 // stage 1: NS state changes
 unsigned long prevMillisState = 0;
 unsigned long stateLength = 0;
 
 // enum State { stateNSG, stateNSY, stateNSR }; //stage 2: add pedestrians
-enum State { stateNSG, stateNSY, statePED, statePEDDW };  //
+enum State { stateTrafficGo, stateTrafficSlow, statePedWalk, statePedDontWalk };  //
 
-State currentState = stateNSG;
+State currentState = stateTrafficGo;
 
 enum Color { Red, Yellow, Green, Black };
-enum Light { lightNS, lightWE };
+void updateOLED() {
+    String output = "";
+    switch (currentState) {  // stage 1: add switch statement
+        case stateTrafficSlow:
+        case statePedDontWalk:
+        case stateTrafficGo:
+            output = "Don't\nWalk";
+            break;
+        // case NSR:                    //stage 2
+        case statePedWalk:
+            output = "Walk";
+            break;
+    }
+    oled.clear(PAGE);      // Clear the display
+    oled.setCursor(0, 0);  // Set cursor to top-left
+    oled.setFontType(1);   // 7-segment font
+    oled.print(output);    // Print "A0"
+    oled.display();
 
-// for testing purposes onle
-int lights[] = {PIN_NS_RED,   PIN_NS_GREEN, PIN_NS_BLUE, PIN_WE_RED,
-                PIN_WE_GREEN, PIN_WE_BLUE,  PIN_WALK,    PIN_DONT_WALK};
-
-
+    // Serial.println(output);
+}
 
 void setup() {
     Serial.begin(9600);
-    pinMode(PIN_NS_RED, OUTPUT);
-    pinMode(PIN_NS_GREEN, OUTPUT);
-    pinMode(PIN_NS_BLUE, OUTPUT);
-    pinMode(PIN_WE_RED, OUTPUT);
-    pinMode(PIN_WE_GREEN, OUTPUT);
-    pinMode(PIN_WE_BLUE, OUTPUT);
-    pinMode(PIN_WALK, OUTPUT);
-    pinMode(PIN_DONT_WALK, OUTPUT);
+    pinMode(PIN_RED, OUTPUT);
+    pinMode(PIN_GREEN, OUTPUT);
+    pinMode(PIN_BLUE, OUTPUT);
+
+    oled.begin();      // Initialize the OLED
+    oled.clear(ALL);   // Clear the display's internal memory
+    oled.display();    // Display what's in the buffer (splashscreen)
+    delay(1000);       // Delay 1000 ms
+    oled.clear(PAGE);  // Clear the display
+    oled.display();
 
     /* === DEBUGGING ONLY ====== */
     //     turnAllLightsOn();
@@ -52,61 +65,47 @@ void setup() {
     //     turnAllLightsOff();
     //     cycleLights(500);
 }
-void setColor(Light light, Color c) {
-    int r, g, b;  // load pins
-    switch (light) {
-        case lightNS:
-            r = PIN_NS_RED;
-            b = PIN_NS_BLUE;
-            g = PIN_NS_GREEN;
-            break;
-    }
+void setColor(Color c) {
     switch (c) {
         case Red:
-            digitalWrite(r, HIGH);
-            digitalWrite(g, LOW);
-            digitalWrite(b, LOW);
+            digitalWrite(PIN_RED, HIGH);
+            digitalWrite(PIN_GREEN, LOW);
+            digitalWrite(PIN_BLUE, LOW);
             break;
         case Yellow:
-            digitalWrite(r, HIGH);
-            digitalWrite(g, HIGH);
-            digitalWrite(b, LOW);
+            digitalWrite(PIN_RED, HIGH);
+            digitalWrite(PIN_GREEN, HIGH);
+            digitalWrite(PIN_BLUE, LOW);
             break;
         case Green:
-            digitalWrite(r, LOW);
-            digitalWrite(g, HIGH);
-            digitalWrite(b, LOW);
+            digitalWrite(PIN_RED, LOW);
+            digitalWrite(PIN_GREEN, HIGH);
+            digitalWrite(PIN_BLUE, LOW);
             break;
         case Black:
-            digitalWrite(r, LOW);
-            digitalWrite(g, LOW);
-            digitalWrite(b, LOW);
+            digitalWrite(PIN_RED, LOW);
+            digitalWrite(PIN_GREEN, LOW);
+            digitalWrite(PIN_BLUE, LOW);
             break;
     }
 }
 // stage 1:  add
 void updateLights() {
-    setColor(lightNS, Black);
-    setColor(lightWE, Black);
-    digitalWrite(PIN_WALK, LOW);
-    digitalWrite(PIN_DONT_WALK, LOW);
+    setColor(Black);
+
     switch (currentState) {  // stage 1: add switch statement
-        case stateNSY:
-            setColor(lightNS, Yellow);
-            digitalWrite(PIN_DONT_WALK, HIGH);  // stage 2
+        case stateTrafficSlow:
+            setColor(Yellow);
             break;
         // case NSR:                    //stage 2
-        case statePED:
-            setColor(lightNS, Red);
-            digitalWrite(PIN_WALK, HIGH);
+        case statePedWalk:
+            setColor(Red);
             break;
-        case statePEDDW:
-            setColor(lightNS, Red);
-            digitalWrite(PIN_DONT_WALK, HIGH);
+        case statePedDontWalk:
+            setColor(Red);
             break;
-        case stateNSG:
-            setColor(lightNS, Green);
-            digitalWrite(PIN_DONT_WALK, HIGH);
+        case stateTrafficGo:
+            setColor(Green);
             break;
     }
 }
@@ -114,8 +113,8 @@ void updateLights() {
 // stage 1: create function with NSY NSR NSG
 void updateNextStateDuration() {
     switch (currentState) {
-        case stateNSY:
-        case statePEDDW:
+        case stateTrafficSlow:
+        case statePedDontWalk:
             stateLength = SHORT_LIGHT_DURATION;
             break;
         default:
@@ -124,22 +123,20 @@ void updateNextStateDuration() {
 }
 void updateNextState() {
     switch (currentState) {
-        case stateNSY:
+        case stateTrafficSlow:
             // currentState = stateNSR; //stage 2
-            currentState = statePED;
+            currentState = statePedWalk;
             // currentState = stateWEG;
             break;
         // case stateNSR:  //stage 2
-        case statePED:  // stage 2
-            // Reset the blink rate when changing OUT of PED
-            // isDWLedOn = true;        //commented out--why was this here?
-            currentState = statePEDDW;
+        case statePedWalk:  // stage 2
+            currentState = statePedDontWalk;
             break;
-        case statePEDDW:
-            currentState = stateNSG;
+        case statePedDontWalk:
+            currentState = stateTrafficGo;
             break;
-        case stateNSG:
-            currentState = stateNSY;
+        case stateTrafficGo:
+            currentState = stateTrafficSlow;
             break;
     }
 }
@@ -150,34 +147,42 @@ void loop() {
 
     if ((curMillis - prevMillisState) > stateLength) {
         prevMillisState = curMillis;
-        // Serial.print("Changing State: " + String(currentState));
+        Serial.print("Changing State: " + String(currentState));
         updateNextState();
         updateNextStateDuration();
         updateLights();
-        // Serial.println(" --> " + String(currentState));
-    }
+        updateOLED();
 
-   
+        Serial.println(" --> " + String(currentState));
+    }
 }
 
 /* ======= FUNCTIONS FOR DEBUGGING LED WIRING ========= */
 // functions used for testing only
-void cycleLights(int delayMS) {
+void testLightandOLED() {
+    // test R, G, B LEDs individually
+    int lights[] = {PIN_RED, PIN_GREEN, PIN_BLUE};
+
     for (int i = 0; i < arraySize(lights); i++) {
         digitalWrite(lights[i], HIGH);
-        delay(delayMS);
+        delay(1000);
         digitalWrite(lights[i], LOW);
+        delay(500);
     }
-}
 
-void turnAllLightsOn() {
-    for (int i = 0; i < arraySize(lights); i++) {
-        digitalWrite(lights[i], HIGH);
-    }
-}
+    // test OLED screen
+    oled.clear(PAGE);
+    oled.setCursor(0, 0);
+    oled.setFontType(0);
+    oled.println("Testing OLED");
+    oled.display();
 
-void turnAllLightsOff() {
-    for (int i = 0; i < arraySize(lights); i++) {
-        digitalWrite(lights[i], LOW);
+    oled.setFontType(0);  // 7-segment font
+    for (int i = 0; i < 20; i++) {
+        oled.print(".");
+        oled.display();
+        delay(10);
     }
+    oled.clear(PAGE);  // Clear the display
+    oled.display();
 }
