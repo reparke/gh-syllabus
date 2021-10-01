@@ -14,3 +14,6 @@ title: Pre-Lecture Activities
 
 {% include video id="Wh8xGIYP1Dc" provider="youtube" %}
 
+### Tuesday Wiring
+
+![image-20210227172856897](week07.assets/image-20210227172856897.png)

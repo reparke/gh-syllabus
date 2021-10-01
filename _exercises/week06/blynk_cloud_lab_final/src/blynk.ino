@@ -37,83 +37,60 @@ const int PIN_GREEN = D4;
 const int PIN_BLUE = D5;
 const int PIN_SWITCH = D2;
 
-// virtual pin headers
+// from app to argon
+// create function for BLYNK_WRITE
+BLYNK_WRITE(V0) {
+    int redVal = param.asInt();  // range 0-255
+    analogWrite(PIN_RED, redVal);
+}
 
-// retrieve from app
-// app ==> argon
-//  create a special function called BLYNK_WRITE(<<PIN>>)
+BLYNK_WRITE(V1) {
+    int greenVal = param.asInt();  // range 0-255
+    analogWrite(PIN_GREEN, greenVal);
+}
 
-void displayRandomColor() {
-    int randColor = random(0, 3);
-    String color = "";
-    switch (randColor) {
-        case 0:  // white
-            color = "White";
+BLYNK_WRITE(V2) {
+    int blueVal = param.asInt();  // range 0-255
+    analogWrite(PIN_BLUE, blueVal);
+}
+
+// trigger new color button
+BLYNK_WRITE(V4) {
+    int buttonVal = param.asInt();
+
+    // this function gets called EVERYTIME the virtual buttons
+    // it gets called when push, and it gets called when you release button
+    // lets just pick one or the other (only press OR only release)
+    if (buttonVal == 1) {
+        // pick random number from 0, 3
+        int rand = random(0, 3);
+        if (rand == 0) {
+            // white
             analogWrite(PIN_RED, 255);
             analogWrite(PIN_GREEN, 255);
             analogWrite(PIN_BLUE, 255);
-            break;
-        case 1:  // orange
-            color = "Orange";
+            Blynk.virtualWrite(V7, "white");
+        } else if (rand == 1) {
+            // orange
             analogWrite(PIN_RED, 255);
             analogWrite(PIN_GREEN, 165);
             analogWrite(PIN_BLUE, 0);
-            break;
-        case 2:  // magenta
-            color = "Magenta";
+            Blynk.virtualWrite(V7, "orange");
+        } else if (rand == 2) {
+            // magenta
             analogWrite(PIN_RED, 255);
             analogWrite(PIN_GREEN, 0);
             analogWrite(PIN_BLUE, 255);
-            break;
-        case 3:  // yellow
-            color = "Yellow";
+            Blynk.virtualWrite(V7, "magenta");
+        } else if (rand == 3) {
+            // yellow
             analogWrite(PIN_RED, 255);
             analogWrite(PIN_GREEN, 255);
             analogWrite(PIN_BLUE, 0);
-            break;
-            
-    }
-    Blynk.virtualWrite(V7,
-                       color);  // send data from argon ===> app
-}
-
-// from app to argon
-BLYNK_WRITE(V0) {  // RED
-    // event handler for when the user moves the sliders on the app
-    // we have a slider that send an integer value from 0-255
-    // lets read the value on the slider
-    int sliderValue = param.asInt();  // represents slider value
-    analogWrite(PIN_RED, sliderValue);
-    Serial.println("Red: " + String(sliderValue));
-}
-BLYNK_WRITE(V1) {                     // GREEN
-    int sliderValue = param.asInt();  // represents slider value
-    // if ()
-    analogWrite(PIN_GREEN, sliderValue);
-    Serial.println("Green: " + String(sliderValue));
-}
-BLYNK_WRITE(V2) {                     // BLUE
-    int sliderValue = param.asInt();  // represents slider value
-    analogWrite(PIN_BLUE, sliderValue);
-    Serial.println("Blue: " + String(sliderValue));
-}
-
-BLYNK_WRITE(V4) {              // random color button
-    if (param.asInt() == 1) {  // since button widget is "push", we need this to
-                               // avoid triggering on push and release
-        int rand = random(0, 3);
-        displayRandomColor();
-        Serial.println("random color");
+            Blynk.virtualWrite(V7, "yellow");
+        }
     }
 }
-// BLYNK_WRITE(V5) {  // menu
-//     int menuVal =
-//         param.asInt();  // represents slider value - starts at index 1 (not
-//         0)
-//     Color c = (Color)menuVal;  // cast / converted our int to an enum
-//     displayColor(c);
-//     Serial.println("menu val named color: " + String(menuVal));
-// }
 
 void setup() {
     pinMode(PIN_LED, OUTPUT);
@@ -138,24 +115,12 @@ void loop() {
     if (currMillis - prevMillis > blynkDelay) {
         prevMillis = currMillis;
 
+        // to send data FROM ARGON TO APP, we use Blynk.virtualwrite
         int switchVal = digitalRead(PIN_SWITCH);
-
-        // NOW we send value
-        // Blynk.virtualWrite(<<PIN>>, <<VALUE>>)
         if (switchVal == HIGH) {
-            Blynk.virtualWrite(
-                V3,
-                "open");  // send data from argon ===> app
-                          // switchRead = digitalRead(PIN_SWITCH);
+            Blynk.virtualWrite(V3, "open");
         } else {
-            Blynk.virtualWrite(
-                V3,
-                "closed");  // send data from argon ===> app
-                            // switchRead = digitalRead(PIN_SWITCH);
+            Blynk.virtualWrite(V3, "closed");
         }
-        int randNum = random(0, 255);
-        Serial.println("sending random number: " + String(randNum));
-        Blynk.virtualWrite(V6,
-                           randNum);  // send data from argon ===> app
     }
 }
