@@ -1,10 +1,5 @@
 ---
-marp: true
-theme: itp
 
-week: 7
-category: lectures
-title: State Machines Part 3 - Stoplight Example
 ---
 <!-- headingDivider: 2 -->
 
