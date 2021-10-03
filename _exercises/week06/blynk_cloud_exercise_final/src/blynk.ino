@@ -9,8 +9,9 @@
 
 #define BLYNK_TEMPLATE_ID "TMPL8pRjLGSG"
 #define BLYNK_DEVICE_NAME "Week 6 Lab"
+#define BLYNK_AUTH_TOKEN "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b"
 
-char auth[] = "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b";
+//char auth[] = "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b";
 #define BLYNK_IP \
     IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
 
@@ -48,7 +49,8 @@ void setup() {
     Serial.begin(9600);
 	    // 1. have delay
     delay(5000);  // needs to be delay, not millis
-    Blynk.begin(auth, BLYNK_IP);
+//    Blynk.begin(auth, BLYNK_IP);
+    Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
 }
 
 void loop() {

@@ -19,9 +19,11 @@ connect switch (Gnd - A0 - 3.3v)
 
 #define BLYNK_TEMPLATE_ID "TMPL8pRjLGSG"
 #define BLYNK_DEVICE_NAME "Week 6 Lab"
+#define BLYNK_AUTH_TOKEN "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b"
+
 // #define BLYNK_TEMPLATE_ID "TMPL0A1ZpqoD"
 // #define BLYNK_DEVICE_NAME "Week 6 Intro"
-char auth[] = "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b";
+//char auth[] = "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b";
 #define BLYNK_IP \
     IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
 
@@ -105,7 +107,8 @@ void setup() {
 
     // 2. connect to blynk
     // Blynk.begin(auth);
-    Blynk.begin(auth, BLYNK_IP);
+	Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
+//    Blynk.begin(auth, BLYNK_IP);
 }
 
 void loop() {

@@ -2,12 +2,12 @@
 
 #define BLYNK_TEMPLATE_ID "TMPLRSs66Yj0"
 #define BLYNK_DEVICE_NAME "Week 6"
-#define BLYNK_AUTH_TOKEN "W6fBjFZSrx5575a70HUfW5hDxNWyD7dV";
+#define BLYNK_AUTH_TOKEN "W6fBjFZSrx5575a70HUfW5hDxNWyD7dV"
 
 #define BLYNK_PRINT Serial
 #define BLYNK_IP \
     IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
-char auth[] = "W6fBjFZSrx5575a70HUfW5hDxNWyD7dV";
+//char auth[] = "W6fBjFZSrx5575a70HUfW5hDxNWyD7dV";
 
 const int PIN_LED = D7;
 const int PIN_RED = D3;
@@ -40,7 +40,8 @@ void setup() {
     Serial.begin(9600);
 
     delay(5000);  // Blynk recommendation
-    Blynk.begin(auth, BLYNK_IP);
+    //Blynk.begin(auth, BLYNK_IP);
+	Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
 }
 
 // we DO NOT USE DELAY in the loop

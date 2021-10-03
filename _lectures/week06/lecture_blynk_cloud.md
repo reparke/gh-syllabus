@@ -120,23 +120,36 @@ Copy this info to include in sketch below (**Note: this is just an example--use 
 
 ## Integration Phase 2: Modify sketch with Blynk configuration
 
-Add these lines to the top of your sketch
+1. Copy the lines from the template to the top of your sketch:
 
 ```c++
 #define BLYNK_TEMPLATE_ID "ADD_YOUR_OWN"
 #define BLYNK_DEVICE_NAME "ADD_YOUR_OWN"
+#define BLYNK_AUTH_TOKEN "ADD_YOUR_OWN"
+```
+
+**Important:** Make sure to **delete** the **`;`** at the end of the line `#define BLYNK_AUTH_TOKEN` (it shouldn't be there)
+
+
+
+2. Also add these lines beneath the template lines:
+
+```c++
 #define BLYNK_PRINT Serial 
 #include <blynk.h>
 #define BLYNK_IP IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
-char auth[] = "ADD_YOUR_OWN_AUTH_TOKEN";
 ```
-Add these line to the end of `setup()`
+
+
+3. Add these line to the end of `setup()`
 
 ```c++
 delay(5000);
-Blynk.begin(auth, BLYNK_IP);
+Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
 ```
-Add this line to the top of `loop()`
+
+
+4. Add this line to the top of `loop()`
 
 ```c++
 Blynk.run();
