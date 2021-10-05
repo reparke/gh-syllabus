@@ -13,7 +13,7 @@ const int BLINK_RATE = 500;             // time for blinking don't walk light
 
 // stage 1: NS state changes
 unsigned long prevMillisState = 0;
-unsigned long stateLength = 0;
+unsigned long stateDuration = 0;
 
 // enum State { stateNSG, stateNSY, stateNSR }; //stage 2: add pedestrians
 enum State { stateTrafficGo, stateTrafficSlow, statePedWalk, statePedDontWalk };
@@ -101,10 +101,10 @@ void updateNextStateDuration() {
     switch (currentState) {
         case stateTrafficSlow:
         case statePedDontWalk:
-            stateLength = SHORT_LIGHT_DURATION;
+            stateDuration = SHORT_LIGHT_DURATION;
             break;
         default:
-            stateLength = LONG_LIGHT_DURATION;
+            stateDuration = LONG_LIGHT_DURATION;
     }
 }
 void updateNextState() {
@@ -133,7 +133,7 @@ void loop() {
 
     unsigned long curMillis = millis();  // current time
 
-    if ((curMillis - prevMillisState) > stateLength) {
+    if ((curMillis - prevMillisState) > stateDuration) {
         prevMillisState = curMillis;
         // Serial.print("Changing State: " + String(currentState));
         updateNextState();

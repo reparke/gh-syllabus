@@ -16,9 +16,13 @@ const int BLINK_RATE = 500;             // time for blinking don't walk light
 
 // stage 1: NS state changes
 unsigned long prevMillisState = 0;
-unsigned long stateLength = 0;
+unsigned long stateDuration = 0;
 
-enum State { stateTrafficGo, stateTrafficSlow, stateTrafficStop };  // stage 2: add pedestrians
+enum State {
+    stateTrafficGo,
+    stateTrafficSlow,
+    stateTrafficStop
+};  // stage 2: add pedestrians
 
 State currentState = stateTrafficGo;
 
@@ -100,40 +104,51 @@ void updateLights() {
 void updateNextStateDuration() {
     switch (currentState) {
         case stateTrafficSlow:
-            stateLength = SHORT_LIGHT_DURATION;
+            stateDuration = SHORT_LIGHT_DURATION;
             break;
         default:
-            stateLength = LONG_LIGHT_DURATION;
+            stateDuration = LONG_LIGHT_DURATION;
     }
 }
 void updateNextState() {
+    unsigned long curMillis = millis();
     switch (currentState) {
         case stateTrafficSlow:
-            currentState = stateTrafficStop;
+            if (curMillis - prevMillisState > stateDuration) {
+                prevMillisState = curMillis;
+
+                currentState = stateTrafficStop;  // stage 2
+                updateNextStateDuration();
+                updateLights();
+                updateOLED();
+            }
             break;
-        case stateTrafficStop:
-            currentState = stateTrafficGo;
+        case stateTrafficStop:  // stage 2
+            if (curMillis - prevMillisState > stateDuration) {
+                prevMillisState = curMillis;
+
+                currentState = stateTrafficGo;
+                updateNextStateDuration();
+                updateLights();
+                updateOLED();
+            }
             break;
         case stateTrafficGo:
-            currentState = stateTrafficSlow;
+            if (curMillis - prevMillisState > stateDuration) {
+                prevMillisState = curMillis;
+
+                currentState = stateTrafficSlow;
+                updateNextStateDuration();
+                updateLights();
+                updateOLED();
+            }
             break;
     }
 }
+
 void loop() {
-    // stage 1: NS state changes
-
-    unsigned long curMillis = millis();  // current time
-
-    if ((curMillis - prevMillisState) > stateLength) {
-        prevMillisState = curMillis;
-        // Serial.print("Changing State: " + String(currentState));
-        updateNextState();
-        updateNextStateDuration();
-        updateLights();
-        updateOLED();
-
-        // Serial.println(" --> " + String(currentState));
-    }
+    // have student write this because we'll need this later
+    updateNextState();
 }
 /* ======= FUNCTIONS FOR DEBUGGING LED WIRING ========= */
 // functions used for testing only

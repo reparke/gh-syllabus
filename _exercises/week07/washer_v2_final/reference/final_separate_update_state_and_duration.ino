@@ -43,44 +43,36 @@ enum Cycle { Economy, Deluxe, SuperDeluxe };
 enum Color { Red, Blue, Orange, White, Black };
 
 State currentState = Idle;
-Cycle currentCycle = Economy;
-
-int counter = 0;  // debugging only
 
 /* DEBUGGING FUNCTIONS ONLY
    ========================
 */
-String getStateString() {
-    String output = "";
-
-    switch (currentState) {
+String getStateString(State s) {
+    switch (s) {
         case Idle:
-            output = "idle";
+            return "idle";
         case Hot:
-            output = "hot";
+            return "hot";
         case ExtraDry:
-            output = "longdry";
+            return "longdry";
         case Cold:
-            output = "cold";
+            return "cold";
         case RegularDry:
-            output = "shortdry";
+            return "shortdry";
     }
-    return output;
 }
 /* DEBUGGING FUNCTIONS ONLY
    ========================
 */
-String getCycleString() {
-    String output = "";
-    switch (currentCycle) {
+String getCycleString(Cycle c) {
+    switch (c) {
         case Economy:
-            output = "economy";
+            return "economy";
         case Deluxe:
-            output = "deluxe";
+            return "deluxe";
         case SuperDeluxe:
-            output = "superdeluxe";
+            return "superdeluxe";
     }
-    return output;
 }
 
 /* ===== FUNCTIONS ====== */
@@ -108,95 +100,76 @@ Cycle getCyclePosition() {
 // TODO: create updateNextState
 // uses button inputs and current state to update global state variable
 void updateNextState() {
-    unsigned long currMillis = millis();
+    State next;
 
     switch (currentState) {
         case Idle:
             if (digitalRead(BUTTON_PIN) == 1) {
-                currentState = Idle;
+                next = Idle;
             } else {
-                counter++;
-                currentCycle = getCyclePosition();
-                switch (currentCycle) {
+                Cycle cycle = getCyclePosition();
+                switch (cycle) {
                     case Economy:
-                        currentState = Cold;
+                        next = Cold;
                         break;
                     case Deluxe:
-                        currentState = Hot;
+                        next = Hot;
                         break;
                     case SuperDeluxe:
-                        currentState = Hot;
+                        next = Hot;
                         break;
                 }
-                displayAllStateInfo();
             }
             break;
         case Hot:
-            if (currMillis - prevMillisState > stateDuration) {
-                prevMillisState = currMillis;
-                counter++;
-                currentCycle = getCyclePosition();
-
-                if (currentCycle == Deluxe) {
-                    currentState = RegularDry;
-                } else if (currentCycle == SuperDeluxe) {
-                    currentState = ExtraDry;
-                }
-                displayAllStateInfo();
+            if (getCyclePosition() == Deluxe) {
+                next = RegularDry;
+            } else if (getCyclePosition() == SuperDeluxe) {
+                next = ExtraDry;
             }
             break;
+            next = ExtraDry;
+            break;
         case Cold:
-            if (currMillis - prevMillisState > stateDuration) {
-                prevMillisState = currMillis;
-                counter++;
-
-                currentState = RegularDry;
-                displayAllStateInfo();
-            }
+            next = RegularDry;
             break;
 
         case RegularDry:
-            if (currMillis - prevMillisState > stateDuration) {
-                prevMillisState = currMillis;
-                counter++;
-
-                currentState = Idle;
-                displayAllStateInfo();
-            }
+            next = Idle;
             break;
 
         case ExtraDry:
-            if (currMillis - prevMillisState > stateDuration) {
-                prevMillisState = currMillis;
-                counter++;
-
-                currentState = Idle;
-                displayAllStateInfo();
-            }
+            next = Idle;
             break;
     }
+
+    currentState = next;
 }
 
 // TODO: create updateNextDuration
 // update global state duration variable based on the current state
 void updateNextDuration() {
+    int next;
+
     switch (currentState) {
         case Idle:
-            stateDuration = 0;
+            next = 0;
             break;
         case Hot:
-            stateDuration = LONG_CYCLE;
+            next = LONG_CYCLE;
             break;
         case Cold:
-            stateDuration = SHORT_CYCLE;
+            next = SHORT_CYCLE;
             break;
         case RegularDry:
-            stateDuration = SHORT_CYCLE;
+            next = SHORT_CYCLE;
             break;
         case ExtraDry:
-            stateDuration = LONG_CYCLE;
+            next = LONG_CYCLE;
             break;
     }
+
+    stateDuration = next;
 }
 
 void setColor(Color c) {
@@ -257,18 +230,18 @@ void updateOutputs() {
 
 // LOOP
 void loop() {
-    // unsigned long currMillis = millis();
-    // if (currMillis - prevMillisState > stateDuration) {
-    //     prevMillisState = currMillis;
-    updateNextState();
-    // updateNextDuration();
-    // updateOutputs();
-    // if (currentState != 0) {
-    //     Serial.print(getCycleString(getCyclePosition()));
-    //     Serial.println(", Next state " + getStateString(currentState) + "
-    //     for " + String(stateDuration));
-    // }
-    // }
+    unsigned long currMillis = millis();
+    if (currMillis - prevMillisState > stateDuration) {
+        prevMillisState = currMillis;
+        updateNextState();
+        updateNextDuration();
+        updateOutputs();
+        // if (currentState != 0) {
+        //     Serial.print(getCycleString(getCyclePosition()));
+        //     Serial.println(", Next state " + getStateString(currentState) + "
+        //     for " + String(stateDuration));
+        // }
+    }
 }
 
 void setup() {
@@ -278,17 +251,4 @@ void setup() {
     pinMode(LED_RED_PIN, OUTPUT);
     pinMode(LED_BLUE_PIN, OUTPUT);
     pinMode(LED_GREEN_PIN, OUTPUT);
-}
-
-/*
- DEBUGGING FUNCTIONS (not for class)
-=================================================
-*/
-void displayAllStateInfo() {
-    String stateString = getStateString();
-    String cycleString = getCycleString();
-
-    String output = "%d: %s; Cycle = %s; Duration = %d";
-    Serial.printlnf(output, counter, stateString.c_str(), cycleString.c_str(),
-                    stateDuration);
 }

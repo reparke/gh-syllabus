@@ -43,7 +43,7 @@ unsigned long prevMillisState = 0;
    ========================
 */
 /*
-String displayState(State s) {
+String getStateString(State s) {
     switch (s) {
         case Idle:
             return "idle";
@@ -58,7 +58,7 @@ String displayState(State s) {
     }
 }
 
-String displayCycle(Cycle c) {
+String getCycleString(Cycle c) {
     switch (c) {
         case Economy:
             return "economy";

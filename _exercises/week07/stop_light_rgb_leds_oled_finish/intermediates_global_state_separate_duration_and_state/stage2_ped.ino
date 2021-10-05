@@ -16,10 +16,15 @@ const int BLINK_RATE = 500;             // time for blinking don't walk light
 
 // stage 1: NS state changes
 unsigned long prevMillisState = 0;
-unsigned long stateLength = 0;
+unsigned long stateDuration = 0;
 
 // enum State { stateNSG, stateNSY, stateNSR }; //stage 2: add pedestrians
-enum State { stateTrafficGo, stateTrafficSlow, statePedWalk, statePedDontWalk };  //
+enum State {
+    stateTrafficGo,
+    stateTrafficSlow,
+    statePedWalk,
+    statePedDontWalk
+};  //
 
 State currentState = stateTrafficGo;
 
@@ -115,46 +120,66 @@ void updateNextStateDuration() {
     switch (currentState) {
         case stateTrafficSlow:
         case statePedDontWalk:
-            stateLength = SHORT_LIGHT_DURATION;
+            stateDuration = SHORT_LIGHT_DURATION;
             break;
         default:
-            stateLength = LONG_LIGHT_DURATION;
+            stateDuration = LONG_LIGHT_DURATION;
     }
 }
 void updateNextState() {
+    unsigned long curMillis = millis();
     switch (currentState) {
         case stateTrafficSlow:
-            // currentState = stateNSR; //stage 2
-            currentState = statePedWalk;
-            // currentState = stateWEG;
+            if (curMillis - prevMillisState > stateDuration) {
+                prevMillisState = curMillis;
+
+                // currentState = stateNSR; //stage 2
+                currentState = statePedWalk;
+                // currentState = stateWEG;
+                updateNextStateDuration();
+                updateLights();
+                updateOLED();
+            }
             break;
         // case stateNSR:  //stage 2
         case statePedWalk:  // stage 2
-            currentState = statePedDontWalk;
+            if (curMillis - prevMillisState > stateDuration) {
+                prevMillisState = curMillis;
+
+                // Reset the blink rate when changing OUT of PED
+                // isDWLedOn = true;        //commented out--why was this
+                // here?
+                currentState = statePedDontWalk;
+                updateNextStateDuration();
+                updateLights();
+                updateOLED();
+            }
             break;
         case statePedDontWalk:
-            currentState = stateTrafficGo;
+            if (curMillis - prevMillisState > stateDuration) {
+                prevMillisState = curMillis;
+
+                currentState = stateTrafficGo;
+                updateNextStateDuration();
+                updateLights();
+                updateOLED();
+            }
             break;
         case stateTrafficGo:
-            currentState = stateTrafficSlow;
+            if (curMillis - prevMillisState > stateDuration) {
+                prevMillisState = curMillis;
+
+                currentState = stateTrafficSlow;
+                updateNextStateDuration();
+                updateLights();
+                updateOLED();
+            }
             break;
     }
 }
 void loop() {
-    // stage 1: NS state changes
-
-    unsigned long curMillis = millis();  // current time
-
-    if ((curMillis - prevMillisState) > stateLength) {
-        prevMillisState = curMillis;
-        Serial.print("Changing State: " + String(currentState));
-        updateNextState();
-        updateNextStateDuration();
-        updateLights();
-        updateOLED();
-
-        Serial.println(" --> " + String(currentState));
-    }
+    // have student write this because we'll need this later
+    updateNextState();
 }
 
 /* ======= FUNCTIONS FOR DEBUGGING LED WIRING ========= */
