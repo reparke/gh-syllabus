@@ -50,10 +50,10 @@ title: Pre-Lecture Activities
 
 | LED             | Argon Pins |
 | --------------- | ---------- |
-| Magnetic Switch | D2         |
-| RGB Red LED     | D3         |
-| RGB Green LED   | D4         |
-| RGB Blue LED    | D5         |
-| Potentiometer   | A3         |
+| Magnetic Switch | D5         |
+| RGB Red LED     | D2         |
+| RGB Green LED   | D3         |
+| RGB Blue LED    | D4         |
+| Potentiometer   | A5         |
 
 ![image-20210227172856897](week07.assets/image-20210227172856897.png)

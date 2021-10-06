@@ -22,11 +22,11 @@ Colors:
     RegularDry    yellow
 */
 
-const int POT_PIN = A3;
-const int BUTTON_PIN = D2;
-const int LED_RED_PIN = D3;    // red
-const int LED_GREEN_PIN = D4;  // green
-const int LED_BLUE_PIN = D5;   // blue
+const int POT_PIN = A5;
+const int SWITCH_PIN = D5;
+const int LED_RED_PIN = D2;    // red
+const int LED_GREEN_PIN = D3;  // green
+const int LED_BLUE_PIN = D4;   // blue
 
 const int SHORT_CYCLE = 2000;
 const int LONG_CYCLE = 4000;
@@ -104,7 +104,7 @@ void updateNextState() {
 
     switch (currentState) {
         case Idle:
-            if (digitalRead(BUTTON_PIN) == 1) {
+            if (digitalRead(SWITCH_PIN) == 1) {
                 next = Idle;
             } else {
                 Cycle cycle = getCyclePosition();
@@ -246,9 +246,53 @@ void loop() {
 
 void setup() {
     Serial.begin(9600);
-    pinMode(BUTTON_PIN, INPUT);
+    pinMode(SWITCH_PIN, INPUT);
     pinMode(POT_PIN, INPUT);
     pinMode(LED_RED_PIN, OUTPUT);
     pinMode(LED_BLUE_PIN, OUTPUT);
     pinMode(LED_GREEN_PIN, OUTPUT);
+}
+/*
+ DEBUGGING FUNCTIONS (not for class)
+=================================================
+*/
+
+
+// functions used for testing only
+void testInitialSetup() {
+    // test R, G, B LEDs individually; then white
+    int lights[] = {LED_RED_PIN, LED_GREEN_PIN, LED_BLUE_PIN};
+
+    // test R G B
+    for (int i = 0; i < arraySize(lights); i++) {
+        testInputs();
+        digitalWrite(lights[i], HIGH);
+        delay(1000);
+        testInputs();
+
+        digitalWrite(lights[i], LOW);
+        delay(500);
+    }
+
+    // show white
+    for (int i = 0; i < arraySize(lights); i++) {
+        testInputs();
+
+        digitalWrite(lights[i], HIGH);
+    }
+    delay(1000);
+    // show black
+    for (int i = 0; i < arraySize(lights); i++) {
+        testInputs();
+
+        digitalWrite(lights[i], LOW);
+    }
+    delay(500);
+
+    //-----------------------
+}
+void testInputs() {
+    String valSwitchString = digitalRead(SWITCH_PIN) ? "open" : "closed";
+    int valPot = analogRead(POT_PIN);
+    Serial.printlnf("Switch: %s, Pot: %d", valSwitchString.c_str(), valPot);
 }

@@ -57,7 +57,7 @@ title: State Machines Part 2 - Dish Washer Example
 * Download starting code
   * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-```https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week07/washer_start```
+  ```https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week07/washer_start```
 * Wire device as shown below
 
 ## Wiring Diagram
@@ -78,11 +78,11 @@ You'll need
 
 | LED                   | Argon Pins |
 | ---------------------------- | ---- |
-| Magnetic Switch | D2 |
-| RGB Red LED      | D3    |
-| RGB Green LED | D4     |
-| RGB Blue LED | D5     |
-| Potentiometer |   A3   |
+| Magnetic Switch | D5 |
+| RGB Red LED      | D2   |
+| RGB Green LED | D3    |
+| RGB Blue LED | D4    |
+| Potentiometer |   A5   |
 
 ## General Approach
 
