@@ -14,11 +14,12 @@ const int LONG_LIGHT_DURATION = 5000;   // time for green, red, walk, don't walk
 const int SHORT_LIGHT_DURATION = 2000;  // time for yellow
 const int BLINK_RATE = 500;             // time for blinking don't walk light
 
-// TODO: Create variables for state change and state length
-
 // TODO:  Create enum State for stoplight states
 
 // TODO: create enum Color for signal light colors
+
+// TODO: Create variables for state change and state length
+
 
 void setup() {
     Serial.begin(9600);

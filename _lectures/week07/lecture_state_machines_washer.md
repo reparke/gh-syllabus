@@ -6,6 +6,7 @@ week: 7
 category: lectures
 title: State Machines Part 2 - Dish Washer Example
 ---
+
 <!-- headingDivider: 2 -->
 
 # State Machines
