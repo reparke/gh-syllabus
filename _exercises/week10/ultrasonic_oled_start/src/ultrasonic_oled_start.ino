@@ -2,15 +2,12 @@
 
   OLED
   ----
-    MicroOLED ------------- Argon
-    GND ------------------- GND
-    3.3 ------------------- 3.3V (VCC)
-    D1/MOSI --------------- MO (don't change)
-    D0/SCK ---------------- SCK (don't change)
-    D2  ------------------- unused
-    D/C ------------------- A0 (can be any digital pin)
-    RST ------------------- A1 (can be any digital pin)
-    CS  ------------------- A2 (can be any digital pin)
+    MicroOLED -------------  Argon
+      GND ------------------- GND
+      VDD ------------------- 3.3V (VCC)
+      SDA ------------------- SDA
+      SCL ------------------- SCL
+
 
 Ultrasonic Sensor
     Trigger: D3
@@ -19,13 +16,18 @@ Ultrasonic Sensor
 */
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 
-//////////////////////////
-// MicroOLED Definition //
-//////////////////////////
-#define PIN_OLED_RST A1  // Connect RST to pin 6
-#define PIN_OLED_DC A0   // Connect DC to pin 5 (required for SPI)
-#define PIN_OLED_CS A2   // Connect CS to pin A2 (required for SPI)
-MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
+//////////////////////////////////
+// MicroOLED Object Declaration //
+//////////////////////////////////
+#define PIN_RESET 9
+// The DC_JUMPER is the I2C Address Select jumper. Set to 1 if the jumper is
+// open (Default), or set to 0 if it's closed.
+#define DC_JUMPER 1
+
+//////////////////////////////////
+// MicroOLED Object Declaration //
+//////////////////////////////////
+MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 
 //////////////////////////
 // Ultrasonic Distance  //
@@ -34,11 +36,11 @@ const int PIN_ECHO = D2;
 const int PIN_TRIGGER = D3;
 
 void setup() {
-  Serial.begin(9600);  // begin serial communication with the computer
-  oled.begin();        // Initialize the OLED
-  oled.clear(ALL);     // Clear the display's internal memory
-  oled.display();      // Display what's in the buffer (splashscreen)
-  delay(1000);         // Delay 1000 ms
+    Serial.begin(9600);  // begin serial communication with the computer
+    oled.begin();        // Initialize the OLED
+    oled.clear(ALL);     // Clear the display's internal memory
+    oled.display();      // Display what's in the buffer (splashscreen)
+    delay(1000);         // Delay 1000 ms
 }
 
 /********************************************************************************/

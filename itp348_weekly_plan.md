@@ -65,6 +65,7 @@ toc_sticky: true
 - - [x] Butto  ns 
   - [x] Digital input (?)
   - [x] RGB LEDS
+  - [ ] a5: create new assignment that doesn't use while loop timing, consider using millis
   - [x] a3: change die assignment to explicitly suggest an array for the pin labels, and multiple array for the dice labels (Summer) 
   - [x] a4: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 4
@@ -72,10 +73,9 @@ toc_sticky: true
   - [x] Photoresistor
   - [x] Cloud Overview 
   - [ ] Publish (skip)
-  - [ ] A5 (reaction timer): consider using millis ()
   - [ ] re-record OLED with I2C slides
-  - [ ] revise OLED I2c slides
-  - [ ] revise later examples (watch and ultra sonic?) that use OLED
+  - [x] revise OLED I2c slides
+  - [x] revise later examples (watch and ultra sonic?) that use OLED
   - [x] a5: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 5
 - - [x] OLED
@@ -83,23 +83,23 @@ toc_sticky: true
   - [ ] Webhooks / APIs (Initial State can be live)
   - [ ] wk 5: use millis in next assignment (summer)
   - [ ] wk 5: move enum and switch videos to week 6 (summer)
-  - [ ] update Blynk slides
+  - [x] update Blynk slides
   - [x] a6: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 6
-- - [ ] Blynk
+- - [x] Blynk
   - [x] magnetic switch
   - [x] cloud subscribe
-  - [ ] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
-  - [ ] a7: revise with new naming, formatting, video checklist, and rubric
+  - [x] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
+  - [x] a7: revise with new naming, formatting, video checklist, and rubric
   
 - [x] Week 7
   - [x] Switch / enum
   - [x] State machines
-  - [ ] a9
-    - [ ]  revise assignment to remove dropdown menu
-    - [ ]  revise with new naming, formatting, video checklist, and rubric
-    - [ ] Re-evaluate Blynk--this seems to trigger lots of device disconnections
-    - [ ] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
+  - [x] a9
+    - [x]  revise assignment to remove dropdown menu
+    - [x]  revise with new naming, formatting, video checklist, and rubric
+    - [x] Re-evaluate Blynk--this seems to trigger lots of device disconnections
+    - [x] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
   - [x] a8: revise with new naming, formatting, video checklist, and rubric
   
 - [ ] Week 8

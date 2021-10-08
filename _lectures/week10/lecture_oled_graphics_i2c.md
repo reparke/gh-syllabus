@@ -116,22 +116,32 @@ const uint8_t heart_bmp[] = {
 
  <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2005%20PM.jpg" alt="Photo Mar 30, 10 21 05 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2021%2024%20PM.jpg" alt="Photo Mar 30, 10 21 24 PM" style="width:200px;" /> <img src="lecture_oled_graphics.assets/Photo%20Mar%2030,%2010%2020%2059%20PM.jpg" alt="Photo Mar 30, 10 20 59 PM" style="width:200px;" />
 
-## OLED Pins
 
-<span style="font-size:75%">
 
-| OLED         | Argon | Purpose | Notes                 |
-| ------------ | ----- | ------- | --------------------- |
-| GND          | GND   | Ground  | Ground                |
-| 3V3          | 3V3   | Power   | 3.3v                  |
-| SDA (Blue)   | SDA   | Data    | Serial data           |
-| SCL (Yellow) | SCL   | Clock   | Synchronization clock |
-
-</span>
 
 ## Wiring Diagram
 
-<img src="lecture_oled_graphics.assets/oled_ultrasonic_bb.png" style="width:800px;" />
+<img src="lecture_oled_graphics.assets/oled_and_ultrasonic_i2c_bb.png" style="width:800px;" />
+
+<span style="font-size:75%">
+
+| Sensor | Argon | Function                                                     |
+| ------ | ----- | ------------------------------------------------------------ |
+| GND    | GND   | Ground                                                       |
+| VCC    | VUSB  | Power **(requires 5v, but will work with 3.7V LiPo battery)** |
+| TRIG   | D3    | start output pulse sequence                                  |
+| ECHO   | D2    | receive reflection response                                  |
+
+
+
+| OLED         | Argon | Function |
+| ------------ | ----- | -------- |
+| GND          | GND   | Ground   |
+| 3V3          | 3V3   | Power    |
+| SDA (Blue)   | SDA   | Data     |
+| SCL (Yellow) | SCL   | Clock    |
+
+</span>
 
 ## Tools for converting images to bitmaps
 

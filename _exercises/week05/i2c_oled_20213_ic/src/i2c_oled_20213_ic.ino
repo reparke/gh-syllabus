@@ -13,15 +13,11 @@
         which does all the wiring for you. If you have a Micro OLED breakout,
         use the following hardware setup:
 
-    MicroOLED ------------- Photon
+    MicroOLED -------------  Argon
       GND ------------------- GND
       VDD ------------------- 3.3V (VCC)
-    D1/MOSI ----------------- A5 (don't change)
-    D0/SCK ------------------ A3 (don't change)
-      D2
-      D/C ------------------- D6 (can be any digital pin)
-      RST ------------------- D7 (can be any digital pin)
-      CS  ------------------- A2 (can be any digital pin)
+      SDA ------------------- SDA
+      SCL ------------------- SCL
 
   Development environment specifics:
         IDE: Particle Build

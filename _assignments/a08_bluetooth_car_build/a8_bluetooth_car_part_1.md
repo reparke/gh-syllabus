@@ -36,6 +36,7 @@ This assignment is to build a small car, which we will program in your next assi
 
 -   No Fritzing diagram is needed. Wiring diagram and plans are provided in the
     lecture notes.
+-   No code is required to submit for this assignment.
 -   [Follow the build instructions](guide_build_chassis)
 -   Add decorative elements to distinguish your car. There will be a competition the following week for best customized car.
 -   Plan to bring car (with fully charged battery) and phone to class

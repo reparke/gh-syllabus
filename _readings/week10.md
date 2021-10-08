@@ -12,7 +12,26 @@ title: Pre-Lecture Activities
 * Watch **OLED Graphics**
   {% include video id="Csic8vEiIDY" provider="youtube" %}
 
-* Build 
+* Build for **Tuesday**
 
-  ![oled_ultrasonic_bb](week09.assets/oled_ultrasonic_bb.png)
+  ![oled_ultrasonic_bb](week10.assets/oled_and_ultrasonic_i2c_bb.png)
 
+## Sensor Wiring
+
+<span style="font-size:75%">
+
+| Sensor | Argon |
+| ------ | ----- |
+| GND    | GND   |
+| VCC    | VUSB  |
+| TRIG   | D2    |
+| ECHO   | D3    |
+
+| OLED         | Argon |
+| ------------ | ----- |
+| GND          | GND   |
+| 3V3          | 3V3   |
+| SDA (Blue)   | SDA   |
+| SCL (Yellow) | SCL   |
+
+</span>

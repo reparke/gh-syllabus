@@ -1,25 +1,25 @@
 /*
     Econ
-        Cold 2 min
+        ColdWash 2 min
         RegularDry 2 min
         Idle
     Deluxe
-        Hot 4 min
+        HotWash 2 min
         RegularDry 2 min
         Idle
     Super
-        Hot 4 min
+        HotWash 4 min
         ExtraDry 4 min
         Idle
-    Consider pressing button to go back to idle
-    Consider using switch to be either lock (extra), or replace the button
+
 
 Colors:
-    Idle,       white
-    Hot,        red
-    Cold,       blue
-    ExtraDry,    yellow
-    RegularDry    yellow
+    Idle        white
+    HotWash     red
+    ColdWash    blue
+    RegularDry  orange
+    ExtraDry    yellow
+
 */
 
 const int POT_PIN = A5;
@@ -31,31 +31,75 @@ const int LED_BLUE_PIN = D4;   // blue
 const int SHORT_CYCLE = 2000;
 const int LONG_CYCLE = 4000;
 
+// enum options to make changing color of RGB LED easier
+enum Color { Red, Blue, Orange, Yellow, White, Black };
+
+
+// TODO: create enum State for states
+
+// TODO: create enum Cycle for cycles
+
+// TODO: create enum Color for light colors
+
+// TODO: create other state variables
 unsigned long prevMillisState = 0;
 
-// create enum State for states
-
-// create enum Cycle for cycles
-
-// create enum Color for light colors
-
-// create state variables
-
 /* ===== FUNCTIONS ====== */
-// TODO: create getCyclePotion
-// reads potentiometer and returns current Cycle
+// TODO: create void getCyclePosition()
+// reads potentiometer and updates current Cycle
 
-// TODO: create updateNextState
-// uses button inputs and current state to update global state variable
-
-// TODO: create updateNextDuration
+// TODO: create void updateNextDuration()
 // update global state duration variable based on the current state
 
-// TODO: create updateOutputs
+// TODO: create void updateOutputs()
 // updates LEDs based on upcoming state
 
-// LOOP
-void loop() { testInitialSetup(); }
+// TODO: create void updateNextState()
+// uses button inputs and current state to update global state variable
+
+
+// changes the light color based on the enum Color value
+// use this function inside of updateOutputs()
+void setColor(Color c) {
+    switch (c) {
+        case Red:
+            digitalWrite(LED_RED_PIN, HIGH);
+            digitalWrite(LED_GREEN_PIN, LOW);
+            digitalWrite(LED_BLUE_PIN, LOW);
+            break;
+        case White:
+            digitalWrite(LED_RED_PIN, HIGH);
+            digitalWrite(LED_GREEN_PIN, HIGH);
+            digitalWrite(LED_BLUE_PIN, HIGH);
+            break;
+        case Blue:
+            digitalWrite(LED_RED_PIN, LOW);
+            digitalWrite(LED_GREEN_PIN, LOW);
+            digitalWrite(LED_BLUE_PIN, HIGH);
+            break;
+        case Orange:
+            analogWrite(LED_RED_PIN, 255);
+            analogWrite(LED_GREEN_PIN, 165);
+            digitalWrite(LED_BLUE_PIN, LOW);
+            break;
+        case Yellow:
+            analogWrite(LED_RED_PIN, 0);
+            analogWrite(LED_GREEN_PIN, 255);
+            digitalWrite(LED_BLUE_PIN, LOW);
+            break;
+        case Black:
+            digitalWrite(LED_RED_PIN, LOW);
+            digitalWrite(LED_GREEN_PIN, LOW);
+            digitalWrite(LED_BLUE_PIN, LOW);
+            break;
+    }
+}
+
+void loop() { 
+    // this function is just for debugging
+    // delete when you start to code the transitions
+    testInitialSetup(); 
+}
 
 void setup() {
     Serial.begin(9600);
@@ -108,30 +152,52 @@ void testInputs() {
     int valPot = analogRead(POT_PIN);
     Serial.printlnf("Switch: %s, Pot: %d", valSwitchString.c_str(), valPot);
 }
+/* DEBUGGING FUNCTIONS ONLY
+   ========================
+*/
 /*
-String displayState(State s) {
-    switch (s) {
+String getStateString() {
+    String output = "";
+
+    switch (currentState) {
         case Idle:
-            return "idle";
-        case Hot:
-            return "hot";
+            output = "Idle";
+            break;
+        case HotWash:
+            output = "Hot Wash";
+            break;
+
         case ExtraDry:
-            return "longdry";
-        case Cold:
-            return "cold";
+            output = "Extra Dry";
+            break;
+
+        case ColdWash:
+            output = "Cold Wash";
+            break;
+
         case RegularDry:
-            return "shortdry";
+            output = "Regular Dry";
+            break;
     }
+    return output;
 }
 
-String displayCycle(Cycle c) {
-    switch (c) {
+String getCycleString() {
+    String output = "";
+    switch (currentCycle) {
         case Economy:
-            return "economy";
+            output = "Economy";
+            break;
+
         case Deluxe:
-            return "deluxe";
+            output = "Deluxe";
+            break;
+
         case SuperDeluxe:
-            return "superdeluxe";
+            output = "Super Deluxe";
+            break;
     }
+    return output;
 }
+
 */

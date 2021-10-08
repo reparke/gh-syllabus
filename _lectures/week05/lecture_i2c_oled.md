@@ -33,13 +33,16 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
   
   ## Introducing Organic Light-Emitting Diodes
 
-<img src="lecture_i2c_oled.assets/OLED_Action.jpg" alt="Micro OLED" style="width:500px;" />
+<img src="lecture_i2c_oled.assets/image-20211006151502366.png" alt="image-20211006151502366" style="width:500px" />
+
+
 
 
 
 ## OLEDs
 
-* ![bg left](lecture_i2c_oled.assets/mika-baumeister-CyVqkmM91QU-unsplash.jpg)OLEDs are more complex than regular LEDs and be manufactured to be thin and bendable
+![bg left](lecture_i2c_oled.assets/mika-baumeister-CyVqkmM91QU-unsplash.jpg)OLEDs are more complex than regular LEDs and be manufactured to be thin and bendable
+
 * OLEDs are used in high end TVs, monitors, and phones
 * OLEDs are more expensive than regular LEDs
 
@@ -53,7 +56,10 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 ## OLED screen
 
-![bg opacity:.85 right:40%](lecture_i2c_oled.assets/OLED_action.jpg)
+![bg opacity:.85 right:40%](lecture_i2c_oled.assets/image-20211006151957626.png)
+
+
+
 * Blue text on black screen
 * 64 pixels (H) x 48 pixels (W)
 * Operates at 3.3v

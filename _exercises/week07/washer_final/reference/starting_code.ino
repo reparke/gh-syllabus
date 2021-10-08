@@ -1,6 +1,6 @@
 /*
     Econ
-        Cold 2 min
+        ColdWash 2 min
         RegularDry 2 min
         Idle
     Deluxe
@@ -17,7 +17,7 @@
 Colors:
     Idle,       white
     Hot,        red
-    Cold,       blue
+    ColdWash,       blue
     ExtraDry,    yellow
     RegularDry    yellow
 */
@@ -43,7 +43,7 @@ unsigned long prevMillisState = 0;
 
 /* ===== FUNCTIONS ====== */
 // TODO: create getCyclePotion
-// reads potentiometer and returns current Cycle
+// reads potentiometer and update current Cycle
 
 // TODO: create updateNextState
 // uses button inputs and current state to update global state variable
@@ -113,11 +113,11 @@ String displayState(State s) {
     switch (s) {
         case Idle:
             return "idle";
-        case Hot:
+        case HotWash:
             return "hot";
         case ExtraDry:
             return "longdry";
-        case Cold:
+        case ColdWash:
             return "cold";
         case RegularDry:
             return "shortdry";

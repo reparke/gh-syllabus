@@ -44,14 +44,14 @@ title: Ultrasonic Distance Sensor
 
   
 
-## Sensor Wiring
+## Sensor Pins
 
-| Sensor | Argon     | Function                                                     |
-| ------ | --------- | ------------------------------------------------------------ |
-| GND    | GND       | Ground                                                       |
-| VCC    | VUSB      | Power **(requires 5v, but will work with 3.7V LiPo battery)** |
-| TRIG   | Ouput Pin | start output pulse sequence                                  |
-| ECHO   | Input Pin | receive reflection response                                  |
+| Sensor | Argon      | Function                                                     |
+| ------ | ---------- | ------------------------------------------------------------ |
+| GND    | GND        | Ground                                                       |
+| VCC    | VUSB       | Power **(requires 5v, but will work with 3.7V LiPo battery)** |
+| TRIG   | Output Pin | start output pulse sequence                                  |
+| ECHO   | Input Pin  | receive reflection response                                  |
 
 ## Timing Diagram
 <img src="lecture_ultrasonic_distance_sensor.assets/1574365317310.png" alt="1574365317310" style="width:1200px" />
@@ -131,6 +131,15 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 ## Wiring Diagram
 
 <img src="lecture_ultrasonic_distance_sensor.assets/ultrasonic_bb.png" style="width:800px;" />
+
+## Wiring
+
+| Sensor | Argon |
+| ------ | ----- |
+| GND    | GND   |
+| VCC    | VUSB  |
+| TRIG   | D3    |
+| ECHO   | D2    |
 
 ## Credit
 

@@ -30,24 +30,24 @@ title: State Machines Part 2 - Dish Washer Example
 | Cycles          | States                  |
 | --------------- | ----------------------- |
 | **Economy**     | **Idle** (white)        |
-| **Deluxe**      | **Hot** (red)           |
-| **SuperDeluxe** | **Cold** (blue)         |
+| **Deluxe**      | **HotWash** (red)       |
+| **SuperDeluxe** | **ColdWash** (blue)     |
 |                 | **RegularDry** (orange) |
-|                 | **ExtraDry** (orange)   |
+|                 | **ExtraDry** (yellow)   |
 
 ## Transitions
 
 - The potentiometer position determine the state by divide the potentiometer into 3 ranges
-- The first state will start when the button / switch is closed, and the next states will happen automatically on a `millis` timer
+- The first state will start when the / switch is closed, and the next states will happen automatically on a `millis` timer
 
 ## Transitions
 
 | Economy                          | Deluxe                           | SuperDeluxe                      |
 | -------------------------------- | -------------------------------- | -------------------------------- |
 | **Idle** if until button pressed | **Idle** if until button pressed | **Idle** if until button pressed |
-| **Cold** for 2 min               | **Hot** for 2 min                | **Hot** for 4 min                |
+| **ColdWash** for 2 min           | **HotWash** for 2 min            | **HotWash** for 4 min            |
 | **RegularDry** for 2 min         | **RegularDry** for 2 min         | **ExtraDry** for 4 min           |
-| **Idle**                         | **Idle**                         | Idle                             |
+| **Idle**                         | **Idle**                         | **Idle**                         |
 
 
 
@@ -105,4 +105,5 @@ You'll need
 ## Credits
 
 * [Bill Siever](http://siever.info) for the lab idea
-* Photo by [Nathan Dumlao](https://unsplash.com/@nate_dumlao?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/dishes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)Photo by Laurie Parke
+* Photo by [Nathan Dumlao](https://unsplash.com/@nate_dumlao?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/dishes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+* Photo by Laurie Parke
