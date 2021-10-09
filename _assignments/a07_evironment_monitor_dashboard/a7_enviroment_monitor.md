@@ -60,14 +60,24 @@ Here is an example:
 ###  Stage 1:  Setup buttons and states
 
 -   The button will be a toggle / latch style button that will switch from displaying current temperature and humidity to displaying the minimum and maximum temperature and humidity
--   Connect the button and configure the toggle to switch between these two states (you can use the serial monitor to make sure the states change).
+-   Connect the button and configure the toggle to switch between these two states 
 -   Use a `enum` to define the two states
+
+#### Testing Stage 1
+
+- Use the serial monitor to make sure the button works as a latch
+- Use the serial monitor to make sure the states change
+- Use the serial monitor to make sure the states change
 
 ###  Stage 2: DHT11 
 
 -   [DHT 11 notes and example](https://reparke.github.io/ITP348-Physical-Computing/lectures/weekX/lecture_dht.html)
--   Using the notes and examples provided, measure the current temperature and humidity (test by displaying to serial monitor)
--   Store the max and min of the temperature and humidity readings (test via serial monitor)
+-   Using the notes and examples provided, measure the current temperature and humidity
+-   Store the max and min of the temperature and humidity readings
+
+#### Testing Stage 2
+
+- Use serial monitor to display temperature and humidity values
 
 ###  Stage 3: OLED 
 
@@ -75,25 +85,27 @@ Here is an example:
 
 - Using the class examples and library examples, display text for the two screen states
 
-  - Current data
+  **Screen 1: Current data**
 
-    ```
-    Temp
-    77.0 F
-    Hum
-    22.4 %
-    ```
-  - Historical data
+  ```
+  Temp
+  77.0 F
+  Hum
+  22.4 %
+  ```
 
-    ```
-    Temp
-    H: 77.0 F
-    L: 59.0 F
-    Hum
-    H: 22 %
-    L: 19 %
-    ```
-    
+  **Screen 2: Historical data**
+
+  ```
+  Temp
+  H: 77.0 F
+  L: 59.0 F
+  Hum
+  H: 22 %
+  L: 19 %
+  ```
+
+- You can track the historical max and min by using global variables that are updated when values are read
 
 - Hint: You can control how many decimals display in the output via when casting a float using `String`
 
@@ -101,12 +113,22 @@ Here is an example:
   - `String(tempFahr, 3)` will display `59.299` with 3 decimal places
   - `String(tempFahr, 0)` will display `59` with 0 decimal places
 
+#### Testing Stage 3
+
+- Use serial monitor to display the same data as on the OLED to confirm that max and min are working 
+
 ### Stage 4: Dashboard setup
 
 -   Go to [Initial State](https://www.initialstate.com/) and create a new bucket
 -   Using the Initial State API URL, go to [Particle console](https://console.particle.io/) and configure webhooks
     -   Hint: The label that Initial State gives the data widget is determined by how you configure the webhook. Since we are need to send two different pieces of data, how many webhooks should you create?
 -   In your firmware, publish the current temperature and humidity to Initial State.
+
+#### Testing Stage 4
+
+- Go to [Particle console](https://console.particle.io/) (or use Particle app) to confirm events are being published
+- If events are NOT being published in the console, there is an issue with the code.
+- If events are being published in console but don't appear in Initial State, then there is a problem with the webhooks
 
 ### Stage 5: Configuring Dashboard
 
@@ -167,7 +189,7 @@ Deliverables
    - Upload zip file to Blackboard site for our course
 
 3. A photograph of your device connected to USB with the blue light on.
-4. ==A screenshot of your Initial State dashboard==
+4. **==A screenshot of your Initial State dashboard==**
 5. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
 
 Grading
