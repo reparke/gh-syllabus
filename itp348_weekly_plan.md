@@ -1,5 +1,5 @@
 ---
-  
+    
 layout: single
 classes: wide
 title: Weekly Plan

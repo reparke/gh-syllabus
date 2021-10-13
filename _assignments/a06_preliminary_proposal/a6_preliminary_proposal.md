@@ -37,15 +37,20 @@ Overview
 
 -   Use cloud / internet connectivity in a meaningful way
 
--   Must send data to a cloud system and display a dashboard (e.g. [Initial State](https://www.initialstate.com/), [Losant](https://www.losant.com/), [ThingSpeak](https://thingspeak.com/))
+- Must send data to a cloud system and display a dashboard 
+
+  * Examples of acceptable tools
+    * [Initial State](https://www.initialstate.com/)
+    * [Losant](https://www.losant.com/)
+    * [ThingSpeak](https://thingspeak.com/)
 
 - Must have interface app and be able to receive feedback from cloud system to produce effects in the physical world (i.e. control device remotely)
 
-  -   Acceptable
-      -   [Blynk](https://blynk.io/) (mobile app) 
-      -   [Initial State](https://www.initialstate.com/) (website)
-      -   [Losant](https://www.losant.com/) (website)
-      -   If using Bluetooth, the [Bluefruit LE Connect](https://learn.adafruit.com/bluefruit-le-connect) app will be considered as long as it is substantially different from car assignment
+  -   Examples of acceptable tools
+      -   Blynk cloud app
+      -   [Intial State](https://www.initialstate.com/) (must use [input controls](https://www.initialstate.com/blog/input-controls/) not just dashboard tools)
+      -   [Losant](https://www.losant.com/)
+      -   If using Bluetooth, the [Bluefruit](https://learn.adafruit.com/bluefruit-le-connect) app will be considered as long as it is substantially different from car assignment
   -   Not acceptable 
       -   Particle app 
 

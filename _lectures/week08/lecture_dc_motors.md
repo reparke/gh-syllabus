@@ -143,6 +143,7 @@ title: DC Motors
 | VM                       | Power for motors (3v3, or higher for powerful motors) |
 | STBY                     | Enable motor (3v3)                                    |
 | GND                      | Ground                                                |
+
 </span>
 
 

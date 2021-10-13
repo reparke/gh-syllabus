@@ -134,7 +134,6 @@ void loop() {
 		  Serial.println("Humidity: " + String(h, 1) + " %");
 		  Serial.println("Temp (F): " + String(f, 1) + " deg F");
 		  Serial.println("Temp (C): " + String(c, 1) + " deg C");
-		  publishEvents();
 		} else {
 		  Serial.println("Invalid reading");
 		}
