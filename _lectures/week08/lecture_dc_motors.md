@@ -166,15 +166,17 @@ title: DC Motors
 
 ## Wiring Guide
 
-| Motor Controller | Argon |
-| ---------------- | ----- |
-| PWMA             | D5    |
-| AIN2             | D3    |
-| AIN1             | D4    |
-| VCC              | 3v3   |
-| GND              | GND   |
-| VM               | 3v3   |
-| STBY             | 3v3   |
+| Motor Controller | Argon               |
+| ---------------- | ------------------- |
+| PWMA             | D5                  |
+| AI2              | D3                  |
+| AI1              | D4                  |
+| AO1              | Motor wire (either) |
+| AO2              | Motor wire (either) |
+| VCC              | 3v3                 |
+| GND              | GND                 |
+| VM               | 3v3                 |
+| STBY             | 3v3                 |
 
 
 

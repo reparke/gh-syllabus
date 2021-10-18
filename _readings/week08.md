@@ -36,15 +36,17 @@ title: Pre-Lecture Activities
 
 #### Wiring for Motor Controller
 
-| Motor Controller | Argon |
-| ---------------- | ----- |
-| PWMA             | D5    |
-| AIN2             | D4    |
-| AIN1             | D3    |
-| VCC              | 3v3   |
-| GND              | GND   |
-| VM               | 3v3   |
-| STBY             | 3v3   |
+| Motor Controller | Argon | DC Motor            |
+| ---------------- | ----- | ------------------- |
+| PWMA             | D5    | -                   |
+| AI2              | D4    | -                   |
+| AI1              | D3    | -                   |
+| AO1              | -     | Motor wire (either) |
+| AO2              | -     | Motor wire (either) |
+| VCC              | 3v3   | -                   |
+| GND              | GND   | -                   |
+| VM               | 3v3   | -                   |
+| STBY             | 3v3   | -                   |
 
 #### Wiring for Potentiometer
 
