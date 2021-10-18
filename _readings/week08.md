@@ -22,13 +22,44 @@ title: Pre-Lecture Activities
 - [Extension wires](https://www.sparkfun.com/products/9140)
 - Potentiometer
 - Bottle of water or tall cylinder (optional)
-- Tape or string (optio)
+- Tape or string (optional)
 
 *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
 ### Wiring for Tues
 
 ![1570925716449](week08.assets/1570925716449.png)
+
+### Wiring for Thurs
+![servo_dc_fan_controller_bb](week08.assets/servo_dc_fan_controller_bb.png)
+
+
+#### Wiring for Motor Controller
+
+| Motor Controller | Argon |
+| ---------------- | ----- |
+| PWMA             | D5    |
+| AIN2             | D4    |
+| AIN1             | D3    |
+| VCC              | 3v3   |
+| GND              | GND   |
+| VM               | 3v3   |
+| STBY             | 3v3   |
+
+#### Wiring for Potentiometer
+
+- 3.3v
+- `A0`
+- GND
+
+#### Wiring for Servo
+
+* The wiring colors vary with different servos so look carefully at your documentation
+* Many servos will require **5V** not **3.3V** so use `VUSB` 
+
+<img  src="../_lectures/week08/lecture_servo_motors.assets/image-20210310115209181.png" alt="image-20210310115209181" style="width:400px" />
+
+
 
 ###   Motors Reference
 
