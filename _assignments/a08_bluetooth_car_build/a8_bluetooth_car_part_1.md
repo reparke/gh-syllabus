@@ -18,7 +18,7 @@ Goals
 
 ## Overview
 
-This assignment is to build a small car, which we will program in your next assignment. This week you will build and customize the car, and next week you will complete the programming for the car to operate.
+This assignment is to build a small car, which we will program in your next assignment. This week you will build, and next week you customize it and complete the programming for the car to operate.
 
 ## Components
 
@@ -38,7 +38,7 @@ This assignment is to build a small car, which we will program in your next assi
     lecture notes.
 -   No code is required to submit for this assignment.
 -   [Follow the build instructions](guide_build_chassis)
--   Add decorative elements to distinguish your car. There will be a competition the following week for best customized car.
+-   Next week you will customize the car as part of the assignment so you might want to do that now. There will be a competition the following week for best customized car.
 -   Plan to bring car (with fully charged battery) and phone to class
 
 **Naming convention **
@@ -69,7 +69,7 @@ Deliverables
 
    - Upload zip file to Blackboard site for our course
 
-2. A photograph of your customized car with the battery connected to the Argon and with the blue light on
+2. A photograph of your car with the battery connected to the Argon and with the blue light on
 
    
 
@@ -77,10 +77,10 @@ Deliverables
 Grading
 -------
 
-| Item                  | Points |
-| --------------------- | ------ |
-| **Car structure**     | 5      |
-| **Car customization** | 5      |
-|                       |        |
-| Total                 | 10     |
+| Item              | Points |
+| ----------------- | ------ |
+| **Car structure** | 5      |
+|                   |        |
+|                   |        |
+| Total             | 5      |
 

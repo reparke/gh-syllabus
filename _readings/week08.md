@@ -59,7 +59,7 @@ title: Pre-Lecture Activities
 * The wiring colors vary with different servos so look carefully at your documentation
 * Many servos will require **5V** not **3.3V** so use `VUSB` 
 
-<img  src="../_lectures/week08/lecture_servo_motors.assets/image-20210310115209181.png" alt="image-20210310115209181" style="width:400px" />
+<img  src="week08.assets/image-20210310115209181.png" alt="image-20210310115209181" style="width:400px" />
 
 
 

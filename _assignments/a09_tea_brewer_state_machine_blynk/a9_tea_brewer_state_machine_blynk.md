@@ -55,20 +55,20 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 
 ### State Transition Table
 
-| State | Duration                                           | Input                                  | Next State |
-| ----- | -------------------------------------------------- | -------------------------------------- | ---------- |
-| Idle  | indefinite                                         | Brew                                   | Heat       |
-| Heat  | 5 sec                                              | !(Brew)                                | Idle       |
-| Heat  | 5 sec                                              | Brew and (Heat_Time >= Goal_Heat_Time) | Heat       |
-| Steep | 2 sec for green, 3 sec for black, 4 sec for herbal | !(Brew)                                | Idle       |
-| Steep | 2 sec for green, 3 sec for black, 4 sec for herbal | Brew and (Brew_Time >= Goal_Brew_Time) | Hold       |
-| Hold  | indefinite                                         | !(Brew)                                | Idle       |
-| Hold  | indefinite                                         | !(Cup_Present)                         | Hold       |
-| Hold  | indefinite                                         | Cup_Present                            | Pour       |
-| Pour  | 4 sec                                              | !(Brew)                                | Idle       |
-| Pour  | 4 sec                                              | Brew and (Pour_Time >= Goal_Pour_Time) | Idle       |
+| State | Duration                                           | Input                                            | Next State |
+| ----- | -------------------------------------------------- | ------------------------------------------------ | ---------- |
+| Idle  | indefinite                                         | Brew == true                                     | Heat       |
+| Heat  | 5 sec                                              | Brew == false                                    | Idle       |
+| Heat  | 5 sec                                              | (Brew == true) and (Heat_Time >= Goal_Heat_Time) | Steep      |
+| Steep | 2 sec for green, 3 sec for black, 4 sec for herbal | Brew == false                                    | Idle       |
+| Steep | 2 sec for green, 3 sec for black, 4 sec for herbal | (Brew == true) and (Brew_Time >= Goal_Brew_Time) | Hold       |
+| Hold  | indefinite                                         | Brew == false                                    | Idle       |
+| Hold  | indefinite                                         | Cup_Present == false                             | Hold       |
+| Hold  | indefinite                                         | Cup_Present == true                              | Pour       |
+| Pour  | 4 sec                                              | Brew == false                                    | Idle       |
+| Pour  | 4 sec                                              | (Brew == true) and (Pour_Time >= Goal_Pour_Time) | Idle       |
 
- *Brew is Blynk start button; Cup_Present is magnetic switch*
+ *Brew is controlled by the Blynk start button; Cup_Present is magnetic switch*
 
 ## App Functionality
 

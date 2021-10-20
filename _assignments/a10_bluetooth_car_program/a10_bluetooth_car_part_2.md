@@ -18,7 +18,7 @@ Goals
 
 ## Overview
 
-This assignment is to control the car via Bluetooth with a smartphone.
+This assignment is to control the car via Bluetooth with a smartphone and complete your car customizations
 
 ## Components
 
@@ -98,6 +98,7 @@ Grading
 | -------------------------------- | ------ |
 | **Driving and Bluetooth sketch** | 5      |
 | **Steering / handling**          | 5      |
+| **Car customization**            | 5      |
 |                                  |        |
-| Total                            | 10     |
+| Total                            | 15     |
 

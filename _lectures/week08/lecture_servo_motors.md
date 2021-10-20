@@ -176,18 +176,19 @@ void loop(){
 
 ## Motor Controller Wiring Guide
 
-| Motor Controller         | Explanation                                           |
-| ------------------------ | ----------------------------------------------------- |
-| PWMA                     | Motor A speed (PWM)                                   |
-| AI1, AI2                 | Motor A direction control (connect to Argon)          |
-| AO1, AO2                 | Motor A output (connect to motor)                     |
-| PWMB, BI1, BI2, BO1, BO2 | Controls for motor B                                  |
-| VCC                      | Power for chip (3v3)                                  |
-| VM                       | Power for motors (3v3, or higher for powerful motors) |
-| STBY                     | Enable motor (3v3)                                    |
-| GND                      | Ground                                                |
+| Motor Controller | Argon | DC Motor            |
+| ---------------- | ----- | ------------------- |
+| PWMA             | D5    | -                   |
+| AI2              | D4    | -                   |
+| AI1              | D3    | -                   |
+| AO1              | -     | Motor wire (either) |
+| AO2              | -     | Motor wire (either) |
+| VCC              | 3v3   | -                   |
+| GND              | GND   | -                   |
+| VM               | 3v3   | -                   |
+| STBY             | 3v3   | -                   |
 
-Credits
+## Credits
 
 * Images created with [Fritzing](https://fritzing.org/home/)
 * Original slides created by Ray Kim
