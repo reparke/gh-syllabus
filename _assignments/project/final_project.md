@@ -37,7 +37,7 @@ the key functioning elements. Here is a [partial list of components and services
     * [Initial State](https://www.initialstate.com/)
     * [Losant](https://www.losant.com/)
     * [ThingSpeak](https://thingspeak.com/)
-* Must have interface app and be able to receive feedback from cloud system to produce effects in the physical world (i.e. control device remotely)
+* Must have interface app (web or mobile) and be able to receive feedback from app to produce effects in the physical world (i.e. control device remotely)
   -   Examples of acceptable tools
       -   Blynk cloud app
       -   [Intial State](https://www.initialstate.com/) (must use [input controls](https://www.initialstate.com/blog/input-controls/) not just dashboard tools)
