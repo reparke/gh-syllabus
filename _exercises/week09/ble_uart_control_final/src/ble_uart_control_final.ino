@@ -120,15 +120,15 @@ void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
   if (len > 4) {  // make sure there at least four bytes
     if (data[0] == '!' && data[1] == 'B' && data[2] == '1' &&
         data[3] == '1') {  // button 1 pressed -> blink
-      digitalWrite(PIN_LED, HIGH);
+      digitalWrite(PIN_LED, HIGH  );
       delay(200);
       digitalWrite(PIN_LED, LOW);
       delay(200);
     } else if (data[0] == '!' && data[1] == 'B' && data[2] == '2' &&
-               data[3] == '1') {  // button UP pressed -> LED on
+               data[3] == '1') {  // button 3 pressed -> LED on
       digitalWrite(PIN_LED, HIGH);
     } else if (data[0] == '!' && data[1] == 'B' && data[2] == '2' &&
-               data[3] == '0') {  // button UP released -> LED off
+               data[3] == '0') {  // button 3   released -> LED off
       digitalWrite(PIN_LED, LOW);
     }
     // added to send a tone to D6 when right arrow is pressed

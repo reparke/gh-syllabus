@@ -76,10 +76,17 @@ void loop() {
 
 ## Optional: Playing Melodies
 
-* Musical notes can represented as constants ([code link](pitches.h))
+### Musical Notes
+
+* Musical notes can represented as constants
+* Add this file ([pitches.h](pitches.h)) to your `src` folder and then add `#include "pitches.h"` to your sketch
+
+* You can then refer to music notes with constants like `NOTE_C4` which is "middle C" on a piano
+
+### Musical Note Lengths
+
 * Tone lengths can be represented as musical beats
 * Using an array for notes and an array for lengths, you can then create melodies with similar to using musical notation
-
 * You can include can include the musical note
 
 ### Code

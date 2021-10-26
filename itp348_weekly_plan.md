@@ -14,13 +14,16 @@ toc_sticky: true
 **Definite**
 
 * [ ] Nov for Sp 2022 Kit changes
-  * [ ] remove LEDs, 300, 10k, buttons, RGB LED switch (?), photocell (? ) from sparkfun kit and add to ITP kit
+  * [ ] add [magnetic switch](https://piazza.com/class_profile/get_resource/koq7em9bi9r20s/kv79axv46lo4aa) and any other missing parts to download library (e.g. accel, max30101, button, qwiic cable, microoled qwiic) so students can download one library only
+  * [ ] remove LEDs, 300, 10k, buttons, switch (?), photocell (? ) from sparkfun kit 
+  * [x] add LEDs, 300, 10k, buttons, switch (?), photocell (? ) to ITP kit
   * [ ] finalize kit VERY early and have students order in July or in Nov
   * [ ] Consider having bookstore purchase again
   * [ ] could ITP sell directly to students?
-  * [ ] 2 of the 15x20 cm resealable bags and 1 of 21x24 cm bags to use per box
+  * [ ] ask sparkfun to swap 1 Qwiic breadboard cable for interconnecting cable
+  * [x] 2 of the 15x20 cm resealable bags and 1 of 21x24 cm bags to use per box
 * [ ] ==**Revise A5 reaction timer. Remove any need for a while loop**==
-* [ ] Spring 2022: if remote again, consider moving resistors and LEDs to USC kit so shipping delays on Sparkfun kit don't affect students during first two weeks
+* [x] Spring 2022: if remote again, consider moving resistors and LEDs to USC kit so shipping delays on Sparkfun kit don't affect students during first two weeks
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] tell students not to unclaim device
 * [ ] **Assignments**
@@ -770,7 +773,7 @@ toc_sticky: true
 
 - Due start of current week:   A7 - Shared environment monitor
 - Given out start of current week: A8 - Bluetooth car part 1 (due in one week)
-- Given out start of current week: ==A9 - Timer with Blynk (due in two weeks)==
+- Given out start of current week: ==A9 - Tea State Machine with Blynk (due in two weeks)==
 
 ## 9. Bluetooth
 
@@ -881,7 +884,7 @@ toc_sticky: true
 
 ### Assignment
 
-- Due start of current week: A9 - Timer with Blynk
+- Due start of current week: A9 - Tea State Machine with Blynk
 - Given out start of current week: A10 - Bluetooth car part 2
 - Given out start of current week: A11 - Smart Watch Assembly
 

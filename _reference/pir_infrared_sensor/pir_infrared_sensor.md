@@ -25,7 +25,7 @@ show_in_list: true
 
 *Note: The wire color and pin order is specific to the [Sparkfun PIR sensor](https://www.sparkfun.com/products/13285) and not all PIR sensor*
 
-## Wiring
+## Wiring Guide
 
 <img src="pir_infrared_sensor.assets/pir_sparkfun_bb.png" style="width:1000px;" />
 

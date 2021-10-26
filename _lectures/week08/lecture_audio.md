@@ -103,9 +103,7 @@ noTone(<<PIN>>);
 
 * To stop a continuous tone or stop tone before duration is over
 
-## Playing Melodies
 
-* Musical notes can represented as constants ([code link](pitches.h))
 
 ## Optional: Controlling Volume
 
@@ -116,6 +114,16 @@ noTone(<<PIN>>);
 * All tones will be at the same volume since Argon can change only frequency (not amplitude)
 * To control volume, connect a potentiometer between `negative` and `gnd`
 * Potentiometer acts a current limit resistor to control volume
+
+## Playing Melodies
+
+* Musical notes can represented as constants 
+* Add this file ([pitches.h](pitches.h)) to your `src` folder and then add `#include "pitches.h"` to your sketch
+* You can then refer to music notes in the following manner
+
+```cpp
+tone(D2, NOTE_C4, 1000);  # play the note "middle C"	
+```
 
 ## Finding Notes of Popular Songs
 

@@ -118,7 +118,7 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 
 * Download project: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
 * Paste the following link into the top right
-  https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ultrasonic_oled_start
+  https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ultrasonic_oled_preloaded_bitmap_start
 
 ## Lab
 
@@ -130,16 +130,27 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 
 ## Wiring Diagram
 
-<img src="lecture_ultrasonic_distance_sensor.assets/ultrasonic_bb.png" style="width:800px;" />
+![oled_ultrasonic_bb](lecture_ultrasonic_distance_sensor.assets/oled_and_ultrasonic_i2c_bb.png)
 
-## Wiring
+## Sensor Wiring
+
+<span style="font-size:75%">
 
 | Sensor | Argon |
 | ------ | ----- |
 | GND    | GND   |
 | VCC    | VUSB  |
-| TRIG   | D3    |
-| ECHO   | D2    |
+| TRIG   | D2    |
+| ECHO   | D3    |
+
+| OLED         | Argon |
+| ------------ | ----- |
+| GND          | GND   |
+| 3V3          | 3V3   |
+| SDA (Blue)   | SDA   |
+| SCL (Yellow) | SCL   |
+
+</span>
 
 ## Credit
 
