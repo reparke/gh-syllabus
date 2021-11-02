@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 theme: itp
 
 week: 11
@@ -130,6 +130,7 @@ title: APIs and JSON Overview
 
 ## Useful Links
 
+- [ArduinoJson Library](https://arduinojson.org/)
 - [JsonParserGeneratorRK library](https://github.com/rickkas7/JsonParserGeneratorRK)
 - [JSON Online Formatter](https://jsonformatter.org/json-pretty-print)
 - [Mustache Tester](http://rickkas7.github.io/mustache/) for identifying JSON values

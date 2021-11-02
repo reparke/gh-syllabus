@@ -21,14 +21,24 @@ toc_sticky: true
   * [ ] Consider having bookstore purchase again
   * [ ] could ITP sell directly to students?
   * [ ] ask sparkfun to swap 1 Qwiic breadboard cable for interconnecting cable
+  * [ ] A9: EC virtual pin should be V6 instead of V5
+  * [ ] consider moving A9 earlier to be closer to material (even if prelim proposal and A9 overlap)
+  * [ ] update A9 blynk start template to remove Char and add ip address
+  * [ ] consider removing week 10 OLED graphics, replace with...? JSON, softpot, piezo motion sensor
+  * [ ] should have second day for bluetooth and motors
+  * [ ] Week 10 idea: 
+    * [ ] Tues is ultra sonic sensor + project overview; show BRIEFLY how to load images
+    * [ ] Thurs is using JSON to send multiple values to Initial State; consider recording a video for json overview and moving early
+    * [ ] week 10 / 11: may need to record JSON videos for clarity
+    * [ ] week 10 / 11: may need to include a subscribe video or lectu
   * [x] 2 of the 15x20 cm resealable bags and 1 of 21x24 cm bags to use per box
 * [ ] ==**Revise A5 reaction timer. Remove any need for a while loop**==
 * [x] Spring 2022: if remote again, consider moving resistors and LEDs to USC kit so shipping delays on Sparkfun kit don't affect students during first two weeks
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] tell students not to unclaim device
-* [ ] **Assignments**
-  * [ ] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
-  * [ ] give list of items students should include in videos each week
+* [x] **Assignments**
+  * [x] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
+  * [x] give list of items students should include in videos each week
 * [ ] **proposal**
   * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
 * [ ] recruit guest lecturers (x2)
@@ -104,6 +114,7 @@ toc_sticky: true
     - [x] Re-evaluate Blynk--this seems to trigger lots of device disconnections
     - [x] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
   - [x] a8: revise with new naming, formatting, video checklist, and rubric
+  - [ ] Revise JSON in week 10. Try using ArduinoJSON instead of RK. The generation of RK is very tough. This would mean re-recording the parsing video to use ArduinoJSON
   
 - [ ] Week 8
 - - [x] Sound
@@ -942,7 +953,6 @@ toc_sticky: true
 #### Idea
 
 - find another API to show
-- Show students how to use GPS coordinates
 
 ### Assignment
 
@@ -968,12 +978,12 @@ toc_sticky: true
 #### Lecture 
 
 * Overview of smart watch program structure
-* Debouncing
+* ~~Debouncing~~
 
 #### Lab
 
 - create State enum and state transistions
-- set up debouncing
+- ~~set up debouncing~~
 
 #### Lecture
 
@@ -983,7 +993,7 @@ toc_sticky: true
 
 #### Lecture
 
-* Review debouncing
+* ~~Review debouncing~~
 * Review heart rate sensor
 
 #### Lab
@@ -1108,13 +1118,11 @@ toc_sticky: true
 
 - Discuss [what happens after prototyping](https://docs.particle.io/tutorials/learn-more/beyond-prototpying/)
 - Work on project 
-- DHT 22
+- ~~DHT 22~~
 
 #### Lab
 
-- Use **tap** feature
-- Use **portrait / landscape** detection
-- Use accelerometer to control RGB LED
+- 
 
 ### Assignment
 

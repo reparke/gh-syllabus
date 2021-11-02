@@ -33,12 +33,6 @@ title: JSON Parsing
 
 
 
-## Recall: What is JSON?
-
-* When we communicate with an API to request information (e.g. the weather next week a certain city), the API will provides us data
-* The data is often in a JSON format
-* We need to be able to convert it into something usable
-
 ## Recall: JSON (JavaScript Object Notation)
 
 * JSON is a way of representing an object as a text string
@@ -81,7 +75,7 @@ title: JSON Parsing
   * Ex:`"daily_temp"` is a **key** and its **value** is an **array** 
   * Ex: `89` is an **int** and is at index`0`
 
-## Parsing JSON with C code directly
+## Parsing JSON with Manually
 
 * JSON is `String` data 
 * It is possible to parse JSON using C-language techniques like `strtok`, `strcpy`, `atoi` 
@@ -122,24 +116,6 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
 }
 ```
 
-## Example
-- Import library and set up Arduino compatibility
-```c++
-#include <Arduino.h>
-#define ARDUINOJSON_ENABLE_PROGMEM 0
-#include <ArduinoJson.h>
-```
-
-
-## Example: Configuration
-- Create the Particle webhook
-- Publish event
-- Subscribe to response and call event handler
-- *These processes are described in the WeatherStack example*
-&nbsp;
-- Now let's look at the actual JSON response
-
-
 ## Example: Consider the following JSON
 
 ```json
@@ -150,7 +126,19 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
   }
 }
 ```
-## Example
+
+### Configuration of `ArduinoJson`
+
+- Import library and set up Arduino compatibility
+```c++
+#include <Arduino.h>
+#define ARDUINOJSON_ENABLE_PROGMEM 0
+#include <ArduinoJson.h>
+```
+
+
+
+### Configuration of Event Handler
 - The JSON will be passed to the `data` parameter of event handler 
 ```c++
 void jsonSubscriptionHandler(const char *event, const char *data) {
@@ -159,7 +147,10 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
 - This code is complete and you don't need to modify it
 - The part we are interested is the actual JSON parsing
 
-## Example
+
+
+Here is an example
+
 ```c++
 void jsonSubscriptionHandler(const char *event, const char *data) {
   /* ... rest of function code */
@@ -198,25 +189,6 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
 }
 ```
 
-## Example
-- Import library
-```c++
-#include "JsonParserGeneratorRK.h"
-```
-- Create global `JsonParser` object to read JSON
-```c++
-JsonParser jsonParser; 
-```
-
-## Example: Configuration
-- Create the Particle webhook
-- Publish event
-- Subscribe to response and call event handler
-- *These processes are described in the WeatherStack example*
-&nbsp;
-- Now let's look at the actual JSON response
-
-
 ## Example: Consider the following JSON
 
 ```json
@@ -227,7 +199,19 @@ JsonParser jsonParser;
   }
 }
 ```
-## Example
+
+## Configuration of `JsonParserGeneratorRK`
+
+- Import library
+```c++
+#include "JsonParserGeneratorRK.h"
+```
+- Create global `JsonParser` object to read JSON
+```c++
+JsonParser jsonParser; 
+```
+
+## Configuring the event handler
 - The JSON will be passed to the `data` parameter of event handler 
 ```c++
 void jsonSubscriptionHandler(const char *event, const char *data) {
@@ -236,7 +220,10 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
 - This code is complete and you don't need to modify it
 - The part we are interested is the actual JSON parsing
 
-## Example
+
+
+Here is an example
+
 ```c++
 void jsonSubscriptionHandler(const char *event, const char *data) {
   /* ... rest of function code */

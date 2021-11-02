@@ -4,7 +4,7 @@ theme: itp
 
 week: 11
 category: lectures
-title: Data Visualization and Dashboard with Initial State 
+title: Sending Multiple Values to Initial State using JSON
 ---
 
 <!-- headingDivider: 2 -->
@@ -13,76 +13,43 @@ title: Data Visualization and Dashboard with Initial State
 
 ![bg opacity:.75](lecture_data_dashboards_initial_state_json.assets/Infruid's_Self-Service_BI_Tool_Dashboard.jpg)
 
-## Review: Dashboards
-
-* A single IoT device can generate significant of sensor data
-* A fleet of thousands of devices compounds this
-* A **dashboard** can help provide visual feedback and control over our IoT devices and data
-
-## Example Environmental Dashboard
-
-<img src="lecture_data_dashboards_initial_state_json.assets/image-20200724004339825.png" alt="image-20200724004339825" style="width:400px;" /><img src="lecture_data_dashboards_initial_state_json.assets/image-20200724005050658.png" alt="image-20200724005050658" style="width:400px;" />
-
-## Uses of Dashboards
+## Review: Uses of Dashboards
 
 * View real-time sensor data
+
 * Compare data to historical trends
 * Monitor IoT devices for errors or network issues
 * Map devices GPS location
 * Remote control (execute functions) on devices
+* We will use Initial State ([https://initialstate.com](https://initialstate.com)) but others are listed at the end
 
-## Dashboard Platforms
+## Goal: Use JSON to send Multiple Values to Initial State at Once 
 
-* [Google Cloud IoT](https://cloud.google.com/solutions/iot) (many IoT services)
-* [Microsoft Azure IoT](https://azure.microsoft.com/en-us/overview/iot/) (many IoT services)
-*  [Amazon Web Services](https://aws.amazon.com/iot/) (many IoT services)
-* [Losant](https://www.losant.com/) (many IoT services)
-* [Ubidots](https://ubidots.com/)
-* [Tinamous](https://www.tinamous.com/)
-* [Initial State](https://www.initialstate.com/)
-
-## Initial State ([https://initialstate.com](https://initialstate.com))
-
-* Initial State is a data visualization service for IoT
-* Send data from Argon to be stored at Initial State 
-* Create complex graphs and dashboard with the values from your Argon
-* Generous free tier!
-* Initial State can also send SMS and email alerts based on the data (though this requires a paid plan)
-
-## Configuring Argon and Initial State 
-
+* It is faster and uses less bandwidth to send multiple sensor in a single package
+* We will use JSON to package all the data and send to Initial State
 * The following examples are provided as a quick reference
 * More detailed steps are described in the lecture 
 
-## Steps to Connect Argon and Initial State 
+## Reminder: Steps to Connect Argon and Initial State 
 
 1. Create account at  [https://initialstate.com](https://initialstate.com) 
 2. Create **stream bucket** at [https://initialstate.com](https://initialstate.com)  
 3. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
 4. Write firmware sketch and flash Argon
 
-## Aside: Access Key (or API key)
-
-* Many webservices require you to register and then they provide you with an API key (ex: `zaCELgL. 0imfnc8mVLWwsAawjYr4Rx-Af50DDqtlx`)
-* This randomly-generated string serves as the login and password (credentials) to your account
-* Purposes
-  * Account security (no one but you can read / write data)
-  * Prevent abuse / hacking
-  * Throttling / account limits (enforce limits on read/write frequency)
-
-## Example: Send Multiple Data Points from Argon to Initial State  
+## Configure Initial State to Receive JSON 
 
 **Initial State Settings**
 
 <img src="lecture_data_dashboards_initial_state_json.assets/image-20200703180348874.png" alt="image-20200703180348874" style="width:500px;" />
 
-## Example: Send Multiple Data Points from Argon to Initial State  
+## Configure Particle Cloud to Pass JSON
 
 **Particle integration settings**
 
 <img src="lecture_data_dashboards_initial_state_json.assets/image-20200703160032339.png" alt="image-20200703160032339" style="width:600px;" />
 
-## Example: Send Multiple Data Points from Argon to Initial State  
+## Configure Particle Cloud to Pass JSON  
 
 **Particle integration settings**
 
@@ -95,7 +62,7 @@ URL: `https://groker.init.st/api/events`
 
 <img src="lecture_data_dashboards_initial_state_json.assets/image-20200703180944077.png" alt="image-20200703180944077" style="width:500px;" />
 
-## Example: Send Multiple Data Points from Argon to Initial State  
+## Configure Particle Cloud to Pass JSON
 
 **Particle integration settings**
 
@@ -103,7 +70,7 @@ URL: `https://groker.init.st/api/events`
 
 
 
-## Example: Send Multiple Data Points from Argon to Initial State  
+## Configure Particle Cloud to Pass JSON
 
 **Particle integration setting: HTTP Headers**
 
@@ -116,7 +83,7 @@ URL: `https://groker.init.st/api/events`
 
 
 
-## Example: Send Multiple Data Points from Argon to Initial State  
+## JSON Format  
 
 * Initial State expects data to be entered in JSON format
 
@@ -146,7 +113,7 @@ URL: `https://groker.init.st/api/events`
 "{\"key\": \"temp\", \"value\": 32}"
 ```
 
-## Example: Send Multiple Data Points from Argon to Initial State  
+## JSON Format  
 
 * Sending one data point at a time is valid, but is tedious if there are many values to send
 * Instead, we can send a JSON array with many data point
@@ -175,11 +142,16 @@ URL: `https://groker.init.st/api/events`
 * There are libraries you can use for creating complex JSON messages
 * First we'll walk through creating JSON manually, and then we'll look at a library
 
-# Creating JSON manually
+## Creating JSON
 
-## Example: Send Multiple Data Points from Argon to Initial State  
+There are two ways we can generate the JSON value to send to Initial State. Both are shown below
 
-**Argon code**
+1. Create JSON manually as a String variable
+2. Using a library (popular libraries are [JsonParserGeneratorRK](https://github.com/rickkas7/JsonParserGeneratorRK) and [ArduinoJson](https://arduinojson.org/))
+
+## Creating JSON Manually
+
+### Argon code
 
 ```c++
 void loop() {
@@ -195,27 +167,74 @@ void loop() {
 }
 ```
 
-# Creating JSON with a Library
+## Creating JSON with a Library:  `JsonParserGeneratorRK` 
 
-## Parsing JSON with a Library:  `ArduinoJson` 
+- `JsonParserGeneratorRK` is a popular library for parsing JSON code and can be installed from **Workbench**
+
+* Use the sample code below
+
+### Configuration of `JsonParserGeneratorRK`
+
+- Import library and set up Arduino compatibility
+
+```c++
+#include "JsonParserGeneratorRK.h"  
+```
+
+### Argon code
+
+**Important:** The `{...}` around the `JsonWriteAutoArray` are required for the library. It ensures that all JSON values are in either an valid object or arrays
+
+```c++
+void loop() {
+    
+  JsonWriterStatic<622> jw;
+  jw.init();  // empty buffer for reuse (since jw is static)
+
+  {
+    JsonWriterAutoArray obj(&jw);
+
+    jw.startObject();
+    jw.insertKeyValue("key", "temperature");
+    jw.insertKeyValue("value", 79.000000);
+    jw.finishObjectOrArray();
+
+    jw.startObject();
+    jw.insertKeyValue("key", "humidity");
+    jw.insertKeyValue("value", 22.000000);
+    jw.finishObjectOrArray();
+
+    jw.startObject();
+    jw.insertKeyValue("key", "weather");
+    jw.insertKeyValue("value", sunny);
+    jw.finishObjectOrArray();
+
+    jw.finishObjectOrArray();
+  }
+
+  Particle.publish("week10_20203", jw.getBuffer());
+}
+```
+
+ 
+
+## Creating JSON with a Library:  `ArduinoJson` 
 
 - `ArduinoJson` is a popular library for parsing JSON code and can be installed from **Workbench**
 
 * Use the sample code below
 
-## Configuration of `ArduinoJson`
+### Configuration of `ArduinoJson`
 
 - Import library and set up Arduino compatibility
 
 ```c++
 #include <Arduino.h>
 #define ARDUINOJSON_ENABLE_PROGMEM 0
-#include <ArduinoJson.h>
+#include <ArduinoJson.h> 
 ```
 
-Example: Send Multiple Data Points from Argon to Initial State  
-
-**Argon code**
+### Argon code
 
 ```c++
 void loop() {
@@ -252,6 +271,16 @@ void loop() {
 <img src="lecture_data_dashboards_initial_state_json.assets/photoresistor_and_fixed_resistor_bb.png" style="width:500px;" />
 
 
+
+## Other Dashboard Platforms
+
+* [Google Cloud IoT](https://cloud.google.com/solutions/iot) (many IoT services)
+* [Microsoft Azure IoT](https://azure.microsoft.com/en-us/overview/iot/) (many IoT services)
+* [Amazon Web Services](https://aws.amazon.com/iot/) (many IoT services)
+* [Losant](https://www.losant.com/) (many IoT services)
+* [Ubidots](https://ubidots.com/)
+* [Tinamous](https://www.tinamous.com/)
+* [Initial State](https://www.initialstate.com/)
 
 ## Credits
 

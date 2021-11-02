@@ -92,6 +92,8 @@ int time = pulseIn(<<PIN>>, <<VALUE>>);
 int time = pulseIn(D2, HIGH); 
 ```
 
+<!-- For example, if `value` is `HIGH`, `pulseIn()` waits for the pin to go from `LOW` to `HIGH`, starts timing, then waits for the pin to go `LOW` and stops timing-->
+
 ## Calculating Distance
 
 * ```pulseIn``` retuns the time for a signal to reach the nearest object and return

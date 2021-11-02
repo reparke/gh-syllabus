@@ -20,13 +20,18 @@ Ultrasonic Sensor
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 #include "bitmaps_symbols.h"
 
-//////////////////////////
-// MicroOLED Definition //
-//////////////////////////
-#define PIN_OLED_RST A1  // Connect RST to pin 6
-#define PIN_OLED_DC A0   // Connect DC to pin 5 (required for SPI)
-#define PIN_OLED_CS A2   // Connect CS to pin A2 (required for SPI)
-MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
+//////////////////////////////////
+// MicroOLED Object Declaration //
+//////////////////////////////////
+#define PIN_RESET 9
+// The DC_JUMPER is the I2C Address Select jumper. Set to 1 if the jumper is
+// open (Default), or set to 0 if it's closed.
+#define DC_JUMPER 1
+
+//////////////////////////////////
+// MicroOLED Object Declaration //
+//////////////////////////////////
+MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 
 double SPEED_SOUND_CM_ROOM_TEMP_FAHR = 0.03444;
 double CONV_FACTOR_CM_TO_IN = 0.3437;
@@ -81,7 +86,7 @@ void updateOLED() {
       distanceCm <= MIN_RANGE_CM) {  // these units can be CM only because that
                                      // is what the sensor reports
 
-    Serial.print("out of range");
+    Serial.print("out of range: " + String(distanceIn, 2) + " in");
     oled.clear(PAGE);      // Clear the display
     oled.drawBitmap(no_bmp);
     // oled.setFontType(0);   // Switch to the large-number font
@@ -90,7 +95,7 @@ void updateOLED() {
     oled.display();  // Update the display
   } 
   else if (distanceCm > 0 && distanceCm < WARNING_RANGE_CM) {
-    Serial.print("Warning");
+    Serial.print("Warning: " + String(distanceIn, 2) + " in");
     oled.clear(PAGE);      // Clear the display
     oled.drawBitmap(warning_bmp_320x240);
     oled.setFontType(0);   // Switch to the large-number font
@@ -99,13 +104,13 @@ void updateOLED() {
     oled.display();  // Update the display
   }
     else {
-    Serial.print("OK distance");
-    oled.clear(PAGE);      // Clear the display
-    oled.drawBitmap(yes_bmp_320x240);
-    oled.setFontType(0);   // Switch to the large-number font
-    oled.setCursor(0, 40);  // Set the cursor to top-left
-    oled.print(String(distanceIn, 2) + " in");
-    oled.display();  // Update the display
+      Serial.print("OK distance: " + String(distanceIn, 2) + " in");
+      oled.clear(PAGE);  // Clear the display
+      oled.drawBitmap(yes_bmp_320x240);
+      oled.setFontType(0);    // Switch to the large-number font
+      oled.setCursor(0, 40);  // Set the cursor to top-left
+      oled.print(String(distanceIn, 2) + " in");
+      oled.display();  // Update the display
   }
 
   Serial.println();

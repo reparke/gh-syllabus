@@ -1,10 +1,10 @@
-# initial_state_send_data_review
+# example_sunrise_api
 
-A Particle project named initial_state_send_data_review
+A Particle project named example_sunrise_api
 
 ## Welcome to your project!
 
-Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for initial_state_send_data_review.
+Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for example_sunrise_api.
 
 #### ```/src``` folder:  
 This is the source folder that contains the firmware files for your project. It should *not* be renamed. 
