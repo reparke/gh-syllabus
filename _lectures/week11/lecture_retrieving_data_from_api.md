@@ -4,12 +4,12 @@ theme: itp
 
 week: 11
 category: lectures
-title: Retrieving Data from API
+title: APIs Part 1 - Connecting and Retrieving Data 
 ---
 
 <!-- headingDivider: 2 -->
 
-# Connecting to API and Parsing Data
+# APIs Part 1 - Connecting and Retrieving Data 
 
 ## Overview
 

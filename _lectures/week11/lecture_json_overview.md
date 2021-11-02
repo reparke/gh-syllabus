@@ -4,7 +4,7 @@ theme: itp
 
 week: 11
 category: lectures
-title: APIs and JSON Overview
+title: JSON Overview
 ---
 
 <!-- headingDivider: 2 -->

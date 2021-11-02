@@ -4,12 +4,12 @@ theme: itp
 
 week: 11
 category: lectures
-title: JSON Parsing
+title: APIs Part 2 - Parsing JSON
 ---
 
 <!-- headingDivider: 2 -->
 
-# JSON Parsing
+# APIs Part 2 - Parsing JSON
 
 ```json
 {
