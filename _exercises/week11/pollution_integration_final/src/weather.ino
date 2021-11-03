@@ -19,27 +19,32 @@ void myHandler(const char *event, const char *data) {
     // Part 2 is where you can parse the actual data; you code goes in the IF
     if (jsonParser.parse()) {
       // String test = jsonParser.getReference().key("main").valueString();
-      double temp = jsonParser.getReference().key("main").key("temp").valueDouble();
-      String city = jsonParser.getReference().key("name").valueString();
+      // double temp = jsonParser.getReference().key("main").key("temp").valueDouble();
+      // String city = jsonParser.getReference().key("name").valueString();
 
-      double windSpeed = jsonParser.getReference().key("wind").key("speed").valueDouble();
-      String weather = jsonParser.getReference().key("weather").index(0).key("main").valueString();
+      // double windSpeed = jsonParser.getReference().key("wind").key("speed").valueDouble();
+      // String weather = jsonParser.getReference().key("weather").index(0).key("main").valueString();
+      int aqi = jsonParser.getReference().key("list").index(0).key("main").key("aqi").valueInt();
+    
+
+      Serial.println("AQI: "+ String(aqi) + " of 5");
+      Particle.publish("AQI: " + String(aqi) + " of 5");
 
       //get the wind speed
       //get weather - main (fn .index())
-      Serial.println("The temperature in " + city + " is " + String (temp));
-      Serial.println("The weather is " + weather + " and the wind speed is " + String(windSpeed));
+      // Serial.println("The temperature in " + city + " is " + String (temp));
+      // Serial.println("The weather is " + weather + " and the wind speed is " + String(windSpeed));
     }
 }
 
 void setup() {
-    Particle.subscribe("hook-response/Open_Weather", myHandler, MY_DEVICES);
+    Particle.subscribe("hook-response/pollution", myHandler, MY_DEVICES);
     Serial.begin(9600);
 }
 
 void loop() {
 
-  Particle.publish("Open_Weather", "");   //trigger our webhook to get data from openweather
+  Particle.publish("pollution", "");   //trigger our webhook to get data from openweather
   delay(10000);
 
 }

@@ -941,18 +941,19 @@ toc_sticky: true
 #### Lab
 
 - Create [weather stack](https://weatherstack.com/) account (hopefully they have already done this)
+- If there are API problems with weather stack, consider using [https://openweathermap.org/](https://openweathermap.org) except it take up to an hour for API to activate. In that case, just share API key
+- Also consider [Air Now EPA air quality API](https://docs.airnowapi.org/webservices)
 - Have them use their own API key to view JSON in a browser (use formatter online if necessary
 - Create webhook in Particle
 - Copy code from particle publishing and subscribing
 - Test: publish request and see if subscribe code retrieves JSON data
-
 - Show students an example of how the code works for JSON parser
-
 - Have students show description, temp, location, rainfall
 
-#### Idea
+#### Lecture (if time)
 
-- find another API to show
+- Have students use [https://api.sunrise-sunset.org](https://api.sunrise-sunset.org) to determine sunrise and sunset time based on lat and long (*no API key required)*)
+- Have students use [https://openweathermap.org/api/air-pollution](https://openweathermap.org/api/air-pollution) to get AQI measure based on lat and long
 
 ### Assignment
 
