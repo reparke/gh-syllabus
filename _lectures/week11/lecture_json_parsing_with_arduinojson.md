@@ -90,6 +90,27 @@ title: APIs Part 2a - Parsing JSON with ArduinoJson
 * The first part allows for responses from the webhook that come in multiple parts (you don't need to change this)
 * The second part is where you can adapt your own code
 
+## Publishing and Subscribing
+
+```c++
+void setup() {
+  // Subscribe to the integration response event
+  Particle.subscribe("hook-response/JSONWeatherStack", jsonSubscriptionHandler,
+                     MY_DEVICES);
+}
+
+void loop() {
+  // Get some data
+  String data = "92807";
+  // Trigger the integration
+  Particle.publish("JSONWeatherStack", data, PRIVATE);
+  // Wait 60 seconds
+  delay(60000);
+}
+```
+
+
+
 ## Parsing with `ArduinoJson`
 
 ```c++
