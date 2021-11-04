@@ -161,7 +161,10 @@ void setup() {
 ## Part 4: Creating the function handler to receive the JSON
 
 * The last step is to create Argon code to handle the JSON response
-* We'll look at **JSON Parsing** separately`JsonParserGeneratorRK` provides some helping code to handle JSON responses that come in multiple pieces
+* Instructions are provided below for using two popular JSON parsing libraries for Argon are `ArduinoJson` and `JsonParserGeneratorRK` 
+* Instruction and examples for parsing JSON with `ArduinoJson`
+
+* Instruction and examples for parsing JSON with `JsonParserGeneratorRK`
 
 
 
