@@ -4,12 +4,12 @@ theme: itp
 
 week: 11
 category: lectures
-title: Creating JSON with ArduinoJson Library
+title: Creating JSON with JsonParserGeneratorRK Library
 ---
 
 <!-- headingDivider: 2 -->
 
-# Creating JSON with `ArduinoJson` Library
+# Creating JSON with `JsonParserGeneratorRK` Library
 
 ## JSON Example Data
 

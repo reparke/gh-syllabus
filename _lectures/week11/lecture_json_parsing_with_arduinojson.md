@@ -11,6 +11,10 @@ title: Parsing JSON with ArduinoJson Library
 
 # Parsing JSON with `ArduinoJson` Library
 
+## JSON Example Data
+
+- Consider the following JSON data is being received by the Argon
+
 ```json
 {
   "location": {
@@ -32,14 +36,6 @@ title: Parsing JSON with ArduinoJson Library
 ```
 
 
-
-## Parsing JSON with Manually
-
-* JSON is `String` data 
-* It is possible to parse JSON using C-language techniques like `strtok`, `strcpy`, `atoi` 
-* However, this is considered unsafe due to potential for security vulnerabilities 
-* Buffer overrun if the response from the webserver was larger than expected or malformed
-* **Instead, we will use a JSON library to parse**
 
 ## Parsing JSON with a Library:  `ArduinoJson` 
 
