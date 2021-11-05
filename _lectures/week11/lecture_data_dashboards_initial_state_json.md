@@ -9,7 +9,7 @@ title: Sending Multiple Values to Initial State using JSON
 
 <!-- headingDivider: 2 -->
 
-# Data Visualization and Dashboards with Initial State 
+# Sending Multiple Values to Initial State using JSON
 
 ![bg opacity:.75](lecture_data_dashboards_initial_state_json.assets/Infruid's_Self-Service_BI_Tool_Dashboard.jpg)
 
@@ -83,9 +83,16 @@ URL: `https://groker.init.st/api/events`
 
 
 
+## Sending Multiple Values  
+
+* Sending one data point at a time is valid, but is tedious if there are many values to send
+* Instead, we can send a JSON array with many data points
+* JSON uses stores data in **key / value pairs** 
+* JSON representation consists of **objects** and **arrays**
+
 ## JSON Format  
 
-* Initial State expects data to be entered in JSON format
+* The example below contains one JSON object `{...}`
 
 ```json
 {"key": "temp", "value": 32}
@@ -93,30 +100,9 @@ URL: `https://groker.init.st/api/events`
 
 *Where `temp` is the your chosen data label, and `32` is the current value*
 
-* Each time we send data to Initial State, we sent one single data point
 
-*We will cover JSON in-depth later.*
 
-## Recall: Escape Characters
-
-* Initial State value contains quotation marks `"` in the value
-
-```json
-{"key": "temp", "value": 32}
-```
-
-* Since `"` marks the beginning and end of `String`, we need to tell the Argon specifically when we want to include `"` in the value
-* We use the **escape character ** `\"` to tell the Argon to ignore the `"` and consider it as part of the `String`
-* Thus we have our `String` would become
-
-```json
-"{\"key\": \"temp\", \"value\": 32}"
-```
-
-## JSON Format  
-
-* Sending one data point at a time is valid, but is tedious if there are many values to send
-* Instead, we can send a JSON array with many data point
+* The example below contains one JSON array `[...]` containing three JSON objects `{...}`
 
 ```json
 [
@@ -126,139 +112,16 @@ URL: `https://groker.init.st/api/events`
 ]
 ```
 
-* We just need to change the formatting of the data we send
-
-## Aside: Creating JSON Automatically 
-
-```json
-[
- {"key":"temperature", "value":79.000000},
- {"key":"humidity", "value":22.000000},
- {"key":"weather", "value": "sunny"}
-]
-```
-
-* Generating this value as a `String` is going to be messy
-* There are libraries you can use for creating complex JSON messages
-* First we'll walk through creating JSON manually, and then we'll look at a library
+*Where `temperature`, `humidity`, and `weather` are the data labels, and `22.000000`, `22.000000`, and `sunny` are the corresponding values*
 
 ## Creating JSON
 
-There are two ways we can generate the JSON value to send to Initial State. Both are shown below
+- To create JSON data, you can use `String` variables to manually build the JSON data, or you can use a library.
+- Generating this value as a `String` can be tedious so a library is recommendedis going to be messy
+- [Instruction and examples for creating JSON manually with `String` variables`](lecture_json_creation_with_strings)
+- [Instruction and examples for creating JSON with `ArduinoJson`](lecture_json_creation_with_arduinojson)
 
-1. Create JSON manually as a String variable
-2. Using a library (popular libraries are [JsonParserGeneratorRK](https://github.com/rickkas7/JsonParserGeneratorRK) and [ArduinoJson](https://arduinojson.org/))
-
-## Creating JSON Manually
-
-### Argon code
-
-```c++
-void loop() {
-  temp = 89;		//just example; temp should come from sensor
-    
-  String data = "[{ \"key\":\"temperature\", \"value\":" + 			
-  String(temp) + "},{\"key\":\"humidity\", \"value\":" +
-  String(humidity)+ "},{\"key\":\"weather\", \"value\": \"" +
-  String(weather)+ "\"}]";
-    
-  Particle.publish("inital_state_json", String(temp), PRIVATE);
-  delay(60000);	//use delay or millis to avoid publishing too frequently
-}
-```
-
-## Creating JSON with a Library:  `JsonParserGeneratorRK` 
-
-- `JsonParserGeneratorRK` is a popular library for parsing JSON code and can be installed from **Workbench**
-
-* Use the sample code below
-
-### Configuration of `JsonParserGeneratorRK`
-
-- Import library and set up Arduino compatibility
-
-```c++
-#include "JsonParserGeneratorRK.h"  
-```
-
-### Argon code
-
-**Important:** The `{...}` around the `JsonWriteAutoArray` are required for the library. It ensures that all JSON values are in either an valid object or arrays
-
-```c++
-void loop() {
-    
-  JsonWriterStatic<622> jw;
-  jw.init();  // empty buffer for reuse (since jw is static)
-
-  {
-    JsonWriterAutoArray obj(&jw);
-
-    jw.startObject();
-    jw.insertKeyValue("key", "temperature");
-    jw.insertKeyValue("value", 79.000000);
-    jw.finishObjectOrArray();
-
-    jw.startObject();
-    jw.insertKeyValue("key", "humidity");
-    jw.insertKeyValue("value", 22.000000);
-    jw.finishObjectOrArray();
-
-    jw.startObject();
-    jw.insertKeyValue("key", "weather");
-    jw.insertKeyValue("value", sunny);
-    jw.finishObjectOrArray();
-
-    jw.finishObjectOrArray();
-  }
-
-  Particle.publish("week10_20203", jw.getBuffer());
-}
-```
-
- 
-
-## Creating JSON with a Library:  `ArduinoJson` 
-
-- `ArduinoJson` is a popular library for parsing JSON code and can be installed from **Workbench**
-
-* Use the sample code below
-
-### Configuration of `ArduinoJson`
-
-- Import library and set up Arduino compatibility
-
-```c++
-#include <Arduino.h>
-#define ARDUINOJSON_ENABLE_PROGMEM 0
-#include <ArduinoJson.h> 
-```
-
-### Argon code
-
-```c++
-void loop() {
-  temp = 89;	//just example; temp should come from sensor
-  String output;
-    
-  JsonObject doc_0 = doc.createNestedObject();
-  doc_0["key"] = "temperature";
-  doc_0["value"] = 79;
-
-  JsonObject doc_1 = doc.createNestedObject();
-  doc_1["key"] = "humidity";
-  doc_1["value"] = 22;
-
-  JsonObject doc_2 = doc.createNestedObject();
-  doc_2["key"] = "weather";
-  doc_2["value"] = "sunny";
-
-  serializeJson(doc, output);
-    
-  Particle.publish("inital_state_json", output);
-  delay(60000);	//use delay or millis to avoid publishing too frequently
-}
-```
+- [Instruction and examples for creating JSON with `JsonParserGeneratorRK`](lecture_json_creation_with_jsonparsergeneratorrk)
 
 ## Lab - Send Photoresistor Value to Initial State
 

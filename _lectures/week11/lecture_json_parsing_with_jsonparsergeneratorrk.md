@@ -4,12 +4,12 @@ theme: itp
 
 week: 11
 category: lectures
-title: APIs Part 2b - Parsing JSON with JsonParserGeneratorRK
+title: Parsing JSON with JsonParserGeneratorRK Library
 ---
 
 <!-- headingDivider: 2 -->
 
-# APIs Part 2b - Parsing JSON with `JsonParserGeneratorRK`
+# Parsing JSON with `JsonParserGeneratorRK` Library
 
 ```json
 {

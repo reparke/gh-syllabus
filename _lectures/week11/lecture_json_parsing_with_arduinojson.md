@@ -4,12 +4,12 @@ theme: itp
 
 week: 11
 category: lectures
-title: APIs Part 2a - Parsing JSON with ArduinoJson
+title: Parsing JSON with ArduinoJson Library
 ---
 
 <!-- headingDivider: 2 -->
 
-# APIs Part 2a - Parsing JSON with `ArduinoJson`
+# Parsing JSON with `ArduinoJson` Library
 
 ```json
 {
@@ -32,48 +32,6 @@ title: APIs Part 2a - Parsing JSON with ArduinoJson
 ```
 
 
-
-## Recall: JSON (JavaScript Object Notation)
-
-* JSON is a way of representing an object as a text string
-* Built around key-value pair idea (like a dictionary or hash)
-* Two data types
-  * **objects** (single item denoted with `{`   `}`)
-  * **arrays** (multiple items denoted with `[`   `]`)
-
-## Recall: JSON Nested Objects
-
-```JSON
-    { 
-      "forecast": {
-        "mon": {
-          "high": 89,
-          "low":54
-        }
-      }
-    }
-```
-
-* Values can be JSON **objects** 
-  * Ex: `forecast` is a **key** and the **value** is `"mon"` 
-  * `"mon"` is itself a **key** which store the **keys** `"high"`  and  `low` 
-
-## Recall: JSON Arrays
-
-```JSON
-{ "daily_temp": [
-    89,
-    84,
-    83
-  ] 
-}
-```
-
-* **Arrays** are specified with `[` `]` 
-* Indices begin at `0` and up to `length - 1`
-* Elements of arrays can be **string**, **int**, **float**, **objects**, or **arrays**
-  * Ex:`"daily_temp"` is a **key** and its **value** is an **array** 
-  * Ex: `89` is an **int** and is at index`0`
 
 ## Parsing JSON with Manually
 

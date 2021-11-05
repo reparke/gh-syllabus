@@ -4,12 +4,12 @@ theme: itp
 
 week: 11
 category: lectures
-title: APIs Part 1 - Connecting and Retrieving Data 
+title: Retrieving Data from APIs
 ---
 
 <!-- headingDivider: 2 -->
 
-# APIs Part 1 - Connecting and Retrieving Data 
+# Retrieving Data from APIs
 
 ## Overview
 
@@ -158,13 +158,19 @@ void setup() {
 ```
 ![right:50%](lecture_weatherstack_integration.assets/image-20200405005641533_temperature.png)
 
-## Part 4: Creating the function handler to receive the JSON
+## Part 4: Creating the function handler to receive and parse the JSON
 
-* The last step is to create Argon code to handle the JSON response
-* Instructions are provided below for using two popular JSON parsing libraries for Argon are `ArduinoJson` and `JsonParserGeneratorRK` 
-* Instruction and examples for parsing JSON with `ArduinoJson`
+* The last step is to create Argon code to handle / parse the JSON response
+* While it is possible to manually parse JSON in C++, it is considered unsafe due to potential for security vulnerabilities
 
-* Instruction and examples for parsing JSON with `JsonParserGeneratorRK`
+* **Instead, use one of the two popular Argon libraries below**
+* [Instruction and examples for parsing JSON with `ArduinoJson`](lecture_json_parsing_with_arduinojson)
+* [Instruction and examples for parsing JSON with `JsonParserGeneratorRK`](lecture_json_parsing_with_jsonparsergeneratorrk)
+
+
+
+<!--Since JSON is `String` data, it is possible to parse it using C-language techniques like `strtok`, `strcpy`, `atoi` 
+However Buffer overrun if the response from the webserver was larger than expected or malformed-->
 
 
 
