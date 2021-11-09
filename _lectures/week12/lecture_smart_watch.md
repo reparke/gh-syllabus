@@ -20,7 +20,7 @@ title: Smart Watch
   * For assembly and wiring, refer to [these instructions](guide_build_watch.md)
   * Download starting code: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
     * Paste the following link into the top right
-      https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week12/smart_watch_start
+      https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week12/smart_watch_30101_i2c_start
 
   ## What's Included
 
