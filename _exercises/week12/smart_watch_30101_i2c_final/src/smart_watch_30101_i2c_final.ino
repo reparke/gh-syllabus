@@ -211,7 +211,6 @@ const int LOW_IR_THRESHOLD = 50000;
 float tempF;
 void loop() {
     int curReading = digitalRead(PIN_BUTTON);  // check button read
-    unsigned long currentDebounceTime = millis();
 
     if (curReading == HIGH && prevReading == LOW) {
         getNextState();  // button was pressed down, we should change
@@ -225,49 +224,10 @@ void loop() {
     loadNextScreen();
     prevReading = curReading;  // update for next loop
 }
+long irValue = 0;
 
 void runHeartScreen() {
-    long irValue = particleSensor.getIR();
-
-    if (checkForBeat(irValue) == true) {
-        // We sensed a beat!
-        long delta = millis() - lastBeat;
-        lastBeat = millis();
-
-        beatsPerMinute = 60 / (delta / 1000.0);
-
-        if (beatsPerMinute < 255 && beatsPerMinute > 20) {
-            rates[rateSpot++] =
-                (byte)beatsPerMinute;  // Store this reading in the array
-            rateSpot %= RATE_SIZE;     // Wrap variable
-
-            // Take average of readings
-            beatAvg = 0;
-            for (byte x = 0; x < RATE_SIZE; x++) beatAvg += rates[x];
-            beatAvg /= RATE_SIZE;
-        }
-    }
-
-    Serial.print("IR=");
-    Serial.print(irValue);
-    Serial.print(", BPM=");
-    Serial.print(beatsPerMinute);
-    Serial.print(", Avg BPM=");
-    Serial.print(beatAvg);
-
-    if (irValue < 50000) Serial.print(" No finger?");
-
-    unsigned long curRead = millis();
-    samples++;
-    Serial.print("\t\t\t\tHz[");
-    Serial.print((float)1000.0 / (curRead - lastRead), 2);
-    Serial.print("] Avg Hz[");
-    Serial.print((float)samples * 1000.0 / (curRead), 2);
-    Serial.print("]");
-    Serial.println();
-    lastRead = curRead;
-    Serial.println();
-    //   delay(50);
+    updateBPM();
     unsigned long curMillis = millis();
     if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
         prevScreenUpdateMillis = curMillis;
@@ -307,4 +267,65 @@ void runHeartScreen() {
     }
     // consider adding battery status bands
     // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7
+}
+
+/* ====================== HEART RATE FUNCTIONS ===============
+  These functions are completed and shouldn't be modified
+*/
+/* fn: updateBPM
+This function is called by timer. It needs to execute
+quickly otherwise sensor won't properly register beats
+and BPM will be off
+*/
+void updateBPM() {
+    irValue = particleSensor.getIR();
+
+    if (checkForBeat(irValue) == true) {
+        // We sensed a beat!
+        long delta = millis() - lastBeat;
+        lastBeat = millis();
+
+        beatsPerMinute = 60 / (delta / 1000.0);
+
+        if (beatsPerMinute < 255 && beatsPerMinute > 20) {
+            rates[rateSpot++] =
+                (byte)beatsPerMinute;  // Store this reading in the array
+            rateSpot %= RATE_SIZE;     // Wrap variable
+
+            calcHeartBeatAvg();
+        }
+    }
+
+    Serial.print("IR=");
+    Serial.print(irValue);
+    Serial.print(", BPM=");
+    Serial.print(beatsPerMinute);
+    Serial.print(", Avg BPM=");
+    Serial.print(beatAvg);
+
+    if (irValue < 50000) Serial.print(" No finger?");
+
+    unsigned long curRead = millis();
+    samples++;
+    Serial.print("\t\t\t\tHz[");
+    Serial.print((float)1000.0 / (curRead - lastRead), 2);
+    Serial.print("] Avg Hz[");
+    Serial.print((float)samples * 1000.0 / (curRead), 2);
+    Serial.print("]");
+    Serial.println();
+    lastRead = curRead;
+    Serial.println();
+    //   delay(50);
+}
+
+/* fn: calcHeartBeatAvg
+This function is slow so it should be done during display
+ NOT during timer reading of heart rate
+*/
+void calcHeartBeatAvg() {
+    beatAvg = 0;
+    for (byte x = 0; x < RATE_SIZE; x++) {
+        beatAvg += rates[x];
+    }
+    beatAvg /= RATE_SIZE;
 }
