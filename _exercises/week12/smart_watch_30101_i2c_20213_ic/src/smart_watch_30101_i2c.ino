@@ -63,34 +63,55 @@ long irValue = 0;
 
 float tempF;
 
-
 //////////////////////////
 // Button Variables     //
 //////////////////////////
 const int PIN_BUTTON = D3;
-int prevReading = HIGH;     // the last VERIFIED state
+int prevReading = HIGH;  // the last VERIFIED state
 
 //////////////////////////
 // States               //
 //////////////////////////
 // TODO: create state enum and variable(s) to track state
+enum State { HEART, TIME, WEATHER };
+State currentState = HEART;
 
 // TODO
 void getNextState() {
-
+    switch (currentState) {
+        case HEART:
+            currentState = TIME;
+            break;
+        case TIME:
+            currentState = WEATHER;
+            break;
+        case WEATHER:
+            currentState = HEART;
+            break;
+    }
 }
 
-//TODO
+// TODO
 void loadNextScreen() {
-
+    switch (currentState) {
+        case HEART:
+            runHeartScreen();
+            break;
+        case TIME:
+            runTimeScreen();
+            break;
+        case WEATHER:
+            runWeatherScreen();
+            break;
+    }
 }
 
 // TODO
 void runHeartScreen() {
     // for debugging
-    Serial.println("Time");
+    Serial.println("Heart");
     oled.clear(PAGE);  // Clear the display
-    oled.print("Time");
+    oled.print("Heart");
     oled.display();
 }
 
@@ -153,7 +174,16 @@ void setup() {
 //////////////////////////
 // TODO
 void loop() {
-    
+    int curReading = digitalRead(PIN_BUTTON); //current button state
+ 
+    //switch on button press -- as latch
+    if (curReading == HIGH && prevReading == LOW) {
+        //update state
+        getNextState();
+    }
+
+    loadNextScreen();       //fix this later to add other states
+    prevReading = curReading;
 }
 
 /* =================================================
@@ -162,8 +192,6 @@ void loop() {
 // HEART RATE FUNCTIONS //
 //////////////////////////
 // These functions are completed and shouldn't be modified
-
-
 
 /* fn: updateBPM
 This function is called by timer. It needs to execute
