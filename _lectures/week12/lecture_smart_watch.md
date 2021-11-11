@@ -46,9 +46,7 @@ title: Smart Watch
 
 ## Heart Rate Screen
 
-<img src="lecture_smart_watch.assets/heart.jpg" style="width:500px;" />
-
-* 
+<img src="lecture_smart_watch.assets/screen.png" style="width:500px;" />
 
 
 
@@ -61,13 +59,15 @@ title: Smart Watch
 
 ## Heart Rate Algorithm
 
-* Calculate most recent heart BPM
-* If heart rate is above a threshold
-  * Display BPM
-* Else display `---`
-* Display body temperature
+1. Calculate most recent heart BPM (`updateBPM()`)
+2. Update OLED screen using `millis()` timer based on `HEART_SCREEN_UPDATE_MS`
+   * If `beatAvg`is above threshold and `irValue` is above threshold 
+     * Display BPM
+   * Else display `---`
+3. Display body temperature
+4. Display battery voltage (we'll discuss this part later)
 
-##  
+*If you want to display an image, you can use bitmap `heart16x12`*
 
 ## Time Screen
 
@@ -75,27 +75,27 @@ title: Smart Watch
 
 ## Time
 
-* `setup()`
+1. `setup()`
 
   * Set current timezone `Time.zone(<<TIMEZONE>>);` ([timezone guide](https://greenwichmeantime.com/time-zone/definition/))
   * Enable DST `Time.beginDST();`
 
-* Draw clock bitmap `clock_16x12`
+2. Draw clock bitmap `clock_16x12`
 
-* Display date format  ([formatting guide](http://www.cplusplus.com/reference/ctime/strftime/))
-  <!-- String dateFormat = "%a %d";-->
+3. Display date format  ([formatting guide](http://www.cplusplus.com/reference/ctime/strftime/))
+    <!-- String dateFormat = "%a %d";-->
   ```c++
   oled.println(Time.format(<<DATE_FORMAT_STRING>>));
   ```
-  
-* Display time format ([formatting guide](http://www.cplusplus.com/reference/ctime/strftime/))
-  <!-- String timeFormat = "%I:%M%p"; -->
-  
+
+4. Display time format ([formatting guide](http://www.cplusplus.com/reference/ctime/strftime/))
+    <!-- String timeFormat = "%I:%M%p"; -->
+
     ```c++
-  oled.println(Time.format(<<TIME_FORMAT_STRING>>));
+    oled.println(Time.format(<<TIME_FORMAT_STRING>>));
     ```
 
-##  
+*If you want to display an image, you can use bitmap `clock_16x12`*
 
 ## Weather Screen
 
@@ -105,11 +105,13 @@ title: Smart Watch
 
 ## Weather Display
 
-* Create Particle webhook
-* Connect to weather API
-* Parse JSON
-* Display data
-* Use bitmaps byte array in `bitmaps_weather.h`
+1. Create Particle webhook
+2. Connect to weather API
+3. Parse JSON
+4. Display data
+5. Use bitmaps byte array in `bitmaps_weather.h`
+
+*If you want to display an image, you can use bitmap `clock_16x12`*
 
 ## References
 

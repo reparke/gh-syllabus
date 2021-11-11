@@ -174,15 +174,15 @@ void setup() {
 //////////////////////////
 // TODO
 void loop() {
-    int curReading = digitalRead(PIN_BUTTON); //current button state
- 
-    //switch on button press -- as latch
+    int curReading = digitalRead(PIN_BUTTON);  // current button state
+
+    // switch on button press -- as latch
     if (curReading == HIGH && prevReading == LOW) {
-        //update state
+        // update state
         getNextState();
     }
 
-    loadNextScreen();       //fix this later to add other states
+    loadNextScreen();  // fix this later to add other states
     prevReading = curReading;
 }
 
