@@ -108,20 +108,49 @@ void loadNextScreen() {
 
 // TODO
 void runHeartScreen() {
-    // for debugging
-    Serial.println("Heart");
-    oled.clear(PAGE);  // Clear the display
-    oled.print("Heart");
-    oled.display();
+    updateBPM();
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+        if (beatAvg > LOW_BPM_THRESHOLD && irValue > LOW_IR_THRESHOLD) {
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print(String(beatAvg));
+        } else {
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print("---");
+        }
+        tempF = particleSensor.readTemperatureF();
+        oled.setCursor(0, 20);
+        oled.setFontType(1);
+        oled.print("Temp " + String(tempF, 0));
+        oled.display();
+    }
 }
 
 // TODO
 void runTimeScreen() {
-    // for debugging
-    Serial.println("Time");
-    oled.clear(PAGE);  // Clear the display
-    oled.print("Time");
-    oled.display();
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > TIME_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+        // create a string for each time element
+        String dayFormat = "%a %d";
+        String timeFormat = "%I:%M%p";
+        oled.clear(PAGE);
+        oled.setCursor(25, 0);
+        oled.setFontType(0);
+        oled.print(Time.format(dayFormat));
+
+        oled.setFontType(1);
+        oled.setCursor(0, 25);
+        oled.print(Time.format(timeFormat));
+        oled.display();
+    }
 }
 
 // TODO
@@ -129,6 +158,7 @@ void runWeatherScreen() {
     // for debugging
     Serial.println("Weather");
     oled.clear(PAGE);  // Clear the display
+    oled.setCursor(0, 0);
     oled.print("Weather");
     oled.display();
 }
@@ -137,6 +167,8 @@ void runWeatherScreen() {
 // SETUP                //
 //////////////////////////
 void setup() {
+    Time.zone(-8);
+    // Time.beginDST();
     Serial.begin(115200);
     Serial.println("Initializing...");
 
@@ -225,6 +257,7 @@ void updateBPM() {
     Serial.print(beatAvg);
 
     if (irValue < 50000) Serial.print(" No finger?");
+    Serial.println();
 }
 
 /* fn: calcHeartBeatAvg
