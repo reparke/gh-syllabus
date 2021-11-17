@@ -205,6 +205,12 @@ scanId.trim();         //scanId has an intial leading " "
 - Create program to turn D7 LED on with one card and off with second card
 - Use a `millis()` timer to pause 1 second between each card read
 
+<!-- Note: MFRC522 library doesn't work with DeviceOS 3.1+. You need to do the following-->
+
+<!-- change MIFARE_UnbrickUidSector method to return true in case of ELSE !-->
+
+<!-- open project.properties and delete the dependency line for MFRC522. Particle cloud flash uses the cloud version of the library otherwise, meaning it won't use the local, changed version-->
+
 ## Obtaining Sensors and Cards
 
 * Sensor: [Amazon](https://www.amazon.com/gp/product/B01CSTW0IA)

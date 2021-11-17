@@ -1,4 +1,17 @@
 /*
+Important:
+MFRC522 library doesn't work with DeviceOS 3.1+.
+You need to do the following two things
+
+  1) change MIFARE_UnbrickUidSector method to return true
+   in case of ELSE
+
+  2) open project.properties and delete the dependency line for MFRC522.
+  Particle cloud flash uses the cloud version of the library
+  otherwise, meaning it won't use the local, changed version
+*/
+
+/*
  * MFRC522 - Library to use ARDUINO RFID MODULE KIT 13.56 MHZ WITH TAGS SPI W
  AND R BY COOQROBOT.
  * The library file MFRC522.h has a wealth of useful info. Please read it.
@@ -41,7 +54,8 @@
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
 
-unsigned long int scanDelay = 1500;  //time to pause between reading cards to prevent continuous reads
+unsigned long int scanDelay =
+    1500;  // time to pause between reading cards to prevent continuous reads
 unsigned long prevMillis = 0;
 const int PIN_LED = D7;
 
@@ -58,7 +72,7 @@ void setup() {
 void loop() {
     unsigned long curMillis = millis();
     if ((curMillis - prevMillis) > scanDelay) {
-        prevMillis = curMillis;  //update time
+        prevMillis = curMillis;  // update time
 
         // scanAndPrintCardId();
         // checkForMatch();
@@ -66,7 +80,7 @@ void loop() {
     }
 }
 
-//use this to test scanner and to obtain card ID (printed to serial)
+// use this to test scanner and to obtain card ID (printed to serial)
 void scanAndPrintCardId() {
     // Look for new cards
     if (!mfrc522.PICC_IsNewCardPresent()) {
@@ -91,8 +105,8 @@ void controlLED() {
                 scanId += String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
                 scanId += String(mfrc522.uid.uidByte[i], HEX);
             }
-            scanId.toUpperCase();  //scanId will be lowercase
-            scanId.trim();         //scanId has an intial leading " "
+            scanId.toUpperCase();  // scanId will be lowercase
+            scanId.trim();         // scanId has an intial leading " "
             Serial.println("size: " + String(mfrc522.uid.size));
             if (scanId == card1) {
                 // this means scanned card and target card match
@@ -118,8 +132,8 @@ void checkForMatch() {
                 scanId += String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
                 scanId += String(mfrc522.uid.uidByte[i], HEX);
             }
-            scanId.toUpperCase();  //scanId will be lowercase
-            scanId.trim();         //scanId has an intial leading " "
+            scanId.toUpperCase();  // scanId will be lowercase
+            scanId.trim();         // scanId has an intial leading " "
             Serial.println("size: " + String(mfrc522.uid.size));
             if (scanId == card1) {
                 // this means scanned card and target card match

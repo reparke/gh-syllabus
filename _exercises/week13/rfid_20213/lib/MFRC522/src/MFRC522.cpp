@@ -1628,7 +1628,9 @@ bool MFRC522::MIFARE_UnbrickUidSector(bool logErrors) {
         }
         return false;
     }
-	return true;
+	else {
+		return true;
+	}
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
