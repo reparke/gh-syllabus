@@ -1,8 +1,8 @@
 #include "SparkFunMMA8452Q.h"
 
-const int PIN_RED = A0;
-const int PIN_GREEN = A1;
-const int PIN_BLUE = A2;
+const int PIN_RED = A5;
+const int PIN_GREEN = A4;
+const int PIN_BLUE = A3;
 const int ON_BOARD_LED = D7;
 
 

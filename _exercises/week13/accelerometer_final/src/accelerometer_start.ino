@@ -1,8 +1,8 @@
 #include "SparkFunMMA8452Q.h"
 
-const int PIN_RED = A0;
-const int PIN_GREEN = A1;
-const int PIN_BLUE = A2;
+const int PIN_RED = A5;
+const int PIN_GREEN = A4;
+const int PIN_BLUE = A3;
 const int ON_BOARD_LED = D7;
 
 // Threshold can range from 1-127, with steps of 0.063g/bit.
@@ -26,6 +26,9 @@ void setup() {
     pinMode(PIN_RED, OUTPUT);
     pinMode(PIN_GREEN, OUTPUT);
     pinMode(PIN_BLUE, OUTPUT);
+    digitalWrite(PIN_RED, HIGH);
+    digitalWrite(PIN_GREEN, HIGH);
+    digitalWrite(PIN_BLUE, HIGH);
 
     accel.begin(SCALE_2G,
                 ODR_1);  // 2g and 1 Hz refresh (helps output be easier to read)
@@ -43,8 +46,8 @@ void loop() {
         // cz. Those are the raw, 12-bit values (x, y, and z) and the calculated
         // acceleration's in units of g (cx, cy, and cz).
 
-        // displayExampleGraphs();
-        changeOnBoardLEDWithTap();  
+        displayExampleGraphs();
+        // changeOnBoardLEDWithTap();  
         // printOrientation();
     }
 }

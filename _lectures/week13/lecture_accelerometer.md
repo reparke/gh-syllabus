@@ -75,7 +75,7 @@ title: Accelerometer
 
 ## Sensor Wiring
 
-<img src="lecture_accelerometer.assets/accelerometer_bb.png" style="width:800px;" />
+<img src="lecture_accelerometer.assets/accelerometer_rgb_led_bb.png" style="width:800px;" />
 
 ## `SparkFunMMA8452Q` Library
 
