@@ -25,7 +25,7 @@ show_in_list: true
 ## Code
 ```c++
 unsigned long prevMillis = 0;		//last time we checked time
-unsigned long int interval = 1000;	//this could be any length, but here we set 1000 ms (1 sec)  between operations
+unsigned long interval = 1000;	//this could be any length, but here we set 1000 ms (1 sec)  between operations
 
 void setup() {}
 

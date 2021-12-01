@@ -16,6 +16,7 @@ toc_sticky: true
 * [ ] Nov for Sp 2022 Kit changes
   * [ ] add [magnetic switch](https://piazza.com/class_profile/get_resource/koq7em9bi9r20s/kv79axv46lo4aa) and any other missing parts to download library (e.g. accel, max30101, button, qwiic cable, microoled qwiic) so students can download one library only
   * [ ] remove LEDs, 300, 10k, buttons, switch (?), photocell (? ) from sparkfun kit 
+  * [ ] test step up 5v regulator: https://www.pololu.com/product/2564 
   * [x] add LEDs, 300, 10k, buttons, switch (?), photocell (? ) to ITP kit
   * [ ] finalize kit VERY early and have students order in July or in Nov
   * [ ] Consider having bookstore purchase again

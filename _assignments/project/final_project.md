@@ -3,7 +3,7 @@ week: 10
 number: 13
 category: assignments
 title: Project
-date_due: Proposal Nov 8 @ 11:59 pm; Schematic Nov 18 @ in class; Finished device and presentation Dec 8 during final exam time
+date_due: Proposal Nov 8 @ 11:59 pm; Schematic Nov 18 @ in class; Finished device and presentation Dec 9 @ 4:30 pm
 
 ---
 
@@ -89,9 +89,6 @@ Deliverables
 
 ### Project - Final Deliverables 
 
--   In-person demonstration of functioning device *(schedule during final exam time)*
--   Bring device prototype to class
-
 **The remaining items are to be submitted on Blackboard**
 
 -   Workbench project with firmware code
@@ -116,7 +113,16 @@ Deliverables
         omit initial setup)
     -   [Sample user documentation](https://reparke.github.io/ITP348-Physical-Computing/assignments/project/samples/project_user_guide_sample.pdf)
 
+### Project - Final Presentation (10 min)
 
+-   This is a required in-person demonstration of your functioning device
+-   This is scheduled during our final exam time
+-   The presentation should address the following:
+    -   What your device does / what problems are you solving
+    -   How your device satisfies each requirement in the grading rubric (e.g. it uses sensor an ultrasonic sensor and an RFID sensor; it uses Blynk to allow the user to control a two servos, etc.)
+    -   What was the most challenging or interesting aspect of the project
+-   It is not required to have slides
+-   You will then demonstrate all the functionality of your device. If it isn't feasible to show it live, you can pre-record this part
 
 ## Submission Instructions
 
@@ -126,27 +132,27 @@ Deliverables
 Grading
 -------
 
-| Item                                           | Points |
-| ---------------------------------------------- | ------ |
-| **App proposal**                               |        |
-| Motivation / Need / Audience                   | **4**  |
-| Features                                       | **4**  |
-| Budget                                         | **4**  |
-|                                                |        |
-| **Project Milestone / Schematic**              | **10** |
-|                                                |        |
-| **Final Device**                               |        |
-| Sensors                                        | **10** |
-| Receive / produce interaction with environment | **10** |
-| Sending data to cloud platform / dashboard     | **10** |
-| Controlling device from cloud remotely         | **10** |
-| In-person demonstration                        | **10** |
-| Coding style and organization                  | **5**  |
-| Developer documentation                        | **5**  |
-| User documentation                             | **5**  |
-| Device fulfills original proposal features     | **10** |
-|                                                |        |
-| **Total**                                      | **97** |
+| Item                                                      | Points |
+| --------------------------------------------------------- | ------ |
+| **App proposal**                                          |        |
+| Motivation / Need / Audience                              | **4**  |
+| Features                                                  | **4**  |
+| Budget                                                    | **4**  |
+|                                                           |        |
+| **Project Milestone / Schematic**                         | **10** |
+|                                                           |        |
+| **Final Device**                                          |        |
+| Sensors                                                   | **10** |
+| Receive / produce interaction with environment            | **10** |
+| Sending data to cloud platform / dashboard                | **10** |
+| Controlling device from remotely (via cloud or Bluetooth) | **10** |
+| In-person demonstration                                   | **10** |
+| Coding style and organization                             | **5**  |
+| Developer documentation                                   | **5**  |
+| User documentation                                        | **5**  |
+| Device fulfills original proposal features                | **10** |
+|                                                           |        |
+| **Total**                                                 | **97** |
 
 ## Acknowledgements
 

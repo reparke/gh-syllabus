@@ -5,7 +5,7 @@ const int PIN_GREEN = A4;
 const int PIN_BLUE = A3;
 const int ON_BOARD_LED = D7;
 
-// Threshold can range from 1-127, with steps of 0.063g/bit.
+    // Threshold can range from 1-127, with steps of 0.063g/bit.
 byte threshold = 1;  // 2 * 0.063g = 0.063g (minimum threshold
 
 // Pulse time limit: Maximum time interval that can elapse between the start
