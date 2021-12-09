@@ -126,7 +126,7 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 | `String Cup Status` | `V2` | String  | `Present`, `Missing`                                     | argon     | app     |
 | `Button Start Brew` | `V3` | integer | `0`, `1`                                                 | argon     | app     |
 | `Text State`        | `V4` | String  | `Idle`, `Heat`, `Steep`, `Hold`, `Pour`                  | argon     | app     |
-| `Button Sound`      | `V6` | integer | `0`, `1`                                                 | app       | argon   |
+| `Button Sound`      | `V5` | integer | `0`, `1`                                                 | app       | argon   |
 
 
 
@@ -320,6 +320,6 @@ tone(D6, NOTE_D4, 500);	//play the D note above middle C
 
 | Name             | Pin  | Type    | Values                 | Data FROM | Data TO |
 | ---------------- | ---- | ------- | ---------------------- | --------- | ------- |
-| `Time Remaining` | `V5` | integer | `0` as min, `7` as max | argon     | app     |
+| `Time Remaining` | `V6` | integer | `0` as min, `7` as max | argon     | app     |
 
 - In your code, track the time remaining and send to app

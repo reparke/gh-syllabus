@@ -1,6 +1,10 @@
 #include <blynk.h>  //library (need to import it in your own project)
+#define BLYNK_PRINT Serial 
+#define BLYNK_IP IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
 
-char auth[] = "ENTER_YOUR_BLYNK_TOKEN";  // array of characters with your token
+#define BLYNK_TEMPLATE_ID "ADD_YOUR_OWN"
+#define BLYNK_DEVICE_NAME "ADD_YOUR_OWN"
+#define BLYNK_AUTH_TOKEN "ADD_YOUR_OWN"
 
 unsigned long blynkDelay = 1000;  // delay between sending ARGON to APP
 unsigned long prevMillis = 0;
@@ -16,7 +20,7 @@ void setup() {
     // 1. Require initial Blynk delay
     delay(5000);
     // 2. connect to blynk
-    Blynk.begin(auth);
+    Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
 }
 
 void loop() {

@@ -22,9 +22,9 @@ toc_sticky: true
   * [ ] Consider having bookstore purchase again
   * [ ] could ITP sell directly to students?
   * [ ] ask sparkfun to swap 1 Qwiic breadboard cable for interconnecting cable
-  * [ ] A9: EC virtual pin should be V6 instead of V5
+  * [x] A9: EC virtual pin should be V6 instead of V5
   * [ ] consider moving A9 earlier to be closer to material (even if prelim proposal and A9 overlap)
-  * [ ] update A9 blynk start template to remove Char and add ip address
+  * [x] update A9 blynk start template to remove Char and add ip address
   * [ ] consider removing week 10 OLED graphics, replace with...? JSON, softpot, piezo motion sensor
   * [ ] should have second day for bluetooth and motors
   * [ ] Week 10 idea: 
