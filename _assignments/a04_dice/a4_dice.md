@@ -3,7 +3,7 @@ week: 4
 number: 4
 category: assignments
 title: Dice
-date_due: Sep 20 @ 11:59 pm
+date_due: Feb 07 @ 11:59 pm
 ---
 
 Assignment 4 – Dice

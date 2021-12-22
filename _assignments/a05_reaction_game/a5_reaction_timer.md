@@ -3,7 +3,7 @@ week: 5
 number: 5
 category: assignments
 title: Reaction Timer Game
-date_due: Sep 27 @ 11:59 pm
+date_due: Feb 14 @ 11:59 pm
 
 ---
 

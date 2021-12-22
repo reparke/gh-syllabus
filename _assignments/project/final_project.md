@@ -3,7 +3,7 @@ week: 10
 number: 13
 category: assignments
 title: Project
-date_due: Proposal Nov 8 @ 11:59 pm; Schematic Nov 18 @ in class; Finished device and presentation Dec 9 @ 4:30 pm
+date_due: Apr 04 @ 11:59 pm; Milestone Apr 11 @ 11:59 pm; Finished device and presentation May 05 @ 4:30 pm
 
 ---
 

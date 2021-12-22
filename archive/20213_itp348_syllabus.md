@@ -1,14 +1,5 @@
----
-title: Syllabus
-layout: single
-category: syllabus
-toc: true
-toc_label: "Quick Links"
-toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
-toc_sticky: true
----
 
-## Syllabus Spring 2022
+## Syllabus Fall 2021
 
 ### Course Info
 
@@ -84,9 +75,9 @@ course. This kit is created specifically for the course and must be purchased
 during the first week of class. Additional components will be provided by the
 instructor
 
-### Required Videos
+### Required Readings
 
-Videos for each week are posted on the course website and should be watched prior to class that week
+Readings will be posted on Blackboard during the semester.
 
 #### Supplementary Books
 
@@ -254,7 +245,7 @@ submission that they intend to use a grace day.
 | Week 10         | Ultrasonic sensors, OLED graphics | Posted online | A10<br />A11                                 |
 | Week 11         | JSON, APIs, dashboards | Posted online | Project proposal |
 | Week 12         | Wearables, heart rate sensors, debouncing | Posted online | *(work on project)*                                          |
-| Week 13         | RFID, accessibility                | Posted online | Project milestone |
+| Week 13         | RFID, accessibility                | Posted online | Project schematic (**due in class on Thurs**) |
 | Week 14 | Accelerometers | Posted online | *(work on project)* |
 | Week 15 | Digital temperature sensors, passive infrared sensors | Posted online | *(work on project)* |
 | Final (Week 16) | Final project presentation                                   | Posted online | Project code, device, app, in-class demo                     |
@@ -265,13 +256,13 @@ submission that they intend to use a grace day.
 Plagiarism – presenting someone else’s ideas as your own, either verbatim or
 recast in your own words – is a serious academic offense with serious
 consequences. Please familiarize yourself with the discussion of plagiarism
-in *SCampus* in Part B, Section 11, “Behavior Violating University Standards”
-<https://policy.usc.edu/scampus-part-b/>.  Other forms of academic dishonesty
-are equally unacceptable.  See additional information in *SCampus *and
+in *SCampus* in Part B, Section 11, “Behavior Violating University Standards”
+<https://policy.usc.edu/scampus-part-b/>.  Other forms of academic dishonesty
+are equally unacceptable.  See additional information in *SCampus *and
 university policies on scientific
-misconduct, [http://policy.usc.edu/scientific-misconduct](http://policy.usc.edu/scientific-misconduct/).
+misconduct, [http://policy.usc.edu/scientific-misconduct](http://policy.usc.edu/scientific-misconduct/).
 
- 
+ 
 
 ## Support Systems
 

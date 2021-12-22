@@ -3,7 +3,7 @@ week: 8
 number: 8
 category: assignments
 title: Bluetooth Car (part 1)
-date_due: Oct 21 @ in class
+date_due: Mar 07 @ 11:59 pm (bring to class)
 
 ---
 Assignment 8 – Bluetooth Car part 1
