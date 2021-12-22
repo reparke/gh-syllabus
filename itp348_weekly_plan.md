@@ -17,14 +17,11 @@ toc_sticky: true
   * [ ] add [magnetic switch](https://piazza.com/class_profile/get_resource/koq7em9bi9r20s/kv79axv46lo4aa) and any other missing parts to download library (e.g. accel, max30101, button, qwiic cable, microoled qwiic) so students can download one library only
   * [ ] remove LEDs, 300, 10k, buttons, switch (?), photocell (? ) from sparkfun kit 
   * [ ] test step up 5v regulator: https://www.pololu.com/product/2564 
-  * [x] add LEDs, 300, 10k, buttons, switch (?), photocell (? ) to ITP kit
   * [ ] finalize kit VERY early and have students order in July or in Nov
   * [ ] Consider having bookstore purchase again
   * [ ] could ITP sell directly to students?
   * [ ] ask sparkfun to swap 1 Qwiic breadboard cable for interconnecting cable
-  * [x] A9: EC virtual pin should be V6 instead of V5
   * [ ] consider moving A9 earlier to be closer to material (even if prelim proposal and A9 overlap)
-  * [x] update A9 blynk start template to remove Char and add ip address
   * [ ] consider removing week 10 OLED graphics, replace with...? JSON, softpot, piezo motion sensor
   * [ ] should have second day for bluetooth and motors
   * [ ] Week 10 idea: 
@@ -32,14 +29,9 @@ toc_sticky: true
     * [ ] Thurs is using JSON to send multiple values to Initial State; consider recording a video for json overview and moving early
     * [ ] week 10 / 11: may need to record JSON videos for clarity
     * [ ] week 10 / 11: may need to include a subscribe video or lectu
-  * [x] 2 of the 15x20 cm resealable bags and 1 of 21x24 cm bags to use per box
 * [ ] ==**Revise A5 reaction timer. Remove any need for a while loop**==
-* [x] Spring 2022: if remote again, consider moving resistors and LEDs to USC kit so shipping delays on Sparkfun kit don't affect students during first two weeks
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] tell students not to unclaim device
-* [x] **Assignments**
-  * [x] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
-  * [x] give list of items students should include in videos each week
 * [ ] **proposal**
   * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
 * [ ] recruit guest lecturers (x2)
@@ -49,20 +41,14 @@ toc_sticky: true
 
 * [ ] use something other than blackboard for submissions
 
-* [ ] summary of info. Things like what do wires do I connect to what pins for <whatever sensor> or  what is the generic formula for button-pushing detection? "living document". Whether that's a required part of assignments or a group doc different students add to each week, I've found that when students have to be accountable for something beyond their own notes, we tend to put  effort into it.I have seen this in other classes, something like, as a midterm  prep we might all be required to add an answer to a group doc. Although  it's annoying to do at times, I think a lot of people appreciated  hearing facts in other people's words. 
+* [ ] summary of info. 
 
-  It's mostly a  collection of summaries. I think you put a lot of really useful info on  the site - almost everything we need. But I might actually print out and keep a book like I'm mentioning. Here's my idea:
-
-  - Every sensor will be summarized in a group doc, so each student would do ~2  sensors/semester. The write up would have the quick-lookup details (I  attached an example)
-  - Maybe a summary of enums or states
   - Maybe a page of "tips" - cool work-around or example of something not completely covered in class. 
-  - Maybe a page of "oops" - mistakes to be avoided
+- Maybe a page of "oops" - mistakes to be avoided
   - Maybe a page of troubleshooting - there were a few tricky situations people posted on Piazza, a record of that would be cool
   - Maybe a page of ideas - problems to solve. Maybe something you and the TAs add, challenges of all levels for fun
-
-   I wish there were a way to make the entries build on each other, but I  can't think of how. I think that's the living part? I guess they could  work in pairs? Although this can be tedious, I think it's good to talk  through something with someone learning the same topic, even if it's  easy.
-
-  Probably more words than was needed, but I hope this is helpful!
+  
+  
   
   
 
@@ -153,8 +139,6 @@ toc_sticky: true
 ## General Feedback (Spring 2021)
 
 - [ ] Assignment 0 and 1 are given out week 1, day 1; due week 2, day 1; that is the pattern
-- [x] Develop a way to post readings on website
-- [x] Try to integrate lectures, readings, assignments all on one webpage under "weeks"
 - [ ] students like being show a small bit of using a sensor, and then extending it on their own
 - [ ] students like hands-on
 
@@ -163,7 +147,7 @@ toc_sticky: true
 ## Pre-semester
 
 - [ ] Send students installation instructions / video
-- [x] purchase items (see Evernote pre-semester tasks)
+- [ ] purchase items (see Evernote pre-semester tasks)
 
 - Reading
   - Enabling the Internet of Things https://web.eecs.umich.edu/~prabal/teaching/resources/eecs582/want15iot.pdf

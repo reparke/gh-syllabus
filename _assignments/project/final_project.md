@@ -37,6 +37,7 @@ the key functioning elements. Here is a [partial list of components and services
     * [Initial State](https://www.initialstate.com/)
     * [Losant](https://www.losant.com/)
     * [ThingSpeak](https://thingspeak.com/)
+  * Blynk does not meet the dashboard requirement
 * Must have interface app (web or mobile) and be able to receive feedback from app to produce effects in the physical world (i.e. control device remotely)
   -   Examples of acceptable tools
       -   Blynk cloud app
@@ -47,8 +48,7 @@ the key functioning elements. Here is a [partial list of components and services
       -   Particle app 
 * Comment your code and follow consistent coding convention
 * Developer and user documentation (see below)
-* Your project has to compile and run *(projects that fail to run will receive
-  a 50% penalty)*
+* Your project has to compile and run *(projects that fail to run will receive a 50% penalty)*
 * No late submission will be accepted
 * Note: in the coming weeks we will discuss the following components in case
   you want to include them in your project
@@ -148,10 +148,11 @@ Grading
 | Controlling device from remotely (via cloud or Bluetooth) | **10** |
 | In-person demonstration                                   | **10** |
 | Coding style and organization                             | **5**  |
-| Developer documentation                                   | **5**  |
-| User documentation                                        | **5**  |
 | Device fulfills original proposal features                | **10** |
 |                                                           |        |
+| **Documentation**                                         |        |
+| Developer documentation                                   | **5**  |
+| User documentation                                        | **5**  |
 | **Total**                                                 | **97** |
 
 ## Acknowledgements
