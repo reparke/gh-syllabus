@@ -3,18 +3,45 @@
     Generating string will all the dates of the semester by weeks
     Input: none
     Output: string with dates of the semester
-        Format: "week1"|"is_spring_break"|"start_day"|"end"
+        Format: "week1"|"is_this_calendar_week_spring_break"|"start_day"|"end"
+
+    Logic: 
+        calendar_offset: used to calculate the number seconds (weeks) from start
+            of the semester until the current week
+        instruction_week: 1-15 which represents the week # in course planning
+            meaning this ignores spring break; 16 represents "bonus content"
+
 {% endcomment %}
 
 
 {% assign num_weeks = site.calendar.semester_num_weeks %}
+{% assign has_spring_break = site.calendar.semester_has_spring_break %}
+{% assign week_num_spring_break = site.calendar.semester_week_of_spring_break %}
+
+
+
 {% capture week_dates %}
     {% for i in (0..num_weeks) %}
-        {% assign offset = i | minus: 1 %} 
-        {% assign start_current_week = site.calendar.seconds_in_week | times: offset %}
+        {% assign calendar_offset = i | minus: 1 %} 
+            {% if has_spring_break == true and i == week_num_spring_break %}
+                {% continue %}
+            {% endif %}
+        
+        {%- comment -%}
+        - instruction_week is 1-15 which represents content weeks
+        - When a semester has a Spring Break AND i (the week counter) is >= week of Spring break
+            it is necessary to subtract 1. This is because the content pages have a "week" parameter
+            in the front matter which is 1-15. In this way, the week of Spring Break is ignored.
+        {%- endcomment -%}
+        {% assign instruction_week = i %}
+        {% if has_spring_break == true and i >= week_num_spring_break %}
+            {% assign instruction_week = instruction_week | minus: 1 %}
+        {% endif %}
+
+        {% assign start_current_week = site.calendar.seconds_in_week | times: calendar_offset %}
         {% assign end_current_week = site.calendar.seconds_to_end_current_week | times: i %}
-        {{i}}
-        |spring break place holder
+        {{ instruction_week }}
+        |{% if has_spring_break == true and instruction_week == week_num_spring_break %}true{% else %}false{% endif %}
         |{{ site.calendar.semester_start_sunday | date:'%s' | plus: start_current_week | date_to_string | strip}}
         |{{ site.calendar.semester_start_sunday | date:'%s' | plus: end_current_week | date_to_string | strip}}
         {% if forloop.last == false %}::{% endif%}

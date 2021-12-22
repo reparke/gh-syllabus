@@ -15,6 +15,8 @@ toc_sticky: true
 {% endcapture %}
 {% assign dates_array = dates_string | split: '::' %}	
 
+{% assign has_spring_break = site.calendar.semester_has_spring_break %}
+{% assign week_num_spring_break = site.calendar.semester_week_of_spring_break %}
 
 <p><i>To be completed prior to coming to lecture in a given week</i></p>
 
@@ -22,6 +24,14 @@ toc_sticky: true
 {% for week in all_readings %}
 {% assign index = week.name | times: 1 %} 
 {% assign current_dates = dates_array[index] | split: '|' %}
+{% comment %}
+  This if block prints "Spring Break" before printing the instruction week which
+    comes after the week of Spring Break (according to the calendar)
+{% endcomment %}
+{% if has_spring_break == true and index == week_num_spring_break %}
+<ul><li>Spring Break</li></ul>
+{% endif %}
+
 {% if index != 16 %}
 
 <ul>

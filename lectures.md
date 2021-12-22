@@ -15,12 +15,23 @@ toc_sticky: true
 {% endcapture %}
 {% assign dates_array = dates_string | split: '::'%}	
 
-
+{% assign has_spring_break = site.calendar.semester_has_spring_break %}
+{% assign week_num_spring_break = site.calendar.semester_week_of_spring_break %}
 
 {% assign all_lectures = site.lectures | group_by: 'week' %}
 {% for week in all_lectures %}
 {% assign index = week.name | times: 1 %} 
 {% assign current_dates = dates_array[index] | split: '|' %}
+
+{% comment %}
+  This if block prints "Spring Break" before printing the instruction week which
+    comes after the week of Spring Break (according to the calendar)
+{% endcomment %}
+{% if has_spring_break == true and index == week_num_spring_break %}
+<h2 id="spring_break">Spring Break
+<a class="header-link" href="#spring_break" title="Permalink"></a></h2>
+{% endif %}
+
 {% if index != 16 %}
 
 <h2 id="week_{{ week.name }}">Week {{ week.name }} ({{current_dates[2] | strip}} - {{current_dates[3] | strip}})<a class="header-link" href="#week_{{ week.name }}" title="Permalink"></a></h2>
