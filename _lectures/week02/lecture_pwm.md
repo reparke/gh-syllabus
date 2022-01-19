@@ -38,18 +38,18 @@ title: Pulse Width Modulation
 
 ## Key Terms
 
-* Square wave: a digital output that switches repeatedely from high (3.3v) to low (0v)
+* Square wave: a digital output that switches repeatedly from high (3.3v) to low (0v)
 * Pulse width: how long the signal is high (usually in milliseconds)
 * Duty cycle: percentage of one "cycle" that a signal is at 3.3v
 * Period: time for one on/off cycle to complete (usually in milliseconds)
-* Frequency: how many times per second the on/off cycle repeats (Hz)
+* Frequency: how many times per second the on/off cycle repeats (Hz) *(default Argon PWM frequency is 500 Hz or 2 ms)*
 
 ## Key Terms Illustrated
 
 <img src="lecture_pwm.assets/pwm_33v.png" style="width: 500px" alt="pulse width modulation illustrated" />
 
 <!-- point out
-* Square wave: a digital output that switches repeatedely from high (3.3v) to 0v
+* Square wave: a digital output that switches repeatedly from high (3.3v) to 0v
 * Pulse width: how long the signal is high (usually in milliseconds)
 * Duty cycle: percentage of time that a signal is at 3.3v
 * Period: time for one on/off cycle to complete (usually in milliseconds)
@@ -74,8 +74,14 @@ title: Pulse Width Modulation
 ## Using PWM
 
 * Only certain pins support PWM
-* Pins D2-D8 can be used as PWM output pins
-* *Pins A0-A5 can also be used*
+  * Pins D2-D8 can be used as PWM output pins
+  * *Pins A0-A5 can also be used*
+
+* PWM pins are assigned to one of three groups
+* Each group can have different PWM values (duty cycles), but must share the same  frequency and resolution
+  * Pins D4, D5, D6, D8
+  * Pins A0, A1, A2, A3
+  * Pins D2, D3, A4, A5
 
 ## Writing Analog Output with `analogWrite` 
 

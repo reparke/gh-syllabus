@@ -174,8 +174,9 @@ toc_sticky: true
 - Introduction to IoT
 - Kit Overview
 - Possibly show this [mind map](https://www.mindmeister.com/1308604904?t=O0Vcty0Uys) from Boris Tomas
-- Safety
-- Explain course website
+- ==Explain course website==
+- Explain how to use envelopes
+- Explain how to identify kit parts
 
 #### Lab
 
@@ -192,6 +193,7 @@ toc_sticky: true
 
 #### Lecture
 
+- Safety
 - Pass out argons 
    - students are responsible for returning devices if they drop before drop deadline
    - If online, students will already have these
@@ -206,8 +208,7 @@ toc_sticky: true
 #### Lecture
 
 - Electricity and Ohm's Law
-- Argon program structure
-- LED and Digital output
+- LED (covered) and Digital output (moved to week 2 after argons are set up)
 
 #### Lab
 
@@ -257,7 +258,8 @@ toc_sticky: true
 
 #### Lecture
 
-* Argon Microcontroller (finish Fall 2021)
+* Argon Microcontroller
+* LED (covered week 1) and Digital output
 * Start with LED example
 
 #### Lab

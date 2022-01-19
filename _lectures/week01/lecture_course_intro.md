@@ -28,10 +28,7 @@ title: Course Introduction
 
 ## Teaching Assistants / Graders
 
-- Neftali Hernadez 
-- [neftalih@usc.edu](mailto:neftalih@usc.edu) 
-- Lydia Cardwell
-- [lcardwel@usc.edu](mailto:lcardwel@usc.edu)
+- Neftali, Lydia, Jenny
 - Office hours for will be posted on Blackboard
 - For grading issues, post on Piazza and tag the TA
 - For general questions, you can contact either of us

@@ -88,11 +88,10 @@ tone(D2, 1000, 0);		// play 1KHz tone (don't stop)
 
 * `tone()` requires a pin that supports PWM
 * PWM pins are assigned to one of three groups
-* A group must produce the same tone (so maximum three tones at once)
-
-	1. Pins D4, D5, D6, D8
-	2. Pins A0, A1, A2, A3
-	3. Pins D2, D3, A4, A5
+* Each group can have different PWM values (duty cycles), but must share the same  frequency and resolution
+  * Pins D4, D5, D6, D8
+  * Pins A0, A1, A2, A3
+  * Pins D2, D3, A4, A5
 
 ## Stopping Sound
 Syntax

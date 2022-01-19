@@ -19,13 +19,20 @@ show_in_list: true
 * The result is the "effective" output voltage can be varied (since the signal is switching between high and low)
 * The "effective" output voltage varies from 0 volts (always off) to 3.3v (always on)
 * This is controlled by a parameter to `analogWrite` that varies from `0` to `255`
+* Default frequency: 500 Hz (2 ms)
 
 
 ### Supported Pins
 
 * Only certain pins support PWM
-* Pins `D2`-`D8` 
-* Pins `A0`-`A5` 
+  * Pins `D2`-`D8` 
+  * Pins `A0`-`A5` 
+
+* PWM pins are assigned to one of three groups
+* Each group can have different PWM values (duty cycles), but must share the same  frequency and resolution
+  * Pins D4, D5, D6, D8
+  * Pins A0, A1, A2, A3
+  * Pins D2, D3, A4, A5
 
 ## Operation
 

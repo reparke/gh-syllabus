@@ -35,7 +35,8 @@ show_in_list: true
 
 * The wiring colors vary with different servos so look carefully at your documentation
 
-<img src="servo_motors.assets/servo-color-code.jpg" alt="bg opacity:.75" style="width:400px;" /><img  src="lecture_servo_motors.assets/image-20210310115209181.png" alt="image-20210310115209181" style="width:400px" />
+<img src="servo_motors.assets/servo-color-code.jpg" alt="bg opacity:.75" style="width:400px;" />
+<img src="servo_motors.assets/image-20210310115209181.png" alt="image-20210310115209181" style="width:400px" />
 
 
 
@@ -93,11 +94,11 @@ void loop(){
 ## Reminder: Argon PWM Pin Groups
 
 * PWM pins are assigned to one of three groups
-* All pins in a group must produce the same PWM value
-
+* Each group can have different PWM values (duty cycles), but must share the same  frequency and resolution
   * Pins D4, D5, D6, D8
   * Pins A0, A1, A2, A3
   * Pins D2, D3, A4, A5
+
 
 ## Credits
 
