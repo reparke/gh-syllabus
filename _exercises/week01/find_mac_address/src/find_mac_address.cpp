@@ -4,10 +4,10 @@
 
 #include "Particle.h"
 #line 1 "f:/Github/ITP_348_Content_Public/_exercises/week01/find_mac_address/src/find_mac_address.ino"
- void setup();
+//SYSTEM_MODE(MANUAL);
+void setup();
 void loop();
-#line 1 "f:/Github/ITP_348_Content_Public/_exercises/week01/find_mac_address/src/find_mac_address.ino"
-SYSTEM_MODE(MANUAL);
+#line 2 "f:/Github/ITP_348_Content_Public/_exercises/week01/find_mac_address/src/find_mac_address.ino"
 byte mac[6];  // the MAC address of your Wifi shield
 int LED = D7;
 
@@ -18,7 +18,6 @@ void setup() {
 }
 
 void loop() {
-    Serial.print("MAC: ");
     for (int i = 0; i < 6; i++) {
         Serial.printf("%02x%s", mac[i], i != 5 ? ":" : "");
     }

@@ -1,4 +1,4 @@
-SYSTEM_MODE(MANUAL);
+//SYSTEM_MODE(MANUAL);
 byte mac[6];  // the MAC address of your Wifi shield
 int LED = D7;
 

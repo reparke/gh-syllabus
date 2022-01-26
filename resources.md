@@ -13,6 +13,10 @@ toc_sticky: true
 
 ## References
 
+### Debugging Tips
+
+- [Using captive wifi networks](captive_wifi/captive_wifi.html)
+
 ### Books
 
 - [Practical Electronics for Inventors](https://www.accessengineeringlibrary.com/content/book/9781259587542) available to USC students through USC library subscription
