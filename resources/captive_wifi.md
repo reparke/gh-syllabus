@@ -1,3 +1,11 @@
+---
+marp: true
+theme: itp
+ 
+layout: single
+---
+
+
 ## Captive Wifi Networks
 
 - "Captive Wifi" networks are networks where you need to login or click accept before connecting such as
@@ -69,7 +77,7 @@ void loop() {
 
 `c8:2b:96:b6:40:B4` *(just an example)*
 
-
+ 
 
 ### Registering Your MAC Address
 
@@ -77,10 +85,11 @@ void loop() {
 - Register your Argon by entering your unique MAC address
 - Here is an example
 
-![image-20220125190440788](add_mac.png)
+![image-20220125190440788](captive_wifi.assets/add_mac.png)
 
 - Put the Argon in listening mode (dark blue) and go through process of claiming the device again (you do not need to unclaim the device)
 
 ## Credits
 
+- Zach Ji
 - [Particle Community](https://community.particle.io/t/how-to-get-mac-address/1411/9)

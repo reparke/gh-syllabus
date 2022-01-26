@@ -15,7 +15,7 @@ toc_sticky: true
 
 ### Debugging Tips
 
-- [Using captive wifi networks](captive_wifi/captive_wifi.html)
+- [Using captive wifi networks](captive_wifi/)
 
 ### Books
 
