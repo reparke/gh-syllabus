@@ -91,4 +91,5 @@ void loop() {
 
 ## Credits
 
+- Zach Ji
 - [Particle Community](https://community.particle.io/t/how-to-get-mac-address/1411/9)
