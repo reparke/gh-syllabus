@@ -132,6 +132,13 @@ At regular intervals, the device will publish how many times each timer has gone
 - Repeat for the blue button.
 - Press the red button and then the blue button. The RGB LED should flash red and then blue once per second. 
 
+### Extra Credit
+
+- Remove all `delay()`
+- Instead, use `millis()` to control the on/off blinking for the status indicator and ending timer
+
+
+
 **Naming convention **
 
 *(replace \# with the current assignment number)*
@@ -208,5 +215,6 @@ Grading
 | **Stage 5: Timer Status**                                    |        |
 | Light flashes red when red timer is active                   | 2      |
 | Light flashes blue when blue timer is active                 | 2      |
+| **Extra credit**                                             | +3     |
 |                                                              |        |
 | Total                                                        | 34     |
