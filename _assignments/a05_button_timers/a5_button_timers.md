@@ -20,7 +20,7 @@ Goals
 
 -   Use push button for digital input
 
--   Process timed events
+-   Process timed events using `millis()`
 
 ## Overview
 
@@ -28,7 +28,7 @@ Goals
 
 The assignment is create a device that supports multiple timers. There are two buttons (red and blue) which trigger different timers. The RGB LED will flash red and/or blue briefly each second to indicate which timers are active. When a timer goes off, the RGB LED will flash a random sequence of colors to indicate a timer has ended. The majority of all the timing will be controlled a multi-tasking approach with `millis()` instead of `delay()`.
 
-At regular intervals, the device will publish how many times each time has gone off.
+At regular intervals, the device will publish how many times each timer has gone off.
 
 ## Components
 
@@ -46,18 +46,17 @@ At regular intervals, the device will publish how many times each time has gone 
 
 -   Create a Fritzing breadboard prototype layout of your design
 -   Once you’re satisfied with the design, build the device and create firmware
+-   **Important: Most the timing in this assignment must use `millis()`. You will lose points for using `delay()` except where it is indicated**
 -   Buttons 
     -   Should be programmed as as latches
     -   Pressing the red button when the red timer is inactive will start the red timer (same for blue button)
     -   Pressing the red button when the red timer is active will stop / reset the red timer (same for blue button)
-
 -   Timers
     -   There are four timers
     -   Red timer: 7 seconds
     -   Blue timer: 11 seconds
     -   Status timer (how often the RGB LED blinks to indicate active timers): 1 second
     -   Publish timer: 20 seconds
-
 -   It is recommended to code the device in stages, and test at each stage
 
 ### Stage 1: Button Latches 
