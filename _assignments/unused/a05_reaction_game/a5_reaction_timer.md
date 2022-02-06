@@ -1,12 +1,3 @@
----
-week: 5
-number: 5
-category: assignments
-title: Reaction Timer Game
-date_due: Feb 14 @ 11:59 pm
-
----
-
 Assignment 5 – Reaction Timer Game
 ==================================
 
