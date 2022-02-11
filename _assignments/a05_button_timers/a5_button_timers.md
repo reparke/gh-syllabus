@@ -30,6 +30,10 @@ The assignment is create a device that supports multiple timers. There are two b
 
 At regular intervals, the device will publish how many times each timer has gone off.
 
+Here is a video overview: [https://youtu.be/MuYajFfvIvk](https://youtu.be/MuYajFfvIvk) 
+
+*Please note that the assignment requires red and blue buttons, but the video uses red and green buttons. Red and blue are preferred for contrasting colors because individuals with certain types of color blindness may have difficulty distinguishing between red and green.*
+
 ## Components
 
 -   Argon

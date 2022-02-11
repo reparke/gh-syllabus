@@ -20,7 +20,8 @@ Pin D2 (pullup)
 //#define PIN_OLED_CS D4   // Connect CS to pin A2 (required for SPI)
 //MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
 
-MicroOLED oled;
+MicroOLED oled(MODE_I2C, 9, 1);  // Example I2C declaration RST=D7, DC=LOW
+// (0)
 
 const int PIN_BUTTON = D2;
 const int PIN_POT0 = A0;

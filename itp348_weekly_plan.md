@@ -583,7 +583,6 @@ toc_sticky: true
 
 - Due start of current week: A4 - Electronic dice 
 - Given out start of current week: A5 - Reaction Timer
-- ==Consider revising Reaction Timer to something involving millis()==
 - Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
 ## 6. Magnetic Switch; Blynk
