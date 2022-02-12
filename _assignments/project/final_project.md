@@ -3,7 +3,7 @@ week: 10
 number: 13
 category: assignments
 title: Project
-date_due: Apr 04 @ 11:59 pm; Milestone Apr 11 @ 11:59 pm; Finished device and presentation May 05 @ 4:30 pm
+date_due: Proposal due Apr 04 @ 11:59 pm; Milestone Apr 11 @ 11:59 pm; Finished device and presentation May 05 @ 4:30 pm
 
 ---
 

@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: TMP36 Analog Temperature Sensor
+title: TMP36
 show_in_list: true
 ---
 
@@ -34,7 +34,8 @@ Requires analog input pin (Pins `A0`-`A5`)
 ### Conversions
 
 - 10 mV per deg C with a 0.5 v offset
-- `tempCelsius = ADC_val / 4095 * 3.3` 
+- `voltage = ADC_val / 4095 * 3.3` 
+- `tempCelsius = (voltage - 0.5) * (1 / 0.01)` 
 - `tempFahrenheit = tempCelsius * (9/5) + 32`
 
 ### Important: C++ `int` and `float`
@@ -71,8 +72,11 @@ void loop() {
     // read ADC value
     int val = analogRead(pin_temp);  // range 0-4095 ADC
     
-    // calculate celsius from ADC
-    float tempC = ((float)voltage - 0.5) / 0.01;
+    // calculate voltage from ADC
+    float voltage = (float)val / 4095 * 3.3;
+    
+    // calculate celsius from voltage
+    float tempC = (voltage - 0.5) / 0.01;
     
     //convert to fahrenheit
     float tempF = tempC * (9.0 / 5) + 32;
