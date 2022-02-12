@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Reference: TMP36
+title: (Reference) TMP36
 show_in_list: true
 ---
 
