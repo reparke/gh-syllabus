@@ -54,6 +54,7 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
 
 -   Create a Fritzing breadboard prototype layout of your design
 -   Once you’re satisfied with the design, connect the device
+-   The push button should be configured as a latch (i.e. pressing / holding the button only rolls the die once)
 
 
 
