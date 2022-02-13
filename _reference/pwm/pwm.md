@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Pulse Width Modulation
+title: (Reference) Pulse Width Modulation
 show_in_list: true
 
 ---

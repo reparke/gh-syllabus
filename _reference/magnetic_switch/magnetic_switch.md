@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Magnetic Switch
+title: (Reference) Magnetic Switch
 show_in_list: true
 
 ---

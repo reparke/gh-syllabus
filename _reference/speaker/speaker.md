@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Speakers / Piezo Buzzers
+title: (Reference) Speakers / Piezo Buzzers
 show_in_list: true
 
 ---

@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title:  DHT - Temperature and Humidity Sensor
+title:  (Reference) DHT
 show_in_list: true
 
 ---

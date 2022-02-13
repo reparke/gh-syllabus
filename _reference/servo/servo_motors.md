@@ -4,7 +4,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Servo Motors
+title: (Reference) Servo Motors
 show_in_list: true
 
 ---

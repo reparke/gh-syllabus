@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Serial Monitor
+title: (Reference) Serial Monitor
 show_in_list: true
 
 ---

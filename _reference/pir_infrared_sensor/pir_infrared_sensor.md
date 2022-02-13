@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: PIR - Passive Infrared Sensor
+title: (Reference) PIR
 show_in_list: true
 ---
 

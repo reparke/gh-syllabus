@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: DC Motors and Motor Driver
+title: (Reference) DC Motors and Motor Driver
 show_in_list: true
 
 ---

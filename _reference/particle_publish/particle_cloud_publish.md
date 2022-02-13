@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Particle Publish
+title: (Reference) Particle Publish
 show_in_list: true
 
 ---

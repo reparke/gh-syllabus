@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Potentiometers
+title: (Reference) Potentiometers
 show_in_list: true
 
 ---

@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: RGB LEDs
+title: (Reference) RGB LEDs
 show_in_list: true
 
 ---

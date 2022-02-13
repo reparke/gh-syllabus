@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Switches
+title: (Reference) Switches
 show_in_list: true
 
 ---

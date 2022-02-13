@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title:  Heart Rate Sensor (MAX30101)
+title:  (Reference) Heart Rate Sensor (MAX30101)
 show_in_list: true
 
 ---

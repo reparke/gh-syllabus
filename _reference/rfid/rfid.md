@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title:  RFID (Radio Frequency ID Scanner)
+title: (Reference) RFID
 show_in_list: true
 ---
 

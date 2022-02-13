@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Photoresistors
+title: (Reference) Photoresistors
 show_in_list: true
 
 ---

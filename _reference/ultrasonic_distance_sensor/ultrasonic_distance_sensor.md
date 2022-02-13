@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title:  Ultrasonic Distance Sensor
+title:  (Reference) Ultrasonic Distance Sensor
 show_in_list: true
 ---
 

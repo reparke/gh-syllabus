@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: LED
+title: (Reference) LED
 show_in_list: true
 ---
 

@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: ِAccelerometer
+title: ِ(Reference) Accelerometer
 show_in_list: true
 
 ---

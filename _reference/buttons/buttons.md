@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: Buttons
+title: (Reference) Buttons
 show_in_list: true
 
 ---

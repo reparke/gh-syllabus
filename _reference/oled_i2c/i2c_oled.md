@@ -3,7 +3,7 @@ marp: true
 theme: itp
 
 category: reference
-title: MicroOLED (I2C)
+title: (Reference) MicroOLED (I2C)
 show_in_list: true
 
 ---
