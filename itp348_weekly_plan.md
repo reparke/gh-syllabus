@@ -645,12 +645,8 @@ toc_sticky: true
 
 #### Assignment
 
-- Due start of current week: A5 - Reaction Timer
-  - Warn students that it was time consuming
-  - **==IDEA==** make reaction timer a state machine assignment and move forward (replace other assignment)
-- Given out start of current week:  A6 - Preliminary Proposal Ideas
-  - This seems early for this
-  - Could consider moving this later in a future semester
+- Due start of current week: A5 - Button Timer
+- Given out start of current week:  A6 - Preliminary Proposal Idea
 
 ## 7. Finite State Machines 
 
