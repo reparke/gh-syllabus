@@ -39,7 +39,6 @@ enum Color { Red, Blue, Orange, Yellow, White, Black };
 
 // TODO: create enum Cycle for cycles
 
-// TODO: create enum Color for light colors
 
 // TODO: create other state variables
 unsigned long prevMillisState = 0;

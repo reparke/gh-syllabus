@@ -13,6 +13,7 @@ toc_sticky: true
 
 **Definite**
 
+* [ ] publish parts for ITP 348 fritzing bin
 * [ ] Nov for Sp 2022 Kit changes
   * [ ] add [magnetic switch](https://piazza.com/class_profile/get_resource/koq7em9bi9r20s/kv79axv46lo4aa) and any other missing parts to download library (e.g. accel, max30101, button, qwiic cable, microoled qwiic) so students can download one library only
   * [ ] remove LEDs, 300, 10k, buttons, switch (?), photocell (? ) from sparkfun kit 
@@ -659,8 +660,25 @@ toc_sticky: true
 
 #### Lecture
 
-- Finish Blynk overview
+- Finite state machines (video)
 - Discuss state machines
+
+#### Lab
+
+- Starting with sample code
+- walk through NS light state transitions (length, state)
+- use delay() (not `millis`)
+
+### Feedback
+
+- next day cover `millis`, then rest of light blinking
+- some students enjoyed the complexity of all parts, other seemed bored
+
+### Day 2
+
+#### Lecture
+
+- 
 
 #### Lab
 
@@ -690,22 +708,7 @@ toc_sticky: true
   - phase 6
     - setouputs, next duration, next state for economy
 
-### Day 2
-
-#### Lecture
-
-- Finite state machines (video)
-
-#### Lab
-
-- Starting with sample code
-- walk through NS light state transitions (length, state)
-- use delay() (not `millis`)
-
-### Feedback
-
-- next day cover `millis`, then rest of light blinking
-- some students enjoyed the complexity of all parts, other seemed bored
+- 
 
 ## Feedback
 

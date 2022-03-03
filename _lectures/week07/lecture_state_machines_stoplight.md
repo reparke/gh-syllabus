@@ -4,7 +4,7 @@ theme: itp
 
 week: 7
 category: lectures
-title: State Machines Part 3 - Stoplight Example
+title: State Machines Part 2 - Stoplight Example
 
 ---
 <!-- headingDivider: 2 -->

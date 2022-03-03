@@ -27,7 +27,7 @@ enum State {
 State currentState = stateTrafficGo;
 
 enum Color { Red, Yellow, Green, Black };
-
+    
 void updateOLED() {
     String output = "";
 

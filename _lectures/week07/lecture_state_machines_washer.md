@@ -4,7 +4,7 @@ theme: itp
 
 week: 7
 category: lectures
-title: State Machines Part 2 - Dish Washer Example
+title: State Machines Part 3 - Dish Washer Example
 ---
 
 <!-- headingDivider: 2 -->
