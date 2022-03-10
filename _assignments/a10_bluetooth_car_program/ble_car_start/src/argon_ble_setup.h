@@ -1,6 +1,10 @@
 #include "Particle.h"
 
-const String DEVICE_NAME = "dev1";  // CHANGE THIS
+/* This is what shows up in Bluefruit
+   You can change this to something that is short
+   only has letters (no spaces, numbers, or special characters)
+*/
+const String DEVICE_NAME = "car";
 
 /*
 1) ADD BLUETOOTH SERVICES ===============================
@@ -48,7 +52,6 @@ BleCharacteristic rxCharacteristic("rx",
                                    BleCharacteristicProperty::WRITE_WO_RSP,
                                    rxUuid, serviceUuid, onDataReceived, NULL);
 
-
 /*
 5) BLE CONFIGURATION ========================================
   Add characterisitcs and begin advertising peripheral device
@@ -57,13 +60,12 @@ BleCharacteristic rxCharacteristic("rx",
 */
 // call this function from within SETUP
 void argon_ble_setup() {
-  BLE.addCharacteristic(txCharacteristic);
-  BLE.addCharacteristic(rxCharacteristic);
+    BLE.addCharacteristic(txCharacteristic);
+    BLE.addCharacteristic(rxCharacteristic);
 
-  BleAdvertisingData data;              // build peripheral's advertising data
-  data.appendServiceUUID(serviceUuid);  // advertise serial / UART service
-  data.appendLocalName(DEVICE_NAME);  // include custom name visible in mobile app
-  BLE.advertise(&data);          // advertise to mobile app (central device)
-
-  
+    BleAdvertisingData data;              // build peripheral's advertising data
+    data.appendServiceUUID(serviceUuid);  // advertise serial / UART service
+    data.appendLocalName(
+        DEVICE_NAME);      // include custom name visible in mobile app
+    BLE.advertise(&data);  // advertise to mobile app (central device)
 }

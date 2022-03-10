@@ -17,7 +17,8 @@ toc_sticky: true
   * [ ] combine A8 and A10 (bluetooth car). Since we don't play with the card in class, have students build the car ahead of time isn't necessary. These could be combined, and the bluetooth fan example could covered during bluetooth lecture
   * [ ] either give students a week without an assignment or make new assignment
   * [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
-
+  * [ ] move starting project for car from week 10 to assignment 10 (or whatever)
+  
 * [ ] publish parts for ITP 348 fritzing bin
 * [ ] Nov for Sp 2022 Kit changes
   * [ ] publish parts for ITP 348 fritzing bin. add [magnetic switch](https://piazza.com/class_profile/get_resource/koq7em9bi9r20s/kv79axv46lo4aa) and any other missing parts to download library (e.g. accel, max30101, button, qwiic cable, microoled qwiic) so students can download one library only
