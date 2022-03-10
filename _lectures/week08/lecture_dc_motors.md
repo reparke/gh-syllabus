@@ -34,10 +34,26 @@ title: DC Motors
 
 <!--Torque is a measure of force that causes an object to rotate about an axis-->
 
+## How Do Brushed Motors Work?
+
+- Electromagnetism!
+- VERY brief physics aside
+
+## Electromagnetism
+
+* The guiding principle behind electric motors is the **Lorentz Force**
+
+
+* **Electrical current in a magnetic field produces a physical force**
+* Force direction is given by the “right-hand rule”
+  * Current direction along your index
+  * Magnetic field along your middle
+  * Force direction is along your thumb
+
 ## Three Main Parts of DC Motor  
 
-* Stator (stationary part with magnets)
-* Armature (rotating wire)
+* Stator magnets (stationary)
+* Armature / Windings (rotating wire)
 * Commutator (supplies current to armature)
 
 ## Inside Simple DC Motor
@@ -54,39 +70,18 @@ title: DC Motors
 
 
 
-## Electricity and Magnetism
-
-* The guiding principle behind electric motors is the **Lorentz Force**
 
 
-* **Electrical current in a magnetic field produces a physical force**
-* Force direction is given by the “right-hand rule”
-  * Current direction along your index
-  * Magnetic field along your middle
-  * Force direction is along your thumb
+## Illustration
+<img src="lecture_dc_motors.assets/dc_motor_illustration_slow.gif" alt="dc_motor_illustration" style="width:500px;" />
 
-## Lorentz Force
 
-<img src="lecture_dc_motors.assets/lorentz.png" alt="Lorentz Force" style="width:700px" />
-
-## Lorentz Force
-
-<img src="lecture_dc_motors.assets/lorentz2.png" alt="Lorentz Force" style="width:350px" /> <img src="lecture_dc_motors.assets/lorentz2_current_reversed.png" alt="Lorentz Force" style="width:350px" />
 
 <!-- force on right side of armature is INTO screen while force on left side of armature is OUT of screen (since current is opposite direction)-->
 
-
-## Lorentz Force
-
-* When the armature rotates 90 degrees, the two contacts reverse the current
-
-* This doesn’t change the direction of the current relative to the magnetic field
-  * The Lorentz Force is acting in the SAME direction all the time
-  * Keeps the motor spinning in the same direction
-
-## Lorentz Force
-
-<img src="lecture_dc_motors.assets/DCMotor.gif" alt="Motor gif" style="width:1100px" />
+<!--
+Lorentz Force:  When the armature rotates 90 degrees, the two contacts reverse the current. This doesn’t change the direction of the current relative to the magnetic field. The Lorentz Force is acting in the SAME direction all the time. Keeps the motor spinning in the same direction
+-->
 
 
 

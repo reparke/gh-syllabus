@@ -19,7 +19,7 @@ This list include the components we covered in the course. You can also use comp
 -   [Ultrasonic distance sensor](https://www.sparkfun.com/products/15569)
 -   [Passive infrared sensor (PIR)](https://www.sparkfun.com/products/13285) (infrared movement detection)
 -   [MAX30105 heart rate and temperature sensor](https://www.sparkfun.com/products/14045)
--   RGB sensor + gesture detection sensor
+-   [RGB sensor + gesture detection sensor](https://www.sparkfun.com/products/12787) (not included our kit)
 -   [RFID sensor](https://www.amazon.com/gp/product/B01CSTW0IA) 
 -   [Infrared sensor](https://www.sparkfun.com/products/246)
 

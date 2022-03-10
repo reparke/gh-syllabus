@@ -13,30 +13,34 @@ toc_sticky: true
 
 **Definite**
 
+* [ ] A8
+  * [ ] combine A8 and A10 (bluetooth car). Since we don't play with the card in class, have students build the car ahead of time isn't necessary. These could be combined, and the bluetooth fan example could covered during bluetooth lecture
+  * [ ] either give students a week without an assignment or make new assignment
+  * [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
+
 * [ ] publish parts for ITP 348 fritzing bin
 * [ ] Nov for Sp 2022 Kit changes
-  * [ ] add [magnetic switch](https://piazza.com/class_profile/get_resource/koq7em9bi9r20s/kv79axv46lo4aa) and any other missing parts to download library (e.g. accel, max30101, button, qwiic cable, microoled qwiic) so students can download one library only
-  * [ ] remove LEDs, 300, 10k, buttons, switch (?), photocell (? ) from sparkfun kit 
-  * [ ] test step up 5v regulator: https://www.pololu.com/product/2564 
+  * [ ] publish parts for ITP 348 fritzing bin. add [magnetic switch](https://piazza.com/class_profile/get_resource/koq7em9bi9r20s/kv79axv46lo4aa) and any other missing parts to download library (e.g. accel, max30101, button, qwiic cable, microoled qwiic) so students can download one library only
+  * [ ] should have second day for bluetooth and motors
+  * [x] remove LEDs, 300, 10k, buttons, switch (?), photocell (? ) from sparkfun kit 
+  * [ ] test step up 5v regulator: [https://www.pololu.com/product/2564]( https://www.pololu.com/product/2564 ) 
   * [ ] finalize kit VERY early and have students order in July or in Nov
-  * [ ] Consider having bookstore purchase again
-  * [ ] could ITP sell directly to students?
-  * [ ] ask sparkfun to swap 1 Qwiic breadboard cable for interconnecting cable
+  * [x] Consider having bookstore purchase again
+  * [x] could ITP sell directly to students?
+  * [x] ask sparkfun to swap 1 Qwiic breadboard cable for interconnecting cable
   * [ ] consider moving A9 earlier to be closer to material (even if prelim proposal and A9 overlap)
   * [ ] consider removing week 10 OLED graphics, replace with...? JSON, softpot, piezo motion sensor
-  * [ ] should have second day for bluetooth and motors
   * [ ] Week 10 idea: 
     * [ ] Tues is ultra sonic sensor + project overview; show BRIEFLY how to load images
     * [ ] Thurs is using JSON to send multiple values to Initial State; consider recording a video for json overview and moving early
     * [ ] week 10 / 11: may need to record JSON videos for clarity
     * [ ] week 10 / 11: may need to include a subscribe video or lectu
-* [ ] ==**Revise A5 reaction timer. Remove any need for a while loop**==
+* [x] **Revise A5 reaction timer. Remove any need for a while loop**
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] tell students not to unclaim device
 * [ ] **proposal**
   * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
 * [ ] recruit guest lecturers (x2)
-* [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
 
 **Possible**
 
@@ -738,13 +742,16 @@ toc_sticky: true
 
 ### Day 2
 
+Have students build fan and circuit before class
+
 #### Lecture
 
 - DC Motors
 
 #### Lab
 
-- Connect motor to 3v3
+- Demonstrate connecting motor to 3v3
+- Start fan project by using potentiometer to control DC motor speed only
 
 #### Lecture
 
@@ -752,15 +759,13 @@ toc_sticky: true
 
 #### Lab
 
-- Connect servo to DC motor
-- control fan speed and direction with a potentiometers (do one version where it controls rotation of servo, then one where it controls motor speed)
+- Use potentiometer to direction 
+- Use potentiometer to control fan speed while servo rotates automatically
 
 #### Feedback
 
 - students followed remotely and enjoyed building the fan
 - I skipped the separate servo part and went directly to using the servo to control the fan
-- Next year, start with DC fan, then immediately wire servo to spin, then pot
-- ==Need to change the DC motor slides. They are too technical==
 - ==**Idea for next semester**==: create assignment using motors and bluetooth (something like the fan)
 
 ### Assignment

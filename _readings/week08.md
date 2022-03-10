@@ -31,6 +31,9 @@ title: Pre-Lecture Activities
 ![1570925716449](week08.assets/1570925716449.png)
 
 ### Wiring for Thurs
+
+The goal is to build a rotating fan. Here is the circuit wiring, and photos are below 
+
 ![servo_dc_fan_controller_bb](week08.assets/servo_dc_fan_controller_bb.png)
 
 
@@ -61,9 +64,16 @@ title: Pre-Lecture Activities
 
 <img  src="week08.assets/image-20210310115209181.png" alt="image-20210310115209181" style="width:400px" />
 
+#### Photos
+
+<img src="week08.assets/fan1.jpg" alt="fan1" style="width:400px;" />
+
+<img src="week08.assets/fan2.jpg" alt="fan2" style="width:400px" />
+
+<img src="week08.assets/fan3.jpg" alt="fan3" style="width:400px" />
 
 
-###   Motors Reference
+### Motors Reference
 
 - [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
 

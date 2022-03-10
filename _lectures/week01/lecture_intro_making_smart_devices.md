@@ -58,9 +58,18 @@ title: Intro to Making Smart Devices
 
 * Hardware entrepreneurship
   - Cost of manufacturing is within reach of small amount of funding
+  - Entrepreneurs are partnering with places like Sparkfun to build out their ideas 
   - Tools and open-source platforms mean you can build a prototype without an engineering degree
-* Empowering and fun
-  - "We are on the verge of machines that can think, and we are carrying magic wands in our pocket but most people see them as read-only" -- Jeff Branson, educator and engineer
+* Industry opportunities
+  * Companies and organizations are using open source tools to build devices (even NASA has used Arduino)
+  * Companies are looking for people who know these technologies
+
+
+## Why learn this?
+
+Empowering and fun
+
+- "We are on the verge of machines that can think, and we are carrying magic wands in our pocket but most people see them as read-only" -- Jeff Branson, educator and engineer
 
 ## Examples: Gadgets
 - Mi.Mu / Imogen Heap (https://youtu.be/3QtklTXbKUQ?t=660)

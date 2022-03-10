@@ -10,16 +10,6 @@
   - control fan motor and servo
   - play a tone
 
-| Motor Controller | Argon |
-| ---------------- | ----- |
-| PWMA             | D5    |
-| AIN2             | D4    |
-| AIN1             | D3    |
-| VCC              | 3v3   |
-| GND              | GND   |
-| VM               | 3v3   |
-| STBY             | 3v3   |
-
 RGB LED (common cathode)
   R - A2
   G - A1
@@ -57,9 +47,7 @@ const int AIN2 = D4;
 const int PWMA = D5;
 
 void setup() {
-    /* === START BLE SETUP === */
-    argon_ble_setup();
-    /* === END BLE SETUP === */
+    argon_ble_setup();  // BLE setup
 
     pinMode(PIN_LED, OUTPUT);
     pinMode(PIN_BLUE, OUTPUT);
@@ -69,34 +57,37 @@ void setup() {
 }
 void loop() {}
 
-/*  Sample Code to communicate from Argon to Adafruit Bluefruit app
-    https://learn.adafruit.com/bluefruit-le-connect/controller
-    
+/* onDataReceived() is event handler for incoming data via RX characteristic
+   When the RXCharacteristic receives data, the event handler is called
+   Note: uint8_t is a byte ("unsigned integer of length 8 bits")
+
     The command scheme is from the Adafruit Bluefruit app
+    https://learn.adafruit.com/bluefruit-le-connect/controller
+
     ex: [‘!’] [‘B’] [‘4’] [‘1’] [CRC]
 */
-
-// onDataReceived() is event handler for incoming data via RX characteristic
-// When the RXCharacteristic receives data, the event handler is called
-// Note: uint8_t is a byte ("unsigned integer of length 8 bits")
 void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
                     void* context) {
     // TODO finish event handler
-  /* === START DEBUG PRINTING ===
-           uncomment following loop to see commands being sent by app ==
-   */
-/*)
-  for (size_t ii = 0; ii < len; ii++) {
-    Serial.print(data[ii]);
-    Serial.print(" ");
-  }
-  Serial.println();
-  for (size_t ii = 0; ii < len; ii++) {
-    Serial.write(data[ii]);
-    Serial.print(" ");
-  }
-  Serial.println();
+
+    // btSerialDebug(data, len); /* uncomment for serial monitor debug */
+}
+
+/********************************************************************************/
+
+/*
+  btSerialDebug
+      used for printing debug info to serial monitor ===
 */
-  /* === END DEBUG PRINTING === */
-  
+void btSerialDebug(const uint8_t* data, size_t len) {
+    for (size_t ii = 0; ii < len; ii++) {
+        Serial.print(data[ii]);
+        Serial.print(" ");
+    }
+    Serial.println();
+    for (size_t ii = 0; ii < len; ii++) {
+        Serial.write(data[ii]);
+        Serial.print(" ");
+    }
+    Serial.println();
 }
