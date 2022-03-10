@@ -4,12 +4,12 @@ theme: itp
 
 week: 9
 category: lectures
-title: Bluetooth Car and Battery
+title: LiPo Battery
 ---
 
 <!-- headingDivider: 2 -->
 
-# Bluetooth Car and Battery
+# LiPo Battery
 
 ## Power Untethered
 
@@ -62,35 +62,7 @@ title: Bluetooth Car and Battery
 * `EN` is a basically **on/off** for the Argon. Connect to **GND** to turn off Argon (and save battery power)
 * `Li+` is internally-connected to the positive (+3.7v) of the battery
 
-## Exercise: Wiring Chassis
 
-* Getting started
-
-  * Download project: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
-  * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises/week10/ble_car_start
-
-  
-
-
-## Motor Controller Wiring Guide
-
-| Motor Controller | Argon |  -- | Motor Controller | Argon |
-| --------- | ---- | ---- | ---- | ---- |
-| PWMA  | D8   |   | VCC              | 3v3 |
-| AIN2  | D7   |    | GND | GND |
-| AIN1  |   D6   |      |   VM   |   Li+   |
-| BIN1  |   D5   |      |   STBY   |   3v3   |
-| BIN2  |    D4  |      |      |      |
-| PWMB |    D3  |      |      |      |
-
-## Wiring Diagram
-
-<img src="lecture_bluetooth_car_and_battery.assets/1572472040619.png" alt="1572472040619" style="width:1000px;" />
-
-## LiPo Battery Connection
-
-<img src="lecture_bluetooth_car_and_battery.assets\car_lipo_hookup_no_wires_bb.png" style="width:600px;" />
 
 
 
