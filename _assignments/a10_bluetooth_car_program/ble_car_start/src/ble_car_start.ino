@@ -25,6 +25,22 @@
 
 // SYSTEM_MODE(MANUAL);  /* uncomment to disable wifi and use BT only */
 
+/*
+    forward
+        leftMotor (forward)
+        rightMotor (forward)
+    backward
+        leftMotor(backward)
+        rightMotor (backward)
+    left
+    right
+
+
+    --
+    any motor with a motor to turn?
+        three components you need to set
+*/
+
 
 
 /* onDataReceived()
