@@ -18,7 +18,9 @@ Goals
 
 ## Overview
 
-This assignment is to control the car via Bluetooth with a smartphone and complete your car customizations
+This assignment is to control the car via Bluetooth with a smartphone and complete your car customizations.
+
+Here is a video overview: [https://youtu.be/BB8cKghUftI](https://youtu.be/BB8cKghUftI)
 
 ## Components
 
