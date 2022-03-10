@@ -9,12 +9,12 @@
 
   CONFIGURATION
   Motor Controller
-    PWMA  - D8
-    AIN2  - D7
-    AIN1  - D6
-    BIN1  - D5
-    BIN2  - D4
-    PWMB  - D3
+    PWMA    - D8
+    AIN2    - D7
+    AIN1    - D6
+    BIN1    - D5
+    BIN2    - D4
+    PWMB    - D3
 
     VCC     - 3v3
     Standby - 3v3
