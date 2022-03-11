@@ -30,6 +30,8 @@ Here is a video overview: [https://youtu.be/lqQhFIVWDR0](https://youtu.be/lqQhFI
 
 <img src="a9_tea_brewer_state_machine_blynk.assets/Photo Oct 04, 1 40 32 PM.jpg" alt="Photo Oct 04, 1 40 32 PM" style="width:400px" />
 
+*Note: The red button in the photo was used for testing only. You don't need to include it or use it in your project*
+
 ### Blynk App
 
 <img src="a9_tea_brewer_state_machine_blynk.assets/screen1.png" alt="Photo Oct 04, 2 26 19 PM" style="width:400px;" /><img src="a9_tea_brewer_state_machine_blynk.assets/screen.png" alt="Photo Oct 04, 2 27 12 PM" style="width:400px;" />
@@ -58,8 +60,8 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 | State | Duration                                           | Input                                            | Next State |
 | ----- | -------------------------------------------------- | ------------------------------------------------ | ---------- |
 | Idle  | indefinite                                         | Brew == true                                     | Heat       |
-| Heat  | 5 sec                                              | Brew == false                                    | Idle       |
-| Heat  | 5 sec                                              | (Brew == true) and (Heat_Time >= Goal_Heat_Time) | Steep      |
+| Heat  | 6 sec                                              | Brew == false                                    | Idle       |
+| Heat  | 6 sec                                              | (Brew == true) and (Heat_Time >= Goal_Heat_Time) | Steep      |
 | Steep | 2 sec for green, 3 sec for black, 4 sec for herbal | Brew == false                                    | Idle       |
 | Steep | 2 sec for green, 3 sec for black, 4 sec for herbal | (Brew == true) and (Brew_Time >= Goal_Brew_Time) | Hold       |
 | Hold  | indefinite                                         | Brew == false                                    | Idle       |
@@ -124,7 +126,7 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 | `Slider Tea Type`   | `V0` | integer | `0` for black tea, `1` for green tea, `2` for herbal tea | app       | argon   |
 | `Text Tea Type`     | `V1` | String  | `Black`, `Green`, `Herbal`                               | argon     | app     |
 | `String Cup Status` | `V2` | String  | `Present`, `Missing`                                     | argon     | app     |
-| `Button Start Brew` | `V3` | integer | `0`, `1`                                                 | argon     | app     |
+| `Button Start Brew` | `V3` | integer | `0`, `1`                                                 | app       | argon   |
 | `Text State`        | `V4` | String  | `Idle`, `Heat`, `Steep`, `Hold`, `Pour`                  | argon     | app     |
 | `Button Sound`      | `V5` | integer | `0`, `1`                                                 | app       | argon   |
 
