@@ -135,6 +135,11 @@ URL: `https://groker.init.st/api/events`
 
 
 
+<!-- generate random values if students have projects already built 
+int temperature = random(70, 100);
+int lightLevel = random(0, 4095);
+-->
+
 ## Other Dashboard Platforms
 
 * [Google Cloud IoT](https://cloud.google.com/solutions/iot) (many IoT services)

@@ -917,7 +917,7 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 #### Lecture
 
-- JSON overview
+- JSON overview (video)
 - InitialState integration (multiple values)
 
 #### Lab
@@ -938,7 +938,8 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 #### Lecture
 
-- JSON Parsing
+- JSON Parsing (video with JSONParserGeneratorRK)
+- Retrieving JSON from API (video)
 - Discuss [weather stack](https://weatherstack.com/) show example call
 - Walkthrough integration
 - Write json code together

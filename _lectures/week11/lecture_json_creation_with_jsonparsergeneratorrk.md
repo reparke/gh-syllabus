@@ -37,7 +37,38 @@ title: Creating JSON with JsonParserGeneratorRK Library
 #include "JsonParserGeneratorRK.h"  
 ```
 
-### Argon code
+### Argon code - Template
+
+**Important:** The `{...}` around the `JsonWriteAutoArray` are required for the library. It ensures that all JSON values are in either an valid object or arrays
+
+```c++
+void loop() {
+    
+  JsonWriterStatic<622> jw;
+  jw.init();  // empty buffer for reuse (since jw is static)
+
+  {
+    JsonWriterAutoArray obj(&jw);
+
+    // Start of code for one data value
+    jw.startObject();
+    jw.insertKeyValue("key", <<add your name for data>>);
+    jw.insertKeyValue("value", <<add value for data>> );
+    jw.finishObjectOrArray();
+	// End of code for one data value
+      
+ 	// Include more data values at needed
+	// ...
+      
+    jw.finishObjectOrArray();
+  }
+
+
+  Particle.publish(<<add your webhook name>>, jw.getBuffer());
+}
+```
+
+### Argon code - Example
 
 **Important:** The `{...}` around the `JsonWriteAutoArray` are required for the library. It ensures that all JSON values are in either an valid object or arrays
 
@@ -68,8 +99,7 @@ void loop() {
     jw.finishObjectOrArray();
   }
 
-  //make sure to change the event name below to match the webhook you created  
+
   Particle.publish("inital_state_json", jw.getBuffer());
 }
 ```
-
