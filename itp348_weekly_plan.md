@@ -13,13 +13,16 @@ toc_sticky: true
 
 **Definite**
 
+* [ ] week 10
+  * [ ] combine both days into one day; add more info
+
 * [ ] Soldering workshop
   * [ ] Plan event in week3 for sometime before week 9
   * [ ] Consider holding during a class session to have more people attend
   * [ ] provide solder (or ask Allan in available)
   * [ ] consider more complicated soldering kit (or variations)
   * [ ] have people check soldering kits before hand for broken LEDs
-
+  * [ ] Maybe we could show them a brief over view or short video of how to make a PCB board and order some from a supplier overseas through Fritzing and then have them solder their board? Or like maybe week 3/4 of school after they have familiarized themselves with fritzing, have students create a simple PCB that would wire some leds and maybe a potentiometer so students can turn the knob and have the soldered leds on the board turn dim/bright. Then the TAs could double check their Fritzing submission and make sure all power/GND wires are connected on the appropriate sides of the PCB then run some tests to make sure the connections are correct. Then wait for the custom boards to arrive and have students in class solder their custom boards. Theres a way to add names and labels to the PCB itself thats really cool
 * [ ] A8
   * [ ] combine A8 and A10 (bluetooth car). Since we don't play with the card in class, have students build the car ahead of time isn't necessary. These could be combined, and the bluetooth fan example could covered during bluetooth lecture
   * [ ] either give students a week without an assignment or make new assignment
@@ -44,6 +47,9 @@ toc_sticky: true
     * [ ] week 10 / 11: may need to include a subscribe video or lectu
 * [x] **Revise A5 reaction timer. Remove any need for a while loop**
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
+* [ ] 5v voltage regulator: [5V Step-Up Voltage Regulator U3V40F5](https://www.pololu.com/product/4012)
+  * [ ] also [SparkFun Buck-Boost Converter]( https://www.sparkfun.com/products/15208)
+  * [ ] 
 * [ ] tell students not to unclaim device
 * [ ] **proposal**
   * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
@@ -858,6 +864,10 @@ Have students build fan and circuit before class
 ## Spring Break 2022
 
 ## 10. Ultrasonic Distance Sensor; OLED Graphics
+
+==**Need more content here**==
+
+Could combine graphics and OLED in one day; spent time going over A9 whic
 
 ### Reading
 

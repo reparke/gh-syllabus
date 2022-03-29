@@ -50,7 +50,7 @@ void setup() {
   Serial.begin(9600);  // begin serial communication with the computer
   oled.begin();        // Initialize the OLED
   oled.clear(ALL);     // Clear the display's internal memory
-  oled.drawBitmap(trojan_bmp);
+  oled.drawBitmap(itp348_bmp);
   oled.display();      // Display what's in the buffer (splashscreen)
   delay(1000);         // Delay 1000 ms
 

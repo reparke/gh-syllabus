@@ -32,8 +32,12 @@ MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 //////////////////////////
 // Ultrasonic Distance  //
 //////////////////////////
-const int PIN_ECHO = D2;
+double SPEED_SOUND_CM_ROOM_TEMP_FAHR = 0.03444; // 343 m/s2
+int MAX_RANGE_CM = 78;    
+int MIN_RANGE_CM = 0;
+
 const int PIN_TRIGGER = D3;
+const int PIN_ECHO = D2;
 
 void setup() {
     Serial.begin(9600);  // begin serial communication with the computer
@@ -43,7 +47,31 @@ void setup() {
     delay(1000);         // Delay 1000 ms
 
     // TODO: configure ultrasonic pins
+    pinMode(PIN_ECHO, INPUT);
+    pinMode(PIN_TRIGGER, OUTPUT);
 }
 
 /********************************************************************************/
-void loop() {}
+
+void loop() {
+    // start seq
+    digitalWrite(PIN_TRIGGER, LOW);
+    delayMicroseconds(2);
+    digitalWrite(PIN_TRIGGER, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(PIN_TRIGGER, LOW);
+
+    int roundTripTime = pulseIn(PIN_ECHO, HIGH);
+
+    double distance = roundTripTime * SPEED_SOUND_CM_ROOM_TEMP_FAHR / 2;
+
+    if (distance >= MAX_RANGE_CM || distance <= MIN_RANGE_CM) {
+        Serial.println("Error out of range");
+    } else if (distance <= 12) {
+        Serial.println("Warning!");
+        Serial.println("Distance to object: " + String(distance));
+    } else {
+        Serial.println("Distance to object: " + String(distance));
+    }
+    delay(500);  // help the sensors
+}

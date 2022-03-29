@@ -108,6 +108,7 @@ const uint8_t heart_bmp[] = {
 
 ## Lab
 
+* Convert `itp348.jpg` to bitmap and load as startup graphic (*image is in the starting folder*)
 * Using the ultrasonic distance sensor, display graphics and distance measurement on the OLED
   * Large error graphic when out of range
   * Small warning message when less than 5 inches

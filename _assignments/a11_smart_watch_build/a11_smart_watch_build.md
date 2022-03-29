@@ -3,7 +3,7 @@ week: 10
 number: 11
 category: assignments
 title: Smart Watch Build (bring to class)
-date_due: Mar 28 @ 11:59 pm
+date_due: Apr 4 @ 11:59 pm
 
 ---
 Assignment 11 – Smart Watch Build

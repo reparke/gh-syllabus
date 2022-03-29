@@ -65,8 +65,8 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 | Steep | 2 sec for green, 3 sec for black, 4 sec for herbal | Brew == false                                    | Idle       |
 | Steep | 2 sec for green, 3 sec for black, 4 sec for herbal | (Brew == true) and (Brew_Time >= Goal_Brew_Time) | Hold       |
 | Hold  | indefinite                                         | Brew == false                                    | Idle       |
-| Hold  | indefinite                                         | Cup_Present == false                             | Hold       |
-| Hold  | indefinite                                         | Cup_Present == true                              | Pour       |
+| Hold  | indefinite                                         | ((Brew == true)  and (Cup_Present == false)      | Hold       |
+| Hold  | indefinite                                         | (Brew == true)  and (Cup_Present == true)        | Pour       |
 | Pour  | 4 sec                                              | Brew == false                                    | Idle       |
 | Pour  | 4 sec                                              | (Brew == true) and (Pour_Time >= Goal_Pour_Time) | Idle       |
 
