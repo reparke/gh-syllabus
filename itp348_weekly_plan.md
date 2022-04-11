@@ -940,6 +940,7 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 - JSON Parsing (video with JSONParserGeneratorRK)
 - Retrieving JSON from API (video)
+- Have students use [https://api.sunrise-sunset.org](https://api.sunrise-sunset.org) to determine sunrise and sunset time based on lat and long (*no API key required)*)
 - Discuss [weather stack](https://weatherstack.com/) show example call
 - Walkthrough integration
 - Write json code together
@@ -958,7 +959,6 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 #### Lecture (if time)
 
-- Have students use [https://api.sunrise-sunset.org](https://api.sunrise-sunset.org) to determine sunrise and sunset time based on lat and long (*no API key required)*)
 - Have students use [https://openweathermap.org/api/air-pollution](https://openweathermap.org/api/air-pollution) to get AQI measure based on lat and long
 
 ### Assignment
@@ -977,20 +977,22 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 #### Activity
 
-* Alternative idea: ==**project discussion**==
+* ==**Design review**==
 * Depending on time, have class meet in a large group or in 3 person groups
 * Each person describes their proposal (==need to develop some framework and questions audience can ask== )
-* Consider covering debouncing by itself today, then talking about project as a class
+
+#### Lab
+
+- Create blank project and install library `SparkFun-MAX3010x`
+- Demonstrate heart rate function
 
 #### Lecture 
 
 * Overview of smart watch program structure
-* ~~Debouncing~~
 
 #### Lab
 
 - create State enum and state transistions
-- ~~set up debouncing~~
 
 #### Lecture
 
@@ -1000,7 +1002,6 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 #### Lecture
 
-* ~~Review debouncing~~
 * Review heart rate sensor
 
 #### Lab
@@ -1122,10 +1123,8 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 #### Lecture
 
 - ==Guest lecture?==
-
 - Discuss [what happens after prototyping](https://docs.particle.io/tutorials/learn-more/beyond-prototpying/)
 - Work on project 
-- ~~DHT 22~~
 
 #### Lab
 
@@ -1370,3 +1369,10 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 #### Feedback
 
 - Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
+
+
+
+## Debouncing
+
+- was covered in the context of the smart watch button
+- notes exist
