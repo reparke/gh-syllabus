@@ -145,7 +145,8 @@ void runTimeScreen() {
         oled.display();
     }
 }
-void runWeatherScreen() {
+
+void runWeatherScreen() {  // doesn't use JSON or webhook
     unsigned long curMillis = millis();
     if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
         prevScreenUpdateMillis = curMillis;
@@ -208,10 +209,9 @@ unsigned long samples = 0;
 
 const int LOW_BPM_THRESHOLD = 40;
 const int LOW_IR_THRESHOLD = 50000;
-float tempF;
+float bodyTempF;
 void loop() {
     int curReading = digitalRead(PIN_BUTTON);  // check button read
-    unsigned long currentDebounceTime = millis();
 
     if (curReading == HIGH && prevReading == LOW) {
         getNextState();  // button was pressed down, we should change
@@ -225,9 +225,61 @@ void loop() {
     loadNextScreen();
     prevReading = curReading;  // update for next loop
 }
+long irValue = 0;
 
 void runHeartScreen() {
-    long irValue = particleSensor.getIR();
+    updateBPM();
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+
+        // calcHeartBeatAvg();  // this is slow! -- beatAvg
+        if (beatAvg > LOW_BPM_THRESHOLD &&
+            irValue > LOW_IR_THRESHOLD) {  // VALID!
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print(String(beatAvg));
+        } else {
+            // INVALID!
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print("---");
+        }
+        bodyTempF = particleSensor.readTemperatureF();
+        oled.setCursor(0, 20);
+        oled.setFontType(1);
+        oled.print("Temp ");
+        oled.print(String(bodyTempF, 0));
+
+        float voltage = analogRead(BATT) * 0.0011224;
+        oled.setCursor(0, 40);
+        oled.setFontType(0);
+        oled.print("Batt ");
+        oled.print(String(voltage, 2));
+        oled.display();
+        Serial.print("BPM: " + String(beatsPerMinute) +
+                     ", Avg: " + String(beatAvg));
+        Serial.println(", IRvalue: " + String(irValue) +
+                       ", Temp: " + String(bodyTempF));
+    }
+    // consider adding battery status bands
+    // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7
+}
+
+/* ====================== HEART RATE FUNCTIONS ===============
+  These functions are completed and shouldn't be modified
+*/
+/* fn: updateBPM
+This function is called by timer. It needs to execute
+quickly otherwise sensor won't properly register beats
+and BPM will be off
+*/
+void updateBPM() {
+    irValue = particleSensor.getIR();
 
     if (checkForBeat(irValue) == true) {
         // We sensed a beat!
@@ -241,10 +293,7 @@ void runHeartScreen() {
                 (byte)beatsPerMinute;  // Store this reading in the array
             rateSpot %= RATE_SIZE;     // Wrap variable
 
-            // Take average of readings
-            beatAvg = 0;
-            for (byte x = 0; x < RATE_SIZE; x++) beatAvg += rates[x];
-            beatAvg /= RATE_SIZE;
+            calcHeartBeatAvg();
         }
     }
 
@@ -268,43 +317,16 @@ void runHeartScreen() {
     lastRead = curRead;
     Serial.println();
     //   delay(50);
-    unsigned long curMillis = millis();
-    if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
-        prevScreenUpdateMillis = curMillis;
+}
 
-        // calcHeartBeatAvg();  // this is slow! -- beatAvg
-        if (beatAvg > LOW_BPM_THRESHOLD &&
-            irValue > LOW_IR_THRESHOLD) {  // VALID!
-            oled.clear(PAGE);
-            oled.drawBitmap(heart16x12);
-            oled.setFontType(1);
-            oled.setCursor(20, 0);
-            oled.print(String(beatAvg));
-        } else {
-            // INVALID!
-            oled.clear(PAGE);
-            oled.drawBitmap(heart16x12);
-            oled.setFontType(1);
-            oled.setCursor(20, 0);
-            oled.print("---");
-        }
-        tempF = particleSensor.readTemperatureF();
-        oled.setCursor(0, 20);
-        oled.setFontType(1);
-        oled.print("Temp ");
-        oled.print(String(tempF, 0));
-
-        float voltage = analogRead(BATT) * 0.0011224;
-        oled.setCursor(0, 40);
-        oled.setFontType(0);
-        oled.print("Batt ");
-        oled.print(String(voltage, 2));
-        oled.display();
-        Serial.print("BPM: " + String(beatsPerMinute) +
-                     ", Avg: " + String(beatAvg));
-        Serial.println(", IRvalue: " + String(irValue) +
-                       ", Temp: " + String(tempF));
+/* fn: calcHeartBeatAvg
+This function is slow so it should be done during display
+ NOT during timer reading of heart rate
+*/
+void calcHeartBeatAvg() {
+    beatAvg = 0;
+    for (byte x = 0; x < RATE_SIZE; x++) {
+        beatAvg += rates[x];
     }
-    // consider adding battery status bands
-    // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7
+    beatAvg /= RATE_SIZE;
 }

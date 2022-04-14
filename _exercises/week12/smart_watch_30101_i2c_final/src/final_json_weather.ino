@@ -1,24 +1,18 @@
-/* NOTE - Rob Parke 9/25/2021
+/* NOTE - Rob Parke
+4/14/2022
+    -Adding Weatherstack API / JSON
 
-Updated version for Qwiic I2C OLED + MAX30101
-
-Eliminated software timers
+9/25/2021
+    -Updated version for Qwiic I2C OLED + MAX30101
+    -Eliminated software timers
 
 */
 /*
+  Uses code from
   Optical Heart Rate Detection (PBA Algorithm) using the MAX30105 Breakout
   By: Nathan Seidle @ SparkFun Electronics
   Date: October 2nd, 2016
   https://github.com/sparkfun/MAX30105_Breakout
-
-  This is a demo to show the reading of heart rate or beats per minute (BPM)
-  using a Penpheral Beat Amplitude (PBA) algorithm.
-
-  It is best to attach the sensor to your finger using a rubber band or other
-  tightening device. Humans are generally bad at applying constant pressure to a
-  thing. When you press your finger against the sensor it varies enough to cause
-  the blood in your finger to flow differently which causes the sensor readings
-  to go wonky.
 
   Hardware Connections (Breakoutboard to Arduino):
   -5V = 5V (3.3V is allowed)
@@ -26,17 +20,18 @@ Eliminated software timers
   -SDA = A4 (or SDA)
   -SCL = A5 (or SCL)
   -INT = Not connected
-
-  The MAX30105 Breakout can handle 5V or 3.3V I2C logic. We recommend powering
-  the board with 5V but it will also run at 3.3V.
 */
 
 #include "MAX30105.h"
 #include "heartRate.h"
 // libraries for OLED
+#include "JsonParserGeneratorRK.h"
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 #include "bitmaps_watch.h"
 #include "bitmaps_weather.h"
+
+JsonParser jsonParser;
+
 MAX30105 particleSensor;
 
 const byte RATE_SIZE = 4;  // Increase this for more averaging. 4 is good.
@@ -55,7 +50,34 @@ int beatAvg;
 */
 unsigned long prevScreenUpdateMillis = 0;
 unsigned long HEART_SCREEN_UPDATE_MS = 3000;
+unsigned long lastRead = 0;
+unsigned long samples = 0;
+
+const int LOW_BPM_THRESHOLD = 40;
+const int LOW_IR_THRESHOLD = 50000;
+float bodyTempF;
+long irValue = 0;
+
+//////////////////////////
+// Time  Screen         //
+//////////////////////////
+/*
+ */
 unsigned long TIME_SCREEN_UPDATE_MS = 500;
+
+//////////////////////////
+// Weather Screen         //
+//////////////////////////
+/* Weatherstack only has 250 API calls in free plan so use
+   very long delay (8 times per day)
+*/
+unsigned long WEATHER_SCREEN_UPDATE_MS = 10512000;
+float tempWeather = 0;
+String city = "city";
+String weatherDescription = "desc";
+int weatherCode = 0;
+int humidity = 0;
+int uvIndex = 0;
 
 //////////////////////////////////
 // MicroOLED Object Declaration //
@@ -82,7 +104,7 @@ long debounceDelay = 200;   // the debounce time; increase if the output
 //////////////////////////
 // need to build this
 enum State { HEART, TIME, WEATHER };
-State currentState = HEART;
+State currentState = WEATHER;
 void getNextState() {
     switch (currentState) {
         case HEART:
@@ -145,30 +167,102 @@ void runTimeScreen() {
         oled.display();
     }
 }
-void runWeatherScreen() {
+
+void runWeatherScreen() {  // doesn't use JSON or webhook
+
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > WEATHER_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+        String data = "90089";
+        Particle.publish("WeatherStackJSON", data, PRIVATE);
+    }
+
+    oled.clear(PAGE);
+    switch (weatherCode) {
+        case 296:
+        case 302:
+        case 308:
+            oled.drawBitmap(weather_rainy_up_left);
+            break;
+        case 116:
+        case 119:
+        case 122:
+            oled.drawBitmap(weather_cloudy_up_left);
+            break;
+        case 227:
+            oled.drawBitmap(weather_snowing_up_left);
+            break;
+
+        default:
+            oled.drawBitmap(weather_sunny_up_left);
+            break;
+    }
+
+    oled.setCursor(38, 5);
+    oled.setFontType(1);
+    oled.print(tempWeather, 0);
+    oled.setFontType(0);
+    oled.print("o");
+
+    oled.setFontType(0);
+    oled.setCursor(0, 28);
+    oled.print(weatherDescription.substring(0, 9));
+
+    oled.setFontType(0);
+    oled.setCursor(0, 40);
+    oled.print("Hum ");
+    oled.print(humidity);
+    oled.print("%");
+
+    oled.setCursor(40, 40);
+    oled.print("UV ");
+    oled.print(uvIndex);
+
+    oled.display();
+}
+
+
+void runHeartScreen() {
+    updateBPM();
     unsigned long curMillis = millis();
     if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
         prevScreenUpdateMillis = curMillis;
 
-        // for debugging
-        Serial.println("Weather");
-        // testing variables -- replace with JSON values later
-        float tempWeather = 74.24;
-        String city = "Los Angeles";
-
-        oled.clear(PAGE);  // Clear the display
-        oled.drawBitmap(weather_sunny_16x12);
-
-        oled.setCursor(32, 5);
+        // calcHeartBeatAvg();  // this is slow! -- beatAvg
+        if (beatAvg > LOW_BPM_THRESHOLD &&
+            irValue > LOW_IR_THRESHOLD) {  // VALID!
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print(String(beatAvg));
+        } else {
+            // INVALID!
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print("---");
+        }
+        bodyTempF = particleSensor.readTemperatureF();
+        oled.setCursor(0, 20);
         oled.setFontType(1);
-        oled.print(tempWeather, 0);
+        oled.print("Temp ");
+        oled.print(String(bodyTempF, 0));
 
+        float voltage = analogRead(BATT) * 0.0011224;
+        oled.setCursor(0, 40);
         oled.setFontType(0);
-        oled.setCursor(0, 30);
-        oled.print(city);
-
+        oled.print("Batt ");
+        oled.print(String(voltage, 2));
         oled.display();
+        Serial.print("BPM: " + String(beatsPerMinute) +
+                     ", Avg: " + String(beatAvg));
+        Serial.println(", IRvalue: " + String(irValue) +
+                       ", Temp: " + String(bodyTempF));
     }
+    // consider adding battery status bands
+    // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7
 }
 void setup() {
     Serial.begin(115200);
@@ -201,14 +295,13 @@ void setup() {
     delay(1000);  // Delay 1000 ms
 
     pinMode(PIN_BUTTON, INPUT);
+    Particle.subscribe("hook-response/WeatherStackJSON",
+                       jsonSubscriptionHandler, MY_DEVICES);
+
+    String data = "90089";
+    Particle.publish("WeatherStackJSON", data, PRIVATE);
 }
 
-unsigned long lastRead = 0;
-unsigned long samples = 0;
-
-const int LOW_BPM_THRESHOLD = 40;
-const int LOW_IR_THRESHOLD = 50000;
-float tempF;
 void loop() {
     int curReading = digitalRead(PIN_BUTTON);  // check button read
 
@@ -224,51 +317,6 @@ void loop() {
     loadNextScreen();
     prevReading = curReading;  // update for next loop
 }
-long irValue = 0;
-
-void runHeartScreen() {
-    updateBPM();
-    unsigned long curMillis = millis();
-    if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
-        prevScreenUpdateMillis = curMillis;
-
-        // calcHeartBeatAvg();  // this is slow! -- beatAvg
-        if (beatAvg > LOW_BPM_THRESHOLD &&
-            irValue > LOW_IR_THRESHOLD) {  // VALID!
-            oled.clear(PAGE);
-            oled.drawBitmap(heart16x12);
-            oled.setFontType(1);
-            oled.setCursor(20, 0);
-            oled.print(String(beatAvg));
-        } else {
-            // INVALID!
-            oled.clear(PAGE);
-            oled.drawBitmap(heart16x12);
-            oled.setFontType(1);
-            oled.setCursor(20, 0);
-            oled.print("---");
-        }
-        tempF = particleSensor.readTemperatureF();
-        oled.setCursor(0, 20);
-        oled.setFontType(1);
-        oled.print("Temp ");
-        oled.print(String(tempF, 0));
-
-        float voltage = analogRead(BATT) * 0.0011224;
-        oled.setCursor(0, 40);
-        oled.setFontType(0);
-        oled.print("Batt ");
-        oled.print(String(voltage, 2));
-        oled.display();
-        Serial.print("BPM: " + String(beatsPerMinute) +
-                     ", Avg: " + String(beatAvg));
-        Serial.println(", IRvalue: " + String(irValue) +
-                       ", Temp: " + String(tempF));
-    }
-    // consider adding battery status bands
-    // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7
-}
-
 /* ====================== HEART RATE FUNCTIONS ===============
   These functions are completed and shouldn't be modified
 */
@@ -295,27 +343,29 @@ void updateBPM() {
             calcHeartBeatAvg();
         }
     }
+    // Debugging
+    /*
+        Serial.print("IR=");
+        Serial.print(irValue);
+        Serial.print(", BPM=");
+        Serial.print(beatsPerMinute);
+        Serial.print(", Avg BPM=");
+        Serial.print(beatAvg);
 
-    Serial.print("IR=");
-    Serial.print(irValue);
-    Serial.print(", BPM=");
-    Serial.print(beatsPerMinute);
-    Serial.print(", Avg BPM=");
-    Serial.print(beatAvg);
+        if (irValue < 50000) Serial.print(" No finger?");
 
-    if (irValue < 50000) Serial.print(" No finger?");
-
-    unsigned long curRead = millis();
-    samples++;
-    Serial.print("\t\t\t\tHz[");
-    Serial.print((float)1000.0 / (curRead - lastRead), 2);
-    Serial.print("] Avg Hz[");
-    Serial.print((float)samples * 1000.0 / (curRead), 2);
-    Serial.print("]");
-    Serial.println();
-    lastRead = curRead;
-    Serial.println();
-    //   delay(50);
+        unsigned long curRead = millis();
+        samples++;
+        Serial.print("\t\t\t\tHz[");
+        Serial.print((float)1000.0 / (curRead - lastRead), 2);
+        Serial.print("] Avg Hz[");
+        Serial.print((float)samples * 1000.0 / (curRead), 2);
+        Serial.print("]");
+        Serial.println();
+        lastRead = curRead;
+        Serial.println();
+        //   delay(50);
+        */
 }
 
 /* fn: calcHeartBeatAvg
@@ -328,4 +378,43 @@ void calcHeartBeatAvg() {
         beatAvg += rates[x];
     }
     beatAvg /= RATE_SIZE;
+}
+
+void jsonSubscriptionHandler(const char *event, const char *data) {
+    // Part 1 allows for webhook responses to be delivered in multple "chunks";
+    // you don't need to change this
+    int responseIndex = 0;
+    const char *slashOffset = strrchr(event, '/');
+    if (slashOffset) responseIndex = atoi(slashOffset + 1);
+    if (responseIndex == 0) jsonParser.clear();
+    jsonParser.addString(data);
+
+    // Part 2 is where you can parse the actual data; you code goes in the IF
+    if (jsonParser.parse()) {
+        city =
+            jsonParser.getReference().key("location").key("name").valueString();
+        tempWeather = jsonParser.getReference()
+                          .key("current")
+                          .key("temperature")
+                          .valueDouble();
+
+        weatherCode = jsonParser.getReference()
+                          .key("current")
+                          .key("weather_code")
+                          .valueInt();
+        uvIndex =
+            jsonParser.getReference().key("current").key("uv_index").valueInt();
+
+        weatherDescription = jsonParser.getReference()
+                                 .key("current")
+                                 .key("weather_descriptions")
+                                 .index(0)
+                                 .valueString();
+
+        Serial.println(city + "\n  " + weatherDescription +
+                       "\n  temperature: " + String(tempWeather, 1) +
+                       " F\n  humidith: " + String(humidity) +
+                       "\n  uv index: " + String(uvIndex) +
+                       "\n  weather code: " + String(weatherCode));
+    }
 }

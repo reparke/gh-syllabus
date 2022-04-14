@@ -208,7 +208,7 @@ unsigned long samples = 0;
 
 const int LOW_BPM_THRESHOLD = 40;
 const int LOW_IR_THRESHOLD = 50000;
-float tempF;
+float bodyTempF;
 void loop() {
     int curReading = digitalRead(PIN_BUTTON);  // check button read
     unsigned long currentDebounceTime = millis();
@@ -288,11 +288,11 @@ void runHeartScreen() {
             oled.setCursor(20, 0);
             oled.print("---");
         }
-        tempF = particleSensor.readTemperatureF();
+        bodyTempF = particleSensor.readTemperatureF();
         oled.setCursor(0, 20);
         oled.setFontType(1);
         oled.print("Temp ");
-        oled.print(String(tempF, 0));
+        oled.print(String(bodyTempF, 0));
 
         float voltage = analogRead(BATT) * 0.0011224;
         oled.setCursor(0, 40);
@@ -303,7 +303,7 @@ void runHeartScreen() {
         Serial.print("BPM: " + String(beatsPerMinute) +
                      ", Avg: " + String(beatAvg));
         Serial.println(", IRvalue: " + String(irValue) +
-                       ", Temp: " + String(tempF));
+                       ", Temp: " + String(bodyTempF));
     }
     // consider adding battery status bands
     // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7

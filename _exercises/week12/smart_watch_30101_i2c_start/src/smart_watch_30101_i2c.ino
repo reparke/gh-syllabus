@@ -21,6 +21,7 @@
 // libraries for OLED
 #include <Wire.h>
 
+#include "JsonParserGeneratorRK.h"
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 #include "bitmaps_watch.h"
 #include "bitmaps_weather.h"
@@ -48,7 +49,6 @@ MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 */
 unsigned long prevScreenUpdateMillis = 0;
 unsigned long HEART_SCREEN_UPDATE_MS = 3000;
-unsigned long TIME_SCREEN_UPDATE_MS = 500;
 
 const int LOW_BPM_THRESHOLD = 40;
 const int LOW_IR_THRESHOLD = 50000;
@@ -61,7 +61,30 @@ float beatsPerMinute;
 int beatAvg;
 long irValue = 0;
 
-float tempF;
+float bodyTempF;
+
+//////////////////////////
+// Time  Screen         //
+//////////////////////////
+/*
+ */
+unsigned long TIME_SCREEN_UPDATE_MS = 500;
+
+//////////////////////////
+// Weather  Screen      //
+//////////////////////////
+/*
+ */
+/* Weatherstack only has 250 API calls in free plan so use
+   very long delay (8 times per day)
+*/
+unsigned long WEATHER_SCREEN_UPDATE_MS = 10512000;
+float tempWeather = 0;
+String city = "city";
+String weatherDescription = "desc";
+int weatherCode = 0;
+int humidity = 0;
+int uvIndex = 0;
 
 //////////////////////////
 // Button Variables     //
@@ -83,7 +106,7 @@ void loadNextScreen() {}
 // TODO
 void runHeartScreen() {
     // for debugging
-    Serial.println("Hear");
+    Serial.println("Heart");
     oled.clear(PAGE);  // Clear the display
     oled.setCursor(0, 0);
     oled.print("Heart");

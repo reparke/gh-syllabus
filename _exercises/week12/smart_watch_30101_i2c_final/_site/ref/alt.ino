@@ -65,7 +65,7 @@ const int LOW_BPM_THRESHOLD = 40;
 const int LOW_IR_THRESHOLD = 50000;
 long irValue = 0;
 
-float tempF;
+float bodyTempF;
 
 //////////////////////////
 // Heart Screen         //
@@ -217,15 +217,15 @@ void runHeartScreen() {
         oled.setCursor(20, 0);
         oled.print("---");
     }
-    tempF = heartRateSensor.readTemperatureF();
+    bodyTempF = heartRateSensor.readTemperatureF();
     oled.setCursor(0, 20);
     oled.print("Temp ");
-    oled.print(String(tempF, 0));
+    oled.print(String(bodyTempF, 0));
     oled.display();
     Serial.print("BPM: " + String(beatsPerMinute) +
                  ", Avg: " + String(beatAvg));
     Serial.println(", IRvalue: " + String(irValue) +
-                   ", Temp: " + String(tempF));
+                   ", Temp: " + String(bodyTempF));
     // }
 }
 
