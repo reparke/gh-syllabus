@@ -103,6 +103,12 @@ title: Smart Watch
 
 
 
+## GPS Coordinates for Precise Weather Data
+
+- You can get weather data based on GPS coordinates
+- You can use a [Google Maps + Particle web hook integration](https://docs.particle.io/tutorials/integrations/google-maps/) to get approximate GPS coordinates
+- For now, you can use USC's zip code `90089`
+
 ## Weather Display
 
 1. Create Particle webhook
@@ -110,8 +116,6 @@ title: Smart Watch
 3. Parse JSON
 4. Display data
 5. Use bitmaps byte array in `bitmaps_weather.h`
-
-*If you want to display an image, you can use bitmap `clock_16x12`*
 
 ## References
 

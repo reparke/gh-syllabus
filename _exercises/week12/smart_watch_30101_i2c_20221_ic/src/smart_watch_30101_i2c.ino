@@ -102,7 +102,6 @@ void loadNextScreen() {
             break;
         case Weather:
             runWeatherScreen();
-            ;
             break;
     }
 }
@@ -125,26 +124,77 @@ void runHeartScreen() {
     if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
         prevScreenUpdateMillis = curMillis;
         if (irValue < LOW_IR_THRESHOLD || beatAvg < LOW_BPM_THRESHOLD) {
-            // invalid reading
-        } else {  // valid reading
             oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print("---");
+        } else {
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
             oled.setFontType(1);
             oled.setCursor(20, 0);
             oled.print(String(beatAvg));
         }
+        float tempF = particleSensor.readTemperatureF();
+        oled.setCursor(0, 20);
+        oled.setFontType(1);
+        oled.print("Temp ");
+        oled.print(String(tempF, 0));
 
+        float voltage = analogRead(BATT) * 0.0011224;
+        oled.setCursor(0, 40);
+        oled.setFontType(0);
+        oled.print("Batt ");
+        oled.print(String(voltage, 2));
         oled.display();
+        /*
+            Charging ( V > 4.3)
+            Full Charge (V >=4.2
+            Nominal (4.2 > V > 3.5)
+            Low/Needs Recharge (3.5 > V >= 3.4)
+            Critical (3.4 > V)
+
+        */
     }
 }
 
 // TODO
 void runTimeScreen() {
-    // for debugging
-    Serial.println("Time");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Time");
-    oled.display();
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > TIME_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+
+        String dateFormat = "%b %d";
+        String dayFormat = "%a";
+        String timeFormat = "%I:%M";
+        String secondsFormat = "%S";
+        // String timeFormat = "%I:%M ";
+        // for debugging
+        Serial.println("Time");
+
+        oled.clear(PAGE);  // Clear the display
+        delay(10);
+        oled.drawBitmap(clock_16x12);
+
+        oled.setCursor(25, 0);
+        oled.setFontType(0);
+        oled.print(Time.format(dateFormat));
+
+        oled.setCursor(25, 10);
+        oled.setFontType(0);
+        oled.print(Time.format(dayFormat));
+
+        oled.setFontType(1);
+        oled.setCursor(0, 25);
+        oled.print(Time.format(timeFormat));
+
+        oled.setFontType(0);
+        oled.setCursor(50, 30);
+        oled.print(Time.format(secondsFormat));
+
+        oled.display();
+    }
 }
 
 // TODO

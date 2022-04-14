@@ -981,6 +981,8 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 * Depending on time, have class meet in a large group or in 3 person groups
 * Each person describes their proposal (==need to develop some framework and questions audience can ask== )
 
+### Day 2
+
 #### Lab
 
 - Create blank project and install library `SparkFun-MAX3010x`
@@ -998,7 +1000,7 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 * Heart rate rate sensor
 
-### Day 2
+### 
 
 #### Lecture
 
@@ -1008,24 +1010,12 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 * Program heart screen
 
-#### Lecture
-
-* Time
-
-#### Lab
-
-* how to work with the clock
-
-#### Lecture
-
-* Connect to weather
-
 ### Assignment
 
 - Due start of current week: Proposal
 - Continue working on project 
 
-## 13. Accelerometer + RFID
+## 13. Smart Watch + Accelerometer
 
 ### Reading
 
@@ -1035,18 +1025,49 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 #### Lecture
 
-- Accelerometer 
+* Smart Watch - Time
 
 #### Lab
 
-- Do basic wiring together
-- ask students to enable longer delay-to-off time
+* how to work with the clock
+
+#### Lecture
+
+* Smart Watch - weather
+
+#### Lab
+
+* Use weather API to display local weather (if time)
 
 ### Day 2
 
 #### Activity
 
 - Check milestone 
+
+#### Lecture
+
+- Accelerometer 
+
+#### Lab
+
+- Copy example code for display graphs
+- Use **tap** feature
+- Use **portrait / landscape** detection
+- Use accelerometer to control RGB LED (if time)
+
+### Assignment
+
+- Due start of current week: nothing
+- Continue working on project 
+
+## 14. RFID + Guest Lecture 
+
+### Reading
+
+- 
+
+### Day 1
 
 #### Lecture
 
@@ -1062,23 +1083,6 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 - Print out value; show need to upper case and trim space
 - now ask them to check for authorization for one card or the other
 
-### Assignment
-
-- Due start of current week: nothing
-- Continue working on project 
-
-## 14. Guest Lecture + Wellness Day
-
-### Reading
-
-- 
-
-### Day 1
-
-#### Lecture
-
-- ==**Guest Lecture?**== 
-
 ### Day 2
 
 #### Lecture
@@ -1090,7 +1094,7 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 - Due start of current week: nothing
 - Continue working on project 
 
-## 15. PIR, DHT
+## 15. PIR + Guest Lecture?
 
 ### Reading
 
@@ -1109,14 +1113,7 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 #### Lecture
 
-- accelerometer
-
-#### Lab
-
-- Copy example code for display graphs
-- Use **tap** feature
-- Use **portrait / landscape** detection
-- Use accelerometer to control RGB LED (if time)
+- ==Probably need more here==
 
 ### Day 2
 
