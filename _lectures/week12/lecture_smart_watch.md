@@ -117,6 +117,16 @@ title: Smart Watch
 4. Display data
 5. Use bitmaps byte array in `bitmaps_weather.h`
 
+## Note on Weather Codes
+
+- Weatherstack reports the weather conditions with a 3 digit code, which we can use to determine with image to display
+- The full list can be found in the [API documentation](https://weatherstack.com/site_resources/weatherstack-weather-condition-codes.zip)
+- For simplicity, you can use the follow abridged logic
+  - Rainy weather codes: 296, 302, or 308
+  - Cloudy weather codes: 116, 119, or 122
+  - Snowing weather code: 227
+  - Any other code can default to sunny 
+
 ## References
 
 * [MAX30101 datasheet](https://cdn.sparkfun.com/assets/8/1/c/9/0/MAX30101_Datasheet.pdf)
