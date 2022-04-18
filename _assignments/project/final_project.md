@@ -115,13 +115,15 @@ Deliverables
 
 ### Project - Final Presentation (10 min)
 
--   This is a required in-person demonstration of your functioning device
--   This is scheduled during our final exam time
+-   This is a required in-person demonstration of your functioning device scheduled during our final exam time
+-   You may create a short video introduction highlighting your project (***please keep your video under 2 minutes***)
 -   The presentation should address the following:
     -   What your device does / what problems are you solving
-    -   How your device satisfies each requirement in the grading rubric (e.g. it uses sensor an ultrasonic sensor and an RFID sensor; it uses Blynk to allow the user to control a two servos, etc.)
+    -   How your device satisfies each requirement in the grading rubric 
+        -   Four key components
+        -   Remote control / Blynk / Bluetooth functionality
+        -   Dashboard
     -   What was the most challenging or interesting aspect of the project
--   It is not required to have slides
 -   You will then demonstrate all the functionality of your device. If it isn't feasible to show it live, you can pre-record this part
 
 ## Submission Instructions

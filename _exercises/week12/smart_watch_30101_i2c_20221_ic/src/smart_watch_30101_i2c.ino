@@ -1,4 +1,15 @@
 /*
+    (website) add the webhook
+
+    subscribe to a webhook response
+
+    publish the message to particle cloud
+
+    write the subcription handler
+
+*/
+
+/*
   Uses code from
   Optical Heart Rate Detection (PBA Algorithm) using the MAX30105 Breakout
   By: Nathan Seidle @ SparkFun Electronics
@@ -15,17 +26,23 @@
   -INT = Not connected
 */
 // libraries for heart rate sensor
+#include "JsonParserGeneratorRK.h"
 #include "MAX30105.h"
+#include "SparkFunMicroOLED.h"  // Include MicroOLED library
+#include "bitmaps_watch.h"
+#include "bitmaps_weather.h"
 #include "heartRate.h"
 
 // libraries for OLED
 #include <Wire.h>
-
-#include "SparkFunMicroOLED.h"  // Include MicroOLED library
-#include "bitmaps_watch.h"
-#include "bitmaps_weather.h"
-
 MAX30105 particleSensor;
+JsonParser jsonParser;
+
+float weatherTemp = 0;
+String weatherDescripton = "description";
+int weatherCode = 0;  // describe conditions
+int weatherHumidity = 0;
+int weatherUvIndex = 0;
 
 //////////////////////////////////
 // MicroOLED Object Declaration //
@@ -74,7 +91,7 @@ int prevReading = HIGH;  // the last VERIFIED state
 //////////////////////////
 // TODO: create state enum and variable(s) to track state
 enum State { Heart, TimeMode, Weather };
-State currentState = Heart;
+State currentState = Weather;
 
 // TODO
 void getNextState() {
@@ -199,11 +216,54 @@ void runTimeScreen() {
 
 // TODO
 void runWeatherScreen() {
-    // for debugging
-    Serial.println("Weather");
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > 10512000) {
+        String data = "90089";
+        Particle.publish("WeatherStackJSON", data, PRIVATE);
+    }
+
+    // rainy is 296, 302, 308
+    //  for debugging
+    //  Serial.println("Weather");
     oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Weather");
+    weatherDescripton = "Partially cloudy";
+    switch (weatherCode) {
+        case 296:
+        case 302:
+        case 308:  // match ANY of these (basically OR)
+            oled.drawBitmap(weather_rainy_up_left);
+            break;
+        case 116:
+        case 119:
+        case 122:
+            oled.drawBitmap(weather_cloudy_up_left);
+            break;
+        case 227:
+            oled.drawBitmap(weather_snowing_up_left);
+            break;
+        default:
+            oled.drawBitmap(weather_sunny_up_left);
+            break;
+    }
+
+    oled.setCursor(38, 3);
+    oled.setFontType(1);
+    oled.print(weatherTemp, 0);
+    oled.setFontType(0);
+    oled.print("o");
+
+    oled.setCursor(0,24);
+    oled.setFontType(0);
+    oled.print(weatherDescripton.substring(0,9));
+
+    oled.setCursor(0, 40);
+    oled.print("H ");
+    oled.print(weatherHumidity);
+    oled.print("%");
+
+    oled.setCursor(38, 40);
+    oled.print("UV ");
+    oled.print(weatherUvIndex);
     oled.display();
 }
 
@@ -241,6 +301,12 @@ void setup() {
     delay(1000);  // Delay 1000 ms
 
     pinMode(PIN_BUTTON, INPUT);
+
+    Particle.subscribe("hook-response/WeatherStackJSON", myHandler, MY_DEVICES);
+
+    // run once on startup to get the proper data
+    String data = "90089";
+    Particle.publish("WeatherStackJSON", data, PRIVATE);
 }
 
 //////////////////////////
@@ -255,6 +321,45 @@ void loop() {
     }
     prevReading = curButtonVal;
     loadNextScreen();
+}
+
+void myHandler(const char *event, const char *data) {
+    // Part 1 allows for webhook responses to be delivered in multple "chunks";
+    // you don't need to change this
+    int responseIndex = 0;
+    const char *slashOffset = strrchr(event, '/');
+    if (slashOffset) responseIndex = atoi(slashOffset + 1);
+    if (responseIndex == 0) jsonParser.clear();
+    jsonParser.addString(data);
+
+    // Part 2 is where you can parse the actual data; you code goes in the IF
+    if (jsonParser.parse()) {
+        /****** YOUR PARSING CODE GOES HERE ********/
+        // Serial.println(jsonParser.getBuffer());
+        weatherTemp = jsonParser.getReference()
+                          .key("current")
+                          .key("temperature")
+                          .valueFloat();
+        weatherCode = jsonParser.getReference()
+                          .key("current")
+                          .key("weather_code")
+                          .valueInt();
+        weatherHumidity =
+            jsonParser.getReference().key("current").key("humidity").valueInt();
+        weatherUvIndex =
+            jsonParser.getReference().key("current").key("uv_index").valueInt();
+        weatherDescripton = jsonParser.getReference()
+                                .key("current")
+                                .key("weather_descriptions")
+                                .index(0)
+                                .valueString();
+
+        Serial.println(weatherDescripton +
+                       "\n  temperature: " + String(weatherTemp, 1) +
+                       " F\n  humidity: " + String(weatherHumidity) +
+                       "\n  uv index: " + String(weatherUvIndex) +
+                       "\n  weather code: " + String(weatherCode));
+    }
 }
 
 /* =================================================
