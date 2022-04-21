@@ -68,7 +68,7 @@ title: RFID (Radio Frequency ID Scanner	)
 
 ## RFID Library
 
-  * `MFRC522` is an Argon compatible library
+  * `ARGON-RFID-MFRC522` is an Argon compatible library
 
 ## Sample Code #1: Find the Card ID
 
@@ -79,10 +79,10 @@ title: RFID (Radio Frequency ID Scanner	)
 ## Sample Code #1: Setup
 
 ```c++
-#include "MFRC522.h"
+#include <MFRC522.h>
 
-const int SS_PIN = D2;
-const int RST_PIN = D3'
+const int SS_PIN = A4;
+const int RST_PIN = A5;
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 object
 
@@ -122,10 +122,10 @@ void loop() {
 ## Sample Code #2: Setup
 
 ```c++
-#include "MFRC522.h"
+#include <MFRC522.h>
 
-const int SS_PIN = D2;
-const int RST_PIN = D3
+const int SS_PIN = A5;
+const int RST_PIN = A4;
 const String MATCH_ID = "OB 45 EA 0E"; //target id to match
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
@@ -207,7 +207,7 @@ scanId.trim();         //scanId has an intial leading " "
 
 <!-- Note: MFRC522 library doesn't work with DeviceOS 3.1+. You need to do the following-->
 
-<!-- change MIFARE_UnbrickUidSector method to return true in case of ELSE !-->
+<!-- change MIFARE_UnbrickUidSector method to return true in case of ELSE after line 1630 !-->
 
 <!-- open project.properties and delete the dependency line for MFRC522. Particle cloud flash uses the cloud version of the library otherwise, meaning it won't use the local, changed version-->
 

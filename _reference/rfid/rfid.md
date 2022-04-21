@@ -42,7 +42,7 @@ show_in_list: true
 
 * We need a library to handle much of the complex communication with the OLED 
 * To install a library, go to the command palette and type `Install Library`
-* Install the OLED library: `MFRC522`
+* Install the OLED library: `ARGON-RFID-MFRC522`
 
 ### Examples
 

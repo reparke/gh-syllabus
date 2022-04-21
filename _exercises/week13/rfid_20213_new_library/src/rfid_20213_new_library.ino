@@ -1,31 +1,13 @@
 /*
- * --------------------------------------------------------------------------------------------------------------------
- * Example sketch/program showing how to read data from a PICC to serial.
- * --------------------------------------------------------------------------------------------------------------------
- * This is a MFRC522 library example; for further details and other examples
- * see: https://github.com/miguelbalboa/rfid
+ * Initial Author: ryand1011 (https://github.com/ryand1011)
  *
- * Example sketch/program showing how to read data from a PICC (that is: a RFID
- * Tag or Card) using a MFRC522 based RFID Reader on the Arduino SPI interface.
+ * Reads data written by a program such as "rfid_write_personal_data.ino"
  *
- * When the Arduino and the MFRC522 module are connected (see the pin layout
- * below), load this sketch into Arduino IDE then verify/compile and upload it.
- * To see the output: use Tools, Serial Monitor of the IDE (hit Ctrl+Shft+M).
- * When you present a PICC (that is: a RFID Tag or Card) at reading distance of
- * the MFRC522 Reader/PCD, the serial output will show the ID/UID, type and any
- * data blocks it can read. Note: you may see "Timeout in communication"
- * messages when removing the PICC from reading distance too early.
+ * See:
+ * https://github.com/miguelbalboa/rfid/tree/master/examples/rfid_write_personal_data
  *
- * If your reader supports it, this sketch/program will read all the PICCs
- * presented (that is: multiple tag reading). So if you stack two or more PICCs
- * on top of each other and present them to the reader, it will first output all
- * details of the first and then the next PICC. Note that this may take some
- * time as all data blocks are dumped, so keep the PICCs at reading distance
- * until complete.
- *
- * @license Released into the public domain.
- *
- * Typical pin layout used:
+ * Uses MIFARE RFID card using RFID-RC522 reader
+ * Uses MFRC522 - Library
  * -----------------------------------------------------------------------------------------
  *             MFRC522      Arduino       Arduino   Arduino    Arduino Arduino
  *             Reader/PCD   Uno/101       Mega      Nano v3    Leonardo/Micro
@@ -40,26 +22,36 @@
 
 #include <MFRC522.h>
 #include <SPI.h>
-// #define SS_PIN A4
-// #define RST_PIN A5
-constexpr uint8_t RST_PIN = A5;  // Configurable, see typical pin layout above
-constexpr uint8_t SS_PIN = A4;  // Configurable, see typical pin layout above
+
+constexpr uint8_t RST_PIN = A4;  // Configurable, see typical pin layout above
+constexpr uint8_t SS_PIN = A5;   // Configurable, see typical pin layout above
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
 
+//*****************************************************************************************//
 void setup() {
     Serial.begin(9600);  // Initialize serial communications with the PC
-    while (!Serial)
-        ;  // Do nothing if no serial port is opened (added for Arduinos based
-           // on ATMEGA32U4)
-    SPI.begin();                        // Init SPI bus
-    mfrc522.PCD_Init();                 // Init MFRC522
-    mfrc522.PCD_DumpVersionToSerial();  // Show details of PCD - MFRC522 Card
-                                        // Reader details
-    Serial.println(F("Scan PICC to see UID, SAK, type, and data blocks..."));
+    SPI.begin();         // Init SPI bus
+    mfrc522.PCD_Init();  // Init MFRC522 card
+    Serial.println(
+        F("Read personal data on a MIFARE PICC:"));  // shows in serial that it
+                                                     // is ready to read
 }
 
+//*****************************************************************************************//
 void loop() {
+    // Prepare key - all keys are set to FFFFFFFFFFFFh at chip delivery from the
+    // factory.
+    MFRC522::MIFARE_Key key;
+    for (byte i = 0; i < 6; i++) key.keyByte[i] = 0xFF;
+
+    // some variables we need
+    byte block;
+    byte len;
+    MFRC522::StatusCode status;
+
+    //-------------------------------------------
+
     // Look for new cards
     if (!mfrc522.PICC_IsNewCardPresent()) {
         return;
@@ -70,6 +62,82 @@ void loop() {
         return;
     }
 
-    // Dump debug info about the card; PICC_HaltA() is automatically called
-    mfrc522.PICC_DumpToSerial(&(mfrc522.uid));
+    Serial.println(F("**Card Detected:**"));
+
+    //-------------------------------------------
+
+    mfrc522.PICC_DumpDetailsToSerial(
+        &(mfrc522.uid));  // dump some details about the card
+
+    // mfrc522.PICC_DumpToSerial(&(mfrc522.uid));      //uncomment this to see
+    // all blocks in hex
+
+    //-------------------------------------------
+
+    Serial.print(F("Name: "));
+
+    byte buffer1[18];
+
+    block = 4;
+    len = 18;
+
+    //------------------------------------------- GET FIRST NAME
+    status = mfrc522.PCD_Authenticate(
+        MFRC522::PICC_CMD_MF_AUTH_KEY_A, 4, &key,
+        &(mfrc522.uid));  // line 834 of MFRC522.cpp file
+    if (status != MFRC522::STATUS_OK) {
+        Serial.print(F("Authentication failed: "));
+        Serial.println(mfrc522.GetStatusCodeName(status));
+        return;
+    }
+
+    status = mfrc522.MIFARE_Read(block, buffer1, &len);
+    if (status != MFRC522::STATUS_OK) {
+        Serial.print(F("Reading failed: "));
+        Serial.println(mfrc522.GetStatusCodeName(status));
+        return;
+    }
+
+    // PRINT FIRST NAME
+    for (uint8_t i = 0; i < 16; i++) {
+        if (buffer1[i] != 32) {
+            Serial.write(buffer1[i]);
+        }
+    }
+    Serial.print(" ");
+
+    //---------------------------------------- GET LAST NAME
+
+    byte buffer2[18];
+    block = 1;
+
+    status = mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, 1, &key,
+                                      &(mfrc522.uid));  // line 834
+    if (status != MFRC522::STATUS_OK) {
+        Serial.print(F("Authentication failed: "));
+        Serial.println(mfrc522.GetStatusCodeName(status));
+        return;
+    }
+
+    status = mfrc522.MIFARE_Read(block, buffer2, &len);
+    if (status != MFRC522::STATUS_OK) {
+        Serial.print(F("Reading failed: "));
+        Serial.println(mfrc522.GetStatusCodeName(status));
+        return;
+    }
+
+    // PRINT LAST NAME
+    for (uint8_t i = 0; i < 16; i++) {
+        Serial.write(buffer2[i]);
+    }
+
+    //----------------------------------------
+
+    Serial.println(F("\n**End Reading**\n"));
+
+    delay(1000);  // change value if you want to read cards faster
+
+    mfrc522.PICC_HaltA();
+    mfrc522.PCD_StopCrypto1();
 }
+//*****************************************************************************************//

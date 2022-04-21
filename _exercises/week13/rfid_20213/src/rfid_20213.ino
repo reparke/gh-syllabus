@@ -35,47 +35,48 @@ void setup() {
 }
 
 void loop() {
-    String currentCard = "";
-    // we only want to read from the card when 1) card is present and 2) serial
-    // monitor is working
-    unsigned long curMillis = millis();
-    if (curMillis - prevMillis > SCAN_DELAY) {
-        prevMillis = curMillis;
-        if (mfrc522.PICC_IsNewCardPresent() == true &&
-            mfrc522.PICC_ReadCardSerial() == true) {
-            for (byte i = 0; i < mfrc522.uid.size; i++) {
-                currentCard +=
-                    String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
-                currentCard += String(mfrc522.uid.uidByte[i], HEX);
-            }
-            Serial.println("The current card UID is: " + currentCard);
-            // make string upper case
-            currentCard.toUpperCase();
-            // remove extra space from string
-            currentCard.trim();
-            Serial.println("The current card modified UID is: " + currentCard);
+    // String currentCard = "";
+    // // we only want to read from the card when 1) card is present and 2) serial
+    // // monitor is working
+    // unsigned long curMillis = millis();
+    // if (curMillis - prevMillis > SCAN_DELAY) {
+    //     prevMillis = curMillis;
+    //     if (mfrc522.PICC_IsNewCardPresent() == true &&
+    //         mfrc522.PICC_ReadCardSerial() == true) {
+    //         for (byte i = 0; i < mfrc522.uid.size; i++) {
+    //             currentCard +=
+    //                 String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
+    //             currentCard += String(mfrc522.uid.uidByte[i], HEX);
+    //         }
+    //         Serial.println("The current card UID is: " + currentCard);
+    //         // make string upper case
+    //         currentCard.toUpperCase();
+    //         // remove extra space from string
+    //         currentCard.trim();
+    //         Serial.println("The current card modified UID is: " + currentCard);
 
-            // card1 will turn on D7, card2 will turn off D7
-            if (currentCard == card1) {
-                digitalWrite(D7, HIGH);
-                Serial.println("Card1 found!");
-            } else if (currentCard == card2) {
-                digitalWrite(D7, LOW);
-                Serial.println("Card2 found");
-            }
-        }
+    //         // card1 will turn on D7, card2 will turn off D7
+    //         if (currentCard == card1) {
+    //             digitalWrite(D7, HIGH);
+    //             Serial.println("Card1 found!");
+    //         } else if (currentCard == card2) {
+    //             digitalWrite(D7, LOW);
+    //             Serial.println("Card2 found");
+    //         }
+    //     }
+    // }
+
+    // Look for new cards
+    if (!mfrc522.PICC_IsNewCardPresent()) {
+        return;
     }
 
-    // // Look for new cards
-    // if (!mfrc522.PICC_IsNewCardPresent()) {
-    //     return;
-    // }
+    // Select one of the cards
+    if (!mfrc522.PICC_ReadCardSerial()) {
+        return;
+    }
 
-    // // Select one of the cards
-    // if (!mfrc522.PICC_ReadCardSerial()) {
-    //     return;
-    // }
-
-    // // Dump debug info about the card. PICC_HaltA() is automatically called.
-    // mfrc522.PICC_DumpToSerial(&(mfrc522.uid));
+    // Dump debug info about the card. PICC_HaltA() is automatically called.
+    Serial.println("found card...printing to serial");
+    mfrc522.PICC_DumpToSerial(&(mfrc522.uid));
 }
