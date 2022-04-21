@@ -9,7 +9,7 @@ title: Sleep and Battery Conservation
 
 <!-- headingDivider: 2 -->
 
-# Sleep and Wake Up
+#  Sleep and Battery Conservation
 
 ## Power Conservation
 
@@ -20,8 +20,8 @@ title: Sleep and Battery Conservation
   - Running `loop ()`
 
   - Responding to any interrupts or inputs
-- To limit wasting electricity and extend the time between battery charges, you can put the device to **sleep**, which turns off some or all of the Argon components
-- Note: Use sleep when device will be powered down for more than 10 seconds. Less than that and you will use more power turning it on / off than you will save
+- To limit wasting electricity and extend the time between battery charges, use **sleep**, which turns off some or all of the Argon components
+- Note: **sleep** for more than 10 seconds. Less than that use more power turning it on / off than you will be saved
 
 ## Zzzz....Three Sleep Modes
 
@@ -41,7 +41,7 @@ title: Sleep and Battery Conservation
 
 ## Power vs. Responsiveness
 
-<img src="lecture_sleep.assets/sleep-power.png" alt="Sleep Power" style="width:500px;" />
+<img src="lecture_sleep.assets/sleep-power.png" alt="Sleep Power" style="width:550px;" />
 
 <!-- This shows that you can conserve power if you hibernate but it will take longer to publish a message -->
 
@@ -60,7 +60,7 @@ title: Sleep and Battery Conservation
 
 ## What Happens After Waking
 
-<img src="lecture_sleep.assets/sleep-variables.png" alt="Wake Methods" style="width:500px" />
+<img src="lecture_sleep.assets/sleep-variables.png" alt="Wake Methods" style="width:900px" />
 
 <!-- note HIBERNATE wakes as if it has been reset. It goes through setup() again and starts with all non-retained variables cleared. In ULTRA_LOW_POWER and STOP modes, execution continues after the line of code that put the device to sleep, with all variables preserved. -->
 
@@ -73,22 +73,24 @@ SystemSleepConfiguration config;
 config.mode(SystemSleepMode::<<ADD SLEEP MODE>>).<<ADD WAKE OPTIONS>>;
 System.sleep(config);
 ```
-
-- Example: Put device in `HIBERNATE` and wake after 10 min
+## Sleep Example #1
+- Put device in `HIBERNATE` and wake after 10 min
 
 ```c++
 SystemSleepConfiguration config;
 config.mode(SystemSleepMode::HIBERNATE).duration(10min);
 System.sleep(config);
 ```
-- Example: Put device in `ULTRA_LOW_POWER` and wake with a falling (`HIGH` to `LOW`) signal on pin D8
+## Sleep Example #2
+- Put device in `ULTRA_LOW_POWER` and wake with a falling (`HIGH` to `LOW`) signal on pin D8
 
 ```c++
 SystemSleepConfiguration config;
 config.mode(SystemSleepMode::ULTRA_LOW_POWER).gpio(D8, FALLING);
 System.sleep(config);
 ```
-- Example: Put device in `ULTRA_LOW_POWER`, and wake with a rising (`LOW` to `HIGH`) signal on pin D5 **or** after 2 hours
+## Sleep Example #3
+- Put device in `ULTRA_LOW_POWER`, and wake with a rising (`LOW` to `HIGH`) signal on pin D5 **or** after 2 hours
 
 ```c++
 SystemSleepConfiguration config;
@@ -98,19 +100,19 @@ System.sleep(config);
 
 ## Waking but Staying Silent
 
-- Using the wifi and connecting to the cloud takes time and uses battery
+- Using the wifi to connect to the cloud takes time and uses battery
 
-- If you are collecting data that doesn't need to be updated in real-time, you can do the following
+- If you don't need to update in real-time, you can do the following
 
   - Sleep the Argon
 
   - Wake up after a fixed time, but do **not** connect to the cloud
 
-  - Read sensor data
+  - Read / store sensor data
 
   - Sleep the Argon
 
-  - After a certain amount of time or number of sensor readings, you can send all the saved data to the cloud at once
+- After a certain amount of time or number of sensor readings, you can send all the saved data to the cloud at once
 
 
 ## Controlling Cloud Connection
@@ -131,13 +133,12 @@ Particle.connect();
 
 ## Lab
 
-![sleep_wake_button_bb](lecture_sleep.assets/sleep_wake_button_bb.png)
+<img src="lecture_sleep.assets/sleep_wake_button_bb.png" alt="sleep_wake_button_bb" style="width:700px;" />
 
 ## Credit
 
 * [Particle - About Sleep](https://docs.particle.io/tutorials/learn-more/about-sleep/)
 * [Particle - `sleep()` documentation](https://docs.particle.io/cards/firmware/sleep-sleep/sleep-sleep/)
-
 
 
 
