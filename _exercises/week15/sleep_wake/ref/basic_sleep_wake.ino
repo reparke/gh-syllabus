@@ -2,7 +2,7 @@
 boolean shouldSleep = true;  // set to false, but gets inverted in setup()
 void setup() {
     Serial.begin(9600);
-    pinMode(WKP, INPUT);  // not strictly necessary
+    pinMode(WKP, INPUT);  // D8
 }
 
 void loop() {
