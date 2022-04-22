@@ -148,11 +148,12 @@ toc_sticky: true
 - [x] Week 13
   - [x] RFID
 
-- [ ] Week 14
-  - [ ] Accelerometer
+- [x] Week 14
+  - [x] Accelerometer
 
 - [x] Week 15
   - [x] PIR
+  - [x] sleep
 
 ## General Feedback (Spring 2021)
 

@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 theme: itp
 
 week: 15
@@ -10,6 +10,8 @@ title: Sleep and Battery Conservation
 <!-- headingDivider: 2 -->
 
 #  Sleep and Battery Conservation
+
+![bg opacity:.85 right:58%](lecture_sleep.assets/david-clode-Yg_sNKOiXvY-unsplash.jpg)
 
 ## Power Conservation
 
@@ -139,7 +141,7 @@ Particle.connect();
 
 * [Particle - About Sleep](https://docs.particle.io/tutorials/learn-more/about-sleep/)
 * [Particle - `sleep()` documentation](https://docs.particle.io/cards/firmware/sleep-sleep/sleep-sleep/)
-
+* Photo by [David Clode](https://unsplash.com/photos/Yg_sNKOiXvY) on [Unsplash](https://unsplash.com/s/photos/sleep?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 
 

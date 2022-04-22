@@ -4,7 +4,7 @@ int count = 0;
 const int MAX_SIZE = 2;
 int data[MAX_SIZE];
 
-SYSTEM_MODE(SEMI_AUTOMATIC);
+SYSTEM_MODE(SEMI_AUTOMATIC);    //when argon turns on, it does NOT connect to cloud (no wifi)
 
 void setup() {
     Serial.begin(9600);

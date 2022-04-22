@@ -8,14 +8,9 @@ title: Pre-Lecture Activities
 
 * **For Tuesday**
   
-  * Continue with smart watch
+  * Watch **Accelerometer**
+    {% include video id="k7r1PBhckHs" provider="youtube" %}
   
-* **For Thursday**
-
-  * Watch **RFID Sensor**
-    {% include video id="GtgVViZe1sM" provider="youtube" %}
-
+* **For Tuesday**
   - Build
-    ![](week13.assets/rfid_bb.png) 
-
-- 
+    ![accelerometer_rgb_led_bb](week13.assets/accelerometer_rgb_led_bb.png)
