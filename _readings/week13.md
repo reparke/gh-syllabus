@@ -9,8 +9,7 @@ title: Pre-Lecture Activities
 * **For Tuesday**
   
   * Watch **Accelerometer**
-    {% include video id="k7r1PBhckHs" provider="youtube" %}
-  
+    {% include video id="ZiEiEboxAHk" provider="youtube" %}
 * **For Tuesday**
   - Build
     ![accelerometer_rgb_led_bb](week13.assets/accelerometer_rgb_led_bb.png)
