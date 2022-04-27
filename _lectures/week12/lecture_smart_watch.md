@@ -127,6 +127,10 @@ title: Smart Watch
   - Snowing weather code: 227
   - Any other code can default to sunny 
 
+## Important Reading
+
+- [Racial Bias in Pulse Oximetry Measurement](https://www.nejm.org/doi/10.1056/NEJMc2029240)
+
 ## References
 
 * [MAX30101 datasheet](https://cdn.sparkfun.com/assets/8/1/c/9/0/MAX30101_Datasheet.pdf)

@@ -50,8 +50,8 @@ void setup() {
 }
 
 void loop() {
-    // part1Simple();
-    part2AlarmHold();
+    part1Simple();
+    // part2AlarmHold();
     // part3AlarmDecreaseSensitivity();
 }
 
@@ -68,10 +68,11 @@ void part2AlarmHold() {
     } else if ((curMillis - prevAlarmMillis) > timeAfterAlarm) {
         // } else  {
         digitalWrite(LED_PIN, LOW);
-        Serial.println(String(counter++) +": Motion not detected and no alarm!");
+        Serial.println(String(counter++) +
+                       ": Motion not detected and no alarm!");
     } else {
-        Serial.println(
-            String(counter++) +": Motion not detected but still holding alarm!");
+        Serial.println(String(counter++) +
+                       ": Motion not detected but still holding alarm!");
     }
 
     // delay(1000);
@@ -89,7 +90,7 @@ void part1Simple() {
         digitalWrite(LED_PIN, LOW);
         Serial.println(String(counter++) + ": Motion stopped!");
     }
-    // delay(1000);
+    delay(1000);
 }
 
 void part3AlarmDecreaseSensitivity() {
@@ -110,5 +111,5 @@ void part3AlarmDecreaseSensitivity() {
         Serial.println(String(counter++) + ": Motion stopped!");
     }
 
-    // delay(1000);
+    delay(1000);
 }

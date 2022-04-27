@@ -25,11 +25,11 @@ Students will work in pairs and sign up for a time slot throughout the semester 
 ## Example of Potential Issues / Topics
 
 - [Health Wearables: Ensuring Fairness, Preventing Discrimination, and Promoting Equity in an Emerging Internet-of-Things Environment](https://www.jstor.org/stable/10.5325/jinfopoli.8.2018.0034#metadata_info_tab_contents)
+- [Their Bionic Eyes Are Now Obsolete and Unsupported](https://spectrum.ieee.org/bionic-eye-obsolete)
 - [Amazon's doorbell camera Ring is working with police – and controlling what they say](https://www.theguardian.com/technology/2019/aug/29/ring-amazon-police-partnership-social-media-neighbor) 
 - [The Internet of Things Needs a Code of Ethics](https://www.theatlantic.com/technology/archive/2017/05/internet-of-things-ethics/524802/)
 - [Apple contractors 'regularly hear confidential details' on Siri recordings](https://www.theguardian.com/technology/2019/jul/26/apple-contractors-regularly-hear-confidential-details-on-siri-recordings) 
 - [How a fish tank helped hack a casino](https://www.washingtonpost.com/news/innovations/wp/2017/07/21/how-a-fish-tank-helped-hack-a-casino/)
-
 - Health equity of wearables
 - Privacy smart speaker recording
 - Consent to data collection from smart devices

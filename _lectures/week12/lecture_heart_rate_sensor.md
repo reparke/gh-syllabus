@@ -65,7 +65,7 @@ title: Heart Rate Sensor (MAX30101)
 ## Library
 
 - Argon-compatible library
-  ```MAX30105```
+  ```SparkFun-MAX3010x```
 - Configuration
 
 ```c++

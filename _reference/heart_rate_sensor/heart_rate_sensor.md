@@ -41,9 +41,9 @@ show_in_list: true
 
 ### Library
 
-* We need a library to handle much of the complex communication with the OLED 
+* We need a library to handle much of the complex communication with the heart rate sensor
 * To install a library, go to the command palette and type `Install Library`
-* Install the OLED library: `MAX30105`
+* Install the heart rate sensorlibrary: `SparkFun-MAX3010x`
 
 ### Examples
 
