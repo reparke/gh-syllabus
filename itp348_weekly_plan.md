@@ -13,9 +13,21 @@ toc_sticky: true
 
 **Definite**
 
+* [ ] TA recommendations
+  * [ ] have small assignment where they layout PCB for a built project; then later in the semester the soldering workshop uses that design (talk to kristof about this so we don't step on 388)
+  * [ ] to accommodate pcb assignment, reduce blynk millis assignment
+  * [ ] submissions: 
+    * [ ] make single zip for upload with code and fritzin
+    * [ ] create google doc with photos embedded and video link; 
+    * [ ] students should narrate
+    * [ ] Rob announce and demostrates in first week
+    * [ ] TAs ask for corrected videos if misssing
+    * [ ] partial credit for some working
+
+  * [ ] Maybe A9 blynk should change because it is hard and Rob thinks it is "fun"
+
 * [ ] week 10
   * [ ] combine both days into one day; add more info
-
 * [ ] Soldering workshop
   * [ ] Plan event in week3 for sometime before week 9
   * [ ] Consider holding during a class session to have more people attend
