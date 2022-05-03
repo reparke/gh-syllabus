@@ -54,7 +54,7 @@ Here is a video overview: [https://youtu.be/BB8cKghUftI](https://youtu.be/BB8cKg
 
 * Starting code is provided for you which handles all the Bluetooth connections for you
 
-* Download the starting project here: [starting project link](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/master/_assignments/a10_bluetooth_car_program/ble_car_start)
+* Download the starting project here: [starting project link](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/reparke/ITP348-Physical-Computing/tree/main/_assignments/a10_bluetooth_car_program/ble_car_start)
 * There are two files in the `src` folder
   * `argon_ble_setup.h` Handles all the Bluetooth communication. You can mostly leave this file unchanged
   * `ble_car_setup.ino` This is the project source code. Most of your changes here will be in `onDataReceived`

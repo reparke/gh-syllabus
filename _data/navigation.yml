@@ -6,7 +6,7 @@ main:
   - title: "Assignments"
     url: /assignments
   - title: "Exercises"
-    url: https://github.com/reparke/ITP348-Physical-Computing/tree/master/_exercises
+    url: https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises
   - title: "Reference"
     url: /reference
   - title: "Blackboard"
