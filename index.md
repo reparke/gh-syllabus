@@ -37,4 +37,4 @@ These are not necessarily needed for this course, but provide more information a
 
 - [GitHub repository](https://github.com/reparke/ITP348-Physical-Computing) - This is where all the raw files lives
 - [Building your own course / site](https://robparke.com/2019/08/21/creating-accessible-open-educational-resources/) - I wanted this course material to be accessible and open-source. I tried to make some notes about the process for anyone interested
-- [Feedback](https://parke.wufoo.com/forms/feedback-form/) - If you find this material helpful in any way or you find it useful, please let me know by filling out this form. I would love to hear about it!
+- [Feedback](https://parke.wufoo.com/forms/feedback-form/) - If you find this material helpful in any way or you find it useful, please let me know by filling out this form. I would love to hear about it! 
