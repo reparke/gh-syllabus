@@ -59,7 +59,7 @@ Install Fritzing Library for Argon
 
 - Download the Argon library for Fritzing:
 
-  [https://github.com/reparke/Fritzing-Parts/archive/master.zip](https://github.com/reparke/Fritzing-Parts/archive/master.zip)
+  [https://github.com/reparke/Fritzing-Parts/archive/main.zip](https://github.com/reparke/Fritzing-Parts/archive/main.zip)
 
 - Unzip the file (take note of the folder location)
 
