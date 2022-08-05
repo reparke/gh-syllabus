@@ -8,7 +8,7 @@ toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: true
 ---
 
-## Syllabus Spring 2022
+## Syllabus Fall 2022
 
 ### Course Info
 
@@ -249,10 +249,10 @@ submission that they intend to use a grace day.
 | Week 5          | Temperature sensors, SPI communication, OLED, webhooks, dashboards | Posted online | A5                                                           |
 | Week 6          | Cloud subscription, mobile app integration | Posted online | A6                                                           |
 | Week 7          | Finite state machines                                 | Posted online | A7                                                           |
-| Week 8          | DC motors, servos                             | Posted online | A8 (due in one week)<br />A9 (due in two weeks) |
-| Week 9          | Bluetooth, remote controlled car          | Posted online | Continue working on A9                             |
-| Week 10         | Ultrasonic sensors, OLED graphics | Posted online | A10<br />A11                                 |
-| Week 11         | JSON, APIs, dashboards | Posted online | Project proposal |
+| Week 8          | DC motors, servos                             | Posted online | A8 (due in two weeks) |
+| Week 9          | Bluetooth, remote controlled car          | Posted online | Continue working on A8                            |
+| Week 10        | JSON, APIs, dashboards | Posted online | A9 |
+| Week 11        | Ultrasonic sensors, OLED graphics | Posted online | A10<br />Project proposal                 |
 | Week 12         | Wearables, heart rate sensors, debouncing | Posted online | *(work on project)*                                          |
 | Week 13         | RFID, accessibility                | Posted online | Project milestone |
 | Week 14 | Accelerometers | Posted online | *(work on project)* |
