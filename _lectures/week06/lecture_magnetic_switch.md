@@ -61,7 +61,7 @@ title: Magnetic Switch
 
 * When the magnetic switch is opened or closed, publish cloud event with the message `door was opened` or `door was closed` when `doorState` changes. Note **only one** publish should occur every time door is opened or closed *(Hint: Think about how this operation is similar to other things we've done. what variables would you need to this?)*
 * Your name should be 
-  `ITP348_Week6_Door`
+  `ITP348_Door`
 
 * Change the RGB colors based on their door status
   * Red means "door is open"

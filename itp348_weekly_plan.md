@@ -13,9 +13,31 @@ toc_sticky: true
 
 **Definite**
 
+* [ ] week 8
+  * [ ] Create bluetooth fan example could covered during bluetooth lecture
+  * [ ] Maybe A9 blynk should change because it is hard and Rob thinks it is "fun"
+* [ ] week 10
+  * [ ] combine A8 and A10 (bluetooth car).
+  * [ ] future semester: consider permanently putting motors here; add something else for week 9
+* [x] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
+
+Week 10 idea: 
+
+* [ ] Tues is ultra sonic sensor + project overview; show BRIEFLY how to load images
+* [ ] Thurs is using JSON to send multiple values to Initial State; consider recording a video for json overview and moving early
+* [ ] week 10 / 11: may need to record JSON videos for clarity
+* [ ] week 10 / 11: may need to include a subscribe video or lectu
+
+* [ ] consider moving A9 earlier to be closer to material (even if prelim proposal and A9 overlap)
+* [ ] consider removing week 10 OLED graphics, replace with...? JSON, softpot, piezo motion sensor
+
+---
+
+**Maybe**
+
 * [ ] TA recommendations
+
   * [ ] have small assignment where they layout PCB for a built project; then later in the semester the soldering workshop uses that design (talk to kristof about this so we don't step on 388)
-  * [ ] to accommodate pcb assignment, reduce blynk millis assignment
   * [ ] submissions: 
     * [ ] make single zip for upload with code and fritzin
     * [ ] create google doc with photos embedded and video link; 
@@ -23,11 +45,6 @@ toc_sticky: true
     * [ ] Rob announce and demostrates in first week
     * [ ] TAs ask for corrected videos if misssing
     * [ ] partial credit for some working
-
-  * [ ] Maybe A9 blynk should change because it is hard and Rob thinks it is "fun"
-
-* [ ] week 10
-  * [ ] combine both days into one day; add more info
 * [ ] Soldering workshop
   * [ ] Plan event in week3 for sometime before week 9
   * [ ] Consider holding during a class session to have more people attend
@@ -35,36 +52,13 @@ toc_sticky: true
   * [ ] consider more complicated soldering kit (or variations)
   * [ ] have people check soldering kits before hand for broken LEDs
   * [ ] Maybe we could show them a brief over view or short video of how to make a PCB board and order some from a supplier overseas through Fritzing and then have them solder their board? Or like maybe week 3/4 of school after they have familiarized themselves with fritzing, have students create a simple PCB that would wire some leds and maybe a potentiometer so students can turn the knob and have the soldered leds on the board turn dim/bright. Then the TAs could double check their Fritzing submission and make sure all power/GND wires are connected on the appropriate sides of the PCB then run some tests to make sure the connections are correct. Then wait for the custom boards to arrive and have students in class solder their custom boards. Theres a way to add names and labels to the PCB itself thats really cool
-* [ ] A8
-  * [ ] combine A8 and A10 (bluetooth car). Since we don't play with the card in class, have students build the car ahead of time isn't necessary. These could be combined, and the bluetooth fan example could covered during bluetooth lecture
-  * [ ] either give students a week without an assignment or make new assignment
-  * [ ] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
-  * [ ] move starting project for car from week 10 to assignment 10 (or whatever)
-* [ ] publish parts for ITP 348 fritzing bin
-* [ ] Nov for Sp 2022 Kit changes
-  * [ ] publish parts for ITP 348 fritzing bin. add [magnetic switch](https://piazza.com/class_profile/get_resource/koq7em9bi9r20s/kv79axv46lo4aa) and any other missing parts to download library (e.g. accel, max30101, button, qwiic cable, microoled qwiic) so students can download one library only
-  * [ ] should have second day for bluetooth and motors
-  * [x] remove LEDs, 300, 10k, buttons, switch (?), photocell (? ) from sparkfun kit 
-  * [ ] test step up 5v regulator: [https://www.pololu.com/product/2564]( https://www.pololu.com/product/2564 ) 
-  * [ ] finalize kit VERY early and have students order in July or in Nov
-  * [x] Consider having bookstore purchase again
-  * [x] could ITP sell directly to students?
-  * [x] ask sparkfun to swap 1 Qwiic breadboard cable for interconnecting cable
-  * [ ] consider moving A9 earlier to be closer to material (even if prelim proposal and A9 overlap)
-  * [ ] consider removing week 10 OLED graphics, replace with...? JSON, softpot, piezo motion sensor
-  * [ ] Week 10 idea: 
-    * [ ] Tues is ultra sonic sensor + project overview; show BRIEFLY how to load images
-    * [ ] Thurs is using JSON to send multiple values to Initial State; consider recording a video for json overview and moving early
-    * [ ] week 10 / 11: may need to record JSON videos for clarity
-    * [ ] week 10 / 11: may need to include a subscribe video or lectu
+
+  * [ ] 
 * [x] **Revise A5 reaction timer. Remove any need for a while loop**
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] 5v voltage regulator: [5V Step-Up Voltage Regulator U3V40F5](https://www.pololu.com/product/4012)
   * [ ] also [SparkFun Buck-Boost Converter]( https://www.sparkfun.com/products/15208)
-  * [ ] 
 * [ ] tell students not to unclaim device
-* [ ] **proposal**
-  * [ ] revise proposal: give a format template to include exactly how their devices meet the requirements
 * [ ] recruit guest lecturers (x2)
 
 **Possible**
@@ -84,88 +78,30 @@ toc_sticky: true
 
 **Videos and Wiring Diagrams Needed to Publish**
 
-- [x] Week 1
-- - [x] C++ syntax
-  - [ ] record software tools for reference
-- [x] Week 2
+- [ ] Week 1
+- - [ ] record software tools for reference
+- [ ] Week 2
 - - [ ] PWM (skip and leave for class)
-  - [x] Analog input
-  - [x] Potentiometers
-- [x] Week 3
-- - [x] Butto  ns 
-  - [x] Digital input (?)
-  - [x] RGB LEDS
-  - [ ] a5: create new assignment that doesn't use while loop timing, consider using millis
-  - [x] a3: change die assignment to explicitly suggest an array for the pin labels, and multiple array for the dice labels (Summer) 
-  - [x] a4: revise with new naming, formatting, video checklist, and rubric
+- [ ] Week 3
+- - [ ] a5: create new assignment that doesn't use while loop timing, consider using millis
 - [ ] Week 4
 - - [ ] Multi-tasking (maybe keep a)
-  - [x] Photoresistor
-  - [x] Cloud Overview 
   - [ ] Publish (skip)
   - [ ] re-record OLED with I2C slides
-  - [x] revise OLED I2c slides
-  - [x] revise later examples (watch and ultra sonic?) that use OLED
-  - [x] a5: revise with new naming, formatting, video checklist, and rubric
 - [ ] Week 5
-- - [x] OLED
-  - [x] TMP36
-  - [ ] Webhooks / APIs (Initial State can be live)
+- - [ ] Webhooks / APIs (Initial State can be live)
   - [ ] wk 5: use millis in next assignment (summer)
   - [ ] wk 5: move enum and switch videos to week 6 (summer)
-  - [x] update Blynk slides
-  - [x] a6: revise with new naming, formatting, video checklist, and rubric
-- [ ] Week 6
-- - [x] Blynk
-  - [x] magnetic switch
-  - [x] cloud subscribe
-  - [x] wk6: subscribe doesn't work with public events anymore :( so revise or eliminate partner magnetic switch example (summer)
-  - [x] a7: revise with new naming, formatting, video checklist, and rubric
-  
-- [x] Week 7
-  - [x] Switch / enum
-  - [x] State machines
-  - [x] a9
-    - [x]  revise assignment to remove dropdown menu
-    - [x]  revise with new naming, formatting, video checklist, and rubric
-    - [x] Re-evaluate Blynk--this seems to trigger lots of device disconnections
-    - [x] Re-evaluate timer assignment--this caused significant device disconnection issues due to while loops
-  - [x] a8: revise with new naming, formatting, video checklist, and rubric
-  - [ ] Revise JSON in week 10. Try using ArduinoJSON instead of RK. The generation of RK is very tough. This would mean re-recording the parsing video to use ArduinoJSON
-  
 - [ ] Week 8
-- - [x] Sound
-	- [ ] Motors
-
-- [x] Week 9
-- - [x] Bluetooth
-  - [x] LiPo batteries
-  - [x] Ultrasonic sensor (in case we have time)
-
-- [x] Week 10
-  - [x] Ultrasonic sensor (again in case)
-  - [x] a10: revise with new naming, formatting, video checklist, and rubric
-  
-- [ ] Week 11
-  - [x] OLED graphics
+  - [ ] Motors
+- [ ] Week 10
   - [ ] JSON / APIs (need to re-record)
   - [ ] wk11: inquire about future class TAs and kit TA
-  - [x] a11: revise with new naming, formatting, video checklist, and rubric
-  
-- [x] Week 12
-  - [x] Debouncing
-  - [x] Heart rate sensors
+- [ ] Week 11
+  - [ ] record video to explain car ( no specifics but  pseudocode design for carForward, leftMotor, etc. (students will build  this for their)
+  - [ ] Revise JSON in week 10. Try using ArduinoJSON instead of RK. The generation of RK is very tough. This would mean re-recording the parsing video to use ArduinoJSON
+- [ ] Week 12
   - [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
-  
-- [x] Week 13
-  - [x] RFID
-
-- [x] Week 14
-  - [x] Accelerometer
-
-- [x] Week 15
-  - [x] PIR
-  - [x] sleep
 
 ## General Feedback (Spring 2021)
 
@@ -192,9 +128,16 @@ toc_sticky: true
 * Video discussion of C++ review (make little videos for functions); curate or record
 * Have short blackboard quiz
 
+### Assignment
+
+- Due start of current week: none
+- Given out start of current week: A0 - Software and tool installation; A1 - Blink
+
 ### Day 1
 
 #### Quote
+
+* ==Students need to pick up kit from ITP office BEFORE Wed class==
 
 - Making and the maker movement is the physical manifestation of all your academic learning - how you apply your education to real-world problems (*Dr. Dorothy Jones-Davis*)
 
@@ -209,32 +152,32 @@ toc_sticky: true
 - Explain how to use envelopes
 - Explain how to identify kit parts
 
-#### Lab
+#### Lecture
 
-- Paper circuits
-- Time permitting
-  - (on ground) ask student to complete a creative expression with multiple LEDs
-  - (online) have student connect Argon to USB and connect an LED to 3.3v
-  - Walk students through connecting LED + Resistor to VUSB on Argon
-    - Ask students how they would connect more than 1 LEDs
-    - Ask students how they would make LEDs blink
-  - just ask the question: Compare 10k ohm vs 330 ohm resistor
+* C++ Syntax (optional at the end)
+
+#### ~~Lab~~
+
+- ~~Paper circuits~~
+- ~~Time permitting~~
+  - ~~(on ground) ask student to complete a creative expression with multiple LEDs~~
+  - ~~(online) have student connect Argon to USB and connect an LED to 3.3v~~
+  - ~~Walk students through connecting LED + Resistor to VUSB on Argon~~
+    - ~~Ask students how they would connect more than 1 LEDs~~
+    - ~~Ask students how they would make LEDs blink~~
+  - ~~just ask the question: Compare 10k ohm vs 330 ohm resistor~~
 
 ### Day 2
 
 #### Lecture
 
-- Safety
-- Pass out argons 
+- Kits
    - students are responsible for returning devices if they drop before drop deadline
    - If online, students will already have these
+- Safety
 - Software tools
    - Workbench (open and discuss)
    - Fritzing (open and show example project)
-
-#### Lecture
-
-* C++ Syntax (skip)
 
 #### Lecture
 
@@ -245,13 +188,13 @@ toc_sticky: true
 
 - turn on LED
 
-#### Lecture (Skipped in Spring 2021)
+#### ~~Lecture (Skipped in Spring 2021)~~
 
-- Look at LED datasheet; calculate ideal resistance for LED
+- ~~Look at LED datasheet; calculate ideal resistance for LED~~
 
-#### Activity (on ground)
+#### ~~Activity (on ground)~~
 
-- Day 2 "making project" was fun; ping pong balls and glue guns were a hit
+- ~~Day 2 "making project" was fun; ping pong balls and glue guns were a hit~~
 
 #### Feedback
 
@@ -260,10 +203,7 @@ toc_sticky: true
 
 - Skipped all coding completely since students still didn't have kits with LEDs. Instead we assembled our Argons + antennas and wired an LED to 3.3v and ground
 
-### Assignment
 
-- Due start of current week: none
-- Given out start of current week: A0 - Software and tool installation; A1 - Blink
 
 ## 2. Pulse Width Modulation, ADC
 
@@ -278,9 +218,12 @@ toc_sticky: true
     * Login, Target project
   - Show students how to download and install fritzing parts
 
-### Day 1
+#### Assignment
 
-==**Note: If students don't have LEDs / 330 Ohm resistors, have them use on-board D7 LED**==
+- Due start of current week: A0 and A1 - Blink
+- Given out start of current week: A2 - Light Sculpture (have students bring to class; ==bring camera==) 
+
+### Day 1
 
 #### Notes
 
@@ -300,7 +243,7 @@ toc_sticky: true
 #### Lecture
 
 - Analog vs. digital (video)
-- Pulse width modulation (lecture, PWM pins, analogWrite 
+- Pulse width modulation (lecture, PWM pins, analogWrite)
 
 #### Lab
 
@@ -330,7 +273,7 @@ toc_sticky: true
 
 #### Lecture
 
-- Potentiometer, voltage dividers
+- Potentiometer, voltage dividers (skip derivation)
 
 #### Lab
 
@@ -344,50 +287,26 @@ toc_sticky: true
 
 - Use potentiometer to control light level
 
-#### Lecture
 
-- Using multimeter (if time)
-
-#### Lab
-
-- Have students measure resistance of pot when its out of a circuit
-
-- Show fritzing drawing, and have them measure voltage
-
-#### Feedback
-
-- Fall 2021: I skipped the voltage divider derivation
-
-#### Assignment
-
-- Due start of current week: A0 and A1 - Blink
-- Given out start of current week: A2 - Light Sculpture (have students bring to class; ==bring camera==) 
 
 ## 3. Buttons, Digital Input, RGB
 
+### Assignment
+
+- Due start of current week: A2 - Light Sculpture 
+- Given out start of current week: A3 - Cylon light 
 ### Reading
 
 - https://learn.sparkfun.com/tutorials/pull-up-resistors
 - https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
 
-### Day 1
-
-- ==Have students present light sculpture== Start class with presentations
+### Day 1 ==Labor Day Holiday--maybe move RGB LED to next week with photoresistor?==
 
 #### Guided activity
 
 - Ask them to **digitalRead()** on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
 - connect button with pullup
 - Ask what is the voltage at pin when button pressed and not pressed
-
-#### Lecture
-
-- Using multimeter
-
-#### Lab
-
-- Have students measure resistance of pot when its out of a circuit
-- Show fritzing drawing, and have them measure voltage
 
 #### Lecture
 
@@ -418,27 +337,23 @@ toc_sticky: true
 
 - No slides for latch. Instead draw pictures with square wave
 
-#### Lecture (==if time==)
-
-- Reading resistors (lab exercise is built into slides)
-
 #### Feedback
 
 - 
 
 ### Day 2
 
-#### Lecture
+#### ~~Lecture (==skip Fall 2022==)~~
 
-- Switch
-  * connect middle pin to argon
-  * connect outer pins to power and ground
-  * when moving the switch, it connects either left two, or right two pins
+- ~~Switch (==skip Fall 2022==)~~
+  * ~~connect middle pin to argon~~
+  * ~~connect outer pins to power and ground~~
+  * ~~when moving the switch, it connects either left two, or right two pins~~
 
-#### Guided activity
+#### ~~Guided activity (==skip Fall 2022==)~~
 
-* Connect switch middle pin to digital input pin, outer pin to power and ground
-* use serial monitor to display switch value
+* ~~Connect switch middle pin to digital input pin, outer pin to power and ground~~
+* ~~use serial monitor to display switch value~~
 
 #### Lecture
 
@@ -458,30 +373,28 @@ toc_sticky: true
 - Rewrite sketch using `displayColor(r, g, b)` and `displayRandomColor()`
 - cycle button presses to display C (BG) M (RB) Y (RG)
 
-#### Lecture
+#### ~~Lecture  (==skip Fall 2022==)~~
 
-- Libraries
+- ~~Libraries~~
 
-#### Lab
+#### ~~Lab~~
 
-- Have students find and install `rgb-controls`
-- Ask them to create some colors effects on their own
-- Then walk through example together
-- If time, introduce a button to control states (idea of a state machine)
+- ~~Have students find and install `rgb-controls`~~
+- ~~Ask them to create some colors effects on their own~~
+- ~~Then walk through example together~~
+- ~~If time, introduce a button to control states (idea of a state machine)~~
 
-
-#### Feedback
-
-### Assignment
-
-- Due start of current week: A2 - Light Sculpture 
-- Given out start of current week: A3 - Cylon light 
 
 ### Feedback 
 
 - overall worked well but over zoom, we didn't have time for **libraries or functions or switch or multimeters**
 
 ## 4. Photoresistors, Multitasking
+
+### Assignment
+
+- Due start of current week: A3 - Cylon light 
+- Given out start of current week: A4 - Electronic dice
 
 ### Reading
 
@@ -501,9 +414,9 @@ toc_sticky: true
 
 * Calibrate photoresistor
 
-#### Lecture (skip)
+#### ~~Lecture (skip)~~
 
-- (if time) show derivation of mathematically deriving exact resistor to calibrate. Explain this is an important part of engineering
+- ~~(if time) show derivation of mathematically deriving exact resistor to calibrate. Explain this is an important part of engineering~~
 
 #### Lecture
 
@@ -513,9 +426,9 @@ toc_sticky: true
 
 - publish photoresistor value and "state" (for example bright, ambient, or dark to Particle cloud)
 
-#### Lecture
+#### ~~Lecture~~
 
-- Reading resistors (we had time in Fall 2021)
+- ~~Reading resistors (we had time in Fall 2021)~~
 
 ### Feedback
 
@@ -530,7 +443,7 @@ toc_sticky: true
 * ==Announce survey==
 
 - Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
-- Multitasking with millis. 
+- Multitasking with millis
 
 #### Guided Activity
 
@@ -549,16 +462,20 @@ toc_sticky: true
 
 - 
 
-#### Lecture
+#### ~~Lecture~~
 
-* If time, cover multimeter or reading resistors or switches
+* ~~If time, cover multimeter or reading resistors or switches~~
+
+
+
+## 5. TMP36, OLED
 
 ### Assignment
 
-- Due start of current week: A3 - Cylon light 
-- Given out start of current week: A4 - Electronic dice
+- Due start of current week: A4 - Electronic dice 
+- Given out start of current week: A5 - Reaction Timer
+- Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
-## 5. TMP36, OLED
 
 ### Day 1
 
@@ -610,13 +527,13 @@ toc_sticky: true
 
 * This took longer than expected since there was much debugging needed. We finished basic setup of OLED but didn't have time to introduce lab for etch-a-sketch
 
-### Assignment
-
-- Due start of current week: A4 - Electronic dice 
-- Given out start of current week: A5 - Reaction Timer
-- Alternate ideas: use TMP36 to measure temperature and display colors on RGB LED. Use potentiometer to control brightness of RGB LED. Display results on serial monitor. **Optional** use button for diagnostic or to change cel/fahr 
 
 ## 6. Magnetic Switch; Blynk
+
+#### Assignment
+
+- Due start of current week: A5 - Button Timer
+- Given out start of current week:  A6 - Preliminary Proposal Idea
 
 ### Reading
 
@@ -639,7 +556,7 @@ toc_sticky: true
 
 #### Lecture
 
-- ​	Start Blynk?
+- ​	Start Blynk
 
 ### Feedback
 
@@ -668,16 +585,9 @@ toc_sticky: true
 
 - Using RGB and switch, use app to control RGB color and get notification for switch
 
-#### Lecture
-
-* ==may need more here==
-
 #### Feedback
 
-#### Assignment
 
-- Due start of current week: A5 - Button Timer
-- Given out start of current week:  A6 - Preliminary Proposal Idea
 
 ## 7. Finite State Machines 
 
@@ -685,6 +595,14 @@ toc_sticky: true
 
 - ==Send wiring diagrams out ahead of time==
 - ==**Try to start Sound earlier due to fall break**==
+
+
+### Assignment
+
+- Due start of current week:   A6 - Preliminary Proposal Ideas
+- Given out start of current week: A7 - Shared environment monitor
+
+
 
 ### Day 1
 
@@ -744,19 +662,19 @@ toc_sticky: true
 
 - 
 
-### Assignment
 
-- Due start of current week:   A6 - Preliminary Proposal Ideas
-- Given out start of current week: A7 - Shared environment monitor
-
-
-
-## 8. Motors, Servos
+## 8. Sound, Motors, Servos
 
 ### Reading
 
 - Motors
   - [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
+
+### Assignment
+
+- Due start of current week:   A7 - Shared environment monitor
+- Given out start of current week: A8 - Tea State Machine with Blynk (due in two weeks)
+
 
 ### Day 1
 
@@ -766,7 +684,7 @@ toc_sticky: true
 * Tone
 * Pitches
 
-### Day 2
+### Day 2 ==Fall Break==
 
 Have students build fan and circuit before class
 
@@ -794,15 +712,15 @@ Have students build fan and circuit before class
 - I skipped the separate servo part and went directly to using the servo to control the fan
 - ==**Idea for next semester**==: create assignment using motors and bluetooth (something like the fan)
 
+
+## 9. Bluetooth and Motors
+
+- ==idea: Day 1 covers motors by directly building fan with potentiometer; Day 2 cover bluetooth and control can with bluetooth==
+
 ### Assignment
 
-- Due start of current week:   A7 - Shared environment monitor
-- Given out start of current week: A8 - Bluetooth car part 1 (due in one week)
-- Given out start of current week: ==A9 - Tea State Machine with Blynk (due in two weeks)==
-
-## 9. Bluetooth
-
-- ==Fall 2021: May need to cover finish motors==
+* Due start of current week: none
+* Given out start of current week: none, but continue to work on  A8 - Timer with Blynk 
 
 ### Before class
 
@@ -861,70 +779,24 @@ Have students build fan and circuit before class
 
 #### Lecture
 
-- car bluetooth - gave overview of coding -- no specifics but  pseudocode design for carForward, leftMotor, etc. (students will build  this for their)
-
-#### Lecture
-
 - 
 
 ### Feedback
 
-### Assignment
-
-* Due start of current week: A8 - Bluetooth car part 1 (due in one week)
-* Given out start of current week: none, but continue to work on  A9 - Timer with Blynk 
-
-## Spring Break 2022
-
-## 10. Ultrasonic Distance Sensor; OLED Graphics
-
-==**Need more content here**==
-
-Could combine graphics and OLED in one day; spent time going over A9 whic
-
-### Reading
-
-- 
-
-### Day 1
-
-#### Lecture
-
-- project overview
-- Ultrasonic distance sensor 
-
-#### Lab
-
-- Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
-
-### Day 2
-
-#### Lecture
-
-- OLED graphics
-
-#### Lab
-
-- Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
-
-### Feedback Day 1
-
-- Went generally well. Ran out of time to talk about graphics.
-
-### Assignment
-
-- Due start of current week: A9 - Tea State Machine with Blynk
-- Given out start of current week: A10 - Bluetooth car part 2
-- Given out start of current week: A11 - Smart Watch Assembly
 
 
-
-## 11. Cloud Dashboards; APIs; Weather;  (==**This may be too much content**==)
+## 10. Cloud Dashboards; APIs; Weather;  (==**This may be too much content**==)
 
 ### Reading
 
 - Create [Initial State](https://www.initialstate.com/) account
 - Create [Weather Stack account](https://weatherstack.com/)
+
+
+### Assignment
+
+- Due start of current week: A8 - Timer with Blynk 
+- Given out start of current week: A9 - Bluetooth Car
 
 ### Day 1
 
@@ -974,17 +846,60 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 - Have students use [https://openweathermap.org/api/air-pollution](https://openweathermap.org/api/air-pollution) to get AQI measure based on lat and long
 
+
+## 11. Ultrasonic Distance Sensor; OLED Graphics
+
+==**Need more content here; could be spill over from last week**==
+
+Could combine graphics and OLED in one day; spent time going over A9 whic
+
+### Reading
+
+- 
+
 ### Assignment
 
-- Due start of current week: A10 - Bluetooth car part 2
-- Due start of current week: A11 - Smart Watch Assembly
+- Due start of current week: A9 - Bluetooth Car
+- Given out start of current week: A10 - Smart Watch Assembly
 - Given out start of current week: Proposal
+### Day 1
+
+#### Lecture
+
+- project overview
+- Ultrasonic distance sensor 
+
+#### Lab
+
+- Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
+
+### Day 2
+
+#### Lecture
+
+- OLED graphics
+
+#### Lab
+
+- Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
+
+### Feedback Day 1
+
+- Went generally well. Ran out of time to talk about graphics.
+
+
 
 ## 12. Smart Watch, Heart Rate Sensor
 
 ### Reading
 
 - 
+
+### Assignment
+
+- Due start of current week: Proposal
+- Due start of current week: A10 - Smart Watch Assembly
+- Continue working on project 
 
 ### Day 1
 
@@ -1013,8 +928,6 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 * Heart rate rate sensor
 
-### 
-
 #### Lecture
 
 * Review heart rate sensor
@@ -1023,16 +936,19 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 * Program heart screen
 
-### Assignment
 
-- Due start of current week: Proposal
-- Continue working on project 
 
 ## 13. Smart Watch + Accelerometer
 
 ### Reading
 
 - 
+
+
+### Assignment
+
+- Due start of current week: nothing
+- Continue working on project 
 
 ### Day 1
 
@@ -1069,16 +985,16 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 - Use **portrait / landscape** detection
 - Use accelerometer to control RGB LED (if time)
 
+## 14. RFID + Thanksgiving
+
+### Reading
+
+- 
 ### Assignment
 
 - Due start of current week: nothing
 - Continue working on project 
 
-## 14. RFID + Guest Lecture 
-
-### Reading
-
-- 
 
 ### Day 1
 
@@ -1096,16 +1012,12 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 - Print out value; show need to upper case and trim space
 - now ask them to check for authorization for one card or the other
 
-### Day 2
+### Day 2 ==Thanksgiving==
 
 #### Lecture
 
 - ==**Guest Lecture or work on project?**==
 
-### Assignment
-
-- Due start of current week: nothing
-- Continue working on project 
 
 ## 15. PIR + Guest Lecture?
 
@@ -1113,6 +1025,11 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 - 
 
+### Assignment
+
+- Due start of current week: nothing
+- Continue working on project 
+- 
 ### Day 1
 
 #### Lecture
@@ -1140,249 +1057,6 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 - 
 
-### Assignment
 
-- Due start of current week: nothing
-- Continue working on project 
 
 ## 16 - Final Project Presentation
-
-
-
----
-
-# **Use when extra time**
-
-## Week 5
-
-#### Lecture
-
-- Particle Cloud functions
-
-#### Lab
-
-- Connect RGB LED and have students remotely control it
-
-#### Lecture
-
-* Consider covering `switch` to handle cloud function calls
-
-## Week 5 - Photoresistor
-
-#### Experiential Learning
-
-- Photoresistor part 1
-- Discuss
-- Photoresistor part 2
-- Discuss
-- Photoresistor part 3
-- Discuss and show code
-
-#### Feedback
-
-- some students enjoyed the exploration; others seemed a little lost
-- change some things on the handout that were worded poorly
-- create some short, simple photoresistor wiring notes
-- One good thing was this followed learning about using the multimeter since the activity required it
-
-## Week 8 - Soldering
-
-### Day 1
-
-#### Lab
-
-* Soldering demo in EE lab
-* had students build sparkfun flashlight
-* Then Neftali did a quick demo of how to lay out a simple PCB in Fritzing
-
-### Feedback
-
-* Took about 1 hour
-* soldering was fun but really simple. It would be cool to have a second, more complex circuit
-
-## Losant part 1
-
-### Day 2
-
-#### Lecture
-
-- Losant
-
-#### Lab (together)
-
-- Create application
-- Create devices
-- Create integrations
-- Create workflows
-
-## Losant part 2 + Rate
-
-### Day 1
-
-#### Activity
-
-- Race competition
-
-#### Lecture
-
-- Losant
-
-#### Lab
-
-- Review workflow (make sure everyone is getting data in device by going to overview)
-- Create dashboard
-- Create web application
-
-### Feedback
-
-- make sure to set up voting ahead of time for best customization for voting
-- [Create bracket online](https://challonge.com/tournament/bracket_generator)
-
-### Day 2
-
-#### Lecture
-
-- Discuss controlling devices from Losant
-
-#### Lab
-
-- Revise firmware and Losant environment to support input controls (blink light on / off)
-
-### Assignment
-
-- Due start of current week: A10 - Bluetooth car 
-- Given out start of current week: 
-
----
-
-
-
-# **Skipped / Eliminated**
-
-## BLE Health Service
-
-- The goal was to send a temperature from Argon to Bluefruit app but it rarely worked
-
-#### Lab - ble_health_temp_start
-
-- Distribute github link to download (post on slides)
-- Describe project goals
-- Explain **argon_ble_setup.h** at a high level
-  - Have students change **DEVICE_NAME**
-- Draw picture of how temperature data is organized
-  - 6 bytes total
-  - byte 1: 8 bits of flags
-  - bytes 2-5: 4 byte floating point number
-  - byte 6: temperature type
-- Define constants and globals
-  - UPDATE_INTERVAL_MS
-  - prevUpdate = 0;  // time of last update in millis()
-  - float prevTempF = -1.0;        // previous temperature in Fahr
-  - uint8_t batteryLevel = -1;     // battery level percentage [0-100]
-- Write **loop()** together
-- Write **getTemp()** together
-  - Call       **update_ble_temperature**
-- Write **getBatteryLevel()** together
-  - call update_ble_battery_level
-
-
-
-## LCD screen
-
-#### Lecture
-
-- I2C LCD
-- Ultrasonic distance sensor
-
-#### Lab
-
-- exercises in slides
-
-### Feedback
-
-- Fail.
-- The LCD devices only worked for half the students (either faulty devices or bad libraries). Definitely DO NOT use LCDs again
-- Ultrasonic sensor worked mostly
-
-## ThingSpeak 
-
-### Day 2
-
-### Lecture
-
-- OLED graphics
-- walk through of Thingspeak (==need to make slides==)
-  - Create webhook in Particle
-  - send temperature data through `Particle.publish` to thingspeak
-
-### Feedback day1
-
-- Recommend **NOT** using thingsspeak again. Thingspeak integration with webhook is fairly simple. It is also possible to discuss JSON to send multiple values.
-- However, thingsspeak doesn't have a way to send commands to Argon (have to use something like IFTTT)
-
-### Assignment
-
-- Due start of current week: A8 - Alarm clock
-- Given out start of current week: ==A9 - Bluetooth car== part 1 (build chassis only)
-
-### Day 1 (following week)
-
-#### Lecture
-
-- Finish ThingSpeak integration with multiple values as JSON
-
-#### Lab
-
-- Finish ThingSpeak integration with multiple values as JSON walk through example
-
-#### Lecture
-
-- Explain what APIs are; show them a few public ones
-- Discuss [weather stack](https://weatherstack.com/) show example call
-- show JSON slides
-- walkthrough integration
-- write json code together
-
-#### Lab
-
-- Create [weather stack](https://weatherstack.com/) account
-- Have them use their own api key to view JSON in a browser (use formatter online if necessary
-- Create webhook in Particle
-- Copy code from particle publishing and subscribing
-- Test: publish request and see if subscribe code retrieves JSON data
-
-## IFTTT
-
-#### Lecture
-
-- IFTTT
-
-#### Guided activity
-
-- set up IFTTT [https://ifttt.com/create](https://ifttt.com/create)
-- Install iOS / Android app
-- how do create an alarm?
-  - If Particle - Publish <event name> open
-  - Then send notification
-  - Could enhance by using your location
-  - set up location trigger to enter or exit that sets a variable
-  - then change publish event
-- Create button
-- **Ask students to work in pairs and come up with a cool idea**
-
-#### Lecture
-
-* ==may need more here==
-* Also could work on reaction timer because it is challenging
-* Could cover [IFTTT webhooks](https://ifttt.com/maker_webhooks) but they require HTML / JS editing to work, and they require JSON to send text values
-
-#### Feedback
-
-- Some of the IFTTT got a little bumpy but generally this was a good amount of material and worked well
-
-
-
-## Debouncing
-
-- was covered in the context of the smart watch button
-- notes exist

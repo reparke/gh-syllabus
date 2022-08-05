@@ -6,16 +6,32 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* Create [Weather Stack](https://weatherstack.com/) account
-* Watch **JSON and APIs**
-  {% include video id="3nSaiAQluus" provider="youtube" %}
+* Watch **Ultrasonic Distance Sensor**
+  {% include video id="vyQC0CpwKmo" provider="youtube" %}
 
-* Watch **JSON Parsing**
-  {% include video id="IiCvB_-_DWQ" provider="youtube" %}
+* Watch **OLED Graphics**
+  {% include video id="Csic8vEiIDY" provider="youtube" %}
 
-* Watch **Retrieving Data from APIs**
-  {% include video id="frekkX8kha4" provider="youtube" %}
+* Build for **Tuesday**
 
-* Build
+  ![oled_ultrasonic_bb](week11.assets/oled_and_ultrasonic_i2c_bb.png)
 
-![photoresistor_and_fixed_resistor_bb](week11.assets/photoresistor_and_fixed_resistor_bb.png)
+## Sensor Wiring
+
+<span style="font-size:75%">
+
+| Sensor | Argon |
+| ------ | ----- |
+| GND    | GND   |
+| VCC    | VUSB  |
+| TRIG   | D2    |
+| ECHO   | D3    |
+
+| OLED         | Argon |
+| ------------ | ----- |
+| GND          | GND   |
+| 3V3          | 3V3   |
+| SDA (Blue)   | SDA   |
+| SCL (Yellow) | SCL   |
+
+</span>

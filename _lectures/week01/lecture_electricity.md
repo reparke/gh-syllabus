@@ -22,9 +22,8 @@ footer: ' '
 
 ## How We Approach Electricity
 
-* Electricity can be beautifully describe with physics and mathematics
-  * These approaches are rich and important
-* We will focus on building an intuitive understanding and applying principles to build devices
+* Electricity can be beautifully described with physics and mathematics
+* However, we will focus on building an intuitive understanding and applying principles to build devices
   * There will be some basic math, but that is not our focus
 * Rules of Thumbs
 
