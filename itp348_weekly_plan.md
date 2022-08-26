@@ -1,5 +1,5 @@
 ---
-    
+      
 layout: single
 classes: wide
 title: Weekly Plan
@@ -124,7 +124,8 @@ Week 10 idea:
 ### Reading / Video
 
 * [http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/](http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/)
-* [https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all)
+  * [https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all)
+
 * Video discussion of C++ review (make little videos for functions); curate or record
 * Have short blackboard quiz
 
