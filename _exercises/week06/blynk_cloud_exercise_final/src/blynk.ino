@@ -12,8 +12,8 @@
 #define BLYNK_AUTH_TOKEN "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b"
 
 //char auth[] = "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b";
-#define BLYNK_IP \
-    IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
+    #define BLYNK_IP \
+        IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
 
 const int PIN_LED = D7;
 const int PIN_RED = D3;
@@ -54,7 +54,7 @@ void setup() {
 }
 
 void loop() {
-    Blynk.run();
+    Blynk.run();    
     unsigned long currMillis = millis();
     if (currMillis - prevMillis > blynkDelay) {
         prevMillis = currMillis;

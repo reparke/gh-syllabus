@@ -158,6 +158,9 @@ void loop() {
   * Create a toggle button (latch) to turn **LED2** on at **rising edge** and off again at the **rising edge**
   * Track the number of times the button is pressed
   * Publish the number of button presses to the Particle cloud every **1000 milliseconds** 
+* Bonus
+  * After that is working, change the code so that when the toggle button is pressed, **LED2** starts blinking every 60 **milliseconds**, and when the toggle button is pressed again, **LED2** stops blinking
+
 
 ##  Stages to Build
 

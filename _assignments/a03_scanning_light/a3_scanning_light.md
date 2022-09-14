@@ -57,8 +57,7 @@ Here is an example with 7 lights.
 
 -   Connect five LEDs to Argon
 -   Connect potentiometer and read value 
--   Within `loop`, use the potentiometer to control both the blink rate *and* the
-    brightness
+-   Within `loop`, use the potentiometer to control both the blink rate *and* the brightness
 -   Blink rate: 
     -   The potentiometer value should be used to control the *delay* value between each light blinking
     -   Fully clockwise: the lights blink so fast they "seem" to all be on constantly
