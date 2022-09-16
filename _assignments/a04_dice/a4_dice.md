@@ -28,6 +28,8 @@ This assignment is to create an electronic die. When a button is pressed, the
 die will be “rolled” and a new value will appear. The die roll will be simulated
 by generating a random number 1-6
 
+Here is a video overview about the assignment and the extra credit: [https://youtu.be/RqrFVTAiY8g](https://youtu.be/RqrFVTAiY8g)
+
 Here is an example:
 
 <img src="media/00b38da91ab88417934f8d94f532926e.jpg" alt="Example build" style="width:400px" />
