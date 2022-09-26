@@ -512,6 +512,7 @@ Week 10 idea:
 #### Lecture
 
 - APIs and webhooks
+- Data visualization for single values (stop before slide 7 and do the demo live)
 
 #### Guided Activity
 
@@ -555,7 +556,7 @@ Week 10 idea:
 ### Reading
 
 - Have students create an [Blynk](https://blynk.io/) account
-- Have students come to class with RGB LED wired (Tues) and then add magnetic switch (thurs)
+- Have students come to class with RGB LED with magnetic switch (Tues) and again for (thurs)
 
 ### Day 1
 
