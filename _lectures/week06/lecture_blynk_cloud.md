@@ -137,15 +137,16 @@ Copy this info to include in sketch below (**Note: this is just an example--use 
 ```c++
 #define BLYNK_PRINT Serial 
 #include <blynk.h>
-#define BLYNK_IP IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
 ```
+
+<!-- as of Oct 2022, you don't need the BLYNK_IP -->
 
 
 3. Add these line to the end of `setup()`
 
 ```c++
 delay(5000);
-Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
+Blynk.begin(BLYNK_AUTH_TOKEN);
 ```
 
 
