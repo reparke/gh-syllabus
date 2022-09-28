@@ -576,6 +576,16 @@ Week 10 idea:
 
 - ​	Start Blynk
 
+#### Guided activity
+
+- Note: Blynk template "Week 6 Lab" can be used for exercise and lab. Use following pins
+  - On board LED - **V5**
+  - Random number - **V6**
+- set up Blynk
+- Install iOS / Android app
+- Demonstrate basic Blynk integration
+- Try to finish exercise
+
 ### Feedback
 
 - 
@@ -591,13 +601,11 @@ Week 10 idea:
 
 #### Lecture
 
-- Blynk
+- Finish Blynk (if necessary)
 
 #### Guided activity
 
-- set up Blynk
-- Install iOS / Android app
-- Demonstrate basic Blynk integration
+- Finish exercise
 
 #### Lab
 

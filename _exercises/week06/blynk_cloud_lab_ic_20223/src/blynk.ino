@@ -23,9 +23,9 @@ connect switch (Gnd - A0 - 3.3v)
 
 // #define BLYNK_TEMPLATE_ID "TMPL0A1ZpqoD"
 // #define BLYNK_DEVICE_NAME "Week 6 Intro"
-//char auth[] = "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b";
-//#define BLYNK_IP \
-//    IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
+// char auth[] = "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b";
+#define BLYNK_IP \
+   IPAddress(64, 225, 16, 22)  // https://ny3.blynk.cloud/ – New York
 
 // if you're sending values to from ARGON to APP (push), we MUST use millis()
 // limit is 10 values per sec
@@ -59,6 +59,7 @@ BLYNK_WRITE(V2) {
 // trigger new color button
 BLYNK_WRITE(V4) {
     int buttonVal = param.asInt();
+    Serial.println("Button!");
 
     // this function gets called EVERYTIME the virtual buttons
     // it gets called when push, and it gets called when you release button
@@ -107,10 +108,10 @@ void setup() {
 
     // 2. connect to blynk
     // Blynk.begin(auth);
-//	Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
-		Blynk.begin(BLYNK_AUTH_TOKEN);
+    	Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
+    // Blynk.begin(BLYNK_AUTH_TOKEN);
 
-//    Blynk.begin(auth, BLYNK_IP);
+    //    Blynk.begin(auth, BLYNK_IP);
 }
 
 void loop() {
