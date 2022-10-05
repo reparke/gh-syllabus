@@ -24,21 +24,21 @@ enum State {
     stateTrafficStop
 };  // stage 2: add pedestrians
 
+// stage 1: NS state changes
 State currentState = stateTrafficGo;
 
 enum Color { Red, Yellow, Green, Black };
-    
+
 void updateOLED() {
     String output = "";
-
-    // add display message logic here
-
+    output = "Don't\nWalk";
     oled.clear(PAGE);      // Clear the display
     oled.setCursor(0, 0);  // Set cursor to top-left
     oled.setFontType(1);   // 7-segment font
     oled.print(output);    // Print "A0"
     oled.display();
-    Serial.println(output);
+
+    // Serial.println(output);
 }
 
 void setup() {
@@ -59,6 +59,8 @@ void setup() {
     //     turnAllLightsOff();
     //     cycleLights(500);
 }
+// stage 1: NS state changes
+
 void setColor(Color c) {
     switch (c) {
         case Red:
@@ -117,13 +119,13 @@ void updateNextState() {
             if (curMillis - prevMillisState > stateDuration) {
                 prevMillisState = curMillis;
 
-                currentState = stateTrafficStop;  // stage 2
+                currentState = stateTrafficStop;  // stage 1
                 updateNextStateDuration();
                 updateLights();
                 updateOLED();
             }
             break;
-        case stateTrafficStop:  // stage 2
+        case stateTrafficStop:  // stage 1
             if (curMillis - prevMillisState > stateDuration) {
                 prevMillisState = curMillis;
 

@@ -116,7 +116,6 @@ void updateNextState() {
 
                 // currentState = stateNSR; //stage 2
                 currentState = statePedWalk;
-                // currentState = stateWEG;
                 updateNextStateDuration();
                 updateLights();
                 updateOLED();

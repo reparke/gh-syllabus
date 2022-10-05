@@ -641,18 +641,16 @@ Week 10 idea:
 
 - Starting with sample code
 - walk through NS light state transitions (length, state)
-- use delay() (not `millis`)
 
 ### Feedback
 
-- next day cover `millis`, then rest of light blinking
 - some students enjoyed the complexity of all parts, other seemed bored
 
 ### Day 2
 
 #### Lecture
 
-- 
+- Washing machine example
 
 #### Lab
 

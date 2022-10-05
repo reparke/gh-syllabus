@@ -18,7 +18,8 @@ const int BLINK_RATE = 500;             // time for blinking don't walk light
 unsigned long prevMillisState = 0;
 unsigned long stateDuration = 0;
 
-// enum State { stateNSG, stateNSY, stateNSR }; //stage 2: add pedestrians
+// stage 2: remove stateTrafficStop and add statePedWalk,statePedDontWalk
+// enum State {stateTrafficGo,stateTrafficSlow,stateTrafficStop}
 enum State {
     stateTrafficGo,
     stateTrafficSlow,
@@ -31,13 +32,13 @@ State currentState = stateTrafficGo;
 enum Color { Red, Yellow, Green, Black };
 void updateOLED() {
     String output = "";
-    switch (currentState) {  // stage 1: add switch statement
+    switch (currentState) {  // stage 2: add switch statement
         case stateTrafficSlow:
         case statePedDontWalk:
         case stateTrafficGo:
             output = "Don't\nWalk";
             break;
-        // case NSR:                    //stage 2
+        // case stateTrafficStop:                    //stage 2
         case statePedWalk:
             output = "Walk";
             break;
@@ -102,7 +103,7 @@ void updateLights() {
         case stateTrafficSlow:
             setColor(Yellow);
             break;
-        // case NSR:                    //stage 2
+        // case stateTrafficStop:                    //stage 2
         case statePedWalk:
             setColor(Red);
             break;
@@ -141,7 +142,7 @@ void updateNextState() {
                 updateOLED();
             }
             break;
-        // case stateNSR:  //stage 2
+        // case stateTrafficStop:  //stage 2
         case statePedWalk:  // stage 2
             if (curMillis - prevMillisState > stateDuration) {
                 prevMillisState = curMillis;

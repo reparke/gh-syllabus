@@ -14,7 +14,7 @@ Assignment 7 – Environment Monitor and Dashboard
 Goals 
 -----
 
--   Connect DHT11 and store sensor data
+-   Connect DHT20 and store sensor data
 -   Display data on OLED
 -   Publish events to Particle cloud
 -   Subscribe to events and process data
@@ -41,7 +41,7 @@ Here is an example:
 -   Argon
 -   Breadboard
 -   1 x micro OLED
--   1 x DHT11
+-   1 x DHT20
 -   1 x  push button (plus any necessary resistors)
 -   Jumper wire
 
@@ -49,12 +49,12 @@ Here is an example:
 
 -   Create a Fritzing breadboard prototype layout of your design. Once you’re
     satisfied with the design, connect the device.
--   The device will read temperature and humidity from DHT 11 sensor
+-   The device will read temperature and humidity from DHT 20 sensor
 -   The device will display current temperature and humidity on OLED
 -   When button is pressed, device will display high (max) and low (min) temperature and humidity values measured since device turned on via OLED
     -   The means when you are reading the temperature, you should be computing the highs and lows
 -   Device will send current temperature and humidity to Initial State using Particle webhooks
--   Note: this assignment intentionally uses a sensor not used in class (DHT11). However, notes and examples are provided below
+-   Note: this assignment intentionally uses a sensor not used in class (DHT20). However, notes and examples are provided below
 -   It is recommended to code the device in stages, and test at each stage.
 
 ###  Stage 1:  Setup buttons and states
@@ -69,9 +69,9 @@ Here is an example:
 - Use the serial monitor to make sure the states change
 - Use the serial monitor to make sure the states change
 
-###  Stage 2: DHT11 
+###  Stage 2: DHT20 
 
--   [DHT 11 notes and example](https://reparke.github.io/ITP348-Physical-Computing/lectures/weekX/lecture_dht.html)
+-   [DHT 20 notes and example](https://reparke.github.io/ITP348-Physical-Computing/lectures/weekX/lecture_dht20.html)
 -   Using the notes and examples provided, measure the current temperature and humidity
 -   Store the max and min of the temperature and humidity readings
 
@@ -200,7 +200,7 @@ Grading
 | Fritzing layout                | 5               |
 | Stage 1a: buttons toggling     | 5               |
 | Stage 1b: `enum` and states    | 5               |
-| Stage 2: DHT 11                | 10              |
+| Stage 2: DHT 20                | 10              |
 | Stage 3: OLED                  | 10              |
 | Stage 4: Dashboard setup       | 10              |
 | Stage 5: Configuring Dashboard | 5               |

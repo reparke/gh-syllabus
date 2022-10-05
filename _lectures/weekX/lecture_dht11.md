@@ -4,16 +4,18 @@ theme: itp
 
 week: 16
 category: lectures
-title: DHT - Temperature and Humidity Sensor
+title: DHT11 - Temperature and Humidity Sensor
 ---
 
 <!-- headingDivider: 2 -->
 
-# DHT - Temperature and Humidity Sensor
+# DHT11 - Temperature and Humidity Sensor
 
-<img src="lecture_dht.assets/dht22.jpg" alt="DHT 22" style="width:300px;" /> <img src="lecture_dht.assets/dht11.png" alt="DHT 11" style="width:300px;" /> 
+<img src="lecture_dht11.assets/dht22.jpg" alt="DHT 22" style="width:300px;" /> <img src="lecture_dht11.assets/dht11.png" alt="DHT 11" style="width:300px;" /> 
 
+## Sensor Type
 
+**Important!** There are different styles of DHT sensors, and they need to be connected and programmed differently. Make sure to verify which sensor you have before proceding.
 
 ## Digital Temperature and Humidity Sensor
 
@@ -21,7 +23,7 @@ title: DHT - Temperature and Humidity Sensor
 * Unlike TMP36, this has a digital interface and no calculation or conversion is needed
 
 ## Wiring Guide - 4 Pins
-![bg right](lecture_dht.assets/10167-02_pinout.jpg) 
+![bg right](lecture_dht11.assets/10167-02_pinout.jpg) 
 
 1. 3.3V
 2. Digital input (needs 10k pull-up resistor)
@@ -31,14 +33,14 @@ title: DHT - Temperature and Humidity Sensor
 
 ## Wiring Guide - 3 Pins
 
-![bg right](lecture_dht.assets/10167-02_pinout_3pin.jpg) 
+![bg right](lecture_dht11.assets/10167-02_pinout_3pin.jpg) 
 
 1. 3.3V
 2. Digital input (needs 10k pull-up resistor)
 3. Ground
 ## Wiring
 
-<img src="lecture_dht.assets/dht22_bb.png" alt="dht22_bb" style="width:500px;" />
+<img src="lecture_dht11.assets/dht22_bb.png" alt="dht22_bb" style="width:500px;" />
 
 ## Software Library
 
