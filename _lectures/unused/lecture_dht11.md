@@ -4,6 +4,7 @@ theme: itp
 
 week: 16
 category: lectures
+show_in_list: false
 title: DHT11 - Temperature and Humidity Sensor
 ---
 
