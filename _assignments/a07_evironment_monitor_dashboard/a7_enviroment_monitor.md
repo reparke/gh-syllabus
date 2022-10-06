@@ -57,6 +57,13 @@ Here is an example:
 -   Note: this assignment intentionally uses a sensor not used in class (DHT20). However, notes and examples are provided below
 -   It is recommended to code the device in stages, and test at each stage.
 
+### Note about Wiring
+
+* Both the OLED and the DHT20 use the `SDA` and `SCL` pins on the Argon. 
+* Connect the wires from the OLED and from the DHT20 to the same row on the Argon.
+* In the example photo shown below, the blue and yellow wires are from the **OLED** and the orange and brown wires are from the **DHT20**
+  <img src="a7_enviroment_monitor.assets/WIN_20221005_17_18_18_Pro.jpg" alt="WIN_20221005_17_18_18_Pro" style="width:300px;" />
+
 ###  Stage 1:  Setup buttons and states
 
 -   The button will be a toggle / latch style button that will switch from displaying current temperature and humidity to displaying the minimum and maximum temperature and humidity
