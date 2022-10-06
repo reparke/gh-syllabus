@@ -26,8 +26,6 @@ This assignment is to create a device that monitors your environment. The device
 Here is an example:
 ### Device
 
-***Note: This picture uses a different version of the OLED screen, but the overall design is the same***
-
 <img src="a7_enviroment_monitor.assets/IMG_1645.jpg" style="width:400px;" />
 
 ### OLED Screen
