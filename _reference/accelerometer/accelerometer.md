@@ -12,18 +12,24 @@ show_in_list: true
 
 # Accelerometers
 
-<img src="accelerometer.assets/13926-02.jpg" alt="1574364327550" style="width:600px;" />
+
+
+<img src="accelerometer.assets/image-20221008015904600.png" alt="1574364327550" style="width:600px;" />
 
 
 
 ## Wiring
 
-| Sensor | Argon | Function                        |
-| ------ | ----- | ------------------------------- |
-| GND    | GND   | Ground                          |
-| VCC    | 3V3   | Power (requires 3.3v)           |
-| SDA    | SDA   | I2C data (no resistors needed)  |
-| SCL    | SCL   | I2C clock (no resistors needed) |
+| Sensor | Argon        | Function                        |
+| ------ | ------------ | ------------------------------- |
+| GND    | GND          | Ground                          |
+| VCC    | 3V3          | Power (requires 3.3v)           |
+| CS     | --           | no connection                   |
+| SDO    | --           | no connection                   |
+| SDA    | SDA          | I2C data (no resistors needed)  |
+| SCL    | SCL          | I2C clock (no resistors needed) |
+| INT1   | Any GPIO Pin | Optional (if using interrupts)  |
+| INT2   | Any GPIO Pin | Optional (if using interrupts)  |
 
 ## Wiring Diagram
 
@@ -31,100 +37,38 @@ show_in_list: true
 
 ## Operation
 
-### Library
+### `ADXL345_Sparkfun_Particle` Library
 
-* We need a library to handle much of the complex communication with the OLED 
-* To install a library, go to the command palette and type `Install Library`
-* Install the OLED library: `SparkFunMMA8452Q`
-
-### Examples
-
-- There are extensive examples in the library folder under `lib/examples`
-
-## Code for Reading Acceleration Values
+* Initialize accelerometer object
 
 ```c++
-MMA8452Q accel;
+ADXL345 adxl; 		//accelerometer object
 
 void setup() {
-    accel.begin(SCALE_2G,ODR_1);  // 2g and 1 Hz refresh
-}
-
-void loop() {
-    if (accel.available()) {	//check if available
-    accel.read();				//read sensor values
-    float x = accel.cx;		//get X-dir measurement (in G's)  
-    float y = accel.cy;		  
-    float z = accel.cz;
-    }
-}
+  accel.powerOn(); // Power on the ADXL345
 ```
 
+* There are other additional settings to configure tap, etc.
+* These can be found in the example files in the library
 
+### Library Operations
 
-## Code for Detecting Orientation
+* Recommended library for Argon
 
-```c++
-MMA8452Q accel;
+  * ```ADXL345_Sparkfun_Particle```
 
-void setup() {
-    accel.begin(SCALE_2G,ODR_1);  // 2g and 1 Hz refresh
-}
+* Check for vibrations
 
-void loop() {
-  // accel.readPL() will return a byte containing information
-  // about the orientation of the sensor. It will be either
-  // PORTRAIT_U, PORTRAIT_D, LANDSCAPE_R, LANDSCAPE_L, or
-  // LOCKOUT.
-  byte pl = accel.readPL();
-  switch (pl) {
-    case PORTRAIT_U:
-      changeRgbLight(0, 0, 255);
-      break;
-    case PORTRAIT_D:
-      changeRgbLight(0, 255, 0);
-      break;
-    case LANDSCAPE_R:
-      changeRgbLight(255, 0, 0);
-      break;
-    case LANDSCAPE_L:
-      changeRgbLight(255, 0, 255);
-      break;
-    case LOCKOUT:
-      changeRgbLight(255, 255, 255);
-      break;
-  }
-}
-```
+  * `accel.readTap()` greater than 0 is a vibration
 
+* Measure acceleration
 
+  * `accel.cx` int value for force of gravity in the X direction
+  * `accel.cy` int value for force of gravity in the Y direction
 
-## Code for Tap Detection
+  * `accel.cz` int value for force of gravity in the Z direction
 
-see [explanation](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-photon-experiment-guide/experiment-8-activity-tracker)
-
-```c++
-byte threshold = 1;  // 2 * 0.063g = 0.063g (minimum threshold
-byte pulseTimeLimit = 255;  // 0.625 * 255 = 159ms (max)
-byte pulseLatency = 64;  // 1.25 * 64 = 640ms
-MMA8452Q accel;
-
-void setup() {
-    accel.begin(SCALE_2G,ODR_1);  // 2g and 1 Hz refresh
-    accel.setupTap(threshold, threshold, threshold, pulseTimeLimit,
-                   pulseLatency);
-}
-void loop() {
-    if (accel.available()) {
-        accel.read();
-    	if (accel.readTap() > 0) {
-        	Serial.println("Tap!");
-    	}
-    }
-}
-```
-
-
+  
 
 ## Credit
 

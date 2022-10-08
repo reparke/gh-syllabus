@@ -1006,8 +1006,8 @@ Could combine graphics and OLED in one day; spent time going over A9 whic
 
 - Copy example code for display graphs
 - Use **tap** feature
-- Use **portrait / landscape** detection
 - Use accelerometer to control RGB LED (if time)
+- Try interrupts for tap 
 
 ## 14. RFID + Thanksgiving
 

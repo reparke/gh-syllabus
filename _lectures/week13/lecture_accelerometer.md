@@ -12,9 +12,7 @@ title: Accelerometer
 
 # Accelerometers
 
-<img src="lecture_accelerometer.assets/13926-02.jpg" alt="1574364327550" style="width:600px;" />
-
-
+<img src="lecture_accelerometer.assets/image-20221008013236792.png" alt="1574364327550" style="width:600px;" />
 
 ## Accelerometer
 
@@ -22,9 +20,9 @@ title: Accelerometer
   * Movement
   * Gravity 
 
-* Model: MMA8452Q 
+* Model: ADXL345 
 
-* Measurement range:  ±2g/±4g/±8g 
+* Measurement range:  ±2g/±4g/±8g/±16g 
   * g = 9.8 m/s<sup>2<sup> (Earth's gravity)
 * Uses I2C serial protocol
 
@@ -66,53 +64,57 @@ title: Accelerometer
 
 ## Sensor Wiring
 
-| Sensor | Argon | Function                        |
-| ------ | ----- | ------------------------------- |
-| GND    | GND   | Ground                          |
-| VCC    | 3V3   | Power (requires 3.3v)           |
-| SDA    | SDA   | I2C data (no resistors needed)  |
-| SCL    | SCL   | I2C clock (no resistors needed) |
+| Sensor | Argon        | Function                        |
+| ------ | ------------ | ------------------------------- |
+| GND    | GND          | Ground                          |
+| VCC    | 3V3          | Power (requires 3.3v)           |
+| CS     | --           | no connection                   |
+| SDO    | --           | no connection                   |
+| SDA    | SDA          | I2C data (no resistors needed)  |
+| SCL    | SCL          | I2C clock (no resistors needed) |
+| INT1   | Any GPIO Pin | Optional (if using interrupts)  |
+| INT2   | Any GPIO Pin | Optional (if using interrupts)  |
 
 ## Sensor Wiring
 
 <img src="lecture_accelerometer.assets/accelerometer_rgb_led_bb.png" style="width:800px;" />
 
-## `SparkFunMMA8452Q` Library
+## `ADXL345_Sparkfun_Particle` Library
 
 * Initialize accelerometer object
 
 ```c++
-MMA8452Q accel; 		//accelerometer object
+ADXL345 adxl; 		//accelerometer object
 
 void setup() {
-  accel.begin(<<SCALE>>, <<RATE>>); //initialize object
+  accel.powerOn(); // Power on the ADXL345
 ```
 
-* `<<SCALE>>` specifies ±2g, ±4g, ±8g
-* `<<RATE>>` specific update frequences in Hz
-* Ex:
-  * ` accel.begin(SCALE_2G, ODR_400)` measures **±2g** and updates at **400 Hz**
-
-## Library Operations
-
-```c++
-if (accel.available()) {	//check if available
-  accel.read();				//read sensor values
-  float x = accel.cx;		//get X-dir measurement (in G's)  
-  float y = accel.cy;		  
-  float z = accel.cz;		  
-```
-
-
+* There are other additional settings to configure tap, etc.
+* These can be found in the example files in the library
 
 ## Library Operations
 
 * Recommended library for Argon
-  * ```SparkFunMMA8452Q```
+  * ```ADXL345_Sparkfun_Particle```
 * Check for vibrations
   * `accel.readTap()` greater than 0 is a vibration
-* Check orientation
-  * `accel.readPL()` returns int value relating to orientation of sensor
+* Measure acceleration
+  * `accel.cx` int value for force of gravity in the X direction
+  * `accel.cy` int value for force of gravity in the Y direction
+  
+  * `accel.cz` int value for force of gravity in the Z direction
+  
+  
+
+## Library Operations
+
+```c++
+adxl.readAndCalcAccel();
+float x = adxl.cx;		//get X-dir measurement (in G's)  
+float y = adxl.cy;		  
+float z = adxl.cz;		  
+```
 
 
 
@@ -120,47 +122,22 @@ if (accel.available()) {	//check if available
 
 * Download starting code: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week13/accelerometer_start
+    https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week13/ADXL345_accel_start
 * Connect sensor and run example code
 
 ## Exercise 2
 
 * Connect RGB LED
-* Change LED colors based on orientation
 * Then change LED colors based acceleration
 * Then turn on LED if there is vibration
-
-## Example Code for Tap Detection
-
-see [explanation](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-photon-experiment-guide/experiment-8-activity-tracker)
-
-```c++
-byte threshold = 1;  // 2 * 0.063g = 0.063g (minimum threshold
-byte pulseTimeLimit = 255;  // 0.625 * 255 = 159ms (max)
-byte pulseLatency = 64;  // 1.25 * 64 = 640ms
-MMA8452Q accel;
-
-void setup() {
-    accel.begin(SCALE_2G,ODR_1);  // 2g and 1 Hz refresh
-    accel.setupTap(threshold, threshold, threshold, pulseTimeLimit,
-                   pulseLatency);
-}
-void loop() {
-    if (accel.available()) {
-        accel.read();
-    	if (accel.readTap() > 0) {
-        	Serial.println("Tap!");
-    	}
-    }
-}
-```
+* Change LED colors based on orientation
 
 
 
 ## Credit
 
-- [Sparkfun](https://www.sparkfun.com/products/13926)
-- [Sensor Datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Accelerometers/MMA8452Q-rev8.1.pdf)
+- https://www.sparkfun.com/products/9836
+- [Sensor Datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf)
 - [Accelerometers, Gyros, IMUs](https://www.sparkfun.com/pages/accel_gyro_guide)
 - Diagrams created with [Frizting](https://fritzing.org)
 
