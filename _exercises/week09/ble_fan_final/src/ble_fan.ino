@@ -35,7 +35,6 @@ const int PIN_RED = A2;
 const int PIN_GREEN = A1;
 const int PIN_BLUE = A0;
 
-
 const int PIN_LED = D7;
 
 const int PIN_SERVO = D2;
@@ -116,7 +115,11 @@ void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
             digitalWrite(PIN_LED, LOW);
         } else if (data[0] == '!' && data[1] == 'B' && data[2] == '4' &&
                    data[3] == '1') {  // button 3 pressed -> blink
-            isFanAutomaticMode = true;
+            if (isFanAutomaticMode == true) {
+                isFanAutomaticMode = false;
+            } else {
+                isFanAutomaticMode = true;
+            }
             Serial.println("turning on Auto mode");
         }
 

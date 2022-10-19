@@ -207,7 +207,7 @@ Motor Controller
 * Download starting code
   * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week09/ble_uart_control_start
+    https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week09/ble_fan_start
 * In Bluefruit app, connect to over UART (listed as "controller")
 
 ## Lab #3: Controlling Argon via UART (part )
