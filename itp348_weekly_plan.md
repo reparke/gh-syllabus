@@ -741,6 +741,12 @@ Have students build fan and circuit before class
 
 - ==idea: Day 1 covers motors by directly building fan with potentiometer; Day 2 cover bluetooth and control can with bluetooth==
 
+### Idea / Feedback
+
+* for Fall 2022, wk 8 day 2 was canceled. For w8d1, we covered sound and rushed explaining bluetooth. Everyone got their device connected to Bluefruit, but that was it. This may not have been helpful
+* Wk9d1, we covered motors and servos, and built the fan
+* w9d2, we reintroduced bluetooth. Start with blinking D7 on and off, then go 
+
 ### Assignment
 
 * Due start of current week: none

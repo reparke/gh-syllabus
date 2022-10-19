@@ -1,7 +1,4 @@
-/*
- * Created by Ray Kim (USC)
- * modified by Rob Parke
- */
+
 /*
 | Motor Controller | Argon |
 | ---------------- | ----- |
@@ -16,110 +13,116 @@
 Servo: D2
 Pot: A0
 */
-int pos = 15;  // variable to store the servo position
-const unsigned long TURN_DELAY = 100;
-bool posIncreasing = true;  // are we doing pos++ or pos--
-unsigned long prevMillis = 0;
 
-// motor pins
+// use the potentiometer as a speed controller
+
+// to control motor, we need three pins
 const int AIN1 = D3;
-const int AIN2 = D4;
-const int PWMA = D5;
+const int AIN2 = D4;  // these two control direction of motor
+const int PWMA = D5;  // this controls speed
 const int PIN_POT = A0;
 const int PIN_SERVO = D2;
 
-// to work with servo, three steps
-// step 1 create servo object
-Servo servoObj;
+unsigned long prevMillis = 0;
+unsigned long INCREMENT_TIMER = 20;
+int servoPosition = 15;          // servo angle
+bool isServoPosIncreasing = true;  // direction
+
+//create the servo object
+Servo servo;
 
 void setup() {
-    Serial.begin(9600);
     pinMode(AIN1, OUTPUT);
     pinMode(AIN2, OUTPUT);
     pinMode(PWMA, OUTPUT);
     pinMode(PIN_POT, INPUT);
-    // no need to configure servo pin mode
-    // step 2: attach pin
-    servoObj.attach(PIN_SERVO);
+    pinMode(PIN_SERVO, OUTPUT);
+
+    //connect servo to a pin
+    servo.attach(PIN_SERVO);
+
+    Serial.begin(9600);
 }
+
 void loop() {
-    // how would we get motor to go full speed forward for 3 sec, stop for 2
-    // sec, then half speed the opposite direction for 5 sec?
-    // //full speed for 3 sec
+    // //spin in one direction at full speed
     // digitalWrite(AIN1, HIGH);
     // digitalWrite(AIN2, LOW);
     // analogWrite(PWMA, 255);
-    // delay(3000);
+    // delay(1000);
+    // analogWrite(PWMA, 127);
+    // delay(1000);
 
-    // // stop speed for 2 sec
+    // //stop motor
     // digitalWrite(AIN1, LOW);
     // digitalWrite(AIN2, LOW);
     // analogWrite(PWMA, 0);
-    // delay(2000);
+    // delay(1000);
 
-    // // half  speed for 5 sec opposite direction
+    // //spin in opposite direction
     // digitalWrite(AIN1, LOW);
     // digitalWrite(AIN2, HIGH);
-    // analogWrite(PWMA, 127);
-    // delay(5000);
+    // analogWrite(PWMA, 255);
+    // delay(1000);
 
-    // use the potentiometer to control the motor speed
-    int speed = map(analogRead(PIN_POT), 0, 4095, 0, 255);
-    digitalWrite(AIN1, HIGH);
-    digitalWrite(AIN2, LOW);
-    analogWrite(PWMA, speed);
-    Serial.println(speed);
-    // step 3: write your value
-    // what is the range of servo?
-    // full range is 0 deg to 180 deg; 15-165 is a safe range
-    for (int i = 15; i < 165; i = i + 10) {
-        servoObj.write(i);
-        int speed = map(analogRead(PIN_POT), 0, 4095, 0, 255);
-        digitalWrite(AIN1, HIGH);
-        digitalWrite(AIN2, LOW);
-        analogWrite(PWMA, speed);
-        delay(500);
-    }
-    for (int i = 165; i > 15; i = i - 10) {
-        servoObj.write(i);
-        int speed = map(analogRead(PIN_POT), 0, 4095, 0, 255);
-        digitalWrite(AIN1, HIGH);
-        digitalWrite(AIN2, LOW);
-        analogWrite(PWMA, speed);
-        delay(500);
-    }
-    delay(1000);
-    // potControlSpeed();
-}
-void potControlSpeed() {
-    unsigned long curMillis = millis();
-    // if the time between turning has happened, then update prevMillis and move
-    if ((curMillis - TURN_DELAY) > prevMillis) {
-        prevMillis = curMillis;
-        if (posIncreasing == true) {
-            pos++;
-            if (pos >= 165) {
-                posIncreasing = false;
-            }
-        } else {  // decreasing
-            pos--;
-            if (pos <= 15) {
-                posIncreasing = true;
+    // // stop motor
+    // digitalWrite(AIN1, LOW);
+    // digitalWrite(AIN2, LOW);
+    // analogWrite(PWMA, 0);
+    // delay(1000);
+
+    // digitalWrite(AIN1, LOW);
+    // digitalWrite(AIN2, HIGH);
+
+    // int potVal = analogRead(PIN_POT);
+    // int speed = map(potVal, 0, 4095, 0, 255);
+    // analogWrite(PWMA, speed);
+
+    // servo.write(15);  //rotate 15 deg
+    // delay(500);
+    // servo.write(90);
+    // delay(500);
+    // servo.write(165);
+    // delay(500);
+
+    // int potVal = analogRead(PIN_POT);
+    // int rotation = map(potVal, 0, 4095, 15, 165);
+    // servo.write(rotation);
+
+    /*
+    1) pot controls DC motor speed
+    2) servo rotates automatically 15-165 degrees, stop, then 165-15, etc
+
+        what to track?
+            logic: is at 15 or 165?
+            variable: int current rotation, bool the rotation inreasing or decreasing
+        millis: every so often you change rotation
+    */
+
+        unsigned long curMillis = millis();
+
+        if (curMillis - prevMillis > INCREMENT_TIMER) {
+            prevMillis = curMillis;
+            // what direction are we going--> increment or decrement
+            // check that we dont go above 165 or below 15
+            if (isServoPosIncreasing == true) {
+                servoPosition++;  // C++ notation to add 1
+                servo.write(servoPosition);
+                if (servoPosition >= 165) {
+                    servoPosition = false;
+                }
+            } else {
+                servoPosition--;  // C++ notation to subrat 1
+                servo.write(servoPosition);
+                if (servoPosition <= 15) {
+                    servoPosition = true;
+                }
             }
         }
-
-        servoObj.write(pos);  // tell servo to go to position in variable 'pos'
-        int potVal = analogRead(PIN_POT);
-        int pwmVal = map(potVal, 0, 4095, 0, 255);
-        analogWrite(PWMA, pwmVal);
         digitalWrite(AIN1, LOW);
         digitalWrite(AIN2, HIGH);
 
-        Serial.println("pos: " + String(pos) +
-                       ", posIncreasing: " + String(posIncreasing) +
-                       "pot: " + String(potVal) + ", pwm: " + String(pwmVal));
-    }
+        int potVal = analogRead(PIN_POT);
+        int speed = map(potVal, 0, 4095, 0, 255);
+        analogWrite(PWMA, speed);  // full speed opposite
 }
-// option1: the pot controls the fan speed while the servo continuosly THUMBS UP
-// option2: the pot controls servo position while the fan speeds up and down on
-// its own THUMBS DOWN
