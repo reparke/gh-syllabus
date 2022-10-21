@@ -132,7 +132,7 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 
 -   Create an `enum` to represent the 5 states
 -   Create `updateNextState()` function with conditional logic to transition to different states.  Transitions will be based on a combination of 
-    -   current brew state
+    -   current brew state (Idle, Heat, Steep, Hold, Pour)
     -   time in current brew state
     -   whether or not the brew process is active or not
     -   magnetic switch state
