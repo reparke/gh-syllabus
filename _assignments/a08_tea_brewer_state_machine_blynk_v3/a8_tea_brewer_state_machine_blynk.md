@@ -89,7 +89,7 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 
 ### State status
 
-* Displays name of current state
+* Displays name of current brew state
 
   
 
@@ -132,9 +132,9 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 
 -   Create an `enum` to represent the 5 states
 -   Create `updateNextState()` function with conditional logic to transition to different states.  Transitions will be based on a combination of 
-    -   current state
-    -   time in current state
-    -   brew process state  
+    -   current brew state
+    -   time in current brew state
+    -   whether or not the brew process is active or not
     -   magnetic switch state
 -   Within `updateNextState()`, call a custom function `updateNextStateDuration()` which sets the appropriate duration for the next state every time a transition is about to happen
 
@@ -249,7 +249,7 @@ Grading
 | `enum` models                                                | 5      |
 | State transition logic / correct state changes               | 10     |
 | State duration logic / correct state durations               | 10     |
-| Magnetic switch holds brew process                           | 5      |
+| Magnetic switch holds the brewing state change               | 5      |
 | **Stage 2: Connect Blynk, Set Up Datastreams, and Design Blynk App** | **4**  |
 | Datastreams correct configured                               | 2      |
 | Blynk user interface app elements                            | 2      |
