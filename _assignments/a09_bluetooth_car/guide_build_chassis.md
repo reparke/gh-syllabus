@@ -35,9 +35,10 @@ show_in_list: false
 | Q    | Argon (not shown)                                | 1    |
 | Z    | Battery Holder (not used)                        | 1    |
 
-### Warning: 
+### WARNING: 
 
-Do **not** attempt to remove chassis parts by squeezing them with pliers because they break easily. Instead gently remove them by hand.
+- Do **not** attempt to remove chassis parts by squeezing them with pliers because they break easily. Instead gently remove them by hand.
+
 
 
 
@@ -47,9 +48,8 @@ Do **not** attempt to remove chassis parts by squeezing them with pliers because
 
 ### A Note About Directions
 
-When this refers to the "front," "left," "right," and "back" of the  car, we are referring to specific sides of the robot when viewed from above.
+- When this refers to the "front," "left," "right," and "back" of the  car, we are referring to specific sides of the robot when viewed from above.
 
-==**replace with final picture==**
 
  [![Directions on the RedBot](guide_build_chassis.assets/348_chasis_directions.png)](https://cdn.sparkfun.com/assets/learn_tutorials/3/3/7/Redbot_re-wired_shots-01.jpg) 
 
@@ -282,6 +282,16 @@ Snap the two Breadboard Mounts (G) into the vertical slots in the back of the to
 * Push gently and evenly until it snaps into place
 
 <img src="guide_build_chassis.assets/348_chassis_board_in_struts.png" alt="IMG_8468" style="width:400px" />
+
+
+
+- Attach the velcro on the battery to the velcro on the top of the chassis
+
+<img src="guide_build_chassis.assets/image-20221024154658585.png" alt="image-20221024154658585" style="width:400px;" />
+
+## Conclusion
+
+Congratulations! You've finished the chassis. **You will have parts leftover** so don't worry that you didn't use all the parts.
 
 ## References
 
