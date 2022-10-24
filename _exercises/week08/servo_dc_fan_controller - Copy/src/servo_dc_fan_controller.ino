@@ -106,7 +106,7 @@ void loop() {
             // what direction are we going--> increment or decrement
             // check that we dont go above 165 or below 15
             if (isServoPosIncreasing == true) {
-                servoPosition++;  // C++ notation to add 1
+                servoPosition++;  // C++ notation to add 1  servoPos = servoPos+1
                 servo.write(servoPosition);
                 if (servoPosition >= 165) {
                     servoPosition = false;
