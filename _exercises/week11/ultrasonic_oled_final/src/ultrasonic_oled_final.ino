@@ -39,8 +39,8 @@ int MAX_RANGE_CM = 78;  // 30 in
 int MIN_RANGE_CM = 0;
 int WARNING_RANGE_CM = 12;  //4.7
 
-const int PIN_ECHO = D2;
-const int PIN_TRIGGER = D3;
+const int PIN_ECHO = D3;
+const int PIN_TRIGGER = D2;
 
 // bool unitInCm = true;  // true is CM, false is IN
 double distanceCm;

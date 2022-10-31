@@ -10,8 +10,8 @@
 
 
 Ultrasonic Sensor
-    Trigger: D2
-    Echo: D3
+    Trigger: D3
+    Echo: D2
 
 */
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
@@ -32,8 +32,8 @@ MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 //////////////////////////
 // Ultrasonic Distance  //
 //////////////////////////
-const int PIN_ECHO = D3;
-const int PIN_TRIGGER = D2;
+const int PIN_ECHO = D2;
+const int PIN_TRIGGER = D3;
 
 void setup() {
     Serial.begin(9600);  // begin serial communication with the computer
