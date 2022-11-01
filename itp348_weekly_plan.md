@@ -883,6 +883,8 @@ Have students build fan and circuit before class
 
 Could combine graphics and OLED in one day; spent time going over A9 whic
 
+Note: need to update exercies (start and final) since trigger and echo pins changed
+
 ### Reading
 
 - 
