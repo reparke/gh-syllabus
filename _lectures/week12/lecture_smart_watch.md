@@ -52,19 +52,7 @@ title: Smart Watch
 ## Heart Rate Design Goals
 
 * We want to always track heart beat so displayed as soon as heart screen loads (note: this is not power efficient)
-* We want to eliminate "noisy-ness" (flucutations) in heart rate so we will average the last for approximation of the heart rate (**smoothing**)
-
-
-
-## Heart Rate Algorithm
-
-1. Calculate most recent heart BPM (`updateBPM()`)
-2. Update OLED screen using `millis()` timer based on `HEART_SCREEN_UPDATE_MS`
-   * If `beatAvg`is above threshold and `irValue` is above threshold 
-     * Display BPM
-   * Else display `---`
-3. Display body temperature
-4. Display battery voltage (we'll discuss this part later)
+* We also need to make sure the OLED screen doesn't update too often or the watch won't be able to read the pulse sensor fast enough
 
 *If you want to display an image, you can use bitmap `heart16x12`*
 
