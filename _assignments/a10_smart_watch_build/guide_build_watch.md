@@ -56,8 +56,29 @@ Connect the breadboard with velcro on the bottom to the velcro on the top of the
 *Breadboard, battery, and strap*
 ![watch_v3_6](guide_build_watch.assets/watch_v3_6.png)
 
+### STEP 5:
 
-### Step 5:
+Attach one of the clear plastic pads that came with the pulse sensor to the white side of the sensor.
+
+ ![sensor_plastic_side](guide_build_watch.assets/sensor_plastic_side.jpg)
+
+
+
+Attach one of the black velcro pads that came with the pulse sensor to the electronics side of the sensor.
+
+![sensor_velcro_side](guide_build_watch.assets/sensor_velcro_side.jpg)
+
+![watch_ampled](guide_build_watch.assets/watch_ampled.jpg)
+
+You will use the longer velcro strip that came with the sensor to wrap around your finger.
+
+![watch_amped_velcro](guide_build_watch.assets/watch_amped_velcro.jpg)
+
+
+
+![watch_amped_finger](guide_build_watch.assets/watch_amped_finger.jpg)
+
+### STEP 6:
 
 Wire the components. 
 
@@ -69,6 +90,15 @@ MicroOLED --------------- Argon
   VCC ------------------- 3.3V
   SDA (blue) ------------ SDA
   SCL (yellow) ---------- SCL
+```
+
+*Pulse Sensor Wiring* 
+
+```c++
+Pulse Sensor ------------ Argon
+  GND (black)------------ GND
+  VCC (red) ------------- 3.3V
+  Data (Pink) ----------- A4
 ```
 
 *Additional Wiring*
@@ -84,7 +114,7 @@ Switch:
 
 *Fritzing design*
 
-![watch_bb](guide_build_watch.assets/watch_with_switch_i2c_bb.png)
+![watch_bb](guide_build_watch.assets/watch_with_switch_i2c_pulse_bb.png)
 
 
 
@@ -96,7 +126,7 @@ Switch:
 
 
 
-![watch_v3_9](guide_build_watch.assets/watch_v3_8.jpg)
+![watch_v3_9](guide_build_watch.assets/watch_v4_finished.jpg)
 
 ## Credits
 

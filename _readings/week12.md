@@ -6,6 +6,5 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **For Tuesday**
-  * Watch **Heart Rate Sensor**
-    {% include video id="k7r1PBhckHs" provider="youtube" %}
+* **For Tuesday and Thursday**
+  * Bring completed smart watch build to class

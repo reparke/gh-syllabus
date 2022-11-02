@@ -30,10 +30,10 @@ void PulseSensorAmped_data(int BPM, int IBI) {
   Serial.println(IBI);
 }
 
-// An optional function to indicate that the pulse signal has been lost
-// (Due to the nature of pulse detection via reflected light, spurios signals are possible. 
-//  i.e. received data may not be valid) 
-void PulseSensorAmped_lost(void) {
-  Serial.println("Pulse Lost");
-}
+  // An optional function to indicate that the pulse signal has been lost
+  // (Due to the nature of pulse detection via reflected light, spurios signals are possible. 
+  //  i.e. received data may not be valid) 
+  void PulseSensorAmped_lost(void) {
+    Serial.println("Pulse Lost");
+  }
 

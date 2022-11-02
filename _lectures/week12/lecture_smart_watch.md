@@ -26,16 +26,15 @@ title: Smart Watch
 
   * Libraries
     * Micro OLED
-    * MAX30101 heart rate sensor
+    * Pulse Sensor Amped
   * Bitmaps byte arrays for heart rate, clock, and weather (`.h` files)
   * Heart rate BPM calculation
 
-## Detecting Heart Rate with MAX30101 Heart Rate / SpO2 Sensor
+## Detecting Heart Rate with Pulse Sensor Amped
 
 * Uses built-in LEDs to pulse light onto skin
 * Measures light reflecting back
 * Operates at 3.3v
-* Uses I2C communication
 
 ##  States
 

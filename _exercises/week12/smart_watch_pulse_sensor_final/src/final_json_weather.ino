@@ -16,23 +16,7 @@ heart rate (maybe 2x faster….So maybe 6x per second or ~166ms?) .  If you just
 want occasional updates, you can call it less frequently.
 
 */
-/*
-  Uses code from
-  Optical Heart Rate Detection (PBA Algorithm) using the MAX30105 Breakout
-  By: Nathan Seidle @ SparkFun Electronics
-  Date: October 2nd, 2016
-  https://github.com/sparkfun/MAX30105_Breakout
 
-  Hardware Connections (Breakoutboard to Arduino):
-  -5V = 5V (3.3V is allowed)
-  -GND = GND
-  -SDA = A4 (or SDA)
-  -SCL = A5 (or SCL)
-  -INT = Not connected
-*/
-
-// #include "MAX30105.h"
-// #include "heartRate.h"
 // libraries for OLED
 #include "JsonParserGeneratorRK.h"
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
@@ -40,8 +24,6 @@ want occasional updates, you can call it less frequently.
 #include "bitmaps_weather.h"
 
 JsonParser jsonParser;
-
-// MAX30105 particleSensor;
 
 // const byte RATE_SIZE = 4;  // Increase this for more averaging. 4 is good.
 // byte rates[RATE_SIZE];     // Array of heart rates
@@ -51,7 +33,6 @@ const int pulseSignalPin = A4;
 
 #include <PulseSensorAmped.h>
 
-float beatsPerMinute;
 int beatAvg;
 //////////////////////////
 // Heart Screen         //
@@ -66,9 +47,7 @@ unsigned long lastRead = 0;
 unsigned long samples = 0;
 
 const int LOW_BPM_THRESHOLD = 40;
-const int LOW_IR_THRESHOLD = 50000;
-float bodyTempF;
-long irValue = 0;
+const int HIGH_BPM_THRESHOLD = 200;
 
 //////////////////////////
 // Time  Screen         //
@@ -234,15 +213,12 @@ void runWeatherScreen() {  // doesn't use JSON or webhook
 }
 
 void runHeartScreen() {
-    updateBPM();
     unsigned long curMillis = millis();
     if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
         prevScreenUpdateMillis = curMillis;
 
-        // calcHeartBeatAvg();  // this is slow! -- beatAvg
-        // if (beatAvg > LOW_BPM_THRESHOLD &&
-        //     irValue > LOW_IR_THRESHOLD) {  // VALID!
-        if (beatAvg > LOW_BPM_THRESHOLD) {  // VALID!
+        if (beatAvg > LOW_BPM_THRESHOLD &&
+            beatAvg < HIGH_BPM_THRESHOLD) {  // VALID!
             oled.clear(PAGE);
             oled.drawBitmap(heart16x12);
             oled.setFontType(1);
@@ -256,12 +232,6 @@ void runHeartScreen() {
             oled.setCursor(20, 0);
             oled.print("---");
         }
-        // bodyTempF = particleSensor.readTemperatureF();
-        bodyTempF = 98.5;
-        oled.setCursor(0, 20);
-        oled.setFontType(1);
-        oled.print("Temp ");
-        oled.print(String(bodyTempF, 0));
 
         float voltage = analogRead(BATT) * 0.0011224;
         oled.setCursor(0, 40);
@@ -270,12 +240,6 @@ void runHeartScreen() {
         oled.print(String(voltage, 2));
         oled.display();
         Serial.println("BPM: " + String(beatAvg));
-        // Serial.println(", IRvalue: " + String(irValue) +
-        //                ", Temp: " + String(bodyTempF));
-        // Serial.print("BPM: " + String(beatsPerMinute) +
-        //              ", Avg: " + String(beatAvg));
-        // Serial.println(", IRvalue: " + String(irValue) +
-        //                ", Temp: " + String(bodyTempF));
     }
     // consider adding battery status bands
     // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7
@@ -283,22 +247,6 @@ void runHeartScreen() {
 void setup() {
     Serial.begin(115200);
     Serial.println("Initializing...");
-
-    // // Initialize sensor
-    // if (!particleSensor.begin(
-    //         Wire, I2C_SPEED_FAST))  // Use default I2C port, 400kHz speed
-    // {
-    //     Serial.println("MAX30105 was not found. Please check wiring/power.
-    //     "); while (1)
-    //         ;
-    // }
-    // Serial.println(
-    //     "Place your index finger on the sensor with steady pressure.");
-
-    // particleSensor.setup();  // Configure sensor with default settings
-    // particleSensor.setPulseAmplitudeRed(
-    //     0x0A);  // Turn Red LED to low to indicate sensor is running
-    // particleSensor.setPulseAmplitudeGreen(0);  // Turn off Green LED
 
     PulseSensorAmped.attach(pulseSignalPin);
     PulseSensorAmped.start();
@@ -337,68 +285,6 @@ void loop() {
     loadNextScreen();
     prevReading = curReading;  // update for next loop
 }
-/* ====================== HEART RATE FUNCTIONS ===============
-  These functions are completed and shouldn't be modified
-*/
-/* fn: updateBPM
-This function is called by timer. It needs to execute
-quickly otherwise sensor won't properly register beats
-and BPM will be off
-*/
-void updateBPM() {
-    // irValue = particleSensor.getIR();
-
-    // if (checkForBeat(irValue) == true) {
-    //     // We sensed a beat!
-    //     long delta = millis() - lastBeat;
-    //     lastBeat = millis();
-
-    //     beatsPerMinute = 60 / (delta / 1000.0);
-
-    //     if (beatsPerMinute < 255 && beatsPerMinute > 20) {
-    //         rates[rateSpot++] =
-    //             (byte)beatsPerMinute;  // Store this reading in the array
-    //         rateSpot %= RATE_SIZE;     // Wrap variable
-
-    //         calcHeartBeatAvg();
-    //     }
-    // }
-    // Debugging
-    /*
-        Serial.print("IR=");
-        Serial.print(irValue);
-        Serial.print(", BPM=");
-        Serial.print(beatsPerMinute);
-        Serial.print(", Avg BPM=");
-        Serial.print(beatAvg);
-
-        if (irValue < 50000) Serial.print(" No finger?");
-
-        unsigned long curRead = millis();
-        samples++;
-        Serial.print("\t\t\t\tHz[");
-        Serial.print((float)1000.0 / (curRead - lastRead), 2);
-        Serial.print("] Avg Hz[");
-        Serial.print((float)samples * 1000.0 / (curRead), 2);
-        Serial.print("]");
-        Serial.println();
-        lastRead = curRead;
-        Serial.println();
-        //   delay(50);
-        */
-}
-
-/* fn: calcHeartBeatAvg
-This function is slow so it should be done during display
- NOT during timer reading of heart rate
-*/
-// void calcHeartBeatAvg() {
-//     beatAvg = 0;
-//     for (byte x = 0; x < RATE_SIZE; x++) {
-//         beatAvg += rates[x];
-//     }
-//     beatAvg /= RATE_SIZE;
-// }
 
 void jsonSubscriptionHandler(const char *event, const char *data) {
     // Part 1 allows for webhook responses to be delivered in multple "chunks";
