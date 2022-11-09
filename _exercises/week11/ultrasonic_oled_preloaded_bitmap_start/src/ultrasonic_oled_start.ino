@@ -47,31 +47,11 @@ void setup() {
     delay(1000);         // Delay 1000 ms
 
     // TODO: configure ultrasonic pins
-    pinMode(PIN_ECHO, INPUT);
-    pinMode(PIN_TRIGGER, OUTPUT);
+
 }
 
 /********************************************************************************/
 
 void loop() {
-    // start seq
-    digitalWrite(PIN_TRIGGER, LOW);
-    delayMicroseconds(2);
-    digitalWrite(PIN_TRIGGER, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(PIN_TRIGGER, LOW);
 
-    int roundTripTime = pulseIn(PIN_ECHO, HIGH);
-
-    double distance = roundTripTime * SPEED_SOUND_CM_ROOM_TEMP_FAHR / 2;
-
-    if (distance >= MAX_RANGE_CM || distance <= MIN_RANGE_CM) {
-        Serial.println("Error out of range");
-    } else if (distance <= 12) {
-        Serial.println("Warning!");
-        Serial.println("Distance to object: " + String(distance));
-    } else {
-        Serial.println("Distance to object: " + String(distance));
-    }
-    delay(500);  // help the sensors
 }

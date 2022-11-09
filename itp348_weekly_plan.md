@@ -910,6 +910,7 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 #### Lecture
 
 - OLED graphics
+- add sleep/wake from week 15 (need to add more)
 
 #### Lab
 

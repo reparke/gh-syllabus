@@ -16,6 +16,7 @@ Ultrasonic Sensor
 */
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 #include "bitmaps_symbols.h"
+
 //////////////////////////////////
 // MicroOLED Object Declaration //
 //////////////////////////////////
@@ -32,71 +33,73 @@ MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 //////////////////////////
 // Ultrasonic Distance  //
 //////////////////////////
-const int PIN_ECHO = D2;
-const int PIN_TRIGGER = D3;
 
-// sensor reports time
-// speed of sound is 343 m/s
-const double SPEED_OF_SOUND_CM = 0.0343;
-const int MAX_RANGE = 78;
-const int MIN_RANGE = 0;
-const int WARNING_RANGE = 5;
+/*
+    Connect the ultrasonic distance sensor
+    Using the serial monitor, display
+        Error message when out of range
+        Warning message when less than 5 inches
+        Distance message otherwise
+
+*/
+const int PIN_ECHO = D3;
+const int PIN_TRIGGER = D2;
+
+int MAX_RANGE_CM = 78;
+int MIN_RANGE_CM = 5;
+double SOUND_CM_FAHR = 0.0344;
 
 void setup() {
     Serial.begin(9600);  // begin serial communication with the computer
     oled.begin();        // Initialize the OLED
     oled.clear(ALL);     // Clear the display's internal memory
-    oled.drawBitmap(itp348_bitmap);
-    oled.display();  // Display what's in the buffer (splashscreen)
-    delay(1000);     // Delay 1000 ms
+    oled.display();      // Display what's in the buffer (splashscreen)
+    delay(1000);         // Delay 1000 ms
 
-    // TODO: configure ultrasonic pins
-    pinMode(PIN_ECHO, INPUT);
-    pinMode(PIN_TRIGGER, OUTPUT);
+    pinMode(PIN_TRIGGER, OUTPUT);  // speaker
+    pinMode(PIN_ECHO, INPUT);      // mix
 }
 
 /********************************************************************************/
 void loop() {
-    // startup sequence
-    digitalWrite(PIN_TRIGGER, LOW);
+    // start trigger
+    digitalWrite(PIN_TRIGGER, LOW);  // preparing
     delayMicroseconds(2);
     digitalWrite(PIN_TRIGGER, HIGH);
     delayMicroseconds(10);
     digitalWrite(PIN_TRIGGER, LOW);
-    // at this point, the sensor sends its pulses
 
-    // listening
-    int time = pulseIn(PIN_ECHO, HIGH);  // echo pin goes HIGH when pulse go
-                                         // out, LOW when reflection back
+    // now sensor is sending 8 quick pulses
 
-    double distCm = time * SPEED_OF_SOUND_CM / 2;  // round trip time
+    int roundTriptime = pulseIn(PIN_ECHO, HIGH);
 
-    // Serial.println("Distance: " + String(distCm, 2));
-    if (distCm < MIN_RANGE || distCm > MAX_RANGE) {
-        Serial.print("out of range: " + String(distCm, 2) + " cm");
-        oled.clear(PAGE);  // Clear the display
-        oled.drawBitmap(no_bmp);
-        // oled.setFontType(0);   // Switch to the large-number font
-        // oled.setCursor(40, 0);  // Set the cursor to top-left
-        // oled.print("Out of range");
-        oled.display();  // Update the display
-    } else if (distCm > MIN_RANGE && distCm < WARNING_RANGE) {
-        Serial.print("Warning: " + String(distCm, 2) + " cm");
+    double distCm = roundTriptime * SOUND_CM_FAHR / 2;
+    // dist = rate  * time
+
+    double distIn = distCm * 0.3437;
+
+    if (distCm >= 0 && distCm < MIN_RANGE_CM) {
+        Serial.print("Warning: " + String(distIn, 2) + " in");
         oled.clear(PAGE);  // Clear the display
         oled.drawBitmap(warning_bmp_320x240);
         oled.setFontType(0);    // Switch to the large-number font
         oled.setCursor(0, 40);  // Set the cursor to top-left
-        oled.print(String(distCm, 2) + " cm");
-        oled.display();  // Update the display
-    } else {
-        Serial.print("OK distance: " + String(distCm, 2) + " cm");
+        oled.print(String(distIn, 2) + " in");
+
+
+
+    } else if (distCm >= MIN_RANGE_CM && distCm < MAX_RANGE_CM) {
+        Serial.print("OK distance: " + String(distIn, 2) + " in");
         oled.clear(PAGE);  // Clear the display
         oled.drawBitmap(yes_bmp_320x240);
         oled.setFontType(0);    // Switch to the large-number font
         oled.setCursor(0, 40);  // Set the cursor to top-left
-        oled.print(String(distCm, 2) + " cm");
+        oled.print(String(distIn, 2) + " in");
+        oled.display();  // Update the display
+    } else {
+        Serial.print("out of range: " + String(distIn, 2) + " in");
+        oled.clear(PAGE);  // Clear the display
+        oled.drawBitmap(no_bmp);
         oled.display();  // Update the display
     }
-    Serial.println();
-    delay(500);  // sensor needs a pause in between reads
 }
