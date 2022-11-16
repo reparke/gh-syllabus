@@ -1,8 +1,3 @@
----
-
-
----
-
 <!-- This version includes the tea type selector -->
 
 Assignment 8 – State Machine Tea Brewer with Blynk

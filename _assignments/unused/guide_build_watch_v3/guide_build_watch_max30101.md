@@ -1,11 +1,3 @@
----
-week: 9
-category: assignments
-title: Guide to Smart Watch Assembly
-show_in_list: false
-
----
-
 Note: This is the build for the [Max30101](https://www.sparkfun.com/products/16474) breakout board
 
 ## Smart Watch Assembly

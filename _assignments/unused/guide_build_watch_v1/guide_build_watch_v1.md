@@ -1,11 +1,3 @@
----
-week: 9
-category: assignments
-title: Guide to Smart Watch Assembly
-show_in_list: false
-
----
-
 ## Smart Watch Assembly ==need to modify this to use velcro==
 
 ### Items You will Need: 

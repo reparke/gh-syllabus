@@ -90,47 +90,154 @@ long debounceDelay = 200;   // the debounce time; increase if the output
 // States               //
 //////////////////////////
 // TODO: create state enum and variable(s) to track state
+enum State { Clock, Weather, Heart };
+State currentState = Weather;
 
 // TODO
-void getNextState() {}
+void getNextState() {
+    switch (currentState) {
+        case Clock:
+            currentState = Weather;
+            break;
+        case Weather:
+            currentState = Heart;
+            break;
+        case Heart:
+            currentState = Clock;
+            break;
+    }
+}
 
 // TODO
-void loadNextScreen() {}
+void loadNextScreen() {
+    switch (currentState) {
+        case Clock:
+            runTimeScreen();
+            break;
+        case Weather:
+            runWeatherScreen();
+            break;
+        case Heart:
+            runHeartScreen();
+            break;
+    }
+}
 
-// TODO
+/* goal: have the HR detection always running, but the screen showing the HR
+   only update every so often
+*/
 void runHeartScreen() {
     // for debugging
-    Serial.println("Heart");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Heart");
-    oled.display();
+    Serial.println("Heart " + String(beatAvg));
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis >
+        HEART_SCREEN_UPDATE_MS) {  // now redraw
+        prevScreenUpdateMillis = curMillis;
+        // if the BPM is valid, then display a heart icon and the BPM
+        // else display the heart icon and either blank or "---"
+        // ignore the temp and battery for now
+        if (beatAvg >= LOW_BPM_THRESHOLD &&
+            beatAvg <= HIGH_BPM_THRESHOLD)  // valid beat
+        {
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print(String(beatAvg));
+        } else {  // invalid
+            oled.clear(PAGE);
+            oled.drawBitmap(heart16x12);
+            oled.setFontType(1);
+            oled.setCursor(20, 0);
+            oled.print("---");
+        }
+
+        // show battery
+        float voltage = analogRead(BATT) * 0.0011224;  // from documentation
+        oled.setCursor(0, 20);
+        oled.setFontType(0);
+        oled.print("Batt: " + String(voltage, 1));
+        oled.display();
+
+        /* possible battery levels
+
+    Charging ( V > 4.3)
+    Full Charge (V >=4.2
+    Nominal (4.2 > V > 3.5)
+    Low/Needs Recharge (3.5 > V >= 3.4)
+    Critical (3.4 > V)
+*/
+    }
 }
 
 // TODO
 void runTimeScreen() {
-    // for debugging
-    Serial.println("Time");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Time");
-    oled.display();
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > TIME_SCREEN_UPDATE_MS) {  // 30 sec
+        prevScreenUpdateMillis = curMillis;
+
+        String dateFormat = "%a %d";  // Thu 14
+        String timeFormat = "%I:%M";  // 05:56
+        String secondsFormat = "%S";
+        // String timeFormat = "%I:%M ";
+        // for debugging
+        Serial.println("Time");
+
+        oled.clear(PAGE);  // Clear the display
+        delay(10);
+        oled.drawBitmap(clock_16x12);
+
+        oled.setCursor(25, 0);
+        oled.setFontType(0);
+        oled.print(Time.format(dateFormat));
+
+        oled.setFontType(1);
+        oled.setCursor(0, 25);
+        oled.print(Time.format(timeFormat));
+
+        oled.setFontType(0);
+        oled.setCursor(50, 30);
+        oled.print(Time.format(secondsFormat));
+
+        oled.display();
+    }
+}
+
+void myHandler(const char *event, const char *data) {
+    // Part 1 allows for webhook responses to be delivered in multple "chunks";
+    // you don't need to change this
+    int responseIndex = 0;
+    const char *slashOffset = strrchr(event, '/');
+    if (slashOffset) responseIndex = atoi(slashOffset + 1);
+    if (responseIndex == 0) jsonParser.clear();
+    jsonParser.addString(data);
+
+    // Part 2 is where you can parse the actual data; you code goes in the IF
+    if (jsonParser.parse()) {
+        /****** YOUR PARSING CODE GOES HERE ********/
+    }
 }
 
 // TODO
 void runWeatherScreen() {
     // for debugging
-    Serial.println("Weather");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Weather");
-    oled.display();
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > WEATHER_SCREEN_UPDATE_MS) {
+        Serial.println("Weather");
+        Particle.publish("WeatherStackJSON", "90089");
+
+    }
+    //draw weather info on screen
+
 }
 
 void setup() {
     Serial.begin(115200);
     Serial.println("Initializing...");
 
+    // for time
+    Time.zone(-8);  // pacific time
+    // Time.beginDST();
     PulseSensorAmped.attach(pulseSignalPin);
     PulseSensorAmped.start();
 
@@ -145,15 +252,30 @@ void setup() {
     delay(1000);  // Delay 1000 ms
 
     pinMode(PIN_BUTTON, INPUT);
+
+    Particle.subscribe("hook-response/WeatherStackJSON", myHandler, MY_DEVICES);
 }
 
-void loop() {}
+void loop() {
+    PulseSensorAmped.process();  // Joelle FTW!
+    int curReading = digitalRead(PIN_BUTTON);
+    if (curReading == HIGH && prevReading == LOW) {
+        // this means buttons was pressed and we shoudl change state
+        getNextState();
+    }
+    loadNextScreen();
+    prevReading = curReading;
+}
 /* =================================================
    ================================================= */
 //////////////////////////
 // HEART RATE FUNCTIONS //
 //////////////////////////
 
-void PulseSensorAmped_data(int BPM, int IBI) {}
+void PulseSensorAmped_data(int BPM, int IBI) {
+    // beatAvg is OUR global variable for HR
+    // BPM is the parameter from our HR sensor for the current HR
+    beatAvg = BPM;
+}
 
 void PulseSensorAmped_lost(void) {}

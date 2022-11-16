@@ -1,10 +1,3 @@
-
-
-week: 9
-category: assignments
-title: Guide to Smart Watch Assembly (v2)
-show_in_list: false
-
 ***Note: This build corresponds to the SPI OLED screen, which required two breadboards. This version is retired***
 
 ## Smart Watch Assembly

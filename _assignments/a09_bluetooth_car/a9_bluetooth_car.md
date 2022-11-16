@@ -118,7 +118,8 @@ Deliverables
    - Upload zip file to Blackboard site for our course
 
 2.  **==Upload to Blackboard:==** A photograph of your customized car connected to the battery with the blue light on
-3.  ==**Upload to YouTube:**== video demonstrating your car being controlled over Bluetooth and driving in a figure-8 pattern
+3.  ==**Upload to YouTube:**== video demonstrating your car being controlled over Bluetooth and driving in a figure-8 pattern. 
+    **Important: please check "Not specifically made for kids"**
 
 Grading
 -------

@@ -1,12 +1,3 @@
----
-marp: true
-theme: itp
-
-week: x
-category: lectures
-show_in_list: false
----
-
 <!-- headingDivider: 2 -->
 
 NOTE: This accelerometer has been discontinued and not used in class
