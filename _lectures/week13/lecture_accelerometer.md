@@ -68,7 +68,7 @@ title: Accelerometer
 | ------ | ------------ | ------------------------------- |
 | GND    | GND          | Ground                          |
 | VCC    | 3V3          | Power (requires 3.3v)           |
-| CS     | --           | no connection                   |
+| CS     | 3V3          | Need for I2C mode               |
 | SDO    | --           | no connection                   |
 | SDA    | SDA          | I2C data (no resistors needed)  |
 | SCL    | SCL          | I2C clock (no resistors needed) |

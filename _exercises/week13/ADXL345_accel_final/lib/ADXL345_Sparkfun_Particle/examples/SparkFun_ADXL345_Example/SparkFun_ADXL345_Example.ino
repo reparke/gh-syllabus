@@ -23,8 +23,8 @@
 
 /*********** COMMUNICATION SELECTION ***********/
 /*    Comment Out The One You Are Not Using    */
-ADXL345 adxl = ADXL345(10);           // USE FOR SPI COMMUNICATION, ADXL345(CS_PIN);
-//ADXL345 adxl = ADXL345();             // USE FOR I2C COMMUNICATION
+// ADXL345 adxl = ADXL345(10);           // USE FOR SPI COMMUNICATION, ADXL345(CS_PIN);
+ADXL345 adxl = ADXL345();             // USE FOR I2C COMMUNICATION
 
 /****************** INTERRUPT ******************/
 /*      Uncomment If Attaching Interrupt       */
