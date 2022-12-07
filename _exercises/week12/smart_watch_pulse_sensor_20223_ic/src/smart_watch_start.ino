@@ -215,6 +215,24 @@ void myHandler(const char *event, const char *data) {
     // Part 2 is where you can parse the actual data; you code goes in the IF
     if (jsonParser.parse()) {
         /****** YOUR PARSING CODE GOES HERE ********/
+        tempWeather = jsonParser.getReference()
+                          .key("current")
+                          .key("temperature")
+                          .valueDouble();
+        weatherCode = jsonParser.getReference()
+                          .key("current")
+                          .key("weather_code")
+                          .valueInt();
+        uvIndex =
+            jsonParser.getReference().key("current").key("uv_index").valueInt();
+        humidity =
+            jsonParser.getReference().key("current").key("humidity").valueInt();
+        weatherDescription = jsonParser.getReference()
+                                 .key("current")
+                                 .key("weather_descriptions")
+                                 .index(0)
+                                 .valueString();
+        Serial.println("Weather Desc: " + weatherDescription);
     }
 }
 
@@ -224,11 +242,49 @@ void runWeatherScreen() {
     unsigned long curMillis = millis();
     if (curMillis - prevScreenUpdateMillis > WEATHER_SCREEN_UPDATE_MS) {
         Serial.println("Weather");
-        Particle.publish("WeatherStackJSON", "90089");
-
+        Particle.publish("WeatherStackJSON", "90089", PRIVATE);
     }
-    //draw weather info on screen
+    // draw weather info on screen
+    // first draw graphic
+    oled.clear(PAGE);
+    switch (weatherCode) {
+        case 296:  // when you have "case #" without a break, it's like each
+                   // case
+                   //  acts like an OR
+        case 302:
+        case 308:
+            oled.drawBitmap(weather_rainy_up_left);
+            break;
+        case 116:
+        case 119:
+        case 122:
+            oled.drawBitmap(weather_cloudy_up_left);
+            break;
+        default:  // this is like ELSE
+            oled.drawBitmap(weather_sunny_up_left);
+            break;
+    }
+    oled.setCursor(38, 5);
+    oled.setFontType(1);
+    oled.print(tempWeather, 0);  // 0 decimal places
+    // to show the degree symbol
+    oled.setFontType(0);
+    oled.print("o");
 
+    oled.setFontType(0);
+    oled.setCursor(0, 20);
+    oled.print(weatherDescription.substring(0,9));
+
+    oled.setCursor(0, 40);
+    oled.print("Hum ");
+    oled.print(humidity);
+    oled.print("%");
+
+    oled.setCursor(40, 40);
+    oled.print("UV ");
+    oled.print(uvIndex);
+
+    oled.display();
 }
 
 void setup() {
@@ -252,6 +308,8 @@ void setup() {
     delay(1000);  // Delay 1000 ms
 
     pinMode(PIN_BUTTON, INPUT);
+
+    Particle.publish("WeatherStackJSON", "90089", PRIVATE);
 
     Particle.subscribe("hook-response/WeatherStackJSON", myHandler, MY_DEVICES);
 }

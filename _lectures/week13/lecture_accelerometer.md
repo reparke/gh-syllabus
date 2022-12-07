@@ -69,7 +69,7 @@ title: Accelerometer
 | GND    | GND          | Ground                          |
 | VCC    | 3V3          | Power (requires 3.3v)           |
 | CS     | 3V3          | Need for I2C mode               |
-| SDO    | --           | no connection                   |
+| SDO    | GND          | Need for I2C mode               |
 | SDA    | SDA          | I2C data (no resistors needed)  |
 | SCL    | SCL          | I2C clock (no resistors needed) |
 | INT1   | Any GPIO Pin | Optional (if using interrupts)  |

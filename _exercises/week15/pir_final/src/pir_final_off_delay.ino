@@ -43,15 +43,15 @@ void setup() {
     Serial.begin(9600);
     // The PIR sensor's output signal is an open-collector,
     // so a pull-up resistor is required:
-    // pinMode(MOTION_PIN, INPUT_PULLUP);
-    pinMode(MOTION_PIN, INPUT);
+    pinMode(MOTION_PIN, INPUT_PULLUP);
+    // pinMode(MOTION_PIN, INPUT);
     pinMode(LED_PIN, OUTPUT);
     delay(10000);  // wait to read the room
 }
 
 void loop() {
-    part1Simple();
-    // part2AlarmHold();
+    // part1Simple();
+    part2AlarmHold();
     // part3AlarmDecreaseSensitivity();
 }
 
@@ -90,7 +90,7 @@ void part1Simple() {
         digitalWrite(LED_PIN, LOW);
         Serial.println(String(counter++) + ": Motion stopped!");
     }
-    delay(1000);
+    // delay(1000);
 }
 
 void part3AlarmDecreaseSensitivity() {
@@ -111,5 +111,7 @@ void part3AlarmDecreaseSensitivity() {
         Serial.println(String(counter++) + ": Motion stopped!");
     }
 
-    delay(1000);
+    // delay(1000);
+    Servo s;
+    s.write(100);
 }
