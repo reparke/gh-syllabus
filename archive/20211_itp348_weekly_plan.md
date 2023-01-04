@@ -602,7 +602,7 @@
   - take time to review questions, OLED, particle functions
   - have students brainstorm project ideas
 * Review some pasts projects for preliminary project idea
-  - https://sites.usc.edu/parke/tag/itp348_projects/
+  - https://robparke.com/tag/itp348_projects/
   - https://5cf99969afabc800087c618c.onlosant.com/photon_temperature
   - https://iot.app.initialstate.com/#/tiles/bkt_13hhui7kc4h38hz
 

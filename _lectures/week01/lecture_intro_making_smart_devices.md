@@ -149,7 +149,7 @@ Empowering and fun
 
 ## Reference
 
-- [More ITP 348 Projects](https://sites.usc.edu/parke/tag/itp348_projects/)
+- [More ITP 348 Projects](https://robparke.com/tag/itp348_projects/)
 - [AI - IoT](https://www.visualcapitalist.com/aiot-when-ai-meets-iot-technology/)
 
 ## Credits

@@ -3,7 +3,7 @@ week: 6
 number: 6
 category: assignments
 title: Preliminary Proposal Ideas for Final Project
-date_due: Oct 02 @ 11:59 pm
+date_due: Feb 19 @ 11:59 pm
 
 ---
 
@@ -62,7 +62,7 @@ Overview
 -   Earthquake monitor
 -   Retrofitted children’s toy
 -   Home monitoring station
--   [Highlights from past ITP 348 student projects](https://sites.usc.edu/parke/tag/itp348_projects/)
+-   [Highlights from past ITP 348 student projects](https://robparke.com/tag/itp348_projects/)
 
 
 

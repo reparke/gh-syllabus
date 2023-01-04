@@ -1,11 +1,3 @@
----
-marp: true
-theme: itp
-
-category: lectures
-title: Heart Rate Sensor (MAX30101)
-show_in_list: false
----
 
 <!-- headingDivider: 2 -->
 

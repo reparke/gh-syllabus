@@ -1,15 +1,3 @@
----
-      
-layout: single
-classes: wide
-title: Weekly Plan
-toc: false
-toc_label: "Quick Links"
-toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
-toc_sticky: true
-
----
-
 
 ## 		Things to implement
 

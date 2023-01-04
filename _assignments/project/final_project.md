@@ -3,7 +3,7 @@ week: 11
 number: 12
 category: assignments
 title: Project
-date_due: Proposal due Nov 06 @ 11:59 pm; Milestone Nov 26 @ 11:59 pm; Finished device and presentation Dec 09 @ 11:00 am (in person)
+date_due: Proposal due Sun Apr-02; Milestone Sat Apr-22; Finished device and presentation Fri May-05 @ 11:00 am (in person)
 
 ---
 
@@ -63,7 +63,7 @@ the key functioning elements. Here is a [partial list of components and services
 * Earthquake monitor
 * Retrofitted children’s toy
 * Home monitoring station
-* [Sample past projects](https://sites.usc.edu/parke/tag/itp348_projects/)
+* [Sample past projects](https://robparke.com/tag/itp348_projects/)
 
 Deliverables
 ------------
