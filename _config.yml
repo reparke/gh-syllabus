@@ -43,7 +43,8 @@ search_full_content: true
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "UA-7460857-8"
+    tracking_id: "G-JB67FWVKW6" # new GA4 code
+#    tracking_id: "UA-7460857-8" # old GA3 code
     anonymize_ip: false # default
 
 
