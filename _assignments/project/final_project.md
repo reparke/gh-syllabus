@@ -3,7 +3,7 @@ week: 11
 number: 12
 category: assignments
 title: Project
-date_due: Proposal due Sun Apr-02; Milestone Sat Apr-22; Finished device and presentation Fri May-05 @ 11:00 am (in person)
+date_due: Proposal due Sun Apr-02; Milestone Sun Apr-23; Finished device and presentation Fri May-05 @ 11:00 am (in person)
 
 ---
 
