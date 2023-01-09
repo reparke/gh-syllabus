@@ -1,9 +1,9 @@
 ---
-week: 6
-number: 6
+week: 7
+number: 7
 category: assignments
 title: Preliminary Proposal Ideas for Final Project
-date_due: Feb 19 @ 11:59 pm
+date_due: Feb 26 @ 11:59 pm
 
 ---
 

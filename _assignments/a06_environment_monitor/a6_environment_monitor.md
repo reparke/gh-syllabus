@@ -1,9 +1,9 @@
 ---
-week: 7
-number: 7
+week: 6
+number: 6
 category: assignments
 title: Environment Monitor and Dashboard
-date_due: Feb 26 @ 11:59 pm
+date_due: Feb 19 @ 11:59 pm
 ---
 
 Assignment 7 – Environment Monitor and Dashboard
@@ -26,13 +26,13 @@ This assignment is to create a device that monitors your environment. The device
 Here is an example:
 ### Device
 
-<img src="a7_enviroment_monitor.assets/IMG_1645.jpg" style="width:400px;" />
+<img src="a6_environment_monitor.assets/IMG_1645.jpg" style="width:400px;" />
 
 ### OLED Screen
-<img src="a7_enviroment_monitor.assets/IMG_1642.jpg" style="width:200px" /> <img src="a7_enviroment_monitor.assets/IMG_1644.jpg" style="width:200px" />
+<img src="a6_environment_monitor.assets/IMG_1642.jpg" style="width:200px" /> <img src="a6_environment_monitor.assets/IMG_1644.jpg" style="width:200px" />
 
 ### Dashboard
-<img src="a7_enviroment_monitor.assets/image-20210301124257587.png" alt="image-20210301124257587" style="width:500px" />
+<img src="a6_environment_monitor.assets/image-20210301124257587.png" alt="image-20210301124257587" style="width:500px" />
 
 ## Components
 
@@ -60,7 +60,7 @@ Here is an example:
 * Both the OLED and the DHT20 use the `SDA` and `SCL` pins on the Argon. 
 * Connect the wires from the OLED and from the DHT20 to the same row on the Argon.
 * In the example photo shown below, the blue and yellow wires are from the **OLED** and the orange and brown wires are from the **DHT20**
-  <img src="a7_enviroment_monitor.assets/WIN_20221005_17_18_18_Pro.jpg" alt="WIN_20221005_17_18_18_Pro" style="width:300px;" />
+  <img src="a6_environment_monitor.assets/WIN_20221005_17_18_18_Pro.jpg" alt="WIN_20221005_17_18_18_Pro" style="width:300px;" />
 
 ###  Stage 1:  Setup buttons and states
 

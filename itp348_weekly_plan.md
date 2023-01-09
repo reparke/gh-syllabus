@@ -19,9 +19,7 @@ toc_sticky: true
   * [ ] Create bluetooth fan example could covered during bluetooth lecture
   * [ ] Maybe A9 blynk should change because it is hard and Rob thinks it is "fun"
 * [ ] week 10
-  * [ ] combine A8 and A10 (bluetooth car).
   * [ ] future semester: consider permanently putting motors here; add something else for week 9
-* [x] wk9-11: consider timing of car assignment and in-class work. Students are building car so they build something else. Maybe JSON cloud work can be covered during that time
 
 Week 10 idea: 
 
@@ -41,7 +39,7 @@ Week 10 idea:
 
   * [ ] have small assignment where they layout PCB for a built project; then later in the semester the soldering workshop uses that design (talk to kristof about this so we don't step on 388)
   * [ ] submissions: 
-    * [ ] make single zip for upload with code and fritzin
+    * [ ] make single zip for upload with code and fritzing
     * [ ] create google doc with photos embedded and video link; 
     * [ ] students should narrate
     * [ ] Rob announce and demostrates in first week
@@ -54,9 +52,6 @@ Week 10 idea:
   * [ ] consider more complicated soldering kit (or variations)
   * [ ] have people check soldering kits before hand for broken LEDs
   * [ ] Maybe we could show them a brief over view or short video of how to make a PCB board and order some from a supplier overseas through Fritzing and then have them solder their board? Or like maybe week 3/4 of school after they have familiarized themselves with fritzing, have students create a simple PCB that would wire some leds and maybe a potentiometer so students can turn the knob and have the soldered leds on the board turn dim/bright. Then the TAs could double check their Fritzing submission and make sure all power/GND wires are connected on the appropriate sides of the PCB then run some tests to make sure the connections are correct. Then wait for the custom boards to arrive and have students in class solder their custom boards. Theres a way to add names and labels to the PCB itself thats really cool
-
-  * [ ] 
-* [x] **Revise A5 reaction timer. Remove any need for a while loop**
 * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
 * [ ] 5v voltage regulator: [5V Step-Up Voltage Regulator U3V40F5](https://www.pololu.com/product/4012)
   * [ ] also [SparkFun Buck-Boost Converter]( https://www.sparkfun.com/products/15208)
@@ -100,10 +95,7 @@ Week 10 idea:
   - [ ] JSON / APIs (need to re-record)
   - [ ] wk11: inquire about future class TAs and kit TA
 - [ ] Week 11
-  - [ ] record video to explain car ( no specifics but  pseudocode design for carForward, leftMotor, etc. (students will build  this for their)
   - [ ] Revise JSON in week 10. Try using ArduinoJSON instead of RK. The generation of RK is very tough. This would mean re-recording the parsing video to use ArduinoJSON
-- [ ] Week 12
-  - [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
 
 ## General Feedback (Spring 2021)
 
@@ -115,7 +107,7 @@ Week 10 idea:
 
 ## Pre-semester
 
-- [ ] Send students installation instructions / video
+- [ ] Send students kit pickup instructions
 - [ ] purchase items (see Evernote pre-semester tasks)
 
 - Reading
@@ -161,7 +153,6 @@ Week 10 idea:
 
 #### ~~Lab~~
 
-- ~~Paper circuits~~
 - ~~Time permitting~~
   - ~~(on ground) ask student to complete a creative expression with multiple LEDs~~
   - ~~(online) have student connect Argon to USB and connect an LED to 3.3v~~
@@ -186,6 +177,7 @@ Week 10 idea:
 
 - Electricity and Ohm's Law
 - LED (covered) and Digital output (moved to week 2 after argons are set up)
+- ==Get ahead for Spring Holiday==Argon microcontroller?
 
 #### Lab
 
@@ -208,7 +200,7 @@ Week 10 idea:
 
 
 
-## 2. Pulse Width Modulation, ADC
+## 2. Pulse Width Modulation, ADC ==Spring 2023 - MLK Holiday==
 
 ### Reading
 
@@ -269,6 +261,8 @@ Week 10 idea:
 
 #### Lecture
 
+- ==Spring 2023== will need to pick up some missed topics from holiday
+
 - Serial monitor
 
 - Guided activity
@@ -303,10 +297,11 @@ Week 10 idea:
 - https://learn.sparkfun.com/tutorials/pull-up-resistors
 - https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
 
-### Day 1 ==Labor Day Holiday--maybe move RGB LED to next week with photoresistor?==
+### Day 1
 
 #### Guided activity
 
+- ==Spring 2023== will need to pick up some missed topics from holiday
 - Ask them to **digitalRead()** on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
 - connect button with pullup
 - Ask what is the voltage at pin when button pressed and not pressed
@@ -551,7 +546,7 @@ Week 10 idea:
 #### Assignment
 
 - Due start of current week: A5 - Button Timer
-- Given out start of current week:  A6 - Preliminary Proposal Idea
+- Given out start of current week: A6 - Shared Environment Monitor
 
 ### Reading
 
@@ -615,7 +610,7 @@ Week 10 idea:
 
 
 
-## 7. Finite State Machines 
+## 7. Finite State Machines ==Presidents Day Holiday==
 
 ### Reading
 
@@ -625,8 +620,8 @@ Week 10 idea:
 
 ### Assignment
 
-- Due start of current week:   A6 - Preliminary Proposal Ideas
-- Given out start of current week: A7 - Shared environment monitor
+- Due start of current week:   A6 - Shared Environment Monitor
+- Given out start of current week:  A7 - Preliminary Proposal Idea
 
 
 
@@ -696,7 +691,7 @@ Week 10 idea:
 
 ### Assignment
 
-- Due start of current week:   A7 - Shared environment monitor
+- Due start of current week:   A7 - Preliminary Proposal Idea
 - Given out start of current week: A8 - Tea State Machine with Blynk (due in two weeks)
 
 
@@ -708,7 +703,7 @@ Week 10 idea:
 * Tone
 * Pitches
 
-### Day 2 ==Fall Break==
+### Day 2
 
 Have students build fan and circuit before class
 
