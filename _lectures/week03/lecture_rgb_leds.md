@@ -109,6 +109,18 @@ title: RGB LEDs
 
 ## Lab 2
 
+<img src="lecture_rgb_leds.assets/rgb_led_pot_bb.png" alt="rgb_led_switch_bb" style="width:500px;" />
+
+## Lab steps
+
+
+1. Wire an RGB LED 
+2. Wire potentiometer
+3. Create code to allow potentiometer to control only the brightness of the red LED, and have the blue and green LED always on
+4. Then, allow the potentiometer to control the brightness of all LEDs
+
+## Lab 3
+
 <img src="lecture_rgb_leds.assets/rgb_led_switch_bb.png" alt="rgb_led_switch_bb" style="width:500px;" />
 
 ## Lab steps
