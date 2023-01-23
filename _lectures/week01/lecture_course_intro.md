@@ -26,9 +26,10 @@ title: Course Introduction
 - USC Alum!<img src="lecture_course_intro.assets/image-20200113171156623.png" alt="USC ITP" style="width:300px" />
 
 
-## Teaching Assistants / Graders
+## Learning Assistants / Graders
 
-- Neftali, Lydia, Jenny
+- LAs: Neftali, Lydia, Judy, Montserrat
+- Grader: Jenny
 - Office hours for will be posted on Blackboard
 - For grading issues, post on Piazza and tag the TA
 - For general questions, you can contact either of us

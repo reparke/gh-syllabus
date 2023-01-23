@@ -46,10 +46,6 @@ footer: 'ITP 348 - Rob Parke - USC'
 * If positive voltage is applied to the cathode, light **will not** emit (aka the polarity is reversed)
 <img src="lecture_leds.assets/1565059300403.png" alt="led Schematic" style="width:500px" />
 
-## Recall: What Happened?
-
-<img src="lecture_leds.assets/1564541287879.png" alt="width:400px" style="width:400px" />
-
 ## LED Precautions
 
 * LEDs have limitation in how much current they can handle

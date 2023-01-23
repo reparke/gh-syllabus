@@ -108,6 +108,10 @@ analogWrite(LED_PIN, 192);	//75% duty cycle, or 2.45v
 analogWrite(LED_PIN, 0);	//0% duty cycle, or 0v
 ```
 
+## Wiring Diagram
+
+<img src="lecture_pwm.assets/led_pot_bb.png" alt="led_pot_bb" style="width:400px;" />
+
 ## Credits
 
 - [The Arduino.cc Team](https://commons.wikimedia.org/wiki/File:Pwm_5steps.gif)

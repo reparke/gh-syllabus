@@ -27,7 +27,7 @@ footer: ' '
   * There will be some basic math, but that is not our focus
 * Rules of Thumbs
 
-## Which is Stronger?
+## Which is "Stronger"?
 
 <img src="lecture_electricity.assets/1564543352673.png" alt="height:500px" style="width:400px" />	<img src="lecture_electricity.assets/1564543461389.png" alt="height:500px" style="width:400px" />
 
@@ -80,12 +80,13 @@ Two equal water jugs connected to each of these. Which has greater flow?
 ## Circuits
 
 * Electricity will only flow if there is a **circuit** 
-
 * A circuit is a complete loop from a positive voltage source to a negative (lesser) source, through a conductive material
 
-  <img src="lecture_electricity.assets/1564541287879.png" alt="width:300px" style="width:400px" />
-  
-  ​	
+<!-- The LED will draw more current (and power) than it can handle and will burn out -->
+
+<img src="lecture_electricity.assets/1564541287879.png" alt="width:300px" style="width:400px" />
+
+​	
 
 
 ## Voltage as Difference
@@ -100,9 +101,9 @@ Two equal water jugs connected to each of these. Which has greater flow?
 ## Voltage Source
 
 * In our circuits, we will use a voltage source to provide energy potential
-  - USB power: 5v
+  - USB power: 5v (also stepped down to 3.3v which the Argon uses)
   - 9V battery: 9v
-  - Rechargeable lithium battery: 3.3v
+  - Rechargeable lithium battery: 3.7v
 * Our circuits will have a positive voltage (e.g. 3.3v or 5v) and ground voltage (0v)
 * We will consider that current flows from the positive part of the circuit to the negative
 
