@@ -85,23 +85,23 @@ void loop() {
     if (prevButtonVal == HIGH &&
         curButtonVal == LOW) {  // button was just pressed
 
-        lightSequence = (lightSequence + 1) % 3;
-        /*
-            Why this works
-            --------------
-            lightSequence  |  lightSequence + 1 | (lightSequence + 1) % 3
-                  0                    1                     1
-                  1                    2                     2
-                  2                    3                     0
-        */
+lightSequence = (lightSequence + 1) % 3;
+/*
+    Why this works
+    --------------
+    lightSequence  |  lightSequence + 1 | (lightSequence + 1) % 3
+            0                    1                     1
+            1                    2                     2
+            2                    3                     0
+*/
 
-        if (lightSequence == 0) {
-            displayColor(255, 255, 255);
-        } else if (lightSequence == 1) {
-            displayColor(255, 0, 0);
-        } else if (lightSequence == 2) {
-            displayColor(0, 0, 255);
-        }
+if (lightSequence == 0) {
+    displayColor(255, 255, 255);
+} else if (lightSequence == 1) {
+    displayColor(255, 0, 0);
+} else if (lightSequence == 2) {
+    displayColor(0, 0, 255);
+}
     }
     prevButtonVal = curButtonVal;
 }
