@@ -94,13 +94,22 @@ title: Push Buttons
 
 <!-- Pull down resistors to ground are fine too. Pull ups are more common for historical reasons (required more current for TTL logic). May also reduce interferance from noise since cutoff between HIGH (3.3v) and LOW (0v) is not 1.67v but much lower so better to have "default" state further from the cutoff -->
 
-## Lab
+## Exercise 1
   <img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:500px" />
 
 1. Turn LED on **only** while button pressed
 2. Toggle LED on and off **after each time** button is pressed
 3. Connect 3 LEDs (`D3`, `D4`, `D5`) and turn all on and off at once
 4. Then turn lights on and off in a sequence (e.g. (3 states)
+
+## Exercise 2
+
+  <img src="lecture_buttons.assets/rgb_led_button_bb.png" alt="switch on breadboard" style="width:500px" />
+
+1. Turn on red LED on **only** while button pressed
+2. Toggle red LED on and off **after each time** button is pressed
+3. Generate 1 new random color each time button is pressed
+4. Make each button press move LED through a sequence of colors
 
 ## Credit
 
