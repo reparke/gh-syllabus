@@ -117,12 +117,12 @@ void loop() {
 
 
 
-## Lab - Send Temperature Value to Initial State
+## Exercise - Send Temperature Value to Initial State
 
 * Connect TMP 36 to Argon
 * Read temperature value and send to Initial State
 
-## Lab - Send Temperature Value to Initial State
+## Exercise  - Send Temperature Value to Initial State
 
 <img src="lecture_data_dashboards_initial_state_single_values.assets/tmp36_bb.png" style="width:500px;" />
 

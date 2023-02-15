@@ -10,7 +10,7 @@ title: State Machines Part 2 - Stoplight Example
 <!-- headingDivider: 2 -->
 
 # State Machines
-## In class Lab - Stoplight and Pedestrian Signal
+## In class Exercise - Stoplight and Pedestrian Signal
 
 <img src="lecture_state_machines_stoplight.assets/stoplight.jpg" alt="stoplight" style="height:500px;" /> <img src="lecture_state_machines_stoplight.assets/ped_signal.jpg" alt="ped_signal" style="width:400px;" />
 
@@ -41,7 +41,7 @@ title: State Machines Part 2 - Stoplight Example
 
 
 
-## In class Lab - Stoplight and Pedestrian Signal
+## In class Exercise - Stoplight and Pedestrian Signal
 
 
 * Download starting code

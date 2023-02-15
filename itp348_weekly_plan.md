@@ -468,7 +468,8 @@ Week 10 idea:
 - Use delay to register button press (without toggle) and blink **LED1** 
 - Use `millis()` to fix blocking in #1 (we'll do #1 and #2 together)
 - Enable toggle button to turn **LED2** on and off on the **rising edge**
-- Track number of button presses and use `millis()` to publish number of button presses every **1000 ms**
+- Track number of button presses and use `millis()` to publish number of button presses every **10000 ms**
+- Change **LED1** to be on for 300 ms and off for 700 ms
 
 #### Feedback
 
@@ -511,8 +512,9 @@ Week 10 idea:
 
 #### Guided Activity
 
-- Create InitialState account
-- Create webhook in Particle
+- Create InitialState account (use *.edu)
+- Create webhook in Particle (replace `data` in webhook with value you want in InitialState)
+- Make sure to use `GET` and `Query Parameters` in the webhook se
 - Send TMP36 value`Particle.publish` to InitialState
 
 - Use Initial state to send temperature data

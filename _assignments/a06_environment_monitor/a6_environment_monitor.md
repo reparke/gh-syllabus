@@ -6,7 +6,7 @@ title: Environment Monitor and Dashboard
 date_due: Feb 19 @ 11:59 pm
 ---
 
-Assignment 7 – Environment Monitor and Dashboard
+Assignment 6 – Environment Monitor and Dashboard
 =========================================
 
 [Submit on Blackboard](https://blackboard.usc.edu/)
@@ -62,17 +62,16 @@ Here is an example:
 * In the example photo shown below, the blue and yellow wires are from the **OLED** and the orange and brown wires are from the **DHT20**
   <img src="a6_environment_monitor.assets/WIN_20221005_17_18_18_Pro.jpg" alt="WIN_20221005_17_18_18_Pro" style="width:300px;" />
 
-###  Stage 1:  Setup buttons and states
+###  Stage 1:  Setup buttons and screens
 
 -   The button will be a toggle / latch style button that will switch from displaying current temperature and humidity to displaying the minimum and maximum temperature and humidity
--   Connect the button and configure the toggle to switch between these two states 
--   Use a `enum` to define the two states
+-   Connect the button and configure the toggle to switch between these two screens (aka states) 
+-   You can use a `bool` or an `int` to distinguish between which screen is currently being shown
 
 #### Testing Stage 1
 
 - Use the serial monitor to make sure the button works as a latch
-- Use the serial monitor to make sure the states change
-- Use the serial monitor to make sure the states change
+- Use the serial monitor to make sure the current screen changes
 
 ###  Stage 2: DHT20 
 
@@ -88,7 +87,7 @@ Here is an example:
 
 - Connect the OLED screen and import the library
 
-- Using the class examples and library examples, display text for the two screen states
+- Using the class examples and library examples, display text for the two different screens
 
   **Screen 1: Current data**
 
@@ -200,13 +199,13 @@ Deliverables
 Grading
 -------
 
-| Item                           | Points Possible |
-| ------------------------------ | --------------- |
-| Fritzing layout                | 5               |
-| Stage 1a: buttons toggling     | 5               |
-| Stage 1b: `enum` and states    | 5               |
-| Stage 2: DHT 20                | 10              |
-| Stage 3: OLED                  | 10              |
-| Stage 4: Dashboard setup       | 10              |
-| Stage 5: Configuring Dashboard | 5               |
-| Total                          | 50              |
+| Item                                    | Points Possible |
+| --------------------------------------- | --------------- |
+| Fritzing layout                         | 5               |
+| Stage 1a: Buttons toggling              | 5               |
+| Stage 1b: Tracking and changing screens | 5               |
+| Stage 2: DHT 20                         | 10              |
+| Stage 3: OLED                           | 10              |
+| Stage 4: Dashboard setup                | 10              |
+| Stage 5: Configuring dashboard          | 5               |
+| Total                                   | 50              |

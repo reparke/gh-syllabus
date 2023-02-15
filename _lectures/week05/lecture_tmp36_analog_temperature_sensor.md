@@ -45,7 +45,7 @@ accuracy: +- 1 C
 ## Conversion
 
 * 10 mV / deg Celsius with a 500 mV offset (since voltage is 500 mv at 0 deg Celsius)
-  <!-- found on page 5, figure 6 -->
+  <!-- found on page 8, table 4 AND page 5, figure 6 -->
 * Try this: if **Vout** is 1.2V, what is the temperature in Celsius? in Fahrenheit?
 * *Remember:*
   * `T(fahr) = T(cel) * (9/5) + 32`

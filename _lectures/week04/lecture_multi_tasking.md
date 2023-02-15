@@ -159,6 +159,7 @@ void loop() {
   * Track the number of times the button is pressed
   * Publish the number of button presses to the Particle cloud every **1000 milliseconds** 
 * Bonus
+  * Change **LED1** to be on for 300 ms and off for 700 ms
   * After that is working, change the code so that when the toggle button is pressed, **LED2** starts blinking every 60 **milliseconds**, and when the toggle button is pressed again, **LED2** stops blinking
 
 
@@ -167,7 +168,7 @@ void loop() {
 1. Use `delay` to blink **LED1** and then check for a button press (not a toggle); display Serial message if button pressed 
 2. Use `millis()` to fix blocking in #1 (we'll do #1 and #2 together)
 3. Enable toggle button to turn **LED2** on and off on the **rising edge**
-4. Track number of button presses and use `millis()` to publish number of button presses every **1000 ms**
+4. Track number of button presses and use `millis()` to publish number of button presses every **10\000 ms**
 
 ## Starting Code
 

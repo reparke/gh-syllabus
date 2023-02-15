@@ -106,7 +106,7 @@ title: Photoresistors
 
 **\*** *4.7k is not a magic value. It a reasonably good value for normal lighting conditions*
 
-## Lab
+## Exercise
 
 <img src="lecture_photoresistor.assets/photoresistor_and_fixed_resistor_RGB_LED_bb.png" alt="photoresistor_and_fixed_resistor_bb" style="width:800px;" />
 
