@@ -16,39 +16,47 @@ const int PIN_BLUE = D5;
 const int PIN_SWITCH = D2;
 
 // FROM APP to ARGON
-//BLYNK_WRITE
-BLYNK_WRITE(V0) // red
+// BLYNK_WRITE
+BLYNK_WRITE(V0)  // red -- THIS IS A FUNCTION
 {
-    int redVal = param.asInt();     //the rgb value sent from the app
-    analogWrite(PIN_RED, redVal);
+    int r = param.asInt();
+    analogWrite(PIN_RED, r);    
+
 }
 BLYNK_WRITE(V1)  // green
 {
-    int greenVal = param.asInt();  // the rgb value sent from the app
-    analogWrite(PIN_GREEN, greenVal);
+    int g = param.asInt();
+    analogWrite(PIN_GREEN, g);
 }
 BLYNK_WRITE(V2)  // blue
 {
-    int blueVal = param.asInt();  // the rgb value sent from the app
-    analogWrite(PIN_BLUE, blueVal);
+    int b = param.asInt();
+    analogWrite(PIN_BLUE, b);
 }
 
 // button to choose random color (white yellow magenta red)
 BLYNK_WRITE(V4) {
-    int buttonVal = param.asInt();
+   int buttonVal = param.asInt();  //0 and 1
 
-    //this function gets called when button is PRESSED and RELEASED
-    if (buttonVal == 1) { //prevent from being called twice
-        int randNum = random(0,4);
-        if (randNum == 0) {  //white---change LED, and we send string to app
-            analogWrite(PIN_RED, 255);
-            analogWrite(PIN_GREEN, 255);
-            analogWrite(PIN_BLUE, 255);
-            Blynk.virtualWrite(V7, "white");
-        }
-        //repeat for yellow magenta red
-
+   if (buttonVal == 1) {
+    int randNum = random(0,4);      //0 1 2 3
+    if (randNum == 0) { //white
+        analogWrite(PIN_RED, 255);
+        analogWrite(PIN_GREEN, 255);
+        analogWrite(PIN_BLUE, 255);
+        Blynk.virtualWrite(V7, "white");
+        
     }
+    else if (randNum == 1) { //yellow
+        analogWrite(PIN_RED, 255);
+        analogWrite(PIN_GREEN, 255);
+        analogWrite(PIN_BLUE, 0);
+        Blynk.virtualWrite(V7, "yellow");
+    }
+//repeat for red and magenta
+   }
+
+
 }
 
 void setup() {
@@ -60,22 +68,23 @@ void setup() {
     Serial.begin(9600);
 
     Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
- }
+}
 
 void loop() {
     Blynk.run();
 
+
+    /* if you use latch code, you don't have to use millis here*/
     unsigned long currMillis = millis();
     if (currMillis - prevMillis > blynkDelay) {
         prevMillis = currMillis;
-
-        // any code that is going FROM ARGON to APP usually needs to bein a
-        // millis block
         int switchVal = digitalRead(PIN_SWITCH);
         if (switchVal == HIGH) {
-            Blynk.virtualWrite(V3, "open"); //from ARgon to App
-        } else {
+            Blynk.virtualWrite(V3, "open");
+        }
+        else {
             Blynk.virtualWrite(V3, "closed");
         }
+
     }
 }

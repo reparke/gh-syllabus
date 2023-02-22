@@ -6,5 +6,5 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **For Tuesday and Thursday**
+* **For Monday and Wednesday**
   * Bring completed smart watch build to class

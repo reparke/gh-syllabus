@@ -6,7 +6,7 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **Tuesday**
+* **Monday**
   
   * Create an [Blynk account](https://blynk.cloud/) 
     

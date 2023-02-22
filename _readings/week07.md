@@ -23,7 +23,7 @@ title: Pre-Lecture Activities
 - Potentiometer
 - MicroOLED
 
-### Tuesday Wiring
+### Monday Wiring
 
 | RGB LED                    | Argon Pins |
 | -------------------------- | ---------- |
@@ -46,7 +46,7 @@ title: Pre-Lecture Activities
 
 
 
-### Thursday Wiring
+### Wednesday Wiring
 
 | LED             | Argon Pins |
 | --------------- | ---------- |

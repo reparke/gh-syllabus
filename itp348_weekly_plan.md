@@ -566,7 +566,6 @@ Week 10 idea:
 - Wire switch and RGB LED
 - Publish switch event in console (this won't take very long)
 
-  - create unique event ITP348/Door/<<UNIQUE_NAME>>
 - Create function to change LED colors: white switch is closed, red switch is open
 
 #### Lecture

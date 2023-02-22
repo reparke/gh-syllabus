@@ -16,10 +16,10 @@ const int PIN_BLUE = D5;
 const int PIN_SWITCH = D2;
 
 // FROM APP to ARGON
-//BLYNK_WRITE
-BLYNK_WRITE(V0) // red
+// BLYNK_WRITE
+BLYNK_WRITE(V0)  // red
 {
-    int redVal = param.asInt();     //the rgb value sent from the app
+    int redVal = param.asInt();  // the rgb value sent from the app
     analogWrite(PIN_RED, redVal);
 }
 BLYNK_WRITE(V1)  // green
@@ -37,17 +37,33 @@ BLYNK_WRITE(V2)  // blue
 BLYNK_WRITE(V4) {
     int buttonVal = param.asInt();
 
-    //this function gets called when button is PRESSED and RELEASED
-    if (buttonVal == 1) { //prevent from being called twice
-        int randNum = random(0,4);
-        if (randNum == 0) {  //white---change LED, and we send string to app
+    // this function gets called when button is PRESSED and RELEASED
+    if (buttonVal == 1) {  // prevent from being called twice
+        int randNum = random(0, 4);
+        if (randNum == 0) {  // white---change LED, and we send string to app
             analogWrite(PIN_RED, 255);
             analogWrite(PIN_GREEN, 255);
             analogWrite(PIN_BLUE, 255);
             Blynk.virtualWrite(V7, "white");
+        } else if (randNum ==
+                   1) {  // yellow---change LED, and we send string to app
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 255);
+            analogWrite(PIN_BLUE, 0);
+            Blynk.virtualWrite(V7, "yellow");
+        } else if (randNum ==
+                   2) {  // yellow---change LED, and we send string to app
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 0);
+            analogWrite(PIN_BLUE, 255);
+            Blynk.virtualWrite(V7, "magenta");
+        } else if (randNum ==
+                   3) {  // yellow---change LED, and we send string to app
+            analogWrite(PIN_RED, 255);
+            analogWrite(PIN_GREEN, 165);
+            analogWrite(PIN_BLUE, 0);
+            Blynk.virtualWrite(V7, "orange");
         }
-        //repeat for yellow magenta red
-
     }
 }
 
@@ -60,7 +76,7 @@ void setup() {
     Serial.begin(9600);
 
     Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
- }
+}
 
 void loop() {
     Blynk.run();
@@ -73,7 +89,7 @@ void loop() {
         // millis block
         int switchVal = digitalRead(PIN_SWITCH);
         if (switchVal == HIGH) {
-            Blynk.virtualWrite(V3, "open"); //from ARgon to App
+            Blynk.virtualWrite(V3, "open");  // from ARgon to App
         } else {
             Blynk.virtualWrite(V3, "closed");
         }

@@ -6,7 +6,7 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **For Tuesday**
+* **For Monday**
   * Watch **PIR Sensor**
     {% include video id="zyXEYmRyDBA" provider="youtube" %}
   * Watch **Sleep and Battery Consevation**

@@ -12,7 +12,7 @@ title: Pre-Lecture Activities
 * Watch **OLED Graphics**
   {% include video id="Csic8vEiIDY" provider="youtube" %}
 
-* Build for **Tuesday**
+* Build for **Monday**
 
   ![oled_ultrasonic_bb](week11.assets/oled_and_ultrasonic_i2c_bb.png)
 

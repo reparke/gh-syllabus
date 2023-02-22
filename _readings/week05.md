@@ -6,13 +6,13 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **Tuesday**
+* **Monday**
   * Watch Analog Temperature Sensor
     {% include video id="hNXwd19JLA0" provider="youtube" %}
     
     
 
-* **Thursday**
+* **Wednesday**
   * Watch OLED Screens
     {% include video id="KCJc-IDLkHc" provider="youtube" %}
     

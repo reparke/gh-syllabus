@@ -6,10 +6,10 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **For Tuesday**
+* **For Monday**
   
   * Watch **Accelerometer**
     {% include video id="ZiEiEboxAHk" provider="youtube" %}
-* **For Tuesday**
+* **For Monday**
   - Build
     ![accelerometer_rgb_led_bb](week13.assets/accelerometer_rgb_led_bb.png)
