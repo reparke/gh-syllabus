@@ -31,14 +31,14 @@ const int LED_BLUE_PIN = D4;   // blue
 const int SHORT_CYCLE = 2000;
 const int LONG_CYCLE = 4000;
 
+int counter = 0;  // debugging only
+
 // enum options to make changing color of RGB LED easier
 enum Color { Red, Blue, Orange, Yellow, White, Black };
-
 
 // TODO: create enum State for states
 
 // TODO: create enum Cycle for cycles
-
 
 // TODO: create other state variables
 unsigned long prevMillisState = 0;
@@ -55,7 +55,6 @@ unsigned long prevMillisState = 0;
 
 // TODO: create void updateNextState()
 // uses button inputs and current state to update global state variable
-
 
 // changes the light color based on the enum Color value
 // use this function inside of updateOutputs()
@@ -94,10 +93,10 @@ void setColor(Color c) {
     }
 }
 
-void loop() { 
+void loop() {
     // this function is just for debugging
     // delete when you start to code the transitions
-    testInitialSetup(); 
+    testInitialSetup();
 }
 
 void setup() {
@@ -154,6 +153,7 @@ void testInputs() {
 /* DEBUGGING FUNCTIONS ONLY
    ========================
 */
+
 /*
 String getStateString() {
     String output = "";
@@ -198,5 +198,15 @@ String getCycleString() {
     }
     return output;
 }
+void displayAllStateInfo() {
+    int valPot = analogRead(POT_PIN);
+    String stateString = getStateString();
+    String cycleString = getCycleString();
 
+    String output =
+        "%d: %s; Cycle = %s; Duration = %d, Pot = %d, EnumState = %d, "
+        "EnumCycle = %d";
+    Serial.printlnf(output, counter, stateString.c_str(), cycleString.c_str(),
+                    stateDuration, valPot, currentState, currentCycle);
+}
 */

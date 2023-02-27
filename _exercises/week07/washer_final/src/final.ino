@@ -1,3 +1,4 @@
+
 /*
     Econ
         ColdWash 2 min
@@ -21,7 +22,6 @@ Colors:
     ExtraDry    yellow
 
 */
-
 
 const int POT_PIN = A5;
 const int SWITCH_PIN = D5;
@@ -123,6 +123,7 @@ void getCyclePosition() {
 // uses button inputs and current state to update global state variable
 void updateNextState() {
     unsigned long currMillis = millis();
+    getCyclePosition();
 
     switch (currentState) {
         case Idle:
@@ -130,7 +131,6 @@ void updateNextState() {
                 // currentState = Idle;
                 // } else {
                 counter++;
-                getCyclePosition();
                 switch (currentCycle) {
                     case Economy:
                         currentState = ColdWash;
@@ -142,6 +142,7 @@ void updateNextState() {
                         currentState = HotWash;
                         break;
                 }
+                prevMillisState = currMillis;
                 updateNextDuration();
                 updateOutputs();
 
@@ -152,7 +153,6 @@ void updateNextState() {
             if (currMillis - prevMillisState > stateDuration) {
                 prevMillisState = currMillis;
                 counter++;
-                getCyclePosition();
 
                 if (currentCycle == Deluxe) {
                     currentState = RegularDry;

@@ -1,25 +1,26 @@
+
 /*
     Econ
         ColdWash 2 min
         RegularDry 2 min
         Idle
     Deluxe
-        HotWash 4 min
+        HotWash 2 min
         RegularDry 2 min
         Idle
     Super
         HotWash 4 min
         ExtraDry 4 min
         Idle
-    Consider pressing button to go back to idle
-    Consider using switch to be either lock (extra), or replace the button
+
 
 Colors:
-    Idle,       white
-    HotWash,        red
-    ColdWash,       blue
-    ExtraDry,    yellow
-    RegularDry    yellow
+    Idle        white
+    HotWash         red
+    ColdWash        blue
+    RegularDry  orange
+    ExtraDry    yellow
+
 */
 
 const int POT_PIN = A5;
@@ -40,52 +41,73 @@ enum State { Idle, HotWash, ColdWash, ExtraDry, RegularDry };
 // create enum Cycle for cycles
 enum Cycle { Economy, Deluxe, SuperDeluxe };
 
-enum Color { Red, Blue, Orange, White, Black };
+enum Color { Red, Blue, Orange, Yellow, White, Black };
 
 State currentState = Idle;
+Cycle currentCycle = Economy;
+
+int counter = 0;  // debugging only
 
 /* DEBUGGING FUNCTIONS ONLY
    ========================
 */
-String getStateString(State s) {
-    switch (s) {
+String getStateString() {
+    String output = "";
+
+    switch (currentState) {
         case Idle:
-            return "idle";
+            output = "Idle";
+            break;
         case HotWash:
-            return "hot";
+            output = "Hot Wash";
+            break;
+
         case ExtraDry:
-            return "longdry";
+            output = "Extra Dry";
+            break;
+
         case ColdWash:
-            return "cold";
+            output = "Cold Wash";
+            break;
+
         case RegularDry:
-            return "shortdry";
+            output = "Regular Dry";
+            break;
     }
+    return output;
 }
 /* DEBUGGING FUNCTIONS ONLY
    ========================
 */
-String getCycleString(Cycle c) {
-    switch (c) {
+String getCycleString() {
+    String output = "";
+    switch (currentCycle) {
         case Economy:
-            return "economy";
+            output = "Economy";
+            break;
+
         case Deluxe:
-            return "deluxe";
+            output = "Deluxe";
+            break;
+
         case SuperDeluxe:
-            return "superdeluxe";
+            output = "Super Deluxe";
+            break;
     }
+    return output;
 }
 
 /* ===== FUNCTIONS ====== */
 // TODO: create getCyclePotion
-// reads potentiometer and returns current Cycle
-Cycle getCyclePosition() {
+// reads potentiometer and updates current Cycle
+void getCyclePosition() {
     int value = analogRead(POT_PIN);
     if (value < 1365 && value >= 0)
-        return Economy;
+        currentCycle = Economy;
     else if (value >= 1365 && value < 2730)
-        return Deluxe;
+        currentCycle = Deluxe;
     else
-        return SuperDeluxe;
+        currentCycle = SuperDeluxe;
 }
 
 // Alternate version of getCyclePotion that uses map
@@ -100,76 +122,117 @@ Cycle getCyclePosition() {
 // TODO: create updateNextState
 // uses button inputs and current state to update global state variable
 void updateNextState() {
-    State next;
+    unsigned long currMillis = millis();
 
     switch (currentState) {
         case Idle:
-            if (digitalRead(SWITCH_PIN) == 1) {
-                next = Idle;
-            } else {
-                Cycle cycle = getCyclePosition();
-                switch (cycle) {
+            if (digitalRead(SWITCH_PIN) == 0) {
+                // currentState = Idle;
+                // } else {
+                counter++;
+                getCyclePosition();
+                switch (currentCycle) {
                     case Economy:
-                        next = ColdWash;
+                        currentState = ColdWash;
                         break;
                     case Deluxe:
-                        next = HotWash;
+                        currentState = HotWash;
                         break;
                     case SuperDeluxe:
-                        next = HotWash;
+                        currentState = HotWash;
                         break;
                 }
+                prevMillisState = currMillis;
+                updateNextDuration();
+                updateOutputs();
+
+                displayAllStateInfo();
             }
             break;
         case HotWash:
-            if (getCyclePosition() == Deluxe) {
-                next = RegularDry;
-            } else if (getCyclePosition() == SuperDeluxe) {
-                next = ExtraDry;
+            if (currMillis - prevMillisState > stateDuration) {
+                prevMillisState = currMillis;
+                counter++;
+                getCyclePosition();
+
+                if (currentCycle == Deluxe) {
+                    currentState = RegularDry;
+                } else if (currentCycle == SuperDeluxe) {
+                    currentState = ExtraDry;
+                }
+                updateNextDuration();
+                updateOutputs();
+
+                displayAllStateInfo();
             }
             break;
-            next = ExtraDry;
-            break;
         case ColdWash:
-            next = RegularDry;
+            if (currMillis - prevMillisState > stateDuration) {
+                prevMillisState = currMillis;
+                counter++;
+
+                currentState = RegularDry;
+                updateNextDuration();
+                updateOutputs();
+
+                displayAllStateInfo();
+            }
             break;
 
         case RegularDry:
-            next = Idle;
+            if (currMillis - prevMillisState > stateDuration) {
+                prevMillisState = currMillis;
+                counter++;
+
+                currentState = Idle;
+                updateNextDuration();
+                updateOutputs();
+                displayAllStateInfo();
+            }
             break;
 
         case ExtraDry:
-            next = Idle;
+            if (currMillis - prevMillisState > stateDuration) {
+                prevMillisState = currMillis;
+                counter++;
+
+                currentState = Idle;
+                updateNextDuration();
+                updateOutputs();
+
+                displayAllStateInfo();
+            }
             break;
     }
-
-    currentState = next;
 }
 
 // TODO: create updateNextDuration
 // update global state duration variable based on the current state
 void updateNextDuration() {
-    int next;
-
     switch (currentState) {
         case Idle:
-            next = 0;
+            stateDuration = 0;
             break;
         case HotWash:
-            next = LONG_CYCLE;
+            switch (currentCycle) {
+                case Deluxe:
+                    stateDuration = SHORT_CYCLE;
+                    break;
+                case SuperDeluxe:
+                    stateDuration = LONG_CYCLE;
+                    break;
+            }
             break;
         case ColdWash:
-            next = SHORT_CYCLE;
+            stateDuration = SHORT_CYCLE;
             break;
         case RegularDry:
-            next = SHORT_CYCLE;
+            stateDuration = SHORT_CYCLE;
             break;
         case ExtraDry:
-            next = LONG_CYCLE;
+            stateDuration = LONG_CYCLE;
             break;
     }
-
-    stateDuration = next;
 }
 
 void setColor(Color c) {
@@ -192,6 +255,11 @@ void setColor(Color c) {
         case Orange:
             analogWrite(LED_RED_PIN, 255);
             analogWrite(LED_GREEN_PIN, 165);
+            digitalWrite(LED_BLUE_PIN, LOW);
+            break;
+        case Yellow:
+            analogWrite(LED_RED_PIN, 0);
+            analogWrite(LED_GREEN_PIN, 255);
             digitalWrite(LED_BLUE_PIN, LOW);
             break;
         case Black:
@@ -223,25 +291,15 @@ void updateOutputs() {
             break;
 
         case ExtraDry:  // orange
-            setColor(Orange);
+            setColor(Yellow);
             break;
     }
 }
 
 // LOOP
 void loop() {
-    unsigned long currMillis = millis();
-    if (currMillis - prevMillisState > stateDuration) {
-        prevMillisState = currMillis;
-        updateNextState();
-        updateNextDuration();
-        updateOutputs();
-        // if (currentState != 0) {
-        //     Serial.print(getCycleString(getCyclePosition()));
-        //     Serial.println(", Next state " + getStateString(currentState) + "
-        //     for " + String(stateDuration));
-        // }
-    }
+    // testInitialSetup();
+    updateNextState();
 }
 
 void setup() {
@@ -252,11 +310,22 @@ void setup() {
     pinMode(LED_BLUE_PIN, OUTPUT);
     pinMode(LED_GREEN_PIN, OUTPUT);
 }
+
 /*
  DEBUGGING FUNCTIONS (not for class)
 =================================================
 */
+void displayAllStateInfo() {
+    int valPot = analogRead(POT_PIN);
+    String stateString = getStateString();
+    String cycleString = getCycleString();
 
+    String output =
+        "%d: %s; Cycle = %s; Duration = %d, Pot = %d, EnumState = %d, "
+        "EnumCycle = %d";
+    Serial.printlnf(output, counter, stateString.c_str(), cycleString.c_str(),
+                    stateDuration, valPot, currentState, currentCycle);
+}
 
 // functions used for testing only
 void testInitialSetup() {

@@ -15,16 +15,18 @@ const int SHORT_LIGHT_DURATION = 2000;  // time for yellow
 const int BLINK_RATE = 500;             // time for blinking don't walk light
 
 // TODO:  Create enum State for stoplight states
+// we could use some kind of int const
 // enum State { TrafficGo, TrafficSlow, TrafficStop };
 enum State { TrafficGo, TrafficSlow, PedWalk, PedDontWalk };
 
 // TODO: create enum Color for signal light colors
-enum Color { Red, Green, Yellow };
+enum Color { Red, Yellow, Green, Black };
 
 // TODO: Create variables for state change and state length
-State currentState = TrafficGo;
-int currentStateDuration = 0;
+State currentState;
 unsigned long prevMillisState = 0;
+unsigned long currentStateDuration =
+    0;  // either 2s or 5s based on which state we currently in
 
 void setup() {
     Serial.begin(9600);
@@ -44,79 +46,28 @@ void setup() {
 
 // TODO: COMPLETE updateNextState
 void updateNextState() {
-    // here is our state transition logic
-    // Go --> Slow --> Stop
-
-    unsigned long curMillis = millis();
-    switch (currentState) {  // if (currentState == ...)
-        case TrafficGo:      // if (currentState == TrafficGo)
-            if (curMillis - prevMillisState >
-                currentStateDuration) {  // now we change states
-                // change LED color
-                // update the OLED
-
-                // update prevMillis
-                // update state
-                // update the stateduration
-                currentState = TrafficSlow;
-                prevMillisState = curMillis;
-                updateNextStateDuration();
-                updateOLED();
-                updateLights();
-            }
-            break;
-        case TrafficSlow:
-            if (curMillis - prevMillisState >
-                currentStateDuration) {  // now we change states
-                // currentState = TrafficStop;
-                currentState = PedWalk;
-                prevMillisState = curMillis;
-                updateNextStateDuration();
-                updateOLED();
-                updateLights();
-            }
-            break;
-        // case TrafficStop:
-        case PedWalk:
-            if (curMillis - prevMillisState >
-                currentStateDuration) {  // now we change states
-                currentState = PedDontWalk;
-                prevMillisState = curMillis;
-                updateNextStateDuration();
-                updateOLED();
-                updateLights();
-            }
-            break;
-        case PedDontWalk:
-            if (curMillis - prevMillisState >
-                currentStateDuration) {  // now we change states
-                currentState = TrafficGo;
-                prevMillisState = curMillis;
-                updateNextStateDuration();
-                updateOLED();
-                updateLights();
-            }
-            break;
-    }
-}
-
-// TODO: COMPLETE updateNextStateDuration
-void updateNextStateDuration() {
+    // we are here implementing the logic from our state diagram / table
+    //  you could use an if if you wanted
+    // enum State {TrafficGo, TrafficSlow, TrafficStop};
     switch (currentState) {
-        case TrafficGo:
-            currentStateDuration = LONG_LIGHT_DURATION;
-            break;
-        case TrafficSlow:
+        case TrafficGo:  // same as saying if (currentState == TrafficGo)
+            currentState = TrafficSlow;
+            // we also need to update duration
             currentStateDuration = SHORT_LIGHT_DURATION;
+            break;
+        case TrafficSlow:  // same as else if (currentState == TrafficSlow)
+            // currentState = TrafficStop;
+            currentState = PedWalk;
+            currentStateDuration = LONG_LIGHT_DURATION;
             break;
         // case TrafficStop:
         case PedWalk:
-            currentStateDuration = LONG_LIGHT_DURATION;
-            break;
-        case PedDontWalk:
+            currentState = PedDontWalk;
             currentStateDuration = SHORT_LIGHT_DURATION;
             break;
-        default:
+        case PedDontWalk:
+            currentState = TrafficGo;
+            currentStateDuration = LONG_LIGHT_DURATION;
             break;
     }
 }
@@ -125,59 +76,71 @@ void updateNextStateDuration() {
 void setColor(Color c) {
     switch (c) {
         case Red:
-            analogWrite(PIN_RED, 255);
-            analogWrite(PIN_GREEN, 0);
-            analogWrite(PIN_BLUE, 0);
+            digitalWrite(PIN_RED, HIGH);
+            digitalWrite(PIN_GREEN, LOW);
+            digitalWrite(PIN_BLUE, LOW);
             break;
         case Green:
-            analogWrite(PIN_RED, 0);
-            analogWrite(PIN_GREEN, 255);
-            analogWrite(PIN_BLUE, 0);
+            digitalWrite(PIN_RED, LOW);
+            digitalWrite(PIN_GREEN, HIGH);
+            digitalWrite(PIN_BLUE, LOW);
             break;
         case Yellow:
-            analogWrite(PIN_RED, 255);
-            analogWrite(PIN_GREEN, 255);
-            analogWrite(PIN_BLUE, 0);
+            digitalWrite(PIN_RED, HIGH);
+            digitalWrite(PIN_GREEN, HIGH);
+            digitalWrite(PIN_BLUE, LOW);
+            break;
+        case Black:
+            digitalWrite(PIN_RED, LOW);
+            digitalWrite(PIN_GREEN, LOW);
+            digitalWrite(PIN_BLUE, LOW);
             break;
     }
 }
+// TODO: COMPLETE updateNextStateDuration
+void updateOutputs() {
+    // eventually we add outputs for OLED
+    // standard oled
+    oled.clear(PAGE);
+    oled.setCursor(0, 0);
+    oled.setFontType(0);
 
-// TODO: COMPLETE updateLights
-void updateLights() {
     switch (currentState) {
-        // case TrafficStop:
-        case PedWalk:
-            setColor(Red);
-            break;
-        case PedDontWalk:
-            setColor(Red);
+        case TrafficGo:
+            setColor(Green);
+            oled.println("Don't Walk");
             break;
         case TrafficSlow:
             setColor(Yellow);
+            oled.println("Don't Walk");
             break;
-        case TrafficGo:
-            setColor(Green);
-            break;
-    }
-}
-
-// TODO: COMPLETE updateOLED
-void updateOLED() {
-    switch (currentState) {
+        // case TrafficStop:
         case PedWalk:
-            Serial.println("Walk");
+            setColor(Red);
+            oled.println("Walk");
             break;
-        default:  // everythign else
-            Serial.println("Don't Walk");
+        case PedDontWalk:
+            setColor(Red);
+            oled.println("Don't Walk");
             break;
     }
+    oled.display();
 }
-
 void loop() {
     // TODO: comment out this function after verifying OLED and RGB LED work
     // testLightandOLED();
-    updateNextState();  // this function determines IF we should go to a new
-                        // state if so, then which state do we go
+
+    unsigned long curMillis = millis();
+    if (curMillis - prevMillisState > currentStateDuration) {
+        prevMillisState = curMillis;
+        // ok, timer has gone of so we need to update state
+        // so what do we do?
+        // check the current and change based on that
+        // change the current state duration
+        // change the outputs (RGB and eventually OLED)
+        updateNextState();
+        updateOutputs();
+    }
 }
 
 /* ======= FUNCTIONS FOR DEBUGGING LED WIRING ========= */
