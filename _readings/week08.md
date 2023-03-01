@@ -26,11 +26,11 @@ title: Pre-Lecture Activities
 
 *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
-### Wiring for Tues
+### Wiring for Mon
 
 ![1570925716449](week08.assets/1570925716449.png)
 
-### Wiring for Thurs
+### Wiring for Wed
 
 The goal is to build a rotating fan. Here is the circuit wiring, and photos are below 
 
