@@ -3,6 +3,10 @@ marp: true
 theme: itp
  
 layout: single
+
+category: reference
+title: Reading Resistors for People who are Color Blind
+show_in_list: true
 ---
 
 ## Reading Resistors for People who are Color Blind
