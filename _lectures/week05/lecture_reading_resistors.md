@@ -12,6 +12,12 @@ title: Reading Resistor Bands
 
 # Resistors Bands
 
+## Accessibility Note
+
+* Resistor values are determined visually by color bands
+* Unfortunately resistor labeling is not accessibly designed
+* To support students who are color blind or have difficulty distinguishing colors, here are [resources for support](https://reparke.github.io/ITP348-Physical-Computing/resources/reading_resistors_color_blind.html)
+
 ## Resistor Labels
 
 * The color codes indicate the resistance in Ohms (and sometimes how precise they are)

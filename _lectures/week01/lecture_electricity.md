@@ -120,6 +120,12 @@ Two equal water jugs connected to each of these. Which has greater flow?
 
 <img src="lecture_electricity.assets/1565140731484.png" alt="" style="width:200px" />
 
+## Accessibility Note
+
+* Resistor values are determined visually by color bands
+* Unfortunately resistor labeling is not accessibly designed
+* To support students who are color blind or have difficulty distinguishing colors, here are [resources for support](https://reparke.github.io/ITP348-Physical-Computing/resources/reading_resistors_color_blind.html)
+
 ## Ohm's Law
 
 * There are only a couple electrical laws that we need to know

@@ -10,10 +10,9 @@ Servo servo;  // no need to #include library
 
 unsigned long prevMillis = 0;
 unsigned long increment = 20;
-int position = 15; //servo position
-bool posIncreasing = true;      // true -> 15,30,...165
-                                // false -> 165, 150, ... 15
-
+int position = 15;          // servo position
+bool posIncreasing = true;  // true -> 15,30,...165
+                            // false -> 165, 150, ... 15
 
 void potControlDcMotor() {
     // use the ponentiomter to control fan speed
@@ -47,26 +46,24 @@ void simpleFanControl() {
 void millisFanControl() {
     unsigned long curMillis = millis();
     if (curMillis - prevMillis > increment) {
-        //check what direction servo is moving
-        //because we are either going to increase or decrease the servo angle
-        if(posIncreasing == true) {
-            position++; // C++ notation that means postion = position + 1
+        // check what direction servo is moving
+        // because we are either going to increase or decrease the servo angle
+        if (posIncreasing == true) {
+            position++;  // C++ notation that means postion = position + 1
             servo.write(position);
             if (position >= 165) {
-                posIncreasing = false; //change direction
+                posIncreasing = false;  // change direction
             }
-        } 
-        else { //posIncreasing = false
-            position--; 
+        } else {  // posIncreasing = false
+            position--;
             servo.write(position);
             if (position <= 0) {
                 posIncreasing = true;
             }
         }
         prevMillis = curMillis;
-    }   
-    potControlDcMotor();            //keeps the pot controller the fan speed
-
+    }
+    potControlDcMotor();  // keeps the pot controller the fan speed
 }
 
 void potContolServo() {
