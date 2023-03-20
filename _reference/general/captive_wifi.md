@@ -2,8 +2,6 @@
 marp: true
 theme: itp
  
-layout: single
-
 category: reference
 title: Captive Wifi Networks
 show_in_list: true

@@ -1,24 +1,11 @@
 #include "argon_ble_setup.h"
 
-// on board LED
 const int PIN_LED = D7;
-
-// Servo
-const int PIN_SERVO = D2;
-
-// motor pins
-const int AIN1 = D3;
-const int AIN2 = D4;
-const int PWMA = D5;
 
 void setup() {
     argon_ble_setup();  // BLE setup
 
     pinMode(PIN_LED, OUTPUT);
-    pinMode(AIN1, OUTPUT);
-    pinMode(AIN2, OUTPUT);
-    pinMode(PWMA, OUTPUT);
-
     Serial.begin(9600);
 }
 void loop() {}
@@ -34,8 +21,11 @@ void loop() {}
 */
 void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
                     void* context) {
-    // btSerialDebug(data, len); /* uncomment for serial monitor debug */
+    // TODO finish event handler
+
+    btSerialDebug(data, len); /* uncomment for serial monitor debug */
 }
+
 /********************************************************************************/
 
 /*

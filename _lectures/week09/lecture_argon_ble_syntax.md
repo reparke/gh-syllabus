@@ -108,12 +108,12 @@ void onDataReceived(const uint8_t* data, size_t len,
 [‘!’] [‘B’] ['5'] ['0'] [CRC]
 ```
 
-## Lab #1: Controlling Argon via UART (part 1)
+## Lab #1: RGB LED and Buzzer (part 1)
 
 * Use Bluefruit app to control an RGB LED and a buzzer 
 * Send commands **from** app **to** argon, interpret them in Argon, and perform an action
 
-## Lab #1: Controlling Argon via UART (part 1)
+## Lab #1: RGB LED and Buzzer (part 1)
 
 <!-- skip buzzer and/or RGB LED and go straight to motor if short on time -->
 
@@ -124,7 +124,7 @@ void onDataReceived(const uint8_t* data, size_t len,
     https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week09/ble_uart_control_start
 * In Bluefruit app, connect to over UART (listed as "controller")
 
-## Lab #1: Controlling Argon via UART (part 2)
+## Lab #1:RGB LED and Buzzer (part 2)
 
 * Specifications
   * When "1" is pressed down, on-board LED D7 will blink twice
@@ -154,7 +154,7 @@ On-board LED    D7
 
 <img src="lecture_bluetooth.assets/ble_uart_control_bb.png" alt="1571379786069" style="width:750px" />
 
-## Lab #2: Control Fan (part 1)
+## Lab #2: Control Fan, RGB LED, and Buzzer (part 1)
 
 * Use Bluefruit app to control a servo and motor
 * Send commands **from** app **to** argon, interpret them in Argon, and perform an action
@@ -166,7 +166,7 @@ On-board LED    D7
     https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week09/ble_uart_control_start
 * In Bluefruit app, connect to over UART (listed as "controller")
 
-## Lab #2: Control Fan (part 2)
+## Lab #2: Control Fan, RGB LED, and Buzzer  (part 2)
 
 * Specifications
   * When "RIGHT" is pressed down, rotate servo (by fixed amount) clockwise
@@ -174,6 +174,7 @@ On-board LED    D7
   * When "UP" is pressed down, speed up motor (by fixed amount)
   * When "DOWN" is pressed down, slow motor(by fixed amount)
   * When "3" is pressed down, change direction of fan
+  * Optional challenge:  When "4" is pressed, turn on fan auto mode
 * Reference:  [Adafruit Bluefruit Guide](https://learn.adafruit.com/bluefruit-le-connect/controller)
 
 ##  Lab #2: Wiring Guide
@@ -199,7 +200,7 @@ Motor Controller
 
 
 
-## Lab #3: Controlling Argon via UART (part 1)
+## Lab #3: Control Fan (part 1)
 
 <!-- skip buzzer and/or RGB LED and go straight to motor if short on time -->
 
@@ -210,7 +211,7 @@ Motor Controller
     https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week09/ble_fan_start
 * In Bluefruit app, connect to over UART (listed as "controller")
 
-## Lab #3: Controlling Argon via UART (part )
+## Lab #3: Control Fan (part 1)
 
 * Specifications
   * When "1" is pressed down, on-board LED D7 will blink twice
@@ -222,7 +223,10 @@ Motor Controller
 
 ```
 On-board LED    D7
+
 ```
+
+
 
 ## Lab #3: Control Fan (part 2)
 
@@ -250,7 +254,7 @@ Motor Controller
  STBY           3v3
 ```
 
-
+<img src="lecture_argon_ble_syntax.assets/servo_dc_fan_controller_bb.png" alt="servo_dc_fan_controller_bb" />
 
 
 

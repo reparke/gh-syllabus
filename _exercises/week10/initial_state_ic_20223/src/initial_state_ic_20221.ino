@@ -115,7 +115,7 @@ void loop() {
 
         // send the temperature and light level and photoresistor value to
         // initial state using JSON generate temp and photo level randomly
-        // sendJsonData();
+        sendJsonData();
 
         battery = battery - 10;
         if (battery == 0) {  // reset battery to 100% when it gets to 0%

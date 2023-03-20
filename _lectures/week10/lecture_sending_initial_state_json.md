@@ -74,13 +74,11 @@ URL: `https://groker.init.st/api/events`
 
 **Particle integration setting: HTTP Headers**
 
-`Accept-Version`	>	`~0`      ***note: this is a tilde ~, NOT a hyphen -***
-
 `X-IS-AccessKey`	>	*<<USE YOUR OWN API KEY>>>*
 
 `X-IS-BucketKey`	>	*<<USE YOUR OWN BUCKET KEY>>>*
 
-
+<!--`Accept-Version`	>	`~0`      ***note: this is a tilde ~, NOT a hyphen -*** -->
 
 
 ## Sending Multiple Values  
