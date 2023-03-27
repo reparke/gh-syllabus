@@ -10,8 +10,9 @@
 
 
 Ultrasonic Sensor
-    Trigger: D3
-    Echo: D2
+    Trigger: D6
+    Echo: D5
+
 
 */
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
@@ -36,8 +37,8 @@ double SPEED_SOUND_CM_ROOM_TEMP_FAHR = 0.03444; // 343 m/s2
 int MAX_RANGE_CM = 78;    
 int MIN_RANGE_CM = 0;
 
-const int PIN_TRIGGER = D3;
-const int PIN_ECHO = D2;
+const int PIN_TRIGGER = D6;
+const int PIN_ECHO = D5;
 
 void setup() {
     Serial.begin(9600);  // begin serial communication with the computer

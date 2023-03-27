@@ -2,19 +2,15 @@
 
   OLED
   ----
-    MicroOLED ------------- Argon
-    GND ------------------- GND
-    3.3 ------------------- 3.3V (VCC)
-    D1/MOSI ----------------- MO (don't change)
-    D0/SCK ------------------ SCK (don't change)
-    D2  ------------------- unused
-    D/C ------------------- A0 (can be any digital pin)
-                RST ------------------- A1 (can be any digital pin)
-                CS  ------------------- A2 (can be any digital pin)
+    MicroOLED -------------  Argon
+      GND ------------------- GND
+      VDD ------------------- 3.3V (VCC)
+      SDA ------------------- SDA
+      SCL ------------------- SCL
 
 Ultrasonic Sensor
-  Trigger: D3;
-  Echo: D2;
+    Trigger: D6
+    Echo: D5
 
 */
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
@@ -39,8 +35,9 @@ int MAX_RANGE_CM = 78;  // 30 in
 int MIN_RANGE_CM = 0;
 int WARNING_RANGE_CM = 12;  //4.7
 
-const int PIN_ECHO = D3;
-const int PIN_TRIGGER = D2;
+const int PIN_TRIGGER = D6;
+const int PIN_ECHO = D5;
+
 
 // bool unitInCm = true;  // true is CM, false is IN
 double distanceCm;

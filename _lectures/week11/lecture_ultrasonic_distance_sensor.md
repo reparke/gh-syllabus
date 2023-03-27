@@ -142,8 +142,8 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 | ------ | ----- |
 | GND    | GND   |
 | VCC    | VUSB  |
-| TRIG   | D2    |
-| ECHO   | D3    |
+| TRIG   | D6    |
+| ECHO   | D5    |
 
 | OLED         | Argon |
 | ------------ | ----- |

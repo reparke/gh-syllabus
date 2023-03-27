@@ -24,8 +24,8 @@ title: Pre-Lecture Activities
 | ------ | ----- |
 | GND    | GND   |
 | VCC    | VUSB  |
-| TRIG   | D2    |
-| ECHO   | D3    |
+| TRIG   | D6    |
+| ECHO   | D5    |
 
 | OLED         | Argon |
 | ------------ | ----- |

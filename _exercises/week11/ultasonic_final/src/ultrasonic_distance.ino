@@ -4,8 +4,9 @@ double SPEED_SOUND_CM_ROOM_TEMP_FAHR = 0.03444;
 int MAX_RANGE_CM = 78;
 int MIN_RANGE_CM = 0;
 
-const int PIN_TRIGGER = D3;
-const int PIN_ECHO = D2;
+const int PIN_TRIGGER = D6;
+const int PIN_ECHO = D5;
+
 
 double distanceCm;
 

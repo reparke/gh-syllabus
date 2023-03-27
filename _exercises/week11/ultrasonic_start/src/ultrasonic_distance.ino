@@ -4,8 +4,8 @@ const int PIN_RED = D2;
 const int PIN_GREEN = D3;
 const int PIN_BLUE = D4;
 
-const int PIN_TRIGGER = D5;
-const int PIN_ECHO = D6;
+const int PIN_TRIGGER = D6;
+const int PIN_ECHO = D5;
 
 double distanceCm;
 

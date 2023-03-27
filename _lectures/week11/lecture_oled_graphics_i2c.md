@@ -130,8 +130,8 @@ const uint8_t heart_bmp[] = {
 | ------ | ----- | ------------------------------------------------------------ |
 | GND    | GND   | Ground                                                       |
 | VCC    | VUSB  | Power **(requires 5v, but will work with 3.7V LiPo battery)** |
-| TRIG   | D3    | start output pulse sequence                                  |
-| ECHO   | D2    | receive reflection response                                  |
+| TRIG   | D6    | start output pulse sequence                                  |
+| ECHO   | D5    | receive reflection response                                  |
 
 
 
