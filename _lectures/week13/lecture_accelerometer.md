@@ -98,7 +98,8 @@ void setup() {
 * Recommended library for Argon
   * ```ADXL345_Sparkfun_Particle```
 * Check for vibrations
-  * `accel.readTap()` greater than 0 is a vibration
+  * `accel.readTap()` 
+  * `true` means vibration
 * Measure acceleration
   * `accel.cx` int value for force of gravity in the X direction
   * `accel.cy` int value for force of gravity in the Y direction
@@ -116,14 +117,16 @@ float y = adxl.cy;
 float z = adxl.cz;		  
 ```
 
-
+<!-- to register taps, use both
+adxl.setTapDetectionOnXYZ(0, 0, 1);
+adxl.singleTapINT(1);
+-->
 
 ## Exercise 1
 
-* Download starting code: Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
-  * Paste the following link into the top right
-    https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week13/ADXL345_accel_start
-* Connect sensor and run example code
+* Create new project
+* Install library  `ADXL345_Sparkfun_Particle`
+* Test library examples `Sparkfun_ADXL345_Graph.ino`
 
 ## Exercise 2
 
@@ -132,7 +135,14 @@ float z = adxl.cz;
 * Then turn on LED if there is vibration
 * Change LED colors based on orientation
 
-
+<!-- to try to make double tap + tap work, try this
+adxl.setTapThreshold(40);
+adxl.setTapDuration(32);
+adxl.setDoubleTapLatency(80);
+adxl.setDoubleTapWindow(240);
+if (adxl.readDoubleTap() == true) 
+else if (adxl.readTap() == true) {
+-->
 
 ## Credit
 

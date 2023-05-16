@@ -26,6 +26,8 @@ Whenever the PIR sensor detects movement, it'll write the alarm pin LOW.
 Development environment specifics:
 Arduino 1.6.7
 ******************************************************************************/
+
+// 10k pull up resistor
 const int MOTION_PIN = D2; // Pin connected to motion detector
 const int LED_PIN = D7; // LED pin - active-high
 

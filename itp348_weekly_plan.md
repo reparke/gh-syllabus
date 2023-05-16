@@ -942,7 +942,7 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 
 #### Lab
 
-- Create blank project and install library `SparkFun-MAX3010x`
+- Create blank project
 - Demonstrate heart rate function
 
 #### Lecture 

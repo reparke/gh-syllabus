@@ -80,16 +80,19 @@ title: RFID (Radio Frequency ID Scanner	)
 
 ```c++
 #include <MFRC522.h>
+#include <SPI.h>
 
-const int SS_PIN = A4;
-const int RST_PIN = A5;
+const int SS_PIN = A5;
+const int RST_PIN = A4;
+const String MATCH_ID = "OB 45 EA 0E"; //target id to match
 
-MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 object
+MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
 
 void setup() {
-  Serial.begin(9600); 
-  mfrc522.setSPIConfig();
-  mfrc522.PCD_Init();  // Init MFRC522 card
+    SPI.begin();                        // Init SPI bus
+    mfrc522.PCD_Init();                 // Init MFRC522
+    mfrc522.PCD_DumpVersionToSerial();  // Show details of  MFRC522 Card
+  Serial.println("Scan PICC to see UID and type...");
 }
 
 ```
@@ -123,6 +126,7 @@ void loop() {
 
 ```c++
 #include <MFRC522.h>
+#include <SPI.h>
 
 const int SS_PIN = A5;
 const int RST_PIN = A4;
@@ -131,9 +135,9 @@ const String MATCH_ID = "OB 45 EA 0E"; //target id to match
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
 
 void setup() {
-  Serial.begin(9600); 
-  mfrc522.setSPIConfig();
-  mfrc522.PCD_Init();  // Init MFRC522 card
+    SPI.begin();                        // Init SPI bus
+    mfrc522.PCD_Init();                 // Init MFRC522
+    mfrc522.PCD_DumpVersionToSerial();  // Show details of  MFRC522 Card
   Serial.println("Scan PICC to see UID and type...");
 }
 ```

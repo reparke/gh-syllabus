@@ -39,6 +39,7 @@ const int PIN_TRIGGER = D6;
 const int PIN_ECHO = D5;
 
 
+
 // bool unitInCm = true;  // true is CM, false is IN
 double distanceCm;
 double distanceIn;

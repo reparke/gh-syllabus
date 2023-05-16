@@ -24,7 +24,7 @@ title: Heart Rate Sensor (Pulse Sensor Amped)
 * Measure heart rate on finger
 * Green light useful (like Apple Watch)
 
-## Pulse Sensor Amped MAX30101 Wiring
+## Pulse Sensor Amped Wiring
 
 | Sensor | Argon      | Function              |
 | ------ | ---------- | --------------------- |

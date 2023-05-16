@@ -73,23 +73,23 @@ void loop() {
     /* After reading, six class variables are updated: x, y, z, cx, cy, and
     cz. Those are the raw, 12-bit values (x, y, and z) and the calculated
     acceleration's in units of g (cx, cy, and cz). */
-    displayExampleGraphs();
-delay(500);
+//     displayExampleGraphs();
+// delay(500);
     /* Compare readings for different measurement ranges */
     // compareMeasurementRanges();
 
     /* Tap and Activity Detection */
-    // if (adxl.readTap() == true) {
-    //     Serial.println("*** TAP ***");
-    // }
+    if (adxl.readTap() == true) {
+        Serial.println("*** TAP ***");
+    }
 
-    // if (adxl.readDoubleTap() == true) {
-    //     Serial.println("*** DOUBLE TAP ***");
-    // }
+    if (adxl.readDoubleTap() == true) {
+        Serial.println("*** DOUBLE TAP ***");
+    }
 
-    // if (adxl.readActivity() == true) {
-    //     Serial.println("*** Activity ***");
-    // }
+    if (adxl.readActivity() == true) {
+        Serial.println("*** Activity ***");
+    }
 }
 
 void displayExampleGraphs() {

@@ -38,7 +38,7 @@ title: Smart Watch
 
 ##  States
 
-* Three states: `TIME`, `WEATHER`, `HEART`
+* Three states: `Clock`, `Weather`, `Heart`
 * Need to design `getNextState()` function
 * Need to design `loadNextState()` function
 * Need to support state transitions in `loop()`
@@ -56,11 +56,11 @@ title: Smart Watch
 
 *If you want to display an image, you can use bitmap `heart16x12`*
 
-## Time Screen
+## Clock Screen
 
 <img src="lecture_smart_watch.assets/time.jpg" style="width:500px;" />
 
-## Time
+## Clock
 
 1. `setup()`
 
@@ -120,7 +120,6 @@ title: Smart Watch
 
 ## References
 
-* [MAX30101 datasheet](https://cdn.sparkfun.com/assets/8/1/c/9/0/MAX30101_Datasheet.pdf)
 * [Particle Argon reference - software timers](https://docs.particle.io/reference/device-os/firmware/argon/#software-timers)
 
 ## Credit

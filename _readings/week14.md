@@ -14,3 +14,15 @@ title: Pre-Lecture Activities
   - Build
     ![](week13.assets/rfid_bb.png) 
 
+## Wiring
+
+| Sensor | Argon                   |
+| ------ | ----------------------- |
+| 3.3v   | 3.3v                    |
+| Reset  | A5 (any GPIO pin works) |
+| GND    | GND                     |
+| IRQ    | -                       |
+| MOSI   | MO                      |
+| MISO   | MI                      |
+| SCK    | SCK                     |
+| SDA    | A4 (any GPIO pin works) |

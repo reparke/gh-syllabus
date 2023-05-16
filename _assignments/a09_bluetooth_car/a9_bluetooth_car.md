@@ -81,21 +81,19 @@ Here is a video overview: [https://youtu.be/BB8cKghUftI](https://youtu.be/BB8cKg
 
 ### **Best designed car**
 
--   Submit a photo of your car to **==Blackboard==**
+### **Best steering and driving**
+
+* Upload a short video to **==YouTube==** showing your car's design **and** your car driving in a figure-8 pattern (driving and turning)
+
 -   Students will vote anonymously for the best designed car
 -   A prize will be awarded to the winner
 
-### **Best steering and driving**
-
--   Upload a short video to **==YouTube==** of your car driving in a figure-8 pattern (driving and turning)
--   Students will vote anonymously for the car that drives / handles the best
--   A prize will be awarded to the winner.
-
 ## Video Submission Checklist
 
-*To receive credit, your submitted video must clearly demonstrate the following:*
+*Upload video to ==**YouTube**==. To receive credit, your submitted video must clearly demonstrate the following:*
 
-- [ ] Car driving in a figure-8 pattern (this should be upload to ==**YouTube**==)
+- [ ] Close up of the design of your car
+- [ ] Car driving in a figure-8 pattern
 
 Deliverables
 ------------

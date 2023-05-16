@@ -245,6 +245,8 @@ void runHeartScreen() {
     // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7
 }
 void setup() {
+    analogRead(pulseSignalPin);
+
     Serial.begin(115200);
     Serial.println("Initializing...");
 
