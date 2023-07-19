@@ -3,7 +3,7 @@ week: 7
 number: 7
 category: assignments
 title: Preliminary Proposal Ideas for Final Project
-date_due: Feb 26 @ 11:59 pm
+date_due: Oct 08 @ 11:59 pm
 
 ---
 
