@@ -33,8 +33,7 @@ Goals
 
 -   The Argon can remember the settings for multiple Wifi networks (just like a
     phone). If you need to configure for a different network than the one you
-    first connected it, simply follow the instructions in the video again at https://docs.particle.io/quickstart/argon/#1-set-up-your-argonassignment when your phone is on the new Wifi network.
-    
+    first connected it, simply follow the instructions in assignment 0 again or go through process at  [https://setup.particle.io/](https://setup.particle.io/)
 
 ### Create Workbench Project
 
@@ -59,7 +58,7 @@ Goals
     (and so presumably it does not have bugs or errors). In the picture below,
     the latest stable version has been noted.
 
-<img src="a1_blink.assets\image-20210829162304279.png" alt="image-20210829162304279" alt="target OS" style="width:400px"/>
+![image-20230803171903611](a1_blink.assets/image-20230803171903611.png)
 
 
 

@@ -14,12 +14,27 @@ Assignment 0 – Installation and Setup
 
 **Requirements**
 
+-   Connect Argon to Computer
 -   Create Particle account
 -   Install Particle Workbench
 -   Install Fritzing
 -   Add argon device to your Particle account
 
+
+
+**IMPORTANT - Browser**
+
+**You need to use the [Chrome](https://www.google.com/chrome/) browser to configure your Argon; you <u>can not</u> use Firefox or Safari.** 
+
 \_______________________________________\_
+
+## Connect your Particle Argon to your Computer
+
+- Connect the antenna (discussed in class)
+- Connect the Argon to your breadboard (discussed in class)
+- Connect the micro USB cable to your computer
+
+
 
 Create Particle account
 -----------------------
@@ -28,10 +43,53 @@ Create Particle account
 >   specifically the Particle Argon. In order to communicate with the Argon
 >   (e.g. to install new firmware code), we will use Particle’s cloud software.
 
--   Open the internet browser of your choice and visit the site:  
-    <https://www.particle.io/>
+-   You need to use the [Chrome](https://www.google.com/chrome/) browser to configure your Argon and visit this site:
+     https://setup.particle.io/
 
--   Go to Login and create a new account
+-   Go to **Get started** and create a new personal account
+
+![image-20230803162122479](a0_installation.assets/image-20230803162122479.png)
+
+
+
+Setup Your Device
+-----------------------
+
+>   Continue with setup in your web browser
+
+- Go to **Get Started**
+![image-20230803163011651](a0_installation.assets/image-20230803163011651.png)
+
+
+
+- Choose **Device with USB Port**
+
+![image-20230803163328040](a0_installation.assets/image-20230803163328040.png)
+
+- Continue with the four step process to configure your device via USB. This process will take few minutes. As the Argon updates, it will blink different colors.
+
+- When you get to the following screen that says **Organize your Particle Device**, choose **or Create a New Product**
+  ![image-20230803165122069](a0_installation.assets/image-20230803165122069.png)
+
+
+
+- For product name, type **itp_348** and click **Create new product**
+  ![image-20230803165406273](a0_installation.assets/image-20230803165406273.png)
+
+
+
+- For device name, you can use the default name, or create something unique, just make sure the name has only letters, numbers, and underscore (no spaces or special symbols)
+  ![image-20230803165816381](a0_installation.assets/image-20230803165816381.png)
+
+- Choose your Wifi network. If you are on campus, use **USC Guest Wireless**. If you are off-campus and need to login to a website before connected to Wifi, you will need to do a couple things before you can get the Argon online. You can follow these [instructions](https://reparke.github.io/ITP348-Physical-Computing/reference/general/captive_wifi.html) or reach out to course staff for assistance. 
+  ![image-20230803165937445](a0_installation.assets/image-20230803165937445.png)
+
+
+
+- When you see this success page, you can close your browser
+  ![image-20230803170753970](a0_installation.assets/image-20230803170753970.png)
+
+
 
 Install Particle Workbench
 --------------------------
@@ -39,7 +97,7 @@ Install Particle Workbench
 >   Workbench is the IDE we will use to write firmware code as well as to
 >   install it on the device
 
--   Open the internet browser of your choice and visit the site:
+-   Open Chrome and visit the site:
     <https://www.particle.io/workbench/>
 
 -   Download and install Particle Workbench
@@ -90,36 +148,6 @@ Install Fritzing Library for Additional Parts
 - Navigate to the folder with the file you downloaded and open `ITP_348_Parts.fzpz`
 
 - Click the small dropdown menu on the **Parts** panel again and chose *Save Bin*
-
-Add Argon device to your Particle account
------------------------------------------
-
->   This step must be completed after you receive the Argon from the instructor.
->   Each Argon device must be linked to Particle account.
-
--   Follow the instructions to claim your Argon and link it to your account:
-
-    <https://docs.particle.io/quickstart/argon/#1-set-up-your-argon>
-
--   Complete only step \#1 (setting up Argon) and do not proceed any further.
-
->   **Important Notes**
-
-1.  During the setup process, the mobile app will ask if you want to set up mesh
-    networking. Choose the option **Do not use in mesh networking**
-
-<img src="media/2e97c727fccb86d208d67eb123ae8450.png" alt="find wifi networks" style="width:400px" />
-
-1.  You may eventually need to connect it to multiple networks (e.g. at USC and
-    where you live), but you will begin with a single Wifi network. When
-    connecting to Wifi at USC, make sure to use **USC Guest Wireless**, not USC
-    Secure Wireless
-
-<img src="media/b7fb87c14d438e943a6133b77d2743cc.png" alt="name the Argon" style="width:400px" />
-
-1.  During setup, you will be asked to provide a name for your Argon. This is
-    the name that you will use in your projects to reference your device
-    throughout the semester so make note of it
 
 Deliverables
 ------------
