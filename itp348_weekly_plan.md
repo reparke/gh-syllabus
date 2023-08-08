@@ -75,8 +75,6 @@ Week 10 idea:
 
 **Videos and Wiring Diagrams Needed to Publish**
 
-- [ ] Week 1
-- - [ ] record software tools for reference
 - [ ] Week 2
 - - [ ] PWM (skip and leave for class)
 - [ ] Week 3
@@ -97,21 +95,16 @@ Week 10 idea:
 - [ ] Week 11
   - [ ] Revise JSON in week 10. Try using ArduinoJSON instead of RK. The generation of RK is very tough. This would mean re-recording the parsing video to use ArduinoJSON
 
-## General Feedback (Spring 2021)
 
-- [ ] Assignment 0 and 1 are given out week 1, day 1; due week 2, day 1; that is the pattern
-- [ ] students like being show a small bit of using a sensor, and then extending it on their own
-- [ ] students like hands-on
-
-  
 
 ## Pre-semester
 
 - [ ] Send students kit pickup instructions
 - [ ] purchase items (see Evernote pre-semester tasks)
 
-- Reading
-  - Enabling the Internet of Things https://web.eecs.umich.edu/~prabal/teaching/resources/eecs582/want15iot.pdf
+
+
+
 
 ## 1. Intro, Microcontrollers, LEDs
 

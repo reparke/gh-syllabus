@@ -8,7 +8,7 @@ toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: true
 ---
 
-## Syllabus Spring 2023
+## Syllabus Fall 2023
 
 ### Course Info
 
@@ -240,7 +240,7 @@ submission that they intend to use a grace day.
 
 ## Course Schedule: A Weekly Breakdown
 
-| Week                 | Topics/Daily Activities                                  | Pre-Lecture Videos and Readings | Assignment (given out on Tuesday; due one week Monday @ 11:59 pm) |
+| Week                 | Topics/Daily Activities                                  | Pre-Lecture Videos and Readings | Assignment (given out on Monday; due one week Sunday @ 11:59 pm) |
 | --------------- | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
 | Week 1          | Intro to Internet of Things (IoT), electricity, microcontrollers, Ohm’s Law, LEDs | Posted online | A0 and A1                                                    |
 | Week 2          | Analog to digital conversion, pulse width modulation, serial | Posted online | A2                                                           |

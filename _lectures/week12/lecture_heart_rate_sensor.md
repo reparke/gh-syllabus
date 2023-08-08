@@ -50,10 +50,16 @@ const int PIN_PULSE = A4; // any analog pin
 
 ```c++
 void setup() {
+   analogRead(PIN_PULSE); // this is a workaround for a problem in the PulseSensorAmped library
+    
    PulseSensorAmped.attach(PIN_PULSE);
    PulseSensorAmped.start();
   
 ```
+
+### Note
+
+- `analogRead` needs to be before the pulse sensor is initialized. This is a workaround to fix a problem in the library. For more information, see this [post](https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64313/4)
 
 ## Sensor Readings
 

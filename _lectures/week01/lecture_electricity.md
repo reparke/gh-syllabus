@@ -158,9 +158,27 @@ I = R / V
 
 <img src="lecture_electricity.assets/1564547904128.png" alt="" style="height:300px" />
 
-## Breadboard Connections
+## Inside a Breadboard
+
+- Breadboards are built with rows and columns of connected pin sockets
+- Underneath each row and column are strips of metal that form electrical connections 
 
 <img src="lecture_electricity.assets/518c0b34ce395fea62000002.jpg" style="width:600px;" />
+
+## Breadboard Connections
+
+![](lecture_electricity.assets/breadboard_rows.png)
+
+![](lecture_electricity.assets/breadboard_power_rails.png)
+
+## Important Note
+
+- Two common sizes of breadboards are half and full size
+- Both are most identical, but it is important to note that the power rails are not connected the entire length of the board
+
+
+
+![](lecture_electricity.assets/large_breadboard_connections.png)
 
 ## Credits
 

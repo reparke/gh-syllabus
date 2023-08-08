@@ -42,6 +42,7 @@ void setup() {
     pinMode(ON_BOARD_LED, OUTPUT);
 
     Serial.begin(9600);  // Start the serial terminal
+    Serial.println("Setup...");
 
     adxl.powerOn();  // Power on the ADXL345
 
@@ -65,7 +66,6 @@ void setup() {
     adxl.setTapDuration(32);       // 625 μs per increment
     adxl.setDoubleTapLatency(80);  // 1.25 ms per increment
     adxl.setDoubleTapWindow(240);  // 1.25 ms per increment
-
 
     // Setting all interupts to take place on INT1 pin
     // adxl.setImportantInterruptMapping(1, 1, 1, 1, 1);     // Sets
