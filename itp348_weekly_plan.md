@@ -193,7 +193,7 @@ Week 10 idea:
 
 
 
-## 2. Pulse Width Modulation, ADC ==Spring 2023 - MLK Holiday==
+## 2. Pulse Width Modulation, ADC ==Fall 2023 - MLK Holiday==
 
 ### Reading
 
@@ -604,7 +604,7 @@ Week 10 idea:
 
 
 
-## 7. Finite State Machines ==Presidents Day Holiday==
+## 7. Finite State Machines ==Spring Presidents Day Holiday==
 
 ### Reading
 
@@ -676,7 +676,7 @@ Week 10 idea:
 - 
 
 
-## 8. Sound, Motors, Servos
+## 8. Sound, Motors, Servos ==Fall break==
 
 ### Reading
 

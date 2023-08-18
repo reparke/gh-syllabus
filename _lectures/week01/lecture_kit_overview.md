@@ -30,7 +30,7 @@ title: Kit Overview
 - Maintain components in working order
 
 - Instructor may provide replacements for lost components on a limited basis. Beyond that, you will have to find replacements on your own
-- Instructor will distribute *one* Argon board to each student. If you stay enrolled (past week 3 drop deadline), it is yours to keep. 
+- If you stay enrolled (past week 3 drop deadline), the ITP kit is yours to keep. 
 
 ## Recommendation for Organization
 

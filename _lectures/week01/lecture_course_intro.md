@@ -28,8 +28,8 @@ title: Course Introduction
 
 ## Learning Assistants / Graders
 
-- LAs: Neftali, Lydia, Judy, Montserrat
-- Grader: Jenny
+- LAs: Neftali, Montserrat, Selina, Judy, Swanav
+- Grader: Swanav
 - Office hours for will be posted on Blackboard
 - For grading issues, post on Piazza and tag the TA
 - For general questions, you can contact either of us
@@ -62,7 +62,7 @@ None!
 
 ## Assignments
 
-- Assigned weekly and due Monday at *11:59pm*
+- Assigned weekly and due Sunday at *11:59pm* officially
 - Submissions will be on Blackboard and typically include **code files** as well as **video files**
 - We can not accept assignments via email
 - Must be well commented and documented for full-credit
@@ -92,7 +92,9 @@ None!
 
 ## Late Assignment Policy
 
-- You have 3 “late days” which may be used for extra time without penalty
+- Assigned weekly and due Sunday at *11:59pm* officially
+- Assignments are unofficially accepted Monday at 11:59pm
+- After that, youu have 3 “late days” which may be used for extra time without penalty
 - May be used for one assignment or distributed across several assignments
 - Further extensions only given in **rare, exceptional situations** (and after late days are used)
 - **Late work will not be accepted after all the grace days have been used**

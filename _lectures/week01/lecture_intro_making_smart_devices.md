@@ -43,14 +43,12 @@ title: Intro to Making Smart Devices
 
 ## Why learn this? 
 
-* Jobs
-  - 2020: 4.5 million Internet of Things (IoT) developers
+* Jobs (2020 data)
+  - 4.5 million Internet of Things (IoT) developers
     - 57% annual growth rate
-  - 2020: 26 billion Internet nodes (excl. phones, tablets, and computers)
+  - 26 billion Internet nodes (excl. phones, tablets, and computers)
     - 30 fold increase from 2009
-  - 2020: 4.5 million Internet of Things (IoT) developers
-    - 57% annual growth rate
-  - 2025: projected 42 billion IoT devices globally 
+* 2025: projected 42 billion IoT devices globally 
 * Cross-discipline
   - CS, EE, data analytics, product design, entrepreneurship, making
 
@@ -60,6 +58,9 @@ title: Intro to Making Smart Devices
   - Cost of manufacturing is within reach of small amount of funding
   - Entrepreneurs are partnering with places like Sparkfun to build out their ideas 
   - Tools and open-source platforms mean you can build a prototype without an engineering degree
+
+## Why learn this?
+
 * Industry opportunities
   * Companies and organizations are using open source tools to build devices (even NASA has used Arduino)
   * Companies are looking for people who know these technologies

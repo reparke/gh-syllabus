@@ -27,7 +27,7 @@ footer: ' '
   * There will be some basic math, but that is not our focus
 * Rules of Thumbs
 
-## Which is "Stronger"?
+## Electricity Analogies
 
 <img src="lecture_electricity.assets/1564543352673.png" alt="height:500px" style="width:400px" />	<img src="lecture_electricity.assets/1564543461389.png" alt="height:500px" style="width:400px" />
 
@@ -39,35 +39,38 @@ footer: ' '
 
 * More water can flow (and flow faster) through a larger and smoother pipe
 
-* If the water is stored in a container / vat, it will pour out until it is empty
+* If the water is stored in a container / vat, it will pour out until it is empty (like a battery)
 
 ## Common Analogy
 
 * The "pressure" (or height) of the water is the ***voltage***
   * Measured in units called **volts (V)** 
   * Higher voltage means more potential energy
-  * Our circuits will typically consider voltages 0v - 5v
+  * Our circuits will typically consider voltages **0v - 5v**
 
 ## Common Analogy
 
 * The "rate of flow" of the electricity is the ***current***
-  * Measured in units called amperes or amps (A)
+  * Measured in units called amperes or **amps (A)**
   * Higher amperage means electrons are flowing faster
   * In equations, current with be denoted with the letter **I**
-* Note: 1 A is a lot! Our projects will consider smaller values such as 0.2 A.
+* Note: 1 A is a lot! Our projects will consider smaller values such as **0.2 A.**
   * Instead, we will say 0.2 A is 200 **milli**amps (mA)
 
 ## Compare
 
-Two equal water jugs connected to each of these. Which has greater flow?
-
 <img src="lecture_electricity.assets/1564544624407.png" alt="Straw" style="width:500px" />
-<img src="lecture_electricity.assets/47730722082_bfcae57ea0.jpg" alt="Pipe" style="width:300px" />
+
+Consider two equal water jugs connected to two different straws. Which has greater flow?
+
+## Compare
+
+<img src="lecture_electricity.assets/5114247dce395f1e7e000008.png" alt="5114247dce395f1e7e000008" style="zoom:200%;" />
 
 ## Resisting the Flow
 
 * The narrower pipes restrict or **resist** the flow of water
-* The measure of how well something resist or allows electricity is **resistance**
+* The measure of how well something resist or allows electricity is **resistance** 
   * Measured in units called **Ohms (Ω)**
   * More Ohms means more resistance, which means less current (flow)
 
@@ -163,18 +166,18 @@ I = R / V
 - Breadboards are built with rows and columns of connected pin sockets
 - Underneath each row and column are strips of metal that form electrical connections 
 
-<img src="lecture_electricity.assets/518c0b34ce395fea62000002.jpg" style="width:600px;" />
+<img src="lecture_electricity.assets/518c0b34ce395fea62000002.jpg" style="width: 600px; zoom: 67%;" />
 
 ## Breadboard Connections
 
 ![](lecture_electricity.assets/breadboard_rows.png)
 
-![](lecture_electricity.assets/breadboard_power_rails.png)
+## Breadboard Connections
+<img src="lecture_electricity.assets/breadboard_power_rails.png" style="zoom:80%;" />
 
 ## Important Note
 
-- Two common sizes of breadboards are half and full size
-- Both are most identical, but it is important to note that the power rails are not connected the entire length of the board
+- Different size breadboards are mostly identical, but note that the power rails are not connected the entire length of the board
 
 
 
