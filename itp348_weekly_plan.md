@@ -114,7 +114,7 @@ Week 10 idea:
   * [https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all)
 
 * Video discussion of C++ review (make little videos for functions); curate or record
-* Have short blackboard quiz
+* Do poll
 
 ### Assignment
 
@@ -123,21 +123,18 @@ Week 10 idea:
 
 ### Day 1
 
-#### Quote
-
-* ==Students need to pick up kit from ITP office BEFORE Wed class==
-
-- Making and the maker movement is the physical manifestation of all your academic learning - how you apply your education to real-world problems (*Dr. Dorothy Jones-Davis*)
-
 #### Lecture
+
+* Remind: ==Students need to pick up kit from ITP office BEFORE Wed class==
 
 - Course introduction / syllabus
 - Ice breaker *(see slides in local ITP 348 Docs folder)* 
 - Introduction to IoT
-- ==Explain course website==
+- Explain course website
 - Kit overiew
-- Explain how to use envelopes
-- Explain how to identify kit parts
+  - Explain how to use envelopes
+  - Explain how to identify kit parts
+
 
 #### Lecture
 
@@ -145,33 +142,24 @@ Week 10 idea:
 
 ### Day 2
 
-#### Lecture
+#### Announcements
 
-- Kits
-   - students are responsible for returning devices if they drop before drop deadline
-   - If online, students will already have these
-- Safety
-- Software tools
-   - Workbench (open and discuss)
-   - Fritzing (open and show example project)
+- Kits: students are responsible for returning devices if they drop before drop deadline
+- Assignment 0 & 1 are due Sunday; OH help installing on Friday
 
 #### Lecture
 
 - Electricity and Ohm's Law
-- LED (covered) and Digital output (moved to week 2 after argons are set up)
-- ==Get ahead for Spring Holiday==Argon microcontroller?
+- Safety
+- Argon microcontroller
+- LED (skip digital output part)
+- Software tools
+   - Workbench (open and discuss)
+   - Fritzing (open and show example project)
 
 #### Lab
 
 - turn on LED
-
-#### ~~Lecture (Skipped in Spring 2021)~~
-
-- ~~Look at LED datasheet; calculate ideal resistance for LED~~
-
-#### ~~Activity (on ground)~~
-
-- ~~Day 2 "making project" was fun; ping pong balls and glue guns were a hit~~
 
 #### Feedback
 
@@ -198,7 +186,7 @@ Week 10 idea:
 #### Assignment
 
 - Due start of current week: A0 and A1 - Blink
-- Given out start of current week: A2 - Light Sculpture (have students bring to class; ==bring camera==) 
+- Given out start of current week: A2 - Light Sculpture 
 
 ### Day 1
 
@@ -209,8 +197,7 @@ Week 10 idea:
 
 #### Lecture
 
-* Argon Microcontroller
-* LED (covered week 1) and Digital output
+* Digital output
 * Start with LED example
 
 #### Lab

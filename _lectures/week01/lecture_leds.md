@@ -7,7 +7,6 @@ week: 1
 category: lectures
 title: LEDs and Digital Output
 
-footer: 'ITP 348 - Rob Parke - USC'
 ---
 
 <!-- headingDivider: 2 -->
@@ -77,14 +76,19 @@ forward current is current the LED can handle-->
 <!-- We haven't discussed KVL -->
 <!-- USB power is 5v. Datasheet shows LED has forward voltage 2v (3v remain). Max current is 30 mA, but good practice is use about half of that. Using V=I*R with 3v and 15 mA, R is 200 Ohms. Larger resistance is fine. Typically, 220 and 330 are common values-->
 
+## Let's turn on LED without any Code
+
+* We can "hardwire" an LED to turn on by connecting the anode (long side) to a +3.3V and the cathode (short side) to ground
+* The LED is **always on** because the anode is always at +3.3V and the cathode is always at ground
+
+![image-20230823105711033](lecture_leds.assets/image-20230823105711033.png)
+
 ## Turning on LEDs in Code
 
-* To turn an LED in firmware, we use the same principle as before
-  * Current limiting resistor connected to 3.3v 
-  * Other end of resistor connected to the LED Anode
-  * Ground connected to LED Cathode 
-* To turn on LED, we send 3.3v to the Anode
-* To turn off LED, we send Ground to the Cathode
+* We need to be able to control the voltage at the anode so it can be either +3.3V (LED turns on), or GND (LED turns off)
+* Connected anode to pin D2 on Argon
+* Connected cathode to GND
+* Now using code, we can make the voltage at pin D2 either +3.3V or GND 
 
 ## Wiring
 

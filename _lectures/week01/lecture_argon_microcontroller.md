@@ -3,11 +3,11 @@ marp: true
 theme: itp
 paginate: true
 
-week: 2
+week: 1
 category: lectures
 title: Argon Microcontroller
 
-footer: 'ITP 348 - Rob Parke - USC'
+
 ---
 
 <!-- headingDivider: 2 -->
