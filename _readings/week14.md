@@ -6,15 +6,23 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **For Monday**
+### Watch before class this week
 
-  * Watch **RFID Sensor**
-    {% include video id="GtgVViZe1sM" provider="youtube" %}
+* RFID Sensor
+  {% include video id="GtgVViZe1sM" provider="youtube" %}
 
-  - Build
-    ![](week13.assets/rfid_bb.png) 
+### Bring to class all this week
 
-## Wiring
+- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- RFID sensor
+- RFID keycards
+- *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
+
+### Build before class Mon / Tues 
+
+![](week13.assets/rfid_bb.png) 
+
+#### Wiring
 
 | Sensor | Argon                   |
 | ------ | ----------------------- |

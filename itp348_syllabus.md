@@ -175,9 +175,10 @@ added depending on size of the class.
 
 | Item                                      | % of Grade |
 | ----------------------------------------- | ---------- |
-| Assignments                               | 45         |
-| In-Class Labs and Quizzes                 | 20         |
+| Assignments                               | 40         |
 | Final Project                             | 35         |
+| Quizzes and In-Class Labs                 | 15         |
+| In-Class Polls and In-Class Participation | 10         |
 |                                           |            |
 | Total                                     | 100%       |
 
@@ -260,82 +261,126 @@ submission that they intend to use a grace day.
 | Final (Week 16) | Final project presentation                                   | Posted online | Project code, device, app, in-class demo                     |
 |                 |                                                              |               | Date: For the date and time of the final for this class, consult the USC *Schedule of Classes* at [www.usc.edu/soc](http://www.usc.edu/soc)*.* |
 
-## Academic Conduct
+## Academic Integrity
 
-Plagiarism – presenting someone else’s ideas as your own, either verbatim or
-recast in your own words – is a serious academic offense with serious
-consequences. Please familiarize yourself with the discussion of plagiarism
-in *SCampus* in Part B, Section 11, “Behavior Violating University Standards”
-<https://policy.usc.edu/scampus-part-b/>.  Other forms of academic dishonesty
-are equally unacceptable.  See additional information in *SCampus *and
-university policies on scientific
-misconduct, [http://policy.usc.edu/scientific-misconduct](http://policy.usc.edu/scientific-misconduct/).
+The University of Southern California is foremost a learning community committed to fostering successful scholars and researchers dedicated to the pursuit of knowledge and the transmission of ideas. Academic misconduct is in contrast to the university’s mission to educate students through a broad array of first-rank academic, professional, and extracurricular programs and includes any act of dishonesty in the submission of academic work (either in draft or final form). 
 
- 
+ 
+
+This course will follow the expectations for academic integrity as stated in the [USC Student Handbook](https://policy.usc.edu/studenthandbook/). All students are expected to submit assignments that are original work and prepared specifically for the course/section in this academic term. You may not submit work written by others or “recycle” work prepared for other courses without obtaining written permission from the instructor(s). Students suspected of engaging in academic misconduct will be reported to the Office of Academic Integrity.
+
+
+
+Students must complete their own work without assistance from other students or any outside sources. Other violations of academic misconduct include, but are not limited to, cheating, plagiarism, fabrication (e.g., falsifying data), knowingly assisting others in acts of academic dishonesty, and any act that gains or is intended to gain an unfair academic advantage.
+
+ 
+
+The impact of academic dishonesty is far-reaching and is considered a serious offense against the university and could result in outcomes such as failure on the assignment, failure in the course, suspension, or even expulsion from the university.
+
+ 
+
+For more information about academic integrity see the [student handbook](https://policy.usc.edu/studenthandbook/) or the [Office of Academic Integrity’s website](https://academicintegrity.usc.edu/), and university policies on [Research and Scholarship Misconduct](https://policy.usc.edu/research-and-scholarship-misconduct/)
+
+
+
+### Use of AI Generators
+
+- AI generators such as ChatGPT are powerfully useful tools that have great application in software and engineering
+- However, the purpose of this class is to specifically to develop creative and critical thinking skills as well as practical knowledge of building devices
+- Therefore, using AI-generated tools is prohibited in this course, will be identified as plagiarism, and will be reported to the Office of Academic Integrity
+
+
+
+## Course Content Distribution and Synchronous Session Recordings Policies 
+
+USC has policies that prohibit recording and distribution of any synchronous and asynchronous course content outside of the learning environment.
+
+ 
+
+Recording a university class without the express permission of the instructor and announcement to the class, or unless conducted pursuant to an Office of Student Accessibility Services (OSAS) accommodation. Recording can inhibit free discussion in the future, and thus infringe on the academic freedom of other students as well as the instructor. ([Living our Unifying Values: The USC Student Handbook](https://policy.usc.edu/studenthandbook/), page 13).
+
+ 
+
+Distribution or use of notes, recordings, exams, or other intellectual property, based on university classes or lectures without the express permission of the instructor for purposes other than individual or group study. This includes but is not limited to providing materials for distribution by services publishing course materials. This restriction on unauthorized use also applies to all information, which had been distributed to students or in any way had been displayed for use in relationship to the class, whether obtained in class, via email, on the internet, or via any other media. ([Living our Unifying Values: The USC Student Handbook](https://policy.usc.edu/studenthandbook/), page 13).
+
+
+
+## Students and Disability Accommodations: 
+
+USC welcomes students with disabilities into all of the University’s educational programs. [The Office of Student Accessibility Services](https://osas.usc.edu/) (OSAS) is responsible for the determination of appropriate accommodations for students who encounter disability-related barriers. Once a student has completed the OSAS process (registration, initial appointment, and submitted documentation) and accommodations are determined to be reasonable and appropriate, a Letter of Accommodation (LOA) will be available to generate for each course. The LOA must be given to each course instructor by the student and followed up with a discussion. This should be done as early in the semester as possible as accommodations are not retroactive. More information can be found at [osas.usc.edu](http://osas.usc.edu/). You may contact OSAS at (213) 740-0776 or via email at [osasfrontdesk@usc.edu](mailto:osasfrontdesk@usc.edu).
+
+
 
 ## Support Systems
 
-### *Student Counseling Services (SCS) - (213) 740-7711 – 24/7 on call*
+### [*Counseling and Mental Health*](http://sites.google.com/usc.edu/counseling-mental-health) *- (213) 740-9355 – 24/7 on call*
 
-Free and confidential mental health treatment for students, including short-term
-psychotherapy, group counseling, stress fitness workshops, and crisis
-intervention. <https://engemannshc.usc.edu/counseling/>
+Free and confidential mental health treatment for students, including short-term psychotherapy, group counseling, stress fitness workshops, and crisis intervention. 
 
-### *National Suicide Prevention Lifeline - 1-800-273-8255*
 
-Provides free and confidential emotional support to people in suicidal crisis or
-emotional distress 24 hours a day, 7 days a week.
-[http://www.suicidepreventionlifeline.org](http://www.suicidepreventionlifeline.org/)
 
-### *Relationship and Sexual Violence Prevention Services (RSVP) - (213) 740-4900 -
+### [*988 Suicide and Crisis Lifeline*](http://988lifeline.org/) *- 988 for both calls and text messages – 24/7 on call*
 
-24/7 on call*
+The 988 Suicide and Crisis Lifeline (formerly known as the National Suicide Prevention Lifeline) provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week, across the United States. The Lifeline is comprised of a national network of over 200 local crisis centers, combining custom local care and resources with national standards and best practices. The new, shorter phone number makes it easier for people to remember and access mental health crisis services (though the previous 1 (800) 273-8255 number will continue to function indefinitely) and represents a continued commitment to those in crisis.
 
-Free and confidential therapy services, workshops, and training for situations
-related to gender-based harm. <https://engemannshc.usc.edu/rsvp/>
 
-### *Sexual Assault Resource Center*
 
-For more information about how to get help or help a survivor, rights, reporting
-options, and additional resources, visit the website: <http://sarc.usc.edu/>
+### [*Relationship and Sexual Violence Prevention Services (RSVP)*](http://sites.google.com/usc.edu/rsvpclientservices/home) *- (213) 740-9355(WELL) – 24/7 on call*
 
-### *Office of Equity and Diversity (OED)/Title IX Compliance – (213) 740-5086*
+Free and confidential therapy services, workshops, and training for situations related to gender- and power-based harm (including sexual assault, intimate partner violence, and stalking).
 
-Works with faculty, staff, visitors, applicants, and students around issues of
-protected class. <https://equity.usc.edu/>
+ 
 
-### *Bias Assessment Response and Support*
+### [*Office for Equity, Equal Opportunity, and Title IX (EEO-TIX)*](http://eeotix.usc.edu/) *- (213) 740-5086* 
 
-Incidents of bias, hate crimes and microaggressions need to be reported allowing
-for appropriate investigation and response.
-<https://studentaffairs.usc.edu/bias-assessment-response-support/>
+Information about how to get help or help someone affected by harassment or discrimination, rights of protected classes, reporting options, and additional resources for students, faculty, staff, visitors, and applicants. 
 
-### *The Office of Disability Services and Programs*
+ 
 
-Provides certification for students with disabilities and helps arrange relevant
-accommodations. [http://dsp.usc.edu](http://dsp.usc.edu/)
+### [*Reporting Incidents of Bias or Harassment*](http://usc-advocate.symplicity.com/care_report) *- (213) 740-5086 or (213) 821-8298*
 
-### *Student Support and Advocacy – (213) 821-4710*
+Avenue to report incidents of bias, hate crimes, and microaggressions to the Office for Equity, Equal Opportunity, and Title for appropriate investigation, supportive measures, and response.
 
-Assists students and families in resolving complex issues adversely affecting
-their success as a student EX: personal, financial, and academic.
-<https://studentaffairs.usc.edu/ssa/>
+ 
 
-### *Diversity at USC*
+### [*The Office of Student Accessibility Services (OSAS)*](http://osas.usc.edu/) *- (213) 740-0776*
 
-Information on events, programs and training, the Diversity Task Force
-(including representatives for each school), chronology, participation, and
-various resources for students. <https://diversity.usc.edu/>
+OSAS ensures equal access for students with disabilities through providing academic accommodations and auxiliary aids in accordance with federal laws and university policy.
 
-### *USC Emergency Information*
+ 
 
-Provides safety and other updates, including ways in which instruction will be
-continued if an officially declared emergency makes travel to campus infeasible,
-<http://emergency.usc.edu>
+### [*USC Campus Support and Intervention*](http://campussupport.usc.edu/) *- (213) 740-0411*
 
-### *USC Department of Public Safety – 213-740-4321 (UPC) and 323-442-1000 (HSC) for
+Assists students and families in resolving complex personal, financial, and academic issues adversely affecting their success as a student.
 
-24-hour emergency assistance or to report a crime*.
+ 
 
-Provides overall safety to USC community.
-[http://dps.usc.edu](http://dps.usc.edu/)
+### [*Diversity, Equity and Inclusion*](http://diversity.usc.edu/) *- (213) 740-2101*
+
+Information on events, programs and training, the Provost’s Diversity and Inclusion Council, Diversity Liaisons for each academic school, chronology, participation, and various resources for students. 
+
+ 
+
+### [*USC Emergency*](https://emergency.usc.edu/) *- UPC: (213) 740-4321, HSC: (323) 442-1000 – 24/7 on call* 
+
+Emergency assistance and avenue to report a crime. Latest updates regarding safety, including ways in which instruction will be continued if an officially declared emergency makes travel to campus infeasible.
+
+ 
+
+### [*USC Department of Public Safety*](https://dps.usc.edu/) *- UPC: (213) 740-6000, HSC: (323) 442-1200 – 24/7 on call* 
+
+Non-emergency assistance or information.
+
+ 
+
+### [*Office of the Ombuds*](http://ombuds.usc.edu/) *- (213) 821-9556 (UPC) / (323-442-0382 (HSC)* 
+
+A safe and confidential place to share your USC-related issues with a University Ombuds who will work with you to explore options or paths to manage your concern.
+
+ 
+
+### [*Occupational Therapy Faculty Practice*](http://chan.usc.edu/patient-care/faculty-practice) *- (323) 442-2850 or* [otfp@med.usc.edu](mailto:otfp@med.usc.edu) 
+
+Confidential Lifestyle Redesign services for USC students to support health promoting habits and routines that enhance quality of life and academic performance. 
+
+ 

@@ -6,21 +6,29 @@ title: Pre-Lecture
 
 ## Week {{page.week}}
 
-* **Monday**
-  * Watch Photoresistors
-    {% include video id="okYHrEVmaw8" provider="youtube" %}
-  * Watch Cloud Overview
-    {% include video id="yET6RqzAMfc" provider="youtube" %}
-  * Build
+### Watch before class this week
+
+* Photoresistors
+  	{% include video id="okYHrEVmaw8" provider="youtube" %}
+* Cloud Overview
+  {% include video id="yET6RqzAMfc" provider="youtube" %}
+
+### Bring to class all this week
+
+- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photoresistor 
+- *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
+
+### Build before class Mon / Tues 
 
 <img src="week04.assets/photoresistor_and_fixed_resistor_RGB_LED_bb.png" alt="photoresistor_and_fixed_resistor_RGB_LED_bb" style="width:500px;" />
 
-* **Wednesday**
-  * Build 
+### Build before class Wed / Thurs 
 
 <img src="week04.assets/image-20200709230855362.png" alt="image-20200709230855362" style="width:500px;" />
 
 
 
-* Optional
-  * Watch [Kirchoff's Voltage Law](https://www.khanacademy.org/science/ap-physics-1/ap-circuits-topic/kirchhoffs-loop-rule-ap/v/ee-kirchhoffs-voltage-law)
+### Optional
+
+* Watch [Kirchoff's Voltage Law](https://www.khanacademy.org/science/ap-physics-1/ap-circuits-topic/kirchhoffs-loop-rule-ap/v/ee-kirchhoffs-voltage-law)

@@ -6,8 +6,14 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **For Monday**
-  * Watch **PIR Sensor**
-    {% include video id="zyXEYmRyDBA" provider="youtube" %}
-  * Watch **Sleep and Battery Consevation**
-    {% include video id="QbFqqatYBM8" provider="youtube" %}
+### Watch before class this week
+
+* PIR Sensor
+  {% include video id="zyXEYmRyDBA" provider="youtube" %}
+* Sleep and Battery Conservation
+  {% include video id="QbFqqatYBM8" provider="youtube" %}
+
+### Bring to class all this week
+
+- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- PIR sensor

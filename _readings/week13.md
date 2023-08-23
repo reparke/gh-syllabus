@@ -6,10 +6,17 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **For Monday**
-  
-  * Watch **Accelerometer**
-    {% include video id="ZiEiEboxAHk" provider="youtube" %}
-* **For Monday**
-  - Build
-    ![accelerometer_rgb_led_bb](week13.assets/accelerometer_rgb_led_bb.png)
+### Watch before class this week
+
+* Accelerometer
+  {% include video id="ZiEiEboxAHk" provider="youtube" %}
+
+### Bring to class all this week
+
+- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Accelerometer
+- *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
+
+### Build before class Mon / Tues 
+
+![accelerometer_rgb_led_bb](week13.assets/accelerometer_rgb_led_bb.png)

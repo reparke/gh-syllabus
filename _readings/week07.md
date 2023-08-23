@@ -6,24 +6,24 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-### switch and enum in C++ (already covered in class last week)
+### Watch before class this week
 
-  {% include video id="W6uycVUrkm4" provider="youtube" %}
+* `switch` and `enum` in C++ (already covered in class last week)
 
-### State Machines
+    {% include video id="W6uycVUrkm4" provider="youtube" %}
 
-{% include video id="Wh8xGIYP1Dc" provider="youtube" %}
+* State Machines
 
-### Components Needed in Class
+  {% include video id="Wh8xGIYP1Dc" provider="youtube" %}
 
-- RGB LED
+### Bring to class all this week
+
+- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - Magnetic switch
-- 10K Ohm resistor
-- 330 Ohm resistors
-- Potentiometer
 - MicroOLED
+- *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
-### Monday Wiring
+### Build before class Mon / Tues 
 
 | RGB LED                    | Argon Pins |
 | -------------------------- | ---------- |
@@ -44,9 +44,7 @@ title: Pre-Lecture Activities
 
 
 
-
-
-### Wednesday Wiring
+### Build before class Wed / Thurs 
 
 | LED             | Argon Pins |
 | --------------- | ---------- |

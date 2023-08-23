@@ -50,11 +50,12 @@ title: Course Introduction
 
 ## Grading Scale
 
-| Item                      | Weight |
-| ------------------------- | ------ |
-| Assignments               | 45%    |
-| In-Class Labs and Quizzes | 20%    |
-| Final Project             | 35%    |
+| Item                                      | Weight |
+| ----------------------------------------- | ------ |
+| Assignments                               | 40     |
+| Final Project                             | 35     |
+| Quizzes and In-Class Labs                 | 15     |
+| In-Class Polls and In-Class Participation | 10     |
 
 ## Exams
 
@@ -79,6 +80,7 @@ None!
 ## Labs
 
 - Some of our in-class activities will be turned in for credit
+- It will be announced at the start of class when labs are to be turned in
 - Graded on a 0-2 point scale
   - 0 No attempted / minimal effort
   - 1 Significant effort
@@ -90,6 +92,10 @@ None!
 - These will be short (a few questions) and will be announced a week ahead of time 
 - There will **NOT** be any unannounced quizzes
 
+## Polls
+
+- Some classes will begin with poll questions about the recordings for that week
+
 ## Late Assignment Policy
 
 - Assigned weekly and due Sunday at *11:59pm* officially
@@ -100,7 +106,7 @@ None!
 - **Late work will not be accepted after all the grace days have been used**
 - **Important:** You must state that you are using a grace day in their Blackboard submission
 
-## Late Lab Policy
+## Late Lab and Poll Policy
 
 - Since labs are completed in class, they can not be accepted late or made up
 
@@ -129,6 +135,12 @@ None!
   - You cannot take code from the internet
   - Any plagiarism in your code is easily detectable
 - If you have questions, we can chat after class or during office hours anytime
+
+## Use of AI Generators
+
+- AI generators such as ChatGPT are powerfully useful tools that have great application in software and engineering
+- However, the purpose of this class is to specifically to develop creative and critical thinking skills as well as practical knowledge of building devices
+- Therefore, using AI-generated tools is prohibited in this course, will be identified as plagiarism, and will be reported to the Office of Academic Integrity
 
 ## Piazza
 

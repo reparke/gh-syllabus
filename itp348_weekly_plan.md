@@ -134,25 +134,14 @@ Week 10 idea:
 - Course introduction / syllabus
 - Ice breaker *(see slides in local ITP 348 Docs folder)* 
 - Introduction to IoT
-- Kit Overview
-- Possibly show this [mind map](https://www.mindmeister.com/1308604904?t=O0Vcty0Uys) from Boris Tomas
 - ==Explain course website==
+- Kit overiew
 - Explain how to use envelopes
 - Explain how to identify kit parts
 
 #### Lecture
 
 * C++ Syntax (optional at the end)
-
-#### ~~Lab~~
-
-- ~~Time permitting~~
-  - ~~(on ground) ask student to complete a creative expression with multiple LEDs~~
-  - ~~(online) have student connect Argon to USB and connect an LED to 3.3v~~
-  - ~~Walk students through connecting LED + Resistor to VUSB on Argon~~
-    - ~~Ask students how they would connect more than 1 LEDs~~
-    - ~~Ask students how they would make LEDs blink~~
-  - ~~just ask the question: Compare 10k ohm vs 330 ohm resistor~~
 
 ### Day 2
 

@@ -6,20 +6,32 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* **Monday**
-  * Watch Analog Temperature Sensor
-    {% include video id="hNXwd19JLA0" provider="youtube" %}
-    
-    
+### Watch before class Mon / Tues
 
-* **Wednesday**
-  * Watch OLED Screens
-    {% include video id="KCJc-IDLkHc" provider="youtube" %}
-    
-  * Build
-    *Note: if you don't have room for both potentiometers and the button, you can leave off the button*
-  
-    <img src="week05.assets/etch-a-sketch_v3_i2c_bb.png" alt="etch-a-sketch" style="width:600px" />
+* Analog Temperature Sensor
+  {% include video id="hNXwd19JLA0" provider="youtube" %}
+
+### Watch before class Wed / Thurs
+
+* OLED Screens
+  {% include video id="KCJc-IDLkHc" provider="youtube" %}
+
+### Bring to class all this week
+
+- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- TMP 36 (analog temperature sensor)
+- OLED screen
+- *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
+
+### Build before class Mon / Tues 
+
+- none
+
+### Build before class Wed / Thurs 
+
+*Note: if you don't have room for both potentiometers and the button, you can leave off the button*
+
+<img src="week05.assets/etch-a-sketch_v3_i2c_bb.png" alt="etch-a-sketch" style="width:600px" />
 
 Use [Qwiic cable](https://www.sparkfun.com/products/14425) to connect OLED to Argon
 
@@ -32,8 +44,8 @@ Use [Qwiic cable](https://www.sparkfun.com/products/14425) to connect OLED to Ar
 | Blue SDA | SDA        |
 | Yellow SCL | SCL       |
 
+### Optional
 
-* Optional
-  * OLED Library. We will go through through this process during class, but the video is useful if you ever need to refer back to it.
-    {% include video id="u5yLxTFwPCg" provider="youtube" %}
+* OLED Library. We will go through through this process during class, but the video is useful if you ever need to refer back to it.
+  {% include video id="u5yLxTFwPCg" provider="youtube" %}
 

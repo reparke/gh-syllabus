@@ -7,14 +7,27 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* Watch **Push Buttons**
+### Watch before class this week
+
+* Push Buttons
   {% include video id="-sXQDeUBzQw" provider="youtube" %}
-* Watch **RGB LEDs**
+* RGB LEDs
   {% include video id="Fwwn9kwbOdc" provider="youtube" %}
 
+### Bring to class all this week
 
+- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
+
+### Build before class Mon / Tues 
+
+- none
+
+### Build before class Wed / Thurs 
+
+- none
 
 ### Optional
 
-* Watch **Functions and Libraies in C++**
+* Functions and Libraries in C++
   {% include video id="0dzZBIqaT0w" provider="youtube" %}

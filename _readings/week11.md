@@ -6,17 +6,25 @@ title: Pre-Lecture Activities
 
 ## Week {{page.week}}
 
-* Watch **Ultrasonic Distance Sensor**
-  {% include video id="vyQC0CpwKmo" provider="youtube" %}
+### Watch before class this week
 
-* Watch **OLED Graphics**
+* Ultrasonic Distance Sensor
+  {% include video id="vyQC0CpwKmo" provider="youtube" %}
+* OLED Graphics
   {% include video id="Csic8vEiIDY" provider="youtube" %}
 
-* Build for **Monday**
+### Bring to class all this week
 
-  ![oled_ultrasonic_bb](week11.assets/oled_and_ultrasonic_i2c_bb.png)
+- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Ultrasonic distance sensor
+- MicroOLED
+- *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
-## Sensor Wiring
+### Build before class all week 
+
+![oled_ultrasonic_bb](week11.assets/oled_and_ultrasonic_i2c_bb.png)
+
+#### Sensor Wiring
 
 <span style="font-size:75%">
 

@@ -13,9 +13,12 @@ title: Intro to Making Smart Devices
 
 
 
-## What are smart devices?
+## Introduction to Making Smart Devices
 
-## What is "making"?
+- What are smart devices?
+
+
+- What is "making"?
 
 ## Making Smart Devices
 
@@ -26,13 +29,9 @@ title: Intro to Making Smart Devices
 * Interacting with "smart" devices in the environment
 * Involves programming, electronics, 3d printing, wearables, networking, interaction design
 
-## What is IoT?
-
-## Internet of Things
+## What is IoT (Internet of Things)?
 
 <img src="lecture_intro_making_smart_devices.assets/iot_cloud.jpg" alt="width:700px" style="width:400px" />
-
-## Internet of Things
 
 * Internet
   - connect to the internet to send and receive data
@@ -54,16 +53,16 @@ title: Intro to Making Smart Devices
 
 ## Why learn this?
 
+* Industry opportunities
+  * Companies and organizations are using open source tools to build devices (even NASA has used Arduino)
+  * Companies are looking for people who know these technologies
+
+## Why learn this?
+
 * Hardware entrepreneurship
   - Cost of manufacturing is within reach of small amount of funding
   - Entrepreneurs are partnering with places like Sparkfun to build out their ideas 
   - Tools and open-source platforms mean you can build a prototype without an engineering degree
-
-## Why learn this?
-
-* Industry opportunities
-  * Companies and organizations are using open source tools to build devices (even NASA has used Arduino)
-  * Companies are looking for people who know these technologies
 
 
 ## Why learn this?
