@@ -81,7 +81,8 @@ forward current is current the LED can handle-->
 * We can "hardwire" an LED to turn on by connecting the anode (long side) to a +3.3V and the cathode (short side) to ground
 * The LED is **always on** because the anode is always at +3.3V and the cathode is always at ground
 
-![image-20230823105711033](lecture_leds.assets/image-20230823105711033.png)
+## Wiring
+<img src="lecture_leds.assets/image-20230823105711033.png" alt="image-20230823105711033" style="zoom:80%;" />
 
 ## Turning on LEDs in Code
 
@@ -92,7 +93,7 @@ forward current is current the LED can handle-->
 
 ## Wiring
 
-<img src="lecture_leds.assets/image-20200708224001644.png" style="width:500px;" />
+<img src="lecture_leds.assets/image-20200708224001644.png" style="00px; zoom: 80%;" />
 
 ## Digital Output
 

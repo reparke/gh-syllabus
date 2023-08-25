@@ -3,7 +3,7 @@ marp: true
 theme: itp
 paginate: true
 
-week: 1
+week: 2
 category: lectures
 title: Software Tools
 ---
@@ -37,7 +37,7 @@ title: Software Tools
 
 ## Fritzing Breadboard Layout
 
-<img src="lecture_software_tools.assets/TE5_range_finder_Argon_bb-1565052544681.png" alt="Fritzing" style="width:400px" />
+<img src="lecture_software_tools.assets/TE5_range_finder_Argon_bb-1565052544681.png" alt="Fritzing" style="zoom: 43%;" />
 
 ## Actual Built Project
 
@@ -47,7 +47,7 @@ title: Software Tools
 
 There is a more formal way of describing circuits we won't use very often
 
-<img src="lecture_software_tools.assets/1565052726261.png" alt="width:400px" style="width:400px" />
+<img src="lecture_software_tools.assets/1565052726261.png" alt="width:400px" style="zoom:30%" />
 
 ## Credits
 

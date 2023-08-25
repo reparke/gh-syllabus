@@ -153,9 +153,6 @@ Week 10 idea:
 - Safety
 - Argon microcontroller
 - LED (skip digital output part)
-- Software tools
-   - Workbench (open and discuss)
-   - Fritzing (open and show example project)
 
 #### Lab
 
@@ -174,6 +171,10 @@ Week 10 idea:
 
 ### Reading
 
+- Software tools
+  - Workbench (open and discuss)
+  - Fritzing (open and show example project)
+  What is your favorite comfort food? Is there any special connection to it?
 - Video: Software tools
   - Lecture: Open Workbench
     * IDE like PyCharm

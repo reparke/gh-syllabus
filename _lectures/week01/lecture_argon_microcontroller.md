@@ -14,6 +14,7 @@ title: Argon Microcontroller
 
 # Argon Microcontroller
 
+![bg opacity:.75](lecture_argon_microcontroller.assets/Argon-Kit-Angled-min_1100x.webp)
 ## Microcontroller
 
 * Microcontrollers (MCU) are **embedded** computers
