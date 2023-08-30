@@ -114,6 +114,7 @@ Week 10 idea:
   * [https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all)
 
 * Video discussion of C++ review (make little videos for functions); curate or record
+* Video: Creating, configuring, and opening workbench projects
 * Do poll
 
 ### Assignment
@@ -129,6 +130,11 @@ Week 10 idea:
 
 - Course introduction / syllabus
 - Ice breaker *(see slides in local ITP 348 Docs folder)* 
+  - Congratulations! The job you wanted when you were five years old is now yours. What do you now do for a living?
+  - What is a random area of expertise that you have?
+  - What close encounters have you had with a famous person?
+  - If you could create one app (or service / device) that positively impacted the world, what would it be?
+
 - Introduction to IoT
 - Explain course website
 - Kit overiew
@@ -156,33 +162,30 @@ Week 10 idea:
 
 #### Lab
 
-- turn on LED
+- turn on LED + resistor by connecting to 3v3 and ground
 
 #### Feedback
 
 - Most students were familiar with electricity principles, units (kilo, milli) so the electricity presentation very simple
 - Online: skipped making project and did LED blink together
 
-- Skipped all coding completely since students still didn't have kits with LEDs. Instead we assembled our Argons + antennas and wired an LED to 3.3v and ground
-
 
 
 ## 2. Pulse Width Modulation, ADC ==Fall 2023 - MLK Holiday==
 
+### Announcements
+
+- Reminder to order Sparkfun kit
+- Office hours to help installation
+- USC Guest Wireless will work for the Argon, but setup.particle.io is having problems configuring the device the first time. Try using the app
+- Reminder to watch course videos
+- Explain social issues assignment - sign ups in two weeks
+
 ### Reading
 
-- Software tools
-  - Workbench (open and discuss)
-  - Fritzing (open and show example project)
-  What is your favorite comfort food? Is there any special connection to it?
-- Video: Software tools
-  - Lecture: Open Workbench
-    * IDE like PyCharm
-    * Create project
-    * explain folder structure
-    * Walk through command palette
-    * Login, Target project
-  - Show students how to download and install fritzing parts
+- Analog vs. digital (video)
+- Analog input / potentiometers (video)
+- C++ `for` loops (optional video)
 
 #### Assignment
 
@@ -198,16 +201,23 @@ Week 10 idea:
 
 #### Lecture
 
+- Software tools
+
+  - Workbench (open and discuss)
+
+  - Fritzing (open and show example project)
+    What is your favorite comfort food? Is there any special connection to it?
+
 * Digital output
 * Start with LED example
 
-#### Lab
+### Lab
 
-* Have students work in pairs to answer datasheet questions from Argon Microcontroller slide
+- Blink 2 LED
+- Explain Workbench project
 
 #### Lecture
 
-- Analog vs. digital (video)
 - Pulse width modulation (lecture, PWM pins, analogWrite)
 
 #### Lab
@@ -218,10 +228,7 @@ Week 10 idea:
 #### Lab
 
 - Have students use for loop to sweep the brightness of an LED
-
-#### Lecture
-
-* C++ `for` loops (video)
+- Discuss `for` loops
 
 #### Feedback
 
@@ -235,14 +242,10 @@ Week 10 idea:
 
 - Serial monitor
 
-- Guided activity
+
+#### Guided activity
+
 - Do simple example where there is a global variable that gets incremented and display its value with Serial monitor
-
-#### Lecture
-
-- Potentiometer, voltage dividers (skip derivation)
-
-#### Lab
 
 - Have students connect pot to 3.3v, gnd, and A0; display the values on serial monitor
 
@@ -252,7 +255,12 @@ Week 10 idea:
 
 #### Lab
 
+- Wire pot + LED
 - Use potentiometer to control light level
+
+#### If time (to get ahead for holiday)
+
+* Quickly go through buttons slides and wire a button
 
 
 

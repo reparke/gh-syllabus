@@ -62,11 +62,14 @@ or 1 unit = 4095/3.3 -> so 1 unit is 0.8 mV
 
 ## Exercise
 
+![led_pot_bb](lecture_adc.assets/led_pot_bb.png)
+
 * Connect potentiometer to analog pin A0
 * Connect LED to digital pin D2 (do we a pin with PWM?)
-* Control LED brightness with potetiometer
+* Control LED brightness with potentiometer
 
 ## Credit
 
 - [Hyacinth](https://commons.wikimedia.org/wiki/File:3-bit_resolution_analog_comparison.png)
 - [Hyacinth](https://commons.wikimedia.org/wiki/File:2-bit_resolution_analog_comparison.png)
+

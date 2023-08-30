@@ -30,11 +30,7 @@ title: Pulse Width Modulation
 * Also specify how long the output is **on**, and how long it is **off** *(pulse width)*
 * The result is the "effective" output voltage can be varied (since the signal is switching between high and low)
 
-## Example
 
-<img src="lecture_pwm.assets/pwm_33v.png" style="width: 500px" alt="pulse width modulation illustrated" />
-
-<!-- Point out: 0v and 5v (3.3V for argon), different percentage duty cycles; ignore analogWrite for now -->
 
 ## Key Terms
 
@@ -48,13 +44,7 @@ title: Pulse Width Modulation
 
 <img src="lecture_pwm.assets/pwm_33v.png" style="width: 500px" alt="pulse width modulation illustrated" />
 
-<!-- point out
-* Square wave: a digital output that switches repeatedly from high (3.3v) to 0v
-* Pulse width: how long the signal is high (usually in milliseconds)
-* Duty cycle: percentage of time that a signal is at 3.3v
-* Period: time for one on/off cycle to complete (usually in milliseconds)
-* Frequency: how many times per second the on/off cycle repeats (Hz)
--->
+<!-- Point out: 0v and 5v (3.3V for argon), different percentage duty cycles; ignore analogWrite for now -->
 
 
 ## Questions
