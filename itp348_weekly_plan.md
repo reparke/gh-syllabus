@@ -274,6 +274,8 @@ Week 10 idea:
 
 - https://learn.sparkfun.com/tutorials/pull-up-resistors
 - https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
+- Digital Input (video)
+- Push buttons: component, schematic, pull-up resistors (video)
 
 ### Day 1
 
@@ -283,11 +285,6 @@ Week 10 idea:
 - Ask them to **digitalRead()** on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
 - connect button with pullup
 - Ask what is the voltage at pin when button pressed and not pressed
-
-#### Lecture
-
-- Digital Input (video)
-- Push buttons: component, schematic, pull-up resistors (video)
 
 #### Guided activity
 
@@ -319,18 +316,6 @@ Week 10 idea:
 
 ### Day 2
 
-#### ~~Lecture (==skip Fall 2022==)~~
-
-- ~~Switch (==skip Fall 2022==)~~
-  * ~~connect middle pin to argon~~
-  * ~~connect outer pins to power and ground~~
-  * ~~when moving the switch, it connects either left two, or right two pins~~
-
-#### ~~Guided activity (==skip Fall 2022==)~~
-
-* ~~Connect switch middle pin to digital input pin, outer pin to power and ground~~
-* ~~use serial monitor to display switch value~~
-
 #### Lecture
 
 - RGB LED lecture
@@ -349,16 +334,16 @@ Week 10 idea:
 - Rewrite sketch using `displayColor(r, g, b)` and `displayRandomColor()`
 - cycle button presses to display C (BG) M (RB) Y (RG)
 
-#### ~~Lecture  (==skip Fall 2022==)~~
+#### Lecture  (==if time==)
 
-- ~~Libraries~~
+- Libraries
 
-#### ~~Lab~~
+#### Lab
 
-- ~~Have students find and install `rgb-controls`~~
-- ~~Ask them to create some colors effects on their own~~
-- ~~Then walk through example together~~
-- ~~If time, introduce a button to control states (idea of a state machine)~~
+- Have students find and install `rgb-controls`
+- Ask them to create some colors effects on their own
+- Then walk through example together
+- If time, introduce a button to control states (idea of a state machine)
 
 ### Fall 2022 Holiday Plan
 
