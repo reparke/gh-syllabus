@@ -352,11 +352,13 @@ Week 10 idea:
 * Draw and discuss button
 * Guided: Wire RGB and Button with this [image](https://reparke.github.io/ITP348-Physical-Computing/lectures/week03/lecture_rgb_leds.assets/image-20210204155745432.png)
 * Guided: make button turn on D7
+* cover latch (motivate)
 * discuss RGB LED
 * have students make RGB LED turn on white when pressed only
 * Have students press show red for 1/2 sec, green for 1/2 sec, blue for 1/2 sec, then orange for 1/2 sec
-* show toggle
 * show random and have button press be random (if time)
+* show sequence if time (see 20233 TTh code)
+* show libraries if time
 * consider modifying assignment 
 
 
