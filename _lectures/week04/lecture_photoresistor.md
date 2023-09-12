@@ -112,7 +112,7 @@ title: Photoresistors
 
 ## Lab (with breakout groups)
 
-* Read and display the voltage between the photoresistor and resistor.
+* Read and display the value from between the photoresistor and resistor.
 * Measure it based on different lighting conditions: normal room light, covering the sensor with your hand, shining
 * Part 1: 
    * Display on the serial monitor if you room light **dark**, **light**, or **ambient**
