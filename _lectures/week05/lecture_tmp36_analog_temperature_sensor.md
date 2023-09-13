@@ -86,11 +86,11 @@ float result = (float) x / y;
 
 - Note that is **BOTTOM VIEW**
 
-## Lab Wiring
+## Exercise Wiring
 
 <img src="lecture_tmp36_analog_temperature_sensor.assets/tmp36_bb.png" alt="tmp36_bb" style="width:900px;" />
 
-## Lab
+## Exercise
 
 * Connect a TMP36 and output the current temperature to the serial monitor
 * Consider what type of input is this signal? How will this value be read by Argon?

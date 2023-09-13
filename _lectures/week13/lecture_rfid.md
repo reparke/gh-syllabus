@@ -202,7 +202,7 @@ scanId.trim();         //scanId has an intial leading " "
 
 <img src="lecture_rfid.assets/rfid_bb.png" style="width:800px;" />
 
-## Lab
+## Exercise
 
 - Connect RFID
 - Obtain IDs of two cards

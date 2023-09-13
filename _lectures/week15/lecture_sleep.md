@@ -133,7 +133,7 @@ Particle.connect();
 
   
 
-## Lab
+## Exercise
 
 <img src="lecture_sleep.assets/sleep_wake_button_bb.png" alt="sleep_wake_button_bb" style="width:700px;" />
 

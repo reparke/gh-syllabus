@@ -65,7 +65,7 @@ title: Switches
 
 <img src="lecture_switches.assets/image-20200711010308308.png" alt="image-20200711010308308" style="width:300px;" />
 
-## Lab
+## Exercise
 
 1. Connect switch to 3.3v, `A5`, and gnd
 2. Use serial monitor to read and display switch value

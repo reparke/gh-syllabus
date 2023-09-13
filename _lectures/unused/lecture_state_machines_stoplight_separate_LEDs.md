@@ -4,11 +4,11 @@
 
 # State Machines
 
-## In class Lab - Stoplight and Pedestrian Signal 
+## In class Exercise - Stoplight and Pedestrian Signal 
 
 <img src="lecture_state_machines_stoplight.assets/stoplight.jpg" alt="stoplight" style="height:500px;" /> <img src="lecture_state_machines_stoplight.assets/ped_signal.jpg" alt="ped_signal" style="width:400px;" />
 
-## In class Lab - Stoplight and Pedestrian Signal
+## In class Exercise - Stoplight and Pedestrian Signal
 
 * We are going to build a stoplight for a two way intersection with a diagonal pedestrian crossing (meaning all traffic stops)
   * also known as a pedestrian scramble
@@ -32,7 +32,7 @@
 
 ![bg contain](lecture_state_machines_stoplight.assets/pedestrian-walk.png)
 
-## In class Lab - Stoplight and Pedestrian Signal
+## In class Exercise - Stoplight and Pedestrian Signal
 
 
 * Download starting code
@@ -69,7 +69,7 @@ You'll need
 | Walk White LED     |  D6    |
 | Don't Walk Red LED   |  D7    |
 
-## Lab Stages
+## Exercise Stages
 1. North South stop light
 2. Add Pedestrian Walk / Don't Walk light
 3. Make Don't Walk light blink

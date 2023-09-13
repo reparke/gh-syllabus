@@ -76,6 +76,6 @@ void loop() {
     // changeRgbColor(pwmValue, pwmValue, pwmValue);
 
     Serial.println(lightReading);
-    //just for today, we are using a long delay
-    // delay(5000);
+    // just for today, we are using a long delay
+    delay(5000);
 }

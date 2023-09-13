@@ -10,9 +10,27 @@ title: Multi Tasking
 <!-- headingDivider: 2 -->
 
 # Multi-Tasking: Delay
-## Please wire the following
 
-<img src="lecture_multi_tasking.assets/image-20200709230855362.png" alt="image-20200709230855362" style="width:500px;" />
+## First, a Clarification
+
+* We've learned about creating a button / latch toggle
+```c++
+int currButtonVal = digitalRead(PIN_BUTTON);
+if (currButtonVal == LOW && prevButtonVal == HIGH) {
+    // code to execute on button press goes here
+}
+prevButtonVal = currButtonVal;
+```
+* Latches allow us to react to single button presses
+* Multi-tasking code is solving a different problem 
+
+
+## Consider
+![bg contain right](lecture_multi_tasking.assets/IOS_15_Homescreen.png)
+
+What is your phone doing right now while you're not using it?
+<!-- doing background tasks, and also waiting -->
+
 
 ## Review: Basic  LED Blink
 
@@ -23,10 +41,8 @@ void setup() {
 
 void loop() {
   digitalWrite(D7, HIGH);   
-  delay(1000);         
-    
-  //What exactly is happening right here?
-    
+  delay(1000);  //what is happening during the 1 sec delay?       
+       
   digitalWrite(D7, LOW);     
   delay(1000);                       
 }
@@ -44,6 +60,9 @@ void loop() {
   * This means the Argon is essentially paused and can't do anything else
 * We need to be able to synchronize events and **multi-task** just like our computers and phones
 * This means in the time between the LED turning off and turning on, the Argon can do other things
+
+
+
 
 ## Step 1: Let's Use the Clock
 
@@ -108,12 +127,12 @@ void loop() {
 ```c++
 unsigned long prevMillis = 0;	//last time we checked time
 int ledState = LOW;					//initial state
-int interval = 1000;
+int interval = 300;
 void loop() {
   unsigned long curMillis = millis();     //current time
   //check if (now - previous) is more than our interval
   if (curMillis - prevMillis >= interval) {   
-    previousMillis = curMillis;      //if YES, update previous
+    prevMillis = curMillis;      //if YES, update previous
     if (ledState == LOW) {           //if LED ON, now it is OFF
       ledState = HIGH;                                
     } else {						//if LED ON, now it is OFF
@@ -128,12 +147,12 @@ void loop() {
 ```c++
 unsigned long prevMillis = 0;	//last time we checked time
 int ledState = LOW;					//initial state
-int interval = 1000;
+int interval = 300;
 void loop() {
   unsigned long curMillis = millis();     //current time
   //check if (now - previous) is more than our interval
   if (curMillis - prevMillis >= interval) {   
-    previousMillis = curMillis;      //if YES, update previous
+    prevMillis = curMillis;      //if YES, update previous
     ledState = !ledState; //toggle true / false
     digitalWrite(LED_PIN, ledState);
   }
@@ -142,25 +161,19 @@ void loop() {
 
 ## Lab
 
-* We will start a project together
-* You will then work in breakout rooms to continue
-* We will join together as a group to discuss each stage
-* You will individually turn in your code as an in-class lab
-
-## Lab
-
-<img src="lecture_multi_tasking.assets/image-20200709230855362.png" alt="image-20200709230855362" style="height:300px;" />
+<img src="lecture_multi_tasking.assets/image-20200709230855362.png" alt="image-20200709230855362" style="height:600px;" />
 
 
 
-* Goals
-  * Blink **LED1** every 300 **milliseconds**
-  * Create a toggle button (latch) to turn **LED2** on at **rising edge** and off again at the **rising edge**
-  * Track the number of times the button is pressed
-  * Publish the number of button presses to the Particle cloud every **1000 milliseconds** 
+## Lab Goals
+
+* Blink **LED1** every **300 ms**
+* Create toggle button (latch) to turn **LED2** on at **rising edge** and off again at the **rising edge**
+* Track the number of times the button is pressed
+* Publish the number of button presses to cloud every **5000 ms** 
 * Bonus
   * Change **LED1** to be on for 300 ms and off for 700 ms
-  * After that is working, change the code so that when the toggle button is pressed, **LED2** starts blinking every 60 **milliseconds**, and when the toggle button is pressed again, **LED2** stops blinking
+  * Change  code so that when the toggle button is pressed, **LED2** starts blinking every 60 **milliseconds**, and when the toggle button is pressed again, **LED2** stops blinking
 
 
 ##  Stages to Build
@@ -168,7 +181,7 @@ void loop() {
 1. Use `delay` to blink **LED1** and then check for a button press (not a toggle); display Serial message if button pressed 
 2. Use `millis()` to fix blocking in #1 (we'll do #1 and #2 together)
 3. Enable toggle button to turn **LED2** on and off on the **rising edge**
-4. Track number of button presses and use `millis()` to publish number of button presses every **10\000 ms**
+4. Track number of button presses and use `millis()` to publish number of button presses every **5000 ms**
 
 ## Starting Code
 

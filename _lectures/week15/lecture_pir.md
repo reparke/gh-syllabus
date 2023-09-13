@@ -69,7 +69,7 @@ title: PIR - Passive Infrared Sensor
 
 <img src="lecture_pir.assets/pir_sparkfun_bb.png" style="width:1000px;" />
 
-## Lab
+## Exercise
 
 - Part 1: Connect sensor; turn on on-board LED when motion is detected and turn off when motion stops
 - Part 2: Create a "hold length" of 5 sec whenever movement is detected

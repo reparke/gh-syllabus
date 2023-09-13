@@ -1,10 +1,10 @@
-# rgb_button_mw_20233
+# blink_without_delay_state_button_two_leds_publish_20221_ic
 
-A Particle project named rgb_button_mw_20233
+A Particle project named blink_without_delay_state_button_two_leds_publish_20221_ic
 
 ## Welcome to your project!
 
-Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for rgb_button_mw_20233.
+Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for blink_without_delay_state_button_two_leds_publish_20221_ic.
 
 #### ```/src``` folder:  
 This is the source folder that contains the firmware files for your project. It should *not* be renamed. 

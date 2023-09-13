@@ -426,7 +426,7 @@ Week 10 idea:
 
 - Start: Blink one LED on and off, display serial message when button presed
 - Walk through blocking example with button
-- Demostrate millis example with one light blinking
+- Demonstrate millis example with one light blinking
 
 #### Lab
 
