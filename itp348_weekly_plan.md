@@ -495,10 +495,6 @@ Week 10 idea:
 
 - Have students connect OLED to display "Hello World"
 
-#### Guided Activity
-
-- Walk students through wiring
-
 #### Lab
 
 - Have students create an Etch-A-Sketch with OLED

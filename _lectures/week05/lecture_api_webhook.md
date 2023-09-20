@@ -30,7 +30,7 @@ title: APIs and Webhooks
 * Usually related to a software library
 * May also be related to a software framework
 * May also be an implementation of a protocol
-* Publishing APIs has allowed web communities to create an open architecture for sharing content and data between communities and applications
+
 
 ## Examples of APIs
 
@@ -40,8 +40,9 @@ title: APIs and Webhooks
 * Useful lists of public APIs
   * [https://github.com/toddmotto/public-apis](https://github.com/toddmotto/public-apis)
   * [https://github.com/abhishekbanthia/Public-APIs](https://github.com/abhishekbanthia/Public-APIs)
+* Publishing APIs on the internet has created an open architecture for sharing content and data
 
-## General Process to Interacting with Data from API
+## General Process to Interacting with API Data
 
 * Identify API you want to use (make account if necessary)
 * Create a Particle **webhook** that interacts with the API
@@ -51,15 +52,15 @@ title: APIs and Webhooks
 
 ## 
 
-<img src="api_send_only_visualization/Slide1.PNG" alt="Slide1" style="width:700px" />
+<img src="api_send_only_visualization/Slide1.PNG" alt="Slide1" style="width:950px" />
 
 ## 
 
-<img src="lecture_api_webhook.assets/Slide2.PNG" alt="Slide2" style="width:700px" />
+<img src="lecture_api_webhook.assets/Slide2.PNG" alt="Slide2" style="width:950px" />
 
 ## 
 
-<img src="lecture_api_webhook.assets/Slide3.PNG" alt="Slide3" style="width:700px" />
+<img src="lecture_api_webhook.assets/Slide3.PNG" alt="Slide3" style="width:950px" />
 
 ## Creating a Webhook
 

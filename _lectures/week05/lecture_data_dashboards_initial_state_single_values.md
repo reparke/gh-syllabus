@@ -21,7 +21,7 @@ title: Data Visualization and Dashboard with Initial State (Single Values)
 
 ## Example Environmental Dashboard
 
-<img src="lecture_data_dashboards_initial_state_single_values.assets/image-20200724004339825.png" alt="image-20200724004339825" style="width:400px;" /><img src="lecture_data_dashboards_initial_state_single_values.assets/image-20200724005050658.png" alt="image-20200724005050658" style="width:400px;" />
+<img src="lecture_data_dashboards_initial_state_single_values.assets/image-20200724004339825.png" alt="image-20200724004339825" style="width:500px;" /><img src="lecture_data_dashboards_initial_state_single_values.assets/image-20200724005050658.png" alt="image-20200724005050658" style="width:600px;" />
 
 ## Uses of Dashboards
 

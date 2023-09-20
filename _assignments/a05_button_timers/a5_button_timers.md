@@ -26,7 +26,7 @@ Goals
 
 ![WIN_20220205_15_41_56_Pro](a5_button_timers.assets/WIN_20220205_15_41_56_Pro.jpg)
 
-The assignment is create a device that supports multiple timers. There are two buttons (red and blue) which trigger different timers. The RGB LED will flash red and/or blue briefly each second to indicate which timers are active. When a timer goes off, the RGB LED will flash a random sequence of colors to indicate a timer has ended. The majority of all the timing will be controlled a multi-tasking approach with `millis()` instead of `delay()`.
+The assignment is create a device that supports multiple timers. There are two buttons (red and blue) which trigger different timers. The RGB LED will flash red and/or blue briefly each second to indicate which timers are active. When a timer goes off, the RGB LED will flash a random sequence of colors to indicate a timer has ended. The majority of all the timing will be controlled a multi-tasking approach with `millis()` instead of `delay()` or `while` loops.
 
 At regular intervals, the device will publish how many times each timer has gone off.
 
@@ -50,7 +50,9 @@ Here is a video overview: [https://youtu.be/MuYajFfvIvk](https://youtu.be/MuYajF
 
 -   Create a Fritzing breadboard prototype layout of your design
 -   Once you’re satisfied with the design, build the device and create firmware
--   **Important: Most the timing in this assignment must use `millis()`. You will lose points for using `delay()` except where it is indicated**
+-   **Important**
+    1. You must use `millis()` to control timing will lose points for using `delay()` except where it is indicated
+    2. Do not use `while` loops in this assignment
 -   Buttons 
     -   Should be programmed as as latches
     -   Pressing the red button when the red timer is inactive will start the red timer (same for blue button)
@@ -128,7 +130,7 @@ Here is a video overview: [https://youtu.be/MuYajFfvIvk](https://youtu.be/MuYajF
 
 - Using `millis()` timing, create logic to use the RGB LED to display the active timers every **1 second** 
 - When the red timer is active, briefly flash red (you are allowed to use 100 millisecond `delay()` to show each color)
-- Repeat for the blue timer
+- When the red timer is active, briefly flash red (you are allowed to use 100 millisecond `delay()` to show each color)
 
 #### Testing Stage 5	
 
