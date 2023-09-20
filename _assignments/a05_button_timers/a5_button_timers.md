@@ -76,10 +76,10 @@ Here is a video overview: [https://youtu.be/MuYajFfvIvk](https://youtu.be/MuYajF
 ### Stage 2: Starting and Stopping Timers
 
 - Create the necessary variables to track the last `millis()` time of the red and blue timers
-- You will also need to track the state of whether the red timer is active, and whether the blue timer is active
+- You will also need to track the state of whether the red timer is active, and whether the blue timer is active (Hint: you will have one variable to show the if the red timer is active or not, and one variable for the blue timer. What type of variable makes sense for these?)
 - Logic (applied to blue button as well)
   - If red button is pressed and red timer is active, make the timer inactive
-  - If red button is pressed and red timer is not active, start the timer 	
+  - If red button is pressed and red timer is not active, start the timer (Hint: )	
 
 #### Testing Stage 2
 
@@ -137,11 +137,6 @@ Here is a video overview: [https://youtu.be/MuYajFfvIvk](https://youtu.be/MuYajF
 - Press the red button to start the red timer. The RGB LED should flash red once per second. After 7 seconds, the ending light sequence should display, and the flashing should.
 - Repeat for the blue button.
 - Press the red button and then the blue button. The RGB LED should flash red and then blue once per second. 
-
-### Extra Credit
-
-- Remove all `delay()`
-- Instead, use `millis()` to control the on/off blinking for the status indicator and ending timer
 
 
 
