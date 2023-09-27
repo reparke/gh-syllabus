@@ -69,11 +69,15 @@ There are 7 days in a week
 // MicroOLED Object Declaration //
 //////////////////////////////////
 
-// RESET is hardwired so use any pin that is unused
+//The library assumes a reset pin is necessary. The Qwiic OLED has RST hard-wired, so pick an arbitrarty IO pin that is not being used
+
 #define PIN_RESET D9
 
-// The DC_JUMPER is the I2C Address Select jumper. Set to 1 if the jumper is
-// open (Default), or set to 0 if it's closed.
+// The DC_JUMPER is the I2C Address Select jumper. 
+// Set to 1 if the jumper is open (Default), or set to 0 if it's closed.
+// DC = 0 --> I2C Address = 0x3C
+// DC = 1 --> I2C Address = 0x3D 
+
 #define DC_JUMPER 1
 
 MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // create object to communicate with OLED

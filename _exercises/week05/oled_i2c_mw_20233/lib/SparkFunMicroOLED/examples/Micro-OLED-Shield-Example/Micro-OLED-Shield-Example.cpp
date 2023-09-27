@@ -42,8 +42,10 @@
 //////////////////////////////////
 // Declare a MicroOLED object. If no parameters are supplied, default pins are
 // used, which will work for the Photon Micro OLED Shield (RST=D7, DC=D6, CS=A2)
-// MicroOLED oled;
-MicroOLED oled(MODE_I2C, D7, 0);    // Example I2C declaration RST=D7, DC=LOW (0)
+//MicroOLED oled;
+// MicroOLED oled(MODE_I2C, D7, 0);    // Example I2C declaration RST=D7, DC=LOW (0)
+MicroOLED oled(MODE_I2C, 9, 1);    // Example I2C declaration RST=D7, DC=LOW (0)
+
 
 //SYSTEM_MODE(MANUAL);
 
@@ -275,7 +277,7 @@ void textExamples()
     oled.setFontType(0);
     oled.print("A7:");
     oled.setFontType(2);
-    oled.print(analogRead(A7));
+    // oled.print(analogRead(A7));
     oled.display();
     delay(100);
   }

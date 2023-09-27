@@ -61,7 +61,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 
 * Blue text on black screen
-* 64 pixels (H) x 48 pixels (W)
+* 64 pixels (W) x 48 pixels (H)
 * Operates at 3.3v
 * Controlled via I2C protocol *(more on this later)*
 * 31 pins (!) 

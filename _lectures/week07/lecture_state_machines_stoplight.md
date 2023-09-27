@@ -54,7 +54,7 @@ title: State Machines Part 2 - Stoplight Example
 
 ## Wiring Diagram
 
-![image-20210301155641411](lecture_state_machines_stoplight.assets/stoplight_RGB_OLED_bb.png)
+![bg contain](lecture_state_machines_stoplight.assets/stoplight_RGB_OLED_bb.png)
 
 
 

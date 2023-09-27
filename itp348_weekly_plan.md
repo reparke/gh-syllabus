@@ -531,7 +531,7 @@ Week 10 idea:
 
 #### Lecture
 
-- ​	Start Blynk
+- Start Blynk
 
 #### Guided activity
 

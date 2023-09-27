@@ -18,7 +18,8 @@ title: Creating IoT Mobile Apps with Blynk
 
 ## What is Blynk?
 
-* Blynk is a drag-and-drop, visual tool to build mobile apps
+* Blynk is a "low code" platform for interacting with IoT products
+* "No code" drag-and-drop, visual tool to build mobile apps
 * Mobile apps can interact with, receive data from, and control IoT devices 
 * You can develop add your own branding and package the app with your IoT device
 
@@ -86,11 +87,11 @@ Blynk Cloud website ([https://blynk.cloud](https://blynk.cloud))
 
 ## Integration Phase 1: Create datastreams
 
-<img src="lecture_blynk_cloud.assets/image-20210905212827674.png" alt="image-20210905212827674" style="width:400px" />
+<img src="lecture_blynk_cloud.assets/image-20210905212827674.png" alt="image-20210905212827674" style="width:500px" />
 
 
 
-<img src="lecture_blynk_cloud.assets/image-20210905213011243.png" alt="image-20210905213011243" style="width:400px" />
+<img src="lecture_blynk_cloud.assets/image-20210905213011243.png" alt="image-20210905213011243" style="width:500px" />
 
 Click **Save**
 
@@ -128,15 +129,12 @@ Copy this info to include in sketch below (**Note: this is just an example--use 
 #define BLYNK_AUTH_TOKEN "ADD_YOUR_OWN"
 ```
 
-**Important:** Make sure to **delete** the **`;`** at the end of the line `#define BLYNK_AUTH_TOKEN` (it shouldn't be there)
-
 
 
 2. Also add these lines beneath the template lines:
 
 ```c++
-#define BLYNK_PRINT Serial 
-#define BLYNK_IP IPAddress(64, 225, 16, 22) 
+#define BLYNK_PRINT Serial //this is optional
 #include <blynk.h>
 ```
 
@@ -145,7 +143,7 @@ Copy this info to include in sketch below (**Note: this is just an example--use 
 
 ```c++
 delay(5000);
-Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
+Blynk.begin(BLYNK_AUTH_TOKEN);
 ```
 
 
@@ -155,17 +153,32 @@ Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);
 Blynk.run();
 ```
 
-<!--Change `BLYNK_AUTH_TOKEN` to be a `char[]`
-`#define BLYNK_AUTH_TOKEN "z31PRR2NbCeR91OvDzvNTEQzLC_Bezwg";`
-to
-`char auth[] = "z31PRR2NbCeR91OvDzvNTEQzLC_Bezwg";`
--->
+After integration, your code should look something like the following
+
+```c++
+#define BLYNK_TEMPLATE_ID "ADD_YOUR_OWN"
+#define BLYNK_DEVICE_NAME "ADD_YOUR_OWN"
+#define BLYNK_AUTH_TOKEN "ADD_YOUR_OWN"
+
+#define BLYNK_PRINT Serial //this is optional
+#include <blynk.h>
+
+void setup() {
+  delay(5000);
+  Blynk.begin(BLYNK_AUTH_TOKEN);
+}
+
+void loop() {
+  Blynk.run();
+}
+```
+
+
 
 
 ## Integration Phase 3: Blynk App
 
 - Install Blynk app on your phone
-- Switch to [Developer Mode](https://docs.blynk.io/en/getting-started/developer-mode) and select the template you created
 - Build interface in Blynk app
 
 # Building Blynk Projects
@@ -178,7 +191,7 @@ to
 
 ## App: Send data from Blynk App to Argon
 
-![bg right:33%](lecture_blynk_cloud.assets/blynk (8).png)![blynk lecture_blynk_cloud.assets/blynk (2).png)](lecture_blynk_cloud.assets/blynk (2).png)
+![width:500px](lecture_blynk_cloud.assets/blynk_8.png)![blynk lecture_blynk_cloud.assets/blynk_2.png) width:400px](lecture_blynk_cloud.assets/blynk_2.png)
 
 
 ## Syntax: Send data from Blynk App to Argon
@@ -229,7 +242,7 @@ void loop() {
 
 ## App: Send data from Argon to Blynk App
 
-![blynk (4)](lecture_blynk_cloud.assets/blynk (4).png)
+![blynk_4](lecture_blynk_cloud.assets/blynk_4.png)
 
 ## Wiring for Exercise and Lab
 
@@ -275,7 +288,7 @@ void loop() {
 
   * Use **ZeRGBa** to control RGB LED on pins `V0 V1 V2` *(app --> argon)*
   * Use a display to show if magnetic switch is `open` or `closed` on pin `V3` *(argon --> app)*
-  * Use a button on `V4` to trigger the RGB LED to display a random color (white, yellow, magenta, red) *(app --> argon)*
+  * Use a button on `V4` to trigger the RGB LED to display a color randomly chosen from white, yellow, magenta, red *(app --> argon)*
   * When one of the four random colors is displayed on the RGB LED, send a string representing that color to the app on pin `V7` *(argon --> app)*
 
 * What happens if you put `Blynk.syncAll();` at the end of `setup()`? 

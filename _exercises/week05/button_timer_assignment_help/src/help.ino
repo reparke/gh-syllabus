@@ -1,72 +1,44 @@
-const int PIN_BUTTON = D2;
-int buttonVal;
+//phase 1: 10 sec timer
+const unsigned long INTERVAL_TIMER = 4000;
+unsigned long prevMillis = 0;
+unsigned long currMillis = 0;
 
-// buton val
+//phase 2: timer starts ON and goes forever, but button press will stop timer forever
 int prevButtonState = HIGH;
 int currButtonState = HIGH;
+bool alarmOn = true; //alarm "state" whether on (true) or off (false)
 
-// millis
-bool timerActive = true;
-unsigned long prevTimerMillis = 0;
-unsigned long currTimerMillis = 0;
-const unsigned long INTERVAL_TIMER = 5000;
+//phase 3: timer starts ON and goes forever, 
+//button press once starts timer
+//button press again resets timer back on 
 
-void setup() { pinMode(PIN_BUTTON, INPUT); }
+const int PIN_BUTTON = D2;
 
-// example 1: continual 10 sec timer constant
-//  void loop() {
-//      currTimerMillis = millis();
-//      if (currTimerMillis - prevTimerMillis > INTERVAL_TIMER) {
-//          Serial.println("Timer went off!");
-//          prevTimerMillis = currTimerMillis;
-//      }
-//  }
+void setup() {
+    pinMode(PIN_BUTTON, INPUT);
+    Serial.begin(9600);
+}
 
-/* example 2: timer is going infinitely but button turns it off permanently
-add global variable for alarm state = true
-need to add button latch
-add timerActive == true to millis IF
-  */
-// void loop() {
-//     currTimerMillis = millis();
-//     currButtonState = digitalRead(PIN_BUTTON);
-//     if (currButtonState == LOW && prevButtonState == HIGH) {
-//         timerActive = false;
-//         Serial.println("Timer now stopped");
-//     }
-//     prevButtonState = currButtonState;
-
-//     if (currTimerMillis - prevTimerMillis > INTERVAL_TIMER &&
-//         timerActive == true) {
-//         Serial.println("Timer went off!");
-//         prevTimerMillis = currTimerMillis;
-//     }
-// }
-
-/* example 3: timer is going infinitely but button toggles off and on
-need to add button latch
-add timerActive == true to millis IF
-  */
 void loop() {
-    currTimerMillis = millis();
+    currMillis = millis();
 
+    //set up a latch
     currButtonState = digitalRead(PIN_BUTTON);
     if (currButtonState == LOW && prevButtonState == HIGH) {
-        if (timerActive == true) {
-            timerActive = false;
-            Serial.println("Timer now stopped");
-        } else {  // timer is off...how do we turn it back on? how do we track
-                  // "timer on"?
-            timerActive = true;
-            prevTimerMillis = currTimerMillis;
-            Serial.println("Timer now restarted");
+        //falling edge
+        if (alarmOn == true) { //alarm is ON
+            alarmOn = false;    //turn off alarm
+            Serial.println("Timar stopped");
+        }
+        else {//alarm is currently OFF
+            alarmOn = true;
+            prevMillis = currMillis;   //resets the timer
         }
     }
     prevButtonState = currButtonState;
 
-    if (currTimerMillis - prevTimerMillis > INTERVAL_TIMER &&
-        timerActive == true) {
-        Serial.println("Timer went off!");
-        prevTimerMillis = currTimerMillis;
+    if (alarmOn == true && currMillis - prevMillis > INTERVAL_TIMER) {
+        prevMillis = currMillis;
+        Serial.println("Timer just went off");
     }
 }
