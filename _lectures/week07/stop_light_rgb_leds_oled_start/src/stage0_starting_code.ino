@@ -16,9 +16,10 @@ const int BLINK_RATE = 500;             // time for blinking don't walk light
 
 // TODO:  Create enum State for stoplight states
 
+// TODO: create enum Color for signal light colors
+
 // TODO: Create variables for state change and state length
 
-// TODO: create enum Color for signal light colors
 
 void setup() {
     Serial.begin(9600);
@@ -35,11 +36,21 @@ void setup() {
 }
 
 /* ======= FUNCTIONS =========== */
-// TODO: COMPLETE setColor
-void setColor() {}
 
 // TODO: COMPLETE updateNextState
 void updateNextState() {}
+
+// TODO: COMPLETE updateNextStateDuration
+void updateNextStateDuration() {}
+
+// TODO: COMPLETE setColor
+void setColor() {}
+
+// TODO: COMPLETE updateLights
+void updateLights() {}
+
+// TODO: COMPLETE updateOLED
+void updateOLED() {}
 
 void loop() {
     // TODO: comment out this function after verifying OLED and RGB LED work
@@ -49,22 +60,6 @@ void loop() {
 /* ======= FUNCTIONS FOR DEBUGGING LED WIRING ========= */
 // functions used for testing only
 void testLightandOLED() {
-    // test OLED screen
-    oled.clear(PAGE);
-    oled.setCursor(0, 0);
-    oled.setFontType(0);
-    oled.println("Testing\nOLED");
-    oled.display();
-
-    oled.setFontType(0);  // 7-segment font
-    for (int i = 0; i < 20; i++) {
-        oled.print(".");
-        oled.display();
-        delay(10);
-    }
-
-    //-----------------------
-
     // test R, G, B LEDs individually; then white
     int lights[] = {PIN_RED, PIN_GREEN, PIN_BLUE};
 
@@ -85,4 +80,22 @@ void testLightandOLED() {
     for (int i = 0; i < arraySize(lights); i++) {
         digitalWrite(lights[i], HIGH);
     }
+
+    //-----------------------
+
+    // test OLED screen
+    oled.clear(PAGE);
+    oled.setCursor(0, 0);
+    oled.setFontType(0);
+    oled.println("Testing OLED");
+    oled.display();
+
+    oled.setFontType(0);  // 7-segment font
+    for (int i = 0; i < 20; i++) {
+        oled.print(".");
+        oled.display();
+        delay(10);
+    }
+    oled.clear(PAGE);  // Clear the display
+    oled.display();
 }
