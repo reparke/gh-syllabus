@@ -14,11 +14,11 @@ This list include the components we covered in the course. You can also use comp
 
 -   Temperature sensors
     -   [TMP 36](https://www.sparkfun.com/products/10988)
-    -   [DHT 22](https://www.sparkfun.com/products/10167)
--   Humidity sensor: [DHT 22](https://www.sparkfun.com/products/10167)
+    -   [DHT 20](https://www.sparkfun.com/products/10167)
+-   Humidity sensor: [DHT 20](https://www.sparkfun.com/products/10167)
 -   [Ultrasonic distance sensor](https://www.sparkfun.com/products/15569)
 -   [Passive infrared sensor (PIR)](https://www.sparkfun.com/products/13285) (infrared movement detection)
--   [MAX30105 heart rate and temperature sensor](https://www.sparkfun.com/products/14045)
+-   [Pulse / heart rate](https://www.sparkfun.com/products/11574)
 -   [RFID sensor](https://www.amazon.com/gp/product/B01CSTW0IA) 
 -   [Accelerometer](https://www.sparkfun.com/products/14480)
 
@@ -39,11 +39,6 @@ This list include the components we covered in the course. You can also use comp
 * Servo
 * Buzzer
 
-## In-class projects
-
-* Bluetooth-controlled car
-* Smart watch (heart rate + weather)
-
 ## Possible Components Not Included in Our Kits
 
 There is no expectation or need to purchase additional sensors. However, here are some sensors students have used in past projects. Note that these might require soldering pins and/or modifying libraries
@@ -59,6 +54,11 @@ There is no expectation or need to purchase additional sensors. However, here ar
 - [Submersible Pump](https://www.adafruit.com/product/4547)
 
 - [Flex Sensor](https://www.sparkfun.com/products/10264)
+
+## Note about in-class exercises and past assignments
+
+* It is possible to base a project on part of an assignment from class (for example Bluetooth-controlled car or smart watch)
+* However, if you base your project on something you have already done for class, your project will need to add significant complexity and features to what has been completed in class
 
 ## Cloud Services
 
