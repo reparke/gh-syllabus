@@ -45,8 +45,8 @@ title: State Machines Part 3 - Dish Washer Example
 | Economy                          | Deluxe                           | SuperDeluxe                      |
 | -------------------------------- | -------------------------------- | -------------------------------- |
 | **Idle** if until button pressed | **Idle** if until button pressed | **Idle** if until button pressed |
-| **ColdWash** for 2 min           | **HotWash** for 2 min            | **HotWash** for 4 min            |
-| **RegularDry** for 2 min         | **RegularDry** for 2 min         | **ExtraDry** for 4 min           |
+| **ColdWash** (2 min)             | **HotWash** (2 min)              | **HotWash** (2 min)              |
+| **RegularDry** (2 min)           | **RegularDry** (2 min)           | **ExtraDry** (4 min)             |
 | **Idle**                         | **Idle**                         | **Idle**                         |
 
 

@@ -42,20 +42,9 @@ enum Color { Red, Blue, Orange, Yellow, White, Black };
 
 // TODO: create other state variables
 unsigned long prevMillisState = 0;
+unsigned long currMillisState = 0;
 
 /* ===== FUNCTIONS ====== */
-// TODO: create void getCyclePosition()
-// reads potentiometer and updates current Cycle
-
-// TODO: create void updateNextDuration()
-// update global state duration variable based on the current state
-
-// TODO: create void updateOutputs()
-// updates LEDs based on upcoming state
-
-// TODO: create void updateNextState()
-// uses button inputs and current state to update global state variable
-
 // changes the light color based on the enum Color value
 // use this function inside of updateOutputs()
 void setColor(Color c) {
@@ -92,11 +81,18 @@ void setColor(Color c) {
             break;
     }
 }
+// TODO: create void getCyclePosition()
+// reads potentiometer and updates current Cycle
+
+// TODO: create void updateNextState()
+// uses button inputs and current state to update global state variable
 
 void loop() {
     // this function is just for debugging
     // delete when you start to code the transitions
     testInitialSetup();
+
+    // updateNextState();
 }
 
 void setup() {
@@ -165,6 +161,7 @@ String getStateString() {
         case HotWash:
             output = "Hot Wash";
             break;
+
 
         case ExtraDry:
             output = "Extra Dry";

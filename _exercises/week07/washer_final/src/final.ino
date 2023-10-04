@@ -33,7 +33,6 @@ const int SHORT_CYCLE = 2000;
 const int LONG_CYCLE = 4000;
 
 unsigned long prevMillisState = 0;
-unsigned long stateDuration = 0;
 
 // create enum State for states
 enum State { Idle, HotWash, ColdWash, ExtraDry, RegularDry };
@@ -100,6 +99,42 @@ String getCycleString() {
 /* ===== FUNCTIONS ====== */
 // TODO: create getCyclePotion
 // reads potentiometer and updates current Cycle
+
+void setColor(Color c) {
+    switch (c) {
+        case Red:
+            digitalWrite(LED_RED_PIN, HIGH);
+            digitalWrite(LED_GREEN_PIN, LOW);
+            digitalWrite(LED_BLUE_PIN, LOW);
+            break;
+        case White:
+            digitalWrite(LED_RED_PIN, HIGH);
+            digitalWrite(LED_GREEN_PIN, HIGH);
+            digitalWrite(LED_BLUE_PIN, HIGH);
+            break;
+        case Blue:
+            digitalWrite(LED_RED_PIN, LOW);
+            digitalWrite(LED_GREEN_PIN, LOW);
+            digitalWrite(LED_BLUE_PIN, HIGH);
+            break;
+        case Orange:
+            analogWrite(LED_RED_PIN, 255);
+            analogWrite(LED_GREEN_PIN, 165);
+            digitalWrite(LED_BLUE_PIN, LOW);
+            break;
+        case Yellow:
+            analogWrite(LED_RED_PIN, 0);
+            analogWrite(LED_GREEN_PIN, 255);
+            digitalWrite(LED_BLUE_PIN, LOW);
+            break;
+        case Black:
+            digitalWrite(LED_RED_PIN, LOW);
+            digitalWrite(LED_GREEN_PIN, LOW);
+            digitalWrite(LED_BLUE_PIN, LOW);
+            break;
+    }
+}
+
 void getCyclePosition() {
     int value = analogRead(POT_PIN);
     if (value < 1365 && value >= 0)
@@ -143,14 +178,13 @@ void updateNextState() {
                         break;
                 }
                 prevMillisState = currMillis;
-                updateNextDuration();
-                updateOutputs();
+                setColor(White);
 
                 displayAllStateInfo();
             }
             break;
         case HotWash:
-            if (currMillis - prevMillisState > stateDuration) {
+            if (currMillis - prevMillisState > SHORT_CYCLE) {
                 prevMillisState = currMillis;
                 counter++;
 
@@ -159,138 +193,45 @@ void updateNextState() {
                 } else if (currentCycle == SuperDeluxe) {
                     currentState = ExtraDry;
                 }
-                updateNextDuration();
-                updateOutputs();
+                setColor(Red);
 
                 displayAllStateInfo();
             }
             break;
         case ColdWash:
-            if (currMillis - prevMillisState > stateDuration) {
+            if (currMillis - prevMillisState > SHORT_CYCLE) {
                 prevMillisState = currMillis;
                 counter++;
 
                 currentState = RegularDry;
-                updateNextDuration();
-                updateOutputs();
+                setColor(Blue);
 
                 displayAllStateInfo();
             }
             break;
 
         case RegularDry:
-            if (currMillis - prevMillisState > stateDuration) {
+            if (currMillis - prevMillisState > SHORT_CYCLE) {
                 prevMillisState = currMillis;
                 counter++;
 
                 currentState = Idle;
-                updateNextDuration();
-                updateOutputs();
+                setColor(Orange);
+
                 displayAllStateInfo();
             }
             break;
 
         case ExtraDry:
-            if (currMillis - prevMillisState > stateDuration) {
+            if (currMillis - prevMillisState > LONG_CYCLE) {
                 prevMillisState = currMillis;
                 counter++;
 
                 currentState = Idle;
-                updateNextDuration();
-                updateOutputs();
+                setColor(Yellow);
 
                 displayAllStateInfo();
             }
-            break;
-    }
-}
-
-// TODO: create updateNextDuration
-// update global state duration variable based on the current state
-void updateNextDuration() {
-    switch (currentState) {
-        case Idle:
-            stateDuration = 0;
-            break;
-        case HotWash:
-            switch (currentCycle) {
-                case Deluxe:
-                    stateDuration = SHORT_CYCLE;
-                    break;
-                case SuperDeluxe:
-                    stateDuration = LONG_CYCLE;
-                    break;
-            }
-            break;
-        case ColdWash:
-            stateDuration = SHORT_CYCLE;
-            break;
-        case RegularDry:
-            stateDuration = SHORT_CYCLE;
-            break;
-        case ExtraDry:
-            stateDuration = LONG_CYCLE;
-            break;
-    }
-}
-
-void setColor(Color c) {
-    switch (c) {
-        case Red:
-            digitalWrite(LED_RED_PIN, HIGH);
-            digitalWrite(LED_GREEN_PIN, LOW);
-            digitalWrite(LED_BLUE_PIN, LOW);
-            break;
-        case White:
-            digitalWrite(LED_RED_PIN, HIGH);
-            digitalWrite(LED_GREEN_PIN, HIGH);
-            digitalWrite(LED_BLUE_PIN, HIGH);
-            break;
-        case Blue:
-            digitalWrite(LED_RED_PIN, LOW);
-            digitalWrite(LED_GREEN_PIN, LOW);
-            digitalWrite(LED_BLUE_PIN, HIGH);
-            break;
-        case Orange:
-            analogWrite(LED_RED_PIN, 255);
-            analogWrite(LED_GREEN_PIN, 165);
-            digitalWrite(LED_BLUE_PIN, LOW);
-            break;
-        case Yellow:
-            analogWrite(LED_RED_PIN, 0);
-            analogWrite(LED_GREEN_PIN, 255);
-            digitalWrite(LED_BLUE_PIN, LOW);
-            break;
-        case Black:
-            digitalWrite(LED_RED_PIN, LOW);
-            digitalWrite(LED_GREEN_PIN, LOW);
-            digitalWrite(LED_BLUE_PIN, LOW);
-            break;
-    }
-}
-
-// TODO: create updateOutputs
-// updates LEDs based on upcoming state
-void updateOutputs() {
-    switch (currentState) {
-        case Idle:
-            setColor(White);
-            break;
-
-        case HotWash:  // red
-            setColor(Red);
-            break;
-
-        case ColdWash:  // blue
-            setColor(Blue);
-            break;
-
-        case RegularDry:  // orange
-            setColor(Orange);
-            break;
-
-        case ExtraDry:  // orange
-            setColor(Yellow);
             break;
     }
 }
@@ -320,10 +261,10 @@ void displayAllStateInfo() {
     String cycleString = getCycleString();
 
     String output =
-        "%d: %s; Cycle = %s; Duration = %d, Pot = %d, EnumState = %d, "
+        "%d: %s; Cycle = %s; Pot = %d, EnumState = %d, "
         "EnumCycle = %d";
     Serial.printlnf(output, counter, stateString.c_str(), cycleString.c_str(),
-                    stateDuration, valPot, currentState, currentCycle);
+                     valPot, currentState, currentCycle);
 }
 
 // functions used for testing only
