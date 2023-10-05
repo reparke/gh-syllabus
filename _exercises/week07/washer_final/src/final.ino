@@ -135,24 +135,23 @@ void setColor(Color c) {
     }
 }
 
-void getCyclePosition() {
-    int value = analogRead(POT_PIN);
-    if (value < 1365 && value >= 0)
-        currentCycle = Economy;
-    else if (value >= 1365 && value < 2730)
-        currentCycle = Deluxe;
-    else
-        currentCycle = SuperDeluxe;
-}
+// void getCyclePosition() {
+//     int value = analogRead(POT_PIN);
+//     if (value < 1365 && value >= 0)
+//         currentCycle = Economy;
+//     else if (value >= 1365 && value < 2730)
+//         currentCycle = Deluxe;
+//     else
+//         currentCycle = SuperDeluxe;
+// }
 
 // Alternate version of getCyclePotion that uses map
 // reads potentiometer and returns current Cycle
-// Cycle getCyclePosition() {
-//     int rawValue = analogRead(POT_PIN);
-//     int mappedVal = map(rawValue, 0, 4095, 0, 2);
-//     Cycle c = (Cycle)mappedVal;
-//     return c;
-// }
+void getCyclePosition() {
+    int rawValue = analogRead(POT_PIN);
+    int mappedVal = map(rawValue, 0, 4095, 0, 2);
+    currentCycle = (Cycle)mappedVal;
+}
 
 // TODO: create updateNextState
 // uses button inputs and current state to update global state variable
@@ -264,7 +263,7 @@ void displayAllStateInfo() {
         "%d: %s; Cycle = %s; Pot = %d, EnumState = %d, "
         "EnumCycle = %d";
     Serial.printlnf(output, counter, stateString.c_str(), cycleString.c_str(),
-                     valPot, currentState, currentCycle);
+                    valPot, currentState, currentCycle);
 }
 
 // functions used for testing only

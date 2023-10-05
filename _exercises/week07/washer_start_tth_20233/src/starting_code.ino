@@ -8,7 +8,7 @@
         RegularDry 2 min
         Idle
     Super
-        HotWash 4 min
+        HotWash 2 min
         ExtraDry 4 min
         Idle
 
@@ -20,6 +20,14 @@ Colors:
     RegularDry  orange
     ExtraDry    yellow
 
+    TODO:
+    X represents states and cycles with enums
+    X variables to track state, cycle, and millis
+    - updateNextState
+        check what state we are in
+        based on current conditions, decided next state
+        "current conditions": current state, timer, cycle, "inputs" (pot and
+switch) update to next state update any potential OUTPUTS (in our case, RGB LED)
 */
 
 const int POT_PIN = A5;
@@ -37,12 +45,16 @@ int counter = 0;  // debugging only
 enum Color { Red, Blue, Orange, Yellow, White, Black };
 
 // TODO: create enum State for states
+enum State { Idle, ColdWash, HotWash, RegularDry, ExtraDry };
 
 // TODO: create enum Cycle for cycles
+enum Cycle { Economy, Deluxe, SuperDeluxe };
 
 // TODO: create other state variables
 unsigned long prevMillisState = 0;
 unsigned long currMillisState = 0;
+Cycle currentCycle = Economy;
+State currentState = Idle;
 
 /* ===== FUNCTIONS ====== */
 // changes the light color based on the enum Color value
@@ -83,16 +95,112 @@ void setColor(Color c) {
 }
 // TODO: create void getCyclePosition()
 // reads potentiometer and updates current Cycle
+void getCyclePosition() {
+    // calling this function should update our current cycle
+    // pot goes 0-4095----0-1365 is econ, 1366-2730 is deluxe, and rest is
+    // superdel
+    int potVal = analogRead(POT_PIN);
+    if (potVal >= 0 && potVal < 1366) {
+        currentCycle = Economy;
+    } else if (potVal >= 1366 && potVal < 2730) {
+        currentCycle = Deluxe;
+    } else {
+        currentCycle = SuperDeluxe;
+    }
+
+    // int potVal = analogRead(POT_PIN);
+    // int mappedPotVal = map(potVal, 0.0, 4095.0, 0.0, 2.0);  //test this
+    // currentCycle = (Cycle)mappedPotVal;     //MINDBLOWN!
+}
 
 // TODO: create void updateNextState()
 // uses button inputs and current state to update global state variable
+void updateNextState() {
+    //  checking current conditions (currentState, timer, inputs)
+    // choosing new state and updating ouputs
+    int switchVal = digitalRead(SWITCH_PIN);
+
+    switch (currentState) {
+
+        case Idle:  // write case for ColdWash and RegularDry
+            // int switchVal = digitalRead(SWITCH_PIN);
+            if ((switchVal) == LOW) {  // switch is closed!
+                getCyclePosition();    // updates current cycle
+                prevMillisState = millis();
+                switch (currentCycle) {
+                    case Economy:
+                        currentState = ColdWash;
+                        Serial.println("Entering Cold wash (Economy)");
+                        setColor(Blue);
+                        break;
+                    case Deluxe:
+                        currentState = HotWash;
+                        Serial.println("Entering Hot wash (Deluxe)");
+                        setColor(Red);
+                        break;
+                    case SuperDeluxe:
+                        currentState = HotWash;
+                        Serial.println("Entering Hot wash (Super Deluxe)");
+                        setColor(Red);
+                        break;
+                }
+            }
+            break;
+        case ColdWash:
+            currMillisState = millis();
+            if (currMillisState - prevMillisState > SHORT_CYCLE) {
+                prevMillisState = currMillisState;
+                currentState = RegularDry;
+                Serial.println("Enter Regular Dry (Economy or Deluxe)");
+                setColor(Blue);
+            }
+
+            break;
+        case HotWash:
+            currMillisState = millis();
+            if (currMillisState - prevMillisState > SHORT_CYCLE) {
+                prevMillisState = currMillisState;
+                switch (currentCycle) {
+                    case Deluxe:
+                        currentState = RegularDry;
+                        setColor(Orange);
+                        Serial.println("Enter Regular Dry (Deluxe)");
+                        break;
+                    case SuperDeluxe:
+                        currentState = ExtraDry;
+                        setColor(Yellow);
+                        Serial.println("Enter Extra Dry (Super Deluxe)");
+                        break;
+                }
+            }
+            break;
+        case RegularDry:
+            currMillisState = millis();
+            if (currMillisState - prevMillisState > SHORT_CYCLE) {
+                prevMillisState = currMillisState;
+                currentState = Idle;
+                Serial.println("Entering Idle (Economy)");
+                setColor(White);
+            }
+            break;
+        case ExtraDry:
+            currMillisState = millis();
+            if (currMillisState - prevMillisState > LONG_CYCLE) {
+                prevMillisState = currMillisState;
+                currentState = Idle;
+                Serial.println("Entering idle (Super Deluxe)");
+                setColor(White);
+            }
+            break;
+    }
+}
 
 void loop() {
     // this function is just for debugging
     // delete when you start to code the transitions
-    testInitialSetup();
+    // testInitialSetup();
 
-    // updateNextState();
+    updateNextState();
 }
 
 void setup() {
