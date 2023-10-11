@@ -1,6 +1,6 @@
 <!-- headingDivider: 2 -->
 
-NOTE: This accelerometer has been discontinued and not used in class
+
 
 # Accelerometers - MMA8452Q 
 

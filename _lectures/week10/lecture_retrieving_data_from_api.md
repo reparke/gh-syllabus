@@ -162,9 +162,7 @@ void setup() {
 
 * The last step is to create Argon code to handle / parse the JSON response
 * While it is possible to manually parse JSON in C++, it is considered unsafe due to potential for security vulnerabilities
-
 * **Instead, use one of the two popular Argon libraries below**
-* [Instruction and examples for parsing JSON with `ArduinoJson`](lecture_json_parsing_with_arduinojson)
 * [Instruction and examples for parsing JSON with `JsonParserGeneratorRK`](lecture_json_parsing_with_jsonparsergeneratorrk)
 
 

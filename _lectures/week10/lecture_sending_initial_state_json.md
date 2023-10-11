@@ -117,8 +117,6 @@ URL: `https://groker.init.st/api/events`
 - To create JSON data, you can use `String` variables to manually build the JSON data, or you can use a library.
 - Generating this value as a `String` can be tedious so a library is recommendedis going to be messy
 - [Instruction and examples for creating JSON manually with `String` variables`](lecture_json_creation_with_strings)
-- [Instruction and examples for creating JSON with `ArduinoJson`](lecture_json_creation_with_arduinojson)
-
 - [Instruction and examples for creating JSON with `JsonParserGeneratorRK`](lecture_json_creation_with_jsonparsergeneratorrk)
 
 ## Lab - Send Photoresistor Value to Initial State

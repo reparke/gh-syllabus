@@ -15,9 +15,6 @@ toc_sticky: true
 
 **Definite**
 
-* [ ] week 8
-  * [ ] Create bluetooth fan example could covered during bluetooth lecture
-  * [ ] Maybe A9 blynk should change because it is hard and Rob thinks it is "fun"
 * [ ] week 10
   * [ ] future semester: consider permanently putting motors here; add something else for week 9
 
@@ -60,11 +57,10 @@ Week 10 idea:
 
 **Possible**
 
-* [ ] use something other than blackboard for submissions
-
 * [ ] summary of info. 
 
   - Maybe a page of "tips" - cool work-around or example of something not completely covered in class. 
+
 - Maybe a page of "oops" - mistakes to be avoided
   - Maybe a page of troubleshooting - there were a few tricky situations people posted on Piazza, a record of that would be cool
   - Maybe a page of ideas - problems to solve. Maybe something you and the TAs add, challenges of all levels for fun
@@ -667,7 +663,8 @@ Week 10 idea:
 
 ### Day 2
 
-Have students build fan and circuit before class
+- Have students build fan and circuit before class
+
 
 #### Lecture
 

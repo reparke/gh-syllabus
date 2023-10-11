@@ -1,12 +1,3 @@
----
-marp: true
-theme: itp
-
-week: 10
-category: lectures
-title: Creating JSON with ArduinoJson Library
----
-
 <!-- headingDivider: 2 -->
 
 # Creating JSON with `ArduinoJson` Library

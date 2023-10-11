@@ -62,6 +62,7 @@ title: Sound and Piezo Buzzers
 Syntax
 
 ```c++
+tone(<<PIN>>, <<FREQUENCY>>);		// will play tone indefinitely
 tone(<<PIN>>, <<FREQUENCY>>, <<DURATION>>);
 ```
 
@@ -102,7 +103,17 @@ noTone(<<PIN>>);
 
 * To stop a continuous tone or stop tone before duration is over
 
+## A Note about Tone and Blocking
 
+- `tone()` is non-blocking (meaning it doesn't cause delays or interfere with other Argon actions)
+- This means the Argon will not wait for one `tone()` to finish before playing the next. For example, in the code below, even though the first tone has a duration of 1 sec, the second tone will start immediately, meaning you will hear the second tone
+
+```cpp
+tone(D6, 500, 1000);	
+tone(D2, 2000, 3000);	
+```
+
+* In order hear a tone for certain length of time, we either need to use a `millis()` timer or `delay()`
 
 ## Optional: Controlling Volume
 

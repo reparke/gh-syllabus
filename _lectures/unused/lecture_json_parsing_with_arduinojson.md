@@ -1,12 +1,3 @@
----
-marp: true
-theme: itp
-
-week: 10
-category: lectures
-title: Parsing JSON with ArduinoJson Library
----
-
 <!-- headingDivider: 2 -->
 
 # Parsing JSON with `ArduinoJson` Library

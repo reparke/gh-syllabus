@@ -58,6 +58,7 @@ void myHandler(const char *event, const char *data) {
     if (jsonParser.parse()) {
         //    Serial.println(jsonParser.getBuffer());
         Serial.println();
+        Serial.println("Full JSON\n" + String(jsonParser.getBuffer()));
 
         // city, weather descript, temperature, humidity
         String city =
