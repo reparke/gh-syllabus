@@ -8,13 +8,8 @@ title: Pre-Lecture Activities
 
 ### Watch before class this week
 
-* JSON and APIs
-  {% include video id="3nSaiAQluus" provider="youtube" %}
-* JSON Parsing
-  {% include video id="IiCvB_-_DWQ" provider="youtube" %}
-
-* Retrieving Data from APIs
-  {% include video id="frekkX8kha4" provider="youtube" %}
+* JSON Overview
+  {% include video id="-zUb8shRm5A" provider="youtube" %}
 
 ### Bring to class all this week
 
@@ -25,5 +20,3 @@ title: Pre-Lecture Activities
 ### Build before class all week 
 
 - Create [Weather Stack](https://weatherstack.com/) account
-
-![photoresistor_and_fixed_resistor_bb](week10.assets/photoresistor_and_fixed_resistor_bb-16596580820413.png)

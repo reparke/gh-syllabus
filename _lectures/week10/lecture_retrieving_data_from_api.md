@@ -42,7 +42,8 @@ title: Retrieving Data from APIs
 1. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
 2. Use `Particle.publish` to trigger webhook
 3. Use `Particle.subscribe` to "listen" for response from webhook
-4. Create **function handler** that is used by `Particle.subscribe` to process JSON
+4. Create Mustache template that tells the Particle Cloud to which relevant data from the response should be to the Argon (and the rest of the data will be ignored)
+5. Create **function handler** that is used by `Particle.subscribe` to process JSON
 
 ## Step 0: How to use the API
 
@@ -86,84 +87,60 @@ void loop() {
 **Argon firmware**
 
 ```c++
-#include "JsonParserGeneratorRK.h"
-JsonParser jsonParser;  // object to handle parsing
-
-String response;	//stores JSON webhook response
-double temp;		//stores temperature
-
 void setup() {
   // Subscribe to the integration response event
-  Particle.subscribe("hook-response/JSONWeatherStack", jsonSubscriptionHandler, MY_DEVICES);
+  Particle.subscribe("hook-response/JSONWeatherStack",
+                      jsonSubscriptionHandler, MY_DEVICES);
 }
 ```
-## Weather Stack JSON Response
+
+## Part 4 : Create Mustache template
+
+- Often we might only want a few items from the JSON, but the webserver sends the entire message
+- This extra data can waste time, bandwidth, power, and the response size can create errors
+- Instead, we can have Particle webserver send us only the data we actually want by creating **Mustache templates**
+
+<!-- Inserting a variable with double braces {{a}} will do HTML escaping of the characters &<>"'. To avoid this, use triple braces {{{a}}} -->
+
+## Example: Entire Weather Stack JSON Response
+
+![image-20200405005641533](lecture_retrieving_data_from_api.assets/image-20200405005641533.png)
+
+## Example: What if we only want the temperature?
+
+![right:50%](lecture_retrieving_data_from_api.assets/image-20200405005641533_temperature.png)
+
+
+
+### Creating Mustache Webhook Response Templates
+
+**Particle Console Webhook**
+
+![image-20231012134414124](lecture_retrieving_data_from_api.assets/image-20231012134414124.png)
+
+## Example: Mustache Format
+
+![right:50%](lecture_retrieving_data_from_api.assets/image-20200405005641533_temperature.png)
+
+- If we are only interested in the `temperature` value which is nested in the `current` object, we could create a template like the following
 
 ```json
-{
-  "request": {
-    "type": "Zipcode",
-    "query": "92831",
-    "language": "en",
-    "unit": "f"
-  },
-  "location": {
-    "name": "Fullerton",
-    "country": "USA",
-    "region": "California",
-    "lat": "33.887",
-    "lon": "-117.895",
-    "timezone_id": "America/Los_Angeles",
-    "localtime": "2020-04-04 21:30",
-    "localtime_epoch": 1586035800,
-    "utc_offset": "-7.0"
-  },
-  "current": {
-    "observation_time": "04:30 AM",
-    "temperature": 61,
-    "weather_code": 122,
-    "weather_icons": [
-      "https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0004_black_low_cloud.png"
-    ],
-    "weather_descriptions": [
-      "Overcast"
-    ],
-    "wind_speed": 6,
-    "wind_degree": 170,
-    "wind_dir": "S",
-    "pressure": 1012,
-    "precip": 0,
-    "humidity": 67,
-    "cloudcover": 100,
-    "feelslike": 61,
-    "uv_index": 1,
-    "visibility": 10,
-    "is_day": "no"
-  }
-}
+  {"temp":"{{{current.temperature}}}"}
 ```
-## Weather Stack JSON Response
 
-![image-20200405005641533](lecture_weatherstack_integration.assets/image-20200405005641533.png)
-
-## Weather Stack JSON Response (partial)
+- Now instead of the server sending entire JSON response, it will only send the following
 ```json
-{
-  "current": {
-    "observation_time": "04:30 AM",
-    "temperature": 61,
-    "weather_code": 122,
-  }
-}
+  {"temp":"61"}
 ```
-![right:50%](lecture_weatherstack_integration.assets/image-20200405005641533_temperature.png)
 
-## Part 4: Creating the function handler to receive and parse the JSON
+- For webhook response templates, make sure the template will always result in valid JSON (i.e. `{"name":"value"}`)
+
+## Part 5: Creating the function handler to receive and parse the JSON
 
 * The last step is to create Argon code to handle / parse the JSON response
 * While it is possible to manually parse JSON in C++, it is considered unsafe due to potential for security vulnerabilities
 * **Instead, use one of the two popular Argon libraries below**
-* [Instruction and examples for parsing JSON with `JsonParserGeneratorRK`](lecture_json_parsing_with_jsonparsergeneratorrk)
+* [Instruction and examples for parsing JSON with `Ardui`](lecture_json_parsing_with_arduinojson.md)
 
 
 
@@ -174,8 +151,8 @@ However Buffer overrun if the response from the webserver was larger than expect
 
 ## Resources
 
-* [JsonParserGeneratorRK tutorial and overview](https://github.com/rickkas7/JsonParserGeneratorRK)
-* [Mustache creation tool](http://rickkas7.github.io/mustache/) (helps with crafting response template)
+* [Mustache Tester](https://rickkas7.github.io/mustache/)
+* [Mustache Variable Reference](https://docs.particle.io/firmware/best-practices/json/#mustache-variables)
 * [JSON Validator and formatter](https://jsonformatter.org/) 
 * [Weatherstack documentation](https://weatherstack.com/documentation)
 

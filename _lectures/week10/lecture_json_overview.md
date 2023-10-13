@@ -1,5 +1,5 @@
 ---
-marp: false
+marp: true
 theme: itp
 
 week: 10
@@ -13,21 +13,22 @@ title: JSON Overview
 
 ```json
 {
-  "location": {
-    "name": "Los Angeles",
-    "country": "USA",
-    "region": "California",
-    "lat": "34.018",
-    "lon": "-118.284",
+  "weather": "sunny",
+  "temp": 78,
+  "humidity": 32,
+  
+  "forecast": {
+    "mon": {
+      "high": 89,
+      "low": 54
+    }
   },
-  "current": {
-    "observation_time": "01:56 AM",
-    "temperature": 63,
-    "weather_descriptions": [
-      "Partly cloudy"
-    ],
-    "humidity": 56,
-  }
+    
+  "daily_temp": [
+    89,
+    84,
+    83
+  ]
 }
 ```
 
@@ -37,22 +38,9 @@ title: JSON Overview
 * **APIs** provide the mechanism we use to communicate with these other services
 * **Webhooks** are created in the Particle cloud to connect our Argon to an API online 
 
-## Examples of APIs
-
-* Weather data - [https://weatherstack.com](https://weatherstack.com)
-* Dictionaries - [Merriam-Webste](https://dictionaryapi.com/)
-* Transit data - [Bay Area Rapid Transit](http://api.bart.gov)
-* Useful lists of public APIs
-  * [https://github.com/toddmotto/public-apis](https://github.com/toddmotto/public-apis)
-  * [https://github.com/abhishekbanthia/Public-APIs](https://github.com/abhishekbanthia/Public-APIs)
-
 ## Review: Process to Interacting with Data from API
 
-* Identify API you want to use (make account if necessary)
-* Create a Particle webhook that interacts with the API
-* Use `Particle.publish` to trigger webhook (review)
-* Use `Particle.subscribe` to "listen" for response from webhook (optional)
-* Create **function handler** that is used by `Particle.subscribe` to process JSON
+![width:1000px](lecture_json_overview.assets/Slide1.PNG)
 
 
 ## Where does JSON come in?
@@ -80,29 +68,29 @@ title: JSON Overview
 ## JSON Basics - Objects
 
 ```JSON
-{ "weather": "sunny", 
+{ 
+  "weather": "sunny", 
   "temp": 78.000, 
   "humidity": 32 
 }
 ```
 
-* Inside `{` `}` is the JSON object
-* **Keys** are to the left of the `:` and are always **strings**
-* **Values** are to the right of the `:` and can be **string**, **int**, **float**, **objects**, or **arrays**
+* JSON objects are formatted `{ key : value }`  
+* **Keys** are  always **strings**
+* **Values** can be **string**, **int**, **float**, **objects**, or **arrays**
   * Ex:`"weather"` is a **key** and `"sunny"` is its **value** 
-  * Ex: `"sunny"` is a **string**, `78.000` is a **double** or **float**, `32` is an **int**
+  * Ex: `"sunny"` is a **string**, `78.000` is a **float**, `32` is an **int**
 
 ## JSON Basics - Nested Objects
 
 ```JSON
-    { 
-      "forecast": {
-        "mon": {
-          "high": 89,
-          "low":54
-        }
-      }
+{ "forecast": {
+    "mon": {
+      "high": 89,
+      "low":54
     }
+  }
+}
 ```
 
 * Values can be JSON **objects** 
@@ -130,10 +118,7 @@ title: JSON Overview
 
 ## Useful Links
 
-- [JsonParserGeneratorRK library](https://github.com/rickkas7/JsonParserGeneratorRK)
 - [JSON Online Formatter](https://jsonformatter.org/json-pretty-print)
-- [Mustache Tester](http://rickkas7.github.io/mustache/) for identifying JSON values
-- [ArduinoJson Library](https://arduinojson.org/)
 
 ## Credit
 

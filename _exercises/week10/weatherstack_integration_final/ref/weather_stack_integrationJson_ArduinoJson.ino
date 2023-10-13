@@ -1,66 +1,42 @@
-/* Connects to WeatherStack to receive current focus as JSON
+/* Connects to WeatherStack to receive current  JSON
+This uses Mustache templates
+
+{"city":"{{{location.name}}}","temperature":"{{{current.temperature}}}","description":"{{{current.weather_descriptions.0}}}","precip":"{{{current.precip}}}","humidity":"{{{current.humidity}}}"}
 
 requires ArduinoJson library
 requires account at https://weatherstack.com/
 
 */
-#include <Arduino.h>
-#define ARDUINOJSON_ENABLE_PROGMEM 0
+#define ARDUINOJSON_ENABLE_ARDUINO_STRING 1
 #include <ArduinoJson.h>
 
 // responses will be sent
-String payload;
 String response;
-// double temp;
-// double humidity;
-// int precipation;
-// String description;
-// String city;
 
 void setup() {
     // Subscribe to the integration response event
-    Particle.subscribe("hook-response/WeatherStackJSON",
-                       jsonSubscriptionHandler);
+    Particle.subscribe("hook-response/WeatherStackMustache", myHandler);
 }
-// DynamicJsonDocument doc(2048);
-void jsonSubscriptionHandler(const char *event, const char *data) {
+
+void myHandler(const char *event, const char *data) {
     StaticJsonDocument<2048> doc;
-    int responseIndex = 0;
-    const char *slashOffset = strrchr(event, '/');
-    if (slashOffset) {
-        responseIndex = atoi(slashOffset + 1);
-    }
-
-    if (responseIndex == 0) {
-        response = "";
-        doc.clear();
-    }
-    response += String(data);
-
-    DeserializationError error = deserializeJson(doc, response);
+    DeserializationError error = deserializeJson(doc, data);
 
     if (error == false) {
-        // JsonObject location = doc["location"];
-        // String city = location["name"];  // "Fullerton"
-        String city = doc["location"]["name"];
-
-        JsonObject current = doc["current"];
-        float temp = current["temperature"];  // 68
-
-        String description = current["weather_descriptions"][0];  // "Sunny"
-
-        float precipation = current["precip"];  // 0
-        float humidity = current["humidity"];   // 40
+        String city = doc["city"];
+        float temp = doc["temperature"];          // 68
+        String description = doc["description"];  // "Sunny"
+        float precipation = doc["precip"];        // 0
+        float humidity = doc["humidity"];         // 40
 
         Serial.println(city + "\n  " + description +
                        "\n  temperature: " + String(temp, 1) +
                        " F\n  humidity: " + String(humidity, 1) +
                        "%\n  rainfall: " + String(precipation, 1) + " in");
+    } else {
+        Serial.println(" Error: " + String(error.c_str()));
+        Serial.println("\t" + response);
     }
-    // else {
-    //   Serial.println(String(responseIndex) + " Error: " + String
-    //   (error.c_str())); Serial.println("\t"+payload);
-    // }
 }
 
 void loop() {
@@ -68,7 +44,7 @@ void loop() {
     String data = "92807";
 
     // Trigger the integration
-    Particle.publish("WeatherStackJSON", data);
-    // Wait 60 seconds
+    Particle.publish("WeatherStackMustache", data);
+
     delay(10000);
 }

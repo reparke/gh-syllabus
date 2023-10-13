@@ -791,7 +791,7 @@ Week 10 idea:
 
 #### Lab
 
-* Send photoresistor value and light level threshold`Particle.publish` to InitialState
+* Send random temperature and humidity using `Particle.publish` to InitialState
 
 #### Lab
 
@@ -807,8 +807,6 @@ Week 10 idea:
 
 #### Lecture
 
-- JSON Parsing (video with JSONParserGeneratorRK)
-- Retrieving JSON from API (video)
 - Have students use [https://api.sunrise-sunset.org](https://api.sunrise-sunset.org) to determine sunrise and sunset time based on lat and long (*no API key required)*)
 - Discuss [weather stack](https://weatherstack.com/) show example call
 - Walkthrough integration

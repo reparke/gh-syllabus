@@ -2,7 +2,65 @@
 
 <!-- This is the full Argon code for reference -->
 
+## Weather Stack JSON Response
 
+```json
+{
+  "request": {
+    "type": "Zipcode",
+    "query": "92831",
+    "language": "en",
+    "unit": "f"
+  },
+  "location": {
+    "name": "Fullerton",
+    "country": "USA",
+    "region": "California",
+    "lat": "33.887",
+    "lon": "-117.895",
+    "timezone_id": "America/Los_Angeles",
+    "localtime": "2020-04-04 21:30",
+    "localtime_epoch": 1586035800,
+    "utc_offset": "-7.0"
+  },
+  "current": {
+    "observation_time": "04:30 AM",
+    "temperature": 61,
+    "weather_code": 122,
+    "weather_icons": [
+      "https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0004_black_low_cloud.png"
+    ],
+    "weather_descriptions": [
+      "Overcast"
+    ],
+    "wind_speed": 6,
+    "wind_degree": 170,
+    "wind_dir": "S",
+    "pressure": 1012,
+    "precip": 0,
+    "humidity": 67,
+    "cloudcover": 100,
+    "feelslike": 61,
+    "uv_index": 1,
+    "visibility": 10,
+    "is_day": "no"
+  }
+}
+```
+
+## 
+
+
+
+```json
+{
+  "current": {
+    "observation_time": "04:30 AM",
+    "temperature": 61,
+    "weather_code": 122,
+  }
+}
+```
 
 ```c++
 #include "JsonParserGeneratorRK.h"
@@ -76,5 +134,4 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
   }
 }
 ```
-
 
