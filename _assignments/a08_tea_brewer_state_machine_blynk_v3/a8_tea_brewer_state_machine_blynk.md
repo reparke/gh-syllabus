@@ -48,7 +48,7 @@ Here is a video overview: [https://youtu.be/lqQhFIVWDR0](https://youtu.be/lqQhFI
 
 There are 5 states in the brewing process. Note that we will use **seconds** in places of **minutes**
 
-1. **Idle**: nothing is happening until button is pressed to start brewing
+1. **Idle**: nothing is happening until *Start button* on Blynk app is pressed to start brewing
 2. **Heat**: water is heating up (takes 6 seconds)
 3. **Steep**: tea is submerged in water (takes 3 seconds)
 4. **Hold**: intermediate stage between **Steep** and **Pour**. Allows device to make sure magnetic switch is closed. If switch is open, device stays in **Hold**
@@ -60,7 +60,7 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 | ----- | ---------- | ------------------------------------------------------- | ---------- |
 | Idle  | indefinite | Brew_Active == true                                     | Heat       |
 | Heat  | 6 sec      | Brew_Active == false                                    | Idle       |
-| Heat  | 6 sec      | (Brew_Active== true) and (Heat_Time >= Goal_Heat_Time)  | Steep      |
+| Heat  | 6 sec      | (Brew_Active == true) and (Heat_Time >= Goal_Heat_Time) | Steep      |
 | Steep | 3 sec      | Brew_Active == false                                    | Idle       |
 | Steep | 3 sec      | (Brew_Active == true) and (Brew_Time >= Goal_Brew_Time) | Hold       |
 | Hold  | indefinite | Brew_Active == false                                    | Idle       |
@@ -69,7 +69,10 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 | Pour  | 4 sec      | Brew_Active == false                                    | Idle       |
 | Pour  | 4 sec      | (Brew_Active == true) and (Pour_Time >= Goal_Pour_Time) | Idle       |
 
- *Brew_Active is based on the Blynk start button; Cup_Present is based on the magnetic switch*
+**Notes**
+
+- `Brew_Active` is based on the Blynk *Start button*
+- `Cup_Present` is based on the magnetic switch
 
 ## App Functionality
 
@@ -116,7 +119,7 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 | ------------------- | ---- | ------- | --------------------------------------- | --------- | ------- |
 | `String Cup Status` | `V2` | String  | `Present`, `Missing`                    | argon     | app     |
 | `Button Start Brew` | `V3` | integer | `0`, `1`                                | app       | argon   |
-| `Text State`        | `V4` | String  | `Idle`, `Heat`, `Steep`, `Hold`, `Pour` | argon     | app     |
+| `String State`      | `V4` | String  | `Idle`, `Heat`, `Steep`, `Hold`, `Pour` | argon     | app     |
 | `Button Sound`      | `V5` | integer | `0`, `1`                                | app       | argon   |
 
 
@@ -131,11 +134,11 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 
 -   Create an `enum` to represent the 5 states
 -   Create `updateNextState()` function with conditional logic to transition to different states.  Transitions will be based on a combination of 
-    -   current brew state (Idle, Heat, Steep, Hold, Pour)
+    -   current brew state (**Idle**, **Heat**, **Steep**, **Hold**, **Pour**)
     -   time in current brew state
     -   whether or not the brew process is active or not
     -   magnetic switch state
--   Within `updateNextState()`, call a custom function `updateNextStateDuration()` which sets the appropriate duration for the next state every time a transition is about to happen
+-   Within `updateNextState()` set the appropriate duration for the next state every time a transition is about to happen
 
 #### Testing Stage 1 
 
@@ -174,7 +177,7 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 ### Stage 4: Enable communication between Argon and app
 
 - There are two app elements that receive information from the app
-  - `Text State`
+  - `String State`
   - `String Cup Status`
 - Write the code that the sends the appropriate infomation to the app
 - Remember that all updates FROM argon TO app should take place in the `loop()` function inside a `millis()` block
@@ -206,9 +209,9 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 
 *To receive credit, your submitted video must clearly demonstrate the following:*
 
-- [ ] Pressing brew button
+- [ ] Pressing *Start button* on Blynk app (and it functions properly)
 - [ ] States transitioning
-- [ ] Sound on / off button working
+- [ ] Pressing *Sound* on / off button* on Blynk app (and it functions properly)
 - [ ] Sound of melody playing
 
 Deliverables
@@ -256,7 +259,7 @@ Grading
 | `Button Start Brew` starts and stops brewing process         | 2      |
 | `Button Sound` enables / disables sound playing              | 2      |
 | **Stage 4: Enable communication between Argon and app**      | **6**  |
-| `Text State` changes with correct state                      | 2      |
+| `String State` changes with correct state                    | 2      |
 | `String Cup Status` updates                                  | 2      |
 | **Stage 5: Play Song**                                       | **4**  |
 | Song melody and duration is stored correctly and at least 16 notes | 2      |

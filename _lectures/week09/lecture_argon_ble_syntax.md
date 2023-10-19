@@ -110,49 +110,21 @@ void onDataReceived(const uint8_t* data, size_t len,
 
 
 
-## Lab: Control Fan (part 1)
+## Lab: Control Fan
 
 <!-- skip buzzer and/or RGB LED and go straight to motor if short on time -->
 
-* Use Bluefruit app to control a RGB LED and buzzer
+* Use Bluefruit app to control a DC motor and servo motor
 * Download starting code
   * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
   * Paste the following link into the top right
     https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week09/ble_fan_start
 * In Bluefruit app, connect to over UART (listed as "controller")
 
-## Lab: Control Fan (part 1)
-
-* Specifications
-  * When "1" is pressed down, on-board LED D7 will blink twice
-  * When "2" is pressed down, on-board LED D7 will turn on
-  * When "2" is released, on-board LED D7 will turn off
-* Reference:  [Adafruit Bluefruit Guide](https://learn.adafruit.com/bluefruit-le-connect/controller)
-
-##  Lab: Wiring Guide
+##  Lab Wiring Guide
 
 ```
 On-board LED    D7
-
-```
-
-
-
-## Lab: Control Fan (part 2)
-
-* Specifications
-  * When "RIGHT" is pressed down, rotate servo (by fixed amount) clockwise
-  * When "LEFT" is pressed down, rotate servo (by fixed amount)  counter clockwise
-  * When "UP" is pressed down, speed up motor (by fixed amount)
-  * When "DOWN" is pressed down, slow motor(by fixed amount)
-  * Optional challenge: 
-    * When "3" is pressed down, change direction of fan
-    * When "4" is pressed, turn on fan auto mode
-* Reference:  [Adafruit Bluefruit Guide](https://learn.adafruit.com/bluefruit-le-connect/controller)
-
-##  Lab: Wiring Guide (part 2)
-
-```
 Servo           D2
 
 Motor Controller
@@ -166,6 +138,30 @@ Motor Controller
 ```
 
 <img src="lecture_argon_ble_syntax.assets/servo_dc_fan_controller_bb.png" alt="servo_dc_fan_controller_bb" />
+
+
+
+## Lab: Control Fan (part 1)
+
+* Specifications
+  * When "1" is pressed down, on-board LED D7 will blink twice
+  * When "2" is pressed down, on-board LED D7 will turn on
+  * When "2" is released, on-board LED D7 will turn off
+* Reference:  [Adafruit Bluefruit Guide](https://learn.adafruit.com/bluefruit-le-connect/controller)
+
+
+
+## Lab: Control Fan (part 2)
+
+* Specifications
+  * When "RIGHT" is pressed down, rotate servo (by fixed amount) clockwise
+  * When "LEFT" is pressed down, rotate servo (by fixed amount)  counter clockwise
+  * When "UP" is pressed down, speed up motor (by fixed amount)
+  * When "DOWN" is pressed down, slow motor(by fixed amount)
+  * Optional challenge: 
+    * When "3" is pressed down, change direction of DC motor
+    * When "4" is pressed, turn on fan auto mode
+* Reference:  [Adafruit Bluefruit Guide](https://learn.adafruit.com/bluefruit-le-connect/controller)
 
 
 
