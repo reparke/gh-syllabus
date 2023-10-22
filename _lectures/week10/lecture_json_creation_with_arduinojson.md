@@ -46,8 +46,7 @@ void loop() {
   String output; 			   // will store JSON string which is used for Particle.publish()
 
   /* Here is where JSON creation code goes */
-  
-  //create first JSON object
+    //create first JSON object
   JsonObject obj0 = doc.createNestedObject();
   obj0["key"] = "temperature";
   obj0["value"] = 79.000000;

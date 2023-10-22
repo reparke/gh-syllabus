@@ -697,9 +697,9 @@ Week 10 idea:
 
 ### Idea / Feedback
 
-* for Fall 2022, wk 8 day 2 was canceled. For w8d1, we covered sound and rushed explaining bluetooth. Everyone got their device connected to Bluefruit, but that was it. This may not have been helpful
+* w8d1, we covered sound 
 * Wk9d1, we covered motors and servos, and built the fan
-* w9d2, we reintroduced bluetooth. Start with blinking D7 on and off, then go 
+* w9d2, we introduced bluetooth with fan 
 
 ### Assignment
 
@@ -787,9 +787,13 @@ Week 10 idea:
 #### Lecture
 
 - JSON overview (video)
-- InitialState integration (multiple values)
+- May need to introduce Bluetooth car assignment, starting code, and motor control logic
+- Lecture: Sending Multiple Values to Initial State using JSON (first few slides)
+- live demo to configure
+- Show [API documentation for JSON](https://initialstateeventsapi.docs.apiary.io/#reference/event-data/events-json)
+- Lecture: JSON creation with arduinojson
 
-#### Lab
+#### Exercis
 
 * Send random temperature and humidity using `Particle.publish` to InitialState
 
@@ -799,7 +803,9 @@ Week 10 idea:
 - Students worked in breakout rooms to create webhook and send GPS and a battery value to initial state
 - This took the entire class period
 
-### Day 2
+### Day 2 
+
+* Turn in weather stack lab today
 
 #### Lecture / Lab
 

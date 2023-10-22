@@ -25,24 +25,6 @@
 
 // SYSTEM_MODE(MANUAL);  /* uncomment to disable wifi and use BT only */
 
-/*
-    forward
-        leftMotor (forward)
-        rightMotor (forward)
-    backward
-        leftMotor(backward)
-        rightMotor (backward)
-    left
-    right
-
-
-    --
-    any motor with a motor to turn?
-        three components you need to set
-*/
-
-
-
 /* onDataReceived()
     Event handler for incoming data via RX characteristic
     When the RXCharacteristic receives data, the event handler is called
@@ -53,9 +35,9 @@
 
     ex: [‘!’] [‘B’] [‘4’] [‘1’] [CRC]
 */
-void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer, void* context) {
-
-    // btSerialDebug(data, len); // uncomment for serial monitor debug
+void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
+                    void* context) {
+    // bluetoothSerialDebug(data, len); // uncomment for serial monitor debug
 }
 
 void setup() {
@@ -66,20 +48,15 @@ void setup() {
 
 void loop() {}
 
-/**********************************************************************/
+/********************************************************************************/
 
 /*
-  btSerialDebug
-      used for printing debug info to serial monitor
+  bluetoothSerialDebug
+      used for printing debug info to serial monitor ===
 */
-void btSerialDebug(const uint8_t* data, size_t len) {
-    for (size_t ii = 0; ii < len; ii++) {
-        Serial.print(data[ii]);
-        Serial.print(" ");
-    }
-    Serial.println();
-    for (size_t ii = 0; ii < len; ii++) {
-        Serial.write(data[ii]);
+void bluetoothSerialDebug(const uint8_t* data, size_t len) {
+    for (size_t index = 0; index < len; index++) {
+        Serial.print((char)data[index]);
         Serial.print(" ");
     }
     Serial.println();
