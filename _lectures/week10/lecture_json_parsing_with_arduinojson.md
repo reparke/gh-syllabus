@@ -109,7 +109,7 @@ Here is an example
 ```c++
 void jsonSubscriptionHandler(const char *event, const char *data) {
   	//declare object to store JSON response
-	StaticJsonDocument<200> doc;
+	StaticJsonDocument<1024> doc;
     DeserializationError error = deserializeJson(doc, data);
     
     // Test to see if was successful

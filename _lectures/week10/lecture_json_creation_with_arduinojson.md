@@ -42,7 +42,7 @@ title: Creating JSON with ArduinoJson Library
 
 ```c++
 void loop() {
-  StaticJsonDocument<200> doc; // object to store JSON response
+  StaticJsonDocument<1024> doc; // object to store JSON response
   String output; 			   // will store JSON string which is used for Particle.publish()
 
   /* Here is where JSON creation code goes */
