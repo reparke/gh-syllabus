@@ -32,8 +32,11 @@ Week 10 idea:
 
 **Maybe**
 
-* [ ] TA recommendations
+* [ ] JSON
+  * [ ] could we cover creating JSON in week 6, then week 10 would just be parsing?
+  * [ ] when sending json to initial state using POST, could we use query params for API/ Bucket instead of HTTP headers?
 
+* [ ] TA recommendations
   * [ ] have small assignment where they layout PCB for a built project; then later in the semester the soldering workshop uses that design (talk to kristof about this so we don't step on 388)
   * [ ] submissions: 
     * [ ] make single zip for upload with code and fritzing
@@ -802,6 +805,9 @@ Week 10 idea:
 - As review, we spent the entire class period reviewing how to send data to initial stack
 - Students worked in breakout rooms to create webhook and send GPS and a battery value to initial state
 - This took the entire class period
+- USC GPS Coordinates
+  - lat: 34.0224
+  - lon: -118.2851
 
 ### Day 2 
 
@@ -811,9 +817,25 @@ Week 10 idea:
 
 - Finish InitialState Integration (if necessary)
 
-#### Lecture
+#### Exercise - Sunrise API
 
 - Have students use [https://api.sunrise-sunset.org](https://api.sunrise-sunset.org) to determine sunrise and sunset time based on lat and long (*no API key required)*)
+- Use Query Params in API URL and Mustache in response *(Particle integration: **Sunrise Sunset with Mustache**)*
+- USC GPS Coordinates
+  - lat: 34.0224
+  - lon: -118.2851
+- show start of retrieiving json slides
+- show sunrise api doc
+- Show how to find gps coord, and create url
+- create particle integration
+- NB: Remove the Mustache from response template before showing students
+- print out JSON and show what a mess it is
+- copy JSON into website to format
+- show mustache slides to explain parameters
+- add response template
+
+#### Lecture
+
 - Discuss [weather stack](https://weatherstack.com/) show example call
 - Walkthrough integration
 - Write json code together

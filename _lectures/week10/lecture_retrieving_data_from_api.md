@@ -96,6 +96,24 @@ void setup() {
 
 ## Part 4 : Create Mustache template
 
+![bg](lecture_retrieving_data_from_api.assets/Slide6.PNG)
+
+## 
+![bg](lecture_retrieving_data_from_api.assets/Slide7.PNG)
+
+## 
+![bg](lecture_retrieving_data_from_api.assets/Slide8.PNG)
+
+## 
+![bg](lecture_retrieving_data_from_api.assets/Slide9.PNG)
+
+## 
+![bg](lecture_retrieving_data_from_api.assets/Slide10.PNG)
+
+
+
+## Part 4 : Create Mustache template
+
 - Often we might only want a few items from the JSON, but the webserver sends the entire message
 - This extra data can waste time, bandwidth, power, and the response size can create errors
 - Instead, we can have Particle webserver send us only the data we actually want by creating **Mustache templates**

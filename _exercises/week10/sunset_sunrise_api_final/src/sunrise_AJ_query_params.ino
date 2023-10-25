@@ -9,9 +9,26 @@ void setup() {
     Particle.subscribe("hook-response/sunrise_sunset_params",
                        jsonSubscriptionHandler);
 }
+void sunriseAPI() {
+    /*
+        This function uses the particle integration: Sunrise Sunset with
+       Mustache
+       The lat and lon are hard-coded into the URL
+    */
 
-void loop() {
-    StaticJsonDocument<200> doc;  // object to store JSON response
+    Particle.publish("sunrise_sunset_params", "", PRIVATE);
+    // Wait 60 seconds
+    delay(10000);
+}
+
+void sunriseAPIQueryParam() {
+    /*
+    This function uses the particle integration: Sunrise Sunset with
+   Mustache and Query Param
+
+   The lat and lon are sent via JSON
+*/
+    StaticJsonDocument<1024> doc;  // object to store JSON response
     String
         output;  // will store JSON string which is used for Particle.publish()
 
@@ -26,6 +43,10 @@ void loop() {
     Particle.publish("sunrise_sunset_params", output, PRIVATE);
     // Wait 60 seconds
     delay(10000);
+}
+void loop() {
+    sunriseAPI();
+    // sunriseAPIQueryParam();
 }
 
 void jsonSubscriptionHandler(const char *event, const char *data) {
