@@ -1,46 +1,54 @@
-/* Connects to WeatherStack to receive current  JSON
-This uses Mustache templates
-
-{"city":"{{{location.name}}}","temperature":"{{{current.temperature}}}","description":"{{{current.weather_descriptions.0}}}","precip":"{{{current.precip}}}","humidity":"{{{current.humidity}}}"}
-
-requires ArduinoJson library
-requires account at https://weatherstack.com/
-
-*/
 #define ARDUINOJSON_ENABLE_ARDUINO_STRING 1
 #include <ArduinoJson.h>
 
 void setup() {
+    Serial.begin(9600);
     // Subscribe to the integration response event
-    Particle.subscribe("hook-response/WeatherStackJSON", myHandler);
+    Particle.subscribe("hook-response/WeatherStackJSON", myHandler, MY_DEVICES);
 }
 
 void myHandler(const char *event, const char *data) {
+    // Handle the integration response
+    // Serial.println(String(data)+"\n\n");
+
     StaticJsonDocument<1024> doc;
     DeserializationError error = deserializeJson(doc, data);
 
-    if (error == true) {
-        Serial.println(" Error: " + String(error.c_str()));
+    // Test to see if was successful
+    if (error) {
+        Serial.print(F("deserializeJson() failed: "));
         return;
     }
+    /*
+    step 1: create mustache in the webhook response template
+    step 2: write json parsing code here in workbench
+    extract the following: 
+        name
+        temperature
+        humidity
+        weather description
+        precipitation
+    */
+   String city = doc["city"];
+   float temp = doc["temperature"];
+   float humidity = doc["humidty"];
+   String description = doc["description"];
+//    int precipitation = doc["precipitation"];
+   Serial.println(city);
+   Serial.println("\tTemp C: " + String(temp));
+   Serial.println("\tHumidity: " + String(humidity));
+   Serial.println("\tDescription: " + description);
 
-    String city = doc["city"];
-    float temp = doc["temperature"];          // 68
-    String description = doc["description"];  // "Sunny"
-    float precipation = doc["precip"];        // 0
-    float humidity = doc["humidity"];         // 40
-
-    Serial.println(city + "\n  " + description + "\n  temperature: " +
-                   String(temp, 1) + " F\n  humidity: " + String(humidity, 1) +
-                   "%\n  rainfall: " + String(precipation, 1) + " in");
 }
 
 void loop() {
     // Get some data
-    String data = "";
-
+    String data = String(10);
     // Trigger the integration
-    Particle.publish("WeatherStackJSON", data);
-
+    Particle.publish("WeatherStackJSON", data, PRIVATE);
+    // Wait 60 seconds
     delay(10000);
+
 }
+
+// http://api.weatherstack.com/current?access_key=6da8a595973d261cc8108ee3d98ac252&uery=90089

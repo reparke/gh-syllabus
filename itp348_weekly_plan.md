@@ -820,25 +820,53 @@ Week 10 idea:
 #### Exercise - Sunrise API
 
 - Have students use [https://api.sunrise-sunset.org](https://api.sunrise-sunset.org) to determine sunrise and sunset time based on lat and long (*no API key required)*)
+
 - Use Query Params in API URL and Mustache in response *(Particle integration: **Sunrise Sunset with Mustache**)*
+
+- Response template
+
+  ```json
+  {"sunrise":"{{{results.sunrise}}}","sunset":"{{{results.sunset}}}"}	
+  ```
+
 - USC GPS Coordinates
+
   - lat: 34.0224
   - lon: -118.2851
+
 - show start of retrieiving json slides
+
 - show sunrise api doc
+
 - Show how to find gps coord, and create url
+
 - create particle integration
+
 - NB: Remove the Mustache from response template before showing students
+
 - print out JSON and show what a mess it is
+
 - copy JSON into website to format
+
 - show mustache slides to explain parameters
+
 - add response template
 
 #### Lecture
 
 - Discuss [weather stack](https://weatherstack.com/) show example call
+
 - Walkthrough integration
+
 - Write json code together
+
+- response template
+
+  ```json
+  {"city":"{{{location.name}}}","temperature":"{{{current.temperature}}}","description":"{{{current.weather_descriptions.0}}}","precip":"{{{current.precip}}}","humidity":"{{{current.humidity}}}"}
+  ```
+
+  
 
 #### Lab
 
