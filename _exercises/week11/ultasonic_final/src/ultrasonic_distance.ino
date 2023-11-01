@@ -4,6 +4,11 @@ double SPEED_SOUND_CM_ROOM_TEMP_FAHR = 0.03444;
 int MAX_RANGE_CM = 78;
 int MIN_RANGE_CM = 0;
 
+const int MIN_RANGE = 2;      // cm
+const int WARNING_RANGE = 12;  // 5 in ~~ 12 cm
+const int MAX_RANGE_CM = 400;    // cm
+
+
 const int PIN_TRIGGER = D6;
 const int PIN_ECHO = D5;
 
@@ -24,6 +29,7 @@ void loop() {
     delayMicroseconds(2);
     digitalWrite(PIN_TRIGGER, HIGH);  // prepare
     delayMicroseconds(10);
+
     digitalWrite(PIN_TRIGGER, LOW);  // prepare
 
     int timeRoundTrip = pulseIn(PIN_ECHO, HIGH);  // wait for round trip time

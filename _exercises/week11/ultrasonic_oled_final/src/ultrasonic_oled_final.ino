@@ -31,7 +31,7 @@ MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 
 double SPEED_SOUND_CM_ROOM_TEMP_FAHR = 0.03444;
 double CONV_FACTOR_CM_TO_IN = 0.3437;
-int MAX_RANGE_CM = 78;  // 30 in
+int MAX_RANGE_CM = 157;  // 30 in
 int MIN_RANGE_CM = 0;
 int WARNING_RANGE_CM = 12;  //4.7
 

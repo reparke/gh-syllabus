@@ -17,6 +17,9 @@ toc_sticky: true
 
 * [ ] week 10
   * [ ] future semester: consider permanently putting motors here; add something else for week 9
+* [ ] week 11
+  * [ ] ultra sonic and oled could be combined--it's not quite enough for 2 days
+
 
 Week 10 idea: 
 
