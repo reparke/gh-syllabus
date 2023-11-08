@@ -12,7 +12,7 @@ requires account at https://weatherstack.com/
 
 void setup() {
     // Subscribe to the integration response event
-    Particle.subscribe("hook-response/WeatherStackMustache", myHandler);
+    Particle.subscribe("hook-response/WeatherStackJSON", myHandler);
 }
 
 void myHandler(const char *event, const char *data) {
@@ -24,15 +24,14 @@ void myHandler(const char *event, const char *data) {
         return;
     }
 
-    String city = doc["city"];
+    String name = doc["name"];
     float temp = doc["temperature"];          // 68
     String description = doc["description"];  // "Sunny"
-    float precipation = doc["precip"];        // 0
-    float humidity = doc["humidity"];         // 40
+    int uv_index = doc["uv_index"];           // 0
 
-    Serial.println(city + "\n  " + description + "\n  temperature: " +
-                   String(temp, 1) + " F\n  humidity: " + String(humidity, 1) +
-                   "%\n  rainfall: " + String(precipation, 1) + " in");
+    Serial.println(name + "\n  " + description +
+                   "\n  temperature: " + String(temp, 1) +
+                   "%\n  uv_index: " + String(uv_index) + " in");
 }
 
 void loop() {
@@ -40,7 +39,7 @@ void loop() {
     String data = "92807";
 
     // Trigger the integration
-    Particle.publish("WeatherStackMustache", data);
+    // Particle.publish("WeatherStackJSON", data);
 
     delay(10000);
 }

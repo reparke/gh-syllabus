@@ -43,8 +43,6 @@ int beatAvg;
 */
 unsigned long prevScreenUpdateMillis = 0;
 unsigned long HEART_SCREEN_UPDATE_MS = 3000;
-unsigned long lastRead = 0;
-unsigned long samples = 0;
 
 const int LOW_BPM_THRESHOLD = 40;
 const int HIGH_BPM_THRESHOLD = 200;
@@ -67,7 +65,6 @@ float tempWeather = 0;
 String city = "city";
 String weatherDescription = "desc";
 int weatherCode = 0;
-int humidity = 0;
 int uvIndex = 0;
 
 //////////////////////////////////
@@ -86,10 +83,8 @@ MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 // Button Variables     //
 //////////////////////////
 const int PIN_BUTTON = D3;
-int prevReading = HIGH;     // the last VERIFIED state
-int curButtonState;         // the current VERIFIED state
-long lastDebounceTime = 0;  // the last time the output pin was toggled
-long debounceDelay = 200;   // the debounce time; increase if the output
+int prevButtonVal = HIGH;     // the last VERIFIED state
+
 //////////////////////////
 // States               //
 //////////////////////////
@@ -191,7 +186,8 @@ void runWeatherScreen() {  // doesn't use JSON or webhook
 
     oled.setCursor(38, 5);
     oled.setFontType(1);
-    oled.print(tempWeather, 0);
+    // oled.print(tempWeather, 0);
+    oled.print(77);
     oled.setFontType(0);
     oled.print("o");
 
@@ -201,12 +197,7 @@ void runWeatherScreen() {  // doesn't use JSON or webhook
 
     oled.setFontType(0);
     oled.setCursor(0, 40);
-    oled.print("Hum ");
-    oled.print(humidity);
-    oled.print("%");
-
-    oled.setCursor(40, 40);
-    oled.print("UV ");
+    oled.print("UV Ind: ");
     oled.print(uvIndex);
 
     oled.display();
@@ -272,9 +263,9 @@ void setup() {
 }
 
 void loop() {
-    int curReading = digitalRead(PIN_BUTTON);  // check button read
+    int curButtonVal = digitalRead(PIN_BUTTON);  // check button read
 
-    if (curReading == HIGH && prevReading == LOW) {
+    if (curButtonVal == HIGH && prevButtonVal == LOW) {
         getNextState();  // button was pressed down, we should change
         prevScreenUpdateMillis = 0;  // make sure next screen loads
                                      // immediately instead of waiting
@@ -285,7 +276,7 @@ void loop() {
     // if want to execute when button pressed down ONLY
 
     loadNextScreen();
-    prevReading = curReading;  // update for next loop
+    prevButtonVal = curButtonVal;  // update for next loop
 }
 
 void jsonSubscriptionHandler(const char *event, const char *data) {
@@ -305,11 +296,12 @@ void jsonSubscriptionHandler(const char *event, const char *data) {
     city = String(doc["name"]);
 
     weatherCode = doc["weather_code"];
-    uvIndex = doc["uvIndex"];
+    uvIndex = doc["uv_index"];
     tempWeather = doc["temperature"];
 
     Serial.println("The weather in " + city + " is " + weatherDescription +
-                   " and " + String(tempWeather) + " degrees C");
+                   " and " + String(tempWeather) +
+                   " degrees C with UV index of " + String(uvIndex));
 }
 
 // An optional function to recieve the Beats Per Minute (BPM) and Interbeat

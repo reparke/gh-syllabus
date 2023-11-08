@@ -868,7 +868,7 @@ Week 10 idea:
 - response template
 
   ```json
-  {"city":"{{{location.name}}}","temperature":"{{{current.temperature}}}","description":"{{{current.weather_descriptions.0}}}","precip":"{{{current.precip}}}","humidity":"{{{current.humidity}}}"}
+  {"name":"{{location.name}}", "temperature":"{{current.temperature}}","description":"{{current.weather_descriptions.0}}"}
   ```
 
   
@@ -1009,7 +1009,7 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 #### Lecture
 
 * Smart Watch - weather
-* NB: If students used mustache templates with WeatherStack, the response template will need to be update
+* ==NB: If students used mustache templates with WeatherStack, the response template will need to be update==
 
 ```json
 {"name":"{{location.name}}", "temperature":"{{current.temperature}}","description":"{{current.weather_descriptions.0}}","weather_code":"{{current.weather_code}}","uv_index":"{{current.uv_index}}"}
