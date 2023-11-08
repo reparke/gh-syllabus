@@ -18,12 +18,12 @@ want occasional updates, you can call it less frequently.
 */
 
 // libraries for OLED
-#include "JsonParserGeneratorRK.h"
+#define ARDUINOJSON_ENABLE_ARDUINO_STRING 1
+#include <ArduinoJson.h>
+
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 #include "bitmaps_watch.h"
 #include "bitmaps_weather.h"
-
-JsonParser jsonParser;
 
 // const byte RATE_SIZE = 4;  // Increase this for more averaging. 4 is good.
 // byte rates[RATE_SIZE];     // Array of heart rates
@@ -289,42 +289,27 @@ void loop() {
 }
 
 void jsonSubscriptionHandler(const char *event, const char *data) {
-    // Part 1 allows for webhook responses to be delivered in multple "chunks";
-    // you don't need to change this
-    int responseIndex = 0;
-    const char *slashOffset = strrchr(event, '/');
-    if (slashOffset) responseIndex = atoi(slashOffset + 1);
-    if (responseIndex == 0) jsonParser.clear();
-    jsonParser.addString(data);
+    // Handle the integration response
+    // Serial.println(String(data) + "\n\n");
 
-    // Part 2 is where you can parse the actual data; you code goes in the IF
-    if (jsonParser.parse()) {
-        city =
-            jsonParser.getReference().key("location").key("name").valueString();
-        tempWeather = jsonParser.getReference()
-                          .key("current")
-                          .key("temperature")
-                          .valueDouble();
+    StaticJsonDocument<1024> doc;
+    DeserializationError error = deserializeJson(doc, data);
 
-        weatherCode = jsonParser.getReference()
-                          .key("current")
-                          .key("weather_code")
-                          .valueInt();
-        uvIndex =
-            jsonParser.getReference().key("current").key("uv_index").valueInt();
-
-        weatherDescription = jsonParser.getReference()
-                                 .key("current")
-                                 .key("weather_descriptions")
-                                 .index(0)
-                                 .valueString();
-
-        Serial.println(city + "\n  " + weatherDescription +
-                       "\n  temperature: " + String(tempWeather, 1) +
-                       " F\n  humidith: " + String(humidity) +
-                       "\n  uv index: " + String(uvIndex) +
-                       "\n  weather code: " + String(weatherCode));
+    // Test to see if was successful
+    if (error) {
+        Serial.print(F("deserializeJson() failed: "));
+        return;
     }
+    /* temporary workaround for global String variable issue */
+    weatherDescription = String(doc["description"]);
+    city = String(doc["name"]);
+
+    weatherCode = doc["weather_code"];
+    uvIndex = doc["uvIndex"];
+    tempWeather = doc["temperature"];
+
+    Serial.println("The weather in " + city + " is " + weatherDescription +
+                   " and " + String(tempWeather) + " degrees C");
 }
 
 // An optional function to recieve the Beats Per Minute (BPM) and Interbeat

@@ -1009,6 +1009,13 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 #### Lecture
 
 * Smart Watch - weather
+* NB: If students used mustache templates with WeatherStack, the response template will need to be update
+
+```json
+{"name":"{{location.name}}", "temperature":"{{current.temperature}}","description":"{{current.weather_descriptions.0}}","weather_code":"{{current.weather_code}}","uv_index":"{{current.uv_index}}"}
+```
+
+
 
 #### Lab
 
