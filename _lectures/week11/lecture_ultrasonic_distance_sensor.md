@@ -36,13 +36,17 @@ title: Ultrasonic Distance Sensor
 
 * Operating range
 
-  * 2 cm - 4 m (1 in - 13 ft)
+  * Officially: 2 cm - 4 m (1 in - 13 ft)
+  * More reliable range: 5 cm - 2 m (2 in - 6.5 ft)
 
 * Angle
 
   * 15 degrees
 
-  
+
+<!-- based on some testing online, a more reliable range is 5cm - 2m
+https://app.box.com/s/sj7du1n32in2777rcoi2
+ -->
 
 ## Sensor Pins
 

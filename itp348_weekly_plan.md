@@ -18,8 +18,10 @@ toc_sticky: true
 * [ ] week 10
   * [ ] future semester: consider permanently putting motors here; add something else for week 9
 * [ ] week 11
-  * [ ] ultra sonic and oled could be combined--it's not quite enough for 2 days
-
+  * [ ] ultra sonic and oled could be combined--it's not quite enough for 2 day
+  * [ ] change bitmaps, code, and .h file so names are "no_large.bmp" and "no_small.bmp"
+* [ ] change some old projects (or at least starting code) to use new workbench templat
+* [ ] update graphics slides and videos to use PROGMEM (See exercis)
 
 Week 10 idea: 
 

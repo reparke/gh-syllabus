@@ -98,7 +98,7 @@ void updateOLED() {
     oled.drawBitmap(warning_bmp_320x240);
     oled.setFontType(0);   // Switch to the large-number font
     oled.setCursor(0, 40);  // Set the cursor to top-left
-    oled.print(String(distanceIn, 2) + " in");
+    oled.print(String(distanceIn, 2) + " in");  
     oled.display();  // Update the display
   }
     else {

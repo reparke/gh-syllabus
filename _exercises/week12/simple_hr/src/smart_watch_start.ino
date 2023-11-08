@@ -7,6 +7,11 @@ const int pulseSignalPin = A4;
 #include <PulseSensorAmped.h>
 
 void setup() {
+    /*
+    https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64313/4?u=rob7
+    */
+    analogRead(pulseSignalPin);  // bug workaround
+
     // initialize serial communication at 9600 bits per second:
     Serial.begin(9600);
     Serial.println("Starting");

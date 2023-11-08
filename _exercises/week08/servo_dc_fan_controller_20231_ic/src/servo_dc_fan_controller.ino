@@ -84,7 +84,7 @@ void setup() {
 }
 
 void loop() {
-    millisFanControl();
+    // millisFanControl();
     // fan to rotate automaticlaly. back and forth
     // we want to pot to control speed
 
@@ -114,20 +114,20 @@ void loop() {
     // what are the three things we need to make the motor spin?
     // #1 speed in PWM
     // #2, #3 are direction
-    //  digitalWrite(AIN1, HIGH);
-    //  digitalWrite(AIN2, LOW);
-    //  analogWrite(PWMA, 255);
-    //  delay(2000);
-    //  digitalWrite(AIN1, LOW);
-    //  digitalWrite(AIN2, LOW);
-    //  analogWrite(PWMA, 255);
-    //  delay(2000);
-    //  digitalWrite(AIN1, LOW);
-    //  digitalWrite(AIN2, HIGH);
-    //  analogWrite(PWMA, 255);
-    //  delay(2000);
-    //  digitalWrite(AIN1, LOW);
-    //  digitalWrite(AIN2, LOW);
-    //  analogWrite(PWMA, 255);
-    //  delay(2000);
+    digitalWrite(AIN1, HIGH);
+    digitalWrite(AIN2, LOW);
+    analogWrite(PWMA, 255);
+    delay(2000);
+    digitalWrite(AIN1, LOW);
+    digitalWrite(AIN2, LOW);
+    analogWrite(PWMA, 255);
+    delay(2000);
+    digitalWrite(AIN1, LOW);
+    digitalWrite(AIN2, HIGH);
+    analogWrite(PWMA, 255);
+    delay(2000);
+    digitalWrite(AIN1, LOW);
+    digitalWrite(AIN2, LOW);
+    analogWrite(PWMA, 255);
+    delay(2000);
 }

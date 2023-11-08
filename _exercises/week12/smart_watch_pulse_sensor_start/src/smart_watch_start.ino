@@ -18,14 +18,16 @@ want occasional updates, you can call it less frequently.
 */
 
 // libraries for OLED
+
+//these need to go first
+#define ARDUINOJSON_ENABLE_ARDUINO_STRING 1
+#include <ArduinoJson.h>
+
 #include <PulseSensorAmped.h>
 
-#include "JsonParserGeneratorRK.h"
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 #include "bitmaps_watch.h"
 #include "bitmaps_weather.h"
-
-JsonParser jsonParser;
 
 const int pulseSignalPin = A4;
 
@@ -128,6 +130,11 @@ void runWeatherScreen() {
 }
 
 void setup() {
+    /*
+https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64313/4?u=rob7
+*/
+    analogRead(pulseSignalPin);  // bug workaround
+
     Serial.begin(115200);
     Serial.println("Initializing...");
 
@@ -147,7 +154,10 @@ void setup() {
     pinMode(PIN_BUTTON, INPUT);
 }
 
-void loop() {}
+void loop() {
+
+
+}
 /* =================================================
    ================================================= */
 //////////////////////////
