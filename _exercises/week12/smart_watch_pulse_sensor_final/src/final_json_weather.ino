@@ -234,6 +234,15 @@ void runHeartScreen() {
     }
     // consider adding battery status bands
     // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7
+	/*
+	
+    Charging ( V > 4.3)
+    Full Charge (V >=4.2
+    Nominal (4.2 > V > 3.5)
+    Low/Needs Recharge (3.5 > V >= 3.4)
+    Critical (3.4 > V)
+
+	*/
 }
 void setup() {
     analogRead(pulseSignalPin);

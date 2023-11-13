@@ -86,22 +86,86 @@ int prevButtonVal = HIGH;  // the last VERIFIED state
 // States               //
 //////////////////////////
 // TODO: create state enum and variable(s) to track state
+enum State { Clock, Weather, Heart };
+State currentState = Heart;
 
 // TODO
-void getNextState() {}
+void getNextState() {
+    switch (currentState) {
+        case Clock:
+            currentState = Weather;
+            break;
+        case Weather:
+            currentState = Heart;
+            break;
+        case Heart:
+            currentState = Clock;
+            break;
+    }
+}
 
 // TODO
-void loadNextScreen() {}
+void loadNextScreen() {
+    switch (currentState) {
+        case Clock:
+            runClockScreen();
+            break;
+        case Heart:
+            runHeartScreen();
+            break;
+        case Weather:
+            runWeatherScreen();
+            break;
+    }
+}
 
 // TODO
 void runHeartScreen() {
-    // for debugging
-    Serial.println("Heart");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Heart");
-    oled.display();
+    // should we track the HR all the time, or only when the Heart screen is
+    // shown? track all the time: the BPM will be instantly visible when on
+    // Heart screen track ONLY on Heart screen: if you don't need, then you
+    // wasting battery AND slower
+
+    // how OFTEN should update the screen?
+    //  OLED IS SLOOOOOOOOOOW!
+    //  if order to keep the device "responsive" AND save battery life,
+    //           we should update the screen as INFREQUENTLY as we can
+    // approach 1: update only when BPM changes
+    // approach 2: just update rgularly with millis
+
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+
+        oled.clear(PAGE);
+        oled.drawBitmap(heart16x12);
+        oled.setFontType(1);
+        oled.setCursor(20, 0);
+        if (beatAvg < LOW_BPM_THRESHOLD || beatAvg > HIGH_BPM_THRESHOLD) {
+            oled.print("---");  // invalid
+        } else {
+            oled.print(String(beatAvg));
+        }
+
+        // calc batt life
+        float voltage = analogRead(BATT) * 0.0011224;
+        oled.setCursor(0, 40);
+        oled.setFontType(0);
+        oled.print("Batt: ");
+        oled.print(String(voltage, 1));
+        oled.display();
+    }
 }
+/*
+    estimate of battery life
+
+    Charging ( V > 4.3)
+    Full Charge (V >=4.2
+    Nominal (4.2 > V > 3.5)
+    Low/Needs Recharge (3.5 > V >= 3.4)
+    Critical (3.4 > V)
+
+*/
 
 // TODO
 void runClockScreen() {
@@ -148,13 +212,29 @@ https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64
     pinMode(PIN_BUTTON, INPUT);
 }
 
-void loop() {}
+void loop() {
+    int curButtonVal = digitalRead(PIN_BUTTON);
+
+    // where do we load / update the OLED screen?
+
+    if (curButtonVal == LOW && prevButtonVal == HIGH) {
+        // button was pressed
+        getNextState();
+    }
+    // the screen needs to be updated constantly because the data may change
+    // constantly
+    PulseSensorAmped.process();
+    loadNextScreen();
+    prevButtonVal = curButtonVal;
+}
 /* =================================================
    ================================================= */
 //////////////////////////
 // HEART RATE FUNCTIONS //
 //////////////////////////
 
-void PulseSensorAmped_data(int BPM, int IBI) {}
+// this is an event handler...we DONT call it, it gets called AUTOMATICALLY
+// this is asychronous
+void PulseSensorAmped_data(int BPM, int IBI) { beatAvg = BPM; }
 
 void PulseSensorAmped_lost(void) {}
