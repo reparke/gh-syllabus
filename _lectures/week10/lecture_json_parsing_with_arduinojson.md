@@ -52,7 +52,7 @@ title: Parsing JSON with ArduinoJson Library
 ```c++
 void setup() {
   // Subscribe to the integration response event
-  Particle.subscribe("hook-response/JSONWeatherStack", jsonSubscriptionHandler,
+  Particle.subscribe("hook-response/JSONWeatherStack", myHandler,
                      MY_DEVICES);
 }
 
@@ -100,14 +100,14 @@ void loop() {
 ### Configuration of Event Handler
 - The JSON will be passed to the `data` parameter of event handler 
 ```c++
-void jsonSubscriptionHandler(const char *event, const char *data) {
+void myHandler(const char *event, const char *data) {
 ```
 
 
 Here is an example
 
 ```c++
-void jsonSubscriptionHandler(const char *event, const char *data) {
+void myHandler(const char *event, const char *data) {
   	//declare object to store JSON response
 	StaticJsonDocument<1024> doc;
     DeserializationError error = deserializeJson(doc, data);
