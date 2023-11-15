@@ -24,15 +24,21 @@ title: Pre-Lecture Activities
 
 ### Build before class Wed / Thurs 
 
-| Sensor | Argon        | Function                        |
-| ------ | ------------ | ------------------------------- |
-| GND    | GND          | Ground                          |
-| VCC    | 3V3          | Power (requires 3.3v)           |
-| CS     | 3V3          | Need for I2C mode               |
-| SDO    | GND          | Need for I2C mode               |
-| SDA    | SDA          | I2C data (no resistors needed)  |
-| SCL    | SCL          | I2C clock (no resistors needed) |
-| INT1   | Any GPIO Pin | Optional (if using interrupts)  |
-| INT2   | Any GPIO Pin | Optional (if using interrupts)  |
+| Sensor | Argon |
+| ------ | ----- |
+| GND    | GND   |
+| VCC    | 3V3   |
+| CS     | 3V3   |
+| SDO    | GND   |
+| SDA    | SDA   |
+| SCL    | SCL   |
+
+| RGB LED | Argon |
+| ------ | ----- |
+| R    | A5 |
+| GND | GND |
+| G    | A4 |
+| B   | A3 |
+
 
 ![accelerometer_rgb_led_bb](week13.assets/accelerometer_rgb_led_bb.png)
