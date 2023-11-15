@@ -83,7 +83,7 @@ MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 // Button Variables     //
 //////////////////////////
 const int PIN_BUTTON = D3;
-int prevButtonVal = HIGH;     // the last VERIFIED state
+int prevButtonVal = HIGH;  // the last VERIFIED state
 
 //////////////////////////
 // States               //
@@ -132,7 +132,7 @@ void runTimeScreen() {
 
         oled.clear(PAGE);  // Clear the display
         delay(10);
-        oled.drawBitmap(clock_16x12);
+        oled.drawBitmap(bitmap_clock_16x12);
 
         oled.setCursor(25, 0);
         oled.setFontType(0);
@@ -168,19 +168,19 @@ void runWeatherScreen() {  // doesn't use JSON or webhook
         case 296:
         case 302:
         case 308:
-            oled.drawBitmap(weather_rainy_up_left);
+            oled.drawBitmap(bitmap_rainy_16x12);
             break;
         case 116:
         case 119:
         case 122:
-            oled.drawBitmap(weather_cloudy_up_left);
+            oled.drawBitmap(bitmap_cloudy_16x12);
             break;
         case 227:
-            oled.drawBitmap(weather_snowing_up_left);
+            oled.drawBitmap(bitmap_snowing_16x12);
             break;
 
         default:
-            oled.drawBitmap(weather_sunny_up_left);
+            oled.drawBitmap(bitmap_sunny_16x12);
             break;
     }
 
@@ -211,14 +211,14 @@ void runHeartScreen() {
         if (beatAvg > LOW_BPM_THRESHOLD &&
             beatAvg < HIGH_BPM_THRESHOLD) {  // VALID!
             oled.clear(PAGE);
-            oled.drawBitmap(heart16x12);
+            oled.drawBitmap(bitmap_heart_16x12);
             oled.setFontType(1);
             oled.setCursor(20, 0);
             oled.print(String(beatAvg));
         } else {
             // INVALID!
             oled.clear(PAGE);
-            oled.drawBitmap(heart16x12);
+            oled.drawBitmap(bitmap_heart_16x12);
             oled.setFontType(1);
             oled.setCursor(20, 0);
             oled.print("---");
@@ -234,15 +234,15 @@ void runHeartScreen() {
     }
     // consider adding battery status bands
     // https://community.particle.io/t/can-argon-or-xenon-read-the-battery-state/45554/35?u=rob7
-	/*
-	
-    Charging ( V > 4.3)
-    Full Charge (V >=4.2
-    Nominal (4.2 > V > 3.5)
-    Low/Needs Recharge (3.5 > V >= 3.4)
-    Critical (3.4 > V)
+    /*
 
-	*/
+Charging ( V > 4.3)
+Full Charge (V >=4.2
+Nominal (4.2 > V > 3.5)
+Low/Needs Recharge (3.5 > V >= 3.4)
+Critical (3.4 > V)
+
+    */
 }
 void setup() {
     analogRead(pulseSignalPin);
@@ -256,10 +256,10 @@ void setup() {
     // initialize OLED
     oled.begin();      // Initialize the OLED
     oled.clear(PAGE);  // Clear the display
-    oled.drawBitmap(trojan_bmp);
+    oled.drawBitmap(bitmap_trojan_64x48);
     oled.display();
     delay(1000);  // Delay 1000 ms
-    oled.drawBitmap(usc_bmp);
+    oled.drawBitmap(bitmap_usc_64x48);
     oled.display();
     delay(1000);  // Delay 1000 ms
 

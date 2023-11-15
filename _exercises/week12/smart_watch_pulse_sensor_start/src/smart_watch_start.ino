@@ -30,40 +30,6 @@ want occasional updates, you can call it less frequently.
 
 const int pulseSignalPin = A4;
 
-int beatAvg;
-//////////////////////////
-// Heart Screen         //
-//////////////////////////
-/* refreshing the OLED is very slow and it causes
-    the heart rate detection to fail
-    This delay was determined experimentally to work well
-*/
-unsigned long prevScreenUpdateMillis = 0;
-unsigned long HEART_SCREEN_UPDATE_MS = 3000;
-
-const int LOW_BPM_THRESHOLD = 40;
-const int HIGH_BPM_THRESHOLD = 200;
-
-//////////////////////////
-// Clock  Screen         //
-//////////////////////////
-/*
- */
-unsigned long CLOCK_SCREEN_UPDATE_MS = 500;
-
-//////////////////////////
-// Weather Screen         //
-//////////////////////////
-/* Weatherstack only has 250 API calls in free plan so use
-   very long delay (8 times per day)
-*/
-unsigned long WEATHER_SCREEN_UPDATE_MS = 10512000;
-float tempWeather = 0;
-String city = "city";
-String weatherDescription = "desc";
-int weatherCode = 0;
-int uvIndex = 0;
-
 //////////////////////////////////
 // MicroOLED Object Declaration //
 //////////////////////////////////
@@ -76,6 +42,28 @@ int uvIndex = 0;
 #define DC_JUMPER 1
 MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
 #include <Wire.h>
+
+//////////////////////////
+// Heart Screen         //
+//////////////////////////
+/* refreshing the OLED is very slow and it causes
+    the heart rate detection to fail
+    This delay was determined experimentally to work well
+*/
+
+//////////////////////////
+// Clock  Screen         //
+//////////////////////////
+/*
+ */
+
+//////////////////////////
+// Weather Screen         //
+//////////////////////////
+/* Weatherstack only has 250 API calls in free plan so use
+   very long delay (8 times per day)
+*/
+
 //////////////////////////
 // Button Variables     //
 //////////////////////////
@@ -138,10 +126,10 @@ https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64
     // initialize OLED
     oled.begin();      // Initialize the OLED
     oled.clear(PAGE);  // Clear the display
-    oled.drawBitmap(trojan_bmp);
+    oled.drawBitmap(bitmap_trojan_64x48);
     oled.display();
     delay(1000);  // Delay 1000 ms
-    oled.drawBitmap(usc_bmp);
+    oled.drawBitmap(bitmap_usc_64x48);
     oled.display();
     delay(1000);  // Delay 1000 ms
 

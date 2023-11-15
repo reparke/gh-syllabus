@@ -169,21 +169,69 @@ void runHeartScreen() {
 
 // TODO
 void runClockScreen() {
-    // for debugging
-    Serial.println("Clock");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Clock");
-    oled.display();
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > CLOCK_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+        oled.clear(PAGE);
+        oled.drawBitmap(clock_16x12);
+
+        oled.setCursor(25, 0);
+        oled.print(Time.format("%h %d"));
+
+        String dayFormat = "%a";
+        oled.setCursor(25, 10);
+        oled.print(Time.format(dayFormat));
+
+        String timeFormat = "%I:%M:%S";
+        oled.setCursor(0, 25);
+        oled.print(Time.format(timeFormat));
+        oled.display();
+    }
 }
 
 // TODO
 void runWeatherScreen() {
-    // for debugging
-    Serial.println("Weather");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Weather");
+    /*
+        code: 119, 116, 122 -> load the cloudy bitmap (weather_cloudy_up_left)
+        code: 296 -> load rain bitmap
+        otherwise, just load sunny bitmap
+
+        step 1: just focus on the temperature and description
+            add the code from before to connect the API
+
+        step 2: then try to add the weather code and uv index
+            this will require editing the "response template" in the webhook
+       integration
+    */
+    // step 2 webhook - publish
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > WEATHER_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+        String data = String(10);
+        // Trigger the integration
+        Particle.publish("WeatherStackJSON", data, PRIVATE);
+    }
+    oled.clear(PAGE);
+    switch (weatherCode) {
+        case 119:  // with swtich, we can mimic "OR" by not having break
+        case 116:
+        case 122:
+            oled.drawBitmap(weather_cloudy_up_left);
+            break;
+        case 296:
+            oled.drawBitmap(weather_rainy_up_left);
+            break;
+        default:
+            oled.drawBitmap(weather_sunny_up_left);
+            break;
+    }
+
+    oled.setCursor(38, 0);
+    oled.print(tempWeather);
+
+    oled.setCursor(0, 28);
+    oled.print(weatherDescription);
+
     oled.display();
 }
 
@@ -210,6 +258,25 @@ https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64
     delay(1000);  // Delay 1000 ms
 
     pinMode(PIN_BUTTON, INPUT);
+    Time.zone(-8);  // GMT -8
+    // Time.beginDST();      // we are in ST
+
+    // webhook integration step 1
+    Particle.subscribe("hook-response/WeatherStackJSON", myHandler, MY_DEVICES);
+}
+// this function will be called when a response come back from weather stack
+void myHandler(const char *event, const char *data) {
+    StaticJsonDocument<1024> doc;
+    DeserializationError error = deserializeJson(doc, data);
+
+    if (error) {
+        Serial.print(F("deserializeJson() failed: "));
+        return;
+    }
+    // update global variables
+    tempWeather = doc["temperature"];
+    weatherDescription = String(doc["description"]);
+    weatherCode = doc["weather_code"];
 }
 
 void loop() {
@@ -238,3 +305,7 @@ void loop() {
 void PulseSensorAmped_data(int BPM, int IBI) { beatAvg = BPM; }
 
 void PulseSensorAmped_lost(void) {}
+
+/*
+    s
+*/

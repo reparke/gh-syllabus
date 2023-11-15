@@ -130,6 +130,7 @@ void runHeartScreen() {
     // sometimes, it takes so long that it interferes with checking BPM
     unsigned long curMillis = millis();
     if (curMillis - prevScreenUpdateMillis > HEART_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
         oled.clear(PAGE);
         oled.drawBitmap(heart16x12);
         oled.setFontType(1);
@@ -141,9 +142,9 @@ void runHeartScreen() {
             // valid
             oled.print(String(beatAvg));
         }
-        //show battery
+        // show battery
         float voltage = analogRead(BATT) * 0.0011224;
-        oled.setCursor(0,40);
+        oled.setCursor(0, 40);
         oled.setFontType(0);
         oled.print("Batt: ");
         oled.print(String(voltage, 1));
@@ -162,21 +163,73 @@ void runHeartScreen() {
 
 // TODO
 void runClockScreen() {
-    // for debugging
-    Serial.println("Clock");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Clock");
-    oled.display();
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > CLOCK_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+        oled.clear(PAGE);
+        oled.drawBitmap(clock_16x12);
+
+        // Month date eg. Nov 14
+        oled.setCursor(25, 0);
+        oled.setFontType(0);
+        oled.print(Time.format("%b %d"));
+
+        // day of week eg: Thu
+        String dayFormat = "%a";
+        oled.setCursor(25, 10);
+        oled.print(Time.format(dayFormat));
+
+        // time
+        String timeFormat = "%R %S";
+        oled.setCursor(0, 25);
+        oled.print(Time.format(timeFormat));
+        oled.display();
+    }
 }
 
 // TODO
 void runWeatherScreen() {
-    // for debugging
-    Serial.println("Weather");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Weather");
+    // in this function, we assume that the data is current and correct
+
+    /*
+        Rainy picture: 296, 302, 308
+        cloudy picture: 116, 119, 122
+        sunny picture: everything else
+    */
+    unsigned long curMillis = millis();
+    if (curMillis - prevScreenUpdateMillis > WEATHER_SCREEN_UPDATE_MS) {
+        prevScreenUpdateMillis = curMillis;
+        String data = String(10);
+        // Trigger the integration
+        Particle.publish("WeatherStackJSON", data, PRIVATE);
+    }
+    oled.clear(PAGE);
+    // draw bitmap
+    switch (weatherCode) {
+        case 296:  // this works like having an OR
+        case 302:
+        case 308:
+            oled.drawBitmap(weather_rainy_up_left);
+            break;
+        case 116:
+        case 119:
+        case 122:
+            oled.drawBitmap(weather_cloudy_up_left);
+            break;
+        default:  // like "else"
+            oled.drawBitmap(weather_sunny_up_left);
+            break;
+    }
+    oled.setCursor(38, 5);
+    oled.setFontType(1);
+    oled.print(String(tempWeather, 0));  // show no decimal places
+    oled.setFontType(0);
+    oled.print("o");
+
+    oled.setCursor(0, 28);
+    // oled.print(weatherDescription);     //this is too long
+    oled.print(weatherDescription.substring(0, 12));  // shows only part of the desciprtion
+    // skip UV index
     oled.display();
 }
 
@@ -203,6 +256,17 @@ https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64
     delay(1000);  // Delay 1000 ms
 
     pinMode(PIN_BUTTON, INPUT);
+
+    Time.zone(-8);
+    // we don't need Time.beginDST() because we in Standard Time
+
+    // webhook step 1: subscribe
+    Particle.subscribe("hook-response/WeatherStackJSON", myHandler, MY_DEVICES);
+
+    // publish once so we get the current weather
+    String data = String(10);
+    // Trigger the integration
+    Particle.publish("WeatherStackJSON", data, PRIVATE);
 }
 
 void loop() {
@@ -218,6 +282,47 @@ void loop() {
 
     loadNextScreen();  // this will "redraw" or refresh the data on the OLED
     prevReading = curButtonState;
+}
+
+// webhook step 2: what happens we get a response
+void myHandler(const char *event, const char *data) {
+    // Handle the integration response
+    // Serial.println(String(data)+"\n\n");
+
+    StaticJsonDocument<1024> doc;
+    DeserializationError error = deserializeJson(doc, data);
+
+    // Test to see if was successful
+    if (error) {
+        Serial.print(F("deserializeJson() failed: "));
+        return;
+    }
+    /*
+    step 1: create mustache in the webhook response template
+    step 2: write json parsing code here in workbench
+    extract the following:
+        name
+        temperature
+        humidity
+        weather description
+        precipitation
+    */
+
+    // with watch, we aren't PRINTING anything in the handler
+    // all we do here is update the global variables
+    // then updateWeatherScreen will print to the OLED
+    /*
+    float tempWeather = 0;
+ String city = "city";
+ String weatherDescription = "desc";
+ int weatherCode = 0;
+ int humidity = 0;
+ int uvIndex = 0;
+ */
+    tempWeather = doc["temperature"];
+    weatherDescription = String(doc["description"]);
+    weatherCode = doc["weatherCode"];
+    uvIndex = doc["uv_index"];
 }
 /* =================================================
    ================================================= */
