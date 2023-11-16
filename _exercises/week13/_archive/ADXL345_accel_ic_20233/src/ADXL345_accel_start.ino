@@ -16,6 +16,8 @@
  *  Updated: Sep 06, 2016
  *  *********************************************/
 
+#include <cmath>
+
 #include "SparkFun_ADXL345.h"  // SparkFun ADXL345 Library
 const int PIN_RED = A5;
 const int PIN_GREEN = A4;
@@ -107,27 +109,78 @@ void loop() {
 
     /* Compare readings for different measurement ranges */
     // compareMeasurementRanges();
-
+    // delay(500);
     /* Tap and Activity Detection */
-    if (adxl.readDoubleTap() == true) {
-        doubleTaps++;
-        blue = !blue;
-        digitalWrite(PIN_BLUE, blue);
-        Serial.println("*** DOUBLE TAP " + String(doubleTaps) + " ***");
-    }
+    // if (adxl.readDoubleTap() == true) {
+    //     doubleTaps++;
+    //     blue = !blue;
+    //     digitalWrite(PIN_BLUE, blue);
+    //     Serial.println("*** DOUBLE TAP " + String(doubleTaps) + " ***");
+    // }
 
-    else if (adxl.readTap() == true) {
-        taps++;
-        Serial.println("*** TAP " + String(taps) + " ***");
-        red = !red;
-        digitalWrite(PIN_RED, red);
-    }
+    // else if (adxl.readTap() == true) {
+    //     taps++;
+    //     Serial.println("*** TAP " + String(taps) + " ***");
+    //     red = !red;
+    //     digitalWrite(PIN_RED, red);
+    // }
 
     // if (adxl.readActivity() == true) {
     //     activity++;
     //     Serial.println("*** Activity " + String(activity) + " ***");
     // }
     // delay(100);
+
+    int result = getOrientation();
+    switch (result) {
+        case 0:
+            Serial.println("portrait");
+            break;
+        case 1:
+            Serial.println("landsape right");
+            break;
+        case 2:
+            Serial.println("portrait updside down");
+            break;
+        case 3:
+            Serial.println("landscape left");
+            break;
+        case 4:
+            Serial.println("Unknown");
+            break;
+    }
+
+    delay(500);
+}
+
+int getOrientation() {
+    // ref:
+    // https://stackoverflow.com/questions/43308882/determine-landscape-and-portrait-orientation-with-arduino
+    float x = -1 * adxl.cx;
+    float y = adxl.cy;
+
+    float angle = atan2(x, y);
+
+    if (angle >= -2.25 && angle <= -0.75) {
+        // OrientationPortrait
+        // Serial.println("portrait");
+        return 0;
+    } else if (angle >= -0.75 && angle <= 0.75) {
+        // OrientationLandscapeRight
+        // Serial.println("landsape right");
+        return 1;
+    } else if (angle >= 0.75 && angle <= 2.25) {
+        // OrientationPortraitUpsideDown
+        // Serial.println("portrait updside down");
+        return 2;
+    } else if (angle <= -2.25 || angle >= 2.25) {
+        // OrientationLandscapeLeft];
+        // Serial.println("landscape left");
+        return 3;
+    } else {
+        // Serial.println("Unknown");
+        return 4;
+    }
 }
 
 void displayExampleGraphs() {

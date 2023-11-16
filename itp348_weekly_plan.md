@@ -1021,11 +1021,11 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 
 * Use weather API to display local weather (if time)
 
-### Day 2
+### Day 2 - ==Need more material here--consider adding sleep==
 
 #### Activity
 
-- Check milestone 
+- ~~Check milestone~~ 
 
 #### Lecture
 
@@ -1033,7 +1033,7 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 
 #### Lab
 
-- Copy example code for display graphs
+- Copy example code for display graphs (`Sparkfun_ADXL345_Graph.ino`)
 - Use **tap** feature
 - Use accelerometer to control RGB LED (if time)
 - Try interrupts for tap 
