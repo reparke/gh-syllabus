@@ -227,10 +227,10 @@ void runWeatherScreen() {
     }
 
     oled.setCursor(38, 0);
-    oled.print(tempWeather);
+    oled.print(String(tempWeather,0));
 
     oled.setCursor(0, 28);
-    oled.print(weatherDescription);
+    oled.print(weatherDescription.substring(0,9));
 
     oled.display();
 }
@@ -263,6 +263,11 @@ https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64
 
     // webhook integration step 1
     Particle.subscribe("hook-response/WeatherStackJSON", myHandler, MY_DEVICES);
+
+    //initial publish to trigger weather webhook
+    String data = String(10);
+    // Trigger the integration
+    Particle.publish("WeatherStackJSON", data, PRIVATE);
 }
 // this function will be called when a response come back from weather stack
 void myHandler(const char *event, const char *data) {
