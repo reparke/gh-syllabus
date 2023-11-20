@@ -35,14 +35,14 @@
  on ebay.com.
  */
 
-//#include <SPI.h>
+// #include <SPI.h>
 #include "MFRC522.h"
 
 #define SS_PIN A4
 #define RST_PIN A5
 
-String card1 = "4E B3 01 BF";	//
-String card2 = "0E 8B 8E 6A";	//
+String card1 = "4E B3 01 BF";  //
+String card2 = "0E 8B 8E 6A";  //
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
 
@@ -55,31 +55,33 @@ void setup() {
 }
 
 void loop() {
-	String scannedCard = "";
-    if (!mfrc522.PICC_IsNewCardPresent()) {
-        if (!mfrc522.PICC_ReadCardSerial()) {
+    String scannedCard = "";
+    if (mfrc522.PICC_IsNewCardPresent() == true) {
+        if (mfrc522.PICC_ReadCardSerial() == true) {
             Serial.print("Card UID:");
             for (byte i = 0; i < mfrc522.uid.size; i++) {
-                scannedCard += String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
+                scannedCard +=
+                    String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
                 scannedCard += String(mfrc522.uid.uidByte[i], HEX);
             }
             // "4E B3 01 BF"
-			// " 4e b3 01 bf "	--> convert to upper case and we need to trim
-			scannedCard.toUpperCase(); //converts to upper
-			scannedCard.trim(); //removes white space on either end of string
+            // " 4e b3 01 bf "	--> convert to upper case and we need to trim
+            scannedCard.toUpperCase();  // converts to upper
+            scannedCard.trim();  // removes white space on either end of string
 
             // when the for loop is finished, scannedCard represents the id of
             // the current card
 
-			if (scannedCard == card1) {
-				//now open door, or blink LED twice or whaterver
-			}
-			else if (scannedCard == card2) {
-				//do something else
-			}
-			else {
-				//card not recognized
-			}
+            if (scannedCard == card1) {
+                // now open door, or blink LED twice or whaterver
+                Serial.println("Card1");
+            } else if (scannedCard == card2) {
+                // do something else
+                Serial.println("Card2");
+
+            } else {
+                Serial.println("Some other card");
+            }
         }
     }
 }

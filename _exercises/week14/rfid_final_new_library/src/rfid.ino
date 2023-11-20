@@ -65,6 +65,7 @@ unsigned long prevMillisTestAlive = 0;
 const unsigned long READ_DELAY = 2000;
 int lightState = 0;
 const int PIN_LED = D7;
+unsigned int counter = 0;
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
 
@@ -121,6 +122,8 @@ void readCardAccesControl() {
             // Serial.println("scanId = " + scanId);
             // Serial.println();
         }
+        // mfrc522.PICC_HaltA();  // Stop reading
+        // mfrc522.PCD_StopCrypto1();
     }
 }
 
@@ -161,23 +164,26 @@ void readCardToggleLight() {
             // Serial.println("scanId = " + scanId);
             // Serial.println();
         }
+        // mfrc522.PICC_HaltA();  // Stop reading
+        // mfrc522.PCD_StopCrypto1();
     }
 }
 void loop() {
     unsigned long curMillis = millis();
     if (curMillis - prevMillis > READ_DELAY) {
-        // readCardAccesControl();
-        readCardToggleLight();
+        readCardAccesControl();
+        // readCardToggleLight();
         prevMillis = curMillis;
     }
 
     if (curMillis - prevMillisTestAlive > 5000) {
         prevMillisTestAlive = curMillis;
-        Serial.println("\t\t Still alive");
+        Serial.println("\t\t" + String(counter++) + " Still alive");
     }
 
     // // Look for new cards
-    // if (!mfrc522.PICC_IsNewCardPresent()) {  // if not card present, exit    this
+    // if (!mfrc522.PICC_IsNewCardPresent()) {  // if not card present, exit
+    // this
     //                                          // loop and do it again
     //     return;
     // }
@@ -189,6 +195,4 @@ void loop() {
 
     // // Dump debug info about the card; PICC_HaltA() is automatically called
     // mfrc522.PICC_DumpToSerial(&(mfrc522.uid));
-
-   
 }
