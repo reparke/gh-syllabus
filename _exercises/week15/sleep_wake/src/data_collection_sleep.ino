@@ -39,6 +39,7 @@ void dataCollection() {
         Particle.publish("Data Collection", msg);
         Serial.println("This is publish data: " + msg);
         count = 0;
+        Particle.disconnect();
     }
     Serial.println("About to ULTRA_LOW_POWER! on time");
     SystemSleepConfiguration config;

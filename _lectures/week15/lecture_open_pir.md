@@ -4,14 +4,14 @@ theme: itp
 
 week: 15
 category: lectures
-title: Sleep and Battery Conservation
+title: Open PIR (Passive Infrared Sensor)
 ---
 
 <!-- headingDivider: 2 -->
 
 # Open PIR - Passive Infrared Sensor
 
-![13968-01](lecture_pir.assets/13968-01.jpg)  
+![13968-01](lecture_open_pir.assets/13968-01.jpg)  
 
 
 
@@ -33,12 +33,12 @@ title: Sleep and Battery Conservation
 ## Components
 
 * Main sensor is the small metal disc which detection infrared radiation
-  <img src="lecture_pir.assets/13285-04.jpg" alt="https://cdn.sparkfun.com//assets/parts/1/0/5/3/5/13285-04.jpg" style="width:400px;" />
+  <img src="lecture_open_pir.assets/13285-04.jpg" alt="https://cdn.sparkfun.com//assets/parts/1/0/5/3/5/13285-04.jpg" style="width:400px;" />
 
  ## Components
   * Clear / white lenses acts to focus a wider area of radiation onto the sensor to increase range 
 
-<img src="lecture_pir.assets/image-20200427174947738.png" alt="image-20200427174947738" style="width:300px;" />
+<img src="lecture_open_pir.assets/image-20200427174947738.png" alt="image-20200427174947738" style="width:300px;" />
 
 ## Operation (Sparkfun PIR)
 
@@ -52,7 +52,7 @@ title: Sleep and Battery Conservation
 
 ## Sensitivity Adjustment (SEN) 
 
-<img src="lecture_pir.assets/openpir_pots.png" alt="openpir_pots" style="zoom:50%;" />
+<img src="lecture_open_pir.assets/openpir_pots.png" alt="openpir_pots" style="zoom:50%;" />
 
 * Adjust the **view distance** of the OpenPIR
 * Clockwise turn increase the distance the sensor sees
@@ -63,7 +63,7 @@ title: Sleep and Battery Conservation
 
 ## Time Adjustment (SEN) 
 
-<img src="lecture_pir.assets/openpir_pots.png" alt="openpir_pots" style="zoom:50%;" />
+<img src="lecture_open_pir.assets/openpir_pots.png" alt="openpir_pots" style="zoom:50%;" />
 
 * Adjust the length of time the output remains HIGH. This trimpot is used to adjust the oscillator  frequency of the NCS36000. 
 * Clockwise increases the length of time OUT remains high
@@ -71,7 +71,7 @@ title: Sleep and Battery Conservation
 
 ## Retriggering
 
-<img src="lecture_pir.assets/openpir_switch_1.png" alt="openpir_switch_1" style="zoom:50%;" />
+<img src="lecture_open_pir.assets/openpir_switch_1.png" alt="openpir_switch_1" style="zoom:50%;" />
 
 * Controls if alarm stays active for the same movement
 * Single-pulse mode can be used to detect an object entering *or* exiting the PIR's field-of-view
@@ -79,18 +79,18 @@ title: Sleep and Battery Conservation
 
 ## Wiring
 
-| PIR (Sparkfun) | Argon                 |
-| -------------- | --------------------- |
-| VCC            | 3.3v                  |
-| GND            | GND                   |
-| OUT            | digital input pi      |
-| A              | (Optional) analog pin |
+| Open PIR (Sparkfun) | Argon                    |
+| ------------------- | ------------------------ |
+| VCC                 | 3.3v                     |
+| GND                 | GND                      |
+| OUT                 | Any digital pin          |
+| A                   | (Optional) Anyanalog pin |
 
 *Note: The wire color and pin order is specific to the [Sparkfun PIR sensor](https://www.sparkfun.com/products/13285) and not all PIR sensor*
 
 ## Wiring
 
-![image-20231127115945825](lecture_pir.assets/image-20231127115945825.png)
+![image-20231127115945825](lecture_open_pir.assets/image-20231127115945825.png)
 
 ## Exercise
 
@@ -99,24 +99,8 @@ title: Sleep and Battery Conservation
 
 ## Credit
 
-* [Sparkfun](https://www.sparkfun.com/products/13285)
+* [Sparkfun](https://www.sparkfun.com/products/13968)
 * Diagrams created with [Frizting](https://fritzing.org)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
