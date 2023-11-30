@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "SparkFun Basic Flashlight")(type "KiCad")(uri "$(KIPRJMOD)/SparkFun Basic Flashlight.pretty")(options "")(descr ""))
+)

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 0)
+  (lib (name "SparkFun Basic Flashlight-eagle-import")(type "KiCad")(uri "${KIPRJMOD}/SparkFun Basic Flashlight-eagle-import.kicad_sym")(options "")(descr ""))
+)
