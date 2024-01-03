@@ -3,7 +3,7 @@ marp: false
 theme: itp
 
 week: 15
-category: lectures
+category: lecturespart
 title: Next Steps After ITP 348
 ---
 
