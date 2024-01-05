@@ -4,7 +4,7 @@ theme: itp
 
 week: 16
 category: lectures
-title: OLED Screens (old SPI version)
+title: Software Timers
 ---
 
 <!-- headingDivider: 2 -->

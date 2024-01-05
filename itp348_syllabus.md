@@ -8,7 +8,7 @@ toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: true
 ---
 
-## Syllabus Fall 2023
+## Syllabus Spring 2024
 
 ### Course Info
 
@@ -173,14 +173,13 @@ added depending on size of the class.
 
 ## Course Grading Breakdown
 
-| Item                                      | % of Grade |
-| ----------------------------------------- | ---------- |
-| Assignments                               | 40         |
-| Final Project                             | 35         |
-| Quizzes and In-Class Labs                 | 15         |
-| In-Class Polls and In-Class Participation | 10         |
-|                                           |            |
-| Total                                     | 100%       |
+| Item                                                       | % of Grade |
+| ---------------------------------------------------------- | ---------- |
+| Assignments                                                | 45         |
+| Final Project                                              | 35         |
+| Quizzes, In-Class Labs, and In-Class Polls / Participation | 20         |
+|                                                            |            |
+| Total                                                      | 100%       |
 
 ### Grading Scale
 
@@ -219,20 +218,14 @@ changed.
 ### Late Policy
 
 -   Assignments are due on the stated day on Blackboard (typically at 11:59 pm)
-
--   Students are given 3 “grace days” (self-granted extensions) which may be
+-   Students are given 5 “grace days” (self-granted extensions) which may be
     used for extra time without penalty
-
 -   Grace days may be used for assignments only, **not the final project**
-
 -   Grace days may be used for one assignment, distributed them across several
     assignments, or even better, saved them for a crisis that thankfully never
     comes
-
 -   Instructor-granted extensions are only considered after all grace days are
     used and only given in rare, exceptional situations
-
--   **Late work will not be accepted after all the grace days have been used**
 
 Important: it is the responsibility of the student to state in their Blackboard
 submission that they intend to use a grace day.

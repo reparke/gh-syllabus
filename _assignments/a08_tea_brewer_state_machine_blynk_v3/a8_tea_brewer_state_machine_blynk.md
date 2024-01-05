@@ -3,7 +3,7 @@ week: 8
 number: 8
 category: assignments
 title: State Machine Tea Brewer with Blynk
-date_due: Oct 22 @ 11:59 pm
+date_due: Mar 10 @ 11:59 pm (two weeks)
 
 ---
 

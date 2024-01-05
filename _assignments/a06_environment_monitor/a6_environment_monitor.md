@@ -3,7 +3,7 @@ week: 6
 number: 6
 category: assignments
 title: Environment Monitor and Dashboard
-date_due: Oct 01 @ 11:59 pm
+date_due: Feb 18 @ 11:59 pm
 
 ---
 

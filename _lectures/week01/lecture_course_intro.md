@@ -28,10 +28,10 @@ title: Course Introduction
 
 ## Learning Assistants / Graders
 
-- LAs: Neftali, Montserrat, Selina, Judy, Swanav
+- LAs: Neftali, Montserrat, Judy, Swanav
 - Grader: Swanav
-- Office hours for will be posted on Blackboard
-- For grading issues, post on Piazza and tag the TA
+- Open lab hours for will be posted on Blackboard
+- For grading issues, post on Piazza and tag the LA
 - For general questions, you can contact either of us
 
 ## Continuous improvement!
@@ -50,12 +50,11 @@ title: Course Introduction
 
 ## Grading Scale
 
-| Item                                      | Weight |
-| ----------------------------------------- | ------ |
-| Assignments                               | 40     |
-| Final Project                             | 35     |
-| Quizzes and In-Class Labs                 | 15     |
-| In-Class Polls and In-Class Participation | 10     |
+| Item                                                       | Weight |
+| ---------------------------------------------------------- | ------ |
+| Assignments                                                | 45     |
+| Final Project                                              | 35     |
+| Quizzes, In-Class Labs, and In-Class Polls / Participation | 20     |
 
 ## Exams
 
@@ -95,15 +94,16 @@ None!
 ## Polls
 
 - Some classes will begin with poll questions about the recordings for that week
+- Polls are graded on participation and are part of the lab component of your grade
 
 ## Late Assignment Policy
 
 - Assigned weekly and due Sunday at *11:59pm* officially
 - Assignments are unofficially accepted Monday at 11:59pm
-- After that, youu have 3 “late days” which may be used for extra time without penalty
+- After that, you have 5 “late days” which may be used for extra time without penalty
 - May be used for one assignment or distributed across several assignments
-- Further extensions only given in **rare, exceptional situations** (and after late days are used)
-- **Late work will not be accepted after all the grace days have been used**
+- Instructor-granted extensions are only considered after all grace days are
+  used and only given in **rare, exceptional situations**
 - **Important:** You must state that you are using a grace day in their Blackboard submission
 
 ## Late Lab and Poll Policy
@@ -146,7 +146,7 @@ None!
 
 - Website used for class discussions on homework
 - Everyone should have been invited (link posted on Blackboard)
-- Forum monitored by all instructors, graders, TAs
+- Forum monitored by all instructors, graders, LAs
 - **No posting of code large sections of** **code**
 
 # Useful Resources
