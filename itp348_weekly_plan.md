@@ -580,7 +580,7 @@ Week 10 idea:
 
 ### Reading
 
-- ==Send wiring diagrams out ahead of time==
+- Spring: Announce Lab won't be due this week because one day is cancellled
 - ==**Try to start Sound earlier due to fall break**==
 
 

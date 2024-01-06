@@ -14,31 +14,32 @@ toc_sticky: true
 ## References
 
 ### Debugging Tips
+- [ITP-348 Argon troubleshooting guide](https://docs.google.com/document/d/1UFSCmwaw6rjz7XeGWI9wWUYsbfuyXEIstKvY_P2V1Bw/edit?usp=sharing) This is a super useful document with the most common issues and solutions encountered in ITP 348
+- [Official Particle community forum](https://community.particle.io/) This is best place to search for errors you encounter
 
-- [Using captive wifi networks](reference/general/captive_wifi.html)
+### Useful Particle Links
 
-
-### Books
-
-- [Practical Electronics for Inventors](https://www.accessengineeringlibrary.com/content/book/9781259587542) available to USC students through USC library subscription
-
-
-
-### Particle Documentation
-
+- [Device console](https://console.particle.io/devices)
 - [Argon datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
 - [Argon pin close-up](https://docs.particle.io/assets/images/argon/argon-dimensions.png)
 - [Language reference](https://docs.particle.io/reference/device-os/firmware/argon/#language-syntax)
 - [Cloud functions refenence](https://docs.particle.io/reference/device-os/firmware/argon/)
-
-
-
-### Particle Quicklinks
-
-- [Console](https://console.particle.io/devices)
-- [Community / forum](https://community.particle.io/)
 - [Web IDE](https://build.particle.io/build)
 
+
+### C++ Language 
+
+- [C plus plus](http://www.cplusplus.com/)
+- [C++ Reference](https://en.cppreference.com/w/)
+
+
+### Connecting to Captive Wifi Networks
+
+- [Using captive wifi networks](reference/general/captive_wifi.html)
+
+### Books
+
+- [Practical Electronics for Inventors](https://www.accessengineeringlibrary.com/content/book/9781259587542) available to USC students through USC library subscription
 
 
 ### Fritzing
@@ -56,11 +57,6 @@ toc_sticky: true
 - [Multi-tasking](https://learn.adafruit.com/multi-tasking-the-arduino-part-1?view=all) (from Adafruit)
 
 
-
-### C++ Language 
-
-- [C plus plus](http://www.cplusplus.com/)
-- [C++ Reference](https://en.cppreference.com/w/)
 
 
 
