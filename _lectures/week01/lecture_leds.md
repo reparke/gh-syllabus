@@ -59,6 +59,8 @@ title: LEDs and Digital Output
 
 ## LED Datasheet
 
+<!--go through this together -->
+
 - [Datasheet](https://www.sparkfun.com/datasheets/Components/LED/COM-09590-YSL-R531R3D-D2.pdf)  
 - Forward Current
 - Peak Forward Current
@@ -98,7 +100,7 @@ forward current is current the LED can handle-->
 ## Digital Output
 
 * These are signals that are HIGH or LOW
-  - **HIGH** is **5V** (pin VUSB) or **3.3V** (pin 3.3v)
+  - **HIGH** is **5V** (pin `VUSB`) or **3.3V** (pin `3v3`)
     - HIGH is considered "true"
   - **LOW** / false is **0V** (ground)
     - LOW is considered "false" 

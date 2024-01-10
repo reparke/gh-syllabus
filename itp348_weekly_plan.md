@@ -67,15 +67,18 @@ Week 10 idea:
 
 * [ ] summary of info. 
 
-  - Maybe a page of "tips" - cool work-around or example of something not completely covered in class. 
+  - [ ] Maybe a page of "tips" - cool work-around or example of something not completely covered in class. 
 
-- Maybe a page of "oops" - mistakes to be avoided
-  - Maybe a page of troubleshooting - there were a few tricky situations people posted on Piazza, a record of that would be cool
-  - Maybe a page of ideas - problems to solve. Maybe something you and the TAs add, challenges of all levels for fun
+- [ ] Maybe a page of "oops" - mistakes to be avoided
+  
+  - [x] Maybe a page of troubleshooting - there were a few tricky situations people posted on Piazza, a record of that would be cool
+  
+  - [ ] Maybe a page of ideas - problems to solve. Maybe something you and the TAs add, challenges of all levels for fun
   
   
   
-  
+
+
 
 **Videos and Wiring Diagrams Needed to Publish**
 
@@ -128,17 +131,17 @@ Week 10 idea:
 
 ### Day 1
 
+#### Alternate Plan - Spring missing one day
+
+- Spring 2024: I tried covering electricity today and it felt like too much for the first day. Rather than going faster in week 1 to prepare for missed day, it is probably better to make up the material in week 2 or 3
+
 #### Lecture
 
 * Remind: ==Students need to pick up kit from ITP office BEFORE Wed class==
 
-- Course introduction / syllabus
+- Course introduction / syllabus (PPTX)
 - Ice breaker *(see slides in local ITP 348 Docs folder)* 
-  - Congratulations! The job you wanted when you were five years old is now yours. What do you now do for a living?
-  - What is a random area of expertise that you have?
-  - What close encounters have you had with a famous person?
-  - If you could create one app (or service / device) that positively impacted the world, what would it be?
-
+  
 - Introduction to IoT
 - Explain course website
 - Kit overiew
@@ -161,8 +164,13 @@ Week 10 idea:
 
 - Electricity and Ohm's Law
 - Safety
+- Software tools
+
+  - Workbench (open and discuss)
+
+  - Fritzing (open and show example project)
 - Argon microcontroller
-- LED (skip digital output part)
+- LED
 
 #### Lab
 
@@ -176,6 +184,23 @@ Week 10 idea:
 
 
 ## 2. Pulse Width Modulation, ADC ==Spring 2024 - MLK Holiday==
+
+#### Spring Alternative Plan
+
+- w2d1 - holiday
+- w2d2
+  - Review digital output (Blink 2 LED)
+  - Review Workbench project
+  - Pulse width modulation (lecture, PWM pins, analogWrite)
+  - Serial monitor
+  - Analog to digital conversion + potentiometer
+- w3d1
+  - buttons
+  - latching
+- w3d2
+  - RGB leds
+  - functions
+  - libraries (if time)
 
 ### Announcements
 
@@ -205,15 +230,7 @@ Week 10 idea:
 
 #### Lecture
 
-- Software tools
-
-  - Workbench (open and discuss)
-
-  - Fritzing (open and show example project)
-    What is your favorite comfort food? Is there any special connection to it?
-
-* Digital output
-* Start with LED example
+* Quickly review LED / Digital output
 
 ### Lab
 
@@ -278,8 +295,8 @@ Week 10 idea:
 
 - https://learn.sparkfun.com/tutorials/pull-up-resistors
 - https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
-- Digital Input (video)
-- Push buttons: component, schematic, pull-up resistors (video)
+- Digital Input / Push buttons
+- RGB LEDs
 
 ### Day 1
 

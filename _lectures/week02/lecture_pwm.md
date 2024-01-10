@@ -30,8 +30,6 @@ title: Pulse Width Modulation
 * Also specify how long the output is **on**, and how long it is **off** *(pulse width)*
 * The result is the "effective" output voltage can be varied (since the signal is switching between high and low)
 
-
-
 ## Key Terms
 
 * Square wave: a digital output that switches repeatedly from high (3.3v) to low (0v)

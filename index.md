@@ -17,9 +17,10 @@ Welcome to the course page for **ITP 348 - Making Smart Devices: Introduction to
 You'll find course material and useful links on the side. 
 
 - [Week by Week Schedule](schedule.md) - Weekly schedule of lectures, assignments, readings
-- [Exercises](https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises) - GitHub repository with my own sample exercises as well as in-class code projects (denoted by **_ic** at end of the project names). All projects are created with [Particle Workbench](https://www.particle.io/workbench/)
+- [Exercises](https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises) - GitHub repository with the code we create during class. All projects are created with [Particle Workbench](https://www.particle.io/workbench/)
 - [Blackboard](https://blackboard.usc.edu) - For submitting assignments
 - [Piazza](https://piazza.com/usc/spring2024/itp348/home) - Discussion board for assignments and class
+- [ITP-348 Argon troubleshooting guide](https://docs.google.com/document/d/1UFSCmwaw6rjz7XeGWI9wWUYsbfuyXEIstKvY_P2V1Bw/edit?usp=sharing) This is a super useful document with the most common issues and solutions encountered in ITP 348
 
 #### Specific Course Content Links
 - [Syllabus](itp348_syllabus.md) - Course plan, policies, and date
@@ -31,7 +32,6 @@ You'll find course material and useful links on the side.
 - [Quick Reference](reference.md) - Quick reference guide for wiring and coding of components
 
 #### Debugging Tips
-- [ITP-348 Argon troubleshooting guide](https://docs.google.com/document/d/1UFSCmwaw6rjz7XeGWI9wWUYsbfuyXEIstKvY_P2V1Bw/edit?usp=sharing) This is a super useful document with the most common issues and solutions encountered in ITP 348
 - [Official Particle community forum](https://community.particle.io/) This is best place to search for errors you encounter
 
 #### Resources about This Site Structure

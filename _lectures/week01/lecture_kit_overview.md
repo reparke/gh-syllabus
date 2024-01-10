@@ -25,7 +25,7 @@ title: Kit Overview
 
 ## Student Responsibilities
 
-- Bring kit to class each day (if this isn't feasible, then check the course schedule for the parts needed that are needed for the current week)
+- Have kit with you for class each day (if this isn't feasible, then check the course schedule for the parts needed that are needed for the current week)
 
 - Maintain components in working order
 

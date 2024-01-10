@@ -18,15 +18,14 @@ title: Argon Microcontroller
 ## Microcontroller
 
 * Microcontrollers (MCU) are **embedded** computers
-* They are often designed for a specific purpose 
-  - Ex: a microwave, an RC car, TV remote'
-* Like your laptop, microcontrollers can take input, process it, store a value, and produce output
-* Unlike your laptop (or even your phone), a microcontroller has very limited processing power and storage 
+* They are often designed for a specific purpose (e.g. microwave, RC car, TV remote)
+* Microcontrollers can take input, process it, store a value, and produce output  (like on your computer)
+* Unlike your computer (or even your phone), a microcontroller has very limited processing power and storage 
 * Ex: The newer smartphones have 100,000 times more storage than the Argon
 
 ## Particle Argon
 
-* In this class, we will develop projects for a microcontroller called an **Argon** made by **Particle**
+* We will develop projects for a microcontroller called an **Argon** made by **Particle**
 * The Argon is able to wirelessly connect to the internet and to Bluetooth 
 * Particle also has a cloud communication system we will explore later in the semester
 
@@ -38,7 +37,7 @@ title: Argon Microcontroller
 
 - [Argon Datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
 
-## Work in pairs and answer the following
+## Work in groups and answer the following
 
 1. What voltage does the Argon operate at?
 2. Which IC (integrated circuit) is the "main" processor?
@@ -57,7 +56,7 @@ title: Argon Microcontroller
 
 - [Argon Datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
 
-<!-- operating voltage: 3.3v -->
+<!-- recommended supply voltage: 3.3v, Supply Input Voltage: up to 6.2v -->
 
 <!-- main: nRF52840; wifi: ESP32 -->
 
@@ -65,7 +64,7 @@ title: Argon Microcontroller
 
 <!-- 20 digital GPIO; 6 analog IN; 0 analog out; 1 ground pin -->
 
-<!-- GPIO can operate at 3.3V max so be caution with higher voltage devices -->
+<!-- Input high voltage: GPIO can operate at 3.3V max so be caution with higher voltage devices -->
 
 <!-- show other communication pins -->        
 
@@ -75,7 +74,7 @@ title: Argon Microcontroller
 
 * We will use Particle Workbench as our IDE
 * We will write software code that runs on the Argon
-  * Programs that run on microcontrollers are called **firmware** 
+* Programs that run on microcontrollers are called **firmware** 
 
 ## Important Note
 
@@ -87,8 +86,8 @@ title: Argon Microcontroller
 
 * Argon programs are written in C++ *(please see review link on course website for C++)*
 * Every Argon program **must** have these two functions *(you can other ones too)*
-  - `setup()`
-  - `loop()`
+  - `void setup()`
+  - `void loop()`
 * In addition, most programs will also have
   - global variable declarations
   - library includes
@@ -109,6 +108,8 @@ void loop() {
   // put your main code here, to run repeatedly:
 }
 ```
+
+*Note: There will be other default code at the top of the file when you create a new project. This code is needed to configure the Argon, but we can mostly ignore it*
 
 ## Libraries
 

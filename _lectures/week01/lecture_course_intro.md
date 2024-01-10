@@ -50,11 +50,11 @@ title: Course Introduction
 
 ## Grading Scale
 
-| Item                                                       | Weight |
-| ---------------------------------------------------------- | ------ |
-| Assignments                                                | 45     |
-| Final Project                                              | 35     |
-| Quizzes, In-Class Labs, and In-Class Polls / Participation | 20     |
+| Item                                                        | Weight |
+| ----------------------------------------------------------- | ------ |
+| Assignments                                                 | 45     |
+| Final Project                                               | 35     |
+| In-Class Labs <br />In-Class Polls / Participation <br />Quizzes | 20     |
 
 ## Exams
 
@@ -62,7 +62,7 @@ None!
 
 ## Assignments
 
-- Assigned weekly and due Sunday at *11:59pm* officially
+- Assigned weekly and due Sunday at *11:59pm* officially (Monday unofficially)
 - Submissions will be on Blackboard and typically include **code files** as well as **video files**
 - We can not accept assignments via email
 - Must be well commented and documented for full-credit
@@ -98,12 +98,10 @@ None!
 
 ## Late Assignment Policy
 
-- Assigned weekly and due Sunday at *11:59pm* officially
-- Assignments are unofficially accepted Monday at 11:59pm
-- After that, you have 5 “late days” which may be used for extra time without penalty
+- Assignments due Sunday at *11:59pm* officially (unofficially accepted Monday at 11:59pm)
+- You have 5 “late days” which may be used for extra time without penalty
 - May be used for one assignment or distributed across several assignments
-- Instructor-granted extensions are only considered after all grace days are
-  used and only given in **rare, exceptional situations**
+- Instructor-granted extensions are only considered after all grace days are used and only given in **rare, exceptional situations**
 - **Important:** You must state that you are using a grace day in their Blackboard submission
 
 ## Late Lab and Poll Policy

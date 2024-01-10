@@ -10,6 +10,9 @@ title: Pre-Lecture Activities
 
 * Using Workbench
   {% include video id="o5UglvrR2S4" provider="youtube" %}
+
+*Note: the default code that appears in new Workbench project has changed this video was recorded, but the process described in this video is still the same*
+
 * C++ Syntax
   {% include video id="5DMa_ihy5_4" provider="youtube" %}
 

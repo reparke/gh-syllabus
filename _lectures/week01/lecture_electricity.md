@@ -7,18 +7,11 @@ week: 1
 category: lectures  
 title: Electricity
 
-footer: ' '
 ---
 
 <!-- headingDivider: 2 -->
 
 # Electricity
-
-## What happens?
-
-<img src="lecture_electricity.assets/1564541287879.png" alt="width:400px" style="width:400px" />
-
-## Why? 
 
 ## How We Approach Electricity
 
@@ -39,7 +32,7 @@ footer: ' '
 
 * More water can flow (and flow faster) through a larger and smoother pipe
 
-* If the water is stored in a container / vat, it will pour out until it is empty (like a battery)
+* Water can be stored in a container (like a battery)
 
 ## Common Analogy
 
@@ -59,11 +52,9 @@ footer: ' '
 
 ## Compare
 
-<img src="lecture_electricity.assets/1564544624407.png" alt="Straw" style="width:500px" />
+Consider two straws. Which has greater flow?
 
-Consider two equal water jugs connected to two different straws. Which has greater flow?
 
-## Compare
 
 <img src="lecture_electricity.assets/5114247dce395f1e7e000008.png" alt="5114247dce395f1e7e000008" style="zoom:200%;" />
 
@@ -73,42 +64,6 @@ Consider two equal water jugs connected to two different straws. Which has great
 * The measure of how well something resist or allows electricity is **resistance** 
   * Measured in units called **Ohms (Ω)**
   * More Ohms means more resistance, which means less current (flow)
-
-## Key Concepts
-
-* Electrons are negatively-charged particles
-* Electricity is the flow of **electrons** from **positive** to **negative **(flow of energy)
-* Electronics is the study of devices that control / interact with the flow of electricity
-
-## Circuits
-
-* Electricity will only flow if there is a **circuit** 
-* A circuit is a complete loop from a positive voltage source to a negative (lesser) source, through a conductive material
-
-<!-- The LED will draw more current (and power) than it can handle and will burn out -->
-
-<img src="lecture_electricity.assets/1564541287879.png" alt="width:300px" style="width:400px" />
-
-​	
-
-
-## Voltage as Difference
-
-* When we describe voltage, we are measuring the **difference** between two points
-* In the water analogy, water could fall from 500 ft to 400 ft, or from 100 ft to 0 ft
-  - In both cases, water fell a difference of 100 ft, but the *reference point* changed
-* In a circuit, we commonly call the reference point **Ground (GND)** and say it is **0V**
-
-* In homes and buildings, **ground** is literally connected to the earth
-
-## Voltage Source
-
-* In our circuits, we will use a voltage source to provide energy potential
-  - USB power: 5v (also stepped down to 3.3v which the Argon uses)
-  - 9V battery: 9v
-  - Rechargeable lithium battery: 3.7v
-* Our circuits will have a positive voltage (e.g. 3.3v or 5v) and ground voltage (0v)
-* We will consider that current flows from the positive part of the circuit to the negative
 
 ## Resistors
 
@@ -129,18 +84,47 @@ Consider two equal water jugs connected to two different straws. Which has great
 * Unfortunately resistor labeling is not accessibly designed
 * To support students who are color blind or have difficulty distinguishing colors, here are [resources for support](https://reparke.github.io/ITP348-Physical-Computing/reference/general/reading_resistors_color_blind.html)
 
+## Key Concepts
+
+* Electrons are negatively-charged particles
+* Electricity is the flow of **electrons** from **positive** to **negative **(flow of energy)
+* Electronics is the study of devices that control / interact with the flow of electricity
+
+## Circuits
+
+* Electricity will only flow if there is a **circuit** 
+* A circuit is a complete loop from a positive voltage source to a negative (lesser) source, through a conductive material
+
+
+## Voltage as Difference
+
+* When we describe voltage, we are measuring the **difference** between two points
+* In the water analogy, water could fall from 500 ft to 400 ft, or from 100 ft to 0 ft
+  - In both cases, water fell a difference of 100 ft, but the *reference point* changed
+* In a circuit, we commonly call the reference point **Ground (GND)** and say it is **0V**
+
+* In homes and buildings, **ground** is literally connected to the earth
+
+## Voltage Source
+
+* In our circuits, we will use a voltage source to provide energy potential
+  - USB power: 5v (also stepped down to 3.3v which the Argon uses)
+  - 9V battery: 9v
+  - Rechargeable lithium battery: 3.7v
+* Our circuits will have a positive voltage (e.g. 3.3v or 5v) and ground voltage (0v)
+* We will consider that current flows from the positive part of the circuit to the negative
+
 ## Ohm's Law
 
 * There are only a couple electrical laws that we need to know
 * There is a relationship between **voltage (V)**, **current (I)**, and **resistance (R)**
 
 ```mathematica
-V = I * R
-R = V / I
-I = R / V
+V = I * R   
+or Voltage = Current * Resistance
 ```
 
-* If you know two, you can solve for the other one
+* Rule of thumb: As resistance increases, the current decreases
 
 ## Example
 
@@ -151,7 +135,7 @@ I = R / V
 
 <!-- 1. 30 mA; 2. 1kOhm -->
 
-## Breadboard
+## Building our Circuits on Breadboard
 
 * We will use **breadboards** to connect our circuits
 * The **power rails**  (on the long ends of the board) are all connected together
