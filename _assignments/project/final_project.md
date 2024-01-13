@@ -149,7 +149,7 @@ Grading
 | Controlling device from remotely (via cloud or Bluetooth) | **10** |
 | In-person demonstration                                   | **10** |
 | Coding style and organization                             | **5**  |
-| Device fulfills original proposal features                | **10** |
+| Features represent a coherent and complete device         | **10** |
 |                                                           |        |
 | **Documentation**                                         |        |
 | Developer documentation                                   | **5**  |

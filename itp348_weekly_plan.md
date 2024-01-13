@@ -82,8 +82,6 @@ Week 10 idea:
 
 **Videos and Wiring Diagrams Needed to Publish**
 
-- [ ] Week 2
-- - [ ] PWM (skip and leave for class)
 - [ ] Week 3
 - - [ ] a5: create new assignment that doesn't use while loop timing, consider using millis
 - [ ] Week 4
@@ -164,28 +162,26 @@ Week 10 idea:
 
 - Electricity and Ohm's Law
 - Safety
-- Software tools
+- Software tools: Workbench (open and discuss)
 
-  - Workbench (open and discuss)
-
-  - Fritzing (open and show example project)
 - Argon microcontroller
-- LED
+- LED 
 
 #### Lab
 
+- show how to put argon on breadboard and remove 
 - turn on LED + resistor by connecting to 3v3 and ground
+- show how to flash and make light blink (most people won't have their device claimed yet)
 
 #### Feedback
 
 - Most students were familiar with electricity principles, units (kilo, milli) so the electricity presentation very simple
-- Online: skipped making project and did LED blink together
 
-
+  
 
 ## 2. Pulse Width Modulation, ADC ==Spring 2024 - MLK Holiday==
 
-#### Spring Alternative Plan
+### Spring Alternative Plan
 
 - w2d1 - holiday
 - w2d2
@@ -205,10 +201,7 @@ Week 10 idea:
 ### Announcements
 
 - Reminder to order Sparkfun kit
-- Office hours to help installation
-- USC Guest Wireless will work for the Argon, but setup.particle.io is having problems configuring the device the first time. Try using the app
 - Reminder to watch course videos
-- Explain social issues assignment - sign ups in two weeks
 
 ### Reading
 
@@ -259,8 +252,6 @@ Week 10 idea:
 
 #### Lecture
 
-- ==Spring 2023== will need to pick up some missed topics from holiday
-
 - Serial monitor
 
 
@@ -272,7 +263,7 @@ Week 10 idea:
 
 #### Lecture
 
-- Analog to digital conversion; explain the math / conversion between voltage and input values
+- Analog to digital conversion
 
 #### Lab
 
@@ -287,6 +278,10 @@ Week 10 idea:
 
 ## 3. Buttons, Digital Input, RGB
 
+### Announcements
+
+- Explain social issues assignment - sign ups in two weeks
+
 ### Assignment
 
 - Due start of current week: A2 - Light Sculpture 
@@ -295,21 +290,20 @@ Week 10 idea:
 
 - https://learn.sparkfun.com/tutorials/pull-up-resistors
 - https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all
-- Digital Input / Push buttons
-- RGB LEDs
+- Digital Input / Push buttons (video)
+- RGB LEDs (video)
 
 ### Day 1
 
 #### Guided activity
 
-- ==Spring 2023== will need to pick up some missed topics from holiday
 - Ask them to **digitalRead()** on D2; use serial monitor to read with no connection (will be floating); then directly connect to **3.3v**, then GND
 - connect button with pullup
 - Ask what is the voltage at pin when button pressed and not pressed
 
 #### Guided activity
 
-* Fritzing explain
+* Explain Fritzing software
 * Create button with resistors in Fritzing
 
 #### Guided activity
@@ -324,7 +318,7 @@ Week 10 idea:
 
 #### Guided activity
 
-- Latching button (if time) **==identify way to program this==**
+- Latching button **==identify way to program this==**
 - Connect 3 LEDs and control on/off with button presses (3 states)
 
 #### Lecture
@@ -412,10 +406,6 @@ Week 10 idea:
 
 * Calibrate photoresistor
 
-#### ~~Lecture (skip)~~
-
-- ~~(if time) show derivation of mathematically deriving exact resistor to calibrate. Explain this is an important part of engineering~~
-
 #### Lecture
 
 - Particle Cloud Publish
@@ -423,10 +413,6 @@ Week 10 idea:
 #### Lab
 
 - publish photoresistor value and "state" (for example bright, ambient, or dark to Particle cloud)
-
-#### ~~Lecture~~
-
-- ~~Reading resistors (we had time in Fall 2021)~~
 
 ### Feedback
 
@@ -461,10 +447,6 @@ Week 10 idea:
 
 - 
 
-#### ~~Lecture~~
-
-* ~~If time, cover multimeter or reading resistors or switches~~
-
 
 
 ## 5. TMP36, OLED
@@ -480,7 +462,7 @@ Week 10 idea:
 
 #### Lecture
 
-- ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
+- ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
 - ==Announce survey==
 - ==Remind students about extra credit for posting on social issues==
 - Quiz is open Thurs 2/18 after class (6 pm PST) until Monday 2/22 at 11:59 pm PST. Once you start it, you will have 60 minutes but it might take you 15 min.

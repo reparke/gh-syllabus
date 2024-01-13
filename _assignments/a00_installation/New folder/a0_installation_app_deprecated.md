@@ -110,14 +110,14 @@ Add Argon device to your Particle account
 1.  During the setup process, the mobile app will ask if you want to set up mesh
     networking. Choose the option **Do not use in mesh networking**
 
-<img src="a0_installation_app_deprecated.assets/2e97c727fccb86d208d67eb123ae8450.png" alt="find wifi networks" style="width:400px" />
+<img src="media/2e97c727fccb86d208d67eb123ae8450.png" alt="find wifi networks" style="width:400px" />
 
 1.  You may eventually need to connect it to multiple networks (e.g. at USC and
     where you live), but you will begin with a single Wifi network. When
     connecting to Wifi at USC, make sure to use **USC Guest Wireless**, not USC
     Secure Wireless
 
-<img src="a0_installation_app_deprecated.assets/b7fb87c14d438e943a6133b77d2743cc.png" alt="name the Argon" style="width:400px" />
+<img src="media/b7fb87c14d438e943a6133b77d2743cc.png" alt="name the Argon" style="width:400px" />
 
 1.  During setup, you will be asked to provide a name for your Argon. This is
     the name that you will use in your projects to reference your device
