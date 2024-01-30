@@ -4,7 +4,6 @@ number: 0
 category: assignments
 title: Installation and Setup Using Device Doctor
 date_due: Jan 14 @ 11:59 pm
-show_in_list: false
 ---
 
 IMPORTANT: This is not the preferred to setup your Argon, but if you need to join a Wifi network without a password, you should use this approach since https://setup.particle.io doesn't work with empty passwords (as of 1/2024)

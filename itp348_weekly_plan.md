@@ -402,7 +402,7 @@ Week 10 idea:
 
 * Photoresistor (video)
 
-#### Lab
+#### Exerci
 
 * Calibrate photoresistor
 
