@@ -436,13 +436,14 @@ Week 10 idea:
 
 #### Lab
 
-1. Use `delay` to blink **LED1** and then check for a button press (not a toggle); display Serial message if button pressed 
+1. Use `delay` to blink **LED1** every 300 ms and then check for a button press (not a toggle); display Serial message if button pressed 
 2. Use `millis()` to fix blocking in #1 (we'll do #1 and #2 together)
-3. Enable toggle button to turn **LED2** on and off on the **rising edge**
-4. Track number of button presses and use `millis()` to publish number of button presses every **10000 ms**
-5. Extra Challenge
-   * Change **LED1** to be *on* for 300 ms and *off* for 700 ms
-   * Change  code so that when the toggle button is pressed, **LED2** starts blinking every 60 **milliseconds**, and when the toggle button is pressed again, **LED2** stops blinking
+3. Use `millis()` to blink **LED2** every 146 ms
+4. Enable toggle button to turn **ON BOARD LED** on and off on the **rising edge**
+5. Track number of button presses and use `millis()` to publish number of button presses every **10000 ms**
+6. Extra Challenge
+     * Change **LED1** to be *on* for 300 ms and *off* for 700 ms
+     * Change  code so that when the toggle button is pressed, **LED2** starts blinking every 146 **milliseconds**, and when the toggle button is pressed again, **LED2** stops blinking
 
 #### Feedback
 

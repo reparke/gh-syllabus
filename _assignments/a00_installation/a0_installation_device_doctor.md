@@ -6,7 +6,7 @@ title: Installation and Setup Using Device Doctor
 date_due: Jan 14 @ 11:59 pm
 ---
 
-IMPORTANT: This is not the preferred to setup your Argon, but if you need to join a Wifi network without a password, you should use this approach since https://setup.particle.io doesn't work with empty passwords (as of 1/2024)
+IMPORTANT: This is not the preferred to setup your Argon, but if you need to join a Wifi network without a password (like USC Guest Wireless), you should use this approach since https://setup.particle.io doesn't work with empty passwords (as of 1/2024)
 
 Assignment 0 – Installation and Setup
 =====================================
@@ -45,7 +45,7 @@ Create Particle account
 >   (e.g. to install new firmware code), we will use Particle’s cloud software.
 
 -   You need to use the [Chrome](https://www.google.com/chrome/) browser to configure your Argon and visit this site:
-     https://setup.particle.io/
+    [https://docs.particle.io/tools/doctor/](https://docs.particle.io/tools/doctor/)
 
 -   Go to **Login** and create a new personal account
 
