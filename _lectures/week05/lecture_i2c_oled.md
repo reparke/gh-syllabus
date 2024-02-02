@@ -106,7 +106,9 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 ## I2C Cable
 
-<img src="lecture_i2c_oled.assets/qwiic_cable.jpg" style="width:300px;" />
+![bg contain left:40%](lecture_i2c_oled.assets/qwiic_cable.jpg)
+
+
 
 - Sparkfun uses a custom cable and connector for its I2C devices called **Qwiic**
 - Instead of connecting individual wires, you can connect a single cable
@@ -126,9 +128,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
   - Lower transfer speed than some other protocols (e.g. SPI) 
 
 ## Argon - OLED Screen Pin Mapping
-*see next slide*
-## 
-<span style="font-size:75%">
+
 
 
 

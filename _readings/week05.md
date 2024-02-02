@@ -14,7 +14,7 @@ title: Pre-Lecture Activities
 ### Watch before class Wed / Thurs
 
 * OLED Screens
-  {% include video id="KCJc-IDLkHc" provider="youtube" %}
+  {% include video id="jg3D2uHJ7Cw" provider="youtube" %}
 
 ### Bring to class all this week
 
