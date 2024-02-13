@@ -470,7 +470,7 @@ Week 10 idea:
 - Quiz is open Thurs 2/18 after class (6 pm PST) until Monday 2/22 at 11:59 pm PST. Once you start it, you will have 60 minutes but it might take you 15 min.
 - TMP36
 
-#### Lab (in slides)
+#### Exercise (in slides)
 
 * Connect a TMP36 and output the current temperature to the serial monitor
 * Consider what type of input is this signal? How will this value be read by Argon
@@ -537,11 +537,14 @@ Week 10 idea:
 #### Lecture
 
 - Start Blynk
+  - Tell students to cancel "Quick Start" 
+  - Go to "Developer Zone" and make new template
+
 
 #### Guided activity
 
 - Note: Blynk template "Week 6 Lab" can be used for exercise and lab. Use following pins
-  - On board LED - **V5**
+  - Button Show Light - **V5**
   - Random number - **V6**
 - set up Blynk
 - Install iOS / Android app

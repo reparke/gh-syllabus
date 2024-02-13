@@ -26,12 +26,17 @@ title: Pre-Lecture Activities
 
 - none
 
-### Optional
+### Optional C++ Reference
 
-* Read [Analog vs. Digital](https://learn.sparkfun.com/tutorials/analog-vs-digital/all)
-  
+* Quick note: in some of the C++ videos below, they reference `cout` and `cin`. Those are C++ functions that we don't use in programming microcontrollers so you don't need to worry about them. For clarity, all you need to know is that 
+  * `cout` is a C++ function to print to the console window like `Serial.println` for the Argon or `print` in Python
+  * `cin` is a C++ function to get user input from the keyboard like `input` in Python. The Argon doesn't have an equivalent way to get user input from the keyboard.
+* Watch **Arrays in C++**
+  {% include video id="0WoOSsuOzfY" provider="youtube" %}
 * Watch **For Loops in C++**
   {% include video id="2ahS1PG-Ip4" provider="youtube" %}
-
+* Watch **Using Arrays and Loops Together in C++**
+  {% include video id="BK_vfv_Z188" provider="youtube" %}
+* Read [Analog vs. Digital](https://learn.sparkfun.com/tutorials/analog-vs-digital/all)
 * Watch **Pulse Width Modulation** (we will cover this in class)
   {% include video id="GQLED3gmONg" provider="youtube" %}

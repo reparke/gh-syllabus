@@ -287,7 +287,7 @@ tone(D6, NOTE_D4, 500);	//play the D note above middle C
 ## Recommendation #2: Blynk Starting Template Code
 
 * You can adapt the Blynk code we used in class, or you can start with this empty Blynk template. Make sure to install the `blynk` library
-* [blynk_start_template.ino](blynk_start_template.ino)
+* [blynk_start_template.cpp](blynk_start_template.cpp)
 
 
 

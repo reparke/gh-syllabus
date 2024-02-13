@@ -38,7 +38,6 @@ title: Creating IoT Mobile Apps with Blynk
 | Highly customizable                                          | Free version has limitations                     |
 | Easier to integrate than other mobile dashboards (e.g. Losant) | Dashboard is limited (compared to Initial State) |
 | Easy to design mobile app without coding                     | Requires modifying `loop()` logic                |
-| Control IoT device better than with IFTTT                    | Mobile only (can't view on web)                  |
 
 ## Quick Blynk Definitions
 
@@ -79,7 +78,7 @@ Blynk Cloud website ([https://blynk.cloud](https://blynk.cloud))
 
 ## Integration Phase 1: Create template
 
-![image-20210905203811218](lecture_blynk_cloud.assets/image-20210905203811218.png)
+![image-20240212172351680](lecture_blynk_cloud.assets/image-20240212172351680.png)
 
 ![image-20210905203331216](lecture_blynk_cloud.assets/image-20210905203331216.png)
 
@@ -99,7 +98,7 @@ Click **Save**
 
 ## Integration Phase 1: Create new device
 
-<img src="lecture_blynk_cloud.assets/image-20210905214437218.png" alt="image-20210905214437218" style="width:400px" />
+<img src="lecture_blynk_cloud.assets/image-20240212172503798.png" alt="image-20240212172503798" width=200/>
 
 
 
@@ -134,7 +133,6 @@ Copy this info to include in sketch below (**Note: this is just an example--use 
 2. Also add these lines beneath the template lines:
 
 ```c++
-#define BLYNK_PRINT Serial //this is optional
 #include <blynk.h>
 ```
 
@@ -156,11 +154,15 @@ Blynk.run();
 After integration, your code should look something like the following
 
 ```c++
+#include "Particle.h"
+SYSTEM_MODE(AUTOMATIC);
+SYSTEM_THREAD(ENABLED);
+SerialLogHandler logHandler(LOG_LEVEL_WARN);
+
 #define BLYNK_TEMPLATE_ID "ADD_YOUR_OWN"
 #define BLYNK_DEVICE_NAME "ADD_YOUR_OWN"
 #define BLYNK_AUTH_TOKEN "ADD_YOUR_OWN"
 
-#define BLYNK_PRINT Serial //this is optional
 #include <blynk.h>
 
 void setup() {
@@ -255,10 +257,10 @@ void loop() {
 * Create Blynk template
 * Create Blynk datastream
 
-    | Datastream Name | Virtual Pin |
-    | --------------- | ----------- |
-    | `Onboard LED`   | `V5`        |
-    | `Random Number` | `V6`        |
+    | Datastream Name     | Virtual Pin |
+    | ------------------- | ----------- |
+    | `Button Show Light` | `V5`        |
+    | `Random Number`     | `V6`        |
 
 
 - Build Blynk with the following features
@@ -286,7 +288,7 @@ void loop() {
   | `Button Display Random Color` | `V4`        |
   | `Displayed Color String`      | `V7`        |
 
-  * Use **ZeRGBa** to control RGB LED on pins `V0 V1 V2` *(app --> argon)*
+  * Use three sliders to control RGB LED on pins `V0 V1 V2` *(app --> argon)*
   * Use a display to show if magnetic switch is `open` or `closed` on pin `V3` *(argon --> app)*
   * Use a button on `V4` to trigger the RGB LED to display a color randomly chosen from white, yellow, magenta, red *(app --> argon)*
   * When one of the four random colors is displayed on the RGB LED, send a string representing that color to the app on pin `V7` *(argon --> app)*
@@ -295,7 +297,7 @@ void loop() {
 
 ## Lab App Layout
 
-<img src="lecture_blynk_cloud.assets/image-20210927175456273.png" alt="image-20210927175456273" style="width:400px" />
+<img src="lecture_blynk_cloud.assets/Screenshot 2024-02-12 at 5.42.52 PM.jpeg" alt="Screenshot 2024-02-12 at 5.42.52 PM" style="zoom: 33%;" />
 
 
 
