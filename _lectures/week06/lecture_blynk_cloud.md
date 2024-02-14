@@ -289,8 +289,8 @@ void loop() {
   | `Displayed Color String`      | `V7`        |
 
   * Use three sliders to control RGB LED on pins `V0 V1 V2` *(app --> argon)*
+  * Use a button on `V4` to trigger the RGB LED to display a color randomly chosen from **white**, **yellow**, **magenta**, or **red** *(app --> argon)*
   * Use a display to show if magnetic switch is `open` or `closed` on pin `V3` *(argon --> app)*
-  * Use a button on `V4` to trigger the RGB LED to display a color randomly chosen from white, yellow, magenta, red *(app --> argon)*
   * When one of the four random colors is displayed on the RGB LED, send a string representing that color to the app on pin `V7` *(argon --> app)*
 
 * What happens if you put `Blynk.syncAll();` at the end of `setup()`? 
