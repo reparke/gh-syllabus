@@ -25,13 +25,47 @@ int prevDoorState = HIGH;
 int currDoorState = HIGH;
 
 unsigned long prevMillis = 0;
-const unsigned long INTERVAL_BLYNK = 1000; //update from ARGON to APP every 1 sec
+const unsigned long INTERVAL_BLYNK =
+    1000;  // update from ARGON to APP every 1 sec
 
-    void changeLedColor(int r, int g, int b) {
+/*
+    EVENT DRIVEN PROGRAMMING
+
+    we write a function, but we DONT CALL that function EVER
+        this function is to be called in a specific situation AKA when a certain
+   EVENT happens is useful when we don't know when the event will happen also
+   when there is a some necessary lag between when the event happens
+
+    Ex: we write a function that will handle what happens when the use presses
+   button in Blynk app but we DONT CALL THAT FUNCTION instead, when the event
+   happens (e.g. user presses button on App), then the ARgon will AUTOMAGICALLY
+   call that function for us
+
+    receive data FROM app TO argon
+*/
+
+void changeLedColor(int r, int g, int b) {
     // theoretical "recipe" or algorithm using these input
     analogWrite(PIN_RED, r);
     analogWrite(PIN_GREEN, g);
     analogWrite(PIN_BLUE, b);
+}
+
+BLYNK_WRITE(V5) {
+    // whenever data is sent from APP to ARGON on THIS pin,
+    // the argon will execute for us
+
+    // lets see what data was sent from APP
+    int buttonVal = param.asInt();  // param is a Blynk object which lets us
+                                    // access the value that was sent
+
+    if (buttonVal == 0) {
+        changeLedColor(255, 255, 255);
+        Serial.println("Button val 0");
+    } else {
+        changeLedColor(0, 0, 0);
+        Serial.println("Button val 1");
+    }
 }
 
 void setup() {
@@ -58,16 +92,15 @@ void loop() {
     unsigned long curMillis = millis();
     if (curMillis - prevMillis > INTERVAL_BLYNK) {
         prevMillis = curMillis;
-        int randomNum = random(0,256);
+        int randomNum = random(0, 256);
 
         /*
         to send data FROM Argon TO App
-            Blynk.virtualWrite(VIRTUAL_PIN, DATA);          
+            Blynk.virtualWrite(VIRTUAL_PIN, DATA);
                 virtual pin is a datastream we set up on the Blynk website
                 data is whatever we are sending (int, float, string)
         */
-       Blynk.virtualWrite(V6, randomNum);
-       Serial.println("Random number = " + String(randomNum));
-
+        Blynk.virtualWrite(V6, randomNum);
+        Serial.println("Random number = " + String(randomNum));
     }
 }

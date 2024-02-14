@@ -6,8 +6,7 @@
 #define BLYNK_TEMPLATE_NAME "Week 6"
 #define BLYNK_AUTH_TOKEN "Glbz5sDT1gaudxya5-c_OL6kZR0JMQTV"
 
-#define BLYNK_PRINT Serial
-#define BLYNK_IP IPAddress(64, 225, 16, 22)
+
 #include <blynk.h>
 
 const int PIN_LED = D7;
@@ -47,7 +46,7 @@ void setup() {
     Serial.begin(9600);
 
     delay(5000);
-    Blynk.begin(BLYNK_AUTH_TOKEN, BLYNK_IP);  // initial setup
+    Blynk.begin(BLYNK_AUTH_TOKEN);  // initial setup
 }
 
 void loop() {

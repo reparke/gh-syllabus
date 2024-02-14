@@ -261,15 +261,16 @@ void loop() {
     | ------------------- | ----------- |
     | `Button Show Light` | `V5`        |
     | `Random Number`     | `V6`        |
+    | `Door State`        | `V3`        |
 
 
 - Build Blynk with the following features
 
-
-    - Use button to control onboard LED (`D7`) via pin `V5` (app --> argon)
-    - Send random number (0-255) to app and display on pin `V6` (argon --> app)
-    - Use virtual LED to show random number on pin `V6` (argon --> app)
-    - Use a gauge to show random number on pin `V6`
+  1. Use a display to show if magnetic switch is `open` or `closed` on pin `V3` *(argon --> app)*
+  2. Send random number (0-255) to app and display on pin `V6` (argon --> app)
+  3. Use virtual LED to show random number on pin `V6` (argon --> app)
+  4. Use a gauge to show random number on pin `V6`  (argon --> app)
+  5. Use button to control turn the RGB led to white via pin `V5` (app --> argon)
 
 ## Exercise App Layout
 
@@ -279,20 +280,20 @@ void loop() {
 
 * Work in teams and create the following functionality in Blynk app
 
+* Create a new template and device in Blynk Cloud
+
   | Datastream                    | Virtual Pin |
   | ----------------------------- | ----------- |
   | `RGB Red`                     | `V0`        |
   | `RGB Green`                   | `V1`        |
   | `RGB Blue`                    | `V2`        |
-  | `Door State`                  | `V3`        |
   | `Button Display Random Color` | `V4`        |
   | `Displayed Color String`      | `V7`        |
 
-  * Use three sliders to control RGB LED on pins `V0 V1 V2` *(app --> argon)*
-  * Use a button on `V4` to trigger the RGB LED to display a color randomly chosen from **white**, **yellow**, **magenta**, or **red** *(app --> argon)*
-  * Use a display to show if magnetic switch is `open` or `closed` on pin `V3` *(argon --> app)*
-  * When one of the four random colors is displayed on the RGB LED, send a string representing that color to the app on pin `V7` *(argon --> app)*
-
+  1. Use three sliders to control RGB LED on pins `V0 V1 V2` *(app --> argon)*
+  1. Use a button on `V4` to trigger the RGB LED to display a color randomly chosen from **white**, **yellow**, **magenta**, or **red** *(app --> argon)*
+  1. When one of the four random colors is displayed on the RGB LED, send a string representing that color to the app on pin `V7` *(argon --> app)*
+  
 * What happens if you put `Blynk.syncAll();` at the end of `setup()`? 
 
 ## Lab App Layout
