@@ -102,5 +102,25 @@ void loop() {
         */
         Blynk.virtualWrite(V6, randomNum);
         Serial.println("Random number = " + String(randomNum));
+
+        int switchVal = digitalRead(PIN_SWITCH);
+        if (switchVal == HIGH) {
+            Blynk.virtualWrite(V3, "open");
+        } else {
+            Blynk.virtualWrite(V3, "closed");
+        }
+
+        // currDoorState = digitalRead(PIN_SWITCH);
+        // // Serial.println(currDoorState);
+        // if (currDoorState == LOW && prevDoorState == HIGH) {
+        //     Serial.println("Door was closed");
+        //     Blynk.virtualWrite(V3, "closed");  // send randNum on virtual pin
+        //     v6
+        // } else if (currDoorState == HIGH && prevDoorState == LOW) {
+        //     Serial.println("Door was opened");
+        //     Blynk.virtualWrite(V3, "open");  // send randNum on virtual pin
+        //     v6
+        // }
+        // prevDoorState = currDoorState;
     }
 }

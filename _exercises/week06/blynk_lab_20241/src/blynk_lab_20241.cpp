@@ -1,13 +1,11 @@
 /*
     1) Use 3 sliders to control RGB LED on pins V0 V1 V2 (app –> argon)
-	
-	2) Use a button on V4 to trigger the RGB LED to display a color randomly
-   chosen from white, yellow, magenta, red (app –> argon)  
-   
-   3) Use a display to show if magnetic switch is open or closed on pin V3
-   (argon –> app)
-   
-   4) When one of the four
+
+        2) Use a button on V4 to trigger the RGB LED to display a color randomly
+   chosen from white, yellow, magenta, red (app –> argon)
+
+
+   3) When one of the four
    random colors is displayed on the RGB LED, send a string representing that
    color to the app on pin V7 (argon –> app)
 
@@ -77,18 +75,20 @@ BLYNK_WRITE(V0)  // red -- THIS IS A FUNCTION
 {
     int r = param.asInt();
     analogWrite(PIN_RED, r);
+    Blynk.virtualWrite(V7, "Custom");
 }
 BLYNK_WRITE(V1)  // green
 {
     int g = param.asInt();
     analogWrite(PIN_GREEN, g);
+    Blynk.virtualWrite(V7, "Custom");
 }
 BLYNK_WRITE(V2)  // blue
 {
     int b = param.asInt();
     analogWrite(PIN_BLUE, b);
+    Blynk.virtualWrite(V7, "Custom");
 }
-
 
 BLYNK_WRITE(V4) {
     int buttonVal = param.asInt();  // 0 and 1
@@ -142,29 +142,5 @@ void loop() {
     currMillis = millis();
     if (currMillis - prevMillis > INTERVAL_BLYNK) {
         prevMillis = currMillis;
-
-        // to send data from argon to app, we use Blynk.virtualWrite
-        int randNum = random(0, 256);
-        Blynk.virtualWrite(V6, randNum);  // send randNum on virtual pin v6
-        Serial.println("Random num: " + String(randNum));
-
-        int switchVal = digitalRead(PIN_SWITCH);
-        if (switchVal == HIGH) {
-            Blynk.virtualWrite(V3, "open");
-        } else {
-            Blynk.virtualWrite(V3, "closed");
-        }
     }
-
-    // currDoorState = digitalRead(PIN_SWITCH);
-    // // Serial.println(currDoorState);
-    // if (currDoorState == LOW && prevDoorState == HIGH) {
-    //     Serial.println("Door was closed");
-    //     Blynk.virtualWrite(V3, "closed");  // send randNum on virtual pin v6
-    // } else if (currDoorState == HIGH && prevDoorState == LOW) {
-    //     Serial.println("Door was opened");
-    //     Blynk.virtualWrite(V3, "open");  // send randNum on virtual pin v6
-
-    // }
-    // prevDoorState = currDoorState;
 }
