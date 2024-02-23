@@ -1,8 +1,4 @@
----
-week: 7
-category: readings
-title: Pre-Lecture Activities
----
+
 
 ## Week {{page.week}}
 
@@ -23,13 +19,7 @@ title: Pre-Lecture Activities
 - MicroOLED
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
-### Mon / Tues 
-
-- Enjoy the holiday!
-
-
-
-### Build before class Wed / Thurs 
+### Build before class Mon / Tues 
 
 | RGB LED                    | Argon Pins |
 | -------------------------- | ---------- |
@@ -50,3 +40,14 @@ title: Pre-Lecture Activities
 
 
 
+### Build before class Wed / Thurs 
+
+| LED             | Argon Pins |
+| --------------- | ---------- |
+| Magnetic Switch | D5         |
+| RGB Red LED     | D2         |
+| RGB Green LED   | D3         |
+| RGB Blue LED    | D4         |
+| Potentiometer   | A5         |
+
+![image-20210227172856897](week07.assets/image-20210227172856897.png)

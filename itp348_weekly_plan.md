@@ -582,11 +582,30 @@ Week 10 idea:
 
 ## 7. Finite State Machines ==Spring Presidents Day Holiday==
 
+### Notes
+
+- ==**Fall: Try to start Sound earlier due to fall break**==
+  - ==idea: Day 1 covers motors by directly building fan with potentiometer; Day 2 cover bluetooth and control can with bluetooth==
+
+- ==**Fall**==
+  - w7d1 FSM stoplight
+  - w7d2 FSM washing machine
+  - w8d1, we covered sound 
+  - w8d2 holiday
+  - w9d1, we covered motors and servos, and built the fan
+  - w9d2, we introduced bluetooth with fan 
+
+- ==**Spring**== Presidents Day cancelled one day from Week 7. New Plan
+  - w7d1 holiday
+  - w7d2 FSM stoplight
+  - w8d1 FSM washing machine
+  - w8d2 sound
+  - w9d1 motors with fan
+  - w9d2 motors with fan + bluetooth
+
 ### Reading
 
 - Spring: Announce Lab won't be due this week because one day is cancellled
-- ==**Try to start Sound earlier due to fall break**==
-
 
 ### Assignment
 
@@ -704,14 +723,6 @@ Week 10 idea:
 
 
 ## 9. Bluetooth and Motors
-
-- ==idea: Day 1 covers motors by directly building fan with potentiometer; Day 2 cover bluetooth and control can with bluetooth==
-
-### Idea / Feedback
-
-* w8d1, we covered sound 
-* Wk9d1, we covered motors and servos, and built the fan
-* w9d2, we introduced bluetooth with fan 
 
 ### Assignment
 
