@@ -1,8 +1,3 @@
----
-week: 8
-category: readings
-title: Pre-Lecture Activities
----
 
 
 
