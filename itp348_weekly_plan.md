@@ -6,7 +6,7 @@ title: Weekly Plan
 toc: false
 toc_label: "Quick Links"
 toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
-toc_sticky: true
+toc_sticky: true 
 
 ---
 
@@ -99,8 +99,6 @@ Week 10 idea:
   - [ ] wk11: inquire about future class TAs and kit TA
 - [ ] Week 11
   - [ ] Revise JSON in week 10. Try using ArduinoJSON instead of RK. The generation of RK is very tough. This would mean re-recording the parsing video to use ArduinoJSON
-
-
 
 ## Pre-semester
 
