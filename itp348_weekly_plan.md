@@ -642,26 +642,25 @@ Week 10 idea:
 
 - phase 1
 
-  - add state duration
   - create enum for cycle and for state
   - create current state global variable
-
+  
   - phase 2
     - Cycle getCyclePosition()
-
+  
   - phase 3
     - loop
-
+  
   - phase 4
     - setoutputs for idle
-
+  
   - phase 5
     - nextduration for idle
     - next state for idle
-
+  
   - phase 6
     - setouputs, next duration, next state for economy
-
+  
 - 
 
 ## Feedback
@@ -689,6 +688,13 @@ Week 10 idea:
 * Speaker
 * Tone
 * Pitches
+
+### Exercise
+
+- Show basic tone example with `delay` (blocking)
+- Ask students to try to blink on board LED every 100ms and also play a tone every 1000ms ( use `millis` and `noTone` to make non-blocking)
+- Show students `pitches.h` and logic for creating music with tempo
+- Have students try to create their own song
 
 ### Day 2
 
@@ -748,6 +754,17 @@ Week 10 idea:
 - Bluetooth
 - Argon BLE syntax
 - Show Bluefruit app (skip nRF Toolbox)
+
+#### Lab - ble_fan_start
+
+- Distribute github link to download (post on slides)
+- Describe project goals
+- Explain **argon_ble_setup.h** at a high level
+  - Have students change **DEVICE_NAME**
+- Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
+- Code together blinking D7 when **press 1**
+- Have students code on their own D7 on with **press up** and D7 off when **release up**
+- 
 
 #### Lab - ble_uart_control_start
 

@@ -69,7 +69,7 @@ void argon_ble_setup() {
   btSerialDebug
       used for printing debug info to serial monitor ===
 */
-void bluetoothSerialDebug(const uint8_t* data, size_t len) {
+void btSerialDebug(const uint8_t* data, size_t len) {
     for (size_t ii = 0; ii < len; ii++) {
         Serial.print(data[ii]);
         Serial.print(" ");

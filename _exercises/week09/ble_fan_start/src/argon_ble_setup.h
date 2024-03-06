@@ -69,3 +69,16 @@ void argon_ble_setup() {
         DEVICE_NAME);      // include custom name visible in mobile app
     BLE.advertise(&data);  // advertise to mobile app (central device)
 }
+
+/*-------------------- DEBUG FUNCTIONS -----------------------*/
+/*
+  bluetoothSerialDebug
+      used for printing debug info to serial monitor ===
+*/
+void bluetoothSerialDebug(const uint8_t* data, size_t len) {
+    for (size_t index = 0; index < len; index++) {
+        Serial.print((char)data[index]);
+        Serial.print(" ");
+    }
+    Serial.println();
+}

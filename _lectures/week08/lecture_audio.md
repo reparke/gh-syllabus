@@ -132,7 +132,7 @@ tone(D2, 2000, 3000);
 * You can then refer to music notes in the following manner
 
 ```cpp
-tone(D2, NOTE_C4, 1000);  # play the note "middle C"	
+tone(D2, NOTE_C4, 1000);  // play the note "middle C"	
 ```
 
 ## Finding Notes of Popular Songs
