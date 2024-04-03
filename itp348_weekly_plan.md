@@ -811,7 +811,7 @@ Week 10 idea:
 
 
 
-## 10. Cloud Dashboards; APIs; Weather;  (==**This may be too much content**==)
+## 11. Cloud Dashboards; APIs; Weather;  (==**This may be too much content**==)
 
 ### Reading
 
@@ -994,7 +994,7 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 #### Lab
 
 - Create blank project
-- Demonstrate heart rate function
+- Demonstrate heart rate function by using the library example
 
 #### Lecture 
 

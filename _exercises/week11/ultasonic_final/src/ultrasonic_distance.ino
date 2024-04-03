@@ -1,8 +1,6 @@
 
 
 double SPEED_SOUND_CM_ROOM_TEMP_FAHR = 0.03444;
-int MAX_RANGE_CM = 78;
-int MIN_RANGE_CM = 0;
 
 const int MIN_RANGE = 2;      // cm
 const int WARNING_RANGE = 12;  // 5 in ~~ 12 cm
