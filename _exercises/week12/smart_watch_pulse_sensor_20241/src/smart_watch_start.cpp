@@ -37,7 +37,7 @@ const int pulseSignalPin = A4;
 //////////////////////////////////
 // MicroOLED                    //
 //////////////////////////////////
-#include "SparkFunMicroOLED.h"  // Include MicroOLED library
+#include <SparkFunMicroOLED.h>  // Include MicroOLED library
 // The library assumes a reset pin is necessary. The Qwiic OLED has RST
 // hard-wired, so pick an arbitrarty IO pin that is not being used
 #define PIN_RESET 9
@@ -62,6 +62,9 @@ MicroOLED oled(MODE_I2C, PIN_RESET, DC_JUMPER);  // I2C declaration
     This delay was determined experimentally to work well
 */
 // TODO:
+unsigned long HEART_SCREEN_UPDATE = 3000;  // experimentally derived
+unsigned long prevMillis = 0;
+int beatAverage = 0;
 
 //////////////////////////
 // Clock  Screen  Var   //
@@ -86,25 +89,31 @@ int prevButtonVal = HIGH;  // the last VERIFIED state
 // States               //
 //////////////////////////
 // TODO: create state enum and variable(s) to track state
+enum State { Clock, Heart, Weather };
+State currentState = Heart;
 
 ///////////////////////////////////////////////////////////////
 //               END LIBRARIES AND DECLARATIONS              //
 ///////////////////////////////////////////////////////////////
 
 // TODO
-void getNextState() {}
-
-// TODO
-void loadNextScreen() {}
-
-// TODO
-void runHeartScreen() {
-    // for debugging
-    Serial.println("Heart");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Heart");
-    oled.display();
+void runHeartScreen() {  // updating OLED, not measuring HR
+    unsigned long curMillis = millis();
+    if (curMillis - prevMillis > HEART_SCREEN_UPDATE) {
+        prevMillis = curMillis;
+        oled.clear(PAGE);
+        oled.drawBitmap(bitmap_heart_16x12);
+        oled.setFontType(1);
+        oled.setCursor(20, 0);
+        if (beatAverage > 230 || beatAverage < 40) {
+            Serial.println("HR: ---");
+            oled.print("---");
+        } else {
+            Serial.println("HR: " + String(beatAverage));
+            oled.print(String(beatAverage));
+        }
+        oled.display();
+    }
 }
 
 // TODO
@@ -126,13 +135,42 @@ void runWeatherScreen() {
     oled.print("Weather");
     oled.display();
 }
+// TODO
+void getNextState() {
+    switch (currentState) {
+        case Clock:
+            currentState = Heart;
+            break;
+        case Heart:
+            currentState = Weather;
+            break;
+        case Weather:
+            currentState = Clock;
+            break;
+    }
+}
 
-
+// TODO
+void loadNextScreen() {
+    switch (currentState) {
+        case Clock:
+            runClockScreen();
+            break;
+        case Heart:
+            runHeartScreen();
+            break;
+        case Weather:
+            runWeatherScreen();
+            break;
+    }
+}
 ////////////////////////////
 // Pulse Sensor Functions //
 ////////////////////////////
-
-void PulseSensorAmped_data(int BPM, int IBI) {}
+// this event handler is called asynchronously
+void PulseSensorAmped_data(int BPM, int IBI) {
+    beatAverage = BPM;  // BPM is a value of the current HR from the sensor
+}
 
 void PulseSensorAmped_lost(void) {}
 
@@ -162,5 +200,14 @@ https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64
 }
 
 void loop() {
-    //TODO
+    // TODO
+    int currentButtonVal = digitalRead(PIN_BUTTON);
+    // latch
+    if (currentButtonVal == LOW && prevButtonVal == HIGH) {
+        // change the state variable
+        getNextState();
+    }
+    loadNextScreen();
+    PulseSensorAmped.process();  // measure HR
+    prevButtonVal = currentButtonVal;
 }

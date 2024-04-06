@@ -30,6 +30,7 @@ show_in_list: true
 | Signal     | Any PWM-capable pin |
 
 - **Important:** Most servos will require **5V** not **3.3V** so use `VUSB` 
+- If you want to use a servo with a LiPo battery, see [these instructions](../../reference/general/power_5V_devices_from_battery) 
 
 ### Notes on Servo Wire Colors
 

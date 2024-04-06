@@ -91,11 +91,6 @@ int prevButtonVal = HIGH;  // the last VERIFIED state
 //               END LIBRARIES AND DECLARATIONS              //
 ///////////////////////////////////////////////////////////////
 
-// TODO
-void getNextState() {}
-
-// TODO
-void loadNextScreen() {}
 
 // TODO
 void runHeartScreen() {
@@ -126,6 +121,13 @@ void runWeatherScreen() {
     oled.print("Weather");
     oled.display();
 }
+
+
+// TODO
+void getNextState() {}
+
+// TODO
+void loadNextScreen() {}
 
 
 ////////////////////////////

@@ -2,9 +2,9 @@
 marp: true
 theme: itp
 
-week: 16
-category: lectures
+category: reference
 title: Powering 5V Devices from a Battery
+show_in_list: true
 
 ---
 

@@ -94,8 +94,11 @@ void loop(){
 
 * Small hobby servos usually have a small plastic tab that keeps the armature from rotating past a certain point
 * Rotating beyond this point usually breaks the small plastic tab
-
 * This creates a continuous servo
+* **Important**
+  * Our servos require 5v so they will not work with a LiPo battery (3.7v). 
+  * If you want to use a servo with a LiPo battery, see [these instructions](../../reference/general/power_5V_devices_from_battery) 
+
 
 ## Controlling a Servo
 
