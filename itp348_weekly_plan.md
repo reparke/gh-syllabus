@@ -905,7 +905,10 @@ Week 10 idea:
   {"name":"{{location.name}}", "temperature":"{{current.temperature}}","description":"{{current.weather_descriptions.0}}"}
   ```
 
-  
+Consider using this template with UV and weather code because we need them later with the water (or is better to have student review mustache templates when setting up the watch)
+  ```json
+  {"name":"{{location.name}}", "temperature":"{{current.temperature}}","description":"{{current.weather_descriptions.0}}","weather_code":"{{current.weather_code}}","uv_index":"{{current.uv_index}}"}
+  ```
 
 #### Lab
 
