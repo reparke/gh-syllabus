@@ -33,12 +33,13 @@ title: Open PIR (Passive Infrared Sensor)
 ## Components
 
 * Main sensor is the small metal disc which detection infrared radiation
-  <img src="lecture_open_pir.assets/13285-04.jpg" alt="https://cdn.sparkfun.com//assets/parts/1/0/5/3/5/13285-04.jpg" style="width:400px;" />
+
+<img src="lecture_open_pir.assets/image-20240422104044162.png" alt="image-20240422104044162" width=300px/>
 
  ## Components
   * Clear / white lenses acts to focus a wider area of radiation onto the sensor to increase range 
 
-<img src="lecture_open_pir.assets/image-20200427174947738.png" alt="image-20200427174947738" style="width:300px;" />
+<img src="lecture_open_pir.assets/13968-04.jpg" alt="13968-04" width=300px />
 
 ## Operation (Sparkfun PIR)
 
@@ -46,7 +47,7 @@ title: Open PIR (Passive Infrared Sensor)
 * Digital output from `OUT` pin
 * `HIGH` when no movement detected
 * `LOW` when movement detected
-* Sensitivy adjustment (screwdriver)
+* Sensitive adjustment (screwdriver)
 * Time adjustment (screwdriver)
 * Single / dual swtich
 
@@ -54,17 +55,16 @@ title: Open PIR (Passive Infrared Sensor)
 
 <img src="lecture_open_pir.assets/openpir_pots.png" alt="openpir_pots" style="zoom:50%;" />
 
+* Sensitivity (potentiometer): how much motion triggers alarm
 * Adjust the **view distance** of the OpenPIR
 * Clockwise turn increase the distance the sensor sees
 * you turn this trimpot, the further  your sensor should be able to see. When you receive the board, the  trimpot will be centered, and the sensor will react to a person moving  about in the 6 to 8 foot (2 to 2.5m) range. At the maximum sensitivity,  the sensor will detect a person walking by at about 16 feet (5m).Other PIR sensors have different configurable options
-* Sensitivity (potentiometer): how much motion triggers alarm
-* Time adjust (potentiometer): how long after motion stops does signal remain active
-* Retriggering (switch / jumper): controls if alarm stays active for the same movement
 
 ## Time Adjustment (SEN) 
 
 <img src="lecture_open_pir.assets/openpir_pots.png" alt="openpir_pots" style="zoom:50%;" />
 
+* Time adjust (potentiometer): how long after motion stops does signal remain active
 * Adjust the length of time the output remains HIGH. This trimpot is used to adjust the oscillator  frequency of the NCS36000. 
 * Clockwise increases the length of time OUT remains high
 * Time range: 400 ms to 7.5 s
@@ -73,6 +73,7 @@ title: Open PIR (Passive Infrared Sensor)
 
 <img src="lecture_open_pir.assets/openpir_switch_1.png" alt="openpir_switch_1" style="zoom:50%;" />
 
+* Retriggering (switch / jumper): controls if alarm stays active for the same movement
 * Controls if alarm stays active for the same movement
 * Single-pulse mode can be used to detect an object entering *or* exiting the PIR's field-of-view
 * Dual-pulse detection can be used to detect an object entering *and* leaving the view area.
@@ -86,7 +87,7 @@ title: Open PIR (Passive Infrared Sensor)
 | OUT                 | Any digital pin          |
 | A                   | (Optional) Anyanalog pin |
 
-*Note: The wire color and pin order is specific to the [Sparkfun PIR sensor](https://www.sparkfun.com/products/13285) and not all PIR sensor*
+*Note: The wire color and pin order is specific to the [Sparkfun OpenPIR](https://www.sparkfun.com/products/13968) sensor and not all PIR sensor*s
 
 ## Wiring
 
@@ -95,7 +96,7 @@ title: Open PIR (Passive Infrared Sensor)
 ## Exercise
 
 - Part 1: Connect sensor; turn on on-board LED when motion is detected and turn off when motion stops
-- Part 2: Create a "hold length" of 5 sec whenever movement is detected
+- Part 2: Adjust the potentiometers to experiment with the view distance and and hold length
 
 ## Credit
 

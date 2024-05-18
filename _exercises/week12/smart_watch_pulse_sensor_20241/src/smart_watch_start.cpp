@@ -28,9 +28,7 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 #define ARDUINOJSON_ENABLE_ARDUINO_STRING 1
 #include <ArduinoJson.h>
 
-//////////////////////////////////
-// Pulse Sensor                 //
-//////////////////////////////////
+  
 #include <PulseSensorAmped.h>
 const int pulseSignalPin = A4;
 
@@ -70,6 +68,7 @@ int beatAverage = 0;
 // Clock  Screen  Var   //
 //////////////////////////
 // TODO:
+unsigned long CLOCK_SCREEN_UPDATE = 500;
 
 //////////////////////////
 // Weather Screen  Var  //
@@ -78,6 +77,12 @@ int beatAverage = 0;
    very long delay (8 times per day)
 */
 // TODO:
+
+unsigned long WEATHER_SCREEN_UPDATE = 10512000;
+float temperature;
+String weatherDescription;
+int weatherCode;
+int uvIndex;
 
 //////////////////////////
 // Button Variables     //
@@ -90,7 +95,16 @@ int prevButtonVal = HIGH;  // the last VERIFIED state
 //////////////////////////
 // TODO: create state enum and variable(s) to track state
 enum State { Clock, Heart, Weather };
-State currentState = Heart;
+State currentState = Weather;
+
+//////////////////////////////
+// Publish after Setup Flag //
+//////////////////////////////
+// TODO: create flag to publish ONCE after setup to get weather
+// this is necessary because with threading enabled, setup() runs
+// before cloud connectivity is enabled
+// https://community.particle.io/t/cant-particle-publish-in-setup-with-cpp-file/66688/3?u=rob7
+bool runOnce = true;
 
 ///////////////////////////////////////////////////////////////
 //               END LIBRARIES AND DECLARATIONS              //
@@ -118,22 +132,84 @@ void runHeartScreen() {  // updating OLED, not measuring HR
 
 // TODO
 void runClockScreen() {
-    // for debugging
-    Serial.println("Clock");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Clock");
-    oled.display();
+    /*
+        how often should we update the clock screen?
+        1 time per second
+        2 times per second
+    */
+    unsigned long curMillis = millis();
+    if (curMillis - prevMillis > CLOCK_SCREEN_UPDATE) {
+        prevMillis = curMillis;
+
+        String dateFormat = "%b %e";
+        String dayFormat = "%a";
+        String timeFormat = "%I:%M";
+        String secondFormat = "%S";
+
+        oled.clear(PAGE);
+        oled.drawBitmap(bitmap_clock_16x12);
+        oled.setFontType(0);
+
+        // date
+        oled.setCursor(25, 0);
+        oled.print(Time.format(dateFormat));
+        // day
+        oled.setCursor(25, 10);
+        oled.print(Time.format(dayFormat));
+        // time
+        oled.setFontType(1);
+        oled.setCursor(0, 25);
+        oled.print(Time.format(timeFormat));
+        // seconds
+        oled.setFontType(0);
+        oled.setCursor(50, 30);
+        oled.print(Time.format(secondFormat));
+        oled.display();
+    }
+
+    /*
+    oled.print
+    Nov 14_ (cursor remains after the 14)
+
+    oled.println
+    Nov 14 (cursor goes the next line)
+    _
+
+    */
 }
 
 // TODO
 void runWeatherScreen() {
-    // for debugging
-    Serial.println("Weather");
-    oled.clear(PAGE);  // Clear the display
-    oled.setCursor(0, 0);
-    oled.print("Weather");
+    // 8 times per day we request the weather day
+    unsigned long curMillis = millis();
+    if (curMillis - prevMillis > WEATHER_SCREEN_UPDATE) {
+        prevMillis = curMillis;
+        Particle.publish("WeatherStackJSON", "", PRIVATE);
+    }
+    // but we always draw the screen
+    oled.clear(PAGE);
+    // rain is code 302, 299, 296
+    switch (weatherCode) {
+        case 302:
+        case 299:
+        case 296:
+            oled.drawBitmap(bitmap_rainy_16x12);
+            break;
+        // we could have more case statements for other weather
+        default:
+            oled.drawBitmap(bitmap_sunny_16x12);
+            break;
+    }
+    oled.setFontType(0);
+    oled.setCursor(38, 5);
+    oled.print(temperature, 0);
+
+    oled.setCursor(0, 28);
+    //display the description on one line
+    oled.print(weatherDescription.substring(0,9));
     oled.display();
+
+
 }
 // TODO
 void getNextState() {
@@ -174,6 +250,27 @@ void PulseSensorAmped_data(int BPM, int IBI) {
 
 void PulseSensorAmped_lost(void) {}
 
+void myHandler(const char *event, const char *data) {
+    // declare object to store JSON response
+    StaticJsonDocument<1024> doc;
+    DeserializationError error = deserializeJson(doc, data);
+
+    // Test to see if was successful
+    if (error) {
+        Serial.print(F("deserializeJson() failed: "));
+        return;
+    }
+
+    // parse JSON
+    weatherCode = doc["code"];
+    temperature = doc["temperature"];
+    weatherDescription = String(doc["description"]);
+
+    Serial.println("temperature: " + String(temperature));
+    Serial.println("Code:" + String(weatherCode));
+    Serial.println("Description: " + weatherDescription);
+}
+
 void setup() {
     /*
 https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64313/4?u=rob7
@@ -197,9 +294,20 @@ https://community.particle.io/t/pulse-sensor-amped-incompatible-with-os-5-3-0/64
     delay(1000);  // Delay 1000 ms
 
     pinMode(PIN_BUTTON, INPUT);
+    Time.zone(-8);
+    Time.beginDST();
+
+    Particle.subscribe("hook-response/WeatherStackJSON", myHandler, MY_DEVICES);
+
 }
 
 void loop() {
+    if (runOnce == true && Particle.connected() == true) {
+        runOnce = false;
+        Particle.publish("WeatherStackJSON", "", PRIVATE);
+        Serial.println("run once");
+    }
+
     // TODO
     int currentButtonVal = digitalRead(PIN_BUTTON);
     // latch
@@ -209,5 +317,13 @@ void loop() {
     }
     loadNextScreen();
     PulseSensorAmped.process();  // measure HR
+    /*
+        mearsure HR all the time
+        - battery drain
+        + HR is instantly available on heart screen
+        + tracking HR over time
+        --> when not on heart screen, sample HR at regular (long spaced)
+       intervals
+    */
     prevButtonVal = currentButtonVal;
 }

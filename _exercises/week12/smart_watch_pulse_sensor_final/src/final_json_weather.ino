@@ -269,6 +269,9 @@ void setup() {
 
     String data = "90089";
     Particle.publish("WeatherStackJSON", data, PRIVATE);
+	
+	  Time.zone(-8);
+    Time.beginDST();
 }
 
 void loop() {

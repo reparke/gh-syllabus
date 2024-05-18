@@ -44,6 +44,35 @@ Particle.publish("tempFahr", String(85.9));
 
 <!-- public event were removed Aug 2020 -->
 
+## Publishing on Device Startup
+
+* With threading enabled,
+  ```c++
+  SYSTEM_THREAD(ENABLED);
+  ```
+
+  `setup()` will run before cloud connectivity is enabled, meaning `Particle.publish()` will fail
+
+* If you need to execute code only once when the device starts , create a boolean flag and check to make sure the Argon has connected to the cloud (`Particle.connected()`) before running the code once. 
+
+* For example
+
+  ```c++
+  bool runOnce = true;
+  
+  void loop() {
+    if (runOnce == true && Particle.connected() == true) {
+      runOnce = false;
+      // put Particle.publish(...) statement here
+    }
+  ```
+
+  
+
+* In order to get the weather initially when Argon turns on, we need to set a boolean flag and do a check in `loop()`
+
+  * [Particle community post](https://community.particle.io/t/cant-particle-publish-in-setup-with-cpp-file/66688/3?u=rob7)
+
 
 
 ## Documentation
