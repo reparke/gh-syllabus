@@ -18,7 +18,7 @@ title: Pre-Lecture Activities
 - Accelerometer
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
-### Build before class Wed / Thurs
+### Build before class Mon / Tues
 
 - We will continue with the smart watch from last week
 
