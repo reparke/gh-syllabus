@@ -7,7 +7,7 @@ date_due: Aug 27 @ 11:59 pm
 show_in_list: false
 ---
 
-IMPORTANT: This is an older way to claim and configure your Argon. This method tends to have more bugs so it is advisable to try using https://setup.particle.io before this method. 
+IMPORTANT: This is an older way to claim and configure your Photon 2. This method tends to have more bugs so it is advisable to try using https://setup.particle.io before this method. 
 
 Assignment 0 – Installation with Particle App
 =====================================
@@ -19,7 +19,7 @@ Assignment 0 – Installation with Particle App
 -   Create Particle account
 -   Install Particle Workbench
 -   Install Fritzing
--   Add argon device to your Particle account
+-   Add photon 2 device to your Particle account
 
 \_______________________________________\_
 
@@ -27,7 +27,7 @@ Create Particle account
 -----------------------
 
 >   In this course, we will use an internet-enabled microcontroller,
->   specifically the Particle Argon. In order to communicate with the Argon
+>   specifically the Particle Photon 2. In order to communicate with the Photon 2
 >   (e.g. to install new firmware code), we will use Particle’s cloud software.
 
 -   Open the internet browser of your choice and visit the site:  
@@ -55,31 +55,12 @@ Install Fritzing
 
 -   Download and install Fritzing, and then continue these instructions
 
-Install Fritzing Library for Argon
-----------------
-
->   There are special components required to create Fritzing designs with the Argon.
-
-- Download the Argon library for Fritzing:
-
-  [https://github.com/reparke/Fritzing-Parts/archive/main.zip](https://github.com/reparke/Fritzing-Parts/archive/main.zip)
-
-- Unzip the file (take note of the folder location)
-
-- Open Fritzing
-
-- On **Parts** panel on the right side of the screen, click the small dropdown menu and choose **Import…**
-
-- Navigate to the folder with the file you downloaded and open `Particle_Mesh_Parts.fzpz`
-
-- Click the small dropdown menu on the **Parts** panel again and chose *Save Bin*
-
 Install Fritzing Library for Additional Parts
 ----------------
 
 >   There are additional we will used in class that we need Fritzing parts for.
 
-- Download the Argon library for Fritzing:
+- Download the Photon 2 library for Fritzing:
 
   [https://github.com/reparke/Fritzing_Collection/archive/main.zip](https://github.com/reparke/Fritzing_Collection/archive/main.zip)
 
@@ -93,17 +74,17 @@ Install Fritzing Library for Additional Parts
 
 - Click the small dropdown menu on the **Parts** panel again and chose *Save Bin*
 
-Add Argon device to your Particle account
+Add Photon 2 device to your Particle account
 -----------------------------------------
 
->   This step must be completed after you receive the Argon from the instructor.
->   Each Argon device must be linked to Particle account.
+>   This step must be completed after you receive the Photon 2 from the instructor.
+>   Each Photon 2 device must be linked to Particle account.
 
--   Follow the instructions to claim your Argon and link it to your account:
+-   Follow the instructions to claim your Photon 2 and link it to your account:
 
-    <https://docs.particle.io/quickstart/argon/#1-set-up-your-argon>
+    <https://docs.particle.io/quickstart/photon 2/#1-set-up-your-photon 2>
 
--   Complete only step \#1 (setting up Argon) and do not proceed any further.
+-   Complete only step \#1 (setting up Photon 2) and do not proceed any further.
 
 >   **Important Notes**
 
@@ -117,9 +98,9 @@ Add Argon device to your Particle account
     connecting to Wifi at USC, make sure to use **USC Guest Wireless**, not USC
     Secure Wireless
 
-<img src="a0_installation_app_deprecated.assets/b7fb87c14d438e943a6133b77d2743cc.png" alt="name the Argon" style="width:400px" />
+<img src="a0_installation_app_deprecated.assets/b7fb87c14d438e943a6133b77d2743cc.png" alt="name the Photon 2" style="width:400px" />
 
-1.  During setup, you will be asked to provide a name for your Argon. This is
+1.  During setup, you will be asked to provide a name for your Photon 2. This is
     the name that you will use in your projects to reference your device
     throughout the semester so make note of it
 
