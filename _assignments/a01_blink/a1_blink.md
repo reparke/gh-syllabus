@@ -31,7 +31,7 @@ Goals
 
 ### Connect to additional Wifi networks
 
--   The Argon can remember the settings for multiple Wifi networks (just like a
+-   The Photon 2 can remember the settings for multiple Wifi networks (just like a
     phone). If you need to configure for a different network than the one you
     first connected it, simply follow the instructions in assignment 0 again or go through process at  [https://setup.particle.io/](https://setup.particle.io/)
 
@@ -63,9 +63,9 @@ Goals
 
 
 -   Select the type of device to you want to build for. For our course, we will
-    always use **argon**
+    always use **Photon 2 / P2** 
 
-<img src="a1_blink.assets\image-20210829162158151.png" alt="image-20210829162158151" alt="target device" style="width:400px"/>
+![image-20240520000045594](a1_blink.assets/image-20240520000045594.png)
 
 -   Enter the name of the device you want to flash to. This will be the name
     gave your device when you initially connected it to your Particle account.
@@ -80,23 +80,22 @@ Goals
 
 
 
-- In the INO file that opened when you created a project, paste the following
-  code:
-
-  ```c++
-  void setup() {
-      pinMode(D7, OUTPUT);
-  }
+- In the CPP file that opened when you created a project, paste the following
+  code into `void setup()`:
   
-  void loop() {
-      digitalWrite(D7, HIGH);
-      delay(1000);
-  	digitalWrite(D7, LOW);
-      delay(1000);
-  }
+  ```c++
+  pinMode(D7, OUTPUT);
   ```
 
+- and paste the following code into `void loop()`:
+  ```c++
+  digitalWrite(D7, HIGH);
+  delay(1000);
+  digitalWrite(D7, LOW);
+  delay(1000);
+  ```
   
+   
 
 ### Flash Firmware to Device
 
@@ -105,7 +104,7 @@ Goals
     been successfully installed, you should see the light on the device near the
     USB port blinking blue.
 
-<img src="media/IMG_8666.jpg" alt="Argon blinking" style="width:400px" />
+![image-20240520001305277](a1_blink.assets/image-20240520001305277.png)
 
 
 
