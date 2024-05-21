@@ -108,7 +108,7 @@ Consider two straws. Which has greater flow?
 ## Voltage Source
 
 * In our circuits, we will use a voltage source to provide energy potential
-  - USB power: 5v (also stepped down to 3.3v which the Argon uses)
+  - USB power: 5v (also stepped down to 3.3v which the Photon 2 uses)
   - 9V battery: 9v
   - Rechargeable lithium battery: 3.7v
 * Our circuits will have a positive voltage (e.g. 3.3v or 5v) and ground voltage (0v)

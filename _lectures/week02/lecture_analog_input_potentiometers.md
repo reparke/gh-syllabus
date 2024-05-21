@@ -67,7 +67,7 @@ title: Analog Input with Potentiometers
 
 <img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:200px" />
 
-* **Vout** is the wiper (middle pin; connects to Argon analog input)
+* **Vout** is the wiper (middle pin; connects to Photon 2 analog input)
 * Inside the potentiometer is a resistor
 * As the knob moves, the wiper divides the resistor, and the ratio of resistance between ***Vin-and-Wiper*** and ***Wiper-and-Gnd*** varies
 * This is called a **variable voltage divider** *(more on this later)* 
@@ -87,7 +87,7 @@ top: 10K ohms because it is the R between Vout and Gnd
 
 <img src="lecture_analog_input_potentiometers.assets/511ac8f5ce395f5846000000.png" alt="Schematic symbol for a potentiometer" style="width:400px" />
 
-* Argon input pins can measure **voltage**, not **resistance**
+* Photon 2 input pins can measure **voltage**, not **resistance**
 * By connecting **Vin** (3.3v), **Gnd**, and **Vout** (wiper), we can now vary the **voltage** difference ***Vin-and-Wiper*** and ***Wiper-and-Gnd***
 
 ## Voltage Dividers
@@ -143,7 +143,7 @@ void loop() {
 
 ## Wiring Diagram 
 
-<img src="lecture_analog_input_potentiometers.assets/pot_bb.png" style="width:400px;" />
+![image-20240520204936554](lecture_analog_input_potentiometers.assets/image-20240520204936554.png)
 
 * Using **Vin=3.3v** and a 10k potentiometer, what do you expect for the range of values of **potValue**?
 

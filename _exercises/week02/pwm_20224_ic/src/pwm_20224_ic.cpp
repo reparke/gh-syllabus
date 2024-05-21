@@ -5,7 +5,7 @@ SerialLogHandler logHandler(LOG_LEVEL_INFO);
 
 //define constants that represent each pin
 // step 1
-const int PIN_LED = D2;
+const int PIN_LED = A1;
 const int PIN_POT = A0;
 
 /*

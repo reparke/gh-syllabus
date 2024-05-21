@@ -84,7 +84,8 @@ forward current is current the LED can handle-->
 * The LED is **always on** because the anode is always at +3.3V and the cathode is always at ground
 
 ## Wiring
-<img src="lecture_leds.assets/image-20230823105711033.png" alt="image-20230823105711033" style="zoom:80%;" />
+
+![image-20240520192615527](lecture_leds.assets/image-20240520192615527.png)
 
 ## Turning on LEDs in Code
 
@@ -95,7 +96,7 @@ forward current is current the LED can handle-->
 
 ## Wiring
 
-<img src="lecture_leds.assets/image-20200708224001644.png" style="00px; zoom: 80%;" />
+![image-20240520192749278](lecture_leds.assets/image-20240520192749278.png)
 
 ## Digital Output
 

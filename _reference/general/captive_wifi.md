@@ -16,7 +16,7 @@ show_in_list: true
   - Some apartments / dorms
   - Hotels
   - Starbucks
-- The Argon can **not** connect to captive wifi networks
+- The Photon 2 can **not** connect to captive wifi networks
 
 ## Solution 1: Campus wifi 
 
@@ -34,15 +34,15 @@ show_in_list: true
   - [Android](https://support.google.com/android/answer/9059108?hl=en)
   - [Windows](https://support.microsoft.com/en-us/windows/use-your-windows-pc-as-a-mobile-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85)
 
-## Solution 3: Register Your Argon
+## Solution 3: Register Your Photon 2
 
-- Some networks allow you to register your Argon so it doesn't need to login to connect
+- Some networks allow you to register your Photon 2 so it doesn't need to login to connect
 - You will need to contact your dorm / apartment to see if this is available
 - You will need
   1. Webpage to MAC Address to wifi network. This might be provided to you when you connect a new device (like your phone) to the wifi
-  2. Your Argon's MAC address (unique number for device)
+  2. Your Photon 2's MAC address (unique number for device)
 
-### Code to Get Argon MAC Address
+### Code to Get Photon 2 MAC Address
 
 - To obtain the MAC address, add this code to a project and flash it
 
@@ -86,12 +86,12 @@ void loop() {
 ### Registering Your MAC Address
 
 - Open the webpage provided by your residence
-- Register your Argon by entering your unique MAC address
+- Register your Photon 2 by entering your unique MAC address
 - Here is an example
 
 ![image-20220125190440788](captive_wifi.assets/add_mac.png)
 
-- Put the Argon in listening mode (dark blue) and go through process of claiming the device again (you do not need to unclaim the device)
+- Put the Photon 2 in listening mode (dark blue) and go through process of claiming the device again (you do not need to unclaim the device)
 
 ## Credits
 

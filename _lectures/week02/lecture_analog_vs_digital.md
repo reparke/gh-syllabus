@@ -57,7 +57,7 @@ pinMode(PIN_NUMBER, MODE);
 //MODE: OUTPUT or INPUT
 ```
 
-* Most pins on the Argon can be configured to SEND output (e.g. to turn on a light) or to RECEIVE input (e.g. a button press)
+* Most pins on the Photocan be configured to SEND output (e.g. to turn on a light) or to RECEIVE input (e.g. a button press)
 * When you want to use a pin in your program, you should specify its mode in `setup()`
 
 ## Digital Output

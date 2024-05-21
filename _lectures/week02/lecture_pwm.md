@@ -18,7 +18,7 @@ title: Pulse Width Modulation
     - Produce analog outputs (e.g. make an LED half as bright, rather than off or on)
 
 * Problem
-    - Argon does **not** have analog outputs (and neither do many microcontrollers)
+    - Photon 2 does **not** have analog outputs (and neither do many microcontrollers)
 
 * Solution
     - We will fake it!
@@ -36,18 +36,18 @@ title: Pulse Width Modulation
 * Pulse width: how long the signal is high (usually in milliseconds)
 * Duty cycle: percentage of one "cycle" that a signal is at 3.3v
 * Period: time for one on/off cycle to complete (usually in milliseconds)
-* Frequency: how many times per second the on/off cycle repeats (Hz) *(default Argon PWM frequency is 500 Hz or 2 ms)*
+* Frequency: how many times per second the on/off cycle repeats (Hz) *(default Photon 2 PWM frequency is 500 Hz or 2 ms)*
 
 ## Key Terms Illustrated
 
 <img src="lecture_pwm.assets/pwm_33v.png" style="width: 500px" alt="pulse width modulation illustrated" />
 
-<!-- Point out: 0v and 5v (3.3V for argon), different percentage duty cycles; ignore analogWrite for now -->
+<!-- Point out: 0v and 5v (3.3V for Photon 2), different percentage duty cycles; ignore analogWrite for now -->
 
 
 ## Questions
 
-* What is the output voltage of an Argon pin?
+* What is the output voltage of an Photon 2 pin?
 * What is the effective output voltage using PWM with 50% duty cycle?
 * What is the effective output voltage using PWM with 25% duty cycle?
 * What is the effective output voltage using PWM with 0% duty cycle?
@@ -62,14 +62,13 @@ title: Pulse Width Modulation
 ## Using PWM
 
 * Only certain pins support PWM
-  * Pins D2-D8 can be used as PWM output pins
-  * *Pins A0-A5 can also be used*
+  * A2
+  * A5
+  * S4 / A4
+  * S3 / A5
+  * A0
 
-* PWM pins are assigned to one of three groups
-* Each group can have different PWM values (duty cycles), but must share the same  frequency and resolution
-  * Pins D4, D5, D6, D8
-  * Pins A0, A1, A2, A3
-  * Pins D2, D3, A4, A5
+* PWM pins can have different PWM values (duty cycles), but must share the same  frequency and resolution
 
 ## Writing Analog Output with `analogWrite` 
 
@@ -98,7 +97,7 @@ analogWrite(LED_PIN, 0);	//0% duty cycle, or 0v
 
 ## Wiring Diagram
 
-<img src="lecture_pwm.assets/led_pot_bb.png" alt="led_pot_bb" style="width:400px;" />
+![image-20240520204559713](lecture_pwm.assets/image-20240520204559713.png)
 
 ## Credits
 

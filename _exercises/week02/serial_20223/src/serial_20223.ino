@@ -5,7 +5,7 @@
 
 //step 1
 const int PIN_POT = A0;
-const int PIN_LED = D2;
+const int PIN_LED = A1;
 
 void setup() {
   //this is where we always start our serial monitor

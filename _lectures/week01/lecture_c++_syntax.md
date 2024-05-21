@@ -30,7 +30,7 @@ title: C++ Syntax
 
 ```c++
 /* Awesome 
-Argon Program
+Photon 2 Program
 */
 #include "OLED_screen.h"	//library
 
@@ -51,7 +51,7 @@ void loop() {
 
 ```c++
 /* Awesome 
-Argon Program
+Photon 2 Program
 */
 #include "OLED_screen.h"	//library
 ```

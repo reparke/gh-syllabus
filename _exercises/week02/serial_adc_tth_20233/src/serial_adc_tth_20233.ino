@@ -1,4 +1,4 @@
-const int PIN_LED = D2;
+const int PIN_LED = A1;
 const int PIN_POT = A0;
 
 void setup() {

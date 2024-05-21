@@ -14,18 +14,18 @@ title: Serial Monitor
 
 ## Goal
 
-* Be able to use receive status messages and program state information from Argon
+* Be able to use receive status messages and program state information from Photon 2
 * Use Serial Monitor to debug programs
     - This will be similar to `print` statements in other languages
 
 ## Serial
 
-<img src="lecture_serial_monitor.assets/argon-top-sideways.png" alt="height:500px" style="width:900px" />
+![photon2-rendering](lecture_serial_monitor.assets/photon2-rendering.png)
 
 ## Serial (UART)
 
-* When the Argon is connected via USB to your computer, it is sending and receiving data
-* UART (Universal Asynchronous Receiver/Transmitter) is a chip on the Argon that allows for serial communication
+* When the Photon 2 is connected via USB to your computer, it is sending and receiving data
+* UART (Universal Asynchronous Receiver/Transmitter) is a chip on the Photon 2 that allows for serial communication
 * The **RX** and **TX** are the same as (connected to) the USB pins
 
 ## Starting Serial Monitor
@@ -136,8 +136,8 @@ void loop() {
 
 ## Special Notes about Serial Monitor
 
-* Serial Monitor is **only** available while the Argon is connected to your computer via USB
+* Serial Monitor is **only** available while the Photon 2 is connected to your computer via USB
 
-* Technically the Argon also supports **sending** data to the Argon via Serial Monitor (e.g. sending integer values)
+* Technically the Photon 2 also supports **sending** data to the Photon 2 via Serial Monitor (e.g. sending integer values)
   - This isn't supported in Workbench so we won't use it
   <!-- - For more information, see https://docs.particle.io/reference/device-os/firmware/argon/#read- -->

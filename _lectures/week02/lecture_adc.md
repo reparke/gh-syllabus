@@ -20,8 +20,8 @@ title: Analog to Digital Conversion
 
 ## Analog to Digital Conversion
 
-* Argon is a digital system so we need to convert the infinite analog input to a discrete values
-* At regular intervals, the Argon **samples** ("reads") voltage on analog input pin it sees 
+* Photon 2 is a digital system so we need to convert the infinite analog input to a discrete values
+* At regular intervals, the Photon 2 **samples** ("reads") voltage on analog input pin it sees 
   - The **sampling frequency** is how many times per second
 * The **resolution** is how many bits are used to store the voltage
     - Higher resolution means greater detail, but also more bits (more memory)
@@ -38,7 +38,7 @@ left: 2 bit resolution; 2^2 = 4 buckets
 right: 3 bit resolution; 2^3 = 8 buckets
 -->
 
-## Argon ADC Resolution is 12-bits
+## Photon 2 ADC Resolution is 12-bits
 
 * When we read the analog input voltage, ADC converts the voltage to a number
 * There 2^12=4096 possible values (think "buckets")
@@ -46,7 +46,13 @@ right: 3 bit resolution; 2^3 = 8 buckets
     - 0 = 000000000000
     - 4095 = 111111111111
 
-## Argon ADC
+## ADC Pins
+
+* A0, A1, A2, A5
+* A3 (also called SDA)
+* A4 (also called SCL)
+
+## Photon 2 ADC
 
 * The range of analog voltage is 0v to 3.3v
 * The range of digital values is 0 to 4095
@@ -62,10 +68,10 @@ or 1 unit = 4095/3.3 -> so 1 unit is 0.8 mV
 
 ## Exercise
 
-![led_pot_bb](lecture_adc.assets/led_pot_bb.png)
+![image-20240520204358572](lecture_adc.assets/image-20240520204358572.png)
 
-* Connect potentiometer to analog pin A0
-* Connect LED to digital pin D2 (do we a pin with PWM?)
+* Connect potentiometer to A0
+* Connect LED to pin A1 (do we need a pin with PWM?)
 * Control LED brightness with potentiometer
 
 ## Credit

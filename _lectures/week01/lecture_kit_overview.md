@@ -43,13 +43,13 @@ title: Kit Overview
 - Keep everything protected in large case 
 <img src="lecture_kit_overview.assests/SIK_V4-01.jpg" alt="large case" style="width:300px" />
 
-## Particle Argon
+## Particle Photon 2
 
-- The **Argon** is the microcontroller we will use for our all projects
+- The **Photon 2** is the microcontroller we will use for our all projects
 - Similar to an Arduino, this is the "brains" of our projects (just like the processor in our computers)
 - Handle it carefully
 
-<img src="lecture_kit_overview.assests/Argon-Angled_750x750.jpg" alt="Argon" style="width:300px" />
+![bg opacity:.75](lecture_kit_overview.assets/PHOTON2-EVT-ISO_1200x.webp)
 
 ## Credits
 

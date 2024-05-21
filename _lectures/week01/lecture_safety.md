@@ -24,7 +24,7 @@ title: Safety
 * However, there are still precautions you must follow in class and at home
 * Be alert and focused (mentally and physically) when working on electronics projects
 
-## Argon Safety Tips
+## Photon 2 Safety Tips
 
 * Always disconnected any power, USB, or battery source before touching chips or wiring
 * Double-check proper wiring before powering on (**especially** power and ground wires)

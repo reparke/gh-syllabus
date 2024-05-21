@@ -23,12 +23,12 @@ show_in_list: true
 ## Solution #1 - Use 5V USB Battery
 
 * Any USB battery pack (like you would use to connect to your phone) with a **USB A** (the older, larger flat type) connecter should work
-* Connect the battery pack to the Argon's USB port and the Argon will now have 5V
-* Connect your 5V devices to `GND` and `VUSB` on the Argon
+* Connect the battery pack to the Photon 2's USB port and the Photon 2 will now have 5V
+* Connect your 5V devices to `GND` and `VUSB` on the Photon 2
 * Example: [Power Bank](https://www.amazon.com/10000mAh-Portable-Charger-External-Compatible/dp/B094Y1R46V)
 
 ## Solution #2 - Use a Step-Up 5V Voltage Regulator
 
-* A step-up voltage regulator will "step-up" (increase) the 3.3V (or 3.7V) from the Argon to 5V
+* A step-up voltage regulator will "step-up" (increase) the 3.3V (or 3.7V) from the Photon 2 to 5V
 * Example 1: [Sparkfun Qwiic Boost](https://www.sparkfun.com/products/17238)
 * Example 2: [Pololu 5V Step-Up Voltage Regulator](https://www.pololu.com/product/2564)
