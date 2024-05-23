@@ -48,9 +48,14 @@ right: 3 bit resolution; 2^3 = 8 buckets
 
 ## ADC Pins
 
-* A0, A1, A2, A5
-* A3 (also called SDA)
-* A4 (also called SCL)
+* `A0`
+* `A1`
+* `A2`
+* `A5`
+* `A3` (`SDA` or `D0`)*
+* `A4` (`SCL` or `D1`)*
+
+*You can use either of these pins labels*
 
 ## Photon 2 ADC
 
@@ -68,10 +73,10 @@ or 1 unit = 4095/3.3 -> so 1 unit is 0.8 mV
 
 ## Exercise
 
-![image-20240520204358572](lecture_adc.assets/image-20240520204358572.png)
+![image-20240521141540985](lecture_adc.assets/image-20240521141540985.png)
 
 * Connect potentiometer to A0
-* Connect LED to pin A1 (do we need a pin with PWM?)
+* Connect LED to pin A2 (do we need a pin with PWM?)
 * Control LED brightness with potentiometer
 
 ## Credit

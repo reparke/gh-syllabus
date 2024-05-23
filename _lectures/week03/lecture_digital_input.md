@@ -41,7 +41,7 @@ void loop() {
     digitalWrite(SOME_PIN, HIGH); //or LOW
 ```
 
-* Most pins on the Argon can be configured to SEND output (e.g. to turn on a light) or to RECEIVE input (e.g. a button press)
+* Most pins on the Photon 2 can be configured to SEND output (e.g. to turn on a light) or to RECEIVE input (e.g. a button press)
 
 * **HIGH** / true is **5V** (pin VUSB) or **3.3V** (pin 3.3v)
 * **LOW** / false is **0V** (ground)
@@ -54,7 +54,7 @@ void loop() {
 ## Digital Input
 
 * Pins D2-D8 can be used for digital input *(other pins can also be used)*
-* Argon will "read" the voltage on a pin and return HIGH (3.3V) or LOW (0V)
+* Photon 2 will "read" the voltage on a pin and return HIGH (3.3V) or LOW (0V)
 * **Never exceed 3.3V on input**
   - Be careful of other components that operate at 5V
 

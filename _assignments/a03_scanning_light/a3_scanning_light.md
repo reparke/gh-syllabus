@@ -15,7 +15,7 @@ Assignment 3 – Scanning Light
 Goals
 -----
 
--   Connect LEDs to Argon
+-   Connect LEDs to Photon 2
 
 -   Read analog input with a potentiometer
 
@@ -37,11 +37,13 @@ less bright.
 
 Here is an example with 7 lights.
 
-<img src="media/24cca9ef54a3cdbd348cf9e02bf651c9.png" alt="" style="width:400px" />
+
+
+<img src="a3_scanning_light.assets/image-20240521160449370.png" alt="" style="width:400px" />
 
 ## Components
 
--   Argon
+-   Photon 2
 
 -   Breadboard
 
@@ -55,7 +57,9 @@ Here is an example with 7 lights.
 
 ## Requirements
 
--   Connect five LEDs to Argon
+-   Connect five LEDs to Photon 2 
+    -   *Hint: since you are going to control the brightness using PWM, think about which pins you should you*
+
 -   Connect potentiometer and read value 
 -   Within `loop`, use the potentiometer to control both the blink rate *and* the brightness
 -   Blink rate: 

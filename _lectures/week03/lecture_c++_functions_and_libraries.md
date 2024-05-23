@@ -69,7 +69,7 @@ void loop() {...}
 
 `particle library <thing you're looking for>`
 
-* *Note: Most Arduino libraries are compatible with Argon, but not all, so looking on Particle forums is preferable*
+* *Note: Most Arduino libraries are compatible with Photon 2, but not all, so looking on Particle forums is preferable*
 
 ## Step 1: Finding Libraries Workbench
 

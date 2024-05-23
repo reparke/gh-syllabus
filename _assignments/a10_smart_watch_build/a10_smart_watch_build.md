@@ -26,7 +26,7 @@ This assignment is to build a smart watch, which we will program in class. Given
 -    Strip of plastic velcro tape (12")
 -    Breadboard
 -    LiPo battery
--    Argon
+-    Photon 2
 
 ## Requirements
 
@@ -35,7 +35,7 @@ This assignment is to build a smart watch, which we will program in class. Given
 -   [Follow the assembly instruction guide](guide_build_watch)
 -   Plan to bring watch (with fully charged battery) and phone to class
 
-**==Important: The assembly guide shows the battery being connected. Since we will be using the battery with the car, it is recommended to skip connecting the battery to the Argon until we are programming the watch in class==**
+**==Important: The assembly guide shows the battery being connected. Since we will be using the battery with the car, it is recommended to skip connecting the battery to the Photon 2 until we are programming the watch in class==**
 
 **Naming convention **
 

@@ -62,13 +62,16 @@ title: Pulse Width Modulation
 ## Using PWM
 
 * Only certain pins support PWM
-  * A2
-  * A5
-  * S4 / A4
-  * S3 / A5
-  * A0
-
+  * `D1` (`SCL` or `A4`)*
+  * `A2`
+  * `A5`
+  * `MISO` (`D16`)*
+  * `MOSI` (`D15`)*
 * PWM pins can have different PWM values (duty cycles), but must share the same  frequency and resolution
+
+*You can use either of these pins labels*
+
+## 
 
 ## Writing Analog Output with `analogWrite` 
 
@@ -97,7 +100,7 @@ analogWrite(LED_PIN, 0);	//0% duty cycle, or 0v
 
 ## Wiring Diagram
 
-![image-20240520204559713](lecture_pwm.assets/image-20240520204559713.png)
+![image-20240521141656437](lecture_pwm.assets/image-20240521141656437.png)
 
 ## Credits
 

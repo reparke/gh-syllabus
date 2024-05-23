@@ -1,34 +1,29 @@
-const int PIN_RED = D2;
-const int PIN_GREEN = D3;
-const int PIN_BLUE = D4;
+const int PIN_RED = D1;
+const int PIN_GREEN = MISO;
+const int PIN_BLUE = MOSI;
 const int PIN_POT = A0;
 
-//function defintion
+// function defintion
 void changeRgbColor(int r, int g, int b) {
-    analogWrite(PIN_RED, r);  
+    analogWrite(PIN_RED, r);
     analogWrite(PIN_GREEN, g);
-    analogWrite(PIN_BLUE, b);  
+    analogWrite(PIN_BLUE, b);
 }
-
 
 void changeRgbColorString(String color) {
     if (color.toLowerCase() == "red") {
-        changeRgbColor(255, 0, 0);  //OR use three digital or analogWrite functions
-    }
-    else if (color == "green") {
+        changeRgbColor(255, 0,
+                       0);  // OR use three digital or analogWrite functions
+    } else if (color == "green") {
         changeRgbColor(0, 255, 0);  // green
 
-    }
-    else if (color == "blue") {
-        changeRgbColor(0,0,255);  // 
-    }
-    else if (color == "orange") {
-        changeRgbColor(255, 130, 0);  // orange
-    }
-    else  {    //
+    } else if (color == "blue") {
+        changeRgbColor(0, 0, 255);  //
+    } else if (color == "orange") {
+        changeRgbColor(255, 130, 0);    // orange
+    } else {                            //
         changeRgbColor(255, 255, 255);  // orange
     }
-
 }
 
 void setup() {
@@ -39,13 +34,13 @@ void setup() {
     Serial.begin(9600);
 }
 void loop() {
-    //read the potentiometer
-    //show the color white
-    //use the pot to change the brightness
-    //input ADC: 0-4095
-    //output PWM: 0-255
+    // read the potentiometer
+    // show the color white
+    // use the pot to change the brightness
+    // input ADC: 0-4095
+    // output PWM: 0-255
 
-    int potVal = analogRead(PIN_POT); //ADC val 0-4095
+    int potVal = analogRead(PIN_POT);  // ADC val 0-4095
     // float voltage = float(potVal) / 4095 * 3.3;
     int pwmVal = float(potVal) / 4095 * 255;
 
@@ -80,7 +75,6 @@ void loop() {
     // delay(500);                 // 500 ms or 1/2 sec
 }
 
-
 /*
 const int PIN_RED = D2;
 const int PIN_GREEN = D3;
@@ -98,7 +92,7 @@ void loop() {
     //CONTINUE
       //  red, green, blue
     //magenta, white, yellow, orange
-    
+
 
 
     // first time: R G B - LOW LOW LOW
@@ -123,7 +117,7 @@ void loop() {
     // high is 3.3V, and 0 is ground
     delay(500);  // 500 ms or 1/2 sec
     // first time: R G B - HIGH HIGH HIGH
-    
+
     //white
     digitalWrite(PIN_RED, HIGH);
     digitalWrite(PIN_GREEN, HIGH);
@@ -134,7 +128,7 @@ void loop() {
 
     // orange  RGB 255, 130, 0
     analogWrite(PIN_RED, 255); // also ok is digitalWrite(PIN_RED, HIGH)
-    analogWrite(PIN_GREEN, 130); 
+    analogWrite(PIN_GREEN, 130);
     analogWrite(PIN_BLUE, 0);  //OR digitalWrite(PIN_BLUE, LOW)
 
     // high is 3.3V, and 0 is ground

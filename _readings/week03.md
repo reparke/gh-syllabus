@@ -16,7 +16,7 @@ title: Pre-Lecture Activities
 
 ### Bring to class all this week
 
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
 ### Build before class Mon / Tues 
@@ -25,7 +25,7 @@ title: Pre-Lecture Activities
 
 ### Build before class Wed / Thurs 
 
-![image-20210204155745432](week03.assets/image-20210204155745432.png)
+![image-20240521150237739](week03.assets/image-20240521150237739.png)
 
 ### Optional
 

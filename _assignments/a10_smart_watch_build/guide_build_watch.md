@@ -16,7 +16,7 @@ show_in_list: false
 4. Small black strip of hook-side (rough) Velcro (1/2" x 2")
 4. Breadboard
 5. LiPo battery
-6. Argon
+6. Photon 2
 
 ### STEP 1:
 
@@ -85,7 +85,7 @@ Wire the components.
 *OLED Wiring with Qwiic* 
 
 ```c++
-MicroOLED --------------- Argon
+MicroOLED --------------- Photon 2
   GND ------------------- GND
   VCC ------------------- 3.3V
   SDA (blue) ------------ SDA
@@ -95,10 +95,10 @@ MicroOLED --------------- Argon
 *Pulse Sensor Wiring* 
 
 ```c++
-Pulse Sensor ------------ Argon
+Pulse Sensor ------------ Photon 2
   GND (black)------------ GND
   VCC (red) ------------- 3.3V
-  Data (Pink) ----------- A4
+  Data (Pink) ----------- A0
 ```
 
 *Additional Wiring*
@@ -114,7 +114,9 @@ Switch:
 
 *Fritzing design*
 
-![watch_bb](guide_build_watch.assets/watch_with_switch_i2c_pulse_bb.png)
+![image-20240522190824101](guide_build_watch.assets/image-20240522190824101.png)
+
+
 
 
 

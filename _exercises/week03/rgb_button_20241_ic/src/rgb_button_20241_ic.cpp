@@ -15,9 +15,9 @@ SerialLogHandler logHandler(LOG_LEVEL_INFO);
 
 const int PIN_BUTTON = D5;
 const int PIN_ONBOARD_LED = D7;
-const int PIN_RED = D2;
-const int PIN_GREEN = D3;
-const int PIN_BLUE = D4;
+const int PIN_RED = D1;
+const int PIN_GREEN = MISO;
+const int PIN_BLUE = MOSI;
 
 // global var
 int counter = 0;
@@ -55,6 +55,15 @@ void setup() {
     pinMode(PIN_GREEN, OUTPUT);
     pinMode(PIN_BLUE, OUTPUT);
     Serial.begin(9600);
+
+    changeRgb(0,0,255);
+    delay(5000);
+    changeRgb(0,255,0);
+    delay(5000);
+    changeRgb(255,0,0);
+    delay(5000);
+    changeRgb(255,255,255);
+    delay(5000);
 }
 
 void loop() {

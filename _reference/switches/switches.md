@@ -16,7 +16,9 @@ show_in_list: true
 
 ## Wiring
 
-<img src="switches.assets/switch_bb.png" alt="image-20200711010114011" style="width:300px;" />
+
+
+<img src="switches.assets/image-20240521154735959.png" alt="image-20200711010114011" style="width:300px;" />
 
 ## Operations
 
@@ -35,7 +37,7 @@ show_in_list: true
 ## Code
 
 ```c++
-const int PIN_SWITCH = D2;
+const int PIN_SWITCH = S2;
 
 void setup() {
    pinMode(PIN_SWITCH, INPUT);  //configure

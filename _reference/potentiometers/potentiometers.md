@@ -18,15 +18,22 @@ show_in_list: true
 
 ## Wiring
 
-- Requires analog input pin (Pins `A0`-`A5`)
+- Requires analog input pin
+  - `A0`
+  - `A1`
+  - `A2`
+  - `A5`
+  - `A3` (`SDA` or `D0`)*
+  - `A4` (`SCL` or `D1`)*
 
-<img src="potentiometers.assets/pot_bb.png" style="width:400px;" />
+
+<img src="potentiometers.assets/image-20240521154022998.png" style="width:400px;" />
 
 ## Operation
 
-* As you turn the knob, Argon will measure a voltage change on analog input (due to voltage divider)
+* As you turn the knob, Photon 2 will measure a voltage change on analog input (due to voltage divider)
 * Since this is an analog input, we use **analog to digital conversion** to read input
-* Voltage on pin will varies 0v to 3.v, and Argon will read 0 to 4095 
+* Voltage on pin will varies 0v to 3.v, and Photon 2 will read 0 to 4095 
 
 ## Code
 

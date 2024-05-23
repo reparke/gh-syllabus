@@ -55,7 +55,7 @@ title: RGB LEDs
 
 ## Common Cathode Wiring
 
-<img src="lecture_rgb_leds.assets/rgb_led_common_cathode_bb.png" alt="common cathode wiring" style="width:800px" />
+<img src="lecture_rgb_leds.assets/image-20240521152840455.png" alt="common cathode wiring" style="width:800px" />
 
 ## Common Cathode RGB LEDs
 
@@ -63,7 +63,7 @@ title: RGB LEDs
   * Regular LED: **anode** is longer pin
   * Common cathode RGB LED: **cathode** is longer pin
 * ...are wired the same as regular LEDs
-  * Connect anode to Argon
+  * Connect anode to Photon 2
   * Output **HIGH** to turn on
 
 ## Common Anode Wiring
@@ -73,7 +73,8 @@ title: RGB LEDs
 * Output **LOW** on anode to turn on LED; output **HIGH** (3.3v) to turn off
 
 ## Common Anode Wiring
-<img src="lecture_rgb_leds.assets/rgb_led_common_anode_bb.png" alt="common anode wiring" style="width:800px" />
+
+<img src="lecture_rgb_leds.assets/image-20240521153015558.png" alt="common anode wiring" style="width:800px" />
 
 ## Common Anode RGB LEDs
 
@@ -99,7 +100,7 @@ title: RGB LEDs
 
 ## Lab 1
 
-<img src="lecture_rgb_leds.assets/image-20210204155745432.png" alt="image-20210204155745432" style="width:500px;" />
+<img src="lecture_rgb_leds.assets/image-20240521152622925.png" alt="image-20210204155745432" style="width:500px;" />
 
 ## Lab steps
 
@@ -109,7 +110,7 @@ title: RGB LEDs
 
 ## Lab 2
 
-<img src="lecture_rgb_leds.assets/rgb_led_pot_bb.png" alt="rgb_led_switch_bb" style="width:500px;" />
+<img src="lecture_rgb_leds.assets/image-20240521152504283.png" alt="rgb_led_switch_bb" style="width:500px;" />
 
 ## Lab steps
 
@@ -121,7 +122,7 @@ title: RGB LEDs
 
 ## Lab 3
 
-<img src="lecture_rgb_leds.assets/rgb_led_switch_bb.png" alt="rgb_led_switch_bb" style="width:500px;" />
+<img src="lecture_rgb_leds.assets/image-20240521152542583.png" alt="rgb_led_switch_bb" style="width:500px;" />
 
 ## Lab steps
 

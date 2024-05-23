@@ -18,7 +18,9 @@ show_in_list: true
 
 ## Wiring
 
-<img src="buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:400px" />
+
+
+<img src="buttons.assets/image-20240521153604456.png" alt="switch on breadboard" style="width:400px" />
 
 ## Operation (Normally Open Button)
 

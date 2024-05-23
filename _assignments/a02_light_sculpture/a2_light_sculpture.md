@@ -15,13 +15,13 @@ Assignment 2 – Light Sculpture
 Goals
 -----
 
--   Connect LEDs to Argon
+-   Connect LEDs to Photon 2
 
 -   Create engaging art piece
 
 ## Overview
 
-This assignment is to create a physical art sculpture using the Argon and LEDs. The specifics of what the sculpture looks like or what it does is entirely up to you. You can put LEDs on a box, on a card, inside straws or ping-pongs, etc. One suggestion is that you can use “extending” jumper wires (header-receptacle) to have the LEDs away from the breadboard. If you want to use these, ask the instructor.
+This assignment is to create a physical art sculpture using the Photon 2 and LEDs. The specifics of what the sculpture looks like or what it does is entirely up to you. You can put LEDs on a box, on a card, inside straws or ping-pongs, etc. One suggestion is that you can use “extending” jumper wires (header-receptacle) to have the LEDs away from the breadboard. If you want to use these, ask the instructor.
 
 Some example are below.
 
@@ -35,7 +35,7 @@ Some example are below.
 
 ## Components
 
--   Argon
+-   Photon 2
 
 -   Breadboard
 
@@ -52,7 +52,7 @@ Some example are below.
 
 ## Requirements
 
--   Connect at least five LEDs to Argon
+-   Connect at least five LEDs to Photon 2
 -   Control LEDs on / off / blink from code
 
 **Naming convention **
@@ -69,7 +69,7 @@ Some example are below.
 
 - [ ] Project enclosure
 - [ ] 5 LEDs lights attached and functioning
-- [ ] Your connected Argon / breadboard
+- [ ] Your connected Photon 2 / breadboard
 
 Deliverables
 ------------

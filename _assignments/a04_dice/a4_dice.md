@@ -15,7 +15,7 @@ Assignment 4 – Dice
 Goals
 -----
 
--   Connect LEDs to Argon
+-   Connect LEDs to Photon 2
 
 -   Use push button for analog input
 
@@ -41,7 +41,7 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
 
 ### Components
 
--   Argon
+-   Photon 2
 
 -   Breadboard
 
@@ -71,7 +71,7 @@ The die value can be represented by a 3x3 grid of LED lights as follows:
   <img src="a4_dice.assets/die_value_2_with_grey_dots_indices.png" style="width:100px;" />
 -	Each position of the array will represent the state of the corresponding LED (`HIGH` or LOW)
 <img src="a4_dice.assets/die_value_2_with_grey_dots_led_state.png" style="width:100px;" />
--   **Hint #1:** It will be easier to create another array to store the which Argon pins correspond to each LED. Then you can use a `for` loop to quickly turn lights on 
+-   **Hint #1:** It will be easier to create another array to store the which Photon 2 pins correspond to each LED. Then you can use a `for` loop to quickly turn lights on 
 -   **Hint #2:** Check out this resource on [generating random numbers](https://www.arduino.cc/reference/en/language/functions/random-numbers/random/) in Arduino
 
 **Naming convention **

@@ -25,7 +25,7 @@ show_in_list: true
 
 ## Wiring (Common Cathode)
 
-<img src="rgb_leds.assets/rgb_led_common_cathode_bb.png" alt="common cathode wiring" style="width:800px" />
+<img src="rgb_leds.assets/image-20240521154335495.png" alt="common cathode wiring" style="width:800px" />
 
 * R, G, B pins are **anode** (*positive*)
 * Connect **cathode** (longer pin) to **Ground** (*negative*)
@@ -47,6 +47,12 @@ show_in_list: true
 * Use **pulse width modulation**
 * Each LED color can have a brightness level that varies from `0` to `255`
 * You can blend LEDs to create many different colors 
+* Only certain pins support PWM
+  * `D1` (`SCL` or `A4`)*
+  * `A2`
+  * `A5`
+  * `MISO` (`D16`)*
+  * `MOSI` (`D15`)*
 
 ### Color Mixing
 
@@ -57,9 +63,9 @@ show_in_list: true
 ## Code
 
 ```c++
-const int PIN_RED = D2;
-const int PIN_GREEN = D3;
-const int PIN_BLUE = D4;
+const int PIN_RED = D1;
+const int PIN_GREEN = MISO;
+const int PIN_BLUE = MOSI;
 
 void setup() {
   pinMode(PIN_RED, OUTPUT);

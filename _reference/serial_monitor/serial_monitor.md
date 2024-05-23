@@ -14,7 +14,7 @@ show_in_list: true
 
 ## Main Idea
 
-* Serial monitor lets you receive status messages from Argon
+* Serial monitor lets you receive status messages from Photon 2
 * Serial Monitor lets you print debug messages
 
 ## Operation
@@ -24,7 +24,7 @@ show_in_list: true
 
 <img src="serial_monitor.assets/1565664078373.png" alt="width:300px" style="width:300px" />
 
-* Serial Monitor is **only** available while the Argon is connected to your computer via USB
+* Serial Monitor is **only** available while the Photon 2 is connected to your computer via USB
 
 
 ## Code

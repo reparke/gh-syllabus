@@ -25,14 +25,16 @@ show_in_list: true
 ### Supported Pins
 
 * Only certain pins support PWM
-  * Pins `D2`-`D8` 
-  * Pins `A0`-`A5` 
+  * `D1` (`SCL` or `A4`)*
+  * `A2`
+  * `A5`
+  * `MISO` (`D16`)*
+  * `MOSI` (`D15`)*
+  
 
-* PWM pins are assigned to one of three groups
-* Each group can have different PWM values (duty cycles), but must share the same  frequency and resolution
-  * Pins D4, D5, D6, D8
-  * Pins A0, A1, A2, A3
-  * Pins D2, D3, A4, A5
+PWM pins are assigned to one of three groups
+
+* Pins can have different PWM values (duty cycles), but must share the same  frequency and resolution
 
 ## Operation
 
@@ -47,7 +49,7 @@ show_in_list: true
 Consider an LED connected to pin `D2`
 
 ```c++
-const int PIN_LED = D2;   //pin D2
+const int PIN_LED = D1;   //pin D1
 
 void setup() {
   //initialize the pin mode

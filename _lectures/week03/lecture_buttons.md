@@ -47,11 +47,11 @@ title: Push Buttons
 
 ## First Version
 
-<img src="lecture_buttons.assets/1565911529662.png" alt="switch on breadboard" style="width:800px"/>
+![image-20240521151309315](lecture_buttons.assets/image-20240521151309315.png)
 
 ## First Version - Problem
 
-<img src="lecture_buttons.assets/1565911529662.png" alt="switch on breadboard" style="width:300px" />
+<img src="lecture_buttons.assets/image-20240521151309315.png" alt="switch on breadboard" style="width:300px" />
 
 * When button is pressed, input pin is connected to gnd (LOW)
 * When button is open, is it LOW or HIGH?
@@ -65,37 +65,37 @@ title: Push Buttons
 
 ## Second Version
 
-<img src="lecture_buttons.assets/1565911319542.png" alt="switch on breadboard" style="width:800px" />
+![image-20240521151359983](lecture_buttons.assets/image-20240521151359983.png)
 
 ## Second Version Problem
 
-<img src="lecture_buttons.assets/1565911319542.png" alt="switch on breadboard" style="width:400px" />
+<img src="lecture_buttons.assets/image-20240521151359983.png" alt="switch on breadboard" style="width:400px" />
 
 * When button is open, we have HIGH (fixed)
 * When button is pressed, we connect power (3.3v) to gnd (**BAD!**)
 
 ## Final Version
 
-<img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:800px" />
+![image-20240521151440789](lecture_buttons.assets/image-20240521151440789.png)
 
 ## Final Version - With Pull-Up Resistor
 
-<img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:400px" />
+<img src="lecture_buttons.assets/image-20240521151440789.png" alt="switch on breadboard" style="width:400px" />
 
 * We use a large resistor (10k) to "pull-up" the input to 3.3v when the button is open (HIGH)
 * When the button is pressed, the input goes to gnd (LOW), and we no longer have short-circuit from power to ground
 
 ## IMPORTANT
 
-<img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:400px" />
+<img src="lecture_buttons.assets/image-20240521151440789.png" alt="switch on breadboard" style="width:400px" />
 
 * **ALWAYS USE A PULL-UP RESISTOR WITH BUTTONS**
-* Otherwise you can damage the Argon permanently
+* Otherwise you can damage the Photon 2 permanently
 
 <!-- Pull down resistors to ground are fine too. Pull ups are more common for historical reasons (required more current for TTL logic). May also reduce interferance from noise since cutoff between HIGH (3.3v) and LOW (0v) is not 1.67v but much lower so better to have "default" state further from the cutoff -->
 
 ## Exercise 1
-  <img src="lecture_buttons.assets/1565912210987.png" alt="switch on breadboard" style="width:500px" />
+  <img src="lecture_buttons.assets/image-20240521151440789.png" alt="switch on breadboard" style="width:500px" />
 
 1. Turn LED on **only** while button pressed
 2. Toggle LED on and off **after each time** button is pressed
@@ -104,7 +104,9 @@ title: Push Buttons
 
 ## Exercise 2
 
-  <img src="lecture_buttons.assets/rgb_led_button_bb.png" alt="switch on breadboard" style="width:500px" />
+
+
+  <img src="lecture_buttons.assets/image-20240521151527873.png" alt="switch on breadboard" style="width:500px" />
 
 1. Turn on red LED on **only** while button pressed
 2. Toggle red LED on and off **after each time** button is pressed
