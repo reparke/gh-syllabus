@@ -88,12 +88,12 @@ float result = (float) x / y;
 
 ## Exercise Wiring
 
-<img src="lecture_tmp36_analog_temperature_sensor.assets/tmp36_bb.png" alt="tmp36_bb" style="width:900px;" />
+<img src="lecture_tmp36_analog_temperature_sensor.assets/Screenshot 2024-05-30 at 10.41.46 AM.png" alt="Screenshot 2024-05-30 at 10.41.46 AM" style="width:900px;" />
 
 ## Exercise
 
 * Connect a TMP36 and output the current temperature to the serial monitor
-* Consider what type of input is this signal? How will this value be read by Argon?
+* Consider what type of input is this signal? How will this value be read by Photon 2?
 
 <!-- This also tests a few C++ features 
 Variable types: analog read value is INT, but voltage and temperature need to be DOUBLE 

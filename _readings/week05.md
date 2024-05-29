@@ -18,7 +18,7 @@ title: Pre-Lecture Activities
 
 ### Bring to class all this week
 
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - TMP 36 (analog temperature sensor)
 - OLED screen
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
@@ -33,7 +33,7 @@ title: Pre-Lecture Activities
 
 <img src="week05.assets/etch-a-sketch_v3_i2c_bb.png" alt="etch-a-sketch" style="width:600px" />
 
-Use [Qwiic cable](https://www.sparkfun.com/products/14425) to connect OLED to Argon
+Use [Qwiic cable](https://www.sparkfun.com/products/14425) to connect OLED to Photon 2
 
 <img src="week05.assets/14425-Qwiic_Cable_-_Breadboard_Jumper__4-pin_-01.jpg" alt="Qwiic Cable - Breadboard Jumper (4-pin)" style="width:300px;" />
 
