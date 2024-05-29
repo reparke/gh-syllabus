@@ -32,7 +32,7 @@ show_in_list: false
 | M    | Nub Caster                                       | 1    |
 | O    | Lithium-Ion Battery                              | 1    |
 | P    | Breadboard (not shown)                           | 1    |
-| Q    | Argon (not shown)                                | 1    |
+| Q    | Photon 2 (not shown)                             | 1    |
 | Z    | Battery Holder (not used)                        | 1    |
 
 ### WARNING: 
@@ -247,7 +247,9 @@ Snap the two Breadboard Mounts (G) into the vertical slots in the back of the to
 
 ## 8. Connect Battery
 
-<img src="guide_build_chassis.assets/car_lipo_hookup_no_wires_bb.png" style="width:500px;" />
+
+
+<img src="guide_build_chassis.assets/image-20240523133655434.png" style="width:500px;" />
 
 
 
@@ -258,21 +260,23 @@ Snap the two Breadboard Mounts (G) into the vertical slots in the back of the to
 
 ### Motor Controller Wiring Guide
 
-| Motor Controller | Argon | --   | Motor Controller | Argon |
-| ---------------- | ----- | ---- | ---------------- | ----- |
-| PWMA             | D8    |      | VCC              | 3v3   |
-| AIN2             | D7    |      | GND              | GND   |
-| AIN1             | D6    |      | VM               | Li+   |
-| BIN1             | D5    |      | STBY             | 3v3   |
-| BIN2             | D4    |      |                  |       |
-| PWMB             | D3    |      |                  |       |
+| Motor Controller | Photon 2 | --   | Motor Controller | Photon 2 |
+| ---------------- | -------- | ---- | ---------------- | -------- |
+| PWMA             | A2       |      | VCC              | 3v3      |
+| AIN2             | D7       |      | GND              | GND      |
+| AIN1             | D6       |      | VM               | Li+      |
+| BIN1             | D5       |      | STBY             | 3v3      |
+| BIN2             | D4       |      |                  |          |
+| PWMB             | A5       |      |                  |          |
 
 ### Wiring Diagram
 
 * Note the diagram below uses two mini breadboard. This was because the diagram because the switch was move to keep the diagram readable.
-* If you prefer, you use a single mini breadboard instead. You can do this by moving the switch onto the first breadboard between motor controller and the Argon
+* If you prefer, you use a single mini breadboard instead. You can do this by moving the switch onto the first breadboard between motor controller and the Photon 2
 
-<img src="guide_build_chassis.assets/1572472040619.png" style="width:1000px" />
+
+
+<img src="guide_build_chassis.assets/image-20240523133735983.png" alt="image-20240523133400977" style="width:1000px" />
 
 
 

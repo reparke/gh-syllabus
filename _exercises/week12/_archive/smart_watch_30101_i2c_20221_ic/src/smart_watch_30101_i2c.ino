@@ -91,7 +91,7 @@ int prevReading = HIGH;  // the last VERIFIED state
 //////////////////////////
 // TODO: create state enum and variable(s) to track state
 enum State { Heart, TimeMode, Weather };
-State currentState = Weather;
+State currentState = Heart;
 
 // TODO
 void getNextState() {
@@ -159,7 +159,8 @@ void runHeartScreen() {
         oled.print("Temp ");
         oled.print(String(tempF, 0));
 
-        float voltage = analogRead(BATT) * 0.0011224;
+        // float voltage = analogRead(BATT) * 0.0011224;
+        float voltage = analogRead(A6) * 0.0011224;
         oled.setCursor(0, 40);
         oled.setFontType(0);
         oled.print("Batt ");
@@ -252,9 +253,9 @@ void runWeatherScreen() {
     oled.setFontType(0);
     oled.print("o");
 
-    oled.setCursor(0,24);
+    oled.setCursor(0, 24);
     oled.setFontType(0);
-    oled.print(weatherDescripton.substring(0,9));
+    oled.print(weatherDescripton.substring(0, 9));
 
     oled.setCursor(0, 40);
     oled.print("H ");
@@ -279,8 +280,7 @@ void setup() {
             Wire, I2C_SPEED_FAST))  // Use default I2C port, 400kHz speed
     {
         Serial.println("MAX30105 was not found. Please check wiring/power. ");
-        while (1)
-            ;
+        while (1);
     }
     Serial.println(
         "Place your index finger on the sensor with steady pressure.");

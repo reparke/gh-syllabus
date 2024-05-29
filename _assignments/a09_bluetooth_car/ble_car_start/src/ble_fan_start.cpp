@@ -6,7 +6,7 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 // based on
 // https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-experiment-guide---v40
 
-#include "argon_ble_setup.h"
+#include "particle_ble_setup.h"
 /*
   Use Adafruit Bluefruit app
   (https://learn.adafruit.com/bluefruit-le-connect/controller)
@@ -14,12 +14,12 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 
   CONFIGURATION
   Motor Controller
-    PWMA    - D8
+    PWMA    - A2
     AIN2    - D7
     AIN1    - D6
     BIN1    - D5
     BIN2    - D4
-    PWMB    - D3
+    PWMB    - A5
 
     VCC     - 3v3
     Standby - 3v3

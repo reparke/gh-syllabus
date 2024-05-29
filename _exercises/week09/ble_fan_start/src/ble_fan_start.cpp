@@ -4,7 +4,7 @@ SYSTEM_THREAD(ENABLED);
 SerialLogHandler logHandler(LOG_LEVEL_WARN);
 
 // bluetooth setup code
-#include "argon_ble_setup.h"
+#include "particle_ble_setup.h"
 
 // on board LED
 const int PIN_LED = D7;

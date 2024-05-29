@@ -57,9 +57,9 @@ void loop() {
 ## Delay Problems
 
 * `delay()` is **blocking**
-  * This means the Argon is essentially paused and can't do anything else
+  * This means the Photon 2 is essentially paused and can't do anything else
 * We need to be able to synchronize events and **multi-task** just like our computers and phones
-* This means in the time between the LED turning off and turning on, the Argon can do other things
+* This means in the time between the LED turning off and turning on, the Photon 2 can do other things
 
 
 
@@ -67,7 +67,7 @@ void loop() {
 ## Step 1: Let's Use the Clock
 
 * `millis()` is a function that returns the "relative current time" 
-  * Number of **milliseconds** that have elapsed since the Argon last turned on / reset
+  * Number of **milliseconds** that have elapsed since the Photon 2 last turned on / reset
 * We can call `millis()` at different points in time to compare the passage of time
 * When a specific time has elapsed, we can take an action
 
@@ -160,6 +160,8 @@ void loop() {
 ```
 
 ## Lab
+
+![image-20240529151211487](lecture_multi_tasking.assets/image-20240529151211487.png)
 
 <img src="lecture_multi_tasking.assets/image-20200709230855362.png" alt="image-20200709230855362" style="height:600px;" />
 

@@ -1,10 +1,10 @@
-// #define BLYNK_TEMPLATE_ID "TMPL8pRjLGSG"
-// #define BLYNK_TEMPLATE_NAME "Week 6 Lab"
-// #define BLYNK_AUTH_TOKEN "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b"
+#define BLYNK_TEMPLATE_ID "TMPL8pRjLGSG"
+#define BLYNK_TEMPLATE_NAME "Week 6 Lab"
+#define BLYNK_AUTH_TOKEN "CXGdYkgREo9JvRwFIZ4d8y9WCZ83Zr2b"
 
-#define BLYNK_TEMPLATE_ID "TMPL21_bpJDKa"
-#define BLYNK_TEMPLATE_NAME "Week 6"
-#define BLYNK_AUTH_TOKEN "Glbz5sDT1gaudxya5-c_OL6kZR0JMQTV"
+// #define BLYNK_TEMPLATE_ID "TMPL21_bpJDKa"
+// #define BLYNK_TEMPLATE_NAME "Week 6"
+// #define BLYNK_AUTH_TOKEN "Glbz5sDT1gaudxya5-c_OL6kZR0JMQTV"
 
 
 #include <blynk.h>

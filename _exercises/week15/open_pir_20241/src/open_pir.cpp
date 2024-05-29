@@ -20,8 +20,9 @@ void loop() {
     if (currentAlarm == HIGH) {
         digitalWrite(PIN_LED, HIGH);
         Serial.println("Movement detected");
-    } else {
-        digitalWrite(PIN_LED, LOW);
-        Serial.println("Mpvement stopped");
-    }
+    } 
+    // else {
+    //     digitalWrite(PIN_LED, LOW);
+    //     Serial.println("Movement stopped");
+    // }
 }

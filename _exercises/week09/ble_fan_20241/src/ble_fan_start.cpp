@@ -3,7 +3,7 @@ SYSTEM_MODE(AUTOMATIC);
 SYSTEM_THREAD(ENABLED);
 SerialLogHandler logHandler(LOG_LEVEL_WARN);
 
-#include "argon_ble_setup.h"
+#include "particle_ble_setup.h"
 /*
 Use Adafruit Bluefruit app
 (https://learn.adafruit.com/bluefruit-le-connect/controller)

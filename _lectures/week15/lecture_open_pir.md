@@ -80,12 +80,12 @@ title: Open PIR (Passive Infrared Sensor)
 
 ## Wiring
 
-| Open PIR (Sparkfun) | Argon                    |
-| ------------------- | ------------------------ |
-| VCC                 | 3.3v                     |
-| GND                 | GND                      |
-| OUT                 | Any digital pin          |
-| A                   | (Optional) Anyanalog pin |
+| Open PIR (Sparkfun) | Argon                     |
+| ------------------- | ------------------------- |
+| VCC                 | 3.3v                      |
+| GND                 | GND                       |
+| OUT                 | Any digital pin           |
+| A                   | (Optional) Any analog pin |
 
 *Note: The wire color and pin order is specific to the [Sparkfun OpenPIR](https://www.sparkfun.com/products/13968) sensor and not all PIR sensor*s
 

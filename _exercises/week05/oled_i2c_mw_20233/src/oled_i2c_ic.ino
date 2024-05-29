@@ -69,52 +69,52 @@ void setup() {
 }
 
 void loop() {
-    // pixelExample();  // Run the pixel example function
-    // lineExample();   // Then the line example function
-    // shapeExample();  // Then the shape example
-    // textExamples();  // Finally the text example
-    //     oled.clear(PAGE);
-    //     oled.setCursor(10, 10);
-    //     oled.print("Hello world!");
-    //     oled.display();
-
-    /*
-    how to build etch a sketch
-
-        "x" pot and the "y" pot --> control a pixel on the screen
-        button erases screen
-
-        input range             output range
-        x pot: 0-4095 ----->   0-# pixels in x direction -1
-                                    oled.getLCDWidth()
-                                    0-63 (64 pixel, but we counting as 0)
-        ypot: 0-4095 ------->  0 - #pixels in y direction -1
-                                    oled.getLCDHeight())
-                                    0-47
-
-        process:
-        read the pots and convert ADC values to pixels (x, y)
-
-        draw the pixel on the screen (hint: example code has a pixel function)
-
-        enable button to "clear" the screen
-
-    */
-    int currButtonState = digitalRead(PIN_BUTTON);
-    if (currButtonState == HIGH && prevButtonState == LOW) {
+    pixelExample();  // Run the pixel example function
+    lineExample();   // Then the line example function
+    shapeExample();  // Then the shape example
+    textExamples();  // Finally the text example
         oled.clear(PAGE);
-    }
-    prevButtonState = currButtonState;
+        oled.setCursor(10, 10);
+        oled.print("Hello world!");
+        oled.display();
+
+    // /*
+    // how to build etch a sketch
+
+    //     "x" pot and the "y" pot --> control a pixel on the screen
+    //     button erases screen
+
+    //     input range             output range
+    //     x pot: 0-4095 ----->   0-# pixels in x direction -1
+    //                                 oled.getLCDWidth()
+    //                                 0-63 (64 pixel, but we counting as 0)
+    //     ypot: 0-4095 ------->  0 - #pixels in y direction -1
+    //                                 oled.getLCDHeight())
+    //                                 0-47
+
+    //     process:
+    //     read the pots and convert ADC values to pixels (x, y)
+
+    //     draw the pixel on the screen (hint: example code has a pixel function)
+
+    //     enable button to "clear" the screen
+
+    // */
+    // int currButtonState = digitalRead(PIN_BUTTON);
+    // if (currButtonState == HIGH && prevButtonState == LOW) {
+    //     oled.clear(PAGE);
+    // }
+    // prevButtonState = currButtonState;
 
 
-    int xPot = analogRead(PIN_POT0);
-    int yPot = analogRead(PIN_POT1);
+    // int xPot = analogRead(PIN_POT0);
+    // int yPot = analogRead(PIN_POT1);
 
-    xPos = map(xPot, 0, 4095, 0, 63);
-    yPos = map(yPot, 0, 4095, 0, 47);
+    // xPos = map(xPot, 0, 4095, 0, 63);
+    // yPos = map(yPot, 0, 4095, 0, 47);
 
-    oled.pixel(xPos, yPos);
-    oled.display();
+    // oled.pixel(xPos, yPos);
+    // oled.display();
 }
 
 void pixelExample() {
