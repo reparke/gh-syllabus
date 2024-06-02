@@ -161,9 +161,7 @@ void loop() {
 
 ## Lab
 
-![image-20240529151211487](lecture_multi_tasking.assets/image-20240529151211487.png)
-
-<img src="lecture_multi_tasking.assets/image-20200709230855362.png" alt="image-20200709230855362" style="height:600px;" />
+<img src="lecture_multi_tasking.assets/Screenshot 2024-05-31 at 6.13.03 PM.png" alt="image-20240529151211487" style="height:600px;" />
 
 
 

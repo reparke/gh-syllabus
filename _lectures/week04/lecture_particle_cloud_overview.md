@@ -61,7 +61,7 @@ title: Cloud Communication - Overview
 
 ## Particle Cloud
 
-* Argon has built in support for connecting to Particle Cloud
+* Photon 2 has built in support for connecting to Particle Cloud
 * Particle Cloud is essentially free (very generous free tier)
 * Basically acts as a real-time communication system
   * i.e. the current temperature, but not temperature from last Tuesday
@@ -84,8 +84,8 @@ title: Cloud Communication - Overview
 
 ## Documentation
 
-* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/argon/#cloud-functions)
-* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/argon/#particle-publish-)
-* [Cloud Variables](https://docs.particle.io/reference/device-os/firmware/argon/#particle-variable-)
-* [Cloud Functions](https://docs.particle.io/reference/device-os/firmware/argon/#particle-function-)
-* [Subscribing to Events](https://docs.particle.io/reference/device-os/firmware/argon/#particle-subscribe-)
+* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/#cloud-functions)
+* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/#particle-publish-)
+* [Cloud Variables](https://docs.particle.io/reference/device-os/firmware/#particle-variable-)
+* [Cloud Functions](https://docs.particle.io/reference/device-os/firmware/#particle-function-)
+* [Subscribing to Events](https://docs.particle.io/reference/device-os/firmware/#particle-subscribe-)

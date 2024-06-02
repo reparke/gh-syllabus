@@ -16,7 +16,7 @@ title: Cloud Communication - Publish
 
 ## Events Part 1: Publishing Events
 
-* Events are messages sent from an Argon to the cloud **as often as you choose**
+* Events are messages sent from a Photon 2 to the cloud **as often as you choose**
 * Events are private (viewable by only by you and devices in your account) 
 * Events can be accessed in [Particle console]([https://console.particle.io/](https://console.particle.io/)), app, or by other devices (subscribing)
 
@@ -53,7 +53,7 @@ Particle.publish("tempFahr", String(85.9));
 
   `setup()` will run before cloud connectivity is enabled, meaning `Particle.publish()` will fail
 
-* If you need to execute code only once when the device starts , create a boolean flag and check to make sure the Argon has connected to the cloud (`Particle.connected()`) before running the code once. 
+* If you need to execute code only once when the device starts, create a boolean flag and check to make sure the Photon 2 has connected to the cloud (`Particle.connected()`) before running the code once. 
 
 * For example
 
@@ -69,7 +69,7 @@ Particle.publish("tempFahr", String(85.9));
 
   
 
-* In order to get the weather initially when Argon turns on, we need to set a boolean flag and do a check in `loop()`
+* In order to get the weather initially when the Photon 2 turns on, we need to set a boolean flag and do a check in `loop()`
 
   * [Particle community post](https://community.particle.io/t/cant-particle-publish-in-setup-with-cpp-file/66688/3?u=rob7)
 
@@ -77,8 +77,8 @@ Particle.publish("tempFahr", String(85.9));
 
 ## Documentation
 
-* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/argon/#cloud-functions)
-* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/argon/#particle-publish-)
-* [Cloud Variables](https://docs.particle.io/reference/device-os/firmware/argon/#particle-variable-)
-* [Cloud Functions](https://docs.particle.io/reference/device-os/firmware/argon/#particle-function-)
-* [Subscribing to Events](https://docs.particle.io/reference/device-os/firmware/argon/#particle-subscribe-)
+* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/#cloud-functions)
+* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/#particle-publish-)
+* [Cloud Variables](https://docs.particle.io/reference/device-os/firmware/#particle-variable-)
+* [Cloud Functions](https://docs.particle.io/reference/device-os/firmware/#particle-function-)
+* [Subscribing to Events](https://docs.particle.io/reference/device-os/firmware/#particle-subscribe-)

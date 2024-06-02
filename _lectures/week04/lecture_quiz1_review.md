@@ -12,7 +12,7 @@ title: Quiz 1 Review
 
 # Quiz #1 Review
 
-* Argon
+* Photon 2
   * Voltage levels
   * Types of pins
 * Electricity

@@ -36,7 +36,7 @@ title: Photoresistors
 
 ## Wiring a Photoresistor
 
-<img src="lecture_photoresistor.assets/photoresistor_without_fixed_resistor_bb.png" alt="wiring" style="width:800px" />
+<img src="lecture_photoresistor.assets/Screenshot 2024-05-31 at 7.28.43 PM.png" alt="Screenshot 2024-05-31 at 7.28.43 PM" style="width:800px"/>
 
 * Consider wiring a photo resistor to 3.3v and ground
 * Measure voltage
@@ -44,14 +44,14 @@ title: Photoresistors
 
 ## What happens in bright light?
 
-<img src="lecture_photoresistor.assets/light_on.png" style="width:600px;" />
+<img src="lecture_photoresistor.assets/Screenshot 2024-06-02 at 12.48.13 PM.png" alt="Screenshot 2024-06-02 at 12.48.13 PM" style="width:600px;" />
 
 * Bright light --> resistance decreases
 * Analog input reads 3.3v
 
 ## What happens in darkness?
 
-<img src="lecture_photoresistor.assets/light_off.png" style="width:600px;" />
+<img src="lecture_photoresistor.assets/Screenshot 2024-06-02 at 12.48.30 PM.png" alt="Screenshot 2024-06-02 at 12.48.30 PM" style="width:600px;"/>
 
 * Darkness --> resistance increases
 * Analog input **still** reads 3.3v
@@ -59,7 +59,7 @@ title: Photoresistors
 
 ## Why is this happening?
 
-<img src="lecture_photoresistor.assets/photoresistor_without_fixed_resistor_bb.png" alt="wiring" style="width:800px" />
+<img src="lecture_photoresistor.assets/Screenshot 2024-05-31 at 7.28.43 PM.png" alt="Screenshot 2024-05-31 at 7.28.43 PM" style="width:800px"/>
 
 <!-- We are always measure the pin connected to 3.3v so reading won't change -->
 
@@ -95,20 +95,20 @@ title: Photoresistors
 
 ## Photoresistor solution
 
-<img src="lecture_photoresistor.assets/photoresistor_and_fixed_resistor_bb.png" alt="photoresistor_and_fixed_resistor_bb" style="width:800px;" />
+<img src="lecture_photoresistor.assets/Screenshot 2024-06-02 at 1.06.34 PM.png" alt="Screenshot 2024-06-02 at 1.06.34 PM" style="width:800px;"/>
 
 ## Photoresistor solution
 
 * Use a fixed resistor (usually 4.7k*) in series with photoresistor
 * Connect one end of photoresistor to 3.3v, and the end to the resistor
 * Connect the other end of the resistor to ground
-* Use the Argon to measure the voltage in the middle 
+* Use the Photon 2 to measure the voltage in the middle 
 
 **\*** *4.7k is not a magic value. It a reasonably good value for normal lighting conditions*
 
 ## Exercise
 
-<img src="lecture_photoresistor.assets/photoresistor_and_fixed_resistor_RGB_LED_bb.png" alt="photoresistor_and_fixed_resistor_bb" style="width:800px;" />
+<img src="lecture_photoresistor.assets/Screenshot 2024-06-02 at 1.08.10 PM.png" alt="Screenshot 2024-06-02 at 1.08.10 PM" style="width:800px;"/>
 
 ## Lab (with breakout groups)
 

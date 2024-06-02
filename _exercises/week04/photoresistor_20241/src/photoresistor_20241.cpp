@@ -3,10 +3,10 @@ SYSTEM_MODE(AUTOMATIC);
 SYSTEM_THREAD(ENABLED);
 SerialLogHandler logHandler(LOG_LEVEL_INFO);
 
-const int PIN_PHOTO = A5;
-const int PIN_RED = D2;
-const int PIN_GREEN = D3;
-const int PIN_BLUE = D4;
+const int PIN_PHOTO = A1;
+const int PIN_RED = D15; // aka MOSI pin
+const int PIN_GREEN = A5;
+const int PIN_BLUE = A2;
 
 /*
   how do we know what threshold ars?
