@@ -161,7 +161,7 @@ void loop() {
 
 ## Lab
 
-<img src="lecture_multi_tasking.assets/Screenshot 2024-06-03 at 3.46.07 PM.png" alt="Screenshot 2024-06-03 at 3.46.07 PM" style="height:600px;" />
+<img src="lecture_multi_tasking.assets/Screenshot 2024-06-03 at 3.46.07 PM.png" alt="Screenshot 2024-06-03 at 3.46.07 PM" style="width:600px;" />
 
 
 
