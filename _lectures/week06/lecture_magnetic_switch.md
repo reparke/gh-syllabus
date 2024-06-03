@@ -44,7 +44,7 @@ title: Magnetic Switch
 
 ## Wiring Example
 
-<img src="lecture_magnetic_switch.assets/switch-magnetic-door_bb.png" style="width:500px;" />
+<img src="lecture_magnetic_switch.assets/Screenshot 2024-06-03 at 4.12.08 PM.png" alt="Screenshot 2024-06-03 at 4.12.08 PM" style="width:500px;" />
 
 ## Quick Note
 
@@ -53,7 +53,7 @@ title: Magnetic Switch
 
 ## Exercise:
 
-<img src="lecture_magnetic_switch.assets\switch-magnetic-door_and_rgb_led_bb.png" style="width:600px;" />
+<img src="lecture_magnetic_switch.assets/Screenshot 2024-06-03 at 4.03.41 PM.png" alt="Screenshot 2024-06-03 at 4.03.41 PM" style="width:600px;" />
 
 
 

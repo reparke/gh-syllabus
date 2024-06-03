@@ -19,7 +19,7 @@ title: APIs and Webhooks
 
 * **APIs** provide the mechanism we use to communicate with these other services
 
-* **Webhooks** are created in the Particle cloud to connect our Argon to an API online 
+* **Webhooks** are created in the Particle cloud to connect our  to an API online 
 
   
 
@@ -52,15 +52,15 @@ title: APIs and Webhooks
 
 ## 
 
-<img src="api_send_only_visualization/Slide1.PNG" alt="Slide1" style="width:950px" />
+<img src="lecture_api_webhook.assets/Screenshot 2024-06-03 at 2.10.54 PM.png" alt="Screenshot 2024-06-03 at 2.10.54 PM" style="width:950px" />
 
 ## 
 
-<img src="lecture_api_webhook.assets/Slide2.PNG" alt="Slide2" style="width:950px" />
+<img src="lecture_api_webhook.assets/Screenshot 2024-06-03 at 2.11.06 PM.png" alt="Screenshot 2024-06-03 at 2.11.06 PM" style="width:950px" />
 
 ## 
 
-<img src="lecture_api_webhook.assets/Slide3.PNG" alt="Slide3" style="width:950px" />
+<img src="lecture_api_webhook.assets/Screenshot 2024-06-03 at 2.11.19 PM.png" alt="Screenshot 2024-06-03 at 2.11.19 PM" style="width:950px" />
 
 ## Creating a Webhook
 

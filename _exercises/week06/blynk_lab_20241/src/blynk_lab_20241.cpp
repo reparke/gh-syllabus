@@ -39,9 +39,9 @@
 #include <blynk.h>
 
 const int PIN_LED = D7;
-const int PIN_RED = D3;
-const int PIN_GREEN = D4;
-const int PIN_BLUE = D5;
+const int PIN_RED = A2;
+const int PIN_GREEN = A5;
+const int PIN_BLUE = D15; // aka MOSI pin
 const int PIN_SWITCH = D2;
 
 int prevDoorState = HIGH;

@@ -7,9 +7,9 @@
 
 
 
-## Example 1: Send Single Data Point from Argon to Initial State
+## Example 1: Send Single Data Point from Photon 2 to Initial State
 
-**Argon code**
+**Photon 2 code**
 
 ```c++
 double temp;
@@ -23,5 +23,4 @@ void loop() {
   delay(60000);	//use delay or millis to avoid publishing too frequently
 }
 ```
-
 

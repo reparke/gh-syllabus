@@ -21,11 +21,13 @@ title: Pre-Lecture
 
 ### Build before class Mon / Tues 
 
-<img src="week04.assets/photoresistor_and_fixed_resistor_RGB_LED_bb.png" alt="photoresistor_and_fixed_resistor_RGB_LED_bb" style="width:500px;" />
+<img src="week04.assets/Screenshot 2024-06-03 at 3.37.34 PM.png" alt="Screenshot 2024-06-03 at 3.37.34 PM" style="width:500px;" />
+
+
 
 ### Build before class Wed / Thurs 
 
-<img src="week04.assets/image-20200709230855362.png" alt="image-20200709230855362" style="width:500px;" />
+<img src="week04.assets/Screenshot 2024-06-03 at 3.46.07 PM.png" alt="Screenshot 2024-06-03 at 3.46.07 PM" style="width:500px;" />
 
 
 

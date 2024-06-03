@@ -44,22 +44,22 @@ title: Data Visualization and Dashboard with Initial State (Single Values)
 ## Initial State ([https://initialstate.com](https://initialstate.com))
 
 * Initial State is a data visualization service for IoT
-* Send data from Argon to be stored at Initial State 
-* Create complex graphs and dashboard with the values from your Argon
+* Send data from Photon 2 to be stored at Initial State 
+* Create complex graphs and dashboards with the values from your Photon 2
 * Generous free tier!
 * Initial State can also send SMS and email alerts based on the data (though this requires a paid plan)
 
-## Configuring Argon and Initial State 
+## Configuring Photon 2 and Initial State 
 
 * The following examples are provided as a quick reference
 * More detailed steps are described in the lecture 
 
-## Steps to Connect Argon and Initial State 
+## Steps to Connect Photon 2 and Initial State 
 
 1. Create account at  [https://initialstate.com](https://initialstate.com) (make sure to use your student email and change ) 
 2. Create **stream bucket** at [https://initialstate.com](https://initialstate.com)  
 3. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
-4. Write firmware sketch and flash Argon
+4. Write firmware sketch and flash Photon 2
 
 ## Aside: Access Key (or API key)
 
@@ -70,7 +70,7 @@ title: Data Visualization and Dashboard with Initial State (Single Values)
   * Prevent abuse / hacking
   * Throttling / account limits (enforce limits on read/write frequency)
 
-## Example 1: Send Single Data Point from Argon to Initial State
+## Example 1: Send Single Data Point from Photon 2 to Initial State
 
 **Initial State Settings**
 
@@ -78,13 +78,13 @@ title: Data Visualization and Dashboard with Initial State (Single Values)
 
 
 
-## Example 1: Send Single Data Point from Argon to Initial State
+## Example 1: Send Single Data Point from Photon 2 to Initial State
 
 **Particle integration settings**
 
 ![image-20210201152825606](lecture_data_dashboards_initial_state_single_values.assets/image-20210201152825606.png)
 
-## Example 1: Send Single Data Point from Argon to Initial State
+## Example 1: Send Single Data Point from Photon 2 to Initial State
 
 **Particle integration settings**
 
@@ -99,9 +99,9 @@ title: Data Visualization and Dashboard with Initial State (Single Values)
 
 
 
-## Example 1: Send Single Data Point from Argon to Initial State
+## Example 1: Send Single Data Point from Photon 2 to Initial State
 
-**Argon code**
+**Photon 2 code**
 
 ```c++
 double temp;
@@ -119,14 +119,12 @@ void loop() {
 
 ## Exercise - Send Temperature Value to Initial State
 
-* Connect TMP 36 to Argon
+* Connect TMP 36 to Photon 2
 * Read temperature value and send to Initial State
 
 ## Exercise  - Send Temperature Value to Initial State
 
-<img src="lecture_data_dashboards_initial_state_single_values.assets/tmp36_bb.png" style="width:500px;" />
-
-
+<img src="lecture_data_dashboards_initial_state_single_values.assets/Screenshot 2024-06-03 at 2.28.35 PM.png" alt="Screenshot 2024-06-03 at 2.28.35 PM" style="width:500px;" />
 
 ## Credits
 

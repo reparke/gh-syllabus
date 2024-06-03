@@ -42,13 +42,13 @@ title: Creating IoT Mobile Apps with Blynk
 ## Quick Blynk Definitions
 
 - Template: store configuration settings for your project; need to create a new template for each project
-- Device: represents your argon
+- Device: represents your Photon 2
 - Datastream: channels that send data between the device and Blynk; each variable you send needs separate datastream 
 - Virtual Pins
 
 ## Virtual Pins
 
-- Use **virtual pins** to send and receive data from Argon
+- Use **virtual pins** to send and receive data from Photon 2
 - These are not real hardware pins, but just a concept used by Blynk
 - Virtual pins support `ints` and `Strings` (unlike hardware pins) 
 - 32-128 pins are supported (label `V0`, `V1`, etc.)
@@ -63,7 +63,7 @@ There are three places we need to configure to use Blynk
 1. **Blynk Cloud website ([https://blynk.cloud](https://blynk.cloud))**
    This is where we configure the data that will be sent
 2. **Workbench**
-   This is where we write the Argon could to send data
+   This is where we write the Photon 2 code to send data
 3. **Blynk mobile app** 
    This is where we will design the interface
 
@@ -73,7 +73,7 @@ Blynk Cloud website ([https://blynk.cloud](https://blynk.cloud))
 
 - Create template (new template for every new project)
 - Create datastreams (one for each piece of data to be sent to cloud)
-- Create device (this represents your Argon)
+- Create device (this represents your Photon 2)
 - Copy config info / key into Workbench Sketch
 
 ## Integration Phase 1: Create template
@@ -191,14 +191,14 @@ void loop() {
 
 - Instead, use a `millis()` or a timer to send data to app (limit to 10 values per second)
 
-## App: Send data from Blynk App to Argon
+## App: Send data from Blynk App to Photon 2
 
 ![width:500px](lecture_blynk_cloud.assets/blynk_8.png)![blynk lecture_blynk_cloud.assets/blynk_2.png) width:400px](lecture_blynk_cloud.assets/blynk_2.png)
 
 
-## Syntax: Send data from Blynk App to Argon
+## Syntax: Send data from Blynk App to Photon 2
 
-- To send data FROM **app** TO **argon**, create a `BLYNK_WRITE(vPin)` function 
+- To send data FROM **app** TO **Photon 2**, create a `BLYNK_WRITE(vPin)` function 
 - This event handler will be called automatically when the app changes
 
 ```c++
@@ -207,7 +207,7 @@ BLYNK_WRITE(<<VIRTUAL_PIN>>){
 }
 ```
 
-## Example: Send data from Blynk App to Argon
+## Example: Send data from Blynk App to Photon 2
 
 ```c++
 BLYNK_WRITE(V0){
@@ -217,15 +217,15 @@ BLYNK_WRITE(V0){
 }
 ```
 
-## Syntax: Send data from Argon to Blynk App
+## Syntax: Send data from Photon 2 to Blynk App
 
-- To send data from Argon to Blynk App, use 
+- To send data from Photon 2 to Blynk App, use 
 
 ```c++
 Blynk.virtualWrite(<<PIN>>, <<VALUE>>);
 ```
 
-## Example: Send data from Argon to Blynk App
+## Example: Send data from Photon 2 to Blynk App
 
 ```c++
 unsigned long blynkDelay = 10000; //change this as needed
@@ -242,13 +242,13 @@ void loop() {
 }
 ```
 
-## App: Send data from Argon to Blynk App
+## App: Send data from Photon 2 to Blynk App
 
 ![blynk_4](lecture_blynk_cloud.assets/blynk_4.png)
 
 ## Wiring for Exercise and Lab
 
-<img src="lecture_blynk_cloud.assets/switch-magnetic-door_and_rgb_led_bb.png" style="width:500px;" />
+<img src="lecture_blynk_cloud.assets/Screenshot 2024-06-03 at 4.03.41 PM.png" alt="Screenshot 2024-06-03 at 4.03.41 PM" style="width:500px;" />
 
 ## Exercise
 
@@ -266,11 +266,11 @@ void loop() {
 
 - Build Blynk with the following features
 
-  1. Use a display to show if magnetic switch is `open` or `closed` on pin `V3` *(argon --> app)*
-  2. Send random number (0-255) to app and display on pin `V6` (argon --> app)
-  3. Use virtual LED to show random number on pin `V6` (argon --> app)
-  4. Use a gauge to show random number on pin `V6`  (argon --> app)
-  5. Use button to control turn the RGB led to white via pin `V5` (app --> argon)
+  1. Use a display to show if magnetic switch is `open` or `closed` on pin `V3` *(Photon 2 --> app)*
+  2. Send random number (0-255) to app and display on pin `V6` (Photon 2 --> app)
+  3. Use virtual LED to show random number on pin `V6` (Photon 2 --> app)
+  4. Use a gauge to show random number on pin `V6`  (Photon 2 --> app)
+  5. Use button to control turn the RGB led to white via pin `V5` (app --> Photon 2)
 
 ## Exercise App Layout
 
@@ -290,9 +290,9 @@ void loop() {
   | `Button Display Random Color` | `V4`        |
   | `Displayed Color String`      | `V7`        |
 
-  1. Use three sliders to control RGB LED on pins `V0 V1 V2` *(app --> argon)*
-  1. Use a button on `V4` to trigger the RGB LED to display a color randomly chosen from **white**, **yellow**, **magenta**, or **red** *(app --> argon)*
-  1. When one of the four random colors is displayed on the RGB LED, send a string representing that color to the app on pin `V7` *(argon --> app)*
+  1. Use three sliders to control RGB LED on pins `V0 V1 V2` *(app --> Photon 2)*
+  1. Use a button on `V4` to trigger the RGB LED to display a color randomly chosen from **white**, **yellow**, **magenta**, or **red** *(app --> Photon 2)*
+  1. When one of the four random colors is displayed on the RGB LED, send a string representing that color to the app on pin `V7` *(Photon 2 --> app)*
   
 * What happens if you put `Blynk.syncAll();` at the end of `setup()`? 
 

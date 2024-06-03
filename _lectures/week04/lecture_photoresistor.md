@@ -36,7 +36,7 @@ title: Photoresistors
 
 ## Wiring a Photoresistor
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-05-31 at 7.28.43 PM.png" alt="Screenshot 2024-05-31 at 7.28.43 PM" style="width:800px"/>
+<img src="lecture_photoresistor.assets/Screenshot 2024-06-03 at 3.18.21 PM.png" alt="Screenshot 2024-06-03 at 3.18.21 PM" style="width:800px" />
 
 * Consider wiring a photo resistor to 3.3v and ground
 * Measure voltage
@@ -59,7 +59,7 @@ title: Photoresistors
 
 ## Why is this happening?
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-05-31 at 7.28.43 PM.png" alt="Screenshot 2024-05-31 at 7.28.43 PM" style="width:800px"/>
+<img src="lecture_photoresistor.assets/Screenshot 2024-06-03 at 3.18.21 PM.png" alt="Screenshot 2024-06-03 at 3.18.21 PM" style="width:800px" />
 
 <!-- We are always measure the pin connected to 3.3v so reading won't change -->
 
@@ -95,7 +95,7 @@ title: Photoresistors
 
 ## Photoresistor solution
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-06-02 at 1.06.34 PM.png" alt="Screenshot 2024-06-02 at 1.06.34 PM" style="width:800px;"/>
+<img src="lecture_photoresistor.assets/Screenshot 2024-06-03 at 3.14.49 PM.png" alt="Screenshot 2024-06-03 at 3.14.49 PM" style="width:800px;" />
 
 ## Photoresistor solution
 
@@ -108,7 +108,7 @@ title: Photoresistors
 
 ## Exercise
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-06-02 at 1.08.10 PM.png" alt="Screenshot 2024-06-02 at 1.08.10 PM" style="width:800px;"/>
+<img src="lecture_photoresistor.assets/Screenshot 2024-06-03 at 3.19.33 PM.png" alt="Screenshot 2024-06-03 at 3.19.33 PM" style="width:800px;" />
 
 ## Lab (with breakout groups)
 

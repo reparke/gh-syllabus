@@ -21,5 +21,5 @@ title: Pre-Lecture Activities
 
 - Create an [Blynk account](https://blynk.cloud/) 
 
-![image-20210220175201317](week06.assets/switch-magnetic-door_and_rgb_led_bb.png)
+<img src="week06.assets/Screenshot 2024-06-03 at 4.03.41 PM.png" alt="Screenshot 2024-06-03 at 4.03.41 PM" style="width:600px" />
 

@@ -88,7 +88,7 @@ float result = (float) x / y;
 
 ## Exercise Wiring
 
-<img src="lecture_tmp36_analog_temperature_sensor.assets/Screenshot 2024-05-30 at 10.41.46 AM.png" alt="Screenshot 2024-05-30 at 10.41.46 AM" style="width:900px;" />
+<img src="lecture_tmp36_analog_temperature_sensor.assets/Screenshot 2024-06-03 at 3.26.05 PM.png" alt="Screenshot 2024-06-03 at 3.26.05 PM" style="width:900px;" />
 
 ## Exercise
 

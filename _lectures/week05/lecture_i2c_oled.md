@@ -74,14 +74,14 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 
 * Custom circuit board that provides access to ("breaks out") the **very delicate** small pins on the screen
-* This breakout board also enables the communication protocol that allows us to use only 2 pins to connect to the Argon
+* This breakout board also enables the communication protocol that allows us to use only 2 pins to connect to the Photon 2
 
 
 ## Communication
 
 * Communicating with the screen directly is complicated but we can use a library to simplify 
   * This is similar to installing software on your computer to communicate with your printer (*software driver*)
-* Argon can communicate with the screen using a protocol called **I2C**
+* Photon 2 can communicate with the screen using a protocol called **I2C**
 
 ## What is Synchronous Communication?
 
@@ -127,12 +127,12 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
   - Uses more power than some other protocols (e.g. SPI)
   - Lower transfer speed than some other protocols (e.g. SPI) 
 
-## Argon - OLED Screen Pin Mapping
+## Photon 2 - OLED Screen Pin Mapping
 
 
 
 
-| OLED | Argon    | Purpose | Notes                                                        |
+| OLED | Photon 2 | Purpose | Notes                                                        |
 | --------- | ------------ | ------------ | ------------------------------------------------------------ |
 | GND       | GND          | Ground       | Ground                                                       |
 | 3V3       | 3V3          | Power        | 3.3v                                                         |
@@ -158,7 +158,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 ## Lab - Etch-a-Sketch
 
-<img src="lecture_i2c_oled.assets/etch-a-sketch_v3_i2c_bb.png" style="width:900px;" />
+<img src="lecture_i2c_oled.assets/Screenshot 2024-06-03 at 3.11.22 PM.png" alt="Screenshot 2024-06-03 at 3.11.22 PM" style="width:900px;" />
 
 ## Credit
 
