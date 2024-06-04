@@ -1,6 +1,6 @@
-const int PIN_RGB_RED = D2;
-const int PIN_RGB_GREEN = D3;
-const int PIN_RGB_BLUE = D4;
+const int PIN_RGB_RED = A2;
+const int PIN_RGB_GREEN = A5;
+const int PIN_RGB_BLUE = D15; // aka MOSI pin
 
 
 void changeLedColor(int r, int g, int b) {
