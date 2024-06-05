@@ -26,7 +26,7 @@ title: Heart Rate Sensor (Pulse Sensor Amped)
 
 ## Pulse Sensor Amped Wiring
 
-| Sensor | Argon      | Function              |
+| Sensor | Photon 2   | Function              |
 | ------ | ---------- | --------------------- |
 | GND    | GND        | Ground                |
 | VCC    | 3V3        | Power (requires 3.3v) |
@@ -35,8 +35,8 @@ title: Heart Rate Sensor (Pulse Sensor Amped)
 
 ## Library
 
-- Argon-compatible library
-  ```PulseSensorAmped```
+- Photon 2 -compatible library
+  ```PulseSensorAmped``` ==NEED TO UPDATE==
 - Configuration
 
 ```c++

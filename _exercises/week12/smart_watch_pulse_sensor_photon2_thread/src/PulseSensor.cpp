@@ -154,7 +154,7 @@ void PulseSensor::start() {
 }
 
 int PulseSensor::getBPM() {
-    // QS = false;  // reset the for next time
+    QS = false;  // reset the for next time
     return BPM;
 }
 
@@ -162,6 +162,7 @@ boolean PulseSensor::beatDetected() { return QS; }
 
 // void PulseSensor::process(void) {
 //     // Put updates into foreground
+//     Serial.print(".");
 //     if (QS) {
 //         if (BPM >= 0)
 //             PulseSensorAmped_data(BPM, IBI, counter);

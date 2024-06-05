@@ -6,8 +6,7 @@
 
 // The "beats updated" callback; Called when valid pulse data is available.
 // Passed Estimated Beats Per Minute and Interbeat Interval
-// extern void PulseSensorAmped_data(int BPM, int IBI, int counter)
-// __attribute__((weak));
+// extern void PulseSensorAmped_data(int BPM, int IBI, int counter) __attribute__((weak));
 // // The "signal lost" callback; Called when no more valid pulse data is
 // // avaialble.
 // extern void PulseSensorAmped_lost(void) __attribute__((weak));

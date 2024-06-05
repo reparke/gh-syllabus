@@ -120,10 +120,6 @@ title: Smart Watch
 
 - [Racial Bias in Pulse Oximetry Measurement](https://www.nejm.org/doi/10.1056/NEJMc2029240)
 
-## References
-
-* [Particle Argon reference - software timers](https://docs.particle.io/reference/device-os/firmware/argon/#software-timers)
-
 ## Credit
 
 - [Measure Heart Rate Project](https://create.arduino.cc/projecthub/SurtrTech/measure-heart-rate-and-spo2-with-max30102-c2b4d8) 
