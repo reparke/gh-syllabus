@@ -35,10 +35,10 @@ title: Magnetic Switch
 
 * Connect one wire  
   * 3.3v with 10k pullup resistor
-  * Argon digital input pin
+  * Photon 2 digital input pin
 * Connect other wire to ground
 * Switch is **not polarized** so use either wire
-* When reading signal from Argon
+* When reading signal from Photon 2
   * **HIGH** means open circuit (no magnet present) 
   * **LOW** means closed circuit (magnet present)
 

@@ -15,7 +15,7 @@ title: Pre-Lecture
 
 ### Bring to class all this week
 
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - Photoresistor 
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 

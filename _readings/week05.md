@@ -37,7 +37,7 @@ Use [Qwiic cable](https://www.sparkfun.com/products/14425) to connect OLED to Ph
 
 <img src="week05.assets/14425-Qwiic_Cable_-_Breadboard_Jumper__4-pin_-01.jpg" alt="Qwiic Cable - Breadboard Jumper (4-pin)" style="width:300px;" />
 
-| OLED | Argon    |
+| OLED | Photon 2 |
 | --------- | ------------ |
 | Black GND | GND          |
 | Red 3V3   | 3V3          |
