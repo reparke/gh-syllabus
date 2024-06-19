@@ -3,9 +3,9 @@
 #include "SparkFunMicroOLED.h"   // Include MicroOLED library
 MicroOLED oled(MODE_I2C, 9, 1);  // Example I2C declaration RST=D7, DC=LOW
 
-const int PIN_RED = D2;
-const int PIN_GREEN = D3;
-const int PIN_BLUE = D4;
+const int PIN_RED = A2;
+const int PIN_GREEN = A5;
+const int PIN_BLUE = D15; // aka MOSI pin
 
 const int LONG_LIGHT_DURATION = 5000;   // time for green, red, walk, don't walk
 const int SHORT_LIGHT_DURATION = 2000;  // time for yellow

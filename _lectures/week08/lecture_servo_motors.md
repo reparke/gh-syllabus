@@ -47,7 +47,7 @@ title: Servo Motors
 
 ## Wiring Diagram
 
-<img src="lecture_servo_motors.assets/servo_bb.png" alt="servo_bb" style="width:700px" />
+<img src="lecture_servo_motors.assets/Screenshot 2024-06-19 at 1.40.40 PM.png" alt="Screenshot 2024-06-19 at 1.40.40 PM" style="width:700px"/>
 
 ## Servo Class
 
@@ -131,18 +131,15 @@ int angleVal = map(potVal, 0, 4095, 15, 165);
 
 ```
 
-## Reminder: Argon PWM Pin Groups
+## Reminder: Photon 2 PWM Pins
 
-* PWM pins are assigned to one of three groups
-* Each group can have different PWM values (duty cycles), but must share the same  frequency and resolution
-  * Pins D4, D5, D6, D8
-  * Pins A0, A1, A2, A3
-  * Pins D2, D3, A4, A5
+* All PWM pins on the Photon 2 are assigned to the same timer, meaning you can only generate ONE frequency at a time (you cannot make different servos move in different directions at the same time)
+  * PWM pins: A2, A5, D15 (MO), D16 (MI), D1 (SCL)
 
 ## Fixing Servo Jittering
 
 - In some cases, the servo may start to make noise, stutter, or become hot when not it use
-- This can be due to a variety of factors such as unstable current supply or interrupts in the Argon execution
+- This can be due to a variety of factors such as unstable current supply or interrupts in the Photon 2 execution
 - IF this happens, one simple solution is to `attach` before using the servo, and then `detach` after
 
 ## Fixing Servo Jittering - Code
@@ -172,23 +169,25 @@ void loop(){
 
 ## Wiring
 
-<img src="lecture_servo_motors.assets/servo_dc_fan_controller_bb.png" alt="servo_dc_fan_controller_bb" style="width:600px;" />
+
+
+<img src="lecture_servo_motors.assets/Screenshot 2024-06-19 at 1.52.50 PM.png" alt="Screenshot 2024-06-19 at 1.52.50 PM" style="width:600px;"/>
 
 
 
 ## Motor Controller Wiring Guide
 
-| Motor Controller | Argon | DC Motor            |
-| ---------------- | ----- | ------------------- |
-| PWMA             | D5    | -                   |
-| AI2              | D4    | -                   |
-| AI1              | D3    | -                   |
-| AO1              | -     | Motor wire (either) |
-| AO2              | -     | Motor wire (either) |
-| VCC              | 3v3   | -                   |
-| GND              | GND   | -                   |
-| VM               | 3v3   | -                   |
-| STBY             | 3v3   | -                   |
+| Motor Controller | Photon 2 | DC Motor            |
+| ---------------- | -------- | ------------------- |
+| PWMA             | A5       | -                   |
+| AI2              | D4       | -                   |
+| AI1              | D3       | -                   |
+| AO1              | -        | Motor wire (either) |
+| AO2              | -        | Motor wire (either) |
+| VCC              | 3v3      | -                   |
+| GND              | GND      | -                   |
+| VM               | 3v3      | -                   |
+| STBY             | 3v3      | -                   |
 
 ## Credits
 

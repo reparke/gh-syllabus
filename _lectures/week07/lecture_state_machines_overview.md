@@ -17,7 +17,7 @@ title: State Machines Part 1 - Overview
 * Understand what a state machine is
 * Describe situations where a state machine is useful
 * Analyze a real-world situation to create states, transitions, and input
-* Implement a state machine in Argon firmware
+* Implement a state machine in Photon 2 firmware
 
 ## What's the main point?
 
@@ -101,7 +101,7 @@ dispense +cupcake taken| idle
 | Dispense cupcake    | Cupcake remains    | Dispense cupcake    |
 
 
-## State Machines in Argon
+## State Machines in Photon 2
 
 * In order to implement this in our firmware, what elements / functions do we need to create?
   * inputs 
@@ -111,7 +111,7 @@ dispense +cupcake taken| idle
 * How could we implement these in firmware?
 
 
-## State Machines in Argon
+## State Machines in Photon 2
 
 * inputs (e.g. `millis()` timer, `digitalRead`, `analogRead`)
 

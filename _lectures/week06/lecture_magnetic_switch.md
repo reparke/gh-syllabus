@@ -53,9 +53,7 @@ title: Magnetic Switch
 
 ## Exercise:
 
-<img src="lecture_magnetic_switch.assets/Screenshot 2024-06-03 at 4.03.41 PM.png" alt="Screenshot 2024-06-03 at 4.03.41 PM" style="width:600px;" />
-
-
+<img src="lecture_magnetic_switch.assets/Screenshot 2024-06-19 at 11.23.18 AM.png" alt="Screenshot 2024-06-19 at 11.23.18 AM" style="width:600px;"/>
 
 ## Exercise Part 1:
 

@@ -48,14 +48,14 @@ title: Sound and Piezo Buzzers
 
 ## Connecting Buzzers
 
-<img src="lecture_audio.assets/1570925594505.png" alt="1570925594505" style="width:750px" />
+<img src="lecture_audio.assets/Screenshot 2024-06-19 at 12.44.06 PM.png" alt="Screenshot 2024-06-19 at 12.44.06 PM" style="width:750px"/>
 
 ## Connecting Buzzers
 
 <img src="lecture_audio.assets/buzzer_polarity.jpg" alt="buzzer polarity" style="height:300px;"/> <img src="lecture_audio.assets/Buzzer3.jpg" alt="buzzer polarity" style="height:300px;" /> 
 
 * Buzzers are polarized so look for the **+**
-* Negative pin to **gnd** and positive pin to Argon output
+* Negative pin to **gnd** and positive pin to Photon 2 output
 
 ## Producing Sound
 
@@ -85,14 +85,11 @@ tone(D2, 2000, 3000);	// play 2KHz tone for 3000 ms (3 sec)
 tone(D2, 1000, 0);		// play 1KHz tone (don't stop)
 ```
 
-## A Note on Argon and `tone()`
+## A Note on Photon 2 and `tone()`
 
 * `tone()` requires a pin that supports PWM
-* PWM pins are assigned to one of three groups
-* Each group can have different PWM values (duty cycles), but must share the same  frequency and resolution
-  * Pins D4, D5, D6, D8
-  * Pins A0, A1, A2, A3
-  * Pins D2, D3, A4, A5
+* All PWM pins on the Photon 2 are assigned to the same timer, meaning you can only generate ONE frequency at a time (you cannot play different notes with different buzzers at the same time)
+  * PWM pins: A2, A5, D15 (MO), D16 (MI), D1 (SCL)
 
 ## Stopping Sound
 Syntax
@@ -105,8 +102,8 @@ noTone(<<PIN>>);
 
 ## A Note about Tone and Blocking
 
-- `tone()` is non-blocking (meaning it doesn't cause delays or interfere with other Argon actions)
-- This means the Argon will not wait for one `tone()` to finish before playing the next. For example, in the code below, even though the first tone has a duration of 1 sec, the second tone will start immediately, meaning you will hear the second tone
+- `tone()` is non-blocking (meaning it doesn't cause delays or interfere with other Photon 2 actions)
+- This means the Photon 2 will not wait for one `tone()` to finish before playing the next. For example, in the code below, even though the first tone has a duration of 1 sec, the second tone will start immediately, meaning you will hear the second tone
 
 ```cpp
 tone(D6, 500, 1000);	
@@ -117,11 +114,11 @@ tone(D2, 2000, 3000);
 
 ## Optional: Controlling Volume
 
-<img src="lecture_audio.assets/1570925716449.png" alt="1570925716449" style="width:750px;" />
+<img src="lecture_audio.assets/Screenshot 2024-06-19 at 12.49.53 PM.png" alt="Screenshot 2024-06-19 at 12.49.53 PM" style="width:750px;" />
 
 ## Optional: Controlling Volume
 
-* All tones will be at the same volume since Argon can change only frequency (not amplitude)
+* All tones will be at the same volume since Photon 2 can change only frequency (not amplitude)
 * To control volume, connect a potentiometer between `negative` and `gnd`
 * Potentiometer acts a current limit resistor to control volume
 

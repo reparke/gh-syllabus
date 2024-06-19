@@ -108,7 +108,7 @@ title: Photoresistors
 
 ## Exercise
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-06-03 at 3.19.33 PM.png" alt="Screenshot 2024-06-03 at 3.19.33 PM" style="width:800px;" />
+<img src="lecture_photoresistor.assets/Screenshot 2024-06-19 at 12.05.13 PM.png" alt="Screenshot 2024-06-19 at 12.05.13 PM" style="width:800px;"/>
 
 ## Lab (with breakout groups)
 

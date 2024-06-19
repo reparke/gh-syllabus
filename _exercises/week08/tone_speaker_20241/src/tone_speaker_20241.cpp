@@ -25,7 +25,7 @@ SYSTEM_MODE(AUTOMATIC);
 SYSTEM_THREAD(ENABLED);
 SerialLogHandler logHandler(LOG_LEVEL_WARN);
 
-const int PIN_BUZZER = D2;
+const int PIN_BUZZER = A5;
 const int PIN_LED = D7;  // onboard
 
 unsigned long prevMillisTone = 0;

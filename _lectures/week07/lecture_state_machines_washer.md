@@ -61,10 +61,11 @@ title: State Machines Part 3 - Dish Washer Example
 * Wire device as shown below
 
 ## Wiring Diagram
-<img src="lecture_state_machines_washer.assets/image-20210227172856897.png" alt="image-20210227172856897" style="width:700px;" />
+<img src="lecture_state_machines_washer.assets/Screenshot 2024-06-19 at 12.16.32 PM.png" alt="Screenshot 2024-06-19 at 12.16.32 PM" style="width:700px;" />
 
 ## Wiring Diagram
-<img src="lecture_state_machines_washer.assets/image-20210227172856897.png" alt="image-20210227172856897" style="width:300px;" />
+<img src="lecture_state_machines_washer.assets/Screenshot 2024-06-19 at 12.16.32 PM.png" alt="Screenshot 2024-06-19 at 12.16.32 PM" style="width:300px;" />
+
 You'll need
 
 * 1 RGB
@@ -76,13 +77,13 @@ You'll need
 
 ## Wiring Pin Guide
 
-| LED                   | Argon Pins |
+| LED                   | Photon 2 Pins |
 | ---------------------------- | ---- |
 | Magnetic Switch | D5 |
-| RGB Red LED      | D2   |
-| RGB Green LED | D3    |
-| RGB Blue LED | D4    |
-| Potentiometer |   A5   |
+| RGB Red LED      | A2  |
+| RGB Green LED | A5  |
+| RGB Blue LED | D15 (MO) |
+| Potentiometer |   A1   |
 
 ## General Approach
 

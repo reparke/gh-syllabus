@@ -28,11 +28,11 @@ SYSTEM_THREAD(ENABLED);
 SerialLogHandler logHandler(LOG_LEVEL_WARN);
 
 
-const int POT_PIN = A5;
+const int POT_PIN = A1;
 const int SWITCH_PIN = D5;
-const int LED_RED_PIN = D2;    // red
-const int LED_GREEN_PIN = D3;  // green
-const int LED_BLUE_PIN = D4;   // blue
+const int LED_RED_PIN = A2;    // red
+const int LED_GREEN_PIN = A5;  // green
+const int LED_BLUE_PIN = D15;   // aka MOSI pin, blue
 
 const int SHORT_CYCLE = 2000;
 const int LONG_CYCLE = 4000;

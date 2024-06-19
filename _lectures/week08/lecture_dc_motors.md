@@ -122,7 +122,7 @@ Lorentz Force:  When the armature rotates 90 degrees, the two contacts reverse t
 * Motor drivers also provide circuit protection
 * Motor drivers can control two different motors independently
 
-<!-- Having a spinning motor attached to a circuit generates an electromotive force so this could damage argon-->
+<!-- Having a spinning motor attached to a circuit generates an electromotive force so this could damage the Photon 2-->
 
 ## Motor Controller Wiring Guide
 
@@ -131,7 +131,7 @@ Lorentz Force:  When the armature rotates 90 degrees, the two contacts reverse t
 | Motor Controller         | Explanation                                           |
 | ------------------------ | ----------------------------------------------------- |
 | PWMA                     | Motor A speed (PWM)                                   |
-| AI1, AI2                 | Motor A direction control (connect to Argon)          |
+| AI1, AI2                 | Motor A direction control (connect to Photon 2)       |
 | AO1, AO2                 | Motor A output (connect to motor)                     |
 | PWMB, BI1, BI2, BO1, BO2 | Controls for motor B                                  |
 | VCC                      | Power for chip (3v3)                                  |
@@ -157,15 +157,15 @@ Lorentz Force:  When the armature rotates 90 degrees, the two contacts reverse t
 
 ## Wiring Diagram
 
-<img src="lecture_dc_motors.assets/DCMotor_bb.png" alt="DCMotor_bb.png" style="width:750px;" />
+<img src="lecture_dc_motors.assets/Screenshot 2024-06-19 at 1.36.01 PM.png" alt="Screenshot 2024-06-19 at 1.36.01 PM" style="width:750px;"/>
 
 ## Wiring Guide
 
-| Motor Controller | Argon               |
+| Motor Controller | Photon 2            |
 | ---------------- | ------------------- |
-| PWMA             | D5                  |
-| AI2              | D3                  |
-| AI1              | D4                  |
+| PWMA             | A5                  |
+| AI2              | D4                  |
+| AI1              | D3                  |
 | AO1              | Motor wire (either) |
 | AO2              | Motor wire (either) |
 | VCC              | 3v3                 |

@@ -26,7 +26,7 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 */
 #include "pitches.h"
 
-const int PIN_BUZZER = D1;
+const int PIN_BUZZER = A5;
 const int PIN_LED = D7;  // onboard led
 
 unsigned long prevMillisTone = 0;

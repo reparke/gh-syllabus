@@ -54,9 +54,7 @@ title: State Machines Part 2 - Stoplight Example
 
 ## Wiring Diagram
 
-![bg contain](lecture_state_machines_stoplight.assets/stoplight_RGB_OLED_bb.png)
-
-
+<img src="lecture_state_machines_stoplight.assets/Screenshot 2024-06-19 at 12.07.42 PM.png" alt="Screenshot 2024-06-19 at 12.07.42 PM" />
 
 ## Components
 * 1 RGB LEDs
@@ -67,18 +65,18 @@ title: State Machines Part 2 - Stoplight Example
 
 ## Wiring Pin Guide
 
-| RGB LED               | Argon Pins |
+| RGB LED               | Photon 2 Pins |
 | ---------------------------- | ---- |
-| NorthSouth RGB LED - Red | D2     |
-| NorthSouth RGB LED - Green | D3      |
-| NorthSouth RGB LED - Blue | D4      |
+| NorthSouth RGB LED - Red | A2 |
+| NorthSouth RGB LED - Green | A5    |
+| NorthSouth RGB LED - Blue | D15 (MO) |
 
-| MicroOLED (Qwiic cable) | Argon Pins |
-| ----------------------- | ---------- |
-| GND                     | GND        |
-| 3V3                     | 3V3        |
-| SDA (Blue)              | SDA        |
-| SCL (Yellow)            | SCL        |
+| MicroOLED (Qwiic cable) | Photon 2 Pins |
+| ----------------------- | ------------- |
+| GND                     | GND           |
+| 3V3                     | 3V3           |
+| SDA (Blue)              | SDA           |
+| SCL (Yellow)            | SCL           |
 
 
 

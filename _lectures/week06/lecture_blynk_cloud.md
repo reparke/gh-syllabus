@@ -248,7 +248,7 @@ void loop() {
 
 ## Wiring for Exercise and Lab
 
-<img src="lecture_blynk_cloud.assets/Screenshot 2024-06-03 at 4.03.41 PM.png" alt="Screenshot 2024-06-03 at 4.03.41 PM" style="width:500px;" />
+<img src="lecture_magnetic_switch.assets/Screenshot 2024-06-19 at 11.23.18 AM.png" alt="Screenshot 2024-06-19 at 11.23.18 AM" style="width:500px;"/>
 
 ## Exercise
 

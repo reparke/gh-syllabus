@@ -158,7 +158,9 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 ## Lab - Etch-a-Sketch
 
-<img src="lecture_i2c_oled.assets/Screenshot 2024-06-03 at 3.11.22 PM.png" alt="Screenshot 2024-06-03 at 3.11.22 PM" style="width:900px;" />
+
+
+<img src="lecture_i2c_oled.assets/Screenshot 2024-06-19 at 11.31.19 AM.png" alt="Screenshot 2024-06-19 at 11.31.19 AM" style="width:900px;" />
 
 ## Credit
 
