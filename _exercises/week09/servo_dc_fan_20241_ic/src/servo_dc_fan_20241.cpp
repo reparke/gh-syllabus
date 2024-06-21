@@ -3,16 +3,17 @@ SYSTEM_MODE(AUTOMATIC);
 SYSTEM_THREAD(ENABLED);
 SerialLogHandler logHandler(LOG_LEVEL_WARN);
 
+
 // motor pins
 const int AIN1 = D3;  // controls motor dir
 const int AIN2 = D4;  // controls motor dir
-const int PWMA = D5;  // controls motor speed
+const int PWMA = A5;  // controls motor speed
 
 // pot
-const int PIN_POT = A0;
+const int PIN_POT = A1;
 
 // servo
-const int PIN_SERVO = D2;
+const int PIN_SERVO = A2;
 
 // create servo object
 Servo fanServo;

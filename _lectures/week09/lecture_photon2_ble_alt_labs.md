@@ -7,7 +7,7 @@
 ## Lab #1: RGB LED and Buzzer (part 1)
 
 * Use Bluefruit app to control an RGB LED and a buzzer 
-* Send commands **from** app **to** argon, interpret them in Argon, and perform an action
+* Send commands **from** app **to** Photon 2, interpret them in Photon 2, and perform an action
 
 ## Lab #1: RGB LED and Buzzer (part 1)
 
@@ -34,26 +34,24 @@
 ```
 RGB LED
  R              A2
- G              A1
- B              A0
+ G              A5
+ B              D15 // MO
 
-Buzzer          D6
+Buzzer          D16 // MI
 
 On-board LED    D7
 ```
 
+##
 
+<img src="lecture_photon2_ble_alt_labs.assets/ble_uart_control_bb.png" alt="ble_uart_control_bb" style="width:750px" />
 
-
-
-## 
-
-<img src="lecture_bluetooth.assets/ble_uart_control_bb.png" alt="1571379786069" style="width:750px" />
+<img src="lecture_photon2_ble_alt_labs.assets/Screenshot 2024-06-21 at 11.01.49 PM.png" alt="Screenshot 2024-06-21 at 11.01.49 PM" style="width:750px" />
 
 ## Lab #2: Control Fan, RGB LED, and Buzzer (part 1)
 
 * Use Bluefruit app to control a servo and motor
-* Send commands **from** app **to** argon, interpret them in Argon, and perform an action
+* Send commands **from** app **to** Photon 2, interpret them in Photon 2, and perform an action
 * Download starting code
 
   * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
@@ -90,5 +88,6 @@ Motor Controller
 
 ## 
 
-<img src="lecture_bluetooth.assets/ble_uart_control_fan_bb.png" alt="1571379935995" style="height:700px" />
+<img src="lecture_bluetooth.assets/ble_uart_control_fan_bb.png" alt="1571379935995" style="height:700px" /><img src="lecture_photon2_ble_alt_labs.assets/Screenshot 2024-06-22 at 12.05.39 AM.png" alt="Screenshot 2024-06-22 at 12.05.39 AM" style="width:700px" />
 
+<img src="lecture_photon2_ble_alt_labs.assets/Screenshot 2024-06-21 at 11.14.16 PM.png" alt="Screenshot 2024-06-21 at 11.14.16 PM" style="width:700px"/>

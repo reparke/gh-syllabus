@@ -10,12 +10,15 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 const int PIN_LED = D7;
 
 // Servo
-const int PIN_SERVO = D2;
+const int PIN_SERVO = A2;
+
+// pot
+const int PIN_POT = A1;
 
 // motor pins
 const int AIN1 = D3;
 const int AIN2 = D4;
-const int PWMA = D5;
+const int PWMA = A5;
 
 /* onDataReceived() is event handler for incoming data via RX characteristic
    When the RXCharacteristic receives data, the event handler is called

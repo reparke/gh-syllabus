@@ -13,7 +13,7 @@ title: LiPo Battery
 
 ## Power Untethered
 
-* Argon needs 3.3v to function
+* Photon 2 needs 3.3v to function
 * DC hobby motors require 1-3v, but will handle up to 12v
 * Best solution is to use LiPo battery which operates at 3.7v
 
@@ -25,7 +25,7 @@ title: LiPo Battery
 
 * Operates at 3.7v (many other voltages available)
 * Rechargeable
-* Has a standard 2-pin JST-PH connector (also on Argon)
+* Has a standard 2-pin JST-PH connector (also on Photon 2)
 * Lightweight
 
 ## LiPo Capacity
@@ -48,18 +48,18 @@ title: LiPo Battery
   * Please **please** do not throw battery in the trash--it contains toxic metals that pollute the environment
   * You can drop the battery off at a [recycling center in your area](https://earth911.com/) or at a [  ](https://www.homedepot.com/c/ab/how-to-dispose-of-batteries/9ba683603be9fa5395fab90124a115f1)
 
-## LiPo and Argon
+## LiPo and Photon 2
 
 <img src="lecture_lithium_ion_battery.assets/1572471470052.png" alt="1572471470052" style="width:200px;" />
 
-* Argon has built-in charging port for LiPo batteries
-* Connect Argon to USB in order to charge battery
+* Photon 2 has built-in charging port for LiPo batteries
+* Connect Photon 2 to USB in order to charge battery
 
-## New Argon Pins
+## New Photon 2 Pins
 
-<img src="lecture_lithium_ion_battery.assets/argon-top.png" alt="argon-top" style="width:700px;" />
+<img src="lecture_lithium_ion_battery.assets/Screenshot 2024-06-21 at 11.24.57 PM.png" alt="Screenshot 2024-06-21 at 11.24.57 PM" style="width:700px;" />
 
-* `EN` is a basically **on/off** for the Argon. Connect to **GND** to turn off Argon (and save battery power)
+* `EN` is a basically **on/off** for the Photon 2. Connect to **GND** to turn off Photon 2 (and save battery power)
 * `Li+` is internally-connected to the positive (+3.7v) of the battery
 
 
@@ -69,6 +69,6 @@ title: LiPo Battery
 ## References
 
 * [Sparkfun](https://www.sparkfun.com/products/13853)
-* [Particle](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
+* [Particle](https://docs.particle.io/reference/datasheets/wi-fi/photon-2-datasheet/)
 
 * Images created with [Fritzing](https://fritzing.org/home/)

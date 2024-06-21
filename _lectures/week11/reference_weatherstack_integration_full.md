@@ -1,6 +1,6 @@
 
 
-<!-- This is the full Argon code for reference -->
+<!-- This is the full Photon 2 code for reference -->
 
 ## Weather Stack JSON Response
 

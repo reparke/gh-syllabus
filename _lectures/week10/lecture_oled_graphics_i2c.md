@@ -130,25 +130,23 @@ const uint8_t heart_bmp[] = {
 
 ## Wiring Diagram
 
-<img src="lecture_oled_graphics.assets/oled_and_ultrasonic_i2c_bb.png" style="width:800px;" />
+<img src="lecture_oled_graphics_i2c.assets/Screenshot 2024-06-22 at 12.33.20 AM.png" alt="Screenshot 2024-06-22 at 12.33.20 AM" style="width:800px;"/><span style="font-size:75%">
 
-<span style="font-size:75%">
-
-| Sensor | Argon | Function                                                     |
-| ------ | ----- | ------------------------------------------------------------ |
-| GND    | GND   | Ground                                                       |
-| VCC    | VUSB  | Power **(requires 5v, but will work with 3.7V LiPo battery)** |
-| TRIG   | D6    | start output pulse sequence                                  |
-| ECHO   | D5    | receive reflection response                                  |
+| Sensor | Photon 2 | Function                                                     |
+| ------ | -------- | ------------------------------------------------------------ |
+| GND    | GND      | Ground                                                       |
+| VCC    | VUSB     | Power **(requires 5v, but will work with 3.7V LiPo battery)** |
+| TRIG   | D6       | start output pulse sequence                                  |
+| ECHO   | D5       | receive reflection response                                  |
 
 
 
-| OLED         | Argon | Function |
-| ------------ | ----- | -------- |
-| GND          | GND   | Ground   |
-| 3V3          | 3V3   | Power    |
-| SDA (Blue)   | SDA   | Data     |
-| SCL (Yellow) | SCL   | Clock    |
+| OLED         | Photon 2 | Function |
+| ------------ | -------- | -------- |
+| GND          | GND      | Ground   |
+| 3V3          | 3V3      | Power    |
+| SDA (Blue)   | SDA      | Data     |
+| SCL (Yellow) | SCL      | Clock    |
 
 </span>
 

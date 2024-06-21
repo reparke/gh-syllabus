@@ -4,32 +4,32 @@ theme: itp
 
 week: 9
 category: lectures
-title: Argon BLE Syntax
+title: Photon 2 BLE Syntax
 ---
 
 <!-- headingDivider: 2 -->
 
-# Argon BLE Syntax
+# Photon 2 BLE Syntax
 
 ## Overview
 
-* Present basic guide to **receiving** data from phone app to Argon
+* Present basic guide to **receiving** data from phone app to Photon 2
 * To simplify some of the code, we will be using a custom-built BLE library
-* For more in-depth information including **sending** from Argon and connecting to multiple devices
-  * [Particle BLE Docs](https://docs.particle.io/reference/device-os/firmware/argon/#bluetooth-le-ble-)
+* For more in-depth information including **sending** from Photon 2 and connecting to multiple devices
+  * [Particle BLE Docs](https://docs.particle.io/reference/device-os/firmware/#bluetooth-le-ble-)
   * [Particle BLE Tutorials](https://docs.particle.io/tutorials/device-os/bluetooth-le/)
 
-## Receiving Data with Argon
+## Receiving Data with Photon 2
 
 ```c++
 void onDataReceived(const uint8_t* data, size_t len,
                     const BlePeerDevice& peer,void* context);
 ```
 
-* After a BLE connection is made, `onDataReceived` is the event handler that is called when data is received by the Argon
+* After a BLE connection is made, `onDataReceived` is the event handler that is called when data is received by the Photon 2
 * We are only concerned with the first two parameters: `data` and `len`
 
-## Receiving Data with Argon
+## Receiving Data with Photon 2
 
 * `const uint8_t* data`
   * `uint_8` is the variable type for unsigned byte (8 bits)
@@ -62,7 +62,7 @@ void onDataReceived(const uint8_t* data, size_t len,
 
 * When sending data over Bluetooth, data will be packaged in **bytes**
 * It is important to know ahead of time the **format** of the data
-* We will be using Adafruit's Bluefruit app to communicate with Argon
+* We will be using Adafruit's Bluefruit app to communicate with Photon 2
 * The data structure is specific to this app and doesn't apply to other apps
 * For reference: [Adafruit Bluefruit Guide](https://learn.adafruit.com/bluefruit-le-connect/controller)
 
@@ -78,7 +78,7 @@ void onDataReceived(const uint8_t* data, size_t len,
 
 ## Bluefruit App Control Pad
 
-<img src="lecture_argon_ble_syntax.assets/bluefruit.png" alt="" style="width:400px" />
+<img src="lecture_photon2_ble_syntax.assets/bluefruit.png" alt="" style="width:400px" />
 
 
 
@@ -125,10 +125,11 @@ void onDataReceived(const uint8_t* data, size_t len,
 
 ```
 On-board LED    D7
-Servo           D2
+Potentiometer   A1
+Servo           A2
 
 Motor Controller
- PWMA           D5 
+ PWMA           A5 
  AIN2           D4 
  AIN1           D3 
  VCC            3v3
@@ -137,7 +138,7 @@ Motor Controller
  STBY           3v3
 ```
 
-<img src="lecture_argon_ble_syntax.assets/servo_dc_fan_controller_bb.png" alt="servo_dc_fan_controller_bb" />
+<img src="lecture_photon2_ble_syntax.assets/Screenshot 2024-06-19 at 1.50.15 PM.png" alt="Screenshot 2024-06-19 at 1.50.15 PM" style="width:750px" />
 
 
 
@@ -172,12 +173,12 @@ Motor Controller
 ## Demo Projects
 
 * The following two completed projects are provided
-* Each involves using a phone app to communicate with Argon via Bluetooth
+* Each involves using a phone app to communicate with Photon 2 via Bluetooth
 * The coding in these examples is much more complicated than the previous exercises
 
 ## Demo #1: Control RGB LED with Phone Accelerometers (part 1)
 
-* Use Bluefruit app to send accelerometer data from phone to Argon
+* Use Bluefruit app to send accelerometer data from phone to Photon 2
 * Control RGB LED colors with accelerometer data
 * Download starting code
   * Go to [https://bit.ly/ProjectZip](https://bit.ly/ProjectZip)
@@ -188,7 +189,7 @@ Motor Controller
 
 * Using Bluefruit, connect to over UART (listed as "controller") in app
 * Enable "accelerometer" in app
-* Argon sketch will receive accelerometer data (X, Y, Z) from phone, convert readings to PWM (0-255), and change LED color
+* Photon 2 sketch will receive accelerometer data (X, Y, Z) from phone, convert readings to PWM (0-255), and change LED color
 * Reference:  [Adafruit Bluefruit Guide](https://learn.adafruit.com/bluefruit-le-connect/controller)
 
 ##  
@@ -199,9 +200,9 @@ Motor Controller
 
 ## Demo #2: Read Health Thermometer Service (part 1)
 
-* Send temperature data **from** Argon **to** phone via nRF Toolbox 
+* Send temperature data **from** Photon 2 **to** phone via nRF Toolbox 
 
-* Argon is using Bluetooth health thermometer service
+* Photon 2 is using Bluetooth health thermometer service
 
 * Download starting code
 
@@ -213,7 +214,7 @@ Motor Controller
 ## Demo #2: Read Health Thermometer Service (part 2)
 
 * Using nRF Toolbox app, connect to over HTM ("health thermometer")
-* Argon sketch will send temperature data to app
+* Photon 2 sketch will send temperature data to app
 * Reference: [Particle Guide](https://docs.particle.io/tutorials/device-os/bluetooth-le/#body-temperature-thermometer)
 
 ##  

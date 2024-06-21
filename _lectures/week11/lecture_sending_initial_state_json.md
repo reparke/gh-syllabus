@@ -15,11 +15,13 @@ title: Sending Multiple Values to Initial State using JSON
 
 ## Review
 
-<img src="lecture_sending_initial_state_json.assets/Slide2.PNG" alt="Slide2" style="width:1100px" />
+<img src="lecture_sending_initial_state_json.assets/Screenshot 2024-06-22 at 1.00.51 AM.png" alt="Screenshot 2024-06-22 at 1.00.51 AM" style="width:1100px" />
+
+
 
 ## Review
 
-<img src="lecture_sending_initial_state_json.assets/Slide3.PNG" alt="Slide3" style="width:1100px" />
+<img src="lecture_sending_initial_state_json.assets/Screenshot 2024-06-22 at 1.02.00 AM.png" alt="Screenshot 2024-06-22 at 1.02.00 AM" style="width:1100px" />
 
 
 
@@ -30,12 +32,12 @@ title: Sending Multiple Values to Initial State using JSON
 * The following examples are provided as a quick reference
 * More detailed steps are described in the lecture 
 
-## Reminder: Steps to Connect Argon and Initial State 
+## Reminder: Steps to Connect Photon 2 and Initial State 
 
 1. Create account at  [https://initialstate.com](https://initialstate.com) 
 2. Create **stream bucket** at [https://initialstate.com](https://initialstate.com)  
 3. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
-4. Write firmware sketch and flash Argon
+4. Write firmware sketch and flash Photon 2
 
 ## Configure Initial State to Receive JSON 
 

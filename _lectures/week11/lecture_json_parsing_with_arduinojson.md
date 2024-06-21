@@ -12,7 +12,7 @@ title: Parsing JSON with ArduinoJson Library
 
 ## JSON Example Data
 
-- Consider the following JSON data is being received by the Argon
+- Consider the following JSON data is being received by the Photon 2
 
 ```json
 {

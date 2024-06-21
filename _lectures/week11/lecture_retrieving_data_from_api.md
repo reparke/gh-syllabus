@@ -18,31 +18,33 @@ title: Retrieving Data from APIs
 
 ##  
 
-![bg](lecture_retrieving_data_from_api.assets/Slide1.PNG)
+<img src="lecture_json_overview.assets/Screenshot 2024-06-22 at 1.05.34 AM.png" alt="Screenshot 2024-06-22 at 1.05.34 AM" style="width:1000px;" />
 
 ##  
 
-![bg](lecture_retrieving_data_from_api.assets/Slide2.PNG)
+<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-22 at 1.17.23 AM.png" alt="Screenshot 2024-06-22 at 1.17.23 AM" style="width:1000px;" />
 
 ##  
 
-![bg](lecture_retrieving_data_from_api.assets/Slide3.PNG)
+<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-22 at 1.18.13 AM.png" alt="Screenshot 2024-06-22 at 1.18.13 AM" style="width:1000px;" />
 
 ##  
 
-![bg](lecture_retrieving_data_from_api.assets/Slide4.PNG)
+<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-22 at 1.19.04 AM.png" alt="Screenshot 2024-06-22 at 1.19.04 AM" style="width:1000px;" />
 
 ##  
 
-![bg](lecture_retrieving_data_from_api.assets/Slide5.PNG)
+<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-22 at 1.19.41 AM.png" alt="Screenshot 2024-06-22 at 1.19.41 AM" style="width:1000px;" />
 
-## Steps to Connect Argon and API
+
+
+## Steps to Connect Photon 2 and API
 
 0. Determine how to use the API
 1. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
 2. Use `Particle.publish` to trigger webhook
 3. Use `Particle.subscribe` to "listen" for response from webhook
-4. Create Mustache template that tells the Particle Cloud to which relevant data from the response should be to the Argon (and the rest of the data will be ignored)
+4. Create Mustache template that tells the Particle Cloud to which relevant data from the response should be to the Photon 2 (and the rest of the data will be ignored)
 5. Create **function handler** that is used by `Particle.subscribe` to process JSON
 
 ## Step 0: How to use the API
@@ -67,7 +69,7 @@ Example: WeatherStack
 
 ## Part 2: Publish Event to Trigger Webhook
 
-**Argon firmware**
+**Photon 2 firmware**
 
 ```c++
 void loop() {
@@ -84,7 +86,7 @@ void loop() {
 
 ## Part 3: Subscribe to JSON response from Weather Stack
 
-**Argon firmware**
+**Photon 2 firmware**
 
 ```c++
 void setup() {
@@ -155,7 +157,7 @@ void setup() {
 
 ## Part 5: Creating the function handler to receive and parse the JSON
 
-* The last step is to create Argon code to handle / parse the JSON response
+* The last step is to create Photon 2 code to handle / parse the JSON response
 * While it is possible to manually parse JSON in C++, it is considered unsafe due to potential for security vulnerabilities
 * **Instead, use a library**
 * [Instruction and examples for parsing JSON with `ArduinoJson`](lecture_json_parsing_with_arduinojson)

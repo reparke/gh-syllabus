@@ -50,7 +50,7 @@ https://app.box.com/s/sj7du1n32in2777rcoi2
 
 ## Sensor Pins
 
-| Sensor | Argon      | Function                                                     |
+| Sensor | Photon 2   | Function                                                     |
 | ------ | ---------- | ------------------------------------------------------------ |
 | GND    | GND        | Ground                                                       |
 | VCC    | VUSB       | Power **(requires 5v, but will work with 3.7V LiPo battery)** |
@@ -136,25 +136,25 @@ CONV_FACTOR_CM_TO_IN = 0.3437
 
 ## Wiring Diagram
 
-![oled_ultrasonic_bb](lecture_ultrasonic_distance_sensor.assets/oled_and_ultrasonic_i2c_bb.png)
+<img src="lecture_oled_graphics_i2c.assets/Screenshot 2024-06-22 at 12.33.20 AM.png" alt="Screenshot 2024-06-22 at 12.33.20 AM" style="width:800px;"/>
 
 ## Sensor Wiring
 
 <span style="font-size:75%">
 
-| Sensor | Argon |
-| ------ | ----- |
-| GND    | GND   |
-| VCC    | VUSB  |
-| TRIG   | D6    |
-| ECHO   | D5    |
+| Sensor | Photon 2 |
+| ------ | -------- |
+| GND    | GND      |
+| VCC    | VUSB     |
+| TRIG   | D6       |
+| ECHO   | D5       |
 
-| OLED         | Argon |
-| ------------ | ----- |
-| GND          | GND   |
-| 3V3          | 3V3   |
-| SDA (Blue)   | SDA   |
-| SCL (Yellow) | SCL   |
+| OLED         | Photon 2 |
+| ------------ | -------- |
+| GND          | GND      |
+| 3V3          | 3V3      |
+| SDA (Blue)   | SDA      |
+| SCL (Yellow) | SCL      |
 
 </span>
 

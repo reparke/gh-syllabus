@@ -37,17 +37,17 @@ Specifications
 
 */
 
-const int PIN_RED = A2;
-const int PIN_GREEN = A1;
-const int PIN_BLUE = A0;
+const int PIN_RED = D15; // aka MOSI
+const int PIN_GREEN = D16; // aka MISO
+const int PIN_BLUE = D1; // aka SCL
 
 const int PIN_LED = D7;
 
-const int PIN_SERVO = D2;
+const int PIN_SERVO = A2;
 
 const int AIN1 = D3;
 const int AIN2 = D4;
-const int PWMA = D5;
+const int PWMA = A5;
 
 const int MOTOR_DELTA = 15;
 const int SERVO_DELTA = 15;

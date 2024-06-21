@@ -36,11 +36,11 @@ title: JSON Overview
 
 * We want our device to interact with services all over the internet--e.g. permanently store all heart rate data in the cloud, retrieve the weather forecast tomorrow, etc.
 * **APIs** provide the mechanism we use to communicate with these other services
-* **Webhooks** are created in the Particle cloud to connect our Argon to an API online 
+* **Webhooks** are created in the Particle cloud to connect our Photon 2 to an API online 
 
 ## Review: Process to Interacting with Data from API
 
-![width:1000px](lecture_json_overview.assets/Slide1.PNG)
+<img src="lecture_json_overview.assets/Screenshot 2024-06-22 at 1.05.34 AM.png" alt="Screenshot 2024-06-22 at 1.05.34 AM" style="width:1000px;" />
 
 
 ## Where does JSON come in?

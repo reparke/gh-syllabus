@@ -38,7 +38,7 @@ title: Creating JSON with ArduinoJson Library
 #include <ArduinoJson.h> 
 ```
 
-### Argon code
+### Photon 2 code
 
 ```c++
 void loop() {
