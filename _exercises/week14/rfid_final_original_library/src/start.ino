@@ -38,8 +38,8 @@
 // #include <SPI.h>
 #include "MFRC522.h"
 
-#define SS_PIN A4
-#define RST_PIN A5
+#define SS_PIN A0
+#define RST_PIN A1
 
 String card1 = "4E B3 01 BF";  //
 String card2 = "0E 8B 8E 6A";  //

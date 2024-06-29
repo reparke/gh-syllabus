@@ -15,8 +15,10 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 
 
 Ultrasonic Sensor
+    VCC: VUSB (5v)
     Trigger: D6
     Echo: D5
+    GND: GND
 
 
 */

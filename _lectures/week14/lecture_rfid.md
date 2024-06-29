@@ -37,7 +37,7 @@ title: RFID (Radio Frequency ID Scanner	)
 * Sensors are designed to read cards are specific frequencies. 
   * Ours works at **13.56MHz**
 * RFID sensors and cards must all use the same frequency
-* Sensor communicates with Argon using **SPI**
+* Sensor communicates with Photon 2 using **SPI**
 * Operates at 3.3v
 
 ## RFID Cards and Fobs
@@ -53,7 +53,7 @@ title: RFID (Radio Frequency ID Scanner	)
 
 ## Sensor Wiring (SPI)
 
-| Sensor | Argon                  |
+| Sensor | Photon 2               |
 | ------ | ---------------------- |
 | 3.3v   | 3.3v                   |
 | Reset  | Any digital output pin |
@@ -68,7 +68,7 @@ title: RFID (Radio Frequency ID Scanner	)
 
 ## RFID Library
 
-  * `ARGON-RFID-MFRC522` is an Argon compatible library
+  * `ARGON-RFID-MFRC522` is an Photon 2 compatible library
 
 ## Sample Code #1: Find the Card ID
 
@@ -187,20 +187,20 @@ scanId.trim();         //scanId has an intial leading " "
 
 ## Wiring
 
-| Sensor | Argon                   |
+| Sensor | Photon 2                |
 | ------ | ----------------------- |
 | 3.3v   | 3.3v                    |
-| Reset  | A5 (any GPIO pin works) |
+| Reset  | A1 (any GPIO pin works) |
 | GND    | GND                     |
 | IRQ    | -                       |
 | MOSI   | MO                      |
 | MISO   | MI                      |
 | SCK    | SCK                     |
-| SDA    | A4 (any GPIO pin works) |
+| SDA    | A0 (any GPIO pin works) |
 
 ## Diagram
 
-<img src="lecture_rfid.assets/rfid_bb.png" style="width:800px;" />
+<img src="lecture_rfid.assets/Screenshot 2024-06-29 at 11.31.54 PM.png" alt="Screenshot 2024-06-29 at 11.31.54 PM" style="width:800px;" />
 
 ## Exercise
 

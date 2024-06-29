@@ -19,21 +19,21 @@
 
 /* Define the pins used for the SS (SDA) and RST (reset) pins for BOTH hardware
  * and software SPI */
-#define SS_PIN A4
-#define RST_PIN A5
+#define SS_PIN A0
+#define RST_PIN A1
 
 /* Define the pins used for the DATA OUT (MOSI), DATA IN (MISO) and CLOCK (SCK)
  * pins for SOFTWARE SPI ONLY */
-#define MOSI_PIN D3
-#define MISO_PIN D4
-#define SCK_PIN D5
+#define MOSI_PIN D15
+#define MISO_PIN D16
+#define SCK_PIN D17
 
 // Initialising RGB START  - RGB LED and buzzer is used as system status
 // indicator
-int redPin = D6;
-int greenPin = D1;
-int bluePin = D0;
-int buzzPin = D7;
+int redPin = D6; // not PWM
+int greenPin = D5; // not PWM
+int bluePin = D4; // not PWM
+int buzzPin = A2; 
 // Initializing RGB END
 
 /* Create an instance of the RFID library */

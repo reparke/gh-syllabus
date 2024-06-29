@@ -44,8 +44,8 @@
 // constexpr uint8_t RST_PIN = 9;  // Configurable, see typical pin layout above
 // constexpr uint8_t SS_PIN = 10;  // Configurable, see typical pin layout above
 
-const int RST_PIN = A5;
-const int SS_PIN = A4;
+const int RST_PIN = A1;
+const int SS_PIN = A0;
 
 const String card1 = "0E 8B 8E 6A";  // hexadecimal
 const String card2 = "4E B3 01 BF";

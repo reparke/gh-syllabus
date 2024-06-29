@@ -10,8 +10,8 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 
 // constexpr uint8_t RST_PIN = 9;  // Configurable, see typical pin layout above
 // constexpr uint8_t SS_PIN = 10;  // Configurable, see typical pin layout above
-constexpr uint8_t RST_PIN = A5;  // Configurable, see typical pin layout above
-constexpr uint8_t SS_PIN = A4;   // Configurable, see typical pin layout above
+constexpr uint8_t RST_PIN = A1;  // Configurable, see typical pin layout above
+constexpr uint8_t SS_PIN = A0;   // Configurable, see typical pin layout above
 
 String card1 = "4E B3 01 BF";  // Rob card 1
 String card2 = "57 67 BA 60";  // rob key fob

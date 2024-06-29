@@ -80,7 +80,7 @@ title: Open PIR (Passive Infrared Sensor)
 
 ## Wiring
 
-| Open PIR (Sparkfun) | Argon                     |
+| Open PIR (Sparkfun) | Photon 2                  |
 | ------------------- | ------------------------- |
 | VCC                 | 3.3v                      |
 | GND                 | GND                       |
@@ -91,7 +91,7 @@ title: Open PIR (Passive Infrared Sensor)
 
 ## Wiring
 
-![image-20231127115945825](lecture_open_pir.assets/image-20231127115945825.png)
+<img src="lecture_open_pir.assets/Screenshot 2024-06-29 at 11.44.31 PM.png" alt="Screenshot 2024-06-29 at 11.44.31 PM" style="width:800px;" />
 
 ## Exercise
 

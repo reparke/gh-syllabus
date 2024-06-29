@@ -22,19 +22,21 @@ title: Retrieving Data from APIs
 
 ##  
 
-<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-22 at 1.17.23 AM.png" alt="Screenshot 2024-06-22 at 1.17.23 AM" style="width:1000px;" />
+<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-29 at 10.43.49 PM.png" alt="Screenshot 2024-06-29 at 10.43.49 PM" style="width:1000px;" />
 
 ##  
 
-<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-22 at 1.18.13 AM.png" alt="Screenshot 2024-06-22 at 1.18.13 AM" style="width:1000px;" />
+
+
+<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-29 at 10.44.46 PM.png" alt="Screenshot 2024-06-29 at 10.44.46 PM" style="width:1000px;" />
 
 ##  
 
-<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-22 at 1.19.04 AM.png" alt="Screenshot 2024-06-22 at 1.19.04 AM" style="width:1000px;" />
+<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-29 at 10.46.13 PM.png" alt="Screenshot 2024-06-29 at 10.46.13 PM" style="width:1000px;" />
 
 ##  
 
-<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-22 at 1.19.41 AM.png" alt="Screenshot 2024-06-22 at 1.19.41 AM" style="width:1000px;" />
+<img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-29 at 10.47.42 PM.png" alt="Screenshot 2024-06-29 at 10.47.42 PM" style="width:1000px;" />
 
 
 

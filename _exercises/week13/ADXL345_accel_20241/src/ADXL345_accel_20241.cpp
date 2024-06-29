@@ -27,9 +27,10 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
  *  Created: Jul 13, 2016
  *  Updated: Sep 06, 2016
  *  *********************************************/
-const int PIN_RED = A5;
-const int PIN_GREEN = A4;
-const int PIN_BLUE = A3;
+
+const int PIN_RED = A2;
+const int PIN_GREEN = A5;
+const int PIN_BLUE = D15; // aka MOSI pin
 
 #include "SparkFun_ADXL345.h"  // SparkFun ADXL345 Library
 

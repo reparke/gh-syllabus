@@ -64,7 +64,7 @@ title: Accelerometer
 
 ## Sensor Wiring
 
-| Sensor | Argon        | Function                        |
+| Sensor | Photon 2     | Function                        |
 | ------ | ------------ | ------------------------------- |
 | GND    | GND          | Ground                          |
 | VCC    | 3V3          | Power (requires 3.3v)           |
@@ -77,7 +77,7 @@ title: Accelerometer
 
 ## Sensor Wiring
 
-<img src="lecture_accelerometer.assets/accelerometer_rgb_led_bb.png" style="width:800px;" />
+<img src="lecture_accelerometer.assets/Screenshot 2024-06-29 at 10.57.59 PM.png" alt="Screenshot 2024-06-29 at 10.57.59 PM" style="width:800px;"/>
 
 ## `ADXL345_Sparkfun_Particle` Library
 
@@ -95,7 +95,7 @@ void setup() {
 
 ## Library Operations
 
-* Recommended library for Argon
+* Recommended library for Photon 2
   * ```ADXL345_Sparkfun_Particle```
 * Check for vibrations
   * `accel.readTap()` 

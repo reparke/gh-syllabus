@@ -34,7 +34,7 @@ void lowPowerWakeOnTimer() {
 
 // version 2 - press a button to make device sleep, then press button to wake up
 // CAVEAT: in order to wakeup device with button press, you have to connect
-// button to pin D8 (WKP pin)
+// button to pin D10 (WKP pin)
 void lowPowerWakeOnButton() {
     // read WKP pin
     // using latch, on rising edge, cause device to sleep

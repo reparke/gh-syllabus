@@ -15,14 +15,14 @@ title: Sleep and Battery Conservation
 
 ## Power Conservation
 
-- Continuously keeping the Argon uses a lot of power
+- Continuously keeping the Photon 2 on uses a lot of power
 
   - Connection to Particle Cloud
 
   - Running `loop ()`
 
   - Responding to any interrupts or inputs
-- To limit wasting electricity and extend the time between battery charges, use **sleep**, which turns off some or all of the Argon components
+- To limit wasting electricity and extend the time between battery charges, use **sleep**, which turns off some or all of the Photon 2 components
 - Note: **sleep** for more than 10 seconds. Less than that use more power turning it on / off than you will be saved
 
 ## Zzzz....Three Sleep Modes
@@ -49,7 +49,7 @@ title: Sleep and Battery Conservation
 
 
 
-## Options to Wake Argon
+## Options to Wake Photon 2
 
 | `ULTRA_LOW_POWER`       | `HIBERNATE`      |
 | ----------------------- | ---------------- |
@@ -84,11 +84,11 @@ config.mode(SystemSleepMode::HIBERNATE).duration(10min);
 System.sleep(config);
 ```
 ## Sleep Example #2
-- Put device in `ULTRA_LOW_POWER` and wake with a falling (`HIGH` to `LOW`) signal on pin D8
+- Put device in `ULTRA_LOW_POWER` and wake with a falling (`HIGH` to `LOW`) signal on pin D10
 
 ```c++
 SystemSleepConfiguration config;
-config.mode(SystemSleepMode::ULTRA_LOW_POWER).gpio(D8, FALLING);
+config.mode(SystemSleepMode::ULTRA_LOW_POWER).gpio(D10, FALLING);
 System.sleep(config);
 ```
 ## Sleep Example #3
@@ -106,13 +106,13 @@ System.sleep(config);
 
 - If you don't need to update in real-time, you can do the following
 
-  - Sleep the Argon
+  - Sleep the Photon 2
 
   - Wake up after a fixed time, but do **not** connect to the cloud
 
   - Read / store sensor data
 
-  - Sleep the Argon
+  - Sleep the Photon 2
 
 - After a certain amount of time or number of sensor readings, you can send all the saved data to the cloud at once
 
@@ -135,7 +135,7 @@ Particle.connect();
 
 ## Exercise
 
-<img src="lecture_sleep.assets/sleep_wake_button_bb.png" alt="sleep_wake_button_bb" style="width:700px;" />
+<img src="lecture_sleep.assets/Screenshot 2024-06-29 at 11.56.12 PM.png" alt="Screenshot 2024-06-29 at 11.56.12 PM" style="width:700px;" />
 
 ## Credit
 

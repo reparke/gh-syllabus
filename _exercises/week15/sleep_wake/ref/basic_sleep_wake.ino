@@ -2,7 +2,7 @@
 boolean shouldSleep = true;  // set to false, but gets inverted in setup()
 void setup() {
     Serial.begin(9600);
-    pinMode(WKP, INPUT);  // D8()
+    pinMode(WKP, INPUT);  // D10()
 }
 int prevButtonVal = HIGH;
 int currButtonVal = HIGH;
@@ -18,7 +18,7 @@ void loop() {
 
 // use this one
 void ulpAndWakeButtonPress() {
-    currButtonVal = digitalRead(D8);
+    currButtonVal = digitalRead(D10);
 
     if (prevButtonVal == HIGH && currButtonVal == LOW) {
         // if (shouldSleep == true) {
@@ -36,8 +36,8 @@ void ulpAndWakeButtonPress() {
     prevButtonVal = currButtonVal;
 }
 
-/* Stop, and Wake up on FALLING 0->1 on pin D8 (WKP)
-  Connect button to pin D8 (WKP), use 10K pull up resistor
+/* Stop, and Wake up on FALLING 0->1 on pin D10 (WKP)
+  Connect button to pin D10 (WKP), use 10K pull up resistor
   No need to
 */
 void stopAndWakeGpio() {
@@ -52,8 +52,8 @@ void stopAndWakeGpio() {
     }
     shouldSleep = false;
 }
-/* Ultra Low Power, and Wake up on FALLING 0->1 on pin D8 (WKP)
-  Connect button to pin D8 (WKP), use 10K pull up resistor
+/* Ultra Low Power, and Wake up on FALLING 0->1 on pin D10 (WKP)
+  Connect button to pin D10 (WKP), use 10K pull up resistor
 */
 void ulpAndWakeGpio() {
     if (shouldSleep == true) {
@@ -69,8 +69,8 @@ void ulpAndWakeGpio() {
     shouldSleep = false;
 }
 
-/* Hibernate, and Wake up on FALLING 0->1 on pin D8 (WKP)
-  Connect button to pin D8 (WKP), use 10K pull up resistor
+/* Hibernate, and Wake up on FALLING 0->1 on pin D10 (WKP)
+  Connect button to pin D10 (WKP), use 10K pull up resistor
   NOTE: This function doesn't work as configured because device is reset
     on wake, running setup() again
 */
