@@ -14,7 +14,7 @@ title: Pre-Lecture Activities
 ### Bring to class all this week
 
 - Smart watch
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - Accelerometer
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
@@ -24,21 +24,20 @@ title: Pre-Lecture Activities
 
 ### Build before class Wed / Thurs 
 
-| Sensor | Argon |
-| ------ | ----- |
-| GND    | GND   |
-| VCC    | 3V3   |
-| CS     | 3V3   |
-| SDO    | GND   |
-| SDA    | SDA   |
-| SCL    | SCL   |
+| Sensor | Photon 2 |
+| ------ | -------- |
+| GND    | GND      |
+| VCC    | 3V3      |
+| CS     | 3V3      |
+| SDO    | GND      |
+| SDA    | SDA      |
+| SCL    | SCL      |
 
-| RGB LED | Argon |
+| RGB LED | Photon 2 |
 | ------ | ----- |
-| R    | A5 |
+| R    | A2 |
 | GND | GND |
-| G    | A4 |
-| B   | A3 |
+| G    | A5 |
+| B   | D15 (MO) |
 
-
-![accelerometer_rgb_led_bb](week13.assets/accelerometer_rgb_led_bb.png)
+<img src="week13.assets/Screenshot 2024-07-03 at 8.10.59 PM.png" alt="Screenshot 2024-07-03 at 8.10.59 PM" />

@@ -17,7 +17,7 @@ title: Pre-Lecture Activities
 
 ### Bring to class all this week
 
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - Lithium ion battery
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
@@ -31,22 +31,22 @@ title: Pre-Lecture Activities
 
 The goal is to build a rotating fan. Here is the circuit wiring, and photos are below 
 
-![servo_dc_fan_controller_bb](week09.assets/servo_dc_fan_controller_bb.png)
+<img src="week08_no_spring_holiday.assets/Screenshot 2024-07-03 at 7.54.45 PM.png" alt="Screenshot 2024-07-03 at 7.54.45 PM" />
 
 
 #### Wiring for Motor Controller
 
-| Motor Controller | Argon | DC Motor            |
-| ---------------- | ----- | ------------------- |
-| PWMA             | D5    | -                   |
-| AI2              | D4    | -                   |
-| AI1              | D3    | -                   |
-| AO1              | -     | Motor wire (either) |
-| AO2              | -     | Motor wire (either) |
-| VCC              | 3v3   | -                   |
-| GND              | GND   | -                   |
-| VM               | 3v3   | -                   |
-| STBY             | 3v3   | -                   |
+| Motor Controller | Photon 2 | DC Motor            |
+| ---------------- | -------- | ------------------- |
+| PWMA             | A5       | -                   |
+| AI2              | D4       | -                   |
+| AI1              | D3       | -                   |
+| AO1              | -        | Motor wire (either) |
+| AO2              | -        | Motor wire (either) |
+| VCC              | 3v3      | -                   |
+| GND              | GND      | -                   |
+| VM               | 3v3      | -                   |
+| STBY             | 3v3      | -                   |
 
 #### Wiring for Potentiometer
 

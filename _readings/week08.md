@@ -16,7 +16,7 @@ title: Pre-Lecture Activities
 
 ### Bring to class all this week
 
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - Magnetic switch
 - MicroOLED
 - [Speaker / buzzer](https://www.sparkfun.com/products/7950)
@@ -26,23 +26,21 @@ title: Pre-Lecture Activities
 
 ### Build before class Mon / Tues 
 
-| LED             | Argon Pins |
-| --------------- | ---------- |
-| Magnetic Switch | D5         |
-| RGB Red LED     | D2         |
-| RGB Green LED   | D3         |
-| RGB Blue LED    | D4         |
-| Potentiometer   | A5         |
+| LED             | Photon 2 Pins |
+| --------------- | ------------- |
+| Magnetic Switch | D5            |
+| RGB Red LED     | D2            |
+| RGB Green LED   | D3            |
+| RGB Blue LED    | D4            |
+| Potentiometer   | A5            |
 
-![image-20210227172856897](week08.assets/image-20210227172856897.png)
+<img src="week07_no_spring_holiday.assets/Screenshot 2024-07-03 at 7.29.08 PM.png" alt="Screenshot 2024-07-03 at 7.29.08 PM" />
 
 
 
 ### Build before class Wed / Thurs 
 
-![1570925716449](week08.assets/1570925716449.png)
-
-
+<img src="week08_no_spring_holiday.assets/Screenshot 2024-07-03 at 7.50.35 PM.png" alt="Screenshot 2024-07-03 at 7.50.35 PM" />
 
 
 

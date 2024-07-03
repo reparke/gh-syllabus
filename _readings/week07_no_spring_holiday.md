@@ -14,40 +14,40 @@
 
 ### Bring to class all this week
 
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - Magnetic switch
 - MicroOLED
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
 ### Build before class Mon / Tues 
 
-| RGB LED                    | Argon Pins |
-| -------------------------- | ---------- |
-| NorthSouth RGB LED - Red   | D2         |
-| NorthSouth RGB LED - Green | D3         |
-| NorthSouth RGB LED - Blue  | D4         |
+| RGB LED                    | Photon 2 Pins |
+| -------------------------- | ------------- |
+| NorthSouth RGB LED - Red   | A2            |
+| NorthSouth RGB LED - Green | A5            |
+| NorthSouth RGB LED - Blue  | D15 (MO)      |
 
-| MicroOLED (Qwiic cable) | Argon Pins |
-| ----------------------- | ---------- |
-| GND                     | GND        |
-| 3V3                     | 3V3        |
-| SDA (Blue)              | SDA        |
-| SCL (Yellow)            | SCL        |
+| MicroOLED (Qwiic cable) | Photon 2 Pins |
+| ----------------------- | ------------- |
+| GND                     | GND           |
+| 3V3                     | 3V3           |
+| SDA (Blue)              | SDA           |
+| SCL (Yellow)            | SCL           |
+
+<img src="week07_no_spring_holiday.assets/Screenshot 2024-07-03 at 7.24.52 PM.png" alt="Screenshot 2024-07-03 at 7.24.52 PM" />
 
 
-
-![stoplight_RGB_OLED_bb](week07.assets/stoplight_RGB_OLED_bb.png)
 
 
 
 ### Build before class Wed / Thurs 
 
-| LED             | Argon Pins |
-| --------------- | ---------- |
-| Magnetic Switch | D5         |
-| RGB Red LED     | D2         |
-| RGB Green LED   | D3         |
-| RGB Blue LED    | D4         |
-| Potentiometer   | A5         |
+| LED             | Photon 2 Pins |
+| --------------- | ------------- |
+| Magnetic Switch | D5            |
+| RGB Red LED     | A2            |
+| RGB Green LED   | A5            |
+| RGB Blue LED    | D15 (MO)      |
+| Potentiometer   | A1            |
 
-![image-20210227172856897](week07.assets/image-20210227172856897.png)
+<img src="week07_no_spring_holiday.assets/Screenshot 2024-07-03 at 7.29.08 PM.png" alt="Screenshot 2024-07-03 at 7.29.08 PM" />

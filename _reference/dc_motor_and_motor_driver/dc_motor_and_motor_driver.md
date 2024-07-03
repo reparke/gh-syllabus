@@ -15,26 +15,30 @@ show_in_list: true
 
 <img src="dc_motors.assets/image-20200323180344596.png" alt="image-20200323180344596" style="width:500px" />
 
+
+
 ## Wiring Diagram for One Motor 
 
-<img src="dc_motors.assets/DCMotor_bb.png" alt="DCMotor_bb.png" style="width:750px;" />
+<img src="dc_motor_and_motor_driver.assets/Screenshot 2024-07-03 at 8.44.46 PM.png" alt="Screenshot 2024-07-03 at 8.44.46 PM" style="width:750px;"/>
+
+
 
 ## Wiring Guide for One Motor
 
 
-| Motor Controller | Argon | DC Motor            |
-| ---------------- | ----- | ------------------- |
-| PWMA             | D5    | -                   |
-| AI2              | D4    | -                   |
-| AI1              | D3    | -                   |
-| AO1              | -     | Motor wire (either) |
-| AO2              | -     | Motor wire (either) |
-| VCC              | 3v3   | -                   |
-| GND              | GND   | -                   |
-| VM               | 3v3   | -                   |
-| STBY             | 3v3   | -                   |
+| Motor Controller | Photon 2 | DC Motor            |
+| ---------------- | -------- | ------------------- |
+| PWMA             | A5       | -                   |
+| AI2              | D4       | -                   |
+| AI1              | D3       | -                   |
+| AO1              | -        | Motor wire (either) |
+| AO2              | -        | Motor wire (either) |
+| VCC              | 3v3      | -                   |
+| GND              | GND      | -                   |
+| VM               | 3v3      | -                   |
+| STBY             | 3v3      | -                   |
 
-To connect a second DC motor, connect `PWMB`, `BI1`, and `BI1` to different Argon pins in the same manner, and connect `BO1` and `BO2` to the wires on the second DC motor
+To connect a second DC motor, connect `PWMB`, `BI1`, and `BI1` to different Photon 2 pins in the same manner, and connect `BO1` and `BO2` to the wires on the second DC motor
 
 
 

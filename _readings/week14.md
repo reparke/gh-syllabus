@@ -13,24 +13,26 @@ title: Pre-Lecture Activities
 
 ### Bring to class all this week
 
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - RFID sensor
 - RFID keycards
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
 ### Build before class Mon / Tues 
 
-![](week13.assets/rfid_bb.png) 
+<img src="week14.assets/Screenshot 2024-07-03 at 8.17.44 PM.png" alt="Screenshot 2024-07-03 at 8.17.44 PM" />
+
+
 
 #### Wiring
 
-| Sensor | Argon                   |
+| Sensor | Photon 2                |
 | ------ | ----------------------- |
 | 3.3v   | 3.3v                    |
-| Reset  | A5 (any GPIO pin works) |
+| Reset  | A1 (any GPIO pin works) |
 | GND    | GND                     |
 | IRQ    | -                       |
 | MOSI   | MO                      |
 | MISO   | MI                      |
 | SCK    | SCK                     |
-| SDA    | A4 (any GPIO pin works) |
+| SDA    | A0 (any GPIO pin works) |

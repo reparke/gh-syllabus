@@ -20,7 +20,7 @@ show_in_list: true
 
 ## Wiring
 
-| Sensor | Argon        | Function                        |
+| Sensor | Photon 2     | Function                        |
 | ------ | ------------ | ------------------------------- |
 | GND    | GND          | Ground                          |
 | VCC    | 3V3          | Power (requires 3.3v)           |
@@ -34,6 +34,8 @@ show_in_list: true
 ## Wiring Diagram
 
 <img src="accelerometer_ADXL345.assets/accelerometer_bb.png" style="width:800px;" />
+
+<img src="accelerometer_ADXL345.assets/Screenshot 2024-07-03 at 8.28.30 PM.png" alt="Screenshot 2024-07-03 at 8.28.30 PM" style="width:800px;"/>
 
 ## Operation
 
@@ -53,7 +55,7 @@ void setup() {
 
 ### Library Operations
 
-* Recommended library for Argon
+* Recommended library for Photon 2
 
   * ```ADXL345_Sparkfun_Particle```
 

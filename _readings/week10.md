@@ -15,31 +15,33 @@ title: Pre-Lecture Activities
 
 ### Bring to class all this week
 
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - Ultrasonic distance sensor
 - MicroOLED
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
 ### Build before class all week 
 
-![oled_ultrasonic_bb](week11.assets/oled_and_ultrasonic_i2c_bb.png)
+<img src="week10.assets/Screenshot 2024-07-03 at 8.09.48 PM.png" alt="Screenshot 2024-07-03 at 8.09.48 PM" />
+
+
 
 #### Sensor Wiring
 
 <span style="font-size:75%">
 
-| Sensor | Argon |
-| ------ | ----- |
-| GND    | GND   |
-| VCC    | VUSB  |
-| TRIG   | D6    |
-| ECHO   | D5    |
+| Sensor | Photon 2 |
+| ------ | -------- |
+| GND    | GND      |
+| VCC    | VUSB     |
+| TRIG   | D6       |
+| ECHO   | D5       |
 
-| OLED         | Argon |
-| ------------ | ----- |
-| GND          | GND   |
-| 3V3          | 3V3   |
-| SDA (Blue)   | SDA   |
-| SCL (Yellow) | SCL   |
+| OLED         | Photon 2 |
+| ------------ | -------- |
+| GND          | GND      |
+| 3V3          | 3V3      |
+| SDA (Blue)   | SDA      |
+| SCL (Yellow) | SCL      |
 
 </span>
