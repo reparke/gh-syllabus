@@ -18,7 +18,7 @@ show_in_list: true
 
 ## Wiring
 
-<img src="buttons.assets/Screenshot 2024-07-03 at 8.34.08 PM.png" alt="Screenshot 2024-07-03 at 8.34.08 PM" style="width:700px;" />
+<img src="buttons.assets/Screenshot 2024-07-03 at 8.34.08 PM.png" alt="Screenshot 2024-07-03 at 8.34.08 PM" style="width:300px;" />
 
 ## Operation (Normally Open Button)
 

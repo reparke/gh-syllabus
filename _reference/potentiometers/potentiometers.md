@@ -23,11 +23,12 @@ show_in_list: true
   - `A1`
   - `A2`
   - `A5`
-  - `A3` (`SDA` or `D0`)*
-  - `A4` (`SCL` or `D1`)*
-
+  - `A3` (`SDA` or `D0`)
+  - `A4` (`SCL` or `D1`)
 
 <img src="potentiometers.assets/image-20240521154022998.png" style="width:400px;" />
+
+
 
 ## Operation
 

@@ -19,7 +19,9 @@ show_in_list: true
 
 ## Wiring
 
-<img src="i2c_oled.assets/oled_i2c_bb.png" style="width:900px;" />
+<img src="i2c_oled.assets/Screenshot 2024-07-04 at 12.44.44 AM.png" alt="Screenshot 2024-07-04 at 12.44.44 AM" style="width:900px;" />
+
+
 
 ## Wiring - Qwiic Cable
 
@@ -30,12 +32,12 @@ show_in_list: true
 
 
 
-| OLED         | Argon | Purpose | Notes                 |
-| ------------ | ----- | ------- | --------------------- |
-| GND          | GND   | Ground  | Ground                |
-| 3V3          | 3V3   | Power   | 3.3v                  |
-| SDA (Blue)   | SDA   | Data    | Serial data           |
-| SCL (Yellow) | SCL   | Clock   | Synchronization clock |
+| OLED         | Photon 2 | Purpose | Notes                 |
+| ------------ | -------- | ------- | --------------------- |
+| GND          | GND      | Ground  | Ground                |
+| 3V3          | 3V3      | Power   | 3.3v                  |
+| SDA (Blue)   | SDA      | Data    | Serial data           |
+| SCL (Yellow) | SCL      | Clock   | Synchronization clock |
 
 </span>
 

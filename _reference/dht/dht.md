@@ -39,9 +39,11 @@ show_in_list: true
 
 ### Wiring
 
-<img src="dht.assets/dht20_bb-1665009122957-10.png" alt="dht20_bb" style="width:500px;" />
+<img src="dht.assets/Screenshot 2024-07-04 at 12.28.38 AM.png" alt="Screenshot 2024-07-04 at 12.28.38 AM" style="width:500px;" />
 
 Note: In Fritzing, if you don't find a DHT 20 (black), you can used the DHT 22 or DHT 11 in your diagram.
+
+
 
 ### Operation
 

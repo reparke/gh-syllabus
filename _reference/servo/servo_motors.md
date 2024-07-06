@@ -19,11 +19,13 @@ show_in_list: true
 
 ## Wiring Diagram
 
-<img src="servo_motors.assets/servo_bb.png" alt="servo_bb" style="width:700px" />
+<img src="servo_motors.assets/Screenshot 2024-07-06 at 12.19.44 AM.png" alt="Screenshot 2024-07-06 at 12.19.44 AM" style="width:700px" />
+
+
 
 ## Wiring Guide
 
-| Servo Wire | Argon               |
+| Servo Wire | Photon 2            |
 | ---------- | ------------------- |
 | Power      | VUSB                |
 | Ground     | GND                 |
@@ -50,7 +52,7 @@ show_in_list: true
 ## Code
 
 ```c++
-const int SERVO_PIN = D2;
+const int SERVO_PIN = A2;
 
 Servo servoObj;	// step 1: Create the servo object
 void setup(){
@@ -73,13 +75,13 @@ void loop(){
 ## Jitting
 
 - In some cases, the servo may start to make noise, stutter, or become hot when not it use
-- This can be due to a variety of factors such as unstable current supply or interrupts in the Argon execution
+- This can be due to a variety of factors such as unstable current supply or interrupts in the Photon 2 execution
 - IF this happens, one simple solution is to `attach` before using the servo, and then `detach` after
 
 ## Code: Fixing Jittering 
 
 ```c++
-const int SERVO_PIN = D2;
+const int SERVO_PIN = A2;
 Servo servoObj;
 void setup(){ /*no attach code */ }
 }
@@ -92,13 +94,10 @@ void loop(){
 }
 ```
 
-## Reminder: Argon PWM Pin Groups
+## Reminder: Photon 2 PWM Pins
 
-* PWM pins are assigned to one of three groups
-* Each group can have different PWM values (duty cycles), but must share the same  frequency and resolution
-  * Pins D4, D5, D6, D8
-  * Pins A0, A1, A2, A3
-  * Pins D2, D3, A4, A5
+* All PWM pins on the Photon 2 are assigned to the same timer, meaning you can only generate ONE frequency at a time (you cannot make different servos move in different directions at the same time)
+  * PWM pins: A2, A5, D15 (MO), D16 (MI), D1 (SCL)
 
 
 ## Credits

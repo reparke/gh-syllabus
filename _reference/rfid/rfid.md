@@ -19,7 +19,7 @@ show_in_list: true
 
 - Uses SPI communication protocol
 
-| Sensor | Argon                  |
+| Sensor | Photon 2               |
 | ------ | ---------------------- |
 | 3.3v   | 3.3v                   |
 | Reset  | Any digital output pin |
@@ -32,7 +32,7 @@ show_in_list: true
 
 ## Wiring Diagram
 
-<img src="rfid.assets/rfid_bb.png" style="width:800px;" />
+<img src="rfid.assets/Screenshot 2024-07-04 at 1.18.14 AM.png" alt="Screenshot 2024-07-04 at 1.18.14 AM" style="width:800px;" />
 
 
 

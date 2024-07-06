@@ -13,7 +13,7 @@ show_in_list: true
 # `Particle.publish`
 ## Operation
 
-* Events are messages sent from an Argon to the cloud **as often as you choose**
+* Events are messages sent from an Photon 2 to the cloud **as often as you choose**
 * Events can be accessed in [Particle console]([https://console.particle.io/](https://console.particle.io/)), app, or by other devices (subscribing)
 
 ### Viewing Events in Particle Console
@@ -42,5 +42,5 @@ Particle.publish("tempFahr", String(85.9));
 
 ## Documentation
 
-* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/argon/#cloud-functions)
-* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/argon/#particle-publish-)
+* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/#cloud-functions)
+* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/#particle-publish-)

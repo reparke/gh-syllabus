@@ -16,7 +16,7 @@ show_in_list: true
 
 ## Wiring
 
-<img src="magnetic_switch.assets/switch-magnetic-door_bb.png" style="width:500px;" />
+<img src="magnetic_switch.assets/Screenshot 2024-07-04 at 12.35.08 AM.png" alt="Screenshot 2024-07-04 at 12.35.08 AM" style="width:500px;" />
 
 ## Operation
 

@@ -15,9 +15,9 @@ show_in_list: true
 
 ## Wiring
 
-<img src="leds.assets/image-20200708224001644.png" style="width:500px;" />
+<img src="leds.assets/Screenshot 2024-07-04 at 12.31.44 AM.png" alt="Screenshot 2024-07-04 at 12.31.44 AM" style="width:500px;" />
 
-* Anode (longer leg) connects to resistor and Argon
+* Anode (longer leg) connects to resistor and Photon 2
 * Cathode (shorter leg) connects to `GND`
 
 <img src="leds.assets/led.png" alt="LED" style="width:180px" />

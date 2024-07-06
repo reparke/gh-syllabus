@@ -14,9 +14,16 @@ show_in_list: true
 
 ## Wiring
 
-Requires analog input pin (Pins `A0`-`A5`)
+Requires analog input pin
 
-<img src="tmp36.assets/tmp36_bb.png" alt="tmp36_bb" style="width:900px;" />
+- `A0`
+- `A1`
+- `A2`
+- `A5`
+- `A3` (`SDA` or `D0`)
+- `A4` (`SCL` or `D1`)
+
+<img src="tmp36.assets/Screenshot 2024-07-06 at 4.26.34 PM.png" alt="Screenshot 2024-07-06 at 4.26.34 PM" style="width:900px;" />
 
 ### Orientation
 
@@ -29,7 +36,7 @@ Requires analog input pin (Pins `A0`-`A5`)
 * Analog temperature sensor
 * Measures environment temperature and returns a voltage
 * Since this is an analog input, we use **analog to digital conversion** to read input
-* Voltage on pin will varies 0v to 3.v, and Argon will read 0 to 4095 
+* Voltage on pin will varies 0v to 3.v, and Photon 2 will read 0 to 4095 
 
 ### Conversions
 

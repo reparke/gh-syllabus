@@ -14,9 +14,9 @@ show_in_list: true
 ## Main Idea
 
 * `delay()` is **blocking**
-  * This means the Argon is essentially paused and can't do anything else
+  * This means the Photon 2 is essentially paused and can't do anything else
 * We need to be able to synchronize events and **multi-task** just like our computers and phones
-* `millis()` is a function that returns the "relative current time" (number of **milliseconds** that have elapsed since the Argon last turned on / reset)
+* `millis()` is a function that returns the "relative current time" (number of **milliseconds** that have elapsed since the Photon 2 last turned on / reset)
 * We can call `millis()` at different points in time to compare the passage of time
 * When a specific time has elapsed, we can take an action
 

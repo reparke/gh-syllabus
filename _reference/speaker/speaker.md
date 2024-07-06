@@ -17,12 +17,12 @@ show_in_list: true
 
 ## Wiring
 
-<img src="speaker.assets/1570925594505.png" alt="1570925594505" style="width:750px" />
+<img src="speaker.assets/Screenshot 2024-07-06 at 12.33.30 AM.png" alt="Screenshot 2024-07-06 at 12.33.30 AM" style="width:750px" />
 
 ### Wiring: Polarity
 
 - The buzzer will have a **+** on the bottom or side 
-- `+` goes to Argon pin capable of PWM
+- `+` goes to Photon 2 pin capable of PWM
 - `-` goes to Ground
 
 <img src="speaker.assets/buzzer_polarity.jpg" alt="buzzer polarity" style="height:300px;"/> <img src="speaker.assets/Buzzer3.jpg" alt="buzzer polarity" style="height:300px;" /> 
@@ -57,7 +57,7 @@ tone(<<PIN>>, <<FREQUENCY>>, <<DURATION>>);
 
 
 ```c++
-const int PIN_SPEAKER = D2;
+const int PIN_SPEAKER = A5;
 
 void setup() {
   pinMode(PIN_SPEAKER, OUTPUT);
@@ -94,7 +94,7 @@ void loop() {
 ```c++
 #include "pitches.h"	// you need to download this file to your SRC folder
 
-const int PIN_SPEAKER = D2;
+const int PIN_SPEAKER = A5;
 
 // notes in the melody:
 int melody[] = {NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3,
@@ -127,6 +127,17 @@ void loop() {
 
 * [Notes for some popular songs](https://dragaosemchama.com/en/2019/02/songs-for-arduino/) (note that the format for playing notes is different in this code, but you can still extract the notes and duration from these examples)
 * [MIDI to C converter](https://projects.neutonfoo.com/mc-piezo/) allows you convert a MIDI file directly into C
+
+
+
+## Reminder: Photon 2 and `tone()`
+
+* `tone()` requires a pin that supports PWM
+
+* All PWM pins on the Photon 2 are assigned to the same timer, meaning you can only generate ONE frequency at a time (you cannot play different notes with different buzzers at the same time)
+  * PWM pins: A2, A5, D15 (MO), D16 (MI), D1 (SCL)
+  
+  
 
 ## References
 

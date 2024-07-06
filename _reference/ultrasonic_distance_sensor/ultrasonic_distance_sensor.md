@@ -21,7 +21,7 @@ show_in_list: true
 
 ## Wiring
 
-| Sensor | Argon      | Function                                                     |
+| Sensor | Photon 2   | Function                                                     |
 | ------ | ---------- | ------------------------------------------------------------ |
 | GND    | GND        | Ground                                                       |
 | VCC    | VUSB       | Power **(requires 5v, but will work with 3.7V LiPo battery)** |
@@ -30,7 +30,7 @@ show_in_list: true
 
 ## Wiring Diagram
 
-<img src="ultrasonic_distance_sensor.assets/ultrasonic_bb.png" style="width:800px;" />
+<img src="ultrasonic_distance_sensor.assets/Screenshot 2024-07-06 at 4.35.45 PM.png" alt="Screenshot 2024-07-06 at 4.35.45 PM" style="width:800px;" />
 
 
 

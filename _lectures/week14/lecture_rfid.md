@@ -82,8 +82,8 @@ title: RFID (Radio Frequency ID Scanner	)
 #include <MFRC522.h>
 #include <SPI.h>
 
-const int SS_PIN = A5;
-const int RST_PIN = A4;
+const int SS_PIN = A0;
+const int RST_PIN = A1;
 const String MATCH_ID = "OB 45 EA 0E"; //target id to match
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.
@@ -128,8 +128,8 @@ void loop() {
 #include <MFRC522.h>
 #include <SPI.h>
 
-const int SS_PIN = A5;
-const int RST_PIN = A4;
+const int SS_PIN = A0;
+const int RST_PIN = A1;
 const String MATCH_ID = "OB 45 EA 0E"; //target id to match
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance.

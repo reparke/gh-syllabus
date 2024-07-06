@@ -25,11 +25,11 @@ show_in_list: true
 ### Supported Pins
 
 * Only certain pins support PWM
-  * `D1` (`SCL` or `A4`)*
+  * `D1` (`SCL` or `A4`)
   * `A2`
   * `A5`
-  * `MISO` (`D16`)*
-  * `MOSI` (`D15`)*
+  * `MISO` (`D16`)
+  * `MOSI` (`D15`)
   
 
 PWM pins are assigned to one of three groups

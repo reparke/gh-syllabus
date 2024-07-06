@@ -26,17 +26,17 @@ show_in_list: true
 ## Wiring Guide for One Motor
 
 
-| Motor Controller | Photon 2 | DC Motor            |
-| ---------------- | -------- | ------------------- |
-| PWMA             | A5       | -                   |
-| AI2              | D4       | -                   |
-| AI1              | D3       | -                   |
-| AO1              | -        | Motor wire (either) |
-| AO2              | -        | Motor wire (either) |
-| VCC              | 3v3      | -                   |
-| GND              | GND      | -                   |
-| VM               | 3v3      | -                   |
-| STBY             | 3v3      | -                   |
+| Motor Controller | Photon 2                | DC Motor            |
+| ---------------- | ----------------------- | ------------------- |
+| PWMA             | A5 (any PWM pin works)  | -                   |
+| AI2              | D4 (any GPIO pin works) | -                   |
+| AI1              | D3 (any GPIO pin works) | -                   |
+| AO1              | -                       | Motor wire (either) |
+| AO2              | -                       | Motor wire (either) |
+| VCC              | 3v3                     | -                   |
+| GND              | GND                     | -                   |
+| VM               | 3v3                     | -                   |
+| STBY             | 3v3                     | -                   |
 
 To connect a second DC motor, connect `PWMB`, `BI1`, and `BI1` to different Photon 2 pins in the same manner, and connect `BO1` and `BO2` to the wires on the second DC motor
 
@@ -61,7 +61,7 @@ To connect a second DC motor, connect `PWMB`, `BI1`, and `BI1` to different Phot
 ```c++
 const int AIN1 = D3;
 const int AIN2 = D4;
-const int PWMA = D5;
+const int PWMA = A5;
 
 void setup() {
   pinMode(AIN1, OUTPUT);
