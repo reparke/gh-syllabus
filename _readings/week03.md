@@ -25,7 +25,7 @@ title: Pre-Lecture Activities
 
 ### Build before class Wed / Thurs 
 
-![image-20240521150237739](../../Library/Application Support/typora-user-images/Screenshot 2024-07-07 at 3.25.04 AM.png)
+<img src="week03.assets/Screenshot 2024-07-07 at 3.43.27 AM.png" alt="Screenshot 2024-07-07 at 3.43.27 AM" />
 
 ### Optional
 

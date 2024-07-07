@@ -143,7 +143,7 @@ void loop() {
 
 ## Wiring Diagram 
 
-![image-20240520204936554](lecture_analog_input_potentiometers.assets/Screenshot 2024-07-07 at 3.05.56 AM.png)
+![Screenshot 2024-07-07 at 3.46.35 AM](lecture_analog_input_potentiometers.assets/Screenshot 2024-07-07 at 3.46.35 AM.png)
 
 * Using **Vin=3.3v** and a 10k potentiometer, what do you expect for the range of values of **potValue**?
 
