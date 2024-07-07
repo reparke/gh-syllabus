@@ -15,7 +15,7 @@ title: Pre-Lecture Activities
 
 ### Bring to class all this week
 
-- Argon, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
+- Photon 2, breadboard, resistors, push buttons, LEDs, RGB LEDS, wires potentiometer
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
 ### Build before class Mon / Tues 
@@ -29,8 +29,8 @@ title: Pre-Lecture Activities
 ### Optional C++ Reference
 
 * Quick note: in some of the C++ videos below, they reference `cout` and `cin`. Those are C++ functions that we don't use in programming microcontrollers so you don't need to worry about them. For clarity, all you need to know is that 
-  * `cout` is a C++ function to print to the console window like `Serial.println` for the Argon or `print` in Python
-  * `cin` is a C++ function to get user input from the keyboard like `input` in Python. The Argon doesn't have an equivalent way to get user input from the keyboard.
+  * `cout` is a C++ function to print to the console window like `Serial.println` for the Photon 2 or `print` in Python
+  * `cin` is a C++ function to get user input from the keyboard like `input` in Python. The Photon 2 doesn't have an equivalent way to get user input from the keyboard.
 * Watch **Arrays in C++**
   {% include video id="0WoOSsuOzfY" provider="youtube" %}
 * Watch **For Loops in C++**

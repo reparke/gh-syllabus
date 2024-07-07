@@ -31,7 +31,7 @@ title: Pre-Lecture Activities
 
 *Note: if you don't have room for both potentiometers and the button, you can leave off the button*
 
-<img src="week05.assets/Screenshot 2024-06-03 at 3.49.21 PM.png" alt="Screenshot 2024-06-03 at 3.49.21 PM" style="width:600px" />
+<img src="week05.assets/Screenshot 2024-07-07 at 3.30.16 AM.png" alt="Screenshot 2024-07-07 at 3.30.16 AM" style="width:600px" />
 
 Use [Qwiic cable](https://www.sparkfun.com/products/14425) to connect OLED to Photon 2
 

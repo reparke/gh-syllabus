@@ -21,5 +21,6 @@ title: Pre-Lecture Activities
 
 - Create an [Blynk account](https://blynk.cloud/) 
 
-<img src="week06.assets/Screenshot 2024-06-03 at 4.03.41 PM.png" alt="Screenshot 2024-06-03 at 4.03.41 PM" style="width:600px" />
 
+
+<img src="week06.assets/Screenshot 2024-07-07 at 3.33.16 AM.png" alt="Screenshot 2024-07-07 at 3.33.16 AM" style="width:600px" />

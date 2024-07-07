@@ -21,7 +21,7 @@ title: Pre-Lecture
 
 ### Build before class Mon / Tues 
 
-<img src="week04.assets/Screenshot 2024-06-03 at 3.37.34 PM.png" alt="Screenshot 2024-06-03 at 3.37.34 PM" style="width:500px;" />
+<img src="week04.assets/Screenshot 2024-07-07 at 3.28.24 AM.png" alt="Screenshot 2024-07-07 at 3.28.24 AM" style="width:500px;"/>
 
 
 
