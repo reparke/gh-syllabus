@@ -91,7 +91,7 @@ Deliverables
 
    - Upload zip file to Blackboard site for our course
 
-2. A photograph of your device connected to USB with the blue light on.
+2. A photograph of your device connected to USB with the cyan light on (indicating it is connected).
 
 3. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
 

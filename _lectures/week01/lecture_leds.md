@@ -83,20 +83,16 @@ forward current is current the LED can handle-->
 * We can "hardwire" an LED to turn on by connecting the anode (long side) to a +3.3V and the cathode (short side) to ground
 * The LED is **always on** because the anode is always at +3.3V and the cathode is always at ground
 
-## Wiring
-
-![image-20240520192615527](lecture_leds.assets/image-20240520192615527.png)
-
 ## Turning on LEDs in Code
 
 * We need to be able to control the voltage at the anode so it can be either +3.3V (LED turns on), or GND (LED turns off)
-* Connected anode to pin D2 on Argon
+* Connected anode to pin D2 on Photon 2
 * Connected cathode to GND
 * Now using code, we can make the voltage at pin D2 either +3.3V or GND 
 
 ## Wiring
 
-![image-20240520192749278](lecture_leds.assets/image-20240520192749278.png)
+![Screenshot 2024-07-07 at 3.11.08 AM](lecture_leds.assets/Screenshot 2024-07-07 at 3.11.08 AM.png)
 
 ## Digital Output
 
@@ -115,8 +111,8 @@ pinMode(PIN_NUMBER, MODE);
 //MODE: OUTPUT or INPUT
 ```
 
-* Before we can use pins on the Argon, we need to specify if pins will be used for **input** or **output**
-* Most pins on the Argon can be configured to SEND output (e.g. to turn on a light) or to RECEIVE input (e.g. a button press)
+* Before we can use pins on the Photon 2, we need to specify if pins will be used for **input** or **output**
+* Most pins on the Photon 2 can be configured to SEND output (e.g. to turn on a light) or to RECEIVE input (e.g. a button press)
 * When you want to use a pin in your program, you should specify its mode in `setup()`
 
 

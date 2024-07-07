@@ -194,7 +194,7 @@ Motor Controller
 
 ##  
 
-<img src="lecture_bluetooth.assets/ble_uart_rgb_accel_example_bb.png" alt="1571379857064" style="width:900px" />
+<img src="lecture_photon2_ble_syntax.assets/Screenshot 2024-07-07 at 2.43.50 AM.png" alt="Screenshot 2024-07-07 at 2.43.50 AM" style="width:900px" />
 
 
 
@@ -219,7 +219,7 @@ Motor Controller
 
 ##  
 
-<img src="lecture_bluetooth.assets/1571379935995.png" alt="1571379935995" style="width:1000px" />
+<img src="lecture_photon2_ble_syntax.assets/Screenshot 2024-07-07 at 2.41.06 AM.png" alt="Screenshot 2024-07-07 at 2.41.06 AM" style="width:1000px;"/>
 
 
 

@@ -104,9 +104,7 @@ title: Push Buttons
 
 ## Exercise 2
 
-
-
-  <img src="lecture_buttons.assets/image-20240521151527873.png" alt="switch on breadboard" style="width:500px" />
+<img src="lecture_buttons.assets/Screenshot 2024-07-07 at 2.47.22 AM.png" alt="Screenshot 2024-07-07 at 2.47.22 AM" style="width:500px" />  
 
 1. Turn on red LED on **only** while button pressed
 2. Toggle red LED on and off **after each time** button is pressed

@@ -24,7 +24,7 @@ Goals
 
 ## Overview
 
-![WIN_20220205_15_41_56_Pro](a5_button_timers.assets/WIN_20220205_15_41_56_Pro.jpg)
+<img src="a5_button_timers.assets/Screenshot 2024-07-07 at 2.18.05 AM.png" alt="Screenshot 2024-07-07 at 2.18.05 AM" style="width:600px" />
 
 The assignment is create a device that supports multiple timers. There are two buttons (red and blue) which trigger different timers. The RGB LED will flash red and/or blue briefly each second to indicate which timers are active. When a timer goes off, the RGB LED will flash a random sequence of colors to indicate a timer has ended. The majority of all the timing will be controlled a multi-tasking approach with `millis()` instead of `delay()` or `while` loops.
 
@@ -36,7 +36,7 @@ Here is a video overview: [https://youtu.be/MuYajFfvIvk](https://youtu.be/MuYajF
 
 ## Components
 
--   Argon
+-   Photon 2
 
 -   Breadboard
 
@@ -187,7 +187,7 @@ Deliverables
 
    - Upload zip file to Blackboard site for our course
 
-3. A photograph of your device connected to USB with the blue light on.
+3. A photograph of your device connected to USB with the cyan light on (indicating it is connected).
 
 4. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
 

@@ -100,7 +100,7 @@ analogWrite(LED_PIN, 0);	//0% duty cycle, or 0v
 
 ## Wiring Diagram
 
-![image-20240521141656437](lecture_pwm.assets/image-20240521141656437.png)
+![Screenshot 2024-07-07 at 3.03.46 AM](lecture_pwm.assets/Screenshot 2024-07-07 at 3.03.46 AM.png)
 
 ## Credits
 

@@ -21,7 +21,7 @@ Goals
 
 ## Overview
 
-This assignment is to create a device that simulates brewing tea using state machines and a Blynk interface. The state machine machine logic will control how the device moves through the tea brewing states, and feedback and control will be available through the Blynk app. When brewing is finished, a song will optionally play on the Argon through a speaker.
+This assignment is to create a device that simulates brewing tea using state machines and a Blynk interface. The state machine machine logic will control how the device moves through the tea brewing states, and feedback and control will be available through the Blynk app. When brewing is finished, a song will optionally play on the Photon 2 through a speaker.
 
 Here is a video overview: [https://youtu.be/lqQhFIVWDR0](https://youtu.be/lqQhFIVWDR0)
 
@@ -37,7 +37,7 @@ Here is a video overview: [https://youtu.be/lqQhFIVWDR0](https://youtu.be/lqQhFI
 
 ## Components
 
--   Argon
+-   Photon 2
 -   Breadboard
 -   1 x speaker
 -   1 x magnetic switch
@@ -115,12 +115,12 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 
 ## Blynk Datastreams
 
-| Name                | Pin  | Type    | Values                                  | Data FROM | Data TO |
-| ------------------- | ---- | ------- | --------------------------------------- | --------- | ------- |
-| `String Cup Status` | `V2` | String  | `Present`, `Missing`                    | argon     | app     |
-| `Button Start Brew` | `V3` | integer | `0`, `1`                                | app       | argon   |
-| `String State`      | `V4` | String  | `Idle`, `Heat`, `Steep`, `Hold`, `Pour` | argon     | app     |
-| `Button Sound`      | `V5` | integer | `0`, `1`                                | app       | argon   |
+| Name                | Pin  | Type    | Values                                  | Data FROM | Data TO  |
+| ------------------- | ---- | ------- | --------------------------------------- | --------- | -------- |
+| `String Cup Status` | `V2` | String  | `Present`, `Missing`                    | Photon 2  | app      |
+| `Button Start Brew` | `V3` | integer | `0`, `1`                                | app       | Photon 2 |
+| `String State`      | `V4` | String  | `Idle`, `Heat`, `Steep`, `Hold`, `Pour` | Photon 2  | app      |
+| `Button Sound`      | `V5` | integer | `0`, `1`                                | app       | Photon 2 |
 
 
 
@@ -162,9 +162,9 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 
 - Flash your project, and open the Blynk app. Make sure that the blank template opens
 
-### Stage 3: Enable communication between Blynk app and Argon
+### Stage 3: Enable communication between Blynk app and Photon 2
 
-- There are two app elements that send information from the app to the argon
+- There are two app elements that send information from the app to the Photon 2
   - `Button Start Brew`
   - `Button Sound`
 - Write the code that receives the infomation from the app and updates your code variables as necessary
@@ -174,13 +174,13 @@ There are 5 states in the brewing process. Note that we will use **seconds** in 
 - Use Serial print statements to make sure that values are being updated properly
 - Make sure that your device stays idle until start button is pressed. Once it is pressed, device should move through each state. If button is pressed while brewing is happening, brewing should stop and device should return to **Idle**
 
-### Stage 4: Enable communication between Argon and app
+### Stage 4: Enable communication between Photon 2 and app
 
 - There are two app elements that receive information from the app
   - `String State`
   - `String Cup Status`
 - Write the code that the sends the appropriate infomation to the app
-- Remember that all updates FROM argon TO app should take place in the `loop()` function inside a `millis()` block
+- Remember that all updates FROM Photon 2 TO app should take place in the `loop()` function inside a `millis()` block
 
 #### Testing Stage 4
 
@@ -236,7 +236,7 @@ Deliverables
 
    - Upload zip file to Blackboard site for our course
 
-3. A photograph of your device connected to USB with the blue light on.
+3. A photograph of your device connected to USB with the cyan light on (indicating it is connected).
 4. ==A screenshot of your custom Blynk app==
 5. ==A screenshot of your custom datastream table from website==
 6. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
@@ -255,10 +255,10 @@ Grading
 | **Stage 2: Connect Blynk, Set Up Datastreams, and Design Blynk App** | **4**  |
 | Datastreams correct configured                               | 2      |
 | Blynk user interface app elements                            | 2      |
-| **Stage 3: Enable communication between Blynk app and Argon** | **6**  |
+| **Stage 3: Enable communication between Blynk app and Photon 2** | **6**  |
 | `Button Start Brew` starts and stops brewing process         | 2      |
 | `Button Sound` enables / disables sound playing              | 2      |
-| **Stage 4: Enable communication between Argon and app**      | **6**  |
+| **Stage 4: Enable communication between Photon 2 and app**   | **6**  |
 | `String State` changes with correct state                    | 2      |
 | `String Cup Status` updates                                  | 2      |
 | **Stage 5: Play Song**                                       | **4**  |
@@ -329,10 +329,10 @@ tone(D6, NOTE_D4, 500);	//play the D note above middle C
 
 - Add two new datastreams
 
-| Name              | Pin  | Type    | Values                                                   | Data FROM | Data TO |
-| ----------------- | ---- | ------- | -------------------------------------------------------- | --------- | ------- |
-| `Slider Tea Type` | `V0` | integer | `0` for black tea, `1` for green tea, `2` for herbal tea | app       | argon   |
-| `Text Tea Type`   | `V1` | String  | `Black`, `Green`, `Herbal`                               | argon     | app     |
+| Name              | Pin  | Type    | Values                                                   | Data FROM | Data TO  |
+| ----------------- | ---- | ------- | -------------------------------------------------------- | --------- | -------- |
+| `Slider Tea Type` | `V0` | integer | `0` for black tea, `1` for green tea, `2` for herbal tea | app       | Photon 2 |
+| `Text Tea Type`   | `V1` | String  | `Black`, `Green`, `Herbal`                               | Photon 2  | app      |
 
 
 
@@ -356,6 +356,6 @@ tone(D6, NOTE_D4, 500);	//play the D note above middle C
 
 | Name             | Pin  | Type    | Values                 | Data FROM | Data TO |
 | ---------------- | ---- | ------- | ---------------------- | --------- | ------- |
-| `Time Remaining` | `V6` | integer | `0` as min, `7` as max | argon     | app     |
+| `Time Remaining` | `V6` | integer | `0` as min, `7` as max | Photon 2  | app     |
 
 - In your code, track the time remaining and send to app

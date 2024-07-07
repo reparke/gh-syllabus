@@ -63,11 +63,7 @@ title: State Machines Part 3 - Dish Washer Example
 ## Wiring Diagram
 <img src="lecture_state_machines_washer.assets/Screenshot 2024-06-19 at 12.16.32 PM.png" alt="Screenshot 2024-06-19 at 12.16.32 PM" style="width:700px;" />
 
-## Wiring Diagram
-<img src="lecture_state_machines_washer.assets/Screenshot 2024-06-19 at 12.16.32 PM.png" alt="Screenshot 2024-06-19 at 12.16.32 PM" style="width:300px;" />
-
-You'll need
-
+## Components
 * 1 RGB
 * 1 potentiometer
 * 1 magnetic switch (pushbutton will work too)

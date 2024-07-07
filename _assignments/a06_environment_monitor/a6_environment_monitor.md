@@ -37,7 +37,7 @@ Here is an example:
 
 ## Components
 
--   Argon
+-   Photon 2
 -   Breadboard
 -   1 x micro OLED
 -   1 x DHT20
@@ -58,8 +58,8 @@ Here is an example:
 
 ### Note about Wiring
 
-* Both the OLED and the DHT20 use the `SDA` and `SCL` pins on the Argon. 
-* Connect the wires from the OLED and from the DHT20 to the same row on the Argon.
+* Both the OLED and the DHT20 use the `SDA` and `SCL` pins on the Photon 2. 
+* Connect the wires from the OLED and from the DHT20 to the same row on the Photon 2.
 * In the example photo shown below, the blue and yellow wires are from the **OLED** and the orange and brown wires are from the **DHT20**
   <img src="a6_environment_monitor.assets/WIN_20221005_17_18_18_Pro.jpg" alt="WIN_20221005_17_18_18_Pro" style="width:300px;" />
 
@@ -193,8 +193,8 @@ Deliverables
 
    - Upload zip file to Blackboard site for our course
 
-3. A photograph of your device connected to USB with the blue light on.
-4. **==A screenshot of your Initial State dashboard==**
+3. A photograph of your device connected to USB with the cyan light on (indicating it is connected).
+4. **==A screenshot of your Initial State dashboard.==**
 5. A video demonstrating your project functioning (either upload this to separate from the zip file, or upload to YouTube / Google Drive / Dropbox and provide the link in your submission). 
 
 Grading

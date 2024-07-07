@@ -55,7 +55,7 @@ title: RGB LEDs
 
 ## Common Cathode Wiring
 
-<img src="lecture_rgb_leds.assets/image-20240521152840455.png" alt="common cathode wiring" style="width:800px" />
+<img src="lecture_rgb_leds.assets/Screenshot 2024-07-07 at 2.49.13 AM.png" alt="Screenshot 2024-07-07 at 2.49.13 AM" style="width:800px" />
 
 ## Common Cathode RGB LEDs
 
@@ -74,7 +74,7 @@ title: RGB LEDs
 
 ## Common Anode Wiring
 
-<img src="lecture_rgb_leds.assets/image-20240521153015558.png" alt="common anode wiring" style="width:800px" />
+<img src="lecture_rgb_leds.assets/Screenshot 2024-07-07 at 2.51.31 AM.png" alt="Screenshot 2024-07-07 at 2.51.31 AM" style="width:800px" />
 
 ## Common Anode RGB LEDs
 
@@ -100,7 +100,7 @@ title: RGB LEDs
 
 ## Lab 1
 
-<img src="lecture_rgb_leds.assets/image-20240521152622925.png" alt="image-20210204155745432" style="width:500px;" />
+<img src="lecture_rgb_leds.assets/Screenshot 2024-07-07 at 2.52.43 AM.png" alt="Screenshot 2024-07-07 at 2.52.43 AM" style="width:500px;" />
 
 ## Lab steps
 
@@ -110,7 +110,7 @@ title: RGB LEDs
 
 ## Lab 2
 
-<img src="lecture_rgb_leds.assets/image-20240521152504283.png" alt="rgb_led_switch_bb" style="width:500px;" />
+<img src="lecture_rgb_leds.assets/Screenshot 2024-07-07 at 2.57.35 AM.png" alt="Screenshot 2024-07-07 at 2.57.35 AM" style="width:500px;" />
 
 ## Lab steps
 
@@ -122,7 +122,7 @@ title: RGB LEDs
 
 ## Lab 3
 
-<img src="lecture_rgb_leds.assets/image-20240521152542583.png" alt="rgb_led_switch_bb" style="width:500px;" />
+<img src="lecture_rgb_leds.assets/Screenshot 2024-07-07 at 3.00.17 AM.png" alt="Screenshot 2024-07-07 at 3.00.17 AM" style="width:500px;" />
 
 ## Lab steps
 

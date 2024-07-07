@@ -119,7 +119,7 @@ title: Bluetooth
 ## Making the Connection
 
   *  Photon 2
-     *  Use as central device to connect to sensors and other Photons
+     *  Use as central device to connect to sensors and other Photon 2s
      *  Use as peripheral device to receive connections from mobile devices
 
 <img src="lecture_bluetooth.assets/Screenshot 2024-06-21 at 11.24.57 PM.png" alt="Screenshot 2024-06-21 at 11.24.57 PM" style="width:700px" />
