@@ -68,7 +68,7 @@ title: RFID (Radio Frequency ID Scanner	)
 
 ## RFID Library
 
-  * `ARGON-RFID-MFRC522` is an Photon 2 compatible library
+  * `ARGON-RFID-MFRC522` is a Photon 2 compatible library
 
 ## Sample Code #1: Find the Card ID
 

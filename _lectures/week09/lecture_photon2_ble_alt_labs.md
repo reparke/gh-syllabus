@@ -48,7 +48,7 @@ On-board LED    D7
 
 <img src="lecture_photon2_ble_alt_labs.assets/Screenshot 2024-06-21 at 11.01.49 PM.png" alt="Screenshot 2024-06-21 at 11.01.49 PM" style="width:750px" />
 
-## Lab #2: Control Fan, RGB LED, and Buzzer (part 1)
+## Lab #2: Control Fan (part 1)
 
 * Use Bluefruit app to control a servo and motor
 * Send commands **from** app **to** Photon 2, interpret them in Photon 2, and perform an action
@@ -60,7 +60,7 @@ On-board LED    D7
     https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week09/ble_uart_control_start
 * In Bluefruit app, connect to over UART (listed as "controller")
 
-## Lab #2: Control Fan, RGB LED, and Buzzer  (part 2)
+## Lab #2: Control Fan (part 2)
 
 * Specifications
   * When "RIGHT" is pressed down, rotate servo (by fixed amount) clockwise
@@ -88,6 +88,6 @@ Motor Controller
 
 ## 
 
-<img src="lecture_bluetooth.assets/ble_uart_control_fan_bb.png" alt="1571379935995" style="height:700px" /><img src="lecture_photon2_ble_alt_labs.assets/Screenshot 2024-06-22 at 12.05.39 AM.png" alt="Screenshot 2024-06-22 at 12.05.39 AM" style="width:700px" />
+
 
 <img src="lecture_photon2_ble_alt_labs.assets/Screenshot 2024-06-21 at 11.14.16 PM.png" alt="Screenshot 2024-06-21 at 11.14.16 PM" style="width:700px"/>

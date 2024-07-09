@@ -24,16 +24,14 @@ show_in_list: true
 | ------ | ------------ | ------------------------------- |
 | GND    | GND          | Ground                          |
 | VCC    | 3V3          | Power (requires 3.3v)           |
-| CS     | --           | no connection                   |
-| SDO    | --           | no connection                   |
+| CS     | 3V3          | Power (requires 3.3v)           |
+| SDO    | GND          | Ground                          |
 | SDA    | SDA          | I2C data (no resistors needed)  |
 | SCL    | SCL          | I2C clock (no resistors needed) |
 | INT1   | Any GPIO Pin | Optional (if using interrupts)  |
 | INT2   | Any GPIO Pin | Optional (if using interrupts)  |
 
 ## Wiring Diagram
-
-<img src="accelerometer_ADXL345.assets/accelerometer_bb.png" style="width:800px;" />
 
 <img src="accelerometer_ADXL345.assets/Screenshot 2024-07-03 at 8.28.30 PM.png" alt="Screenshot 2024-07-03 at 8.28.30 PM" style="width:800px;"/>
 

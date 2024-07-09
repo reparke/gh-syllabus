@@ -17,12 +17,6 @@ show_in_list: true
 
 ## Wiring
 
-| PIR (Sparkfun)      | Photon 2                                                 |
-| ------------------- | -------------------------------------------------------- |
-| + **(red wire)**    | 5v                                                       |
-| - **(white wire)**  | GND                                                      |
-| AL **(black wire)** | digital input pin <br />(with 10K pullup resistor to 5v) |
-
 | Open PIR (Sparkfun) | Photon 2                  |
 | ------------------- | ------------------------- |
 | VCC                 | 3.3v                      |
@@ -34,7 +28,7 @@ show_in_list: true
 
 ## Wiring Guide
 
-<img src="pir_infrared_sensor.assets/Screenshot 2024-07-06 at 12.35.28 AM.png" alt="Screenshot 2024-07-06 at 12.35.28 AM" style="width:1000px;" /><img src="pir_infrared_sensor.assets/Screenshot 2024-07-04 at 12.58.44 AM.png" alt="Screenshot 2024-07-04 at 12.58.44 AM" style="width:1000px;" />
+<img src="pir_infrared_sensor.assets/Screenshot 2024-07-04 at 12.58.44 AM.png" alt="Screenshot 2024-07-04 at 12.58.44 AM" style="width:1000px;" />
 
 ## Operation (Sparkfun PIR)
 
