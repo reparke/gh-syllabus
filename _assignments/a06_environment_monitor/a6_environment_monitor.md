@@ -29,6 +29,8 @@ Here is an example:
 
 <img src="a6_environment_monitor.assets/IMG_1645.jpg" style="width:400px;" />
 
+*This diagram uses an older microcontroller and may not represent the exact wiring you use in your assignment.*
+
 ### OLED Screen
 <img src="a6_environment_monitor.assets/IMG_1642.jpg" style="width:200px" /> <img src="a6_environment_monitor.assets/IMG_1644.jpg" style="width:200px" />
 

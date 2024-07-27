@@ -114,7 +114,7 @@ Switch:
 
 *Fritzing design*
 
-![image-20240522190824101](guide_build_watch.assets/image-20240522190824101.png)
+<img src="guide_build_watch.assets/Screenshot 2024-07-27 at 2.46.49 PM.png" alt="Screenshot 2024-07-27 at 2.46.49 PM" />
 
 
 

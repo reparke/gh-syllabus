@@ -101,7 +101,7 @@ Goals
 
 -   In the Command Palette, type **Particle: Cloud Flash**
 -   It may take a few minutes to successfully complete. When the firmware has
-    been successfully installed, you should see the light on the device near the
+    been successfully installed, you should see the light on the device (labelled "D7") near the
     USB port blinking blue.
 
 ![image-20240520001305277](a1_blink.assets/image-20240520001305277.png)

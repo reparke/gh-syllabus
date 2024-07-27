@@ -92,11 +92,11 @@ config.mode(SystemSleepMode::ULTRA_LOW_POWER).gpio(D10, FALLING);
 System.sleep(config);
 ```
 ## Sleep Example #3
-- Put device in `ULTRA_LOW_POWER`, and wake with a rising (`LOW` to `HIGH`) signal on pin D5 **or** after 2 hours
+- Put device in `ULTRA_LOW_POWER`, and wake with a rising (`LOW` to `HIGH`) signal on pin D10 **or** after 2 hours
 
 ```c++
 SystemSleepConfiguration config;
-config.mode(SystemSleepMode::ULTRA_LOW_POWER).gpio(D5, RISING).duration(2h);
+config.mode(SystemSleepMode::ULTRA_LOW_POWER).gpio(D10, RISING).duration(2h);
 System.sleep(config);
 ```
 

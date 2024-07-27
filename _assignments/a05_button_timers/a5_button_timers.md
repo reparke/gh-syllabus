@@ -26,6 +26,10 @@ Goals
 
 <img src="a5_button_timers.assets/Screenshot 2024-07-07 at 2.18.05 AM.png" alt="Screenshot 2024-07-07 at 2.18.05 AM" style="width:600px" />
 
+*This diagram uses an older microcontroller and may not represent the exact wiring you use in your assignment.*
+
+
+
 The assignment is create a device that supports multiple timers. There are two buttons (red and blue) which trigger different timers. The RGB LED will flash red and/or blue briefly each second to indicate which timers are active. When a timer goes off, the RGB LED will flash a random sequence of colors to indicate a timer has ended. The majority of all the timing will be controlled a multi-tasking approach with `millis()` instead of `delay()` or `while` loops.
 
 At regular intervals, the device will publish how many times each timer has gone off.

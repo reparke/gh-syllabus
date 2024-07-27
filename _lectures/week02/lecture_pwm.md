@@ -67,9 +67,9 @@ title: Pulse Width Modulation
   * `A5`
   * `MISO` (`D16`)*
   * `MOSI` (`D15`)*
-* PWM pins can have different PWM values (duty cycles), but must share the same  frequency and resolution
+* PWM pins can have different PWM values (duty cycles), but must share the same frequency and resolution.
 
-*You can use either of these pins labels*
+*You can use any of these pins labels.
 
 ## 
 

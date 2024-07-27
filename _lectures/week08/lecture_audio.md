@@ -88,8 +88,14 @@ tone(D2, 1000, 0);		// play 1KHz tone (don't stop)
 ## A Note on Photon 2 and `tone()`
 
 * `tone()` requires a pin that supports PWM
-* All PWM pins on the Photon 2 are assigned to the same timer, meaning you can only generate ONE frequency at a time (you cannot play different notes with different buzzers at the same time)
-  * PWM pins: A2, A5, D15 (MO), D16 (MI), D1 (SCL)
+* Only certain pins support PWM
+  * `D1` (`SCL` or `A4`)
+  * `A2`
+  * `A5`
+  * `MISO` (`D16`)
+  * `MOSI` (`D15`)
+
+* All PWM pins on the Photon 2 are assigned to the same timer, meaning you can only generate ONE frequency at a time. In other words, you cannot play different notes with different buzzers at the same time.
 
 ## Stopping Sound
 Syntax

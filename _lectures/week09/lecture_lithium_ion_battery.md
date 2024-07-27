@@ -57,7 +57,7 @@ title: LiPo Battery
 
 ## New Photon 2 Pins
 
-<img src="lecture_lithium_ion_battery.assets/Screenshot 2024-06-21 at 11.24.57 PM.png" alt="Screenshot 2024-06-21 at 11.24.57 PM" style="width:700px;" />
+<img src="lecture_lithium_ion_battery.assets/Screenshot 2024-06-03 at 1.49.08 PM.png" alt="Screenshot 2024-06-03 at 1.49.08 PM" style="width:700px;" />
 
 * `EN` is a basically **on/off** for the Photon 2. Connect to **GND** to turn off Photon 2 (and save battery power)
 * `Li+` is internally-connected to the positive (+3.7v) of the battery

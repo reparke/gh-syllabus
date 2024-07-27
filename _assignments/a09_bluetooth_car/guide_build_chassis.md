@@ -247,13 +247,11 @@ Snap the two Breadboard Mounts (G) into the vertical slots in the back of the to
 
 ## 8. Connect Battery
 
-
-
-<img src="guide_build_chassis.assets/image-20240523133655434.png" style="width:500px;" />
+<img src="guide_build_chassis.assets/Screenshot 2024-07-27 at 2.05.47 PM.png" alt="Screenshot 2024-07-27 at 2.05.47 PM" style="width:500px;" />
 
 
 
-*==Important: If you are working on another assignment concurrently, consider building the this project on a different breadboard==*
+*==Important: If you are working on another assignment concurrently, consider building this project on a different breadboard==*
 
 ## 9. Build Circuit with Motor Controller
 
@@ -271,14 +269,9 @@ Snap the two Breadboard Mounts (G) into the vertical slots in the back of the to
 
 ### Wiring Diagram
 
-* Note the diagram below uses two mini breadboard. This was because the diagram because the switch was move to keep the diagram readable.
-* If you prefer, you use a single mini breadboard instead. You can do this by moving the switch onto the first breadboard between motor controller and the Photon 2
+<img src="guide_build_chassis.assets/Screenshot 2024-07-27 at 2.21.04 PM.png" alt="Screenshot 2024-07-27 at 2.21.04 PM" style="width:1000px" />
 
-
-
-<img src="guide_build_chassis.assets/image-20240523133735983.png" alt="image-20240523133400977" style="width:1000px" />
-
-
+*Note: If you want more space for your wiring, you can use the long breadboard.*
 
 ## 10. Connect Breadboard and Battery
 

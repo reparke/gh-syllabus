@@ -25,11 +25,15 @@ This assignment is to create a device that simulates brewing tea using state mac
 
 Here is a video overview: [https://youtu.be/lqQhFIVWDR0](https://youtu.be/lqQhFIVWDR0)
 
+*Note: Although an older microcontroller is used in the video, the assignment is still the same for the Photon 2.* 
+
 ### Device
 
 <img src="a8_tea_brewer_state_machine_blynk.assets/Photo Oct 04, 1 40 32 PM.jpg" alt="Photo Oct 04, 1 40 32 PM" style="width:400px" />
 
-*Note: The red button in the photo was used for testing only. You don't need to include it or use it in your project*
+*This diagram uses an older microcontroller and may not represent the exact wiring you use in your assignment.*
+
+*Note: The red button in the photo was used for testing only. You don't need to include it or use it in your assignment.*
 
 ### Blynk App
 

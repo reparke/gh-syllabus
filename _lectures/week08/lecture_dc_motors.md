@@ -154,6 +154,12 @@ Lorentz Force:  When the armature rotates 90 degrees, the two contacts reverse t
 
 * The PWM method of controlling motor speed operates on this range: **[0-255]**
 * Typically the PWM must be somewhat greater than 0 before it starts to spin
+* Reminder: only certain pins support PWM
+  * `D1` (`SCL` or `A4`)
+  * `A2`
+  * `A5`
+  * `MISO` (`D16`)
+  * `MOSI` (`D15`)
 
 ## Wiring Diagram
 

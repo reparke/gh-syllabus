@@ -31,10 +31,7 @@ show_in_list: true
   * `MISO` (`D16`)
   * `MOSI` (`D15`)
   
-
-PWM pins are assigned to one of three groups
-
-* Pins can have different PWM values (duty cycles), but must share the same  frequency and resolution
+* PWM pins can have different PWM values (duty cycles), but must share the same frequency and resolution. This is important if you are using buzzers. You can only generate ONE frequency at a time; you cannot play different notes with different buzzers at the same time.
 
 ## Operation
 

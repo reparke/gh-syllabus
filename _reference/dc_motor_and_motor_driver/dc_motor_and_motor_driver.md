@@ -40,7 +40,14 @@ show_in_list: true
 
 To connect a second DC motor, connect `PWMB`, `BI1`, and `BI1` to different Photon 2 pins in the same manner, and connect `BO1` and `BO2` to the wires on the second DC motor
 
+## Reminder: Photon 2 PWM Pins
 
+* Only certain pins support PWM
+  * `D1` (`SCL` or `A4`)
+  * `A2`
+  * `A5`
+  * `MISO` (`D16`)
+  * `MOSI` (`D15`)
 
 
 ## Operation: Controlling the Motor Direction

@@ -131,11 +131,6 @@ int angleVal = map(potVal, 0, 4095, 15, 165);
 
 ```
 
-## Reminder: Photon 2 PWM Pins
-
-* All PWM pins on the Photon 2 are assigned to the same timer, meaning you can only generate ONE frequency at a time (you cannot make different servos move in different directions at the same time)
-  * PWM pins: A2, A5, D15 (MO), D16 (MI), D1 (SCL)
-
 ## Fixing Servo Jittering
 
 - In some cases, the servo may start to make noise, stutter, or become hot when not it use
@@ -158,7 +153,14 @@ void loop(){
 }
 ```
 
+## Reminder: Photon 2 PWM Pins
 
+* Only certain pins support PWM
+  * `D1` (`SCL` or `A4`)
+  * `A2`
+  * `A5`
+  * `MISO` (`D16`)
+  * `MOSI` (`D15`)
 
 ## Exercise
 
