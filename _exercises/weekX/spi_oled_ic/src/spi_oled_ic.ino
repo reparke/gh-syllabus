@@ -36,8 +36,8 @@
 
     D/C ------------------- D5 (can be any digital pin)
 		RST ------------------- D6 (can be any digital pin)
-		CS  ------------------- D4 (can be any digital pin)
-    */
+		CS  ------------------- D7 (can be any digital pin)
+*/
 #include "SparkFunMicroOLED.h"  // Include MicroOLED library
 #include "math.h"
 

@@ -1,8 +1,6 @@
-
-
-const int PIN_RED = D2;
-const int PIN_GREEN = D3;
-const int PIN_BLUE = D4;
+const int PIN_RED = A2;
+const int PIN_GREEN = A5;
+const int PIN_BLUE = D15; // aka MOSI
 
 const int PIN_TRIGGER = D5;
 const int PIN_ECHO = D6;

@@ -15,13 +15,13 @@ Now to fahrenheit
 */
 
 // Part 1 - TMP36
-const int PIN_TMP36 = A5;
+const int PIN_TMP36 = A0;
 double tempC = 0;
 double tempF = 0;
 
-const int PIN_RED = D2;
-const int PIN_GREEN = D3;
-const int PIN_BLUE = D4;
+const int PIN_RED = A2;
+const int PIN_GREEN = A5;
+const int PIN_BLUE = D15; //aka MOSI
 
 void setup() {
     // Part 1 - TMP36

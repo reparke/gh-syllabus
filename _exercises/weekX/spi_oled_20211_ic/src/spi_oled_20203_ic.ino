@@ -34,9 +34,9 @@
     D1/MOSI ----------------- A5 (don't change)
     D0/SCK ------------------ A3 (don't change)
       D2
-      D/C ------------------- D6 (can be any digital pin)
-      RST ------------------- D7 (can be any digital pin)
-      CS  ------------------- A2 (can be any digital pin)
+      D/C ------------------- D5 (can be any digital pin)
+      RST ------------------- D6 (can be any digital pin)
+      CS  ------------------- D7 (can be any digital pin)
 
   Development environment specifics:
   	IDE: Particle Build

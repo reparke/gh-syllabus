@@ -4,9 +4,9 @@ const int PIN_SWITCH = D2;
 int switchRead;  //magnetic switch
 
 bool isDoorOpen = false;
-const int PIN_RED = D3;
-const int PIN_GREEN = D4;
-const int PIN_BLUE = D5;
+const int PIN_RED = A2;
+const int PIN_GREEN = A5;
+const int PIN_BLUE = D15; //aka MOSI
 
 void setup() {
     pinMode(PIN_LED, OUTPUT);

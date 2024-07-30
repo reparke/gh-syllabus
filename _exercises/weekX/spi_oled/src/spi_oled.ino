@@ -10,7 +10,7 @@
         D2  ------------------- unused
         D/C ------------------- D5 (can be any digital pin)
 		RST ------------------- D6 (can be any digital pin)
-		CS  ------------------- D4 (can be any digital pin)
+		CS  ------------------- D7 (can be any digital pin)
   Button
   ------
 Pin D2 (pullup)
@@ -31,7 +31,7 @@ Pin D2 (pullup)
 //////////////////////////
 #define PIN_OLED_RST D6  // Connect RST to pin 6
 #define PIN_OLED_DC D5   // Connect DC to pin 5 (required for SPI)
-#define PIN_OLED_CS D4   // Connect CS to pin A2 (required for SPI)
+#define PIN_OLED_CS D7   // Connect CS to pin 7 (required for SPI)
 MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
 
 // SYSTEM_MODE(MANUAL);
