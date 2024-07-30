@@ -34,15 +34,15 @@ title: DHT20 - Temperature and Humidity Sensor
 
 ## Wiring
 
-<img src="lecture_dht20.assets/dht20_bb.png" alt="dht20_bb" style="width:500px;" />
+<img src="lecture_dht20.assets/Screenshot 2024-07-28 at 5.11.56 PM.png" alt="Screenshot 2024-07-28 at 5.11.56 PM" style="width:500px;" />
 
-Note: In Fritzing, if you don't find a DHT 20 (black), you can used the DHT 22 or DHT 11 in your diagram.
+*Note: In Fritzing, if you don't find a DHT 20 (black), you can used the DHT 22 or DHT 11 in your diagram.*
 
 ## Software Library
 
 * The DHT20 uses a protocol called **I2C** to send data
 * In order to communicate with the device, we will need to use a special library 
-* The Argon-compatible library we will use is
+* The Photon 2-compatible library we will use is:
   ```DHT_I2C_Particle```
 
 

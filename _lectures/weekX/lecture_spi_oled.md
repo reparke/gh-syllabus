@@ -98,7 +98,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 * Communicating with the screen directly is complicated but we can use a library to simplify 
   * This is similar to installing software on your computer to communicate with your printer (*software driver*)
-* Argon can communicate with the screen using two different protocols: **SPI** or **I2C**
+* Photon 2 can communicate with the screen using two different protocols: **SPI** or **I2C**
 * *We will discuss **I2C** later in the course*
 
 ## What is Synchronous Communication?
@@ -119,7 +119,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 * **Synchronous:** data is sent on regular intervals controlled by a clock
 * **Serial:** one bit at time is sent / received 
 * Terminology:
-  * Argon will be called **main**
+  * Photon 2 will be called **main**
   * OLED (peripheral) will be called **secondary**
 
 
@@ -131,8 +131,8 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 ## SPI Structure
 ![bg opacity:.85 right:47% width:600px](lecture_spi_oled.assets/spi_illustration.png)
 * Two data pins for bidirectional communication (one for sending data, one for receiving)
-* Data <u>from</u> Argon (**M**ain **O**ut) <u>to</u> OLED (**S**econdary **I**n) is the **MOSI** pin
-* Data <u>to</u> Argon (**M**ain **I**n) <u>from</u> OLED (**S**econdary **O**ut) is the **MISO** pin
+* Data <u>from</u> Photon 2 (**M**ain **O**ut) <u>to</u> OLED (**S**econdary **I**n) is the **MOSI** pin
+* Data <u>to</u> Photon 2 (**M**ain **I**n) <u>from</u> OLED (**S**econdary **O**ut) is the **MISO** pin
 
 
 ## Additional Pins 
@@ -142,14 +142,14 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
   * e.g. if you were controlling multiple OLED screens
 * OLED screen includes a **D/C** pin to distiguish between **commands** (e.g. clear screen) and **data** (e.g. display byte `01001011`)
 
-## Argon - OLED Screen Pin Mapping
+## Photon 2 - OLED Screen Pin Mapping
 *see next slide*
 ## 
 <span style="font-size:75%">
 
 
 
-| OLED | Argon    | SPI Function | Notes                                                        |
+| OLED | Photon 2 | SPI Function | Notes                                                        |
 | --------- | ------------ | ------------ | ------------------------------------------------------------ |
 | GND       | GND          | Ground       | Ground                                                       |
 | 3V3       | 3V3          | Power        | 3.3v                                                         |
@@ -171,7 +171,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 ## Lab
 
 * Connect OLED and install library
-  * Use: `D/C (pin D6)`, `RST (pin D7)`, `CS (pin A2)`
+  * Use: `D/C (pin D5)`, `RST (pin D6)`, `CS (pin D7)`
 * Run sample code; Modify sample code to display `Hello world!`
 * Finally, create an [Etch A Sketch](https://www.youtube.com/watch?v=vVA9wdiIlN4) using the OLED screen with two potentiometers (to draw) and one button (to reset)
 * [Library code](https://github.com/sparkfun/Micro_OLED_Breakout/tree/V_1.0)
@@ -180,7 +180,7 @@ https://learn.sparkfun.com/tutorials/micro-oled-breakout-hookup-guide#using-the-
 
 ## Lab - Etch-a-Sketch
 
-<img src="lecture_spi_oled.assets/etch-a-sketch_v2_bb.png" style="width:900px;" />
+<img src="lecture_spi_oled.assets/Screenshot 2024-07-28 at 6.08.18 PM.png" alt="Screenshot 2024-07-28 at 6.08.18 PM" style="width:900px;"/>
 
 ## Credit
 

@@ -15,38 +15,38 @@ title: ThingSpeak Integration
 ## ThingSpeak ([https://thingspeak.com](https://thingspeak.com))
 
 * ThingSpeak is a web platform the IoT
-* It allows you to send data from Argon to be stored at ThingSpeak
-* You can create basic graphs and dashboard with the values from your Argon
+* It allows you to send data from Photon 2 to be stored at ThingSpeak
+* You can create basic graphs and dashboard with the values from your Photon 2
 * ThingSpeak also integrates with MATLAB for powerful data analytics
 
-## Configuring Argon and ThingSpeak
+## Configuring Photon 2 and ThingSpeak
 
 * The following examples are provided as a quick reference
 * More detailed steps were described in the lecture 
 
-## General Steps to Connect Argon and ThingSpeak
+## General Steps to Connect Photon 2 and ThingSpeak
 
 1. Create an integration -> webhook on [Particle console](https://console.particle.io/integrations) 
 
 2. Create channel at [ThingSpeak](https://thingspeak.com)
 
-3. Write firmware sketch and flash Argon
+3. Write firmware sketch and flash Photon 2
 
-## Example 1: Send Single Data Point from Argon to ThingSpeak
+## Example 1: Send Single Data Point from Photon 2 to ThingSpeak
 
 **Particle integration settings**
 
 <img src="lecture_thingspeak_integration.assets/image-20200404195445383.png" alt="image-20200404195445383" style="width:500px;" />
 
-## Example 1: Send Single Data Point from Argon to ThingSpeak
+## Example 1: Send Single Data Point from Photon 2 to ThingSpeak
 
 **ThingSpeak Channel Setttings**
 
 <img src="lecture_thingspeak_integration.assets/image-20200404195342458.png" alt="image-20200404195342458" style="width:500px;" />
 
-## Example 1: Send Single Data Point from Argon to ThingSpeak
+## Example 1: Send Single Data Point from Photon 2 to ThingSpeak
 
-**Argon code**
+**Photon 2 code**
 
 ```c++
 double temp;
@@ -63,21 +63,21 @@ void loop() {
 
 
 
-## Example 2: Send Multiple Data PointsArgon to Thingspeak 
+## Example 2: Send Multiple Data Points Photon 2 to Thingspeak 
 
 **Particle integration settings**
 
 <img src="lecture_thingspeak_integration.assets/image-20200404194632886.png" alt="image-20200404194632886" style="width:500px;" />
 
-## Example 2: Send Multiple Data Points from Argon to Thingspeak 
+## Example 2: Send Multiple Data Points from Photon 2 to Thingspeak 
 
 **ThingSpeak channel settings**
 
 <img src="lecture_thingspeak_integration.assets/image-20200404194744347.png" alt="image-20200404194744347" style="width:500px;" />
 
-## Example 2: Send Multiple Data PointsArgon to Thingspeak 
+## Example 2: Send Multiple Data Points Photon 2 to Thingspeak 
 
-**Argon Code**
+**Photon 2 Code**
 
 ```c++
 double temp;

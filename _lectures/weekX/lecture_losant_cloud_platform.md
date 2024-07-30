@@ -33,7 +33,7 @@ title: Losant Cloud Platform and Interface
 ## Devices
 
 * Device or sensor that communicates with Losant
-* Ex: One Argon that monitors the temperature and humidity in your living room
+* Ex: One Photon 2 that monitors the temperature and humidity in your living room
 
 ### Device attribute
 
@@ -43,7 +43,7 @@ title: Losant Cloud Platform and Interface
 ## Integration
 
 * Connection between Losant and external data source that allows data to securely from a web service to Losant
-* Ex. Connect Particle Cloud to Losant. Data will flow from Argon --> Particle Cloud --> Losant
+* Ex. Connect Particle Cloud to Losant. Data will flow from Photon 2 --> Particle Cloud --> Losant
 
 ### Integration Events
 
@@ -80,8 +80,8 @@ title: Losant Cloud Platform and Interface
 * Create application 
   <!-- up to 20 in free version-->
 
-* Create device for each Argon
-<!-- 
+* Create device for each Photon 2
+  <!-- 
   Go to Particle console > select device > copy device id (if multiple devices) -->
   
   * Go to Losant and create standalone device 
@@ -189,29 +189,3 @@ title: Losant Cloud Platform and Interface
         * Note that max of 5 messages per minute
       * Trigger workflow
     
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

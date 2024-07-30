@@ -52,8 +52,8 @@ title: I2C LCD Screen
 
 ## Basic Wiring
 
-* The standard wiring of an LCD uses 16 wires (requiring 12 pins on the Argon)!
-* The condensed wiring use 12 wires (requiring 8 pins on the Argon)!
+* The standard wiring of an LCD uses 16 wires (requiring 12 pins on the Photon 2)!
+* The condensed wiring use 12 wires (requiring 8 pins on the Photon 2)!
 * Writing code to communicate with the LCD is challenging (more on that later)
 
 ## Basic wiring Condensed
@@ -147,12 +147,12 @@ title: I2C LCD Screen
 
 ## Serial I2C LCD Wiring
 
-| LCD  | Argon | Function  | Notes      |
-| ---- | ----- | --------- | ---------- |
-| GND  | GND   | Ground    | Ground     |
-| VCC  | VUSB  | Power     | must be 5v |
-| SDA  | SDA   | data line |            |
-| SCK  | SCK   | clock     |            |
+| LCD  | Photon 2 | Function  | Notes      |
+| ---- | -------- | --------- | ---------- |
+| GND  | GND      | Ground    | Ground     |
+| VCC  | VUSB     | Power     | must be 5v |
+| SDA  | SDA      | data line |            |
+| SCK  | SCK      | clock     |            |
 
 ## Special Notes
 
@@ -166,7 +166,7 @@ title: I2C LCD Screen
 * Paste the following link into the top right
   https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises/week13/ultrasonic_start
 * Connect I2C LCD and run example code
-* Recommended library for Argon
+* Recommended library for the Photon 2:
   * ```LiquidCrystal_I2C_Spark```
 
 ## Exercise 2

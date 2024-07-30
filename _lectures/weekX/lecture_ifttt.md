@@ -19,7 +19,7 @@ title: IFTTT
 * Create very simple recipes (called applets) using conditional logic such as
   * "If I am within 5 miles from home, then start the A/C"
   * "If I take a photo, then automatically save it to my Dropbox"
-  * "If I publish a temperature with Argon, then add the time and temperature to a Google spreadsheet"
+  * "If I publish a temperature with the Photon 2, then add the time and temperature to a Google spreadsheet"
 
 ## Usefulness of IFTTT
 
@@ -54,7 +54,7 @@ title: IFTTT
 
 ## Lab
 
-<img src="lecture_ifttt.assets/switch-magnetic-door_and_rgb_led_bb.png" style="width:500px;" />
+<img src="lecture_ifttt.assets/Screenshot 2024-07-28 at 5.20.52 PM.png" alt="Screenshot 2024-07-28 at 5.20.52 PM" style="width:500px;"/>
 
 ## Documentation
 

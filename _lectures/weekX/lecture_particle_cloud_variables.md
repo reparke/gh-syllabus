@@ -61,7 +61,7 @@ title: Cloud Communication - Accessing Variables
 
 ## Particle Cloud
 
-* Argon has built in support for connecting to Particle Cloud
+* Photon 2 has built in support for connecting to Particle Cloud
 * Particle Cloud is essentially free (very generous free tier)
 * Basically acts as a real-time communication system
   * i.e. the current temperature, but not temperature from last Tuesday
@@ -82,7 +82,7 @@ title: Cloud Communication - Accessing Variables
 
 ## Cloud Variables
 
-* Register / expose a variable in your Argon code so it can be accessed online
+* Register / expose a variable in your Photon 2 code so it can be accessed online
 * This does **not** publish the value of the variable automatically
 * Cloud is notified variable exists, and it is retrieved only when requested
 * Up to 20 variables may be registered
@@ -134,8 +134,8 @@ void setup() {
 
 ## Documentation
 
-* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/argon/#cloud-functions)
-* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/argon/#particle-publish-)
-* [Cloud Variables](https://docs.particle.io/reference/device-os/firmware/argon/#particle-variable-)
-* [Cloud Functions](https://docs.particle.io/reference/device-os/firmware/argon/#particle-function-)
-* [Subscribing to Events](https://docs.particle.io/reference/device-os/firmware/argon/#particle-subscribe-)
+* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/#cloud-functions)
+* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/#particle-publish-)
+* [Cloud Variables](https://docs.particle.io/reference/device-os/firmware/#particle-variable-)
+* [Cloud Functions](https://docs.particle.io/reference/device-os/firmware/#particle-function-)
+* [Subscribing to Events](https://docs.particle.io/reference/device-os/firmware/#particle-subscribe-)

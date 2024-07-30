@@ -24,7 +24,7 @@ title: Debouncing
 
 * Buttons and switches are mechanical and they tend to fluctuate briefly when pressed
 * Leads to circuit "bounce" before the value stabilizes
-* Argon typically goes through `loop()` multiple times before this stops so we can get false buttons presses or incorrect values
+* The Photon 2 typically goes through `loop()` multiple times before this stops so we can get false buttons presses or incorrect values
 
 ## Solving Debouncing
 

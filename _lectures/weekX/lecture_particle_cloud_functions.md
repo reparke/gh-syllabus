@@ -41,7 +41,7 @@ title: Cloud Communication - Calling Functions
 
 ## Cloud Functions
 
-* Register / expose a C++ function in your Argon code so it can be called online
+* Register / expose a C++ function in your Photon 2 code so it can be called online
 * Up to 15 functions may be registered
 
 ## Cloud Function Process
@@ -87,7 +87,7 @@ Function must return an `int` (typically -1 for fail)
 
 ## Lab Wiring
 
-<img src="lecture_particle_cloud_functions.assets/rgb_led_tmp36.png" alt="rgb_led_tmp36" style="width:800px;" />
+<img src="lecture_particle_cloud_functions.assets/Screenshot 2024-07-28 at 5.29.47 PM.png" alt="Screenshot 2024-07-28 at 5.29.47 PM" style="width:800px;" />
 
 ## Lab
 
@@ -123,8 +123,8 @@ if (str1.equalsIgnoreCase(str2)) {
 
 ## Documentation
 
-* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/argon/#cloud-functions)
-* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/argon/#particle-publish-)
-* [Cloud Variables](https://docs.particle.io/reference/device-os/firmware/argon/#particle-variable-)
-* [Cloud Functions](https://docs.particle.io/reference/device-os/firmware/argon/#particle-function-)
-* [Subscribing to Events](https://docs.particle.io/reference/device-os/firmware/argon/#particle-subscribe-)
+* [Particle Cloud API](https://docs.particle.io/reference/device-os/firmware/#cloud-functions)
+* [Publishing Events](https://docs.particle.io/reference/device-os/firmware/#particle-publish-)
+* [Cloud Variables](https://docs.particle.io/reference/device-os/firmware/#particle-variable-)
+* [Cloud Functions](https://docs.particle.io/reference/device-os/firmware/#particle-function-)
+* [Subscribing to Events](https://docs.particle.io/reference/device-os/firmware/#particle-subscribe-)
