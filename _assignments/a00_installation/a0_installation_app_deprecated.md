@@ -3,7 +3,7 @@ week: 1
 number: 0
 category: assignments
 title: Installation with Particle App
-date_due: Aug 27 @ 11:59 pm
+date_due: 
 show_in_list: false
 ---
 
@@ -51,7 +51,7 @@ Install Fritzing
 
 >   Fritzing is a program to create visual layouts of device projects.
 
--   ITP has paid for a Fritzing support license for the class. To download it, please go to the course Blackboard site and click on "Fritzing Download".
+-   ITP has paid for a Fritzing support license for the class. To download it, please go to the course Brightspace site and click on "Fritzing Download".
 
 -   Download and install Fritzing, and then continue these instructions
 

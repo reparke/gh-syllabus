@@ -53,7 +53,7 @@ Week 10 idea:
 
 **Possible**
 
-* [ ] use something other than blackboard for submissions
+* [ ] use something other than Brightspace for submissions
 
 * [ ] summary of info. 
 
@@ -91,7 +91,7 @@ Week 10 idea:
   - [ ] record video to explain car ( no specifics but  pseudocode design for carForward, leftMotor, etc. (students will build  this for their)
   - [ ] Revise JSON in week 10. Try using ArduinoJSON instead of RK. The generation of RK is very tough. This would mean re-recording the parsing video to use ArduinoJSON
 - [ ] Week 12
-  - [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
+  - [ ] wk12: revise Brightspace project grading rubric (sensors and actuators worth 10 points each, remove UI)
 
 ## General Feedback (Spring 2021)
 
@@ -117,7 +117,7 @@ Week 10 idea:
   * [https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all)
 
 * Video discussion of C++ review (make little videos for functions); curate or record
-* Have short blackboard quiz
+* Have short Brightspace quiz
 
 ### Assignment
 
@@ -444,7 +444,7 @@ Week 10 idea:
 
 #### Lecture
 
-* ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
+* ==Announce Brightspace quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
 * ==Announce survey==
 
 - Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
@@ -486,7 +486,7 @@ Week 10 idea:
 
 #### Lecture
 
-- ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
+- ==Announce Brightspace quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
 - ==Announce survey==
 - ==Remind students about extra credit for posting on social issues==
 - Quiz is open Thurs 2/18 after class (6 pm PST) until Monday 2/22 at 11:59 pm PST. Once you start it, you will have 60 minutes but it might take you 15 min.

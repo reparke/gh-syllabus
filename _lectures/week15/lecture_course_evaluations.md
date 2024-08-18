@@ -19,7 +19,7 @@ title: Course Evaluations
 - If **<span style="color:#990000">33%</span>** of the class fills it, everyone gets **<span style="color:#990000">+1**</span> on final
 - If **<span style="color:#990000">67%**</span> of the class fills it, everyone gets **<span style="color:#990000">+3**</span> on final
 
-- To access, go to Blackboard 
+- To access, go to Brightspace 
   - Stay on main page (not specific section)
   - Click on "Course Evaluations" tab in the upper left hand navigation bar
 

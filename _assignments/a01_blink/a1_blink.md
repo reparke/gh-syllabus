@@ -3,13 +3,13 @@ week: 1
 number: 1
 category: assignments
 title: Basic Blink
-date_due: Jan 14 @ 11:59 pm
+date_due: Sun Sep 1 @ 11:59 pm
 ---
 
 Assignment 1 – Basic Blink
 ==========================
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 
 Goals
@@ -119,7 +119,7 @@ Goals
 Deliverables
 ------------
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 
 1. A compressed file containing your project. Follow the guidelines for full
@@ -134,7 +134,7 @@ Deliverables
 
    - Rename the zip file based on naming convention
 
-   - Upload zip file to Blackboard site for our course
+   - Upload zip file to Brightspace site for our course
 
 2. A photograph of your device connected to USB with the cyan light on (indicating it is connected).
 

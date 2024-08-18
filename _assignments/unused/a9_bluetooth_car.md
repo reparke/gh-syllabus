@@ -4,7 +4,7 @@
 Assignment 9 – Bluetooth Car
 ============================
 
-[Submit on Blackboard](https://blackboard.usc.edu/)
+[Submit on Brightspace](https://brightspace.usc.edu/)
 
 Goals
 -----
@@ -85,7 +85,7 @@ Deliverables
 
 4.  Rename the zip file based on naming convention
 
-5.  Upload zip file to Blackboard site for our course
+5.  Upload zip file to Brightspace site for our course
 
 6.  A photograph of your device connected to USB with the blue light on.
 

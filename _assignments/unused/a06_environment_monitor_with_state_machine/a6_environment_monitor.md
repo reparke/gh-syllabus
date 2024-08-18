@@ -3,7 +3,7 @@
 Assignment 6 – Environment Monitor and Dashboard
 =========================================
 
-[Submit on Blackboard](https://blackboard.usc.edu/)
+[Submit on Brightspace](https://brightspace.usc.edu/)
 
 Goals 
 -----
@@ -168,7 +168,7 @@ Video Submission Checklist
 Deliverables
 ------------
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 
 1. Fritzing layout file
@@ -185,7 +185,7 @@ Deliverables
 
    - Rename the zip file based on naming convention
 
-   - Upload zip file to Blackboard site for our course
+   - Upload zip file to Brightspace site for our course
 
 3. A photograph of your device connected to USB with the blue light on.
 4. **==A screenshot of your Initial State dashboard==**

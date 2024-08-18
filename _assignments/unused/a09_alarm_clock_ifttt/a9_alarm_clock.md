@@ -1,7 +1,7 @@
 Assignment 8 – Alarm Clock
 ==========================
 
-[Submit on Blackboard](https://blackboard.usc.edu/)
+[Submit on Brightspace](https://brightspace.usc.edu/)
 
 Goals
 -----
@@ -100,8 +100,8 @@ Deliverables
 * Navigate to your project folder.
 * Include the *entire* folder in a zip file
 * Rename the zip file based on naming convention
-* Upload zip file to Blackboard site for our course
-* Separately, upload your video Blackboard (or submit the link to a video hosted elsewhere)
+* Upload zip file to Brightspace site for our course
+* Separately, upload your video Brightspace (or submit the link to a video hosted elsewhere)
 
 **Required naming convention** (replace \# with the current assignment number)
 

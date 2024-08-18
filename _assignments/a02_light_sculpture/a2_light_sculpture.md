@@ -3,13 +3,13 @@ week: 2
 number: 2
 category: assignments
 title: Light Sculpture
-date_due: Jan 21 @ 11:59 pm
+date_due: Sun Sep 8 @ 11:59 pm
 ---
 
 Assignment 2 – Light Sculpture
 ==============================
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 
 Goals
@@ -74,7 +74,7 @@ Some example are below.
 Deliverables
 ------------
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 
 1. A compressed file containing your project. Follow the guidelines for full
@@ -89,7 +89,7 @@ Deliverables
 
    - Rename the zip file based on naming convention
 
-   - Upload zip file to Blackboard site for our course
+   - Upload zip file to Brightspace site for our course
 
 2. A photograph of your device connected to USB with the cyan light on (indicating it is connected).
 

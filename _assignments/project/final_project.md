@@ -3,13 +3,13 @@ week: 11
 number: 12
 category: assignments
 title: Project
-date_due: Proposal due Sun Mar 31 @ 11:59 pm; Milestone due Sun Apr 21 @ 11:59 pm; Finished device and presentation during Final Period (in person) Fri May 3 @ 11:59 pm
+date_due: Proposal due Sun Nov 10 @ 11:59 pm; Milestone due Sun Dec 1 @ 11:59 pm; Finished device and presentation during Final Period (in person) Fri Dec 13 for MW class and Thu Dec 17 for TTh class
 ---
 
 Final Project
 =============
 
-[Submit on Blackboard](https://blackboard.usc.edu/)
+[Submit on Brightspace](https://brightspace.usc.edu/)
 
 Goals
 -----
@@ -88,11 +88,11 @@ Deliverables
 
 ### Project - Final Deliverables 
 
-**The remaining items are to be submitted on Blackboard**
+**The remaining items are to be submitted on Brightspace**
 
 -   Workbench project with firmware code
 -   Video of functioning device
--   User interface web app (submit link on Blackboard)
+-   User interface web app (submit link on Brightspace)
 -   Developer documentation
     -   Assume a future ITP348 student is taking the course and told to make a
         specific change to your project (add a feature, fix an error, etc.).
@@ -127,7 +127,7 @@ Deliverables
 
 ## Submission Instructions
 
-* Submit all documents via Blackboard
+* Submit all documents via Brightspace
 * Bring device to in-person project demonstration
 
 Grading

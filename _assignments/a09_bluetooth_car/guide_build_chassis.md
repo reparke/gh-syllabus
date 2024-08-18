@@ -247,7 +247,7 @@ Snap the two Breadboard Mounts (G) into the vertical slots in the back of the to
 
 ## 8. Connect Battery
 
-<img src="guide_build_chassis.assets/Screenshot 2024-07-27 at 2.05.47 PM.png" alt="Screenshot 2024-07-27 at 2.05.47 PM" style="width:500px;" />
+<img src="guide_build_chassis.assets/battery_fritzing.png" alt="" style="width:500px;" />
 
 
 
@@ -269,7 +269,7 @@ Snap the two Breadboard Mounts (G) into the vertical slots in the back of the to
 
 ### Wiring Diagram
 
-<img src="guide_build_chassis.assets/Screenshot 2024-07-27 at 2.21.04 PM.png" alt="Screenshot 2024-07-27 at 2.21.04 PM" style="width:1000px" />
+<img src="guide_build_chassis.assets/wiring_diagram" alt="" style="width:1000px" />
 
 *Note: If you want more space for your wiring, you can use the long breadboard.*
 

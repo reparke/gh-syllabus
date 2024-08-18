@@ -77,11 +77,11 @@ knowledge will be considered)
 
 ### Format
 
-This course will make use of Blackboard for content and assignments. Lecture
-slides and any supplemental course content will be posted to Blackboard for use
+This course will make use of Brightspace for content and assignments. Lecture
+slides and any supplemental course content will be posted to Brightspace for use
 by all students. Any and all announcements for the course will be posted to
-Blackboard. All assignments will be posted to Blackboard and will be submitted
-through Blackboard. **Students must familiarize themselves with Blackboard
+Brightspace. All assignments will be posted to Brightspace and will be submitted
+through Brightspace. **Students must familiarize themselves with Brightspace
 before the course begins**.
 
 ### Course Materials
@@ -93,7 +93,7 @@ instructor
 
 ##### Required Readings
 
-Readings will be posted on Blackboard during the semester.
+Readings will be posted on Brightspace during the semester.
 
 ##### Supplementary Books
 
@@ -125,7 +125,7 @@ to be completed individually unless otherwise noted.
 There will be programming assignments which will focus on a further
 understanding of problem-solving, algorithms, and logical thinking using C, and
 are due 1 week after being assigned. Assignments are to be completed
-individually and submitted on Blackboard.
+individually and submitted on Brightspace.
 
 
 
@@ -238,7 +238,7 @@ changed.
 
 #### Late Policy
 
--   Assignments are due on the stated day on Blackboard (typically at 11:59 pm)
+-   Assignments are due on the stated day on Brightspace (typically at 11:59 pm)
 
 -   Students are given 3 “grace days” (self-granted extensions) which may be
     used for extra time without penalty
@@ -254,7 +254,7 @@ changed.
 
 -   **Late work will not be accepted after all the grace days have been used**
 
-Important: it is the responsibility of the student to state in their Blackboard
+Important: it is the responsibility of the student to state in their Brightspace
 submission that they intend to use a grace day.
 
 *(Adapted from Stanford’s EE365 policy)*

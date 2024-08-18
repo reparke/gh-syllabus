@@ -410,7 +410,7 @@ Week 10 idea:
 
 #### Lecture
 
-* ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
+* ==Announce Brightspace quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
 * ==Announce survey==
 
 - Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
@@ -453,7 +453,7 @@ Week 10 idea:
 
 #### Lecture
 
-- ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
+- ==Announce Brightspace quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
 - ==Announce survey==
 - ==Remind students about extra credit for posting on social issues==
 - Quiz is open Thurs 2/18 after class (6 pm PST) until Monday 2/22 at 11:59 pm PST. Once you start it, you will have 60 minutes but it might take you 15 min.

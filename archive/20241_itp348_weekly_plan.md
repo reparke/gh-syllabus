@@ -1,13 +1,5 @@
 ---
       
-layout: single
-classes: wide
-title: Weekly Plan
-toc: false
-toc_label: "Quick Links"
-toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
-toc_sticky: true 
-
 ---
 
 
@@ -177,9 +169,9 @@ Week 10 idea:
 
   
 
-## 2. Pulse Width Modulation, ADC ==Fall 2024 - Labor Day Holiday==
+## 2. Pulse Width Modulation, ADC ==Spring 2024 - MLK Holiday==
 
-### Holiday Alternative Plan
+### Spring Alternative Plan
 
 - w2d1 - holiday
 - w2d2
@@ -195,8 +187,6 @@ Week 10 idea:
   - RGB leds
   - functions
   - libraries (if time)
-  
-  
 
 ### Announcements
 
@@ -402,7 +392,7 @@ Week 10 idea:
 
 * Photoresistor (video)
 
-#### Exercise
+#### Exerci
 
 * Calibrate photoresistor
 
@@ -580,7 +570,7 @@ Week 10 idea:
 
 
 
-## 7. Sound ==Fall Break Holiday==
+## 7. Finite State Machines ==Spring Presidents Day Holiday==
 
 ### Notes
 
@@ -588,10 +578,10 @@ Week 10 idea:
   - ==idea: Day 1 covers motors by directly building fan with potentiometer; Day 2 cover bluetooth and control can with bluetooth==
 
 - ==**Fall**==
-  - w7d1 Sound
-  - w7d2 holiday
-  - w8d1, FSM stoplight 
-  - w8d2 FSM washing machine
+  - w7d1 FSM stoplight
+  - w7d2 FSM washing machine
+  - w8d1, we covered sound 
+  - w8d2 holiday
   - w9d1, we covered motors and servos, and built the fan
   - w9d2, we introduced bluetooth with fan 
 
@@ -612,35 +602,7 @@ Week 10 idea:
 - Due start of current week:   A6 - Shared Environment Monitor
 - Given out start of current week:  A7 - Preliminary Proposal Idea
 
-### Day 1
 
-#### Lecture
-
-* Speaker
-* Tone
-* Pitches
-
-### Exercise
-
-- Show basic tone example with `delay` (blocking)
-- Ask students to try to blink on board LED every 100ms and also play a tone every 1000ms ( use `millis` and `noTone` to make non-blocking)
-- Show students `pitches.h` and logic for creating music with tempo
-- Have students try to create their own song
-
-### Day 2 ==Fall Break==
-
-
-
-## 8. Finite State Machines
-
-### Reading
-
-- 
-
-### Assignment
-
-- Due start of current week:   A7 - Preliminary Proposal Idea
-- Given out start of current week: A8 - Tea State Machine with Blynk (due in two weeks)
 
 ### Day 1
 
@@ -697,22 +659,36 @@ Week 10 idea:
 
 - 
 
-## 9. Bluetooth and Motors
+
+## 8. Sound, Motors, Servos ==Fall break==
 
 ### Reading
 
 - Motors
   - [https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx](https://www.electronicproducts.com/Electromechanical_Components/Motors_and_Controllers/Motor_control_design_an_introduction_to_motors_and_controllers.aspx)
-- Bluetooth
-  * [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
-  * [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
 
 ### Assignment
 
-* Due start of current week: none
-* Given out start of current week: none, but continue to work on  A8 - Timer with Blynk 
+- Due start of current week:   A7 - Preliminary Proposal Idea
+- Given out start of current week: A8 - Tea State Machine with Blynk (due in two weeks)
+
 
 ### Day 1
+
+#### Lecture
+
+* Speaker
+* Tone
+* Pitches
+
+### Exercise
+
+- Show basic tone example with `delay` (blocking)
+- Ask students to try to blink on board LED every 100ms and also play a tone every 1000ms ( use `millis` and `noTone` to make non-blocking)
+- Show students `pitches.h` and logic for creating music with tempo
+- Have students try to create their own song
+
+### Day 2
 
 - Have students build fan and circuit before class
 
@@ -735,17 +711,35 @@ Week 10 idea:
 - Use potentiometer to direction 
 - Use potentiometer to control fan speed while servo rotates automatically
 
-#### Lecture
-
-- LIPO battery
-
 #### Feedback
 
 - students followed remotely and enjoyed building the fan
 - I skipped the separate servo part and went directly to using the servo to control the fan
 - ==**Idea for next semester**==: create assignment using motors and bluetooth (something like the fan)
 
-### Day 2
+
+## 9. Bluetooth and Motors
+
+### Assignment
+
+* Due start of current week: none
+* Given out start of current week: none, but continue to work on  A8 - Timer with Blynk 
+
+### Before class
+
+- Send wiring guide with full fan circuit 
+- ask students to have a narrow bottle of water and some tape
+- Have students install Bluetooth phone apps
+  - [Adafruit Bluefruit](https://learn.adafruit.com/bluefruit-le-connect)
+  - [Nordic Semiconductor nRF Toolbox](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Toolbox)
+
+### Reading
+
+- Bluetooth
+  * [https://learn.sparkfun.com/tutorials/bluetooth-basics/all](https://learn.sparkfun.com/tutorials/bluetooth-basics/all)
+  * [https://learn.adafruit.com/introduction-to-bluetooth-low-energy/](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/)
+
+### Day 1
 
 #### Lecture
 
@@ -756,19 +750,13 @@ Week 10 idea:
 #### Lab - ble_fan_start
 
 - Distribute github link to download (post on slides)
-
 - Describe project goals
-
 - Explain **argon_ble_setup.h** at a high level
   - Have students change **DEVICE_NAME**
-  
 - Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
-
 - Code together blinking D7 when **press 1**
-
 - Have students code on their own D7 on with **press up** and D7 off when **release up**
-
-  
+- 
 
 #### Lab - ble_uart_control_start
 
@@ -786,11 +774,36 @@ Week 10 idea:
 
 - Have students try to control servo and fan motor on their own
 
+#### Example - ble_uart_rgb_accel_example
+
+<!--skip for time -->
+
+- Distribute github link to download (post on slides)
+- Describe project goals
+- explain **onDataReceived()**
+- explain **updateRGBvalues()**
+- explain **changeRgbLight()**
+- Demo device with code
+
+### Day 2
+
+#### Lecture
+
+- LIPO battery
+
+#### Lecture
+
+- 
+
 ### Feedback
 
 
 
-## 10. Cloud Dashboards; APIs; Weather;  (==**This may be too much content**==)
+# *Spring Break*
+
+
+
+## 11. Cloud Dashboards; APIs; Weather;  (==**This may be too much content**==)
 
 ### Reading
 
@@ -1058,7 +1071,7 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 - Use accelerometer to control RGB LED (if time)
 - Try interrupts for tap 
 
-## 14. RFID + ==Thanksgiving==
+## 14. RFID + Thanksgiving
 
 ### Reading
 

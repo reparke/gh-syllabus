@@ -3,14 +3,14 @@ week: 7
 number: 7
 category: assignments
 title: Preliminary Proposal Ideas for Final Project
-date_due: Feb 25 @ 11:59 pm
+date_due: Sun Oct 13 @ 11:59 pm
 
 ---
 
 Preliminary Ideas for Final Project
 =============
 
-[Submit on Blackboard](https://blackboard.usc.edu/)
+[Submit on Brightspace](https://brightspace.usc.edu/)
 
 Goals
 -----
@@ -75,7 +75,7 @@ Overview
 Deliverables (for this preliminary proposal)
 ------------
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 * Two distinct ideas (i.e. they should address different problems)
 

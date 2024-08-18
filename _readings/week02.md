@@ -20,7 +20,7 @@ title: Pre-Lecture Activities
 
 ### Build before class Mon / Tues 
 
-- none
+- #### none
 
 ### Build before class Wed / Thurs 
 

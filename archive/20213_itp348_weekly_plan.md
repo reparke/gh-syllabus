@@ -37,7 +37,7 @@
 
 **Possible**
 
-* [ ] use something other than blackboard for submissions
+* [ ] use something other than Brightspace for submissions
 
 * [ ] summary of info. Things like what do wires do I connect to what pins for <whatever sensor> or  what is the generic formula for button-pushing detection? "living document". Whether that's a required part of assignments or a group doc different students add to each week, I've found that when students have to be accountable for something beyond their own notes, we tend to put  effort into it.I have seen this in other classes, something like, as a midterm  prep we might all be required to add an answer to a group doc. Although  it's annoying to do at times, I think a lot of people appreciated  hearing facts in other people's words. 
 
@@ -129,7 +129,7 @@
 - [x] Week 12
   - [x] Debouncing
   - [x] Heart rate sensors
-  - [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
+  - [ ] wk12: revise Brightspace project grading rubric (sensors and actuators worth 10 points each, remove UI)
   
 - [x] Week 13
   - [x] RFID
@@ -165,7 +165,7 @@
 * [http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/](http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/)
 * [https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all)
 * Video discussion of C++ review (make little videos for functions); curate or record
-* Have short blackboard quiz
+* Have short Brightspace quiz
 
 ### Day 1
 
@@ -499,7 +499,7 @@
 
 #### Lecture
 
-* ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
+* ==Announce Brightspace quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
 * ==Announce survey==
 
 - Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
@@ -537,7 +537,7 @@
 
 #### Lecture
 
-- ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
+- ==Announce Brightspace quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
 - ==Announce survey==
 - ==Remind students about extra credit for posting on social issues==
 - Quiz is open Thurs 2/18 after class (6 pm PST) until Monday 2/22 at 11:59 pm PST. Once you start it, you will have 60 minutes but it might take you 15 min.

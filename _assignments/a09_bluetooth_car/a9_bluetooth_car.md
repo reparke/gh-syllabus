@@ -3,13 +3,13 @@ week: 10
 number: 9
 category: assignments
 title: Bluetooth Car
-date_due: Mar 24 @ 11:59 pm
+date_due: Sun Nov 3 @ 11:59 pm
 
 ---
 Assignment 9 – Bluetooth Car
 ============================
 
-[Submit on Blackboard](https://blackboard.usc.edu/)
+[Submit on Brightspace](https://brightspace.usc.edu/)
 
 Goals
 -----
@@ -94,7 +94,7 @@ Here is a video overview: [https://youtu.be/BB8cKghUftI](https://youtu.be/BB8cKg
 Deliverables
 ------------
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 
 1. A compressed file containing your project. Follow the guidelines for full
@@ -109,9 +109,9 @@ Deliverables
 
    - Rename the zip file based on naming convention
 
-   - Upload zip file to Blackboard site for our course
+   - Upload zip file to Brightspace site for our course
 
-2.  **==Upload to Blackboard:==** A photograph of your customized car connected to the battery with the cyan light on.
+2.  **==Upload to Brightspace:==** A photograph of your customized car connected to the battery with the cyan light on.
 3.  ==**Upload to YouTube:**== video demonstrating your car being controlled over Bluetooth and driving in a figure-8 pattern. 
     **Important: please check "Not specifically made for kids"**
 

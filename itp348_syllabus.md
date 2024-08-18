@@ -8,7 +8,7 @@ toc_icon: "bookmark"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: true
 ---
 
-## Syllabus Spring 2024
+## Syllabus Fall 2024
 
 ### Course Info
 
@@ -70,19 +70,16 @@ knowledge will be considered)
 
 ### Format
 
-This course will make use of Blackboard for content and assignments. Lecture
-slides and any supplemental course content will be posted to Blackboard for use
-by all students. Any and all announcements for the course will be posted to
-Blackboard. All assignments will be posted to Blackboard and will be submitted
-through Blackboard. **Students must familiarize themselves with Blackboard
+This course will make use of this course website for all content, assignments, and lecture videos. However, students will submit their assignments on Brightspace.
+
+
+Announcements for the course will be posted to
+Brightspace. **Students must familiarize themselves with Brightspace
 before the course begins**.
 
 ### Course Kit
 
-Students will be required to purchase a kit at the USC bookstore for this
-course. This kit is created specifically for the course and must be purchased
-during the first week of class. Additional components will be provided by the
-instructor
+Students will be required to purchase a custom kit from Sparkfun (link will be provided to students directly). This kit is created specifically for the course and must be purchased during the first week of class. Additional components will be provided by the instructor
 
 ### Required Videos
 
@@ -104,21 +101,15 @@ Videos for each week are posted on the course website and should be watched prio
 
 ## Course Deliverables
 
-### Hardware Assignments
+### Assignments
 
-There will be hardware assignments that are due 1 week after being assigned.
-These assignments require building a hardware device with the microcontroller.
-Students will typically submit code, a schematic drawing, a photograph of the
-finished device, and a video of the device functioning. Code from external
-sources may be used as a reference, as long as it is properly cited. These are
-to be completed individually unless otherwise noted.
+There will be assignments that are due 1 week that require building a hardware device with the microcontroller. Students will typically submit code, a schematic drawing, a photograph of the finished device, and a video of the device functioning. 
 
-### Programming Assignments
 
-There will be programming assignments which will focus on a further
-understanding of problem-solving, algorithms, and logical thinking using C, and
-are due 1 week after being assigned. Assignments are to be completed
-individually and submitted on Blackboard.
+
+All software code and electronics design most be completed solely by the student. Code from external sources may be used as a reference, as long as it is properly cited.  
+
+Assignments are to be completed individually and submitted on Brightspace.
 
 
 
@@ -217,7 +208,7 @@ changed.
 
 ### Late Policy
 
--   Assignments are due on the stated day on Blackboard (typically at 11:59 pm)
+-   Assignments are due on the stated day on Brightspace (typically at 11:59 pm)
 -   Students are given 5 “grace days” (self-granted extensions) which may be
     used for extra time without penalty
 -   Grace days may be used for assignments only, **not the final project**
@@ -227,7 +218,7 @@ changed.
 -   Instructor-granted extensions are only considered after all grace days are
     used and only given in rare, exceptional situations
 
-Important: it is the responsibility of the student to state in their Blackboard
+Important: it is the responsibility of the student to state in their Brightspace
 submission that they intend to use a grace day.
 
 *(Adapted from Stanford’s EE365 policy)*

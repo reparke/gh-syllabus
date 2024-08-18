@@ -3,13 +3,13 @@ week: 11
 number: 10
 category: assignments
 title: Smart Watch Build (bring to class)
-date_due: Mar 31 @ 11:59 pm
+date_due: Sun Nov 10 @ 11:59 pm
 
 ---
 Assignment 10 – Smart Watch Build
 ============================
 
-[Submit on Blackboard](https://blackboard.usc.edu/)
+[Submit on Brightspace](https://brightspace.usc.edu/)
 
 Goals
 -----
@@ -46,7 +46,7 @@ This assignment is to build a smart watch, which we will program in class. Given
 Deliverables
 ------------
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 
 1. A picture of your completed watch assembly.

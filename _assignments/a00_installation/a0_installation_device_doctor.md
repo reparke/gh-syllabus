@@ -3,7 +3,7 @@ week: 1
 number: 0
 category: assignments
 title: Installation and Setup Using Device Doctor
-date_due: Jan 14 @ 11:59 pm
+date_due: Sun Sep 1 @ 11:59 pm
 ---
 
 IMPORTANT: This is not the preferred to setup your Photon 2, but if you need to join a Wifi network without a password (like USC Guest Wireless), you should use this approach since https://setup.particle.io doesn't work with empty passwords (as of 1/2024)
@@ -99,7 +99,7 @@ Install Fritzing
 
 >   Fritzing is a program to create visual layouts of device projects.
 
--   ITP has paid for a Fritzing support license for the class. To download it, please go to the course Blackboard site and click on "Fritzing Download".
+-   ITP has paid for a Fritzing support license for the class. To download it, please go to the course Brightspace site and click on "Fritzing Download".
 
 -   Download and install Fritzing, and then continue these instructions
 

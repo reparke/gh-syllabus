@@ -1,8 +1,3 @@
----
-week: 8
-category: readings
-title: Pre-Lecture Activities
----
 
 
 ## Week {{page.week}}
@@ -11,7 +6,7 @@ title: Pre-Lecture Activities
 
 * `switch` and `enum` in C++ (already covered in class last week)
 
-  {% include video id="W6uycVUrkm4" provider="youtube" %}
+    {% include video id="W6uycVUrkm4" provider="youtube" %}
 
 * State Machines
 
@@ -24,7 +19,13 @@ title: Pre-Lecture Activities
 - MicroOLED
 - *You can see what parts look like visually by checking out the [kit page](https://reparke.github.io/ITP348-Physical-Computing/kit)*
 
-### Build before class Mon / Tues 
+### Mon / Tues 
+
+- Enjoy the holiday!
+
+
+
+### Build before class Wed / Thurs 
 
 | RGB LED                    | Photon 2 Pins |
 | -------------------------- | ------------- |
@@ -39,20 +40,5 @@ title: Pre-Lecture Activities
 | SDA (Blue)              | SDA           |
 | SCL (Yellow)            | SCL           |
 
-<img src="week08.assets/Screenshot 2024-07-03 at 7.24.52 PM.png" alt="Screenshot 2024-07-03 at 7.24.52 PM" />
+<img src="week07_no_spring_holiday.assets/Screenshot 2024-07-03 at 7.24.52 PM.png" alt="Screenshot 2024-07-03 at 7.24.52 PM" />
 
-
-
-
-
-### Build before class Wed / Thurs 
-
-| LED             | Photon 2 Pins |
-| --------------- | ------------- |
-| Magnetic Switch | D5            |
-| RGB Red LED     | A2            |
-| RGB Green LED   | A5            |
-| RGB Blue LED    | D15 (MO)      |
-| Potentiometer   | A1            |
-
-<img src="week08.assets/Screenshot 2024-07-03 at 7.29.08 PM.png" alt="Screenshot 2024-07-03 at 7.29.08 PM" />

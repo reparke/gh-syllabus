@@ -30,7 +30,7 @@ title: Course Introduction
 
 - LAs: Neftali, Montserrat, Judy, Swanav
 - Grader: Swanav
-- Open lab hours for will be posted on Blackboard
+- Open lab hours for will be posted on Brightspace
 - For grading issues, post on Piazza and tag the LA
 - For general questions, you can contact either of us
 
@@ -63,7 +63,7 @@ None!
 ## Assignments
 
 - Assigned weekly and due Sunday at *11:59pm* officially (Monday unofficially)
-- Submissions will be on Blackboard and typically include **code files** as well as **video files**
+- Submissions will be on Brightspace and typically include **code files** as well as **video files**
 - We can not accept assignments via email
 - Must be well commented and documented for full-credit
 
@@ -74,7 +74,7 @@ None!
 	- Rigor (how difficult was the feature to implement)
 	- Functionality (does the feature work properly)
 	- Applicability (does the feature make sense given the larger assignment)
-- **Important:** Must describe the extra features in Blackboard submission 
+- **Important:** Must describe the extra features in Brightspace submission 
 
 ## Labs
 
@@ -102,7 +102,7 @@ None!
 - You have 5 “late days” which may be used for extra time without penalty
 - May be used for one assignment or distributed across several assignments
 - Instructor-granted extensions are only considered after all grace days are used and only given in **rare, exceptional situations**
-- **Important:** You must state that you are using a grace day in their Blackboard submission
+- **Important:** You must state that you are using a grace day in their Brightspace submission
 
 ## Late Lab and Poll Policy
 
@@ -143,7 +143,7 @@ None!
 ## Piazza
 
 - Website used for class discussions on homework
-- Everyone should have been invited (link posted on Blackboard)
+- Everyone should have been invited (link posted on Brightspace)
 - Forum monitored by all instructors, graders, LAs
 - **No posting of code large sections of** **code**
 

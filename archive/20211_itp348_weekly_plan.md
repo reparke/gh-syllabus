@@ -1,13 +1,13 @@
 ## 		Things to implement
 
 * [ ] Improvements
-  * [ ] add late days column to blackboard
+  * [ ] add late days column to Brightspace
   * [ ] create ["cheat sheet"](https://education.github.com/git-cheat-sheet-education.pdf) or video about basic workbench operations (flash, create project, import library)
   * [ ] tell students not to unclaim device
   * [ ] distribute grading among TAs
   * [ ] have TAs not attend every class
   * [ ] create better rubric for assignments by breaking down things like "game logic" to be more explicit so students can go down the checklist [like this](https://bytes.usc.edu/files/ee109/labs/lab4v/Lab4_Checkoff.pdf)
-  * [ ] use something other than blackboard for submissions
+  * [ ] use something other than Brightspace for submissions
   * [ ] give list of items students should include in videos each week
   * [ ] summary of info. Things like what do wires do I connect to what pins for <whatever sensor> or  what is the generic formula for button-pushing detection? "living document". Whether that's a required part of assignments or a group doc different students add to each week, I've found that when students have to be accountable for something beyond their own notes, we tend to put  effort into it.
 * [ ] need to order
@@ -43,7 +43,7 @@
 * [x] wk11: may be too much dashboard content; consider moving single data point for initial state to earlier week
 * [ ] wk10: review initial state code. need if JSON needs to be covered first
 * [ ] wk11: inquire about future class TAs and kit TA
-* [ ] wk12: revise Blackboard project grading rubric (sensors and actuators worth 10 points each, remove UI)
+* [ ] wk12: revise Brightspace project grading rubric (sensors and actuators worth 10 points each, remove UI)
 * [x] general: try to incorporate `enum` or `switch` earlier in semester
 * [x] wk11: building smart watch: need to text and pictures to use velcro
 * [x] account for wellness days in schedule
@@ -134,7 +134,7 @@
 * [http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/](http://www.tigoe.com/pcomp/code/circuits/understanding-electricity/)
 * [https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all)
 * Video discussion of C++ review (make little videos for functions); curate or record
-* Have short blackboard quiz
+* Have short Brightspace quiz
 
 ### Day 1
 
@@ -463,7 +463,7 @@
 
 #### Lecture
 
-* ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
+* ==Announce Brightspace quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==
 * ==Announce survey==
 
 - Show students wiring picture (two buttons and an LED); give them 5 minutes to connect
@@ -501,7 +501,7 @@
 
 #### Lecture
 
-- ==Announce blackboard quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
+- ==Announce Brightspace quiz during week 6 (ask for feedback if it should be on the weekend or after monday)==\
 - ==Announce survey==
 - ==Remind students about extra credit for posting on social issues==
 - Quiz is open Thurs 2/18 after class (6 pm PST) until Monday 2/22 at 11:59 pm PST. Once you start it, you will have 60 minutes but it might take you 15 min.

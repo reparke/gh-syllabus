@@ -3,14 +3,14 @@ week: 5
 number: 5
 category: assignments
 title: Button Timers
-date_due: Feb 11 @ 11:59 pm
+date_due: Sun Sep 29 @ 11:59 pm
 
 ---
 
 Assignment 5 – Button Timers
 ==================================
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 
 Goals
@@ -24,7 +24,7 @@ Goals
 
 ## Overview
 
-<img src="a5_button_timers.assets/Screenshot 2024-07-07 at 2.18.05 AM.png" alt="Screenshot 2024-07-07 at 2.18.05 AM" style="width:600px" />
+<img src="a5_button_timers.assets/a5_button_timer" alt="" style="width:600px" />
 
 *This diagram uses an older microcontroller and may not represent the exact wiring you use in your assignment.*
 
@@ -172,7 +172,7 @@ Here is a video overview: [https://youtu.be/MuYajFfvIvk](https://youtu.be/MuYajF
 Deliverables
 ------------
 
-*[Submit on Blackboard](https://blackboard.usc.edu)*
+*[Submit on Brightspace](https://brightspace.usc.edu)*
 
 
 1. Fritzing layout file
@@ -189,7 +189,7 @@ Deliverables
 
    - Rename the zip file based on naming convention
 
-   - Upload zip file to Blackboard site for our course
+   - Upload zip file to Brightspace site for our course
 
 3. A photograph of your device connected to USB with the cyan light on (indicating it is connected).
 
