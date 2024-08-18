@@ -44,21 +44,29 @@ Create Particle account
 >   (e.g. to install new firmware code), we will use Particle’s cloud software.
 
 -   You need to use the [Chrome](https://www.google.com/chrome/) browser to configure your Photon 2 and visit this site:
-    [https://docs.particle.io/tools/doctor/](https://docs.particle.io/tools/doctor/)
+    [https://setup.particle.io](https://setup.particle.io)
 
--   Go to **Get Started** and create a new personal account
+-   Go to **Get Started** and create a new account for education
 
 ![image-20230803162122479](a0_installation.assets/image-20230803162122479.png)
 
 
+
+![image-20240818120305698](a0_installation.assets/image-20240818120305698.png)
 
 Setup Your Device
 -----------------------
 
 >   Continue with setup in your web browser
 
+* Click **Continue to device setup**
+
+  ![image-20240818120441707](a0_installation.assets/image-20240818120441707.png)
+
+
+
 - Go to **Get Started**
-![image-20230803163011651](a0_installation.assets/image-20230803163011651.png)
+  ![image-20230803163011651](a0_installation.assets/image-20230803163011651.png)
 
 
 
@@ -67,6 +75,8 @@ Setup Your Device
 ![image-20230803163328040](a0_installation.assets/image-20230803163328040.png)
 
 - Continue with the four step process to configure your device via USB. This process will take few minutes. As the Photon 2 updates, it will blink different colors.
+
+
 
 - When you get to the following screen that says **Organize your Particle Device**, choose **or Create a New Product**
   ![image-20230803165122069](a0_installation.assets/image-20230803165122069.png)
@@ -81,6 +91,8 @@ Setup Your Device
 - For device name, you can use the default name, or create something unique, just make sure the name has only letters, numbers, and underscore (no spaces or special symbols)
   ![image-20230803165816381](a0_installation.assets/image-20230803165816381.png)
 
+  
+  
 - Choose your Wifi network. If you are on campus, use **USC Guest Wireless**. If you are off-campus and need to login to a website before connected to Wifi, you will need to do a couple things before you can get the Photon 2 online. You can follow these [instructions](https://reparke.github.io/ITP348-Physical-Computing/reference/general/captive_wifi.html) or reach out to course staff for assistance. 
   ![image-20230803165937445](a0_installation.assets/image-20230803165937445.png)
 

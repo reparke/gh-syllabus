@@ -29,7 +29,7 @@ void loop() {
     if (currMillis - prevMillis > blynkDelay) {
         prevMillis = currMillis;
 
-        /* template for SENDING P to APP*/
+        /* template for SENDING PHOTON to APP*/
         /*
             Blynk.virtualWrite(V0, 0);
         */

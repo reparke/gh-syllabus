@@ -12,10 +12,10 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 
 
 
-unsigned long blynkDelay = 1000;  // delay between sending ARGON to APP
+unsigned long blynkDelay = 1000;  // delay between sending PHOTON to APP
 unsigned long prevMillis = 0;
 
-/* template for RECEIVING APP to ARGON */
+/* template for RECEIVING APP to PHOTON */
 /*
 BLYNK_WRITE(V0) {
 
@@ -35,7 +35,7 @@ void loop() {
     if (currMillis - prevMillis > blynkDelay) {
         prevMillis = currMillis;
 
-        /* template for SENDING ARGON to APP*/
+        /* template for SENDING PHOTON to APP*/
         /*
             Blynk.virtualWrite(V0, 0);
         */
