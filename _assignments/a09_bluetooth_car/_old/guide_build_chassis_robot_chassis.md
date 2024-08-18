@@ -120,7 +120,7 @@ Screw on Wheels to DC Motors and add the wheel rubber tires.
 
 #### Motor Controller Wiring Guide
 
-| Motor Controller | Argon | --   | Motor Controller | Argon |
+| Motor Controller | Photon 2 | --   | Motor Controller | Photon 2 |
 | ---------------- | ----- | ---- | ---------------- | ----- |
 | PWMA             | D8    |      | VCC              | 3v3   |
 | AIN2             | D7    |      | GND              | GND   |
@@ -132,7 +132,7 @@ Screw on Wheels to DC Motors and add the wheel rubber tires.
 #### Wiring Diagram
 
 * Note the diagram below uses two mini breadboard. This was because the diagram because the switch was move to keep the diagram readable.
-* If you prefer, you use a single mini breadboard instead. You can do this by moving the switch onto the first breadboard between motor controller and the Argon
+* If you prefer, you use a single mini breadboard instead. You can do this by moving the switch onto the first breadboard between motor controller and the Photon 2
 
 <img src="guide_build_chassis_robot_chassis.assets/1572472040619.png" style="width:1000px" />
 
@@ -142,4 +142,4 @@ Screw on Wheels to DC Motors and add the wheel rubber tires.
 ## References
 
 * [Sparkfun](https://www.sparkfun.com/products/13853)
-* [Particle](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
+* [Particle](https://docs.particle.io/reference/datasheets/wi-fi/photon-2-datasheet/)

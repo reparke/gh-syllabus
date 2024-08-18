@@ -20,7 +20,7 @@ You'll find course material and useful links on the side.
 - [Exercises](https://github.com/reparke/ITP348-Physical-Computing/tree/main/_exercises) - GitHub repository with the code we create during class. All projects are created with [Particle Workbench](https://www.particle.io/workbench/)
 - [Brightspace](https://brightspace.usc.edu) - For submitting assignments
 - [Piazza](https://piazza.com/usc/spring2024/itp348/home) - Discussion board for assignments and class
-- [ITP-348 Argon troubleshooting guide](https://docs.google.com/document/d/1UFSCmwaw6rjz7XeGWI9wWUYsbfuyXEIstKvY_P2V1Bw/edit?usp=sharing) This is a super useful document with the most common issues and solutions encountered in ITP 348
+- [ITP-348 Photon 2 troubleshooting guide](https://docs.google.com/document/d/12_kRqHdNPQmiGWF4pe0LWZbBaEmdoF-bbJtCxojCN74/edit#heading=h.7fjmqgnpux8d) This is a super useful document with the most common issues and solutions encountered in ITP 348
 
 #### Specific Course Content Links
 - [Syllabus](itp348_syllabus.md) - Course plan, policies, and date

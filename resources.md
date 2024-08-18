@@ -14,16 +14,16 @@ toc_sticky: true
 ## References
 
 ### Debugging Tips
-- [ITP-348 Argon troubleshooting guide](https://docs.google.com/document/d/1UFSCmwaw6rjz7XeGWI9wWUYsbfuyXEIstKvY_P2V1Bw/edit?usp=sharing) This is a super useful document with the most common issues and solutions encountered in ITP 348
+- [ITP-348 Photon 2 troubleshooting guide](https://docs.google.com/document/d/12_kRqHdNPQmiGWF4pe0LWZbBaEmdoF-bbJtCxojCN74/edit#heading=h.7fjmqgnpux8d) This is a super useful document with the most common issues and solutions encountered in ITP 348
 - [Official Particle community forum](https://community.particle.io/) This is best place to search for errors you encounter
 
 ### Useful Particle Links
 
 - [Device console](https://console.particle.io/devices)
-- [Argon datasheet](https://docs.particle.io/datasheets/wi-fi/argon-datasheet/)
-- [Argon pin close-up](https://docs.particle.io/assets/images/argon/argon-dimensions.png)
-- [Language reference](https://docs.particle.io/reference/device-os/firmware/argon/#language-syntax)
-- [Cloud functions refenence](https://docs.particle.io/reference/device-os/firmware/argon/)
+- [Photon 2 datasheet](https://docs.particle.io/reference/datasheets/wi-fi/photon-2-datasheet/)
+- [Photon 2 pins close-up](resources/photon_2_pinout/photon_2_pinout.jpg)
+- [Language reference](https://docs.particle.io/reference/device-os/api/language-syntax/language-syntax/)
+- [Cloud functions reference](https://docs.particle.io/reference/device-os/api/cloud-functions/particle-function/)
 - [Web IDE](https://build.particle.io/build)
 
 
@@ -112,7 +112,7 @@ Note that I can not vouch for most of these projects or sensors personally.
 ### Air Quality and Environment Sensors
 
 * [Great resource on Seeed air sensors](http://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/CCS811) 
-* [Sample Argon project](https://community.particle.io/t/argon-powered-air-quality-monitor/48932)
+* [Sample Workbench project](https://community.particle.io/t/argon-powered-air-quality-monitor/48932)
 * [HPM particle sensor](https://www.sparkfun.com/products/14959) ($40)
   * This sensor is challenging to physically connect and to code for 
 * [Grove dust sensor](https://www.seeedstudio.com/Grove-Dust-Sensor-PPD42NS.html) ($12)
@@ -136,7 +136,7 @@ Note that I can not vouch for most of these projects or sensors personally.
 ### Guitar Effects Pedal
 
 * [Project](https://www.metamorphsoftware.com/photon-guitar-pedal#): Particle-based guitar compression / distortion pedal
-* [Project](https://community.particle.io/t/heres-how-to-build-a-fretless-guitar-powered-by-a-particle-argon/48553): Argon-powered fretless guitar
+* [Project](https://community.particle.io/t/heres-how-to-build-a-fretless-guitar-powered-by-a-particle-argon/48553): Particle-powered fretless guitar
 * [Project](https://www.electrosmash.com/pedalshield-uno): DIY Arduino guitar effects pedal
 
 ### Wearables / E-Textiles
@@ -150,11 +150,9 @@ Note that I can not vouch for most of these projects or sensors personally.
 
 
 
-### NFC and RFID on Argon
+### RFID on Photon 2
 
-* Argon can only emulate NFC tags--currently supports turning on, turning off, and being notified if tag has been read
-* Argon can't communicate / read NFC tags or support payments
-* There is a $50 [RFID sensor](https://www.sparkfun.com/products/13198) that enables the Argon to read RFID tags
+* There is a $50 [RFID sensor](https://www.sparkfun.com/products/13198) that enables the Photon 2 to read RFID tags
   * Note that you need to match RFID frequency and tags
 
 

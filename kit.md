@@ -12,7 +12,7 @@ replace: [($1]\(($1)\)      -->
 
 ## Custom Course Kit
 
-We have a custom kit for the course, which was packaged and provided by the great people at [Sparkfun](https://www.sparkfun.com/). Students will need to purchase this course kit in lieu of a textbook. In addition to items in the course kit, ITP will provide enrolled students with an [Argon](https://store.particle.io/products/argon) microcontroller and a few extra components.
+We have a custom kit for the course, which was packaged and provided by the great people at [Sparkfun](https://www.sparkfun.com/). Students will need to purchase this course kit in lieu of a textbook. In addition to items in the course kit, ITP will provide enrolled students with an [Photon 2](https://store.particle.io/products/photon-2) microcontroller and a few extra components.
 
 ### Kit Contents
 
@@ -46,7 +46,7 @@ Prices reflect Particle's Wholesale / Education discount and sales tax in Los An
 | Name                                             | Quantity | Price (USD) | URL                                                          | Image                                                        |
 | ------------------------------------------------ | -------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Fritzing                                         | 1        | $8.00       | [https://fritzing.org/](https://fritzing.org/)               |                                                              |
-| Particle Argon                                   | 1        | $25.00      | [https://store.particle.io/products/argon-kit](https://store.particle.io/products/argon-kit) | ![argon](kit.assets/argon.jpg)                               |
+| Particle Photon 2                                | 1        | $25.00      | https://store.particle.io/products/photon-2](https://store.particle.io/products/photon-2) | ![photon 2](kit.assets/photon-2.jpg)                            |
 | USB Cable                                        | 1        | $2.00       | [https://www.monoprice.com/product?p_id=13919](https://www.monoprice.com/product?p_id=13919) |                                                              |
 | Qwiic cable - Breadboard jumper 4 pin            | 2        | $1.50       | [https://www.sparkfun.com/products/14425](https://www.sparkfun.com/products/14425) | ![qwiic_breadboard](kit.assets/qwiic_breadboard.jpg)         |
 | Qwiic Cable - 200mm                              | 1        | $1.60       | [https://www.sparkfun.com/products/17258](https://www.sparkfun.com/products/17258) | ![qwiic_cable](kit.assets/qwiic_cable.jpg)                   |
@@ -69,7 +69,6 @@ Prices reflect Particle's Wholesale / Education discount and sales tax in Los An
 | HiLetgo RFID Kit                                 | 1        | $5.95       | [https://a.co/d/12BJTPz](https://a.co/d/12BJTPz)             | ![rfid](kit.assets/rfid.jpg)                                 |
 | 13.56MHz MIFARE Classic 1K RFID Smart Cards      | 2        | $0.35       | [https://a.co/d/7oRuANE](https://a.co/d/7oRuANE)             | ![rfid_cards](kit.assets/rfid_cards.jpg)                     |
 | Dolphin Displacement Connnector (26-16AWG)       | 1        | $0.90       | [https://a.co/d/8LGO87W](https://a.co/d/8LGO87W)             | ![dolphin](kit.assets/dolphin.jpg)                           |
-| Envelopes                                        | 10       | $0.04       | [https://a.co/d/hJnvjuX](https://a.co/d/hJnvjuX)             | ![envelopes](kit.assets/envelopes.jpg)                       |
 | Plastic 1" wide Hook / Loop (Velcro) (in inches) | 12       | $0.10       | [https://a.co/d/50t6xz0](https://a.co/d/50t6xz0)             |                                                              |
 | Velcro 2" wide loop (in inches)                  | 14       | $0.03       | [https://www.countrybrookdesign.com/2-inch-red-sew-on-loop-only.html](https://www.countrybrookdesign.com/2-inch-red-sew-on-loop-only.html) |                                                              |
 | Velcro 1/2" wide hook (in inches)                | 2        | $0.02       | [https://www.countrybrookdesign.com/1-2-inch-sew-on-hook-only.html](https://www.countrybrookdesign.com/1-2-inch-sew-on-hook-only.html) |                                                              |

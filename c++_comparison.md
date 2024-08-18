@@ -14,7 +14,7 @@ Below are examples of complete programs using functions, arrays / lists, and cla
 
 You can also download all the [source code](resources\c++_comparison\c++_comparison.zip) directly.
 
-**Note:** In programming the Argon for this course, we will not use the standard input / output in C++ (e.g. `cin` and `cout`) and we will be creating custom classes, but they are included below.
+**Note:** In programming the Photon 2 for this course, we will not use the standard input / output in C++ (e.g. `cin` and `cout`) and we will be creating custom classes, but they are included below.
 
 
 

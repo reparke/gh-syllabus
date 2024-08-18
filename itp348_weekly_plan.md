@@ -162,12 +162,12 @@ Week 10 idea:
 - Safety
 - Software tools: Workbench (open and discuss)
 
-- Argon microcontroller
+- Photon 2 microcontroller
 - LED 
 
 #### Lab
 
-- show how to put argon on breadboard and remove 
+- show how to put Photon 2 on breadboard and remove 
 - turn on LED + resistor by connecting to 3v3 and ground
 - show how to flash and make light blink (most people won't have their device claimed yet)
 
@@ -308,7 +308,7 @@ Week 10 idea:
 
 #### Guided activity
 
-- Connect button with resistor on Argon
+- Connect button with resistor on Photon 2
 
 #### Lab (students work on)
 
@@ -473,7 +473,7 @@ Week 10 idea:
 #### Exercise (in slides)
 
 * Connect a TMP36 and output the current temperature to the serial monitor
-* Consider what type of input is this signal? How will this value be read by Argon
+* Consider what type of input is this signal? How will this value be read by Photon 2
 
 #### Lecture
 
@@ -750,7 +750,7 @@ Week 10 idea:
 #### Lecture
 
 - Bluetooth
-- Argon BLE syntax
+- Photon 2 BLE syntax
 - Show Bluefruit app (skip nRF Toolbox)
 
 #### Lab - ble_fan_start
@@ -759,7 +759,7 @@ Week 10 idea:
 
 - Describe project goals
 
-- Explain **argon_ble_setup.h** at a high level
+- Explain **particle_ble_setup.h** at a high level
   - Have students change **DEVICE_NAME**
   
 - Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
@@ -774,7 +774,7 @@ Week 10 idea:
 
 - Distribute github link to download (post on slides)
 - Describe project goals
-- Explain **argon_ble_setup.h** at a high level
+- Explain **particle_ble_setup.h** at a high level
   - Have students change **DEVICE_NAME**
 - Pull up Bluefruit [documentation](https://learn.adafruit.com/bluefruit-le-connect/controller) and explain button signal
 - Code together blinking D7 when **press 1**
@@ -1031,7 +1031,7 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 {"name":"{{location.name}}", "temperature":"{{current.temperature}}","description":"{{current.weather_descriptions.0}}","weather_code":"{{current.weather_code}}","uv_index":"{{current.uv_index}}"}
 ```
 
-* NB 2: With threading enabled, `setup()` runs before cloud connectivity is enabled. In order to get the weather initially when Argon turns on, we need to set a boolean flag and do a check in `loop()`
+* NB 2: With threading enabled, `setup()` runs before cloud connectivity is enabled. In order to get the weather initially when Photon 2 turns on, we need to set a boolean flag and do a check in `loop()`
   * [Particle community post](https://community.particle.io/t/cant-particle-publish-in-setup-with-cpp-file/66688/3?u=rob7)
 
 
