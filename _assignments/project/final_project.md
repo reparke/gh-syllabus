@@ -135,7 +135,7 @@ Grading
 
 | Item                                                      | Points |
 | --------------------------------------------------------- | ------ |
-| **App proposal**                                          |        |
+| **Device proposal**                                       |        |
 | Motivation / Need / Audience                              | **4**  |
 | Features                                                  | **4**  |
 | Budget                                                    | **4**  |
