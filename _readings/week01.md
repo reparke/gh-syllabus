@@ -9,7 +9,7 @@ title: Pre-Lecture Activities
 ### Watch before class this week
 
 * Using Workbench
-  {% include video id="o5UglvrR2S4" provider="youtube" %}
+  {% include video id="uVmPuS4UBzo" provider="youtube" %}
 
 *Note: the default code that appears in new Workbench project has changed this video was recorded, but the process described in this video is still the same*
 
