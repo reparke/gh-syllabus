@@ -28,8 +28,8 @@ title: Course Introduction
 
 ## Learning Assistants / Graders
 
-- LAs: Neftali, Montserrat, Judy, Swanav
-- Grader: Swanav
+- LAs: Neftali, Montserrat, Judy, Luis, Olivia, Ilce
+- Grader: Luis
 - Open lab hours for will be posted on Brightspace
 - For grading issues, post on Piazza and tag the LA
 - For general questions, you can contact either of us
@@ -47,6 +47,13 @@ title: Course Introduction
 - No textbook,
 - Required kit must be purchased from the bookstore
 - Readings will be available online
+
+## Zoom Lectures
+
+- Classes are hands-on, building projects related to assignments so attendance is required
+- Be respectful of other students and help each other when possible
+- Participate by responding in the chat, raising hand, and responded with reactions
+- Please have cameras on (DM me if sometimes comes up)
 
 ## Grading Scale
 

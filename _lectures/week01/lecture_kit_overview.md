@@ -18,9 +18,11 @@ title: Kit Overview
 ## Kit
 
 - No course textbook
-- The kit for the course is **required** and must be purchase from the bookstore
+  - There are two **required** kits this course
+  - #1 you pick up from the ITP office in RRB (M-F @ 9-5)
+  - #2 you purchased from Sparkfun (link was emailed to you). Please purchased this **as soon as possible**
+
 - This includes all the most of the components we will discuss during the semester
-- Additional parts will be provided by instructor
 - [Kit parts and pictures](https://reparke.github.io/ITP348-Physical-Computing/kit)
 
 ## Student Responsibilities

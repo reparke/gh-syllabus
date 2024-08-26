@@ -3,7 +3,8 @@ week: 1
 number: 0
 category: assignments
 title: Installation and Setup Using Device Doctor
-date_due: Sun Sep 1 @ 11:59 pm
+date_due: 
+show_in_list: false
 ---
 
 IMPORTANT: This is not the preferred to setup your Photon 2, but if you need to join a Wifi network without a password (like USC Guest Wireless), you should use this approach since https://setup.particle.io doesn't work with empty passwords (as of 1/2024)
