@@ -14,7 +14,7 @@ title: Photon 2 Microcontroller
 
 # Photon 2 Microcontroller
 
-![bg opacity:.75](lecture_argon_microcontroller.assets/PHOTON2-EVT-ISO_1200x.webp)
+![bg opacity:.75](lecture_photon_2_microcontroller.assets/PHOTON2-EVT-ISO_1200x.webp)
 
 ## Microcontroller
 
