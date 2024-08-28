@@ -42,7 +42,6 @@ title: Photon 2 Microcontroller
 
 1. What voltage does the Photon 2 operate at?
 2. Which IC (integrated circuit) is the "main" processor?
-3. Which IC controls the Wifi module?
 4. What is the difference between pins `3v3` and `VUSB`?
 5. How many digital input pins are there? 
 6. How many analog output pins are there?
