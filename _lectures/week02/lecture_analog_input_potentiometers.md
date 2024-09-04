@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 theme: itp
 
 week: 2
@@ -143,7 +143,7 @@ void loop() {
 
 ## Wiring Diagram 
 
-![Screenshot 2024-07-07 at 3.46.35 AM](lecture_analog_input_potentiometers.assets/Screenshot 2024-07-07 at 3.46.35 AM.png)
+<img src="lecture_analog_input_potentiometers.assets/wiring.png" style="zoom:25%;" />
 
 * Using **Vin=3.3v** and a 10k potentiometer, what do you expect for the range of values of **potValue**?
 

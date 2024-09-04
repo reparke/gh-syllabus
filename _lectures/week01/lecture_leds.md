@@ -92,7 +92,7 @@ forward current is current the LED can handle-->
 
 ## Wiring
 
-![Screenshot 2024-07-07 at 3.11.08 AM](lecture_leds.assets/Screenshot 2024-07-07 at 3.11.08 AM.png)
+<img src="lecture_leds.assets/led_wiring.png" alt="Screenshot 2024-07-07 at 3.11.08 AM" width="500px" />
 
 ## Digital Output
 

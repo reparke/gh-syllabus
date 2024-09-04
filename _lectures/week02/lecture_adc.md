@@ -73,7 +73,7 @@ or 1 unit = 4095/3.3 -> so 1 unit is 0.8 mV
 
 ## Exercise
 
-![Screenshot 2024-07-07 at 3.45.55 AM](lecture_adc.assets/Screenshot 2024-07-07 at 3.45.55 AM.png)
+<img src="lecture_adc.assets/adc_wiring.png" alt="Screenshot 2024-07-07 at 3.45.55 AM" width="300px;"/>
 
 * Connect potentiometer to A0
 * Connect LED to pin A2 (do we need a pin with PWM?)

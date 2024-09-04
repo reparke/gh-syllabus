@@ -48,11 +48,11 @@ title: Course Introduction
 - Required kit must be purchased from the bookstore
 - Readings will be available online
 
-## Zoom Lectures
+## Live Zoom Classes
 
 - Classes are hands-on, building projects related to assignments so attendance is required
 - Be respectful of other students and help each other when possible
-- Participate by responding in the chat, raising hand, and responded with reactions
+- Participate by typing in the chat, raising hand, and responding with reactions
 - Please have cameras on (DM me if sometimes comes up)
 
 ## Grading Scale
