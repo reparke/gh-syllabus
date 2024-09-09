@@ -5,6 +5,17 @@ SerialLogHandler logHandler(LOG_LEVEL_INFO);
 
 // use 5.8
 /*
+
+Review:
+  PWM: vary the output voltage to approx an analog out -> vary the brightness of LEDs
+      analogWrite:  what is the range of values we use with analogwrite and PWM؛
+            0-255
+
+  ADC: analog to digital conversion: measuring the input voltage of the pot
+    analog input
+    analogRead()    -> actual voltage is 0-3.3v but our results from analogread is what?
+            0-4095
+
   When we make a new project
     1) Configure for device
     2) Create our constants for the pins we are using
@@ -70,11 +81,22 @@ void loop() {
   // read the voltage on the pot
   //what is the range of ADC values? 0-4095
   int potValue = analogRead(PIN_POT);
-  Serial.println("Potentiometer value " + String(potValue));
+  //convert from potvalue (0-4095) to pwm (0-255)
+  // int pwmValue = potValue / 4095 * 255; //doesn't work
+  /*
+    in c++, / is division. 
+    int / int --> int (DIFFERENT FROM PYTHON)
+    when you divide two ints, the decimal is thrown away
+
+    float  / int --> float
+  */
+  // int pwmValue = potValue / 4095.0 * 255; // this works
+  int pwmValue = float(potValue) / 4095 * 255;  //works with all variables
+
+  Serial.println("Potentiometer value " + String(potValue) + ", pwm value = "+ String(pwmValue));
   delay(100);
 
   // input is 0-4095
   // output is PWM 0-255
 
-  int pwmValue = map()
 }
