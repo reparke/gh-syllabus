@@ -102,17 +102,21 @@ title: RGB LEDs
 
 <img src="lecture_rgb_leds.assets/Screenshot 2024-07-07 at 2.52.43 AM.png" alt="Screenshot 2024-07-07 at 2.52.43 AM" style="width:500px;" />
 
-## Lab steps
+## Lab 1 steps
 
-
-1. Wire an RGB LED 
-2. When button is pressed,  display a random color
+- **Stage 1:** Create a latch so the on-board LED turn on and stays on when the button is pressed, and the on-board LED turns off and stays off when the button is pressed again 
+- **Stage 2:** Change the firmware so when the button is pressed, the following light sequence is displayed on the RGB LED
+  - red for 1/2 sec
+  - green for 1/2 sec
+  - blue for 1/2 sec
+  - orange for 1/2 sec
+- **Stage 3**: Change the firmware so when the button is pressed, a random color is show on the RGB LED
 
 ## Lab 2
 
 <img src="lecture_rgb_leds.assets/Screenshot 2024-07-07 at 2.57.35 AM.png" alt="Screenshot 2024-07-07 at 2.57.35 AM" style="width:500px;" />
 
-## Lab steps
+## Lab 2 steps
 
 
 1. Wire an RGB LED 
@@ -124,7 +128,7 @@ title: RGB LEDs
 
 <img src="lecture_rgb_leds.assets/Screenshot 2024-07-07 at 3.00.17 AM.png" alt="Screenshot 2024-07-07 at 3.00.17 AM" style="width:500px;" />
 
-## Lab steps
+## Lab 3 steps
 
 
 1. Wire an RGB LED 
