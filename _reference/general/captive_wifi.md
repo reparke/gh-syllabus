@@ -47,6 +47,12 @@ show_in_list: true
 - To obtain the MAC address, add this code to a project and flash it
 
 ```c++
+#include "Particle.h"
+SYSTEM_MODE(AUTOMATIC);
+SYSTEM_THREAD(ENABLED);
+
+SerialLogHandler logHandler(LOG_LEVEL_WARN);
+
 //if you don't have wifi access, uncomment the line below and flash using "Flash Application (local)"
 //SYSTEM_MODE(MANUAL);
 
