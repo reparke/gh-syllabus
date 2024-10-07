@@ -10,6 +10,10 @@ title: Pre-Lecture Activities
 
 ### Watch before class this week
 
+- Sound
+
+  {% include video id="EwLqgkAlv4c" provider="youtube" %}
+
 
 ### Bring to class all this week
 

@@ -6,6 +6,7 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 // copy these 3 lines from Blynk website > devices > your device > device info
 #define BLYNK_TEMPLATE_ID "TMPL2bpkvWhkl"
 #define BLYNK_TEMPLATE_NAME "Week 6"
+// #define BLYNK_AUTH_TOKEN "hB0CUlmcrAQE6hYI0yXmXCBDt7kLITJl"
 #define BLYNK_AUTH_TOKEN "hB0CUlmcrAQE6hYI0yXmXCBDt7kLITJl"
 
 // include the library

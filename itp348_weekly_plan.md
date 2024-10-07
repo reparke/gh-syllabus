@@ -905,8 +905,11 @@ Consider using this template with UV and weather code because we need them later
 
 - Have students use [https://openweathermap.org/api/air-pollution](https://openweathermap.org/api/air-pollution) to get AQI measure based on lat and long
 
-
 ## 11. Ultrasonic Distance Sensor; OLED Graphics
+
+### Plan for Fall 2024
+
+**==Combine OLED Graphics and ultra sonic in one day==**
 
 ==**Need more content here; could be spill over from last week**==
 
@@ -934,7 +937,7 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 
 - Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
 
-### Day 2
+### Day 2 -- ==Have to miss class==
 
 #### Lecture
 
