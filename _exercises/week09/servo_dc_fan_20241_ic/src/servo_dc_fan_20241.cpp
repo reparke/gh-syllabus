@@ -7,13 +7,13 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 // motor pins
 const int AIN1 = D3;  // controls motor dir
 const int AIN2 = D4;  // controls motor dir
-const int PWMA = A5;  // controls motor speed
+const int PWMA = MISO;  // controls motor speed
 
 // pot
 const int PIN_POT = A1;
 
 // servo
-const int PIN_SERVO = A2;
+const int PIN_SERVO = A5;
 
 // create servo object
 Servo fanServo;
@@ -76,11 +76,12 @@ void potControlDcMotor() {
     // set one direction
     digitalWrite(AIN1, HIGH);
     digitalWrite(AIN2, LOW);
+    analogWrite(PWMA, 100);
 
     // write the code in the next 3-5 min
-    int potVal = analogRead(PIN_POT);
-    int pwm = map(potVal, 0, 4095, 0, 255);
-    analogWrite(PWMA, pwm);
+    // int potVal = analogRead(PIN_POT);
+    // int pwm = map(potVal, 0, 4095, 0, 255);
+    // analogWrite(PWMA, pwm);
 }
 
 void simpleFan() {
@@ -120,13 +121,16 @@ void simpleFanWithDelay() {
     // fan blade rotation two ways! for loop, OR millis timer
     for (int servoPos = 15; servoPos <= 165; servoPos = servoPos + 5) {
         fanServo.write(servoPos);
+        Serial.println("Servo pos = " + String(servoPos));
         potControlDcMotor();
-        delay(100);
+        delay(1000);
     }
     for (int servoPos = 165; servoPos >= 15; servoPos = servoPos - 5) {
         fanServo.write(servoPos);
+        Serial.println("Servo pos = " + String(servoPos));
+
         potControlDcMotor();
-        delay(100);
+        delay(1000);
     }
 }
 
@@ -142,7 +146,8 @@ void setup() {
 }
 
 void loop() {
-    simpleFan();
+    // simpleFan();
+    simpleFanWithDelay();
     // potControlServo();
     // basicServo();
     // potControlDcMotor();

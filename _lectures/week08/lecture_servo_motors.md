@@ -88,7 +88,13 @@ void loop(){
 }
 ```
 
+## Important Note about `Servo` Class
 
+* The Photon 2 uses a single internal timer to contol all PWM pins. These means all the pins share the same frequency but can have different duty cycles
+* The `Servo` class uses 50 Hz, but by default `analogWrite()` uses 500 Hz. 
+* This means that if you are combining `servo.write()` with DC motors or LEDs that use `analogWrite()`, the servo won't work properly because the Photon 2 will switch to the wrong frequency
+* The solution is to use specify `analogWrite` to use 50 Hz
+  `analogWrite(PIN, VALUE, 50);`
 
 ## Servo Limitations
 

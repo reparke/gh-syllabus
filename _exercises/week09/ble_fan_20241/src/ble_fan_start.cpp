@@ -159,7 +159,7 @@ void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
             }
             digitalWrite(AIN1, HIGH);
             digitalWrite(AIN2, LOW);
-            analogWrite(PWMA, motorSpeed);
+            analogWrite(PWMA, motorSpeed, 50);
         } else if (data[0] == '!' && data[1] == 'B' && data[2] == '6' &&
                    data[3] == '1') {
             // press down arrow to decrease speed
@@ -169,7 +169,7 @@ void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
             }
             digitalWrite(AIN1, HIGH);
             digitalWrite(AIN2, LOW);
-            analogWrite(PWMA, motorSpeed);
+            analogWrite(PWMA, motorSpeed, 50);
         } else if (data[0] == '!' && data[1] == 'B' && data[2] == '7' &&
                    data[3] == '1') {
             isFanAutomaticMode = false;  // only if implementing full auto
@@ -210,7 +210,7 @@ void setup() {
     servo.attach(PIN_SERVO);
     servo.write(servoPosition);
 
-    analogWrite(PWMA, motorSpeed);
+    analogWrite(PWMA, motorSpeed, 50);
     spinFanForward();
 }
 
