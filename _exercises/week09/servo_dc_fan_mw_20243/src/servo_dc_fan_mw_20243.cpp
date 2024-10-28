@@ -101,7 +101,7 @@ void autoFan() {
 
     int potVal = analogRead(PIN_POT);
     int motorSpeed = map(potVal, 0, 4095, 0, 255);
-    analogWrite(PWMA, motorSpeed);
+    analogWrite(PWMA, motorSpeed, 50);
 
     unsigned long currMillis = millis();
     if (currMillis - prevMillis > 1000) {
@@ -142,7 +142,7 @@ void loop() {
         analogWrite(PWMA, 120);
     int potVal = analogRead(PIN_POT);
     int motorSpeed = map(potVal, 0, 4095, 0, 255);
-    analogWrite(PWMA, motorSpeed);
+    analogWrite(PWMA, motorSpeed, 50);
 
         fanServo.write(80);
         delay(1000);

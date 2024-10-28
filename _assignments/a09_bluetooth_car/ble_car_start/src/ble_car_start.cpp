@@ -42,7 +42,7 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 */
 void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer,
                     void* context) {
-    bluetoothSerialDebug(data, len); // uncomment for serial monitor debug
+    //bluetoothSerialDebug(data, len); // uncomment for serial monitor debug
 }
 
 void setup() {

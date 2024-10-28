@@ -92,7 +92,7 @@ void simpleFan() {
     */
     int potVal = analogRead(PIN_POT);
     int motorSpeed = map(potVal, 0, 4095, 0, 255);
-    analogWrite(PWMA, motorSpeed);
+    analogWrite(PWMA, motorSpeed, 50);
     digitalWrite(AIN1, HIGH);
     digitalWrite(AIN2, LOW);
     
