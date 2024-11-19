@@ -35,14 +35,14 @@ title: Heart Rate Sensor (Pulse Sensor Amped)
 
 ## Library
 
-- Photon 2 -compatible library
-  ```PulseSensorAmped``` ==NEED TO UPDATE==
-- Configuration
+- From Workbench, install the library `PulseSensorAmped_P2`
+
+## Configuration
 
 ```c++
 #include <PulseSensorAmped.h>	//sensor library
-const int PIN_PULSE = A4; // any analog pin
-
+const int PIN_PULSE = A0; // any analog pin
+PulseSensor PulseSensorAmped; //create pulse sensor object
 
 ```
 

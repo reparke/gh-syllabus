@@ -814,7 +814,7 @@ Week 10 idea:
 - Show [API documentation for JSON](https://initialstateeventsapi.docs.apiary.io/#reference/event-data/events-json)
 - Lecture: JSON creation with arduinojson
 
-#### Exercis
+#### Exercise
 
 * Send random temperature and humidity using `Particle.publish` to InitialState
 

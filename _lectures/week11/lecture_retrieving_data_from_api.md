@@ -16,25 +16,25 @@ title: Retrieving Data from APIs
 - APIs provide useful data we can use in our device (e.g. weather and location data)
 - Each API will be configured slightly differently but the process to connect is generally similar
 
-
+## 
 
 <img src="lecture_json_overview.assets/Screenshot 2024-06-22 at 1.05.34 AM.png" alt="Screenshot 2024-06-22 at 1.05.34 AM" style="width:1000px;" />
 
-
+## 
 
 <img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-29 at 10.43.49 PM.png" alt="Screenshot 2024-06-29 at 10.43.49 PM" style="width:1000px;" />
 
 
 
-
+## 
 
 <img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-29 at 10.44.46 PM.png" alt="Screenshot 2024-06-29 at 10.44.46 PM" style="width:1000px;" />
 
-
+## 
 
 <img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-29 at 10.46.13 PM.png" alt="Screenshot 2024-06-29 at 10.46.13 PM" style="width:1000px;" />
 
-
+## 
 
 <img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-06-29 at 10.47.42 PM.png" alt="Screenshot 2024-06-29 at 10.47.42 PM" style="width:1000px;" />
 
@@ -61,7 +61,7 @@ title: Retrieving Data from APIs
 
 Example: WeatherStack
 
-![image-20201017181859930](lecture_retrieving_data_from_api.assets/image-20201017181859930.png)
+<img src="lecture_retrieving_data_from_api.assets/image-20201017181859930.png" alt="image-20201017181859930" style="zoom:50%;" />
 
 ## Step 1: Create Webhook In Particle Console
 
@@ -98,17 +98,23 @@ void setup() {
 }
 ```
 
-## Part 4 : Create Mustache template
+## 
 
 <img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-07-01 at 10.11.13 PM.png" alt="Screenshot 2024-07-01 at 10.11.13 PM" style="width:1000px;" />
 
+## 
+
 <img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-07-01 at 10.15.08 PM.png" alt="Screenshot 2024-07-01 at 10.15.08 PM" style="width:1000px;" />
+
+## 
 
 <img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-07-01 at 10.16.55 PM.png" alt="Screenshot 2024-07-01 at 10.16.55 PM" style="width:1000px;" />
 
+## 
+
 <img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-07-01 at 10.19.36 PM.png" alt="Screenshot 2024-07-01 at 10.19.36 PM" style="width:1000px;" />
 
-
+## 
 
 <img src="lecture_retrieving_data_from_api.assets/Screenshot 2024-07-01 at 10.22.14 PM.png" alt="Screenshot 2024-07-01 at 10.22.14 PM" style="width:1000px;" />
 

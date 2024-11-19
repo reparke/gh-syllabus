@@ -31,8 +31,10 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN);
 //////////////////////////////////
 // Pulse Sensor                 //
 //////////////////////////////////
+/* These three lines are different from the video */
 #include <PulseSensorAmped.h>
-const int pulseSignalPin = A4;
+const int pulseSignalPin = A0;
+PulseSensor PulseSensorAmped;
 
 //////////////////////////////////
 // MicroOLED                    //

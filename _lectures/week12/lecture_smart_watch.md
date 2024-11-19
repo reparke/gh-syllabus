@@ -28,7 +28,7 @@ title: Smart Watch
 
   * Libraries
     * Micro OLED
-    * Pulse Sensor Amped
+    * Pulse Sensor Amped P2
   * Bitmaps byte arrays for heart rate, clock, and weather (`.h` files)
   * Heart rate BPM calculation
 
