@@ -39,7 +39,7 @@ void setup() {
 */
 void loop() {
     String scannedCard = "";
-    mfrc522.serialn
+    // mfrc522.serialn
 
     if (mfrc522.PICC_IsNewCardPresent() == true) {    // card is ready
         if (mfrc522.PICC_ReadCardSerial() == true) {  // card could read

@@ -21,7 +21,7 @@ title: Course Evaluations
 
 - To access, go to Brightspace 
   - Stay on main page (not specific section)
-  - Click on "Course Evaluations" tab in the upper left hand navigation bar
+  - Click on "Course Evaluations" tab in the upper left hand navigation bar under "Tools"
 
 
 

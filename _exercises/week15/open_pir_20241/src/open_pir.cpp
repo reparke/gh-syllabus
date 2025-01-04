@@ -21,8 +21,8 @@ void loop() {
         digitalWrite(PIN_LED, HIGH);
         Serial.println("Movement detected");
     } 
-    // else {
-    //     digitalWrite(PIN_LED, LOW);
-    //     Serial.println("Movement stopped");
-    // }
+    else {
+        digitalWrite(PIN_LED, LOW);
+        Serial.println("Movement stopped");
+    }
 }

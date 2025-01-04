@@ -60,7 +60,7 @@ title: Open PIR (Passive Infrared Sensor)
 * Clockwise turn increase the distance the sensor sees
 * you turn this trimpot, the further  your sensor should be able to see. When you receive the board, the  trimpot will be centered, and the sensor will react to a person moving  about in the 6 to 8 foot (2 to 2.5m) range. At the maximum sensitivity,  the sensor will detect a person walking by at about 16 feet (5m).Other PIR sensors have different configurable options
 
-## Time Adjustment (SEN) 
+## Time Adjustment (OSC) 
 
 <img src="lecture_open_pir.assets/openpir_pots.png" alt="openpir_pots" style="zoom:50%;" />
 
@@ -68,6 +68,7 @@ title: Open PIR (Passive Infrared Sensor)
 * Adjust the length of time the output remains HIGH. This trimpot is used to adjust the oscillator  frequency of the NCS36000. 
 * Clockwise increases the length of time OUT remains high
 * Time range: 400 ms to 7.5 s
+* Note this also controls how long the sensor stays in start up mode / blinking LED (clockwise is longer, counter clockwise is shorter)
 
 ## Retriggering
 
