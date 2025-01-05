@@ -177,7 +177,7 @@ Week 10 idea:
 
   
 
-## 2. Pulse Width Modulation, ADC ==Spring 2024 - MLK Holiday==
+## 2. Pulse Width Modulation, ADC ==Fall 2024 - Labor Day Holiday==
 
 ### Holiday Alternative Plan
 
@@ -508,18 +508,8 @@ Week 10 idea:
 
 * This took longer than expected since there was much debugging needed. We finished basic setup of OLED but didn't have time to introduce lab for etch-a-sketch
 
-## 6. Magnetic Switch; Blynk ==Alt plan for holiday: Covering Sound==
 
-==**Spring**== Presidents Day cancelled one day from Week 6. New Plan
-
-- w6d1 holiday
-- w6d2 sound
-- w7d1 magnetic switch
-- w7d2 blynk
-- w8d1 FSM stoplight
-- w8d2 FSM washing machine
-- w9d1 motors with fan
-- w9d2 motors with fan + bluetooth
+## 6. Magnetic Switch; Blynk
 
 #### Assignment
 
@@ -590,12 +580,13 @@ Week 10 idea:
 
 
 
-## 7. Sound ==Spring Presidents Day Holiday==
+## 7. Sound ==Fall Break Holiday==
 
 ### Notes
 
 - ==**Fall: Try to start Sound earlier due to fall break**==
   - ==idea: Day 1 covers motors by directly building fan with potentiometer; Day 2 cover bluetooth and control can with bluetooth==
+
 - ==**Fall**==
   - w7d1 Sound
   - w7d2 holiday
@@ -603,6 +594,7 @@ Week 10 idea:
   - w8d2 FSM washing machine
   - w9d1, we covered motors and servos, and built the fan
   - w9d2, we introduced bluetooth with fan 
+
 - ==**Spring**== Presidents Day cancelled one day from Week 7. New Plan
   - w7d1 holiday
   - w7d2 FSM stoplight
@@ -613,7 +605,7 @@ Week 10 idea:
 
 ### Reading
 
-- Spring: Announce Lab won't be due this week because one day is cancelled
+- Spring: Announce Lab won't be due this week because one day is cancellled
 
 ### Assignment
 
@@ -945,7 +937,7 @@ Note: need to update exercies (start and final) since trigger and echo pins chan
 
 - Student design range finding with ultrasonic sensor. Provide starting project (same one that uses OLED later)
 
-### Day 2 --
+### Day 2 -- ==Have to miss class==
 
 #### Lecture
 

@@ -2,7 +2,7 @@
 marp: false
 theme: itp
 
-week: 8
+week: 6
 category: lectures
 title: Sound and Piezo Buzzers
 ---

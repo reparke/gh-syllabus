@@ -36,7 +36,7 @@ title: Photoresistors
 
 ## Wiring a Photoresistor
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-06-03 at 3.18.21 PM.png" alt="Screenshot 2024-06-03 at 3.18.21 PM" style="width:800px" />
+<img src="lecture_photoresistor.assets/wiring.png" alt="Screenshot 2024-06-03 at 3.18.21 PM" style="width:800px" />
 
 * Consider wiring a photo resistor to 3.3v and ground
 * Measure voltage
@@ -44,14 +44,14 @@ title: Photoresistors
 
 ## What happens in bright light?
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-06-02 at 12.48.13 PM.png" alt="Screenshot 2024-06-02 at 12.48.13 PM" style="width:600px;" />
+<img src="lecture_photoresistor.assets/bright light.png" alt="Screenshot 2024-06-02 at 12.48.13 PM" style="width:600px;" />
 
 * Bright light --> resistance decreases
 * Analog input reads 3.3v
 
 ## What happens in darkness?
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-06-02 at 12.48.30 PM.png" alt="Screenshot 2024-06-02 at 12.48.30 PM" style="width:600px;"/>
+<img src="lecture_photoresistor.assets/darkness.png" alt="Screenshot 2024-06-02 at 12.48.30 PM" style="width:600px;"/>
 
 * Darkness --> resistance increases
 * Analog input **still** reads 3.3v
@@ -59,7 +59,7 @@ title: Photoresistors
 
 ## Why is this happening?
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-06-03 at 3.18.21 PM.png" alt="Screenshot 2024-06-03 at 3.18.21 PM" style="width:800px" />
+<img src="lecture_photoresistor.assets/wiring.png" alt="Screenshot 2024-06-03 at 3.18.21 PM" style="width:800px" />
 
 <!-- We are always measure the pin connected to 3.3v so reading won't change -->
 
@@ -95,7 +95,7 @@ title: Photoresistors
 
 ## Photoresistor solution
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-06-03 at 3.14.49 PM.png" alt="Screenshot 2024-06-03 at 3.14.49 PM" style="width:800px;" />
+<img src="lecture_photoresistor.assets/solution.png" alt="Screenshot 2024-06-03 at 3.14.49 PM" style="width:800px;" />
 
 ## Photoresistor solution
 
@@ -108,7 +108,7 @@ title: Photoresistors
 
 ## Exercise
 
-<img src="lecture_photoresistor.assets/Screenshot 2024-06-19 at 12.05.13 PM.png" alt="Screenshot 2024-06-19 at 12.05.13 PM" style="width:800px;"/>
+<img src="lecture_photoresistor.assets/exercise.png" alt="Screenshot 2024-06-19 at 12.05.13 PM" style="width:800px;"/>
 
 ## Lab (with breakout groups)
 
