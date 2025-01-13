@@ -121,7 +121,7 @@ Empowering and fun
 * creating the software code
 * communicating with / controlling device via internet  
 
-## Past Student Work - Competition
+## Past Student Work
 
 | <img src="lecture_intro_making_smart_devices.assets/IMG_0940.jpg" alt="Student Car" style="width:250px" /> | <img src="lecture_intro_making_smart_devices.assets/IMG_0931.jpg" alt="Student Car" style="width:200px" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |

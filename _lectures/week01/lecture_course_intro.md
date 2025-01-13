@@ -28,10 +28,9 @@ title: Course Introduction
 
 ## Learning Assistants / Graders
 
-- LAs: Neftali, Montserrat, Judy, Luis, Olivia, Ilce
-- Grader: Luis
+- Learning assistants will be in class and hold open lab hours for homework help 
 - Open lab hours for will be posted on Brightspace
-- For grading issues, post on Piazza and tag the LA
+- For grading issues, post on Piazza and tag the grader
 - For general questions, you can contact either of us
 
 ## Continuous improvement!
@@ -156,7 +155,7 @@ None!
 
 # Useful Resources
 
-## 
+
 
 ### USC Kortschak Center for Learning and Creativity
 
@@ -164,8 +163,6 @@ None!
 - [https://kortschakcenter.usc.edu](https://kortschakcenter.usc.edu/)
 - Tips / handouts on self-care, goal setting, test taking, note taking, and more
 - [https://kortschakcenter.usc.edu/tools-resources](https://kortschakcenter.usc.edu/tools-resources/)
-
-## 
 
 Almost half of all college students will experience severe depression or symptoms of mental illness in college
 
@@ -179,7 +176,7 @@ Almost half of all college students will experience severe depression or symptom
 - Anonymously let staff know you are concerned about a fellow student experiencing personal difficulties
 - [https://studentaffairs.usc.edu/trojans-care-for-trojans-tc4t/](https://studentaffairs.usc.edu/trojans-care-for-trojans-tc4t/)
 
-## 
+
 
 ###  Relationship and Sexual Violence Prevention and Services (RSVP)
 
@@ -191,7 +188,7 @@ Almost half of all college students will experience severe depression or symptom
 - Report issues related to harassment, discrimination, sexual harassment, or Title IX [(213) 740-5086](tel:2137405086)
 - [https://equity.usc.edu/](https://equity.usc.edu/)
 
-## 
+ 
 
 ### Trojan Alert
 
