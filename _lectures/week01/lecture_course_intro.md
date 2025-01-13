@@ -44,7 +44,7 @@ title: Course Introduction
 
 ## Required Materials
 - No textbook,
-- Required kit must be purchased from the bookstore
+- Required kit must be purchased from Sparkfun
 - Readings will be available online
 
 ## Live Zoom Classes
@@ -164,6 +164,8 @@ None!
 - Tips / handouts on self-care, goal setting, test taking, note taking, and more
 - [https://kortschakcenter.usc.edu/tools-resources](https://kortschakcenter.usc.edu/tools-resources/)
 
+##
+
 Almost half of all college students will experience severe depression or symptoms of mental illness in college
 
 ### Student Counseling Center
@@ -171,12 +173,13 @@ Almost half of all college students will experience severe depression or symptom
 - Free confidential counseling [(213) 740-7711](tel: 2137407711)
 - [https://engemannshc.usc.edu/counseling/](https://engemannshc.usc.edu/counseling/)
 
+
 ### Trojans Care for Trojans
 
 - Anonymously let staff know you are concerned about a fellow student experiencing personal difficulties
 - [https://studentaffairs.usc.edu/trojans-care-for-trojans-tc4t/](https://studentaffairs.usc.edu/trojans-care-for-trojans-tc4t/)
 
-
+##
 
 ###  Relationship and Sexual Violence Prevention and Services (RSVP)
 
@@ -188,7 +191,7 @@ Almost half of all college students will experience severe depression or symptom
 - Report issues related to harassment, discrimination, sexual harassment, or Title IX [(213) 740-5086](tel:2137405086)
 - [https://equity.usc.edu/](https://equity.usc.edu/)
 
- 
+ ##
 
 ### Trojan Alert
 
